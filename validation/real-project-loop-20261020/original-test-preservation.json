@@ -1,0 +1,11 @@
+{
+  "original_tests": 5,
+  "accepted_tests": 9,
+  "original_method_changes": [],
+  "added_methods": [
+    "test_case_insensitive_substring",
+    "test_special_search_preserves_original_values",
+    "test_uppercase_accent_finds_saved_name",
+    "test_uppercase_strasse_finds_saved_sharp_s_name"
+  ]
+}

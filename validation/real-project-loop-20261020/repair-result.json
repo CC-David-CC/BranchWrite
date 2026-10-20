@@ -1,0 +1,112 @@
+{
+  "scope": "Executed installed CLI repair with active steering; independent file/behavior acceptance",
+  "status": "PASS",
+  "model_configuration": "Q4, FP16 KV, greedy, llm-60 GPU0",
+  "execution_profile_id": "2db7e7f267080ce6f6e9f6e30dd5e27b8372042251de8a35c2272a829bc8f0c5",
+  "native_executable_sha256": "319e5dac708c7f78523e22a9b33ae9dae3069331421a8f3cc0d7f55a7319b807",
+  "server_runtime_source_commit": "8a4cdcebde655fb9aaaf303bce5ba5563d9fccc6",
+  "installed_client_release_commit": "c84fb2a50ebc13865769b65bbf832bc9b4bb4e92",
+  "installed_client_python_source_comparison": "All 86 Python package files match the worktree; see installed-runtime-comparison.json",
+  "elapsed_seconds": 342.0694398880005,
+  "independent_acceptance": {
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "checks": [
+      {
+        "id": "matching:CAF\u00c9",
+        "passed": true
+      },
+      {
+        "id": "matching:STRASSE",
+        "passed": true
+      },
+      {
+        "id": "matching:ZO\u00cb",
+        "passed": true
+      },
+      {
+        "id": "matching:ann",
+        "passed": true
+      },
+      {
+        "id": "matching:\u30dc\u30d6",
+        "passed": true
+      },
+      {
+        "id": "matching:absent",
+        "passed": true
+      },
+      {
+        "id": "input-not-mutated",
+        "passed": true
+      },
+      {
+        "id": "original-values-returned",
+        "passed": true
+      },
+      {
+        "id": "result-order",
+        "passed": true
+      },
+      {
+        "id": "saved-original-names",
+        "passed": true
+      },
+      {
+        "id": "saved-final-newline",
+        "passed": true
+      }
+    ],
+    "oracle_sha256": "75c58051b596257e70a32c13339f3c897e3ecbffc0a7401cf9bbee5e50172e7c",
+    "candidate_sha256": "c7e3cfc8971b7a416f4f70be81dc9891b9c2ff5cdb27eb21b98e362492f624ce",
+    "isolation": {
+      "kind": "bubblewrap-terminal-v1",
+      "pid_ns": "pid:[4026532351]",
+      "net_ns": "net:[4026532353]",
+      "mount_ns": "mnt:[4026532348]",
+      "worker_exited": true,
+      "launcher_pid": 14116,
+      "namespace_members_after": []
+    }
+  },
+  "model_selected_unit_tests": {
+    "passed": 9,
+    "failed": 0,
+    "original_tests_unchanged": 5
+  },
+  "session_turns": [
+    {
+      "id": "turn-1-321e140c507e249a",
+      "state": "Closed",
+      "status": "interrupted",
+      "context": {
+        "branch": "bw-session-492cc20f630ecfe7ca22b5d34477b40f5ccedaad",
+        "execution_profile_id": "2db7e7f267080ce6f6e9f6e30dd5e27b8372042251de8a35c2272a829bc8f0c5",
+        "mode": "append_user",
+        "model_contract_id": "c36d136357b6a0a0cb8605e085d430c3d6f5328d064757c8543a85bc82bca8eb",
+        "revision": 2,
+        "root": "c4182dd0d08d707978934a87d4ee94322dcc9208f6d0d70607768d2f1478b7ad",
+        "tip": "53e3523970b00368cd128fb8f8df1e2b8e2c3409f455bcc5004c3ecc90ee848e"
+      }
+    },
+    {
+      "id": "turn-2-686f4428db35efa4",
+      "state": "Closed",
+      "status": "finished",
+      "context": {
+        "branch": "bw-session-6f7e721100417ce425305e0183da4bba8f0fdb51",
+        "execution_profile_id": "2db7e7f267080ce6f6e9f6e30dd5e27b8372042251de8a35c2272a829bc8f0c5",
+        "mode": "append_user",
+        "model_contract_id": "c36d136357b6a0a0cb8605e085d430c3d6f5328d064757c8543a85bc82bca8eb",
+        "revision": 9,
+        "root": "c4182dd0d08d707978934a87d4ee94322dcc9208f6d0d70607768d2f1478b7ad",
+        "tip": "341a02ad7fbbac7d90835f7a9c5fb4e48548e33a6653b5d1e4a373bfc5319ed2"
+      }
+    }
+  ],
+  "invalid_initial_attempt": "ASCII-damaged fixture preserved privately, not counted as model or Unicode evidence",
+  "new_numerical_logit_oracle": "not executed",
+  "zero_prefix_forward_work": "not asserted by this repair result",
+  "cumulative_G1_G5": "not qualified"
+}

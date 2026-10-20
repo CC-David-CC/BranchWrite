@@ -55,7 +55,7 @@ For an existing project, open Terminal in that folder and run
 ## Connect
 
 At **Server address**, type the address your operator gave you, for example
-`http://10.0.7.68:8099`. Use the server computer's LAN address.
+`http://10.0.7.68:18099`. Use the server computer's LAN address.
 `127.0.0.1` means this computer; it does not mean another computer on your LAN.
 
 At **API key**, paste your key and press Enter. The key stays in memory for this

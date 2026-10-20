@@ -1,0 +1,1 @@
+Searching this contact directory misses names if I type different capital letters. Please fix that. Keep the saved contacts and other behavior working, and run the checks.

@@ -23,7 +23,7 @@ off. Q4 with FP16 KV is the current development model; Q8 remains deferred.
 - Server source: llm-60:/home/dflanag3/src/context-cow-lan-install-20261020
 - Server runtime/build/store: llm-60:/home/dflanag3/spatial-artifacts/cow-lan-install-20261020
 - Published COW main: c59b053bf9799cdb73b799e8913843773770a3e3
-- Published BW main: 7e5c32ce59e768151f73b23c5f9d1f1c84d0859a
+- BW execution-preview tag commit: 7e5c32ce59e768151f73b23c5f9d1f1c84d0859a
 - Recommended BW tag: lan-preview-2026-10-20.1
 - Current agent worktree: llm-49:/home/dflanag3/src/branchwrite-real-project-loop-20261020
 - Private backups: box-git:/srv/data/git/BranchWrite.git and private_context_cow.git
@@ -53,3 +53,19 @@ docs/CONTEXT-COW-SERVER.md for the operator. The client installs a private Pytho
 base and packages; it does not install a model or COW server. Keys stay in memory
 unless --save-api is requested. Keep old runtime folders for admitted old work.
 No silent cross-version migration or arbitrary task correctness is claimed.
+
+## Steering environment
+
+Development steering now uses Ubuntu-24.04 in WSL and native Linux SSH.
+A dedicated WSL public key was registered and passwordless connections to
+llm-49, llm-60 and box-git were executed successfully. Private keys stay in WSL;
+strict host verification remains enabled. Builds, inference, client trials and
+evidence remain on the Linux fleet. This is not a qualification of BW running
+inside WSL: the installed client is being tested in the Linux VM on llm-49.
+
+An earlier repair fixture was invalidated because Windows PowerShell's pipe
+encoding replaced Unicode characters with question marks before SSH. Its run
+and raw results are retained but do not count as Unicode/model evidence.
+The replacement fixture's actual destination code points were verified, and
+its independent baseline checker rejected the intentionally broken search.
+A direct UTF-8 transport probe through WSL also matched exact code points.
