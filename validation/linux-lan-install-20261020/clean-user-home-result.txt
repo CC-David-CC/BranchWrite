@@ -1,0 +1,4 @@
+Choose a project folder inside your home folder, then run BW there.
+For a new project, type: mkdir -p ~/my-project && cd ~/my-project
+Then type: ~/.local/bin/bw
+Connection to 127.0.0.1 closed.

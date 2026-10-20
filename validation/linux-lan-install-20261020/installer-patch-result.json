@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "installed_source": "c84fb2a50ebc13865769b65bbf832bc9b4bb4e92",
+  "user": "fresh non-admin VM account",
+  "installation_from": "public GitHub commit",
+  "installer_caller_directory_reproduction": "inaccessible parent .venv no longer inspected",
+  "home_launch": "clear folder instructions, exit 2, no traceback or server-key prompt",
+  "project_launch": "actual PTY, authenticated LAN connection, help, graceful exit; no model work in this final startup-only smoke",
+  "doctor": "real file/shell isolation PASS",
+  "cpu_methods": 28,
+  "cpu_failures": 0,
+  "cpu_skips": 0,
+  "prior_model_workflow_evidence": "Original website/follow-up remains attributed to 0a8d6fd; this patch changes installer discovery and an early startup guard."
+}

@@ -1,0 +1,3 @@
+PYTHONPATH=/home/dflanag3/src/branchwrite-lan-install-20261020:/home/dflanag3/src/branchwrite-lan-install-20261020/tests:/home/dflanag3/spatial-artifacts/bw-lan-install-20261020/cow-test-source:/home/dflanag3/spatial-artifacts/bw-lan-install-20261020/cow-test-source/experimental/branching_context/src:/home/dflanag3/spatial-artifacts/bw-lan-install-20261020/cow-test-source/experimental/branching_context/tests/implementation:/home/dflanag3/spatial-artifacts/bw-lan-install-20261020/cow-test-source/experimental/branching_context/scripts
+COW fixture: /home/dflanag3/spatial-artifacts/bw-lan-install-20261020/cow-test-source/experimental/branching_context/tests/implementation
+These are CPU client/HTTP tests, not real GPU qualification.

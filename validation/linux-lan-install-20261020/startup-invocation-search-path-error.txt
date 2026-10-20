@@ -1,0 +1,41 @@
+test_cli_connect_uses_environment_key_without_printing_it (tests.test_client_setup.ClientSetupTests.test_cli_connect_uses_environment_key_without_printing_it) ... ok
+test_cli_save_api_flag_explicitly_persists_private_key (tests.test_client_setup.ClientSetupTests.test_cli_save_api_flag_explicitly_persists_private_key) ... ok
+test_connection_discovers_identities_and_private_key_can_be_reused (tests.test_client_setup.ClientSetupTests.test_connection_discovers_identities_and_private_key_can_be_reused) ... ok
+test_default_connection_does_not_persist_the_api_key (tests.test_client_setup.ClientSetupTests.test_default_connection_does_not_persist_the_api_key) ... ok
+test_default_session_save_api_flag_is_explicit (tests.test_client_setup.ClientSetupTests.test_default_session_save_api_flag_is_explicit) ... ok
+test_failed_authentication_does_not_create_settings (tests.test_client_setup.ClientSetupTests.test_failed_authentication_does_not_create_settings) ... ok
+test_interrupted_configuration_never_uses_key_for_a_changed_connection (tests.test_client_setup.ClientSetupTests.test_interrupted_configuration_never_uses_key_for_a_changed_connection) ... ok
+test_invalid_or_unsupported_server_response_preserves_existing_settings (tests.test_client_setup.ClientSetupTests.test_invalid_or_unsupported_server_response_preserves_existing_settings) ... ok
+test_key_does_not_follow_changed_connection_or_loose_file_permissions (tests.test_client_setup.ClientSetupTests.test_key_does_not_follow_changed_connection_or_loose_file_permissions) ... ok
+test_linked_config_directory_or_credential_file_is_not_overwritten (tests.test_client_setup.ClientSetupTests.test_linked_config_directory_or_credential_file_is_not_overwritten) ... ok
+test_missing_settings_can_be_configured_inside_first_run (tests.test_client_setup.ClientSetupTests.test_missing_settings_can_be_configured_inside_first_run) ... ok
+test_normal_cow_requests_do_not_follow_redirects_either (tests.test_client_setup.ClientSetupTests.test_normal_cow_requests_do_not_follow_redirects_either) ... ok
+test_real_terminal_first_start_connects_and_hides_the_key (tests.test_client_setup.ClientSetupTests.test_real_terminal_first_start_connects_and_hides_the_key) ... ok
+test_reconnecting_without_opt_in_removes_an_old_saved_key (tests.test_client_setup.ClientSetupTests.test_reconnecting_without_opt_in_removes_an_old_saved_key) ... ok
+test_redirects_do_not_forward_bearer_credentials (tests.test_client_setup.ClientSetupTests.test_redirects_do_not_forward_bearer_credentials) ... ok
+test_saved_key_applies_only_to_the_exact_admitted_connection (tests.test_client_setup.ClientSetupTests.test_saved_key_applies_only_to_the_exact_admitted_connection) ... ok
+test_connect_then_code_and_resume_use_saved_key_and_frozen_profile (tests.test_client_setup_cow.ClientSetupCowTests.test_connect_then_code_and_resume_use_saved_key_and_frozen_profile) ... ERROR
+test_escape_stops_work_without_erasing_the_draft (tests.test_interactive_terminal.InteractiveTerminalTests.test_escape_stops_work_without_erasing_the_draft) ... ok
+test_missing_preview_is_a_notice_and_does_not_stop_the_session (tests.test_interactive_terminal.InteractiveTerminalTests.test_missing_preview_is_a_notice_and_does_not_stop_the_session) ... ok
+test_plan_aside_history_and_unknown_commands_are_not_work_requests (tests.test_interactive_terminal.InteractiveTerminalTests.test_plan_aside_history_and_unknown_commands_are_not_work_requests) ... ok
+test_plan_mode_cannot_restore_or_edit_files_via_branch_controls (tests.test_interactive_terminal.InteractiveTerminalTests.test_plan_mode_cannot_restore_or_edit_files_via_branch_controls) ... ok
+test_preview_uses_selected_file_version_without_submitting_work_and_closes (tests.test_interactive_terminal.InteractiveTerminalTests.test_preview_uses_selected_file_version_without_submitting_work_and_closes) ... ok
+test_typing_survives_progress_tab_queues_and_enter_steers (tests.test_interactive_terminal.InteractiveTerminalTests.test_typing_survives_progress_tab_queues_and_enter_steers) ... ok
+test_failed_release_does_not_replace_existing_launcher (tests.test_linux_bootstrap.LinuxBootstrapTests.test_failed_release_does_not_replace_existing_launcher) ... ok
+test_launcher_resolves_release_before_exec_and_keeps_project_cwd (tests.test_linux_bootstrap.LinuxBootstrapTests.test_launcher_resolves_release_before_exec_and_keeps_project_cwd) ... ok
+test_distro_python_refused_before_creating_a_private_copy (tests.test_private_client_install.PrivateClientInstallTests.test_distro_python_refused_before_creating_a_private_copy) ... ok
+test_existing_destination_never_overwritten (tests.test_private_client_install.PrivateClientInstallTests.test_existing_destination_never_overwritten) ... ok
+test_home_folder_explains_project_folder_before_connection (tests.test_quickstart_launch.QuickstartLaunchTests.test_home_folder_explains_project_folder_before_connection) ... ok
+
+======================================================================
+ERROR: test_connect_then_code_and_resume_use_saved_key_and_frozen_profile (tests.test_client_setup_cow.ClientSetupCowTests.test_connect_then_code_and_resume_use_saved_key_and_frozen_profile)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-lan-install-20261020/tests/test_client_setup_cow.py", line 17, in test_connect_then_code_and_resume_use_saved_key_and_frozen_profile
+    from test_thinking_grammar import ThinkingTokenizer
+ModuleNotFoundError: No module named 'test_thinking_grammar'
+
+----------------------------------------------------------------------
+Ran 28 tests in 11.497s
+
+FAILED (errors=1)

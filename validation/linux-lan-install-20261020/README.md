@@ -17,3 +17,13 @@ and checked both viewport sizes, heading, button, bold names and overflow.
 
 This is installation and bounded workflow evidence, not full numerical or
 security certification. See result.json for exact scope and omissions.
+
+The final clean-user checks found and fixed two startup problems: uv inspecting
+an inaccessible caller .venv, and a traceback when the whole home folder was
+selected. Their failing evidence is retained. The installed fix gives project
+folder instructions before connection. A real non-admin project launch,
+authenticated connection/help/exit and containment doctor passed. All 28 focused
+CPU regressions passed with no skips. The CPU HTTP fixture requires the COW
+checkout's tests/implementation path; missing that dependency caused the earlier
+recorded invocation errors. COW test source was installed on the Linux test
+host, never in the client VM. This is not additional GPU qualification.
