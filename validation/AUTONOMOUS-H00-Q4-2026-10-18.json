@@ -1,0 +1,115 @@
+{
+  "actions": [
+    "create_file",
+    "read_file",
+    "finish"
+  ],
+  "autonomous_ladder": {
+    "next": "H01",
+    "passed": [
+      "H00"
+    ],
+    "ubuntu_agent_baseline": "NOT_STARTED",
+    "unrun": [
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ]
+  },
+  "base_commit": "8f99c12f0fda3a60ac2aee063c620fa3516ebb83",
+  "branch": "work/branchwrite-file-completion-20261018",
+  "cli_seconds": 64.01240586908534,
+  "consumed_output_tokens": [
+    252,
+    28,
+    77
+  ],
+  "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+  "exit_codes": {
+    "cli": 0,
+    "command": 0,
+    "native": 0,
+    "server": 0,
+    "wrapper": 0
+  },
+  "file": {
+    "bytes": 13,
+    "ends_in_one_lf": true,
+    "sha256": "3c9684133d84aa9fd70b0e61911712040fa1dd994f4fd223ec7053ec8adf1a39"
+  },
+  "final_report": "hello.txt was created and read back successfully. Its actual content is: Hello, loop. followed by one LF newline.",
+  "limitations": [
+    "One deterministic file task, not all programming problems",
+    "New file completion is a bounded byte/readback policy, not semantic or hostile-code verification",
+    "No model/tool actions supplied during this run; host workflow/source/grants/expected hash are explicit setup",
+    "No checkpoint restart, cross-schedule equivalence, Q8 or native grammar restart qualification in this run",
+    "Tmpfs cache disposable, no reboot durability claim",
+    "Protected task/verifier outputs are not LoRA/RL training candidates"
+  ],
+  "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+  "numerical_oracle": "NOT_RUN",
+  "original_source_unchanged": true,
+  "prefix_tokens": 10964,
+  "processes_observed_absent": true,
+  "profile_sha256": "b4cc8d480cdd02a7ec08645fb2d1c68086db0eef0f26ba4ffc71bc02d9e1ec14",
+  "protected_check": {
+    "checker_source_pins": {
+      "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/basic-loop-pack-v1/tools/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/basic-loop-pack-v1/tools/lab.py": "3f54ccf6254660d3e1f051509b5b64249902d2f11e8a26fd1b3ef1d556be973e"
+    },
+    "record": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-autonomous-h00-q4-v1/protected-check/receipt.toml",
+    "scope": "Original file-only checker; its native_agent_loop field remains not_run because it is not the native harness. The independent generic CLI receipts prove that separate boundary.",
+    "status": "pass"
+  },
+  "result": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-autonomous-h00-q4-v1/result.json",
+  "result_sha256": "309ba0a3292e69a06afe90150a1d0f35b77b5bf500b501f9fb1b9ae2293eb6d4",
+  "sampler": {
+    "name": "default",
+    "settings": {
+      "dry_allowed_length": 2,
+      "dry_base": 1.75,
+      "dry_multiplier": 0.8,
+      "dry_penalty_last_n": 256,
+      "min_p": 0.05,
+      "temperature": 0.7,
+      "top_k": 60,
+      "top_p": 0.95
+    }
+  },
+  "schema": 1,
+  "scope": "Basic Agent Loop H00 through generic CLI; guided runs excluded; not a G/VC certification",
+  "source_hash_manifest": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-file-completion-source-v1.json",
+  "status": "BOUNDED_AUTONOMOUS_H00_Q4_PASS",
+  "tests": {
+    "focused": {
+      "failed": 0,
+      "passed": 14,
+      "skipped": 0
+    },
+    "full_cpu": {
+      "failed": 0,
+      "passed": 540,
+      "skipped": 0
+    },
+    "g0": {
+      "failed": 0,
+      "passed": 51,
+      "skipped": 0
+    },
+    "h00": {
+      "failed": 0,
+      "passed": 1,
+      "skipped": 0
+    }
+  },
+  "thinking_budget": 1024
+}

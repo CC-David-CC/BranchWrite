@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "changed": [
+    "calculator.py"
+  ],
+  "protected_tests_unchanged": true,
+  "original_source_unchanged": true,
+  "heldout_seed": 20261019,
+  "heldout_integer_pairs": 1000,
+  "edge_pairs": 4,
+  "scope": "Read-only OS sandbox; model never saw independent tests; parent code review separate"
+}

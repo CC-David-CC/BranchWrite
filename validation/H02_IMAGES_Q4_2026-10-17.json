@@ -1,0 +1,205 @@
+{
+    "schema":  1,
+    "status":  "H02_IMAGE_DELIVERY_AND_INTERPRETATION_PASS",
+    "host":  "llm-60",
+    "scope":  "Bounded H02 real image-only capture/upload/interpretation, not numerical qualification",
+    "bw_base":  "7e105fe6837d983433fc8c237e4a9b4c99f24dcf",
+    "cow_base":  "4a525c4ece48556990b4bccc7f0fe17f3c78f82e",
+    "bw_changed_sha256":  {
+                              "branchwrite/cow_client.py":  "61972166b1271fc7e4ed31b09e733efdcc808574484d1938dc248439456ca000",
+                              "tests/test_cow_images.py":  "117677c481fdee45e7086c23c22a79ac81849c220334f0ea0e1851d98e6132b6",
+                              "validation/run_basic_loop_images.py":  "9d8b365bf352dea5ce200d6248c3a9eaf5b63638db599c46ae9b885afe5a0fc8"
+                          },
+    "cow_changed_sha256":  {
+                               "tools/cow_cli.py":  "446372880e08f237b6f6061626e092082c8dffb278d8f4c3d646891daac1027b",
+                               "tools/test_cow_cli_image_references.py":  "cc5169917aa6ffa821ca0ce2cfd041b1203841ddb8f1729ff0f0d89e42a1986c"
+                           },
+    "model_contract_id":  "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+    "execution_profile_id":  "a2a59a68a40016352310436cc418b4e8839d521d224837e4a69cad00bcc79633",
+    "profile_sha256":  "3a5597f1804a49b809c8946749ab658ef7794d8a0ce9af6e8cec822871737571",
+    "native_executable":  {
+                              "path":  "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-native-build-v1/strata-vision-dry-combinations-cow",
+                              "sha256":  "ae62045f75a8e11ba9d01b4da301d3bb87fe4ff342bab0ea7edc57276377824e"
+                          },
+    "vision_config":  {
+                          "path":  "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-1k-gpu-v1/vision-config.json",
+                          "sha256":  "221200d2356d20bf5019be2876701e893460ea8c3af7268df4dd12f2080e0737"
+                      },
+    "numerical_max_error":  null,
+    "runs":  [
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  1,
+                                        "wrapper.exit":  1
+                                    },
+                     "run":  "cow-image-reference-red-run-v1",
+                     "test_summary":  [
+                                          "Ran 1 test in 0.000s",
+                                          "FAILED (errors=1)"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  1,
+                                        "wrapper.exit":  1
+                                    },
+                     "run":  "cow-image-reference-red-run-v2",
+                     "test_summary":  [
+                                          "Ran 1 test in 0.000s",
+                                          "FAILED (errors=1)"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  1,
+                                        "wrapper.exit":  1
+                                    },
+                     "run":  "cow-image-reference-red-run-v3",
+                     "test_summary":  [
+                                          "Ran 3 tests in 1.615s",
+                                          "FAILED (failures=1, errors=1)"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  0,
+                                        "wrapper.exit":  0
+                                    },
+                     "run":  "cow-image-reference-green-run-v1",
+                     "test_summary":  [
+                                          "Ran 17 tests in 9.473s",
+                                          "OK"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  1,
+                                        "wrapper.exit":  1
+                                    },
+                     "run":  "cow-image-reference-green-run-v2",
+                     "test_summary":  [
+                                          "Ran 29 tests in 12.576s",
+                                          "FAILED (failures=5)"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  0,
+                                        "wrapper.exit":  0
+                                    },
+                     "run":  "cow-image-reference-green-run-v3",
+                     "test_summary":  [
+                                          "Ran 29 tests in 12.951s",
+                                          "OK"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  0,
+                                        "wrapper.exit":  0
+                                    },
+                     "run":  "cow-image-reference-g0-run-v1",
+                     "test_summary":  [
+
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  1,
+                                        "wrapper.exit":  1
+                                    },
+                     "run":  "branchwrite-image-red-run-v1",
+                     "test_summary":  [
+                                          "Ran 5 tests in 2.516s",
+                                          "FAILED (errors=8)"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  0,
+                                        "wrapper.exit":  0
+                                    },
+                     "run":  "branchwrite-image-green-run-v1",
+                     "test_summary":  [
+                                          "Ran 22 tests in 7.233s",
+                                          "OK"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  0,
+                                        "wrapper.exit":  0
+                                    },
+                     "run":  "branchwrite-image-audit-green-run-v1",
+                     "test_summary":  [
+                                          "Ran 23 tests in 7.630s",
+                                          "OK"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  0,
+                                        "wrapper.exit":  0
+                                    },
+                     "run":  "branchwrite-image-full-run-v1",
+                     "test_summary":  [
+                                          "Ran 322 tests in 14.256s",
+                                          "OK"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  0,
+                                        "wrapper.exit":  0
+                                    },
+                     "run":  "branchwrite-image-full-run-v2",
+                     "test_summary":  [
+                                          "Ran 323 tests in 14.941s",
+                                          "OK"
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  1,
+                                        "wrapper.exit":  1
+                                    },
+                     "run":  "branchwrite-h02-gpu-run-v1",
+                     "test_summary":  [
+
+                                      ]
+                 },
+                 {
+                     "exit_codes":  {
+                                        "command.exit":  0,
+                                        "wrapper.exit":  0
+                                    },
+                     "run":  "branchwrite-h02-gpu-run-v2",
+                     "test_summary":  [
+
+                                      ]
+                 }
+             ],
+    "confirmed_absent_processes":  [
+                                       26923,
+                                       26929,
+                                       28283,
+                                       28289
+                                   ],
+    "archive":  {
+                    "path":  "/srv/data/git/private_context_cow.evidence/20261017-branchwrite-h02-v1/evidence.tar.gz",
+                    "sha256":  "118382c1f5006ab4a48c78a3d0e56f66a38754d3e9e581a9fab907665fd7f71e",
+                    "size_bytes":  14188881,
+                    "members":  577,
+                    "receiver_verified":  true
+                },
+    "excluded_native_payload_bytes":  898799912,
+    "limitations":  [
+                        "Three public mechanics probes, not a blind image-quality benchmark or full numerical equivalence.",
+                        "Initial image upload/prepare path; not all image suffixes or samplers through BranchWrite.",
+                        "No thinking_length or GOLDEN PATH implementation/measurement.",
+                        "Existing BranchWrite CLI load_context requires a separate role/message semantics correction before use for general structured histories.",
+                        "VC00-VC09 and original G1-G5 remain unqualified."
+                    ],
+    "thinking":  "Disabled, no budget experiment yet",
+    "golden_path":  "Requested, not implemented"
+}

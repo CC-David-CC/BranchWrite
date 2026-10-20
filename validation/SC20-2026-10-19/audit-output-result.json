@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "changed": [
+    "dependencies.py"
+  ],
+  "original_source_unchanged": true,
+  "protected_tests_unchanged": true,
+  "generated_cases": 400,
+  "seed": 20261019,
+  "scope": "Candidate and independent oracle executed in read-only OS sandbox; no package marker added"
+}

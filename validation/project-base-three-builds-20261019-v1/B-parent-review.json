@@ -1,0 +1,14 @@
+{
+  "status": "BOUNDED_CODING_PASS",
+  "model_attempts": 1,
+  "parent_code_changes": 0,
+  "visible_tests": 11,
+  "independent_test_methods": 1,
+  "independent_assertions_output": "{\"status\": \"PASS\", \"checks\": 22, \"scope\": \"independent host-validator checks; not inference qualification\"}\n",
+  "candidate_sha256": "d540eddca35532d68c0783c8135b226f421e60947963add436ab26654eeba58f",
+  "whole_cli_seconds": 536.5473707889905,
+  "original_audit_status": "FAIL_BAD_UNICODE_FIXTURE",
+  "corrected_audit_status": "PASS",
+  "review": "Read complete module; pure schema/identity/capacity validation, exact integer checks, duplicate/nonfinite JSON rejection, UTF8 byte limits, detached host record, no execution or authority grants. Not yet integrated into normal CLI selection.",
+  "scope": "One fixed coding task, greedy Q8 from B prepared base; not general autonomous-agent qualification"
+}

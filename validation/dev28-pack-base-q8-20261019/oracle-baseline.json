@@ -1,0 +1,15 @@
+{
+  "status": "EXPECTED_FAILURE",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/oracle-baseline-world/workspace/oracle.py\", line 16, in <module>\n    actual=merge_intervals(source)\n  File \"/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/oracle-baseline-world/workspace/intervals.py\", line 4, in merge_intervals\n    result = [list(intervals[0])]\n                   ~~~~~~~~~^^^\nTypeError: 'list_iterator' object is not subscriptable\n",
+  "isolation": {
+    "kind": "bubblewrap-terminal-v1",
+    "pid_ns": "pid:[4026532781]",
+    "net_ns": "net:[4026532783]",
+    "mount_ns": "mnt:[4026532777]",
+    "worker_exited": true,
+    "launcher_pid": 2351472,
+    "namespace_members_after": []
+  }
+}

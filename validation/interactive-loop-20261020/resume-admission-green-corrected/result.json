@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "scope": "CPU; no model",
+  "corrects_invocation": "Prior run referenced nonexistent test_interpreter_pause. Existing test_interactive_control is the correct module."
+}

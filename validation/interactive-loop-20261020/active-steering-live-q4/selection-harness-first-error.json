@@ -1,0 +1,1 @@
+{"status": "HARNESS_ERROR_AFTER_SETTLED_SELECTION", "error": "TypeError: Path + str in evidence filename", "observed_selection": 2, "old_page_sha256": "7fa87877845ca882cfdcd900d6ce101a2f52a5ee725cdf482eb7ee16d64d6746", "note": "First selection completed. Continue with the second selection; do not rerun a model operation."}

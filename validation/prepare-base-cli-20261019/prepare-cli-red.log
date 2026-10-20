@@ -1,0 +1,20 @@
+test_prepare_base_cli_publishes_catalog_and_retries_without_prefill (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_cli_publishes_catalog_and_retries_without_prefill) ... FAIL
+
+======================================================================
+FAIL: test_prepare_base_cli_publishes_catalog_and_retries_without_prefill (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_cli_publishes_catalog_and_retries_without_prefill)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-pack-catalog-20261019-v1/source/tests/test_base_choice_http.py", line 9, in test_prepare_base_cli_publishes_catalog_and_retries_without_prefill
+    self.exercise("cli")
+  File "/home/dflanag3/spatial-artifacts/branchwrite-pack-catalog-20261019-v1/source/tests/test_base_choice_http.py", line 52, in exercise
+    self.assertEqual(prepared_cli.returncode,0,prepared_cli.stderr)
+AssertionError: 2 != 0 : usage: branchwrite [-h]
+                   {check,canonicalize,run,step,doctor,code,resume,apply,export,review,status,reconcile}
+                   ...
+branchwrite: error: argument command: invalid choice: 'prepare-base' (choose from 'check', 'canonicalize', 'run', 'step', 'doctor', 'code', 'resume', 'apply', 'export', 'review', 'status', 'reconcile')
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.727s
+
+FAILED (failures=1)

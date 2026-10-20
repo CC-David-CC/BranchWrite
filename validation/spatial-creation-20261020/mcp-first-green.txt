@@ -1,0 +1,9 @@
+/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:51: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(  # noqa: B028  (called from many sources at differing depths, so no stacklevel is correct)
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+.
+----------------------------------------------------------------------
+Ran 1 test in 13.476s
+
+OK

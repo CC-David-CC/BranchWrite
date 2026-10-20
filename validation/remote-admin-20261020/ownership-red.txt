@@ -1,0 +1,67 @@
+======================================================================
+ERROR: test_altered_or_missing_prior_intent_keeps_target_blocked (tests.test_remote_ownership.RemoteOwnershipTests.test_altered_or_missing_prior_intent_keeps_target_blocked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 36, in test_altered_or_missing_prior_intent_keeps_target_blocked
+    owner=self.owner();folder=self.root/'old-operation';folder.mkdir(mode=0o700);intent=dict(operation_id='original',plan_sha256='b'*64);_write(folder/'intent.json',intent)
+          ^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 9, in owner
+    from branchwrite.remote_ownership import TargetOwnership
+ModuleNotFoundError: No module named 'branchwrite.remote_ownership'
+
+======================================================================
+ERROR: test_only_matching_validated_durable_receipt_clears_reservation (tests.test_remote_ownership.RemoteOwnershipTests.test_only_matching_validated_durable_receipt_clears_reservation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 28, in test_only_matching_validated_durable_receipt_clears_reservation
+    owner=self.owner();folder=self.root/'old-operation';folder.mkdir(mode=0o700);intent=dict(operation_id='original',plan_sha256='b'*64);_write(folder/'intent.json',intent)
+          ^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 9, in owner
+    from branchwrite.remote_ownership import TargetOwnership
+ModuleNotFoundError: No module named 'branchwrite.remote_ownership'
+
+======================================================================
+ERROR: test_pending_reservation_survives_owner_close_and_new_ids_cannot_bypass (tests.test_remote_ownership.RemoteOwnershipTests.test_pending_reservation_survives_owner_close_and_new_ids_cannot_bypass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 21, in test_pending_reservation_survives_owner_close_and_new_ids_cannot_bypass
+    owner=self.owner();folder=self.root/'old-operation';folder.mkdir(mode=0o700)
+          ^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 9, in owner
+    from branchwrite.remote_ownership import TargetOwnership
+ModuleNotFoundError: No module named 'branchwrite.remote_ownership'
+
+======================================================================
+ERROR: test_real_process_lock_prevents_overlap_and_releases_on_exit (tests.test_remote_ownership.RemoteOwnershipTests.test_real_process_lock_prevents_overlap_and_releases_on_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 12, in test_real_process_lock_prevents_overlap_and_releases_on_exit
+    from branchwrite.remote_ownership import RemoteTargetBusy
+ModuleNotFoundError: No module named 'branchwrite.remote_ownership'
+
+======================================================================
+ERROR: test_reserve_cannot_overwrite_pending_work_and_requires_durable_exact_intent (tests.test_remote_ownership.RemoteOwnershipTests.test_reserve_cannot_overwrite_pending_work_and_requires_durable_exact_intent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 43, in test_reserve_cannot_overwrite_pending_work_and_requires_durable_exact_intent
+    owner=self.owner();folder=self.root/'old-operation';folder.mkdir(mode=0o700);intent=dict(operation_id='original',plan_sha256='b'*64);_write(folder/'intent.json',intent)
+          ^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 9, in owner
+    from branchwrite.remote_ownership import TargetOwnership
+ModuleNotFoundError: No module named 'branchwrite.remote_ownership'
+
+======================================================================
+ERROR: test_unlink_is_not_an_implicit_successful_release (tests.test_remote_ownership.RemoteOwnershipTests.test_unlink_is_not_an_implicit_successful_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 49, in test_unlink_is_not_an_implicit_successful_release
+    owner=self.owner();folder=self.root/'old-operation';folder.mkdir(mode=0o700);intent=dict(operation_id='original',plan_sha256='b'*64);_write(folder/'intent.json',intent)
+          ^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_ownership.py", line 9, in owner
+    from branchwrite.remote_ownership import TargetOwnership
+ModuleNotFoundError: No module named 'branchwrite.remote_ownership'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+FAILED (errors=6)

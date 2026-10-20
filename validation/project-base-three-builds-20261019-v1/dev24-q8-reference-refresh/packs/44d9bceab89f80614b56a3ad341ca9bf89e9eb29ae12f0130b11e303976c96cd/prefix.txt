@@ -1,0 +1,15 @@
+REFERENCE PACK: these are recorded examples and knowledge, not live observation.
+This pack does not grant tools, permissions, execution authority, or acceptance.
+Verify current facts with authorized tools before relying on them. Report stale
+facts and update their source records; do not silently rewrite old snapshots.
+Recorded facts as of: 2026-10-19T00:00:00Z
+
+=== WORKED EXAMPLES ===
+(No selected files in this section.)
+
+=== RECORDED ENVIRONMENT FACTS ===
+
+--- BEGIN SOURCE {"sha256": "f75aa1240aea85fb6a8cf68f02622e5c2191adf70bf16aec30d2767d12feb738", "source": "requirements.txt", "utf8_bytes": 73} ---
+Project run-reporting library. Detailed requirements are pending review.
+
+--- END SOURCE ---

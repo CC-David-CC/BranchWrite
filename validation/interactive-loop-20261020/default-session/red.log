@@ -1,0 +1,24 @@
+test_explicit_saved_session_keeps_exact_project_and_state (tests.test_default_session_cli.DefaultSessionCliTests.test_explicit_saved_session_keeps_exact_project_and_state) ... ok
+test_no_arguments_opens_interactive_current_directory_without_saving_key (tests.test_default_session_cli.DefaultSessionCliTests.test_no_arguments_opens_interactive_current_directory_without_saving_key) ... FAIL
+test_save_api_shorthand_keeps_interactive_session_and_requires_explicit_flag (tests.test_default_session_cli.DefaultSessionCliTests.test_save_api_shorthand_keeps_interactive_session_and_requires_explicit_flag) ... FAIL
+
+======================================================================
+FAIL: test_no_arguments_opens_interactive_current_directory_without_saving_key (tests.test_default_session_cli.DefaultSessionCliTests.test_no_arguments_opens_interactive_current_directory_without_saving_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_default_session_cli.py", line 16, in test_no_arguments_opens_interactive_current_directory_without_saving_key
+    self.assertEqual(code,130)
+AssertionError: 0 != 130
+
+======================================================================
+FAIL: test_save_api_shorthand_keeps_interactive_session_and_requires_explicit_flag (tests.test_default_session_cli.DefaultSessionCliTests.test_save_api_shorthand_keeps_interactive_session_and_requires_explicit_flag)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_default_session_cli.py", line 22, in test_save_api_shorthand_keeps_interactive_session_and_requires_explicit_flag
+    self.assertEqual(code,130)
+AssertionError: 0 != 130
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.099s
+
+FAILED (failures=2)

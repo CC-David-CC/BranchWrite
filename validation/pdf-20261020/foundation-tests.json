@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 4.687788494047709,
+  "results": [
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_build_cannot_read_home_credentials_or_use_network",
+      "status": "PASS",
+      "seconds": 0.20047590509057045
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_hung_script_is_retired_without_partial_pdf",
+      "status": "PASS",
+      "seconds": 1.4092028740560636
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_invalid_pdf_and_page_numbers_fail_explicitly",
+      "status": "PASS",
+      "seconds": 0.7948462429922074
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_link_export_is_rejected_before_parsing",
+      "status": "PASS",
+      "seconds": 0.09427649201825261
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_old_export_cannot_masquerade_as_fresh_build",
+      "status": "PASS",
+      "seconds": 0.09443793899845332
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_real_pdf_two_pages_and_actual_png_use_same_bytes",
+      "status": "PASS",
+      "seconds": 0.8759445109171793
+    },
+    {
+      "id": "test_pdf_execution.PdfInitialInstallTests.test_dependencies_are_default_not_optional_task_configuration",
+      "status": "PASS",
+      "seconds": 0.0019491439452394843
+    },
+    {
+      "id": "test_pdf_execution.PdfLongDocumentTests.test_twenty_page_document_renders_selected_last_page",
+      "status": "PASS",
+      "seconds": 0.840863149962388
+    }
+  ]
+}

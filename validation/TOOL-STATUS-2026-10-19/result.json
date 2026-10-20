@@ -1,0 +1,7 @@
+{
+  "status": "SOURCE_PASS",
+  "tests": 21,
+  "scope": "read-only status plus actual file-effect and process-recovery controls; not installed or GPU",
+  "new_tests": 3,
+  "automatic_tool_reconciliation": false
+}

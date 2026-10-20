@@ -1,0 +1,65 @@
+format = "bw.generators.v1"
+status = "DECLARATIONS_NOT_NATIVE_IMPLEMENTATION"
+
+[[operation]]
+name = "headline"
+output_type = "Headline"
+role = "cartographer"
+template = "templates/headline.txt"
+required_inputs = ["source_frontier", "source_data_bw", "output_contract_bw", "target_revision"]
+context_scope = "selected_immutable_inputs"
+return_boundary = "committed_complete_typed_value_at_qualified_native_boundary"
+
+[[operation]]
+name = "status-note"
+output_type = "StatusNote"
+role = "cartographer"
+template = "templates/status-note.txt"
+required_inputs = ["source_frontier", "source_data_bw", "output_contract_bw", "target_revision"]
+context_scope = "selected_immutable_inputs"
+return_boundary = "committed_complete_typed_value_at_qualified_native_boundary"
+
+[[operation]]
+name = "evidence-summary"
+output_type = "EvidenceSummary"
+role = "cartographer"
+template = "templates/evidence-summary.txt"
+required_inputs = ["source_frontier", "source_data_bw", "output_contract_bw", "target_revision"]
+context_scope = "selected_immutable_inputs"
+return_boundary = "committed_complete_typed_value_at_qualified_native_boundary"
+
+[[operation]]
+name = "design"
+output_type = "DesignProposal"
+role = "cartographer"
+template = "templates/design.txt"
+required_inputs = ["source_frontier", "source_data_bw", "output_contract_bw", "target_revision"]
+context_scope = "selected_immutable_inputs"
+return_boundary = "committed_complete_typed_value_at_qualified_native_boundary"
+
+[[operation]]
+name = "builder-decision"
+output_type = "BuilderDecision"
+role = "builder"
+template = "templates/builder-decision.txt"
+required_inputs = ["source_frontier", "source_data_bw", "output_contract_bw", "target_revision"]
+context_scope = "selected_immutable_inputs"
+return_boundary = "committed_complete_typed_value_at_qualified_native_boundary"
+
+[[operation]]
+name = "reasoning-note"
+output_type = "ReasoningNote"
+role = "builder"
+template = "templates/reasoning-note.txt"
+required_inputs = ["source_frontier", "source_data_bw", "output_contract_bw", "target_revision"]
+context_scope = "selected_immutable_inputs"
+return_boundary = "committed_complete_typed_value_at_qualified_native_boundary"
+
+[[operation]]
+name = "final-response"
+output_type = "FinalResponse"
+role = "builder"
+template = "templates/final-response.txt"
+required_inputs = ["source_frontier", "source_data_bw", "output_contract_bw", "target_revision"]
+context_scope = "selected_immutable_inputs"
+return_boundary = "committed_complete_typed_value_at_qualified_native_boundary"

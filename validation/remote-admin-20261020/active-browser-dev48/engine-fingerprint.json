@@ -1,0 +1,117 @@
+{
+  "native_pid": 1003805,
+  "native_binary_sha256": "ae62045f75a8e11ba9d01b4da301d3bb87fe4ff342bab0ea7edc57276377824e",
+  "native_cmdline": [
+    "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-native-build-v1/strata-vision-dry-combinations-cow",
+    "--pack",
+    "/home/dflanag3/fleet-downloads/q4-strata-0134-llm60/pack-ud-q4-k-xl",
+    "--native",
+    "/home/dflanag3/models/qwen38-flash-next-unsloth-gguf/UD-Q4_K_XL/Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "--max-context",
+    "98304",
+    "--prefill",
+    "512",
+    "--spec",
+    "2",
+    "--suffix-draft",
+    "0",
+    "--kv",
+    "fp16",
+    "--expert-profile",
+    "/home/dflanag3/branching-g3/strata-immutable-branch-kv/data/expert-profile.bin",
+    "--prompt-cache",
+    "0",
+    "--conversation-cache-mib",
+    "0",
+    "--stats",
+    "--no-prefill-borrow",
+    "--resident-budget-gib",
+    "40",
+    "--expert-cache",
+    "auto",
+    "--ple-io",
+    "direct",
+    "--ple-row-cache",
+    "1048576",
+    "--vram-reserve-mib",
+    "8192",
+    "--pcie-frac",
+    "0.55",
+    "--max-new",
+    "128",
+    "--tokens",
+    "1",
+    "--vision",
+    "--gpu",
+    "0",
+    ""
+  ],
+  "source_runtime": "/home/dflanag3/spatial-artifacts/branchwrite-dev29-live-q4-20261020",
+  "status": {
+    "GPU": [
+      0
+    ],
+    "worker_count": 1,
+    "physical_gpu_count": 1,
+    "active_per_gpu": {
+      "0": 0
+    },
+    "max_active_per_gpu": {
+      "0": 0
+    },
+    "queued": 0,
+    "pending_branches": 0,
+    "failed_publications": 0,
+    "completed": 0,
+    "failed": 0,
+    "cancelled": 0,
+    "preload_failures": 0,
+    "ram": {
+      "resident_bytes": 0,
+      "reserved_bytes": 0,
+      "dirty_bytes": 0,
+      "failed_entries": 0,
+      "failed_bytes": 0,
+      "entries": 0,
+      "unique_payloads": 0,
+      "pins": 0,
+      "peak_accounted_bytes": 0,
+      "byte_limit": 25769803776,
+      "clean_evictions": 0,
+      "failed_evictions": 0,
+      "idle_evictions": 0,
+      "admission_waits": 0,
+      "loads_pending": 0
+    },
+    "disk": {
+      "file_bytes": 0,
+      "reserved_bytes": 0,
+      "local_reserved_bytes": 0,
+      "byte_limit": 68719476736,
+      "files_evicted": 0,
+      "admission_waits": 0,
+      "idle_evictions": 0,
+      "recency_entries": 0
+    },
+    "idle_expiry": {
+      "seconds": 1800.0,
+      "runs": 89,
+      "last_result": {
+        "ram": 0,
+        "disk": 0
+      },
+      "last_error": null,
+      "running": true
+    },
+    "workers": {
+      "0": {
+        "health": "healthy",
+        "restarts": 0,
+        "failure_reason": null,
+        "active": 0,
+        "max_active": 0,
+        "pid": 1003805
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Repair command_summary.py according to README and tests. Validate malformed rows and boolean exit codes, preserve Unicode failed labels and input order, and never mutate inputs. Change only command_summary.py. Run the required test command and finish.

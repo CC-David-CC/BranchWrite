@@ -1,0 +1,9 @@
+{
+  "status": "CPU_HTTP_PASS",
+  "tests": 16,
+  "new_question_tests": 6,
+  "scope": "existing COW HTTP/Store and CPU scripted responses; no live Q8/three-build comparison yet",
+  "initial_environment_error": "two existing tests lacked validation.run_golden_path_probe; helper transferred and unchanged suite reran",
+  "competing_versions": true,
+  "automatic_selection": false
+}

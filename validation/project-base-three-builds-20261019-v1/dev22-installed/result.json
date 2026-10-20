@@ -1,0 +1,16 @@
+{
+  "status": "INSTALLED_CLIENT_CPU_CONTROLS_PASS",
+  "tests": 64,
+  "failures": 0,
+  "skips": 0,
+  "source_package_on_import_path": false,
+  "source_revision": "a024011698fa45afeed744159a5865f9e4dad896",
+  "wheel_sha256": "037c9eccc0337d4af1bec016aaaeaa35ef54c48298d4c4c6623a6ec190ac3b06",
+  "scope": "Python3.14 installed wheel on llm-49; independent existing tests path only; not real GPU or installed HTTP qualification",
+  "source_http_process_exit_tests": 32,
+  "remaining": [
+    "Installed dev22 CLI against real Q8",
+    "Pending bootstrap reconciliation before workflow admission",
+    "Automatic Project Base scheduling/adoption"
+  ]
+}

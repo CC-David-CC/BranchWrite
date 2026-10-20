@@ -1,0 +1,170 @@
+[
+  {
+    "name": "branchwrite/__init__.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/__main__.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/browser_assets.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/browser_capture.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/browser_isolation.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/browser_worker.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/coding_cli.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/coding_contract.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/coding_defaults.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/coding_reconciliation.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/coding_review.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/coding_status.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/command_outputs.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/component_model.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/context_pack.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/control_contract.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/cow_actions.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/cow_client.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/cow_fork.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/execution.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/golden_path.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/image_feedback.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/interpreter.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/kernel.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/language.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/model_dispatch.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/model_inputs.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/planning_retry.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/project_apply.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/project_baseline.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/project_export.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/project_scope.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/records.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/run_cli.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/terminal.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/terminal_components.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/terminal_worker.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/text_file_codec.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/thinking_ladder.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/tool_dispatch.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/tool_registry.py",
+    "matches": true
+  },
+  {
+    "name": "branchwrite/verification.py",
+    "matches": true
+  }
+]

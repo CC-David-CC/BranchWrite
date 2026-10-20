@@ -1,0 +1,83 @@
+format = "bw.decoder-profiles.v1"
+status = "PROPOSED_BENCHMARK_PRESETS_NOT_NATIVE_QUALIFIED"
+grammar_order = "hard_legality_first"
+# No profile is silently activated without qualification.
+
+[[profile]]
+name = "control"
+stages = ["greedy"]
+selector = "greedy"
+
+[[profile]]
+name = "explore"
+stages = ["dry", "temperature", "min_p", "dist"]
+selector = "dist"
+temperature = 0.70
+min_p = 0.05
+dry_multiplier = 0.8
+dry_base = 1.75
+dry_allowed_length = 2
+dry_penalty_last_n = 256
+dry_breaker_policy = "BIND_NATIVE_RULE_EXPLICITLY"
+repeat_penalty = 1.0
+
+[[profile]]
+name = "typical"
+stages = ["temperature", "typical", "dist"]
+selector = "dist"
+temperature = 0.80
+typical_p = 0.95
+
+[[profile]]
+name = "dynamic"
+stages = ["dry", "dynatemp", "min_p", "dist"]
+selector = "dist"
+temperature = 0.55
+dynatemp_range = 0.35
+dynatemp_exponent = 1.0
+min_p = 0.06
+dry_multiplier = 0.8
+dry_base = 1.75
+dry_allowed_length = 2
+dry_penalty_last_n = 256
+dry_breaker_policy = "BIND_NATIVE_RULE_EXPLICITLY"
+
+[[profile]]
+name = "xtc"
+stages = ["temperature", "min_p", "xtc", "dist"]
+selector = "dist"
+temperature = 0.90
+min_p = 0.02
+xtc_probability = 0.12
+xtc_threshold = 0.15
+
+[[profile]]
+name = "mirostat"
+stages = ["temperature", "mirostat2"]
+selector = "mirostat2"
+temperature = 0.80
+mirostat_tau = 4.0
+mirostat_eta = 0.05
+
+[[profile]]
+name = "adaptive"
+stages = ["min_p", "adaptive_p"]
+selector = "adaptive_p"
+min_p = 0.05
+adaptive_target = 0.55
+adaptive_decay = 0.90
+
+[[profile]]
+name = "earlier-filter-stack-comparison"
+stages = ["dry", "temperature", "top_k", "top_p", "min_p", "dist"]
+selector = "dist"
+temperature = 0.70
+top_k = 60
+top_p = 0.95
+min_p = 0.05
+dry_multiplier = 0.8
+dry_base = 1.75
+dry_allowed_length = 2
+dry_penalty_last_n = 256
+dry_breaker_policy = "BIND_NATIVE_RULE_EXPLICITLY"
+repeat_penalty = 1.0

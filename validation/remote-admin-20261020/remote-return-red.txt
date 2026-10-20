@@ -1,0 +1,32 @@
+======================================================================
+ERROR: test_receipt_conversion_failure_after_remote_return_is_not_preexecution_rejection (tests.test_remote_tools.RemoteToolTests.test_receipt_conversion_failure_after_remote_return_is_not_preexecution_rejection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/tool_registry.py", line 481, in execute
+    return self._remote_outcome(plan,operation_id,tool,args,result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+ValueError: receipt conversion failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 50, in test_receipt_conversion_failure_after_remote_return_is_not_preexecution_rejection
+    with self.assertRaises(EffectIndeterminate):registry.execute(plan,'original-operation')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/tool_registry.py", line 482, in execute
+    except (RemoteTargetBusy,ValueError) as error:raise ToolRejected(str(error)) from error
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.execution.ToolRejected: receipt conversion failed
+
+----------------------------------------------------------------------
+Ran 1 test in 0.017s
+
+FAILED (errors=1)

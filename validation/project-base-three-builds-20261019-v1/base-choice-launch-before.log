@@ -1,0 +1,125 @@
+test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) ... 
+  test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) (key='base_catalog') ... ERROR
+  test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) (key='base_proposal') ... ERROR
+  test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) (key='base_revision') ... ERROR
+  test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) (key='base_reserve_tokens') ... ERROR
+test_incompatible_selection_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_incompatible_selection_rejected) ... ERROR
+test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) ... 
+  test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) (key='from_prefix') ... ERROR
+  test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) (key='from_branch') ... ERROR
+  test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) (key='from_snapshot') ... ERROR
+test_saved_choice_survives_reopen_and_changed_choice_is_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_saved_choice_survives_reopen_and_changed_choice_is_rejected) ... ERROR
+test_selected_snapshot_and_provenance_enter_existing_launch (test_base_choice_launch.BaseChoiceLaunchTests.test_selected_snapshot_and_provenance_enter_existing_launch) ... ERROR
+
+======================================================================
+ERROR: test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) (key='base_catalog')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 25, in test_complete_host_selection_input_required
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:None})
+                                                             ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) (key='base_proposal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 25, in test_complete_host_selection_input_required
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:None})
+                                                             ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) (key='base_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 25, in test_complete_host_selection_input_required
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:None})
+                                                             ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) (key='base_reserve_tokens')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 25, in test_complete_host_selection_input_required
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:None})
+                                                             ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_incompatible_selection_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_incompatible_selection_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 18, in test_incompatible_selection_rejected
+    with self.assertRaises(ValueError):self.launch(base_revision='f'*40)
+                                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) (key='from_prefix')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 22, in test_no_mixed_source_selection
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:'other'})
+                                                             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) (key='from_branch')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 22, in test_no_mixed_source_selection
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:'other'})
+                                                             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) (key='from_snapshot')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 22, in test_no_mixed_source_selection
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:'other'})
+                                                             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_saved_choice_survives_reopen_and_changed_choice_is_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_saved_choice_survives_reopen_and_changed_choice_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 27, in test_saved_choice_survives_reopen_and_changed_choice_is_rejected
+    launch=self.launch();state=self.root/'state';save_launch(state,launch);self.assertEqual(read_launch(state),launch)
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+======================================================================
+ERROR: test_selected_snapshot_and_provenance_enter_existing_launch (test_base_choice_launch.BaseChoiceLaunchTests.test_selected_snapshot_and_provenance_enter_existing_launch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 15, in test_selected_snapshot_and_provenance_enter_existing_launch
+    launch=self.launch();self.assertEqual(launch['fork'],dict(source_branch='reference',snapshot='d'*64));self.assertEqual(launch['config']['cow']['mode'],'ask');self.assertNotIn('bootstrap',launch['config']['cow'])
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'base_catalog'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (errors=10)

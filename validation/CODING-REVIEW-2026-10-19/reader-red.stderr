@@ -1,0 +1,65 @@
+test_active_writer_excludes_reader (test_readonly_log.ReadOnlyLogTests.test_active_writer_excludes_reader) ... ERROR
+test_empty_existing_events_are_not_initialized (test_readonly_log.ReadOnlyLogTests.test_empty_existing_events_are_not_initialized) ... ERROR
+test_existing_log_and_artifacts_are_read_without_changes (test_readonly_log.ReadOnlyLogTests.test_existing_log_and_artifacts_are_read_without_changes) ... ERROR
+test_missing_log_is_not_created (test_readonly_log.ReadOnlyLogTests.test_missing_log_is_not_created) ... ERROR
+test_reader_cannot_publish_artifact_or_event (test_readonly_log.ReadOnlyLogTests.test_reader_cannot_publish_artifact_or_event) ... ERROR
+test_readers_share_lock_and_exclude_writer (test_readonly_log.ReadOnlyLogTests.test_readers_share_lock_and_exclude_writer) ... ERROR
+
+======================================================================
+ERROR: test_active_writer_excludes_reader (test_readonly_log.ReadOnlyLogTests.test_active_writer_excludes_reader)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_readonly_log.py", line 38, in test_active_writer_excludes_reader
+    with self.assertRaises(WriterBusy):RuntimeLog(self.root,read_only=True)
+                                       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RuntimeLog.__init__() got an unexpected keyword argument 'read_only'
+
+======================================================================
+ERROR: test_empty_existing_events_are_not_initialized (test_readonly_log.ReadOnlyLogTests.test_empty_existing_events_are_not_initialized)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_readonly_log.py", line 28, in test_empty_existing_events_are_not_initialized
+    with self.assertRaises(CorruptLog):RuntimeLog(self.root,read_only=True)
+                                       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RuntimeLog.__init__() got an unexpected keyword argument 'read_only'
+
+======================================================================
+ERROR: test_existing_log_and_artifacts_are_read_without_changes (test_readonly_log.ReadOnlyLogTests.test_existing_log_and_artifacts_are_read_without_changes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_readonly_log.py", line 18, in test_existing_log_and_artifacts_are_read_without_changes
+    with RuntimeLog(self.root,read_only=True) as log:
+         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RuntimeLog.__init__() got an unexpected keyword argument 'read_only'
+
+======================================================================
+ERROR: test_missing_log_is_not_created (test_readonly_log.ReadOnlyLogTests.test_missing_log_is_not_created)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_readonly_log.py", line 23, in test_missing_log_is_not_created
+    with self.assertRaises(FileNotFoundError):RuntimeLog(self.root,read_only=True)
+                                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RuntimeLog.__init__() got an unexpected keyword argument 'read_only'
+
+======================================================================
+ERROR: test_reader_cannot_publish_artifact_or_event (test_readonly_log.ReadOnlyLogTests.test_reader_cannot_publish_artifact_or_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_readonly_log.py", line 41, in test_reader_cannot_publish_artifact_or_event
+    with RuntimeLog(self.root,read_only=True) as log:
+         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RuntimeLog.__init__() got an unexpected keyword argument 'read_only'
+
+======================================================================
+ERROR: test_readers_share_lock_and_exclude_writer (test_readonly_log.ReadOnlyLogTests.test_readers_share_lock_and_exclude_writer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_readonly_log.py", line 32, in test_readers_share_lock_and_exclude_writer
+    with RuntimeLog(self.root,read_only=True),RuntimeLog(self.root,read_only=True):
+         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RuntimeLog.__init__() got an unexpected keyword argument 'read_only'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+FAILED (errors=6)

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "fault": {
+    "guard_active": true,
+    "violations": [],
+    "native_modules_loaded": [],
+    "stage": "after-return",
+    "frame": "call-854a20c92dc5543f78fd2f1989322db4c24010de4fd04671",
+    "operation_id": "bwtool-e0a20d1e39d7a145210071c95e60759dac87d90479e38751",
+    "state": "Settling",
+    "tool": "create_text_file",
+    "path": "index.html",
+    "sha256": "791577f91a7c325d2a14d31ba40d726ffa4c815fda6532a2c1cc137f63054a0e",
+    "inode": 25559947,
+    "mtime_ns": 1792453633555914533
+  },
+  "frame_state": "Settling",
+  "retirement_proof_version": "bw.tool-retirement.v2",
+  "ledger_events": 72,
+  "frames": 24,
+  "ledger_sha256": "e86a18a919fa83e57b930b12ec2a0cd82b9f6daa40f06ef2283c99b3c2189b91",
+  "all_model_operations_complete": true,
+  "cow_head": {
+    "name": "dev25-site-positive",
+    "revision": 5,
+    "tip": "fba9fd683a5ac5720b7d0724b02cf5d7f0bdb9ce14072a51aaced98f3dba3f5d",
+    "root": "059d2c862a8b47ccfafd86a189bad92822459e140f2acec8e29b8dc2b9fac455"
+  },
+  "scope": "Closed client ledger, actual created file and readonly authenticated COW head before server restart."
+}

@@ -1,0 +1,41 @@
+test_active_writer_excludes_review (test_coding_review.CodingReviewTests.test_active_writer_excludes_review) ... ERROR
+test_changed_launch_grants_are_rejected (test_coding_review.CodingReviewTests.test_changed_launch_grants_are_rejected) ... ERROR
+test_exact_saved_preimage_and_current_bytes_form_diff (test_coding_review.CodingReviewTests.test_exact_saved_preimage_and_current_bytes_form_diff) ... ERROR
+test_post_completion_workspace_change_is_rejected (test_coding_review.CodingReviewTests.test_post_completion_workspace_change_is_rejected) ... ERROR
+
+======================================================================
+ERROR: test_active_writer_excludes_review (test_coding_review.CodingReviewTests.test_active_writer_excludes_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-patch-review-20261019/tests/test_coding_review.py", line 62, in test_active_writer_excludes_review
+    from branchwrite.coding_review import inspect_changes
+ModuleNotFoundError: No module named 'branchwrite.coding_review'
+
+======================================================================
+ERROR: test_changed_launch_grants_are_rejected (test_coding_review.CodingReviewTests.test_changed_launch_grants_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-patch-review-20261019/tests/test_coding_review.py", line 58, in test_changed_launch_grants_are_rejected
+    from branchwrite.coding_review import inspect_changes
+ModuleNotFoundError: No module named 'branchwrite.coding_review'
+
+======================================================================
+ERROR: test_exact_saved_preimage_and_current_bytes_form_diff (test_coding_review.CodingReviewTests.test_exact_saved_preimage_and_current_bytes_form_diff)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-patch-review-20261019/tests/test_coding_review.py", line 42, in test_exact_saved_preimage_and_current_bytes_form_diff
+    from branchwrite.coding_review import inspect_changes
+ModuleNotFoundError: No module named 'branchwrite.coding_review'
+
+======================================================================
+ERROR: test_post_completion_workspace_change_is_rejected (test_coding_review.CodingReviewTests.test_post_completion_workspace_change_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-patch-review-20261019/tests/test_coding_review.py", line 50, in test_post_completion_workspace_change_is_rejected
+    from branchwrite.coding_review import inspect_changes
+ModuleNotFoundError: No module named 'branchwrite.coding_review'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.022s
+
+FAILED (errors=4)

@@ -1,0 +1,77 @@
+test_completed_model_context_does_not_repeat_original_request (tests.test_unfinished_task.UnfinishedTaskTests.test_completed_model_context_does_not_repeat_original_request) ... ERROR
+test_cycle_in_retained_source_pointers_is_rejected (tests.test_unfinished_task.UnfinishedTaskTests.test_cycle_in_retained_source_pointers_is_rejected) ... ERROR
+test_different_saved_prefix_does_not_pull_in_unrelated_goal (tests.test_unfinished_task.UnfinishedTaskTests.test_different_saved_prefix_does_not_pull_in_unrelated_goal) ... ERROR
+test_edit_replacement_starts_its_own_intent_chain (tests.test_unfinished_task.UnfinishedTaskTests.test_edit_replacement_starts_its_own_intent_chain) ... ERROR
+test_first_thought_keeps_original_goal_and_short_update (tests.test_unfinished_task.UnfinishedTaskTests.test_first_thought_keeps_original_goal_and_short_update) ... ERROR
+test_repeated_early_steering_keeps_notes_once_in_order (tests.test_unfinished_task.UnfinishedTaskTests.test_repeated_early_steering_keeps_notes_once_in_order) ... ERROR
+
+======================================================================
+ERROR: test_completed_model_context_does_not_repeat_original_request (tests.test_unfinished_task.UnfinishedTaskTests.test_completed_model_context_does_not_repeat_original_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 23, in test_completed_model_context_does_not_repeat_original_request
+    self.assertEqual(self.compose([row('one','Old task')],context=dict(PREFIX,mode='append_user')),'Make it purple.')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 10, in compose
+    from branchwrite.session_controls import unfinished_task
+ImportError: cannot import name 'unfinished_task' from 'branchwrite.session_controls' (/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/session_controls.py)
+
+======================================================================
+ERROR: test_cycle_in_retained_source_pointers_is_rejected (tests.test_unfinished_task.UnfinishedTaskTests.test_cycle_in_retained_source_pointers_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 31, in test_cycle_in_retained_source_pointers_is_rejected
+    with self.assertRaisesRegex(ValueError,'cycle'):self.compose([row('one','Task','one')])
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 10, in compose
+    from branchwrite.session_controls import unfinished_task
+ImportError: cannot import name 'unfinished_task' from 'branchwrite.session_controls' (/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/session_controls.py)
+
+======================================================================
+ERROR: test_different_saved_prefix_does_not_pull_in_unrelated_goal (tests.test_unfinished_task.UnfinishedTaskTests.test_different_saved_prefix_does_not_pull_in_unrelated_goal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 26, in test_different_saved_prefix_does_not_pull_in_unrelated_goal
+    text=self.compose(h);self.assertIn('New task',text);self.assertNotIn('Unrelated task',text)
+         ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 10, in compose
+    from branchwrite.session_controls import unfinished_task
+ImportError: cannot import name 'unfinished_task' from 'branchwrite.session_controls' (/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/session_controls.py)
+
+======================================================================
+ERROR: test_edit_replacement_starts_its_own_intent_chain (tests.test_unfinished_task.UnfinishedTaskTests.test_edit_replacement_starts_its_own_intent_chain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 29, in test_edit_replacement_starts_its_own_intent_chain
+    text=self.compose(h);self.assertIn('Replacement task',text);self.assertNotIn('Old task',text);self.assertNotIn('1 Replacement',text)
+         ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 10, in compose
+    from branchwrite.session_controls import unfinished_task
+ImportError: cannot import name 'unfinished_task' from 'branchwrite.session_controls' (/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/session_controls.py)
+
+======================================================================
+ERROR: test_first_thought_keeps_original_goal_and_short_update (tests.test_unfinished_task.UnfinishedTaskTests.test_first_thought_keeps_original_goal_and_short_update)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 14, in test_first_thought_keeps_original_goal_and_short_update
+    result=self.compose([row('one','Make a bird website.')])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 10, in compose
+    from branchwrite.session_controls import unfinished_task
+ImportError: cannot import name 'unfinished_task' from 'branchwrite.session_controls' (/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/session_controls.py)
+
+======================================================================
+ERROR: test_repeated_early_steering_keeps_notes_once_in_order (tests.test_unfinished_task.UnfinishedTaskTests.test_repeated_early_steering_keeps_notes_once_in_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 18, in test_repeated_early_steering_keeps_notes_once_in_order
+    text=self.compose(h,'Make the button bigger.')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_unfinished_task.py", line 10, in compose
+    from branchwrite.session_controls import unfinished_task
+ImportError: cannot import name 'unfinished_task' from 'branchwrite.session_controls' (/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/session_controls.py)
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+FAILED (errors=6)

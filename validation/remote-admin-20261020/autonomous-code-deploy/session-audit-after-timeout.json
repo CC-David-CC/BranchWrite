@@ -1,0 +1,70 @@
+{
+  "history": [
+    {
+      "id": "turn-1-75d09debd3f59871",
+      "input": {
+        "item_ids": [
+          "input-48eedb5be22444509c0ff1ca7247020b"
+        ],
+        "items": [
+          {
+            "id": "input-48eedb5be22444509c0ff1ca7247020b",
+            "kind": "send",
+            "message": "Make a pretty, phone-friendly website about dogs in index.html with no downloads. Include the sentences Milo plays. Luna runs. Add a Say hello button that shows Hello, David! when clicked. Keep the file here and put the website on my test machine admin01, replacing its welcome page. Check your work and tell me what I can open.",
+            "mode": "work"
+          }
+        ],
+        "message": "Make a pretty, phone-friendly website about dogs in index.html with no downloads. Include the sentences Milo plays. Luna runs. Add a Say hello button that shows Hello, David! when clicked. Keep the file here and put the website on my test machine admin01, replacing its welcome page. Check your work and tell me what I can open.",
+        "mode": "work",
+        "schema": 1,
+        "source": {
+          "context": null,
+          "file_commit": null,
+          "mode": "work",
+          "turn": null,
+          "workdir": "/home/dflanag3/projects/bw-code-deploy-dev51-20261020"
+        }
+      },
+      "result": {
+        "acceptance": "not_independently_established",
+        "action": "work",
+        "answer": null,
+        "before": "9a81b2e0c4012898ffc1aa94b50cdd611f534fd2",
+        "checks_passed": null,
+        "context": {
+          "branch": "bw-session-367492f5aa1e9181896d6584f722619f1293d3ff",
+          "execution_profile_id": "62a8bc71db2436477fc6e5c010d4357287034c04ea41123a887418694a5d42b6",
+          "mode": "append_user",
+          "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+          "revision": 17,
+          "root": "5b487f75221853e97b3f338a56c9df11b5120be0be5b000267d0fab56a072dd3",
+          "tip": "74a8a99131fc06cfcf6073720ad4dd62cb419496038748969ed160dcd55b191f"
+        },
+        "file_commit": "70043941d3c0d15b4c2589a32718e6f6392e97a6",
+        "mode": "work",
+        "paths": [
+          "index.html"
+        ],
+        "status": "interrupted",
+        "unfinished_request": false,
+        "workdir": "/home/dflanag3/projects/bw-code-deploy-dev51-20261020",
+        "workflow": "/home/dflanag3/spatial-artifacts/bw-code-deploy-q4-dev51-20261020/session/turns/turn-1-75d09debd3f59871"
+      }
+    }
+  ],
+  "current": {
+    "context": {
+      "branch": "bw-session-367492f5aa1e9181896d6584f722619f1293d3ff",
+      "execution_profile_id": "62a8bc71db2436477fc6e5c010d4357287034c04ea41123a887418694a5d42b6",
+      "mode": "append_user",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "revision": 17,
+      "root": "5b487f75221853e97b3f338a56c9df11b5120be0be5b000267d0fab56a072dd3",
+      "tip": "74a8a99131fc06cfcf6073720ad4dd62cb419496038748969ed160dcd55b191f"
+    },
+    "file_commit": "70043941d3c0d15b4c2589a32718e6f6392e97a6",
+    "workdir": "/home/dflanag3/projects/bw-code-deploy-dev51-20261020",
+    "mode": "work",
+    "turn": "turn-1-75d09debd3f59871"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "viewport": [
+        1280,
+        800
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "302578bbd246459d30be5389bbaed0e2fb110a161e0477eaf3543f883d4f91e3",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "computed:Milo",
+            "[{\"weight\":\"700\",\"style\":\"normal\",\"underline\":false}]"
+          ],
+          [
+            "computed:Luna",
+            "[{\"weight\":\"700\",\"style\":\"normal\",\"underline\":false}]"
+          ],
+          [
+            "computed:plays",
+            "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+          ],
+          [
+            "computed:runs",
+            "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+          ],
+          [
+            "click",
+            "Say hello -> Hello, David!"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532975]",
+        "pid_ns": "pid:[4026532973]",
+        "mount_ns": "mnt:[4026532970]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 1050475,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.0040658810175955296
+      },
+      "runtime_errors": [],
+      "source_sha256": "7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-followup-minp-dev53-20261020/deployed-1280.png"
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "302578bbd246459d30be5389bbaed0e2fb110a161e0477eaf3543f883d4f91e3",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "computed:Milo",
+            "[{\"weight\":\"700\",\"style\":\"normal\",\"underline\":false}]"
+          ],
+          [
+            "computed:Luna",
+            "[{\"weight\":\"700\",\"style\":\"normal\",\"underline\":false}]"
+          ],
+          [
+            "computed:plays",
+            "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+          ],
+          [
+            "computed:runs",
+            "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+          ],
+          [
+            "click",
+            "Say hello -> Hello, David!"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026533170]",
+        "pid_ns": "pid:[4026533167]",
+        "mount_ns": "mnt:[4026532971]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 1050636,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004064138047397137
+      },
+      "runtime_errors": [],
+      "source_sha256": "7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-followup-minp-dev53-20261020/deployed-375.png"
+    }
+  ]
+}

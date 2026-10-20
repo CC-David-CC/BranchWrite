@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "changed": [
+    "taskboard/parser.py",
+    "taskboard/report.py"
+  ],
+  "independent_generated_cases": 200,
+  "invalid_classes": 5,
+  "seed": 12419,
+  "original_source_and_git_unchanged": true,
+  "protected_tests_unchanged": true,
+  "isolated_executor": true
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "executed matching-profile work accounting; not numerical or physical-sharing certification",
+  "reused_starting_prefix_cells": 50684,
+  "requests": 9,
+  "actual_forward_tokens": 16780,
+  "actual_new_canonical_input_cells": 16780,
+  "actual_prefill_tokens": 12710,
+  "generated_tokens": 4070,
+  "unexpected_prefix_forward_tokens": 0,
+  "all_object_hashes_match": true
+}

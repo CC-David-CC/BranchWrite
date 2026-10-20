@@ -1,0 +1,10 @@
+format = "bw.source-audit.v1"
+source_zip_sha256 = "dc078d4641235369a437ae0f18dec379a2e6ba1bd69ed98b92694059743e96f2"
+source_spec_sha256 = "55858f24bb3fa07a866ec5bc5b7710bde71cabdfb920b2ab1532ee4e4cfa6be1"
+source_cases = 211
+source_tickets = 44
+source_offline_tests_passed = 98
+current_spec_sha256 = "3136b4d76a4e885c7ce222eeaf6efe1bff09ce156500087963ff1bebdfc38e3d"
+new_case_count = 128
+total_product_cases = 339
+tickets = 40

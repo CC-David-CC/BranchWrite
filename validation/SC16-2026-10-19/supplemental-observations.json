@@ -1,0 +1,15 @@
+{
+  "original_exit": 1,
+  "original_status": "FAIL",
+  "tokens_identical": true,
+  "tokens_per_measured_run": 128,
+  "exposed_thinking_fields_equal": [
+    "complete",
+    "final_text",
+    "progress",
+    "reasoning_text",
+    "schema"
+  ],
+  "each_thinking_snapshot_matches_its_own_receipt": true,
+  "scope": "Supplemental observations; original full-object equality failure is retained; not full controller equality or logit qualification"
+}

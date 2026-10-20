@@ -1,0 +1,7 @@
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+SyntaxError: unterminated string literal (detected at line 34) (sitecustomize.py, line 34)
+[BranchWrite] Working on model output.
+[BranchWrite] Model step recorded.
+[BranchWrite] Running a tool.
+[BranchWrite] Tool result recorded.
+[BranchWrite] Working on model output.

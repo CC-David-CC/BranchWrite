@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "paused_at_utc": "2026-10-20T08:43:58.617849+00:00",
+  "new_jobs_started": false,
+  "journey_clients_exited": true,
+  "dedicated_q4_service_left_running": true,
+  "ordinary_chat_server_restart_requested": false,
+  "gpu_sample": "0, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 0 %, 86633 MiB",
+  "gpu_sample_returncode": 0,
+  "goal": "standalone steerable coding agent; useful work and exact recovery over Context COW",
+  "handoff": "HANDOFF-2026-10-20-PAUSED.md"
+}

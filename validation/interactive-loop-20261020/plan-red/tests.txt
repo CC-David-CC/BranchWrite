@@ -1,0 +1,33 @@
+test_finish_in_read_only_mode_requires_unchanged_inventory (tests.test_plan_mode.PlanModeTests.test_finish_in_read_only_mode_requires_unchanged_inventory) ... ERROR
+test_plan_launcher_has_no_file_write_or_execution_grants (tests.test_plan_mode.PlanModeTests.test_plan_launcher_has_no_file_write_or_execution_grants) ... ERROR
+test_read_only_policy_rejects_a_writable_host_grant (tests.test_plan_mode.PlanModeTests.test_read_only_policy_rejects_a_writable_host_grant) ... ERROR
+
+======================================================================
+ERROR: test_finish_in_read_only_mode_requires_unchanged_inventory (tests.test_plan_mode.PlanModeTests.test_finish_in_read_only_mode_requires_unchanged_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_plan_mode.py", line 22, in test_finish_in_read_only_mode_requires_unchanged_inventory
+    from branchwrite.verification import ReadOnlyPolicy
+ImportError: cannot import name 'ReadOnlyPolicy' from 'branchwrite.verification' (/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/verification.py)
+
+======================================================================
+ERROR: test_plan_launcher_has_no_file_write_or_execution_grants (tests.test_plan_mode.PlanModeTests.test_plan_launcher_has_no_file_write_or_execution_grants)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_plan_mode.py", line 16, in test_plan_launcher_has_no_file_write_or_execution_grants
+    launch=build_launch(p,'Plan a change',connection,branch='plan',mode='plan')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'mode'
+
+======================================================================
+ERROR: test_read_only_policy_rejects_a_writable_host_grant (tests.test_plan_mode.PlanModeTests.test_read_only_policy_rejects_a_writable_host_grant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_plan_mode.py", line 33, in test_read_only_policy_rejects_a_writable_host_grant
+    from branchwrite.verification import ReadOnlyPolicy
+ImportError: cannot import name 'ReadOnlyPolicy' from 'branchwrite.verification' (/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/verification.py)
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=3)

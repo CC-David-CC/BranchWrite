@@ -1,0 +1,23 @@
+FF
+======================================================================
+FAIL: test_cli_accepts_full_128_byte_branch_and_operation_names (tests.test_chat_cli_http.ChatCliHttpTests.test_cli_accepts_full_128_byte_branch_and_operation_names)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_chat_cli_http.py", line 392, in test_cli_accepts_full_128_byte_branch_and_operation_names
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 2 != 0 : branchwrite: 'COW HTTP 409: Expected 1..64 character ASCII branch/operation ID'
+
+
+======================================================================
+FAIL: test_client_recovers_source_and_committed_answer_receipts (tests.test_project_context_real_cow_restart.RealCowClientReceiptTests.test_client_recovers_source_and_committed_answer_receipts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_project_context_real_cow_restart.py", line 171, in test_client_recovers_source_and_committed_answer_receipts
+    self.assertEqual(reconciled.returncode,0,reconciled.stderr)
+AssertionError: 2 != 0 : branchwrite: 'COW HTTP 409: Original grammar state name is malformed'
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 11.413s
+
+FAILED (failures=2)

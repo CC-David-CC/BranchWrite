@@ -1,0 +1,44 @@
+======================================================================
+FAIL: test_direct_intent_recording_rejects_path_escape_and_incompatible_target (tests.test_remote_execution.RemoteTargetTests.test_direct_intent_recording_rejects_path_escape_and_incompatible_target) (field='operation_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 46, in test_direct_intent_recording_rejects_path_escape_and_incompatible_target
+    with self.subTest(field=field),self.assertRaises(ValueError):t.record_intent(bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_direct_intent_recording_rejects_path_escape_and_incompatible_target (tests.test_remote_execution.RemoteTargetTests.test_direct_intent_recording_rejects_path_escape_and_incompatible_target) (field='target_identity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 46, in test_direct_intent_recording_rejects_path_escape_and_incompatible_target
+    with self.subTest(field=field),self.assertRaises(ValueError):t.record_intent(bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_direct_intent_recording_rejects_path_escape_and_incompatible_target (tests.test_remote_execution.RemoteTargetTests.test_direct_intent_recording_rejects_path_escape_and_incompatible_target)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 47, in test_direct_intent_recording_rejects_path_escape_and_incompatible_target
+    self.assertFalse((self.root/'escape').exists())
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_reply_validation_rejects_bool_exit_wrong_hash_and_wrong_process_identity (tests.test_remote_execution.RemoteTargetTests.test_reply_validation_rejects_bool_exit_wrong_hash_and_wrong_process_identity) (field='worker_pid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 55, in test_reply_validation_rejects_bool_exit_wrong_hash_and_wrong_process_identity
+    with self.subTest(field=field),self.assertRaises(ValueError):t._decode(intent,{**reply,field:value})
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_reply_validation_rejects_bool_exit_wrong_hash_and_wrong_process_identity (tests.test_remote_execution.RemoteTargetTests.test_reply_validation_rejects_bool_exit_wrong_hash_and_wrong_process_identity) (field='command_pid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 55, in test_reply_validation_rejects_bool_exit_wrong_hash_and_wrong_process_identity
+    with self.subTest(field=field),self.assertRaises(ValueError):t._decode(intent,{**reply,field:value})
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.018s
+
+FAILED (failures=5)

@@ -1,0 +1,194 @@
+{
+  "status": "FAIL",
+  "tests": 37,
+  "failures": 1,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 22.777696739998646,
+  "results": [
+    {
+      "id": "test_python_runtime.SystemPythonRuntimeTests.test_admitted_venv_module_mutation_is_still_rejected",
+      "status": "PASS",
+      "seconds": 3.121873416006565
+    },
+    {
+      "id": "test_python_runtime.SystemPythonRuntimeTests.test_distro_venv_admits_and_executes_in_retired_isolation",
+      "status": "FAIL"
+    },
+    {
+      "id": "test_python_runtime.SystemPythonRuntimeTests.test_venv_link_to_unrelated_private_file_remains_rejected",
+      "status": "PASS",
+      "seconds": 0.0710605779895559
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_canonical_receipt_and_page_artifact_cannot_be_forged",
+      "status": "PASS",
+      "seconds": 1.3370027559576556
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_cli_export_contains_pdf_and_actual_page_images",
+      "status": "PASS",
+      "seconds": 1.279369818046689
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_edit_after_build_invalidates_document_even_with_new_file_check",
+      "status": "PASS",
+      "seconds": 1.2185321999713778
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_every_current_page_and_a_current_named_check_can_pass",
+      "status": "PASS",
+      "seconds": 1.3282192170154303
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_invalid_selected_page_is_an_explicit_tool_failure",
+      "status": "PASS",
+      "seconds": 0.9242688750382513
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_latest_failed_build_cannot_accept_previous_preserved_pdf",
+      "status": "PASS",
+      "seconds": 1.4102259260835126
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_passing_file_check_cannot_hide_an_unrendered_page",
+      "status": "PASS",
+      "seconds": 0.8535638529574499
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_readonly_policy_rejects_pdf_execution_capability",
+      "status": "PASS",
+      "seconds": 0.0017244680784642696
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_rebuild_cannot_reuse_page_receipts_from_old_pdf",
+      "status": "PASS",
+      "seconds": 1.8711268740007654
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_reopened_ledger_revalidates_same_actual_page_evidence",
+      "status": "PASS",
+      "seconds": 1.3415205280762166
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_build_cannot_read_home_credentials_or_use_network",
+      "status": "PASS",
+      "seconds": 0.1713247550651431
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_hung_script_is_retired_without_partial_pdf",
+      "status": "PASS",
+      "seconds": 1.4160951810190454
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_invalid_pdf_and_page_numbers_fail_explicitly",
+      "status": "PASS",
+      "seconds": 0.7411733400076628
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_link_export_is_rejected_before_parsing",
+      "status": "PASS",
+      "seconds": 0.0944788110209629
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_old_export_cannot_masquerade_as_fresh_build",
+      "status": "PASS",
+      "seconds": 0.09391677810344845
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_real_pdf_two_pages_and_actual_png_use_same_bytes",
+      "status": "PASS",
+      "seconds": 0.8086306939367205
+    },
+    {
+      "id": "test_pdf_execution.PdfInitialInstallTests.test_dependencies_are_default_not_optional_task_configuration",
+      "status": "PASS",
+      "seconds": 0.0016785390907898545
+    },
+    {
+      "id": "test_pdf_execution.PdfLongDocumentTests.test_twenty_page_document_renders_selected_last_page",
+      "status": "PASS",
+      "seconds": 0.7949926670407876
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_absent_capability_and_ungranted_destinations_are_rejected",
+      "status": "PASS",
+      "seconds": 0.026723299990408123
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_actual_pdf_is_published_and_selected_page_is_rendered",
+      "status": "PASS",
+      "seconds": 0.9845719899749383
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_changed_preimages_reject_frozen_build_before_execution",
+      "status": "PASS",
+      "seconds": 0.05117769993375987
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_failed_new_build_preserves_previous_pdf",
+      "status": "PASS",
+      "seconds": 1.028881578007713
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_page_schema_and_host_reject_bool_zero_and_out_of_bounds",
+      "status": "PASS",
+      "seconds": 0.0009797579841688275
+    },
+    {
+      "id": "test_pdf_cli.PdfDefaultCliTests.test_document_tool_card_explains_builtin_packages_and_real_page_review",
+      "status": "PASS",
+      "seconds": 8.210900705307722e-05
+    },
+    {
+      "id": "test_pdf_cli.PdfDefaultCliTests.test_normal_work_launch_includes_page_image_feedback_without_pdf_config",
+      "status": "PASS",
+      "seconds": 0.0007856999291107059
+    },
+    {
+      "id": "test_pdf_cli.PdfDefaultCliTests.test_readonly_launch_does_not_gain_python_execution",
+      "status": "PASS",
+      "seconds": 0.00030071591027081013
+    },
+    {
+      "id": "test_project_checks.ProjectChecksTests.test_actual_check_of_current_files_can_pass",
+      "status": "PASS",
+      "seconds": 0.06677827204111964
+    },
+    {
+      "id": "test_project_checks.ProjectChecksTests.test_changes_require_checks_to_run_again",
+      "status": "PASS",
+      "seconds": 0.06164196692407131
+    },
+    {
+      "id": "test_project_checks.ProjectChecksTests.test_different_check_cannot_hide_a_failed_named_check",
+      "status": "PASS",
+      "seconds": 0.11522059701383114
+    },
+    {
+      "id": "test_project_checks.ProjectChecksTests.test_finish_without_a_check_is_not_verified",
+      "status": "PASS",
+      "seconds": 0.009140813956037164
+    },
+    {
+      "id": "test_project_checks.ProjectChecksTests.test_latest_failure_overrides_an_earlier_pass",
+      "status": "PASS",
+      "seconds": 0.1148962409934029
+    },
+    {
+      "id": "test_project_checks.ProjectChecksTests.test_nonzero_check_is_not_verified",
+      "status": "PASS",
+      "seconds": 0.060895386966876686
+    },
+    {
+      "id": "test_project_checks.ProjectChecksTests.test_plain_shell_observation_is_not_a_project_check",
+      "status": "PASS",
+      "seconds": 0.0014944910071790218
+    },
+    {
+      "id": "test_project_checks.ProjectChecksTests.test_repaired_named_check_can_replace_a_broken_command",
+      "status": "PASS",
+      "seconds": 0.1153354849666357
+    }
+  ]
+}

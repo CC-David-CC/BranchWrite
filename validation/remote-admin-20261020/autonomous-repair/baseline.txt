@@ -1,0 +1,26 @@
+test_empty (test_calculator.TotalTests.test_empty) ... ok
+test_many (test_calculator.TotalTests.test_many) ... FAIL
+test_one (test_calculator.TotalTests.test_one) ... FAIL
+
+======================================================================
+FAIL: test_many (test_calculator.TotalTests.test_many)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/projects/bw-autorepair-dev54-20261020/test_calculator.py", line 7, in test_many
+    def test_many(self): self.assertEqual(total([2, 3, 4]), 9)
+                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 9
+
+======================================================================
+FAIL: test_one (test_calculator.TotalTests.test_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/projects/bw-autorepair-dev54-20261020/test_calculator.py", line 6, in test_one
+    def test_one(self): self.assertEqual(total([7]), 7)
+                        ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: 0 != 7
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (failures=2)

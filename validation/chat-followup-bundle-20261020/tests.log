@@ -1,0 +1,17 @@
+test_cli_accepts_full_128_byte_branch_and_operation_names (test_chat_cli_http.ChatCliHttpTests.test_cli_accepts_full_128_byte_branch_and_operation_names) ... ok
+test_cli_keeps_user_conversation_tip_current_and_work_fork_independent (test_chat_cli_http.ChatCliHttpTests.test_cli_keeps_user_conversation_tip_current_and_work_fork_independent) ... ok
+test_local_followups_are_durable_and_sent_as_one_combined_turn (test_chat_cli_http.ChatCliHttpTests.test_local_followups_are_durable_and_sent_as_one_combined_turn) ... ok
+test_local_queue_survives_client_death_and_drains_after_reconcile (test_chat_cli_http.ChatCliHttpTests.test_local_queue_survives_client_death_and_drains_after_reconcile) ... ok
+test_lost_cli_ack_reconciles_the_same_saved_user_turn (test_chat_cli_http.ChatCliHttpTests.test_lost_cli_ack_reconciles_the_same_saved_user_turn) ... ok
+test_stop_add_before_first_answer_preserves_old_attempt_as_a_sibling (test_chat_cli_http.ChatCliHttpTests.test_stop_add_before_first_answer_preserves_old_attempt_as_a_sibling) ... ok
+test_stop_add_cancels_before_output_and_retries_with_both_user_inputs (test_chat_cli_http.ChatCliHttpTests.test_stop_add_cancels_before_output_and_retries_with_both_user_inputs) ... ok
+test_actual_cli_subprocess_conforms_to_http_client_flow (test_cow_client_flow.CowClientFlowTests.test_actual_cli_subprocess_conforms_to_http_client_flow) ... ok
+test_http_client_prepare_fork_continue_history_tool_observation (test_cow_client_flow.CowClientFlowTests.test_http_client_prepare_fork_continue_history_tool_observation) ... ok
+test_http_stale_revision_reaches_server_and_is_rejected_before_inference (test_cow_client_flow.CowClientFlowTests.test_http_stale_revision_reaches_server_and_is_rejected_before_inference) ... ok
+test_real_http_accepts_128_byte_branch_and_operation_names (test_cow_client_flow.CowClientFlowTests.test_real_http_accepts_128_byte_branch_and_operation_names) ... ok
+test_user_conversation_tip_stays_current_and_work_fork_is_independent (test_cow_client_flow.CowClientFlowTests.test_user_conversation_tip_stays_current_and_work_fork_is_independent) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 10.937s
+
+OK

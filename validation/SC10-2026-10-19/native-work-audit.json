@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "restored_consumed": 31078,
+  "prefix_forward_tokens": 0,
+  "final_counters": {
+    "forward_tokens": 11481,
+    "prefill_tokens": 10279,
+    "prefill_chunks": 26,
+    "decode_prepare_ns": 2565648947,
+    "decode_compute_ns": 20718635520,
+    "decode_finish_ns": 139291823,
+    "decode_timed_tokens": 1202
+  },
+  "first_new_native_command": "feed 198 248045 846 198 27748 89616 84323 4463 9743 65126 1658 15645 82004 3381 25 198 9947 279 1428 3357 10485 3559 13 45326 999 22980 1189 381 48659 26 23331 279 1428 26622 1472 11340 7141 1518 15205 13 1061 369 5224 10836 11 1856 5721 314 10993 466 7634 310 8952 23353 13 198 4754 588 2056 763 596",
+  "native_process": 651991,
+  "numerical_oracle": "NOT_RUN"
+}

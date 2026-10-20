@@ -1,0 +1,13 @@
+Processing ./src/branchwrite-remote-admin-20261020
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: branchwrite
+  Building wheel for branchwrite (pyproject.toml): started
+  Building wheel for branchwrite (pyproject.toml): finished with status 'done'
+  Created wheel for branchwrite: filename=branchwrite-0.1.0.dev49-py3-none-any.whl size=271008 sha256=fab6d2ccfe53265a62f8e74773161c42e49fe537a8b3f1f56b86fb971dd7c697
+  Stored in directory: /home/dflanag3/.cache/pip/wheels/53/cd/98/9c354e406e5ee81fbd542e9c327bfa893ad994b137ea23fde7
+Successfully built branchwrite

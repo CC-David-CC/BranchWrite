@@ -1,0 +1,13 @@
+test_control_uses_original_id_short_separate_transport_and_no_journal_mutation (tests.test_model_pause.PauseClientTests.test_control_uses_original_id_short_separate_transport_and_no_journal_mutation) ... ok
+test_mismatched_or_impossible_pause_ack_is_rejected (tests.test_model_pause.PauseClientTests.test_mismatched_or_impossible_pause_ack_is_rejected) ... ok
+test_generation_exception_is_preserved_and_watcher_is_joined (tests.test_model_pause.PauseWatcherTests.test_generation_exception_is_preserved_and_watcher_is_joined) ... ok
+test_lost_control_reply_retries_only_same_id (tests.test_model_pause.PauseWatcherTests.test_lost_control_reply_retries_only_same_id) ... ok
+test_no_control_request_until_host_signal_and_ack_does_not_finish_generation (tests.test_model_pause.PauseWatcherTests.test_no_control_request_until_host_signal_and_ack_does_not_finish_generation) ... ok
+test_observer_failure_is_visible_without_claiming_pause_or_durability (tests.test_model_pause.PauseWatcherTests.test_observer_failure_is_visible_without_claiming_pause_or_durability) ... ok
+test_old_server_rejection_falls_back_once_without_aborting_model (tests.test_model_pause.PauseWatcherTests.test_old_server_rejection_falls_back_once_without_aborting_model) ... ok
+test_pending_registration_can_be_polled_without_resubmitting_generation (tests.test_model_pause.PauseWatcherTests.test_pending_registration_can_be_polled_without_resubmitting_generation) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.105s
+
+OK

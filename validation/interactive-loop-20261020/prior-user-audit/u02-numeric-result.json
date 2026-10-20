@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "exit_code": 1,
+  "stdout": "{\"checks\": [{\"name\": \"one\", \"passed\": true, \"actual\": \"7.0\", \"expected\": \"7\"}, {\"name\": \"mixed_sign\", \"passed\": true, \"actual\": \"2.0\", \"expected\": \"2\"}, {\"name\": \"generator\", \"passed\": true, \"actual\": \"0.0\", \"expected\": \"0\"}, {\"name\": \"fractions\", \"passed\": true, \"actual\": \"Fraction(1, 2)\", \"expected\": \"Fraction(1, 2)\"}, {\"name\": \"decimals\", \"passed\": true, \"actual\": \"Decimal('2.00')\", \"expected\": \"Decimal('2')\"}, {\"name\": \"finite_float_overflow\", \"passed\": false, \"actual\": \"inf\", \"expected\": \"1e+308\"}, {\"name\": \"empty\", \"passed\": true, \"error\": \"ValueError\"}, {\"name\": \"infinity\", \"passed\": true, \"error\": \"ValueError\"}, {\"name\": \"nan\", \"passed\": true, \"error\": \"ValueError\"}, {\"name\": \"complex\", \"passed\": true, \"error\": \"TypeError\"}, {\"name\": \"text\", \"passed\": true, \"error\": \"TypeError\"}], \"passed\": 10, \"total\": 11}\n",
+  "stderr": "",
+  "source_sha256": "42b56022fded15b9c70c8ea6ada3724c42ed82619c29ecbad2c928ab06f31095",
+  "scope": "Independent numeric holdouts; isolated shell; source unchanged"
+}

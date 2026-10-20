@@ -1,0 +1,65 @@
+test_exact_copy_applied_without_touching_original (test_project_apply.ProjectApplyTests.test_exact_copy_applied_without_touching_original) ... ERROR
+test_existing_empty_destination_is_not_replaced (test_project_apply.ProjectApplyTests.test_existing_empty_destination_is_not_replaced) ... ERROR
+test_overlapping_destination_is_rejected (test_project_apply.ProjectApplyTests.test_overlapping_destination_is_rejected) ... ERROR
+test_source_drift_is_rejected (test_project_apply.ProjectApplyTests.test_source_drift_is_rejected) ... ERROR
+test_wrong_archive_hash_is_rejected_before_output (test_project_apply.ProjectApplyTests.test_wrong_archive_hash_is_rejected_before_output) ... ERROR
+
+======================================================================
+ERROR: test_exact_copy_applied_without_touching_original (test_project_apply.ProjectApplyTests.test_exact_copy_applied_without_touching_original)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 15, in test_exact_copy_applied_without_touching_original
+    c=self.case;r=self.apply();self.assertEqual(r['status'],'APPLIED_NEW_COPY')
+                  ~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 11, in apply
+    from branchwrite.project_apply import apply_export
+ModuleNotFoundError: No module named 'branchwrite.project_apply'
+
+======================================================================
+ERROR: test_existing_empty_destination_is_not_replaced (test_project_apply.ProjectApplyTests.test_existing_empty_destination_is_not_replaced)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 28, in test_existing_empty_destination_is_not_replaced
+    with self.assertRaises(FileExistsError):self.apply()
+                                            ~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 11, in apply
+    from branchwrite.project_apply import apply_export
+ModuleNotFoundError: No module named 'branchwrite.project_apply'
+
+======================================================================
+ERROR: test_overlapping_destination_is_rejected (test_project_apply.ProjectApplyTests.test_overlapping_destination_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 31, in test_overlapping_destination_is_rejected
+    with self.assertRaisesRegex(ValueError,'outside'):self.apply(self.case.source/'result')
+                                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 11, in apply
+    from branchwrite.project_apply import apply_export
+ModuleNotFoundError: No module named 'branchwrite.project_apply'
+
+======================================================================
+ERROR: test_source_drift_is_rejected (test_project_apply.ProjectApplyTests.test_source_drift_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 24, in test_source_drift_is_rejected
+    with self.assertRaisesRegex(ValueError,'baseline'):self.apply()
+                                                       ~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 11, in apply
+    from branchwrite.project_apply import apply_export
+ModuleNotFoundError: No module named 'branchwrite.project_apply'
+
+======================================================================
+ERROR: test_wrong_archive_hash_is_rejected_before_output (test_project_apply.ProjectApplyTests.test_wrong_archive_hash_is_rejected_before_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 20, in test_wrong_archive_hash_is_rejected_before_output
+    with self.assertRaisesRegex(ValueError,'hash'):self.apply(sha='0'*64)
+                                                   ~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-project-apply-20261019/tests/test_project_apply.py", line 11, in apply
+    from branchwrite.project_apply import apply_export
+ModuleNotFoundError: No module named 'branchwrite.project_apply'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.045s
+
+FAILED (errors=5)

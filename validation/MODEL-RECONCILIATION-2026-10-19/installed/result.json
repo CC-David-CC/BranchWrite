@@ -1,0 +1,10 @@
+{
+  "status": "BUILD_INSTALL_HELP_PASS",
+  "source_commit": "a1b1928c92f9536a805f717d117b2aaebdf49ac3",
+  "wheel": "/home/dflanag3/spatial-artifacts/branchwrite-dev17-package-20261019-v1/wheel/branchwrite-0.1.0.dev17-py3-none-any.whl",
+  "sha256": "292ecffe071bd13d082f0480d7e77e9ebbf9f1f92c0ee17451581e03c12c4840",
+  "python": "/home/dflanag3/spatial-artifacts/branchwrite-dev17-package-20261019-v1/installation/venv/bin/python",
+  "source_PYTHONPATH": false,
+  "scope": "Installed command availability only; installed recovery controls and real-GPU interruption pending",
+  "initial_build_issue": "Existing runtime-only dev16 environment lacked setuptools; isolated dev17 build environment used. dev16 unchanged."
+}

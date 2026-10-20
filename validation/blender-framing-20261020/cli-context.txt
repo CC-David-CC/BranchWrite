@@ -1,0 +1,12 @@
+test_blender_directory_launch_uses_same_interpreter_with_image_feedback (test_cad_cli.CadCliTests.test_blender_directory_launch_uses_same_interpreter_with_image_feedback) ... ok
+test_normal_directory_launch_binds_requirements_and_actual_image_feedback (test_cad_cli.CadCliTests.test_normal_directory_launch_binds_requirements_and_actual_image_feedback) ... ok
+test_readonly_cannot_gain_cad_execution (test_cad_cli.CadCliTests.test_readonly_cannot_gain_cad_execution) ... ok
+test_unknown_or_unbounded_configuration_rejected (test_cad_cli.CadCliTests.test_unknown_or_unbounded_configuration_rejected) ... ok
+test_blender_context_requires_actual_mcp_render_receipt (test_spatial_completion_context.SpatialContextTests.test_blender_context_requires_actual_mcp_render_receipt) ... ok
+test_cad_context_does_not_require_irrelevant_shell_checks (test_spatial_completion_context.SpatialContextTests.test_cad_context_does_not_require_irrelevant_shell_checks) ... ok
+test_normal_coding_retains_named_check_contract (test_spatial_completion_context.SpatialContextTests.test_normal_coding_retains_named_check_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.006s
+
+OK

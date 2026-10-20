@@ -1,0 +1,10 @@
+{
+  "scope": "New A resource-capacity experiment; not recovery/retry of unresolved first operation",
+  "ram_gib": 24,
+  "disk_gib": 64,
+  "old_ram_gib": 12,
+  "old_disk_gib": 48,
+  "original_request_status": "UNRESOLVED_RETAINED",
+  "native_profile_unchanged": true,
+  "chat_server": "OFF"
+}

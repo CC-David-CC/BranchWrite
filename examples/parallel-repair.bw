@@ -1,0 +1,34 @@
+FLOW repair
+OBSERVE source target=project -> observed-source
+SAVE pin-source input=observed-source name=source-base
+PARALLEL.PLAN designs base=source-base budget=planning-budget -> proposals
+BRANCH conservative base=source-base world=readonly-a seed=child-a
+EXPAND design-a from=context-base task=conservative-task profile=explore -> proposal-a
+END
+BRANCH inventive base=source-base world=readonly-b seed=child-b
+EXPAND design-b from=context-base task=alternative-task profile=xtc -> proposal-b
+END
+END
+PARALLEL.DO candidates base=source-base budget=execution-budget -> candidate-results
+BRANCH candidate-a base=source-base world=isolated-a
+PLAN freeze-a from=proposals.a against=isolated-a -> plan-a
+ACT execute-a plan=plan-a -> outcome-a
+OBSERVE inspect-a target=outcome-a -> evidence-a
+VERIFY verify-a input=evidence-a contract=protected-tests -> verified-a
+END
+BRANCH candidate-b base=source-base world=isolated-b
+PLAN freeze-b from=proposals.b against=isolated-b -> plan-b
+ACT execute-b plan=plan-b -> outcome-b
+OBSERVE inspect-b target=outcome-b -> evidence-b
+VERIFY verify-b input=evidence-b contract=protected-tests -> verified-b
+END
+END
+COMPARE candidates input=candidate-results criteria=required-criteria -> comparison
+SELECT winner input=comparison rule=best-verified -> selected
+CHALLENGE critique input=selected contract=challenge-contract profile=explore -> probes
+PLAN freeze-probes from=probes against=selected-world -> probe-plan
+ACT execute-probes plan=probe-plan -> probe-outcome
+VERIFY challenge-check input=probe-outcome contract=challenge-contract -> adoption-evidence
+COMMIT publish input=selected target=owned-test-ref evidence=adoption-evidence -> published
+SAVE retain input=published name=final-result
+END

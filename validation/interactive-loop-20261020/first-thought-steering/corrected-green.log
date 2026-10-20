@@ -1,0 +1,50 @@
+test_completed_model_context_does_not_repeat_original_request (tests.test_unfinished_task.UnfinishedTaskTests.test_completed_model_context_does_not_repeat_original_request) ... ok
+test_cycle_in_retained_source_pointers_is_rejected (tests.test_unfinished_task.UnfinishedTaskTests.test_cycle_in_retained_source_pointers_is_rejected) ... ok
+test_different_saved_prefix_does_not_pull_in_unrelated_goal (tests.test_unfinished_task.UnfinishedTaskTests.test_different_saved_prefix_does_not_pull_in_unrelated_goal) ... ok
+test_edit_replacement_starts_its_own_intent_chain (tests.test_unfinished_task.UnfinishedTaskTests.test_edit_replacement_starts_its_own_intent_chain) ... ok
+test_existing_context_still_needs_the_new_unfinished_request (tests.test_unfinished_task.UnfinishedTaskTests.test_existing_context_still_needs_the_new_unfinished_request) ... ok
+test_explicit_completed_task_origin_wins_over_prefix_mode (tests.test_unfinished_task.UnfinishedTaskTests.test_explicit_completed_task_origin_wins_over_prefix_mode) ... ok
+test_first_thought_keeps_original_goal_and_short_update (tests.test_unfinished_task.UnfinishedTaskTests.test_first_thought_keeps_original_goal_and_short_update) ... ok
+test_repeated_early_steering_keeps_notes_once_in_order (tests.test_unfinished_task.UnfinishedTaskTests.test_repeated_early_steering_keeps_notes_once_in_order) ... ok
+test_branch_controls_wait_for_settled_work (tests.test_interactive_session.InteractiveSessionTests.test_branch_controls_wait_for_settled_work) ... ok
+test_continue_while_working_does_not_queue_duplicate_resume (tests.test_interactive_session.InteractiveSessionTests.test_continue_while_working_does_not_queue_duplicate_resume) ... ok
+test_continue_without_a_paused_turn_is_rejected_before_admission (tests.test_interactive_session.InteractiveSessionTests.test_continue_without_a_paused_turn_is_rejected_before_admission) ... ok
+test_edit_first_request_reuses_the_recorded_prepared_model_prefix (tests.test_interactive_session.InteractiveSessionTests.test_edit_first_request_reuses_the_recorded_prepared_model_prefix) ... ok
+test_edit_first_request_uses_its_preceding_files_and_context (tests.test_interactive_session.InteractiveSessionTests.test_edit_first_request_uses_its_preceding_files_and_context) ... ok
+test_explicit_continue_unpauses_a_stopped_worker (tests.test_interactive_session.InteractiveSessionTests.test_explicit_continue_unpauses_a_stopped_worker) ... ok
+test_explore_old_context_with_current_files_and_switch_back_without_inference (tests.test_interactive_session.InteractiveSessionTests.test_explore_old_context_with_current_files_and_switch_back_without_inference) ... ok
+test_failed_worker_open_requires_reopening_not_an_unhandled_queue (tests.test_interactive_session.InteractiveSessionTests.test_failed_worker_open_requires_reopening_not_an_unhandled_queue) ... ok
+test_input_worktree_preserves_private_file_modes (tests.test_interactive_session.InteractiveSessionTests.test_input_worktree_preserves_private_file_modes) ... ok
+test_invalid_control_target_rejects_before_admission (tests.test_interactive_session.InteractiveSessionTests.test_invalid_control_target_rejects_before_admission) ... ok
+test_lost_alternative_publication_reply_recovers_without_model_rerun (tests.test_interactive_session.InteractiveSessionTests.test_lost_alternative_publication_reply_recovers_without_model_rerun) ... ok
+test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context (tests.test_interactive_session.InteractiveSessionTests.test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context) ... ok
+test_queued_followups_combine_without_stopping_active_work (tests.test_interactive_session.InteractiveSessionTests.test_queued_followups_combine_without_stopping_active_work) ... ok
+test_steering_interrupts_at_safe_boundary_then_uses_new_request (tests.test_interactive_session.InteractiveSessionTests.test_steering_interrupts_at_safe_boundary_then_uses_new_request) ... ok
+test_switch_conflict_preserves_user_edit_and_original_control_id (tests.test_interactive_session.InteractiveSessionTests.test_switch_conflict_preserves_user_edit_and_original_control_id) ... ok
+test_switch_restores_matching_files_then_followup_uses_that_exact_tip (tests.test_interactive_session.InteractiveSessionTests.test_switch_restores_matching_files_then_followup_uses_that_exact_tip) ... ok
+test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch (tests.test_interactive_session.InteractiveSessionTests.test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch) ... ok
+test_work_publishes_in_current_directory_and_followup_forks_saved_context (tests.test_interactive_session.InteractiveSessionTests.test_work_publishes_in_current_directory_and_followup_forks_saved_context) ... ok
+test_interactive_outcomes (unittest.loader._FailedTest.test_interactive_outcomes) ... ERROR
+test_finish_in_read_only_mode_requires_unchanged_inventory (tests.test_plan_mode.PlanModeTests.test_finish_in_read_only_mode_requires_unchanged_inventory) ... ok
+test_plan_launcher_has_no_file_write_or_execution_grants (tests.test_plan_mode.PlanModeTests.test_plan_launcher_has_no_file_write_or_execution_grants) ... ok
+test_read_only_policy_rejects_a_writable_host_grant (tests.test_plan_mode.PlanModeTests.test_read_only_policy_rejects_a_writable_host_grant) ... ok
+test_interrupt_before_tool_then_resume_executes_once (tests.test_interactive_control.InteractiveControlTests.test_interrupt_before_tool_then_resume_executes_once) ... ok
+test_pause_after_consumed_effect_keeps_real_receipt (tests.test_interactive_control.InteractiveControlTests.test_pause_after_consumed_effect_keeps_real_receipt) ... ok
+
+======================================================================
+ERROR: test_interactive_outcomes (unittest.loader._FailedTest.test_interactive_outcomes)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_interactive_outcomes
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_outcomes.py", line 10, in <module>
+    import test_guided_conversation as conversation_tests
+ModuleNotFoundError: No module named 'test_guided_conversation'
+
+
+----------------------------------------------------------------------
+Ran 32 tests in 2.974s
+
+FAILED (errors=1)

@@ -1,0 +1,59 @@
+{
+  "time": 1792489599.0560768,
+  "qemu": "QEMU emulator version 10.2.1 (Debian 1:10.2.1+ds-1ubuntu3.2)\nCopyright (c) 2003-2025 Fabrice Bellard and the QEMU Project developers",
+  "argv": [
+    "qemu-system-x86_64",
+    "-name",
+    "branchwrite-admin01",
+    "-machine",
+    "q35,accel=kvm",
+    "-cpu",
+    "host",
+    "-smp",
+    "4",
+    "-m",
+    "4096",
+    "-drive",
+    "file=/home/dflanag3/.local/share/bw-vm/admin01/disk.qcow2,format=qcow2,if=virtio",
+    "-netdev",
+    "user,id=net0,hostfwd=tcp:127.0.0.1:22220-:22,hostfwd=tcp:127.0.0.1:18080-:80",
+    "-device",
+    "virtio-net-pci,netdev=net0",
+    "-display",
+    "none",
+    "-vnc",
+    "unix:/home/dflanag3/.local/share/bw-vm/admin01/vnc.sock",
+    "-serial",
+    "file:/home/dflanag3/.local/share/bw-vm/admin01/serial.log",
+    "-monitor",
+    "none",
+    "-qmp",
+    "unix:/home/dflanag3/.local/share/bw-vm/admin01/qmp.sock,server=on,wait=off",
+    "-pidfile",
+    "/home/dflanag3/.local/share/bw-vm/admin01/qemu.pid",
+    "-daemonize",
+    "-S",
+    "-snapshot"
+  ],
+  "kvm": {
+    "enabled": true,
+    "present": true
+  },
+  "status": {
+    "status": "prelaunch",
+    "running": false
+  },
+  "cpus": 4,
+  "memory": {
+    "base-memory": 4294967296,
+    "plugged-memory": 0
+  },
+  "guest_ssh": "NOT_TESTED_NO_GUEST_YET",
+  "pid": 2415309,
+  "host_uid": 1000,
+  "forwarded_listeners": [
+    "LISTEN 0      1                        127.0.0.1:18080 0.0.0.0:* users:((\"qemu-system-x86\",pid=2415309,fd=16))",
+    "LISTEN 0      1                        127.0.0.1:22220 0.0.0.0:* users:((\"qemu-system-x86\",pid=2415309,fd=17))"
+  ],
+  "probe_process_exited": true
+}

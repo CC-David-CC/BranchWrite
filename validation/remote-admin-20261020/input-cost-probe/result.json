@@ -1,0 +1,21 @@
+{
+  "scope": "CPU-only synthetic execution of actual input-view/schedule functions; not an end-to-end GPU profile",
+  "source": "/home/dflanag3/src/context-cow-client-setup-20261020",
+  "rows": [
+    {
+      "prefix": 1024,
+      "steps": 20,
+      "seconds": 0.01709743798710406
+    },
+    {
+      "prefix": 8192,
+      "steps": 20,
+      "seconds": 0.12780738295987248
+    },
+    {
+      "prefix": 32768,
+      "steps": 20,
+      "seconds": 0.5290692900307477
+    }
+  ]
+}

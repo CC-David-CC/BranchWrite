@@ -1,0 +1,81 @@
+test_cli_connect_uses_environment_key_without_printing_it (tests.test_client_setup.ClientSetupTests.test_cli_connect_uses_environment_key_without_printing_it) ... FAIL
+test_connection_discovers_identities_and_private_key_can_be_reused (tests.test_client_setup.ClientSetupTests.test_connection_discovers_identities_and_private_key_can_be_reused) ... ERROR
+test_failed_authentication_does_not_create_settings (tests.test_client_setup.ClientSetupTests.test_failed_authentication_does_not_create_settings) ... ERROR
+test_invalid_or_unsupported_server_response_preserves_existing_settings (tests.test_client_setup.ClientSetupTests.test_invalid_or_unsupported_server_response_preserves_existing_settings) ... ERROR
+test_key_does_not_follow_changed_connection_or_loose_file_permissions (tests.test_client_setup.ClientSetupTests.test_key_does_not_follow_changed_connection_or_loose_file_permissions) ... ERROR
+test_linked_config_directory_or_credential_file_is_not_overwritten (tests.test_client_setup.ClientSetupTests.test_linked_config_directory_or_credential_file_is_not_overwritten) ... ERROR
+test_missing_settings_can_be_configured_inside_first_run (tests.test_client_setup.ClientSetupTests.test_missing_settings_can_be_configured_inside_first_run) ... FAIL
+test_redirects_do_not_forward_bearer_credentials (tests.test_client_setup.ClientSetupTests.test_redirects_do_not_forward_bearer_credentials) ... ERROR
+
+======================================================================
+ERROR: test_connection_discovers_identities_and_private_key_can_be_reused (tests.test_client_setup.ClientSetupTests.test_connection_discovers_identities_and_private_key_can_be_reused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 55, in test_connection_discovers_identities_and_private_key_can_be_reused
+    from branchwrite.client_setup import connect, read_connection, saved_api_key
+ModuleNotFoundError: No module named 'branchwrite.client_setup'
+
+======================================================================
+ERROR: test_failed_authentication_does_not_create_settings (tests.test_client_setup.ClientSetupTests.test_failed_authentication_does_not_create_settings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 69, in test_failed_authentication_does_not_create_settings
+    from branchwrite.client_setup import connect
+ModuleNotFoundError: No module named 'branchwrite.client_setup'
+
+======================================================================
+ERROR: test_invalid_or_unsupported_server_response_preserves_existing_settings (tests.test_client_setup.ClientSetupTests.test_invalid_or_unsupported_server_response_preserves_existing_settings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 83, in test_invalid_or_unsupported_server_response_preserves_existing_settings
+    from branchwrite.client_setup import connect
+ModuleNotFoundError: No module named 'branchwrite.client_setup'
+
+======================================================================
+ERROR: test_key_does_not_follow_changed_connection_or_loose_file_permissions (tests.test_client_setup.ClientSetupTests.test_key_does_not_follow_changed_connection_or_loose_file_permissions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 95, in test_key_does_not_follow_changed_connection_or_loose_file_permissions
+    from branchwrite.client_setup import connect, saved_api_key
+ModuleNotFoundError: No module named 'branchwrite.client_setup'
+
+======================================================================
+ERROR: test_linked_config_directory_or_credential_file_is_not_overwritten (tests.test_client_setup.ClientSetupTests.test_linked_config_directory_or_credential_file_is_not_overwritten)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 110, in test_linked_config_directory_or_credential_file_is_not_overwritten
+    from branchwrite.client_setup import connect
+ModuleNotFoundError: No module named 'branchwrite.client_setup'
+
+======================================================================
+ERROR: test_redirects_do_not_forward_bearer_credentials (tests.test_client_setup.ClientSetupTests.test_redirects_do_not_forward_bearer_credentials)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 75, in test_redirects_do_not_forward_bearer_credentials
+    from branchwrite.client_setup import connect
+ModuleNotFoundError: No module named 'branchwrite.client_setup'
+
+======================================================================
+FAIL: test_cli_connect_uses_environment_key_without_printing_it (tests.test_client_setup.ClientSetupTests.test_cli_connect_uses_environment_key_without_printing_it)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 134, in test_cli_connect_uses_environment_key_without_printing_it
+    self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+AssertionError: 2 != 0 : usage: branchwrite [-h]
+                   {start,check,canonicalize,run,step,doctor,prepare-base,code,resume,apply,export,review,status,reconcile}
+                   ...
+branchwrite: error: argument command: invalid choice: 'connect' (choose from 'start', 'check', 'canonicalize', 'run', 'step', 'doctor', 'prepare-base', 'code', 'resume', 'apply', 'export', 'review', 'status', 'reconcile')
+
+
+======================================================================
+FAIL: test_missing_settings_can_be_configured_inside_first_run (tests.test_client_setup.ClientSetupTests.test_missing_settings_can_be_configured_inside_first_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 151, in test_missing_settings_can_be_configured_inside_first_run
+    self.assertIn("Connected", output.getvalue())
+AssertionError: 'Connected' not found in "BranchWrite could not start: [Errno 2] No such file or directory: '/tmp/tmpc6q9sne6/.config'\n"
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.012s
+
+FAILED (failures=2, errors=6)

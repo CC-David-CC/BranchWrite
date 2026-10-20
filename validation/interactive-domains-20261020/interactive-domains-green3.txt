@@ -1,0 +1,87 @@
+test_blender_work_uses_same_worker_and_plan_has_no_domain_execution (test_interactive_domains.InteractiveDomainTests.test_blender_work_uses_same_worker_and_plan_has_no_domain_execution) ... ok
+test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them (test_interactive_domains.InteractiveDomainTests.test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them) ... ok
+test_cli_session_exposes_operator_domain_configuration (test_interactive_domains.InteractiveDomainTests.test_cli_session_exposes_operator_domain_configuration) ... ok
+test_conflicting_domains_reject_before_session_state_creation (test_interactive_domains.InteractiveDomainTests.test_conflicting_domains_reject_before_session_state_creation) ... ok
+test_recovery_uses_original_domain_launch_without_regranting_new_work (test_interactive_domains.InteractiveDomainTests.test_recovery_uses_original_domain_launch_without_regranting_new_work) ... ok
+test_saved_exports_are_visible_and_survive_session_reopen (test_interactive_domains.InteractiveDomainTests.test_saved_exports_are_visible_and_survive_session_reopen) ... ok
+test_branch_controls_wait_for_settled_work (test_interactive_session.InteractiveSessionTests.test_branch_controls_wait_for_settled_work) ... ok
+test_continue_while_working_does_not_queue_duplicate_resume (test_interactive_session.InteractiveSessionTests.test_continue_while_working_does_not_queue_duplicate_resume) ... ok
+test_continue_without_a_paused_turn_is_rejected_before_admission (test_interactive_session.InteractiveSessionTests.test_continue_without_a_paused_turn_is_rejected_before_admission) ... ok
+test_edit_first_request_reuses_the_recorded_prepared_model_prefix (test_interactive_session.InteractiveSessionTests.test_edit_first_request_reuses_the_recorded_prepared_model_prefix) ... ok
+test_edit_first_request_uses_its_preceding_files_and_context (test_interactive_session.InteractiveSessionTests.test_edit_first_request_uses_its_preceding_files_and_context) ... ok
+test_explicit_continue_unpauses_a_stopped_worker (test_interactive_session.InteractiveSessionTests.test_explicit_continue_unpauses_a_stopped_worker) ... ok
+test_explore_old_context_with_current_files_and_switch_back_without_inference (test_interactive_session.InteractiveSessionTests.test_explore_old_context_with_current_files_and_switch_back_without_inference) ... ok
+test_failed_worker_open_requires_reopening_not_an_unhandled_queue (test_interactive_session.InteractiveSessionTests.test_failed_worker_open_requires_reopening_not_an_unhandled_queue) ... ok
+test_input_worktree_preserves_private_file_modes (test_interactive_session.InteractiveSessionTests.test_input_worktree_preserves_private_file_modes) ... ok
+test_invalid_control_target_rejects_before_admission (test_interactive_session.InteractiveSessionTests.test_invalid_control_target_rejects_before_admission) ... ok
+test_lost_alternative_publication_reply_recovers_without_model_rerun (test_interactive_session.InteractiveSessionTests.test_lost_alternative_publication_reply_recovers_without_model_rerun) ... ok
+test_new_sampler_does_not_rewrite_an_unresolved_saved_launch (test_interactive_session.InteractiveSessionTests.test_new_sampler_does_not_rewrite_an_unresolved_saved_launch) ... ok
+test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context (test_interactive_session.InteractiveSessionTests.test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context) ... ok
+test_queued_followups_combine_without_stopping_active_work (test_interactive_session.InteractiveSessionTests.test_queued_followups_combine_without_stopping_active_work) ... ok
+test_selected_sampler_applies_only_to_new_admissions (test_interactive_session.InteractiveSessionTests.test_selected_sampler_applies_only_to_new_admissions) ... ok
+test_steering_interrupts_at_safe_boundary_then_uses_new_request (test_interactive_session.InteractiveSessionTests.test_steering_interrupts_at_safe_boundary_then_uses_new_request) ... ok
+test_switch_conflict_preserves_user_edit_and_original_control_id (test_interactive_session.InteractiveSessionTests.test_switch_conflict_preserves_user_edit_and_original_control_id) ... ok
+test_switch_restores_matching_files_then_followup_uses_that_exact_tip (test_interactive_session.InteractiveSessionTests.test_switch_restores_matching_files_then_followup_uses_that_exact_tip) ... ok
+test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch (test_interactive_session.InteractiveSessionTests.test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch) ... ok
+test_unknown_sampler_fails_before_opening_workflow (test_interactive_session.InteractiveSessionTests.test_unknown_sampler_fails_before_opening_workflow) ... ok
+test_work_publishes_in_current_directory_and_followup_forks_saved_context (test_interactive_session.InteractiveSessionTests.test_work_publishes_in_current_directory_and_followup_forks_saved_context) ... ok
+test_interrupt_before_tool_then_resume_executes_once (test_interactive_control.InteractiveControlTests.test_interrupt_before_tool_then_resume_executes_once) ... ok
+test_pause_after_consumed_effect_keeps_real_receipt (test_interactive_control.InteractiveControlTests.test_pause_after_consumed_effect_keeps_real_receipt) ... ok
+test_escape_stops_work_without_erasing_the_draft (test_interactive_terminal.InteractiveTerminalTests.test_escape_stops_work_without_erasing_the_draft) ... ok
+test_missing_preview_is_a_notice_and_does_not_stop_the_session (test_interactive_terminal.InteractiveTerminalTests.test_missing_preview_is_a_notice_and_does_not_stop_the_session) ... ok
+test_plan_aside_history_and_unknown_commands_are_not_work_requests (test_interactive_terminal.InteractiveTerminalTests.test_plan_aside_history_and_unknown_commands_are_not_work_requests) ... ok
+test_plan_mode_cannot_restore_or_edit_files_via_branch_controls (test_interactive_terminal.InteractiveTerminalTests.test_plan_mode_cannot_restore_or_edit_files_via_branch_controls) ... ok
+test_preview_uses_selected_file_version_without_submitting_work_and_closes (test_interactive_terminal.InteractiveTerminalTests.test_preview_uses_selected_file_version_without_submitting_work_and_closes) ... ok
+test_typing_survives_progress_tab_queues_and_enter_steers (test_interactive_terminal.InteractiveTerminalTests.test_typing_survives_progress_tab_queues_and_enter_steers) ... ok
+test_asset_count_limit_is_explicit_and_preserves_previous_preview (test_interactive_preview.PreviewTests.test_asset_count_limit_is_explicit_and_preserves_previous_preview) ... ok
+test_document_selection_is_bounded_and_does_not_leak_non_web_files (test_interactive_preview.PreviewTests.test_document_selection_is_bounded_and_does_not_leak_non_web_files) ... ok
+test_help_distinguishes_local_browser_from_remote_client (test_interactive_preview.PreviewTests.test_help_distinguishes_local_browser_from_remote_client) ... ok
+test_host_and_absolute_url_aliases_are_rejected (test_interactive_preview.PreviewTests.test_host_and_absolute_url_aliases_are_rejected) ... ok
+test_http_serves_exact_saved_version_and_relative_assets_without_model_work (test_interactive_preview.PreviewTests.test_http_serves_exact_saved_version_and_relative_assets_without_model_work) ... ok
+test_missing_default_has_actionable_choice_without_starting_server (test_interactive_preview.PreviewTests.test_missing_default_has_actionable_choice_without_starting_server) ... ok
+test_only_token_scoped_captured_resources_are_served (test_interactive_preview.PreviewTests.test_only_token_scoped_captured_resources_are_served) ... ok
+test_refresh_retires_previous_url_and_close_releases_port (test_interactive_preview.PreviewTests.test_refresh_retires_previous_url_and_close_releases_port) ... ok
+test_slow_request_cannot_hold_preview_shutdown (test_interactive_preview.PreviewTests.test_slow_request_cannot_hold_preview_shutdown) ... ----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 49544)
+Traceback (most recent call last):
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interactive_preview.py", line 91, in process_request
+    try:super().process_request(request,address)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/http/server.py", line 428, in handle_one_request
+    method()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interactive_preview.py", line 75, in do_GET
+    def do_GET(self):self.serve()
+                     ^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interactive_preview.py", line 63, in serve
+    self.send_error(404);return
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/http/server.py", line 492, in send_error
+    self.end_headers()
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/http/server.py", line 542, in end_headers
+    self.flush_headers()
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/http/server.py", line 546, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+ok
+test_unreferenced_git_blob_corruption_is_not_accepted (test_interactive_preview.PreviewTests.test_unreferenced_git_blob_corruption_is_not_accepted) ... ok
+test_document_tool_card_explains_builtin_packages_and_real_page_review (test_pdf_cli.PdfDefaultCliTests.test_document_tool_card_explains_builtin_packages_and_real_page_review) ... ok
+test_normal_work_launch_includes_page_image_feedback_without_pdf_config (test_pdf_cli.PdfDefaultCliTests.test_normal_work_launch_includes_page_image_feedback_without_pdf_config) ... ok
+test_readonly_launch_does_not_gain_python_execution (test_pdf_cli.PdfDefaultCliTests.test_readonly_launch_does_not_gain_python_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 6.751s
+
+OK

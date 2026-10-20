@@ -1,0 +1,13 @@
+{
+  "scope": "New generic root from installed dev15, then cross-project restore in SC13B; no numerical certification",
+  "wheel_sha256": "fd3efe7623fb302cc27fcfb144d0de7d14e7429a2b4bcf95d59ff9d56c9c9b51",
+  "required_command": "python3 -m unittest discover -s tests -p test_command_summary.py -v",
+  "forbidden_stale_commands": [
+    "test_connection_admission.py",
+    "test_taskboard.py"
+  ],
+  "independent_cases": 200,
+  "seed": 11319,
+  "model": "pinned Q8 FP16 KV",
+  "prefix_origin": "fresh bootstrap with controller_prefix v1"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "ORIGINAL_LAYOUT_RESTORED_AFTER_CLIENT_EXIT",
+  "cause": "Concurrent ordinary --help wrote three derived Python cache files inside the admitted dev63 runtime; integrity guard correctly stopped before tool execution.",
+  "live_clients_before_cleanup": [],
+  "removed_exact_owned_cache_files": [
+    {
+      "path": "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev63-20261020/venv/lib/python3.12/site-packages/branchwrite/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 269,
+      "sha256": "45789ed4e52ca0eac084137622e88a85b872af0b371ea24d60885ead26c579a9",
+      "mtime_ns": 1792529191418645154,
+      "ctime_ns": 1792529191418645154
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev63-20261020/venv/lib/python3.12/site-packages/branchwrite/__pycache__/__main__.cpython-312.pyc",
+      "bytes": 25907,
+      "sha256": "b27810858d904d1e3a61bf1faa607995c4427c5e5ffc6442b99d48f478642566",
+      "mtime_ns": 1792529191421175370,
+      "ctime_ns": 1792529191421175370
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev63-20261020/venv/lib/python3.12/site-packages/branchwrite/__pycache__/language.cpython-312.pyc",
+      "bytes": 15134,
+      "sha256": "c0c3e17bb977d0dcef313d672dd5b7f3247bbb1c643cfa6e01a37a5876563f8b",
+      "mtime_ns": 1792529191431302432,
+      "ctime_ns": 1792529191431302432
+    }
+  ],
+  "source_files_changed": 0,
+  "history_or_controller_changes": 0,
+  "retained_original_workflow": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session"
+}

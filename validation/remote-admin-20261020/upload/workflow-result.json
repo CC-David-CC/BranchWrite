@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "scope": "installed CLI/Interpreter/Kernel/real SSH/owned persistent VM, no model/GPU",
+  "rows": [
+    {
+      "id": "RW01-remote-only-check",
+      "status": "PASS",
+      "verified": true,
+      "cli_exit": 0,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW01-remote-only-check-e7d51d5623/state"
+    },
+    {
+      "id": "RW02-action-without-check",
+      "status": "PASS",
+      "verified": false,
+      "cli_exit": 1,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW02-action-without-check-e7d51d5623/state"
+    },
+    {
+      "id": "RW03-failing-remote-check",
+      "status": "PASS",
+      "verified": false,
+      "cli_exit": 1,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW03-failing-remote-check-e7d51d5623/state"
+    },
+    {
+      "id": "RW04-later-action-stales-check",
+      "status": "PASS",
+      "verified": false,
+      "cli_exit": 1,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW04-later-action-stales-check-e7d51d5623/state"
+    },
+    {
+      "id": "RW05-local-edit-still-needs-local-check",
+      "status": "PASS",
+      "verified": false,
+      "cli_exit": 1,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW05-local-edit-still-needs-local-check-e7d51d5623/state"
+    },
+    {
+      "id": "RW06-local-and-remote-evidence",
+      "status": "PASS",
+      "verified": true,
+      "cli_exit": 0,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW06-local-and-remote-evidence-e7d51d5623/state"
+    },
+    {
+      "id": "RW07-latest-remote-failure",
+      "status": "PASS",
+      "verified": false,
+      "cli_exit": 1,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW07-latest-remote-failure-e7d51d5623/state"
+    },
+    {
+      "id": "RW08-repaired-remote-check",
+      "status": "PASS",
+      "verified": true,
+      "cli_exit": 0,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW08-repaired-remote-check-e7d51d5623/state"
+    },
+    {
+      "id": "RW09-peer-mutation",
+      "status": "PASS",
+      "verified": false,
+      "cli_exit": 1,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW09-peer-mutation-e7d51d5623/state"
+    },
+    {
+      "id": "RW09-other-client-invalidates-check",
+      "status": "PASS",
+      "verified": false,
+      "cli_exit": 1,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW09-other-client-invalidates-check-e7d51d5623/state"
+    },
+    {
+      "id": "RW10-lost-local-return",
+      "status": "PASS",
+      "verified": true,
+      "cli_exit": 0,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev51-upload-private-20261020/RW10-lost-local-return-e7d51d5623/state",
+      "original_operation_id": "bwtool-01b4efc360719a976dc0743cbfa0835f71ea70793a24571b",
+      "client_crash_exit": 72,
+      "same_frame_settled": true,
+      "guest_append_count": 1
+    }
+  ],
+  "source_wheel_sha256": "8299bf8569420897ee1cb30e62ba14026cf9eb5ab53892ee6ffd7ce41d5e7dce"
+}

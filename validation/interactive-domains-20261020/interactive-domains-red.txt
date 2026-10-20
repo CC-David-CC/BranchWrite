@@ -1,0 +1,77 @@
+test_blender_work_uses_same_worker_and_plan_has_no_domain_execution (test_interactive_domains.InteractiveDomainTests.test_blender_work_uses_same_worker_and_plan_has_no_domain_execution) ... ERROR
+test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them (test_interactive_domains.InteractiveDomainTests.test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them) ... ERROR
+test_cli_session_exposes_operator_domain_configuration (test_interactive_domains.InteractiveDomainTests.test_cli_session_exposes_operator_domain_configuration) ... usage: branchwrite [-h]
+                   {start,session,talk,connect,chat,check,canonicalize,run,step,doctor,prepare-base,context-status,code,resume,apply,export,review,status,receipt,reconcile}
+                   ...
+branchwrite: error: unrecognized arguments: --cad-config /operator/cad.json
+ERROR
+test_conflicting_domains_reject_before_session_state_creation (test_interactive_domains.InteractiveDomainTests.test_conflicting_domains_reject_before_session_state_creation) ... ERROR
+test_saved_exports_are_visible_and_survive_session_reopen (test_interactive_domains.InteractiveDomainTests.test_saved_exports_are_visible_and_survive_session_reopen) ... ERROR
+
+======================================================================
+ERROR: test_blender_work_uses_same_worker_and_plan_has_no_domain_execution (test_interactive_domains.InteractiveDomainTests.test_blender_work_uses_same_worker_and_plan_has_no_domain_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_domains.py", line 31, in test_blender_work_uses_same_worker_and_plan_has_no_domain_execution
+    service=self.open(blender=self.blender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_domains.py", line 16, in open
+    service=SessionService(self.project,self.state,self.connection,runner=self.driver,**options);service.start(self.output.append);self.addCleanup(service.close);return service
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SessionService.__init__() got an unexpected keyword argument 'blender'
+
+======================================================================
+ERROR: test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them (test_interactive_domains.InteractiveDomainTests.test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_domains.py", line 26, in test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them
+    expected=json.loads(json.dumps(self.cad));service=self.open(cad=self.cad)
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_domains.py", line 16, in open
+    service=SessionService(self.project,self.state,self.connection,runner=self.driver,**options);service.start(self.output.append);self.addCleanup(service.close);return service
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SessionService.__init__() got an unexpected keyword argument 'cad'
+
+======================================================================
+ERROR: test_cli_session_exposes_operator_domain_configuration (test_interactive_domains.InteractiveDomainTests.test_cli_session_exposes_operator_domain_configuration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_domains.py", line 42, in test_cli_session_exposes_operator_domain_configuration
+    self.assertEqual(main(['session',str(self.project),'--cad-config','/operator/cad.json']),0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/__main__.py", line 178, in main
+    args=parser.parse_args(argv)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/argparse.py", line 1908, in parse_args
+    self.error(msg)
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/argparse.py", line 2650, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/argparse.py", line 2637, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+ERROR: test_conflicting_domains_reject_before_session_state_creation (test_interactive_domains.InteractiveDomainTests.test_conflicting_domains_reject_before_session_state_creation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_domains.py", line 37, in test_conflicting_domains_reject_before_session_state_creation
+    with self.assertRaises(ValueError):SessionService(self.project,self.state,self.connection,cad=self.cad,blender=self.blender)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SessionService.__init__() got an unexpected keyword argument 'cad'
+
+======================================================================
+ERROR: test_saved_exports_are_visible_and_survive_session_reopen (test_interactive_domains.InteractiveDomainTests.test_saved_exports_are_visible_and_survive_session_reopen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_domains.py", line 48, in test_saved_exports_are_visible_and_survive_session_reopen
+    self.driver=ExportDriver();service=self.open(blender=self.blender)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_domains.py", line 16, in open
+    service=SessionService(self.project,self.state,self.connection,runner=self.driver,**options);service.start(self.output.append);self.addCleanup(service.close);return service
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SessionService.__init__() got an unexpected keyword argument 'blender'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.166s
+
+FAILED (errors=5)

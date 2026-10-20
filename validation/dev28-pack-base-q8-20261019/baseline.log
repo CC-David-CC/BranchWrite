@@ -1,0 +1,109 @@
+test_containment_does_not_shrink (test_intervals.IntervalTests.test_containment_does_not_shrink) ... FAIL
+test_empty (test_intervals.IntervalTests.test_empty) ... ok
+test_generator_and_unchanged_input (test_intervals.IntervalTests.test_generator_and_unchanged_input) ... ERROR
+test_invalid_bounds (test_intervals.IntervalTests.test_invalid_bounds) ... FAIL
+test_negative_and_gap (test_intervals.IntervalTests.test_negative_and_gap) ... FAIL
+test_overlaps_and_touch (test_intervals.IntervalTests.test_overlaps_and_touch) ... FAIL
+test_sorted_tuple_output (test_intervals.IntervalTests.test_sorted_tuple_output) ... FAIL
+
+======================================================================
+ERROR: test_generator_and_unchanged_input (test_intervals.IntervalTests.test_generator_and_unchanged_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/project/tests/test_intervals.py", line 11, in test_generator_and_unchanged_input
+    self.assertEqual(merge_intervals(iter(original)),[(1,7)]);self.assertEqual(original,before)
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/project/intervals.py", line 4, in merge_intervals
+    result = [list(intervals[0])]
+                   ~~~~~~~~~^^^
+TypeError: 'list_iterator' object is not subscriptable
+
+======================================================================
+FAIL: test_containment_does_not_shrink (test_intervals.IntervalTests.test_containment_does_not_shrink)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/project/tests/test_intervals.py", line 7, in test_containment_does_not_shrink
+    def test_containment_does_not_shrink(self):self.assertEqual(merge_intervals([(1,9),(2,3)]),[(1,9)])
+                                               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [[1, 3]] != [(1, 9)]
+
+First differing element 0:
+[1, 3]
+(1, 9)
+
+- [[1, 3]]
++ [(1, 9)]
+
+======================================================================
+FAIL: test_invalid_bounds (test_intervals.IntervalTests.test_invalid_bounds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/project/tests/test_intervals.py", line 13, in test_invalid_bounds
+    with self.assertRaises(ValueError):merge_intervals([(4,2)])
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_negative_and_gap (test_intervals.IntervalTests.test_negative_and_gap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/project/tests/test_intervals.py", line 8, in test_negative_and_gap
+    def test_negative_and_gap(self):self.assertEqual(merge_intervals([(-3,-1),(0,1)]),[(-3,-1),(0,1)])
+                                    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [[-3, -1], [0, 1]] != [(-3, -1), (0, 1)]
+
+First differing element 0:
+[-3, -1]
+(-3, -1)
+
+- [[-3, -1], [0, 1]]
+?  ^      ^  ^     -
+
++ [(-3, -1), (0, 1)]
+?  ^      ^  ^    +
+
+
+======================================================================
+FAIL: test_overlaps_and_touch (test_intervals.IntervalTests.test_overlaps_and_touch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/project/tests/test_intervals.py", line 6, in test_overlaps_and_touch
+    def test_overlaps_and_touch(self):self.assertEqual(merge_intervals([(1,3),(3,6),(2,4)]),[(1,6)])
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [[1, 3], [3, 4]] != [(1, 6)]
+
+First differing element 0:
+[1, 3]
+(1, 6)
+
+First list contains 1 additional elements.
+First extra element 1:
+[3, 4]
+
+- [[1, 3], [3, 4]]
++ [(1, 6)]
+
+======================================================================
+FAIL: test_sorted_tuple_output (test_intervals.IntervalTests.test_sorted_tuple_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/project/tests/test_intervals.py", line 5, in test_sorted_tuple_output
+    def test_sorted_tuple_output(self):self.assertEqual(merge_intervals([(8,9),(1,2)]),[(1,2),(8,9)])
+                                       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [[8, 2]] != [(1, 2), (8, 9)]
+
+First differing element 0:
+[8, 2]
+(1, 2)
+
+Second list contains 1 additional elements.
+First extra element 1:
+(8, 9)
+
+- [[8, 2]]
++ [(1, 2), (8, 9)]
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+FAILED (failures=5, errors=1)

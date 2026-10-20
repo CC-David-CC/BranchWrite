@@ -1,0 +1,7 @@
+{
+  "scope": "installed dev18 CLI and real local HTTP with CPU test model; not GPU",
+  "tests": 15,
+  "status": "PASS",
+  "initial_attempt": "one missing test-only validation.cow_fault_proxy import; original log retained",
+  "source_import_root_absent": true
+}

@@ -1,0 +1,10 @@
+{
+  "status": "DOWNLOADED_VERIFIED_NOT_RUNNING",
+  "blender_version": "4.5.3",
+  "archive_bytes": 377397328,
+  "archive_sha256": "975c58fcb244273838534bba771e64ad87739216b0f9b39a888531a49a72d845",
+  "release_checksum_source": "https://mirrors.ocf.berkeley.edu/blender/release/Blender4.5/blender-4.5.3.sha256",
+  "mcp_commit": "5a3618fccb2d982d0dd61e7a1879912c3100073b",
+  "mcp_archive_sha256": "60c64f53a851b1ee7bfa071fdf754151a16ef0aa913da4e6318aaa6ab09058af",
+  "elapsed_seconds": 17.818987458012998
+}

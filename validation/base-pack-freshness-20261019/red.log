@@ -1,0 +1,61 @@
+test_changed_source_excludes_stale_base_and_selects_fresh_alternative (test_base_pack_freshness.BasePackFreshnessTests.test_changed_source_excludes_stale_base_and_selects_fresh_alternative) ... ERROR
+test_explicit_choice_cannot_bypass_source_freshness (test_base_pack_freshness.BasePackFreshnessTests.test_explicit_choice_cannot_bypass_source_freshness) ... ERROR
+test_fresh_pack_bound_base_is_selected_and_binding_preserved (test_base_pack_freshness.BasePackFreshnessTests.test_fresh_pack_bound_base_is_selected_and_binding_preserved) ... ERROR
+test_partial_binding_and_relative_pack_path_rejected (test_base_pack_freshness.BasePackFreshnessTests.test_partial_binding_and_relative_pack_path_rejected) ... ok
+test_wrong_pack_identity_fails_without_fallback (test_base_pack_freshness.BasePackFreshnessTests.test_wrong_pack_identity_fails_without_fallback) ... ok
+
+======================================================================
+ERROR: test_changed_source_excludes_stale_base_and_selects_fresh_alternative (test_base_pack_freshness.BasePackFreshnessTests.test_changed_source_excludes_stale_base_and_selects_fresh_alternative)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_pack_freshness.py", line 17, in test_changed_source_excludes_stale_base_and_selects_fresh_alternative
+    self.assertEqual(self.choose([self.row,fallback])['base'],fallback)
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_pack_freshness.py", line 12, in choose
+    def choose(self,rows):return select_host_base(rows,required_revision=REV,required_profile=PROFILE,reserve_tokens=200)
+                                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/base_choice.py", line 94, in select_host_base
+    _validate_catalog(catalog)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/base_choice.py", line 47, in _validate_catalog
+    if type(row) is not dict or set(row)!=_RECORD_KEYS:raise ValueError('catalog records have exactly the host base fields')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: catalog records have exactly the host base fields
+
+======================================================================
+ERROR: test_explicit_choice_cannot_bypass_source_freshness (test_base_pack_freshness.BasePackFreshnessTests.test_explicit_choice_cannot_bypass_source_freshness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_pack_freshness.py", line 21, in test_explicit_choice_cannot_bypass_source_freshness
+    with self.assertRaises(StalePackError):resolve_base_proposal(json.dumps(dict(schema=1,base_id=self.row['base_id'],reason='Use it')), [self.row],required_revision=REV,required_profile=PROFILE,reserve_tokens=200)
+                                           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/base_choice.py", line 65, in resolve_base_proposal
+    _validate_catalog(catalog)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/base_choice.py", line 47, in _validate_catalog
+    if type(row) is not dict or set(row)!=_RECORD_KEYS:raise ValueError('catalog records have exactly the host base fields')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: catalog records have exactly the host base fields
+
+======================================================================
+ERROR: test_fresh_pack_bound_base_is_selected_and_binding_preserved (test_base_pack_freshness.BasePackFreshnessTests.test_fresh_pack_bound_base_is_selected_and_binding_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_pack_freshness.py", line 13, in test_fresh_pack_bound_base_is_selected_and_binding_preserved
+    def test_fresh_pack_bound_base_is_selected_and_binding_preserved(self):self.assertEqual(self.choose([self.row])['base'],self.row)
+                                                                                            ~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_pack_freshness.py", line 12, in choose
+    def choose(self,rows):return select_host_base(rows,required_revision=REV,required_profile=PROFILE,reserve_tokens=200)
+                                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/base_choice.py", line 94, in select_host_base
+    _validate_catalog(catalog)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/base_choice.py", line 47, in _validate_catalog
+    if type(row) is not dict or set(row)!=_RECORD_KEYS:raise ValueError('catalog records have exactly the host base fields')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: catalog records have exactly the host base fields
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+FAILED (errors=3)

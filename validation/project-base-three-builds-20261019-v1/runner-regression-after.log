@@ -1,0 +1,8 @@
+test_audit_failure_propagates (__main__.RunnerExitTests.test_audit_failure_propagates) ... ok
+test_client_failure_stops_before_audit (__main__.RunnerExitTests.test_client_failure_stops_before_audit) ... ok
+test_success_requires_both (__main__.RunnerExitTests.test_success_requires_both) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.119s
+
+OK

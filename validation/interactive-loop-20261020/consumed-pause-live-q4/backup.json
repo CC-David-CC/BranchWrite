@@ -1,0 +1,11 @@
+{
+  "archive": "/home/dflanag3/spatial-artifacts/bw-model-pause-live-20261020.tar.gz",
+  "bytes": 8774143,
+  "sha256": "ee6b388e147480f6fa99d61e81a3051c11e4fcbb505bc9c9f0c6f4f31d81a59f",
+  "excludes": [
+    "api-key.txt",
+    "*.state optional native checkpoint payloads"
+  ],
+  "destination": "box-git:/srv/data/git/private_context_cow.evidence/branchwrite-interactive-20261020/bw-model-pause-live-20261020.tar.gz",
+  "remote_sha256_verified": true
+}

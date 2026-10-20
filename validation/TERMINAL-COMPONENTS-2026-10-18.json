@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "status": "BOUNDED_MODEL_FREE_COMPONENT_PASS_NOT_MODEL_OR_VC_G_QUALIFICATION",
+  "artifacts": "/home/dflanag3/spatial-artifacts/branchwrite-terminal-components-20261018-v1",
+  "base_commit": "6cadefc7e64483e462ef9e6b23a70a9adb6b1107",
+  "host": "r4090",
+  "standalone": {
+    "demo": {
+      "cases": 55,
+      "shell_calls": 95,
+      "seeds": [
+        119001,
+        119002,
+        119003,
+        119004,
+        119005
+      ]
+    },
+    "heldout": {
+      "cases": 55,
+      "shell_calls": 110,
+      "seeds": [
+        731,
+        732,
+        733,
+        734,
+        735
+      ]
+    },
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "quoting_newlines_targeted": {
+    "cases": 6,
+    "shell_calls": 21,
+    "failures": 0,
+    "errors": 0
+  },
+  "unit_regressions": {
+    "tests": 44,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "ids": [
+      "tests.test_terminal_components.TerminalComponentTests.test_altered_expectation_rejects_before_directory_creation",
+      "tests.test_terminal_components.TerminalComponentTests.test_binary_invalid_utf8",
+      "tests.test_terminal_components.TerminalComponentTests.test_command_not_found_recovery",
+      "tests.test_terminal_components.TerminalComponentTests.test_empty_streams",
+      "tests.test_terminal_components.TerminalComponentTests.test_final_newlines",
+      "tests.test_terminal_components.TerminalComponentTests.test_literal_replacement_character",
+      "tests.test_terminal_components.TerminalComponentTests.test_missing_versus_empty_file",
+      "tests.test_terminal_components.TerminalComponentTests.test_pipeline",
+      "tests.test_terminal_components.TerminalComponentTests.test_reject_unknown_inputs_before_execution",
+      "tests.test_terminal_components.TerminalComponentTests.test_seeded_split_reproducibility_and_independence",
+      "tests.test_terminal_components.TerminalComponentTests.test_streams",
+      "tests.test_terminal_components.TerminalComponentTests.test_timeout",
+      "tests.test_terminal_components.TerminalComponentTests.test_unicode_quoting",
+      "tests.test_terminal_components.TerminalComponentTests.test_warning_success",
+      "tests.test_terminal.TerminalTests.test_actual_host_uid_cwd_and_granted_marker_are_bound",
+      "tests.test_terminal.TerminalTests.test_actual_separate_streams_literal_bytes_and_nonzero_status",
+      "tests.test_terminal.TerminalTests.test_argv_is_literal_without_implicit_shell_expansion",
+      "tests.test_terminal.TerminalTests.test_definition_is_immutable_bounded_and_not_a_shell_string",
+      "tests.test_terminal.TerminalTests.test_detached_descendant_cannot_survive_namespace_retirement",
+      "tests.test_terminal.TerminalTests.test_duplicate_and_malformed_catalogue_reject_before_workspace_creation",
+      "tests.test_terminal.TerminalTests.test_granted_input_is_readonly_and_original_bytes_unchanged",
+      "tests.test_terminal.TerminalTests.test_output_limit_is_reported_and_namespace_retires",
+      "tests.test_terminal.TerminalTests.test_signal_exit_is_not_converted_to_success",
+      "tests.test_terminal.TerminalTests.test_symlink_and_hardlink_inputs_are_not_mounted",
+      "tests.test_terminal.TerminalTests.test_timeout_is_bounded_and_namespace_retires",
+      "tests.test_terminal.TerminalTests.test_ungranted_files_home_devices_network_and_credentials_absent",
+      "tests.test_terminal.TerminalTests.test_ungranted_or_unknown_command_rejects_before_spawn",
+      "tests.test_terminal.TerminalTests.test_unknown_namespace_retirement_cannot_publish_result",
+      "tests.test_shell_cli.ShellTests.test_actual_host_binding_and_readable_marker_are_preserved",
+      "tests.test_shell_cli.ShellTests.test_config_identity_changes_and_substitution_are_rejected",
+      "tests.test_shell_cli.ShellTests.test_frozen_shell_plan_rejects_changed_world_before_execution",
+      "tests.test_shell_cli.ShellTests.test_real_shell_quotes_streams_exit_and_pipeline_semantics",
+      "tests.test_shell_cli.ShellTests.test_receipt_failure_remains_indeterminate",
+      "tests.test_shell_cli.ShellTests.test_schema_grammar_and_host_agree_on_granted_command_field",
+      "tests.test_shell_cli.ShellTests.test_shell_cannot_write_workspace_or_read_hidden_home_credentials_devices",
+      "tests.test_shell_cli.ShellTests.test_shell_configuration_validates_before_workspace_creation",
+      "tests.test_shell_cli.ShellTests.test_timeout_kills_descendants_before_publication",
+      "tests.test_shell_cli.ShellTests.test_ungranted_shell_is_absent_and_rejects_before_spawn",
+      "tests.test_shell_cli.ShellCliTests.test_real_subprocess_cli_shell_then_read_finish_and_offline_reopen",
+      "tests.test_shell_cli.ShellCliTests.test_shell_grants_require_explicit_configuration_and_prefix_uses_it",
+      "tests.test_terminal_examples.TerminalExampleTests.test_example_final_reports_do_not_teach_copying_drafting_notes",
+      "tests.test_terminal_examples.TerminalExampleTests.test_nonterminal_prefix_stays_identical_to_its_frozen_predecessor",
+      "tests.test_terminal_examples.TerminalExampleTests.test_terminal_prompt_uses_relevant_complete_worked_examples",
+      "tests.test_terminal_examples.TerminalExampleTests.test_terminal_support_keeps_required_test_instruction_when_tests_granted"
+    ]
+  },
+  "preserved_attempts": [
+    {
+      "path": "red.log",
+      "result": "expected missing module before implementation"
+    },
+    {
+      "path": "regression.log",
+      "tests": 46,
+      "passed": 44,
+      "errors": 2,
+      "reason": "client-only host lacks pre-existing COW serve and test fixture imports; not masked as skipped"
+    }
+  ],
+  "limitations": [
+    "No model inference or autonomous task performed.",
+    "Small named structural split is not general OOD robustness.",
+    "2 existing COW integration methods require separate server-side environment.",
+    "No GPU,numerical,restart,VC/G gate qualification.",
+    "No modification to default prompts,samplers or frozen workload/checkers."
+  ],
+  "source": {
+    "branchwrite/terminal_components.py": {
+      "bytes": 12786,
+      "sha256": "e583db55b25ae9171581ba3234e984d574b6aeaa3733de43211735fb1225e5e8"
+    },
+    "tests/test_terminal_components.py": {
+      "bytes": 2897,
+      "sha256": "333a659762a3b75ab8ea9705adcc9015fbe161c6d429d69fcdf5de170ac67edf"
+    },
+    "branchwrite/terminal.py": {
+      "bytes": 12238,
+      "sha256": "d91572563eb49e63281c44bac63938d7cd3793385427b8756fcd1289832a5053"
+    },
+    "branchwrite/tool_registry.py": {
+      "bytes": 26931,
+      "sha256": "8a679d23490f13434d2b68dc8838e4c8cdee7208dca46f6ccfc0836ac2f3f6b1"
+    }
+  }
+}

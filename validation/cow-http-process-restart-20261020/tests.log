@@ -1,0 +1,74 @@
+BranchWrite commit: 12d88b26db7db6d3a291b9cc602938c7e166c210
+COW commit: 831b4d8dc7684c5fce14c17d2113fcadfc5e1b8a
+Host: dflanag3-B650-GAMING-X-AX
+Python 3.12.3
+PROCESS_RESTART_REPEAT=1
+test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work (tests.test_cow_http_process_restart.CowHttpProcessRestartTests.test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.274s
+
+OK
+PROCESS_RESTART_REPEAT=2
+test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work (tests.test_cow_http_process_restart.CowHttpProcessRestartTests.test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.275s
+
+OK
+PROCESS_RESTART_REPEAT=3
+test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work (tests.test_cow_http_process_restart.CowHttpProcessRestartTests.test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.295s
+
+OK
+PROCESS_RESTART_REPEAT=4
+test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work (tests.test_cow_http_process_restart.CowHttpProcessRestartTests.test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.264s
+
+OK
+PROCESS_RESTART_REPEAT=5
+test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work (tests.test_cow_http_process_restart.CowHttpProcessRestartTests.test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.266s
+
+OK
+CLIENT_TEST_SUITE
+test_cli_machine_envelope_preserves_exact_answer_text (tests.test_cow_client.CliMachineResultTests.test_cli_machine_envelope_preserves_exact_answer_text) ... ok
+test_cli_machine_envelope_preserves_prepare_answer_without_text (tests.test_cow_client.CliMachineResultTests.test_cli_machine_envelope_preserves_prepare_answer_without_text) ... ok
+test_cli_machine_envelope_rejects_nonstring_optional_text (tests.test_cow_client.CliMachineResultTests.test_cli_machine_envelope_rejects_nonstring_optional_text) ... ok
+test_frame_identity_rejects_wrong_operation_or_target_branch (tests.test_cow_client.CliMachineResultTests.test_frame_identity_rejects_wrong_operation_or_target_branch) ... ok
+test_generation_commands_pass_the_original_revision_to_cli (tests.test_cow_client.CliRevisionMappingTests.test_generation_commands_pass_the_original_revision_to_cli) ... ok
+test_stale_expected_revision_is_rejected_before_cli_mutation (tests.test_cow_client.CliRevisionMappingTests.test_stale_expected_revision_is_rejected_before_cli_mutation) ... ok
+test_completed_operation_replay_uses_original_receipt_without_head_read (tests.test_cow_client.CowClientTests.test_completed_operation_replay_uses_original_receipt_without_head_read) ... ok
+test_eof_leaves_exact_intent_pending_and_never_resends_automatically (tests.test_cow_client.CowClientTests.test_eof_leaves_exact_intent_pending_and_never_resends_automatically) ... ok
+test_generation_completion_without_exact_text_is_rejected_and_intent_retained (tests.test_cow_client.CowClientTests.test_generation_completion_without_exact_text_is_rejected_and_intent_retained) ... ok
+test_intent_is_durable_before_stream_send_and_receipt_is_bound (tests.test_cow_client.CowClientTests.test_intent_is_durable_before_stream_send_and_receipt_is_bound) ... ok
+test_operation_id_accepts_128_ascii_bytes (tests.test_cow_client.CowClientTests.test_operation_id_accepts_128_ascii_bytes) ... ok
+test_operation_id_cannot_be_reused_for_changed_bytes (tests.test_cow_client.CowClientTests.test_operation_id_cannot_be_reused_for_changed_bytes) ... ok
+test_read_routes_return_typed_observations (tests.test_cow_client.CowClientTests.test_read_routes_return_typed_observations) ... ok
+test_receipt_for_wrong_branch_is_rejected_and_intent_retained (tests.test_cow_client.CowClientTests.test_receipt_for_wrong_branch_is_rejected_and_intent_retained) ... ok
+test_unknown_process_local_operation_is_indeterminate (tests.test_cow_client.CowClientTests.test_unknown_process_local_operation_is_indeterminate) ... ok
+test_reverse_delivery_duplicate_old_result_and_restart_identity (tests.test_cow_client.FrameSlotTests.test_reverse_delivery_duplicate_old_result_and_restart_identity) ... ok
+test_slot_rejects_digest_mismatch_and_detaches_return_value (tests.test_cow_client.FrameSlotTests.test_slot_rejects_digest_mismatch_and_detaches_return_value) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 4.615s
+
+OK
+CHAT_CLI_HTTP_SUITE
+test_cli_accepts_full_128_byte_branch_and_operation_names (tests.test_chat_cli_http.ChatCliHttpTests.test_cli_accepts_full_128_byte_branch_and_operation_names) ... ok
+test_cli_keeps_user_conversation_tip_current_and_work_fork_independent (tests.test_chat_cli_http.ChatCliHttpTests.test_cli_keeps_user_conversation_tip_current_and_work_fork_independent) ... ok
+test_fifo_message_is_durable_while_answer_runs_and_sends_afterward (tests.test_chat_cli_http.ChatCliHttpTests.test_fifo_message_is_durable_while_answer_runs_and_sends_afterward) ... ok
+test_lost_cli_ack_reconciles_the_same_saved_user_turn (tests.test_chat_cli_http.ChatCliHttpTests.test_lost_cli_ack_reconciles_the_same_saved_user_turn) ... ok
+test_stop_add_before_first_answer_preserves_old_attempt_as_a_sibling (tests.test_chat_cli_http.ChatCliHttpTests.test_stop_add_before_first_answer_preserves_old_attempt_as_a_sibling) ... ok
+test_stop_add_cancels_before_output_and_retries_with_both_user_inputs (tests.test_chat_cli_http.ChatCliHttpTests.test_stop_add_cancels_before_output_and_retries_with_both_user_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.515s
+
+OK

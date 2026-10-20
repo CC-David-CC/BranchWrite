@@ -1,0 +1,275 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "error": null,
+  "scene": {
+    "objects": [
+      {
+        "name": "DemoModule",
+        "bounds_world": [
+          [
+            -1.4123611450195312,
+            1.4123611450195312
+          ],
+          [
+            -1.4123611450195312,
+            1.4123611450195312
+          ],
+          [
+            0.0,
+            2.0
+          ]
+        ],
+        "vertices": 8,
+        "polygons": 6
+      }
+    ],
+    "frames": [
+      1,
+      12,
+      24
+    ],
+    "sampled_transforms": {
+      "1": [
+        {
+          "name": "DemoModule",
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "12": [
+        {
+          "name": "DemoModule",
+          "matrix": [
+            [
+              0.7423610091209412,
+              -0.6700000762939453,
+              0.0,
+              0.0
+            ],
+            [
+              0.6700000762939453,
+              0.7423610091209412,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "24": [
+        {
+          "name": "DemoModule",
+          "matrix": [
+            [
+              -4.371138828673793e-08,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              -4.371138828673793e-08,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ]
+    },
+    "transform_animation_observed": true,
+    "cameras": {
+      "top": {
+        "position": [
+          0.0,
+          0.0,
+          12.29888916015625
+        ],
+        "rotation": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "projection": "orthographic",
+        "scale": 5.084500312805176,
+        "frame": 12
+      },
+      "front": {
+        "position": [
+          0.0,
+          -11.29888916015625,
+          1.0
+        ],
+        "rotation": [
+          1.5707964897155762,
+          -0.0,
+          0.0
+        ],
+        "projection": "orthographic",
+        "scale": 5.084500312805176,
+        "frame": 12
+      },
+      "side": {
+        "position": [
+          11.29888916015625,
+          0.0,
+          1.0
+        ],
+        "rotation": [
+          1.5707963705062866,
+          -0.0,
+          1.5707963705062866
+        ],
+        "projection": "orthographic",
+        "scale": 5.084500312805176,
+        "frame": 12
+      },
+      "isometric": {
+        "position": [
+          11.29888916015625,
+          -11.29888916015625,
+          12.29888916015625
+        ],
+        "rotation": [
+          0.9553165435791016,
+          -1.1763476237547366e-07,
+          0.7853981852531433
+        ],
+        "projection": "orthographic",
+        "scale": 5.084500312805176,
+        "frame": 12
+      }
+    },
+    "render_profile": "bw.blender-cpu-views-motion.v1",
+    "animation": {
+      "start": 1,
+      "end": 24,
+      "fps": 12,
+      "frames_rendered": 24
+    },
+    "blender_version": "4.5.3 LTS",
+    "blender_build": "67807e1800cc",
+    "scope": "rendered scene and sampled transforms; not CAD acceptance"
+  },
+  "isolation": {
+    "kind": "bubblewrap-cad-v1",
+    "pid_ns": "pid:[4026532901]",
+    "net_ns": "net:[4026532904]",
+    "mount_ns": "mnt:[4026532779]",
+    "worker_exited": true,
+    "launcher_pid": 2453372,
+    "namespace_members_after": []
+  },
+  "build_isolation": {
+    "kind": "bubblewrap-cad-v1",
+    "pid_ns": "pid:[4026532783]",
+    "net_ns": "net:[4026532786]",
+    "mount_ns": "mnt:[4026532779]",
+    "worker_exited": true,
+    "launcher_pid": 2453345,
+    "namespace_members_after": []
+  },
+  "artifact_sha256": "8c965afefb79521a6ad4c24efb7867e3abf60e300178b3a78aaa0e7947fd08ed",
+  "source_id": "585e2df74e24ef86b77148ca4b2354daddc3f499c46350faed32ea3fccfdaee2",
+  "inputs": [
+    {
+      "path": "scene.py",
+      "sha256": "990032592939c790e06e72f152b10eef6379b9d96aec55d13dac8f1a8645dae4",
+      "bytes": 432
+    }
+  ],
+  "runtime_id": "d3ca8d2966e61f3b094882fe3b244dba48c06cf6a75b25cdf05dd83782869bcd",
+  "elapsed_seconds": 11.724984231987037,
+  "asset_manifest": [
+    {
+      "name": "animation.mp4",
+      "sha256": "9f9ce5ec0c757d5ef4d352312ef57231214928b7b1232cff9f1297b811c348b9",
+      "bytes": 19582
+    },
+    {
+      "name": "front.png",
+      "sha256": "05c9a17cf45fe45271706ea20677ac646eee4a7ca267f6a9a933595145c9eca9",
+      "bytes": 77104
+    },
+    {
+      "name": "isometric.png",
+      "sha256": "024bb3467309e44f5dd4bf0481fc689a6e5c203e2d3f760cb098b1d93ff7138a",
+      "bytes": 77732
+    },
+    {
+      "name": "scene.blend",
+      "sha256": "8c965afefb79521a6ad4c24efb7867e3abf60e300178b3a78aaa0e7947fd08ed",
+      "bytes": 429035
+    },
+    {
+      "name": "side.png",
+      "sha256": "e11d475e8185f47f1b8e3a62bd6b257cbfc61eeb4a636f6b1f56d147be13e5d5",
+      "bytes": 75985
+    },
+    {
+      "name": "top.png",
+      "sha256": "c76ceaf31fc7c5ed9eedcf534ff670d5923dee83df29857f60da6d3db5f5974c",
+      "bytes": 81926
+    }
+  ],
+  "mcp": {
+    "initialized": true,
+    "protocol_version": "2025-11-25",
+    "server": {
+      "name": "BranchWrite bounded Blender",
+      "title": null,
+      "version": "1.26.0",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "tool": "render_scene",
+    "transport": "stdio"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "BOUNDED_MINP_AUTONOMOUS_CLI_PASS",
+  "started_ns": 1792433982071519250,
+  "scope": "frozen SC19 task with explicit Min-P; not new unfamiliar-task quality",
+  "client_supervisor_pid": 2306059,
+  "client_exit": 0,
+  "audit-output.py": 0,
+  "audit-ledger.py": 0,
+  "audit-public-flow.py": 0,
+  "finished_ns": 1792434173531987395
+}

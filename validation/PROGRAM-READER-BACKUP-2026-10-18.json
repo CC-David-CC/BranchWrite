@@ -1,0 +1,9 @@
+{
+  "status": "RECEIVER_VERIFIED",
+  "path": "/srv/data/git/private_context_cow.evidence/20261018-bw-program-reader-v1/evidence.tar.gz",
+  "bytes": 1181278,
+  "sha256": "83c683c9052edd467600038cbe289023528d3098502c6357a644906766f78429",
+  "members": 417,
+  "manifest_sha256": "9b2876feb377344bdaaedd54c602acdb91308e92b56d159f095b3fb78b5d53cd",
+  "extracted_files": 0
+}

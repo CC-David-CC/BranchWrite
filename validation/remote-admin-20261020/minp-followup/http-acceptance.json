@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "http_status": 200,
+  "bytes": 4675,
+  "sha256": "7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662",
+  "local_source_equal": true,
+  "only_two_requested_replacements": true,
+  "client_seconds": 746.5509965149686
+}

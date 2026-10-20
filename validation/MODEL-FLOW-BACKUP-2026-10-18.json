@@ -1,0 +1,9 @@
+{
+  "status": "RECEIVER_VERIFIED",
+  "path": "/srv/data/git/private_context_cow.evidence/20261018-bw-model-flow-v1/evidence.tar.gz",
+  "bytes": 816135,
+  "sha256": "fed31e84c302fcab6f63fa4923ed70b256befda26457983c5e91abfecd0f8e08",
+  "members": 278,
+  "manifest_sha256": "f5eb418cd6434adf055907c88346b2df3e9ce0de2eaed70f216b1ee81f034c47",
+  "extracted_files": 0
+}

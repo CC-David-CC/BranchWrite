@@ -1,0 +1,9 @@
+{
+  "status": "RESTORE_AND_FIRST_SUFFIX_PASS",
+  "scope": "Native trace only; autonomous project outcome pending",
+  "root_consumed": 15537,
+  "forward_tokens_after_restore": 0,
+  "native_loaded_file_bytes": 523907260,
+  "first_suffix_tokens": 913,
+  "first_suffix_final_consumed": 16450
+}

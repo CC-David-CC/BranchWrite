@@ -1,0 +1,12 @@
+{
+  "client": "installed dev48 wheel on llm-49",
+  "wheel_sha256": "cf3cb48a75d97524dd264cbd16d64e9d6b00464a63fa5c260057acc1106ed03e",
+  "server": "http://10.0.7.68:8099",
+  "model": "Q4",
+  "remote_authority": "none; no BW_REMOTE_TARGETS set",
+  "steering_transport": "typed into actual installed interactive CLI PTY while original native ask pending",
+  "scope": "active steering, saved HTML, independent browser checks; no new numerical certification",
+  "server_pause": "existing service uses whole-step fallback; consumed-boundary pause not deployed",
+  "goal_includes_formatting": false,
+  "operator_file_edits": false
+}

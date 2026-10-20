@@ -1,0 +1,11 @@
+{
+  "seed": 7419,
+  "cases": 64,
+  "audit_sha256": "7b96c5661a28393f5bdebd63392e6decaa31f95cbb628467368e75ef332dfd2a",
+  "source_branch": "standalone-sc08-q8-real-repository-20261019-v1",
+  "source_snapshot": "6fd3acbb21f430a0477e9af66682d2ee95cabde9cf754a4f400297b5965cc360",
+  "prefix_tokens": 16442,
+  "scope": "Prepared before the SC09 model run; retain exact prefix source and original Git metadata",
+  "client_version": "dev4",
+  "prior_failed_operations_preserved": true
+}

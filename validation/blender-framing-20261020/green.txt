@@ -1,0 +1,7 @@
+test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) ... ok
+test_valid_scene_without_world_gets_derived_studio_world (test_blender_framing.BlenderFramingTests.test_valid_scene_without_world_gets_derived_studio_world) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 23.486s
+
+OK

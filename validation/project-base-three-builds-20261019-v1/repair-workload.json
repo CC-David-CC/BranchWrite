@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "target": "base-choice-dev21-repair-A-v1",
+  "run_id": "base-choice-cli-dev21-repair-a-v1",
+  "branch": "base-choice-cli-dev21-repair-a-v1",
+  "source": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-base-choice-dev21-repair-A-v1/source",
+  "task_file": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-base-choice-dev21-repair-A-v1/task.txt",
+  "workflow": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/standalone-sc03-q8-restored-v1/coding.bw",
+  "grammar_registration": "inline",
+  "grant": {
+    "edit_paths": [
+      "branchwrite/base_choice.py"
+    ],
+    "create_paths": [],
+    "read_paths": [
+      "tests/test_base_choice.py"
+    ],
+    "allow_tests": false,
+    "allow_shell": true
+  },
+  "verification": {
+    "schema": 1,
+    "commands": [
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "disposition": "exited",
+        "exit_code": 0
+      }
+    ]
+  },
+  "shell": {
+    "timeout": 30,
+    "expected_hostname": "r4090"
+  },
+  "thinking_tokens": 4096,
+  "read_dirs": [
+    "branchwrite",
+    "tests"
+  ],
+  "edit_dirs": [],
+  "base_branch": "project-base-b-compact-selected",
+  "base_snapshot": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6",
+  "catalog_file": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-base-choice-dev21-repair-A-v1/catalog.json",
+  "proposal_file": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-base-choice-dev21-repair-A-v1/proposal.json",
+  "base_revision": "8270a0ffd67178cbd53d2711a85e1a5ba8cb1891"
+}

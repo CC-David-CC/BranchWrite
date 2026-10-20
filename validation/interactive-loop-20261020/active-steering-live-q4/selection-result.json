@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "Installed dev40 terminal restores old/current files. Journal-byte comparison covers the return selection; full canonical selection-frame audit follows. No native work-counter measurement claimed.",
+  "switches": [
+    {
+      "command": "/switch 2",
+      "sha256": "7fa87877845ca882cfdcd900d6ce101a2f52a5ee725cdf482eb7ee16d64d6746",
+      "observed_seconds": null
+    },
+    {
+      "command": "/switch 6",
+      "sha256": "ad0a00073d406faac7c658a1a1418ac30b0dd07f208e6deb0ef74649cc23abad",
+      "observed_seconds": 0.1622059210203588
+    }
+  ],
+  "model_operation_journal_files": 63,
+  "return_journals_unchanged": true
+}

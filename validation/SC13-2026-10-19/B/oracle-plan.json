@@ -1,0 +1,15 @@
+{
+  "scope": "Cross-project Q8 restore of fresh generic controller root after process restart; no numerical certification",
+  "wheel_sha256": "fd3efe7623fb302cc27fcfb144d0de7d14e7429a2b4bcf95d59ff9d56c9c9b51",
+  "required_command": "python3 -m unittest discover -s tests -p test_taskboard.py -v",
+  "forbidden_stale_commands": [
+    "test_connection_admission.py",
+    "test_command_summary.py"
+  ],
+  "independent_cases": 200,
+  "invalid_classes": 5,
+  "seed": 12419,
+  "prefix_source_branch": "standalone-sc13a-controller-q8-dev15-20261019-v1",
+  "prefix_snapshot": "resolve and freeze after SC13A; never select a completed tip",
+  "model": "pinned Q8 FP16 KV"
+}

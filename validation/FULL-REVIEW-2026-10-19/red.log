@@ -1,0 +1,55 @@
+test_binary_creation_and_exact_newline_flags (test_full_project_review.FullProjectReviewTests.test_binary_creation_and_exact_newline_flags) ... ERROR
+test_file_deletion_has_no_implicit_permission (test_full_project_review.FullProjectReviewTests.test_file_deletion_has_no_implicit_permission) ... FAIL
+test_mode_change_requires_mode_grant (test_full_project_review.FullProjectReviewTests.test_mode_change_requires_mode_grant) ... FAIL
+test_shell_written_edit_is_in_complete_review (test_full_project_review.FullProjectReviewTests.test_shell_written_edit_is_in_complete_review) ... FAIL
+test_ungranted_shell_write_is_rejected (test_full_project_review.FullProjectReviewTests.test_ungranted_shell_write_is_rejected) ... FAIL
+
+======================================================================
+ERROR: test_binary_creation_and_exact_newline_flags (test_full_project_review.FullProjectReviewTests.test_binary_creation_and_exact_newline_flags)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-full-review-20261019/tests/test_full_project_review.py", line 53, in test_binary_creation_and_exact_newline_flags
+    self.assertFalse(changes['app.py']['before_final_newline']);self.assertTrue(changes['app.py']['after_final_newline'])
+                     ~~~~~~~^^^^^^^^^^
+KeyError: 'app.py'
+
+======================================================================
+FAIL: test_file_deletion_has_no_implicit_permission (test_full_project_review.FullProjectReviewTests.test_file_deletion_has_no_implicit_permission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-full-review-20261019/tests/test_full_project_review.py", line 46, in test_file_deletion_has_no_implicit_permission
+    with self.assertRaisesRegex(ValueError,'delet'):inspect_changes(self.state)
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_mode_change_requires_mode_grant (test_full_project_review.FullProjectReviewTests.test_mode_change_requires_mode_grant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-full-review-20261019/tests/test_full_project_review.py", line 57, in test_mode_change_requires_mode_grant
+    with self.assertRaisesRegex(ValueError,'mode'):inspect_changes(self.state)
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_shell_written_edit_is_in_complete_review (test_full_project_review.FullProjectReviewTests.test_shell_written_edit_is_in_complete_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-full-review-20261019/tests/test_full_project_review.py", line 37, in test_shell_written_edit_is_in_complete_review
+    r=inspect_changes(self.state);self.assertTrue(r['complete_project_patch'])
+                                  ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_ungranted_shell_write_is_rejected (test_full_project_review.FullProjectReviewTests.test_ungranted_shell_write_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-full-review-20261019/tests/test_full_project_review.py", line 43, in test_ungranted_shell_write_is_rejected
+    with self.assertRaisesRegex(ValueError,'grant'):inspect_changes(self.state)
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.035s
+
+FAILED (failures=4, errors=1)

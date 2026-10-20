@@ -1,0 +1,64 @@
+test_custom_checks_cannot_publish_an_invalid_action_receipt (tests.test_browser_host_inspection.HostInspectionTests.test_custom_checks_cannot_publish_an_invalid_action_receipt) ... ok
+test_italic_alone_does_not_pass_bold_name_requirement (tests.test_browser_host_inspection.HostInspectionTests.test_italic_alone_does_not_pass_bold_name_requirement) ... ok
+test_missing_underline_is_a_failed_inspection (tests.test_browser_host_inspection.HostInspectionTests.test_missing_underline_is_a_failed_inspection) ... ok
+test_real_computed_style_and_interaction_are_checked_in_the_sandbox (tests.test_browser_host_inspection.HostInspectionTests.test_real_computed_style_and_interaction_are_checked_in_the_sandbox) ... ok
+test_changed_inspector_rejects_before_starting_a_worker (tests.test_html_inspection.HtmlInspectionTests.test_changed_inspector_rejects_before_starting_a_worker) ... ok
+test_same_real_capture_passes_supplied_dom_and_pixel_assertions (tests.test_html_inspection.HtmlInspectionTests.test_same_real_capture_passes_supplied_dom_and_pixel_assertions) ... ok
+test_wrong_heading_retains_actual_png_and_is_a_task_failure (tests.test_html_inspection.HtmlInspectionTests.test_wrong_heading_retains_actual_png_and_is_a_task_failure) ... ok
+test_actual_cli_fill_click_protected_check_and_offline_reopen (tests.test_greeting_inspection.GreetingInspectionTests.test_actual_cli_fill_click_protected_check_and_offline_reopen) ... ok
+test_actual_cli_rejects_unsafe_handler_with_image_retained (tests.test_greeting_inspection.GreetingInspectionTests.test_actual_cli_rejects_unsafe_handler_with_image_retained) ... ok
+test_greeting_does_not_excuse_broken_existing_counter (tests.test_greeting_inspection.GreetingInspectionTests.test_greeting_does_not_excuse_broken_existing_counter) ... ok
+test_real_checker_preserves_counter_and_greets_literal_markup (tests.test_greeting_inspection.GreetingInspectionTests.test_real_checker_preserves_counter_and_greets_literal_markup) ... ok
+test_unknown_inspection_target_remains_rejected (tests.test_greeting_inspection.GreetingInspectionTests.test_unknown_inspection_target_remains_rejected) ... ok
+test_unsafe_html_greeting_is_not_accepted (tests.test_greeting_inspection.GreetingInspectionTests.test_unsafe_html_greeting_is_not_accepted) ... ok
+test_actual_chromium_capture_binds_isolation_and_exact_source (tests.test_browser_isolation.BrowserIsolationTests.test_actual_chromium_capture_binds_isolation_and_exact_source) ... ok
+test_actual_namespace_cannot_read_host_secret_or_connect_to_host_listener (tests.test_browser_isolation.BrowserIsolationTests.test_actual_namespace_cannot_read_host_secret_or_connect_to_host_listener) ... ok
+test_deadline_reaps_an_owned_namespace_with_a_spawned_child (tests.test_browser_isolation.BrowserIsolationTests.test_deadline_reaps_an_owned_namespace_with_a_spawned_child) ... ok
+test_actual_registry_returns_error_exit_and_exact_resource_artifacts (tests.test_browser_errors.BrowserErrorTests.test_actual_registry_returns_error_exit_and_exact_resource_artifacts) ... ok
+test_direct_executor_raises_typed_error_with_complete_capture (tests.test_browser_errors.BrowserErrorTests.test_direct_executor_raises_typed_error_with_complete_capture) ... ok
+test_error_count_and_each_message_are_bounded (tests.test_browser_errors.BrowserErrorTests.test_error_count_and_each_message_are_bounded) ... ok
+test_failed_artifact_publication_stays_unresolved_and_cannot_resend (tests.test_browser_errors.BrowserErrorTests.test_failed_artifact_publication_stays_unresolved_and_cannot_resend) ... ok
+test_failed_canonical_publication_keeps_original_intent_unresolved (tests.test_browser_errors.BrowserErrorTests.test_failed_canonical_publication_keeps_original_intent_unresolved) ... ERROR
+test_failed_capture_cannot_publish_through_foreign_executor_or_operation (tests.test_browser_errors.BrowserErrorTests.test_failed_capture_cannot_publish_through_foreign_executor_or_operation) ... ok
+test_initial_script_exception_is_also_a_bounded_observation (tests.test_browser_errors.BrowserErrorTests.test_initial_script_exception_is_also_a_bounded_observation) ... ok
+test_malformed_runtime_error_wire_records_are_rejected (tests.test_browser_errors.BrowserErrorTests.test_malformed_runtime_error_wire_records_are_rejected) ... ok
+test_real_click_exception_keeps_png_text_exact_actions_and_retirement (tests.test_browser_errors.BrowserErrorTests.test_real_click_exception_keeps_png_text_exact_actions_and_retirement) ... ok
+test_settled_error_dispatch_reopens_without_executing_again (tests.test_browser_errors.BrowserErrorTests.test_settled_error_dispatch_reopens_without_executing_again) ... ok
+test_typed_error_cannot_claim_unproven_cleanup (tests.test_browser_errors.BrowserErrorTests.test_typed_error_cannot_claim_unproven_cleanup) ... ok
+test_unproven_namespace_retirement_stays_unresolved (tests.test_browser_errors.BrowserErrorTests.test_unproven_namespace_retirement_stays_unresolved) ... ok
+test_worker_failure_never_becomes_a_settled_javascript_error (tests.test_browser_errors.BrowserErrorTests.test_worker_failure_never_becomes_a_settled_javascript_error) ... ok
+
+======================================================================
+ERROR: test_failed_canonical_publication_keeps_original_intent_unresolved (tests.test_browser_errors.BrowserErrorTests.test_failed_canonical_publication_keeps_original_intent_unresolved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/tool_dispatch.py", line 108, in dispatch_tool
+    value,provenance=outcome.publish(kernel.log)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/tool_registry.py", line 90, in publish
+    stdout=log.put_artifact(self.stdout);stderr=log.put_artifact(self.stderr);refs=[stdout,stderr]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+OSError: injected canonical publication failure
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_errors.py", line 98, in test_failed_canonical_publication_keeps_original_intent_unresolved
+    with self.assertRaises(OSError):dispatch_tool(k,r,'click')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/tool_dispatch.py", line 120, in dispatch_tool
+    raise EffectIndeterminate(operation_id,plan.sha256) from exc
+branchwrite.tool_registry.EffectIndeterminate: tool outcome is unresolved; reconcile the original operation instead of resending
+
+----------------------------------------------------------------------
+Ran 29 tests in 39.134s
+
+FAILED (errors=1)

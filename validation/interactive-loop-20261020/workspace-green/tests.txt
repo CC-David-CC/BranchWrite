@@ -1,0 +1,16 @@
+test_checkpoint_preserves_user_git_index_head_and_dirty_files (tests.test_workspace_versions.WorkspaceVersionsTests.test_checkpoint_preserves_user_git_index_head_and_dirty_files) ... ok
+test_conflicting_preimage_fails_before_first_write (tests.test_workspace_versions.WorkspaceVersionsTests.test_conflicting_preimage_fails_before_first_write) ... ok
+test_crash_after_one_file_recovers_same_intent (tests.test_workspace_versions.WorkspaceVersionsTests.test_crash_after_one_file_recovers_same_intent) ... ok
+test_crash_recovery_does_not_overwrite_intervening_edit (tests.test_workspace_versions.WorkspaceVersionsTests.test_crash_recovery_does_not_overwrite_intervening_edit) ... ok
+test_guarded_publication_keeps_unrelated_user_edits_and_is_idempotent (tests.test_workspace_versions.WorkspaceVersionsTests.test_guarded_publication_keeps_unrelated_user_edits_and_is_idempotent) ... ok
+test_new_nested_file_and_executable_mode_survive_version_restore (tests.test_workspace_versions.WorkspaceVersionsTests.test_new_nested_file_and_executable_mode_survive_version_restore) ... ok
+test_old_context_with_new_files_uses_isolated_worktree (tests.test_workspace_versions.WorkspaceVersionsTests.test_old_context_with_new_files_uses_isolated_worktree) ... ok
+test_real_process_exit_after_first_write_is_recovered (tests.test_workspace_versions.WorkspaceVersionsTests.test_real_process_exit_after_first_write_is_recovered) ... ok
+test_restore_removes_only_files_owned_by_the_checkpoint_delta (tests.test_workspace_versions.WorkspaceVersionsTests.test_restore_removes_only_files_owned_by_the_checkpoint_delta) ... ok
+test_symlink_cannot_redirect_capture_or_publication (tests.test_workspace_versions.WorkspaceVersionsTests.test_symlink_cannot_redirect_capture_or_publication) ... ok
+test_version_names_cannot_escape_or_rebind_a_checkpoint (tests.test_workspace_versions.WorkspaceVersionsTests.test_version_names_cannot_escape_or_rebind_a_checkpoint) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.423s
+
+OK

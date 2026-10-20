@@ -1,0 +1,1 @@
+Keep the current Dogs page and its working Say hello button. Make Bella, Max and Luna bold. Make the word Welcome both italic and underlined. Leave the other wording unchanged. Check the actual result.

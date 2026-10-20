@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "Installed corrected client reviewed/exported/applied the actual Q4-generated result without changing its canonical run or original source.",
+  "review": {
+    "schema": 1,
+    "coverage": "complete-project",
+    "recorded_verified": true,
+    "complete_project_patch": true,
+    "baseline_reference": "388729518d8c157f6c0ab68a5fe5e015cfa17dea648a173dc2c1a4b95929141d:143",
+    "baseline_inventory": "ed700332d7b7401e0bfdb4d261a3d85544797e58d5710ba1249d6106ccee1d83",
+    "current_inventory": "9ad9faee5a134866262d2a0b1a7a23c4c231d10fe90439ebeb706e14645e8a64",
+    "changes": [
+      {
+        "path": "index.html",
+        "before_sha256": null,
+        "after_sha256": "1b4136b361b9cef8be126cd5d809eb1d98726657586e4d640d3c84a0bc2390ff",
+        "before_mode": null,
+        "after_mode": 384,
+        "before_bytes": 0,
+        "after_bytes": 852,
+        "binary": false,
+        "diff": "--- before/index.html\n+++ after/index.html\n@@ -0,0 +1,39 @@\n+<!DOCTYPE html>\n+<html lang=\"en\">\n+<head>\n+  <meta charset=\"utf-8\">\n+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n+  <title>My First BranchWrite Page</title>\n+  <style>\n+    body {\n+      font-family: system-ui, sans-serif;\n+      margin: 1rem;\n+      line-height: 1.5;\n+    }\n+\n+    h1 {\n+      color: blue;\n+    }\n+\n+    button {\n+      font-size: 1rem;\n+      padding: 0.75rem 1rem;\n+    }\n+\n+    #message {\n+      font-weight: bold;\n+    }\n+  </style>\n+</head>\n+<body>\n+  <h1>My First BranchWrite Page</h1>\n+  <p>Welcome! This is a simple one-file page.</p>\n+  <button id=\"hello-button\">Say hello.</button>\n+  <p id=\"message\" aria-live=\"polite\"></p>\n+  <script>\n+    document.getElementById(\"hello-button\").addEventListener(\"click\", function () {\n+      document.getElementById(\"message\").textContent = \"Hello, David!\";\n+    });\n+  </script>\n+</body>\n+</html>\n",
+        "before_final_newline": false,
+        "after_final_newline": true
+      }
+    ],
+    "created_directories": []
+  },
+  "export": {
+    "status": "EXPORTED",
+    "path": "/home/dflanag3/spatial-artifacts/branchwrite-dev33-project-20261020/live-task-review.zip",
+    "bytes": 2987,
+    "sha256": "e3d3444c994d190b109afa49f43d12deb81842ad6eab0039226a781268d3eb35",
+    "changed_files": 1,
+    "checkout_modified": false
+  },
+  "applied": {
+    "status": "APPLIED_NEW_COPY",
+    "path": "/home/dflanag3/spatial-artifacts/branchwrite-dev33-project-20261020/reviewed-site",
+    "archive_sha256": "e3d3444c994d190b109afa49f43d12deb81842ad6eab0039226a781268d3eb35",
+    "inventory": "9ad9faee5a134866262d2a0b1a7a23c4c231d10fe90439ebeb706e14645e8a64",
+    "operation_id": "bwapply-87a2bc0ebd4cf139165bfce21a3f26f21f6b231e",
+    "original_checkout_modified": false
+  }
+}

@@ -1,0 +1,1 @@
+{"status": "FAIL", "phase": "before-launch", "reason": "Launcher used verify_runtime_sources instead of actual verify_runtime_source_closure; no process started"}

@@ -1,0 +1,68 @@
+test_aside_completion_cannot_move_current_tip_files_or_mode (tests.test_session_ledger.SessionLedgerTests.test_aside_completion_cannot_move_current_tip_files_or_mode) ... ERROR
+test_connection_change_refused_on_resume (tests.test_session_ledger.SessionLedgerTests.test_connection_change_refused_on_resume) ... ERROR
+test_modes_do_not_blend_or_reorder_queue (tests.test_session_ledger.SessionLedgerTests.test_modes_do_not_blend_or_reorder_queue) ... ERROR
+test_pending_receipt_replays_without_duplicate_completion (tests.test_session_ledger.SessionLedgerTests.test_pending_receipt_replays_without_duplicate_completion) ... ERROR
+test_queue_is_durable_and_combines_followups_in_order (tests.test_session_ledger.SessionLedgerTests.test_queue_is_durable_and_combines_followups_in_order) ... ERROR
+test_same_id_never_means_different_work (tests.test_session_ledger.SessionLedgerTests.test_same_id_never_means_different_work) ... ERROR
+test_search_is_read_only_and_never_dispatches (tests.test_session_ledger.SessionLedgerTests.test_search_is_read_only_and_never_dispatches) ... ERROR
+
+======================================================================
+ERROR: test_aside_completion_cannot_move_current_tip_files_or_mode (tests.test_session_ledger.SessionLedgerTests.test_aside_completion_cannot_move_current_tip_files_or_mode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_session_ledger.py", line 9, in setUp
+    from branchwrite.session_ledger import SessionLedger,Inbox
+ModuleNotFoundError: No module named 'branchwrite.session_ledger'
+
+======================================================================
+ERROR: test_connection_change_refused_on_resume (tests.test_session_ledger.SessionLedgerTests.test_connection_change_refused_on_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_session_ledger.py", line 9, in setUp
+    from branchwrite.session_ledger import SessionLedger,Inbox
+ModuleNotFoundError: No module named 'branchwrite.session_ledger'
+
+======================================================================
+ERROR: test_modes_do_not_blend_or_reorder_queue (tests.test_session_ledger.SessionLedgerTests.test_modes_do_not_blend_or_reorder_queue)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_session_ledger.py", line 9, in setUp
+    from branchwrite.session_ledger import SessionLedger,Inbox
+ModuleNotFoundError: No module named 'branchwrite.session_ledger'
+
+======================================================================
+ERROR: test_pending_receipt_replays_without_duplicate_completion (tests.test_session_ledger.SessionLedgerTests.test_pending_receipt_replays_without_duplicate_completion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_session_ledger.py", line 9, in setUp
+    from branchwrite.session_ledger import SessionLedger,Inbox
+ModuleNotFoundError: No module named 'branchwrite.session_ledger'
+
+======================================================================
+ERROR: test_queue_is_durable_and_combines_followups_in_order (tests.test_session_ledger.SessionLedgerTests.test_queue_is_durable_and_combines_followups_in_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_session_ledger.py", line 9, in setUp
+    from branchwrite.session_ledger import SessionLedger,Inbox
+ModuleNotFoundError: No module named 'branchwrite.session_ledger'
+
+======================================================================
+ERROR: test_same_id_never_means_different_work (tests.test_session_ledger.SessionLedgerTests.test_same_id_never_means_different_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_session_ledger.py", line 9, in setUp
+    from branchwrite.session_ledger import SessionLedger,Inbox
+ModuleNotFoundError: No module named 'branchwrite.session_ledger'
+
+======================================================================
+ERROR: test_search_is_read_only_and_never_dispatches (tests.test_session_ledger.SessionLedgerTests.test_search_is_read_only_and_never_dispatches)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_session_ledger.py", line 9, in setUp
+    from branchwrite.session_ledger import SessionLedger,Inbox
+ModuleNotFoundError: No module named 'branchwrite.session_ledger'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (errors=7)

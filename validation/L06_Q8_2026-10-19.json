@@ -1,0 +1,21 @@
+{
+  "status": "BOUNDED_AUTONOMOUS_L06_PASS",
+  "model_calls": 10,
+  "output_tokens": 12488,
+  "whole_cli_seconds": 811.0363680860028,
+  "added_examples": 2,
+  "source_commit": "981fa59",
+  "model": "Q8_0",
+  "kv": "FP16",
+  "sampler": "greedy",
+  "thinking_tokens": 4096,
+  "protected_checker_unchanged": true,
+  "host_namespace_retirement": true,
+  "manual_audit": "Actual timeout143; ps detector false-clean caught by positive control; pgrep detector positive control then timeout cleanup; final report agrees with receipts.",
+  "limits": [
+    "one fixture trajectory",
+    "slow completion",
+    "no fresh-logit oracle",
+    "no cumulative gate certification"
+  ]
+}

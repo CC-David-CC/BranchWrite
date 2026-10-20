@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "one autonomous real-Q4 repair of a small Python function; not broad coding qualification",
+  "seconds": 77.36198356200475,
+  "source_sha256": "dc678f93e5580a7f921635f253191c64eea6bbfb9545984be3b315ece69be902",
+  "tests_sha256": "7a61e81b734cdd4dcd4237f25b1ea4ec93aa79e48d8ceef56a5220b064b67ce4",
+  "tests_unchanged": true,
+  "independent_existing_tests": 3,
+  "independent_seeded_cases": 100,
+  "seed": 20261020,
+  "tool_sequence": [
+    {
+      "tool": "run_shell",
+      "operation_id": "bwtool-d10eb073241986dc71281d980217ed515b4908ce48ac3190",
+      "exit_code": 1,
+      "disposition": "exited"
+    },
+    {
+      "tool": "read_file",
+      "operation_id": "bwtool-006f2cc14ec446157d4e36126d174646e4b43457208c3ea0",
+      "exit_code": 0,
+      "disposition": "read"
+    },
+    {
+      "tool": "read_file",
+      "operation_id": "bwtool-9c1634585d466a527813193e9133bebdc4db6d4c4681a576",
+      "exit_code": 0,
+      "disposition": "read"
+    },
+    {
+      "tool": "replace",
+      "operation_id": "bwtool-10727dfa9a80669a2baf12fd48ea297457bf773d1abe1bb3",
+      "exit_code": 0,
+      "disposition": "applied"
+    },
+    {
+      "tool": "run_check",
+      "operation_id": "bwtool-e93bce835ad7c5d583a62a090ac21d1822bd1fd8f4d6ba98",
+      "exit_code": 0,
+      "disposition": "exited"
+    },
+    {
+      "tool": "finish",
+      "operation_id": "bwtool-8e20f495543707389b5cd68b9e2944d4439f87e028a6cb79",
+      "exit_code": null,
+      "disposition": "completion_requested"
+    }
+  ],
+  "recorded_verdict_feedback_bound_to_exact_operations": true,
+  "operator_interventions": 0
+}

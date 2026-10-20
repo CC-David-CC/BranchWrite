@@ -1,0 +1,60 @@
+{
+  "status": "CPU118_AND_REAL_Q8_L04_BOUNDED_PASS",
+  "red": "6tests failed/errors before mode primitive existed;raw logs retained",
+  "regression_attempt": {
+    "executed": 99,
+    "failures": 0,
+    "errors": 8,
+    "skips": 0,
+    "reason": "Existing integration tests require COW modules deliberately absent from inference client;server CPU execution pending"
+  },
+  "unique_new_boundary_tests": 11,
+  "new_real_cow_grammar_methods": 2,
+  "real_gpu_L04": "NOT_RUN",
+  "raw_evidence": "/home/dflanag3/spatial-artifacts/branchwrite-mode-tool-20261019-v1",
+  "mode_policy": "RED2missingmodeacceptance_then_GREEN11;rawlogsretained;serverregressionspending",
+  "server_previous_source": {
+    "commit": "2f3c316bc06f6f67529ae001fbf7aa1c46f6e755",
+    "executed": 103,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "terminal_projection": {
+    "red": "640expected400actual",
+    "green": "real640to740denialtosuccessreadonlywriteblocked",
+    "regressions": 83,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "real_L04": {
+    "status": "BOUNDED_AUTONOMOUS_L04_PASS",
+    "model": "Q8_0",
+    "kv": "FP16",
+    "added_examples": 0,
+    "model_calls": 7,
+    "output_tokens": 1309,
+    "whole_cli_seconds": 108.39200728398282,
+    "client_host": "llm-49",
+    "server_host": "llm-60",
+    "source": "owner-mode-l04-q8-v2",
+    "checks": [
+      "unchanged original protected fixture checker",
+      "actual direct execution126 before mode change",
+      "only owner execute added0640to0740",
+      "actual direct execution0 with expectedstdout",
+      "unchanged bytes and neighbors",
+      "mode-aware host completion",
+      "scopedkeyretired;ownedservernativeexit0"
+    ]
+  },
+  "tested_source_commit": "9fa9ca05d6af90b10903b3016c33068d221b6785",
+  "selected_server_cpu": {
+    "executed": 118,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "qualification": "Bounded prototype;not original G1\u2013G5 certification;L04v1harnessstopretained"
+}

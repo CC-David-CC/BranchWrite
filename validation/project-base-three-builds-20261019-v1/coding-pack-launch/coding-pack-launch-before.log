@@ -1,0 +1,117 @@
+test_cli_parser_retains_explicit_pack (test_coding_pack_launch.CodingPackLaunchTests.test_cli_parser_retains_explicit_pack) ... ERROR
+test_pack_cannot_be_mixed_with_existing_prefix (test_coding_pack_launch.CodingPackLaunchTests.test_pack_cannot_be_mixed_with_existing_prefix) ... ERROR
+test_pack_identity_is_saved_in_existing_launch (test_coding_pack_launch.CodingPackLaunchTests.test_pack_identity_is_saved_in_existing_launch) ... ERROR
+test_pair_is_required (test_coding_pack_launch.CodingPackLaunchTests.test_pair_is_required) ... 
+  test_pair_is_required (test_coding_pack_launch.CodingPackLaunchTests.test_pair_is_required) (key='context_pack') ... ERROR
+  test_pair_is_required (test_coding_pack_launch.CodingPackLaunchTests.test_pair_is_required) (key='context_pack_id') ... ERROR
+test_stale_pack_rejected_for_new_admission (test_coding_pack_launch.CodingPackLaunchTests.test_stale_pack_rejected_for_new_admission) ... ERROR
+test_cli_bootstrap_uses_pack_and_resume_keeps_original_context (test_coding_pack_http.CodingPackHTTPTests.test_cli_bootstrap_uses_pack_and_resume_keeps_original_context) ... FAIL
+
+======================================================================
+ERROR: test_cli_parser_retains_explicit_pack (test_coding_pack_launch.CodingPackLaunchTests.test_cli_parser_retains_explicit_pack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 39, in test_cli_parser_retains_explicit_pack
+    self.assertEqual(main(argv),0);run.assert_called_once()
+                     ^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/__main__.py", line 84, in main
+    args=parser.parse_args(argv)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/argparse.py", line 1911, in parse_args
+    self.error(msg % ' '.join(argv))
+  File "/usr/lib/python3.12/argparse.py", line 2677, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/usr/lib/python3.12/argparse.py", line 2664, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+ERROR: test_pack_cannot_be_mixed_with_existing_prefix (test_coding_pack_launch.CodingPackLaunchTests.test_pack_cannot_be_mixed_with_existing_prefix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 32, in test_pack_cannot_be_mixed_with_existing_prefix
+    with self.assertRaises(ValueError):self.launch(from_prefix='old-base')
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 18, in launch
+    return build_launch(self.project,'Inspect the project.',self.connection,**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'context_pack'
+
+======================================================================
+ERROR: test_pack_identity_is_saved_in_existing_launch (test_coding_pack_launch.CodingPackLaunchTests.test_pack_identity_is_saved_in_existing_launch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 20, in test_pack_identity_is_saved_in_existing_launch
+    launch=self.launch();self.assertEqual(launch['config']['context_pack'],dict(path=self.pack['pack_path'],pack_id=self.pack['pack_id']))
+           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 18, in launch
+    return build_launch(self.project,'Inspect the project.',self.connection,**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'context_pack'
+
+======================================================================
+ERROR: test_pair_is_required (test_coding_pack_launch.CodingPackLaunchTests.test_pair_is_required) (key='context_pack')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 27, in test_pair_is_required
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:None})
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 18, in launch
+    return build_launch(self.project,'Inspect the project.',self.connection,**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'context_pack'
+
+======================================================================
+ERROR: test_pair_is_required (test_coding_pack_launch.CodingPackLaunchTests.test_pair_is_required) (key='context_pack_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 27, in test_pair_is_required
+    with self.subTest(key=key),self.assertRaises(ValueError):self.launch(**{key:None})
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 18, in launch
+    return build_launch(self.project,'Inspect the project.',self.connection,**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'context_pack'
+
+======================================================================
+ERROR: test_stale_pack_rejected_for_new_admission (test_coding_pack_launch.CodingPackLaunchTests.test_stale_pack_rejected_for_new_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 30, in test_stale_pack_rejected_for_new_admission
+    with self.assertRaises(StalePackError):self.launch()
+                                           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_launch.py", line 18, in launch
+    return build_launch(self.project,'Inspect the project.',self.connection,**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'context_pack'
+
+======================================================================
+FAIL: test_cli_bootstrap_uses_pack_and_resume_keeps_original_context (test_coding_pack_http.CodingPackHTTPTests.test_cli_bootstrap_uses_pack_and_resume_keeps_original_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_http.py", line 32, in test_cli_bootstrap_uses_pack_and_resume_keeps_original_context
+    case.test_code_prepares_real_context_and_resume_keeps_pinned_setup()
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_launcher_http.py", line 45, in test_code_prepares_real_context_and_resume_keeps_pinned_setup
+    first=subprocess.run(argv,capture_output=True,text=True,env=env,timeout=30)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1199, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_http.py", line 20, in run
+    self.assertEqual(result.returncode,3,result.stderr)
+AssertionError: 2 != 3 : usage: branchwrite [-h]
+                   {check,canonicalize,run,step,code,resume,apply,export,review,status,reconcile}
+                   ...
+branchwrite: error: unrecognized arguments: --context-pack /tmp/tmpx_ofcbqt/packs/d6aad8d786996cb736af3bc22eba6c04aa80aca086be7c575f493e689d922693 --context-pack-id d6aad8d786996cb736af3bc22eba6c04aa80aca086be7c575f493e689d922693
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.631s
+
+FAILED (failures=1, errors=6)

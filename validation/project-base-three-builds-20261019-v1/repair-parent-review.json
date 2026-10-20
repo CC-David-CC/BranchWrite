@@ -1,0 +1,19 @@
+{
+  "status": "BOUNDED_REPAIR_PASS",
+  "whole_cli_seconds": 411.3367718550144,
+  "parent_code_changes": 0,
+  "feedback_prompts": 1,
+  "visible_methods": 12,
+  "independent_sandbox_methods": 15,
+  "independent_original_assertions": 22,
+  "fresh_mixed_invalid_cases": 14,
+  "valid_unicode_boundary_case": true,
+  "original_nested_variants_rerun": 2200,
+  "candidate_sha256": "8f008e6ef162075dd23c0c0343d48675786adc5d9f899c7a3855a6b31c0b4af3",
+  "review": "Read complete original and diff: recursive finite walk replaced with explicit list stack, bounded by parsed input size; strict schema/UTF8/identity/capacity checks retained; no IO, source/test mutation or permissions introduced.",
+  "installed_client": "dev21",
+  "model": "Q8 greedy",
+  "selected_reference": "compact B",
+  "automatic_model_selection": false,
+  "scope": "One autonomous repair with pre-run failure feedback; frozen independent repeat still pending"
+}

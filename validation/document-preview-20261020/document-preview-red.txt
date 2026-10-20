@@ -1,0 +1,45 @@
+test_multiple_pdfs_require_explicit_choice (test_document_preview.DocumentPreviewTests.test_multiple_pdfs_require_explicit_choice) ... FAIL
+test_selected_text_is_literal_and_other_text_is_not_exposed (test_document_preview.DocumentPreviewTests.test_selected_text_is_literal_and_other_text_is_not_exposed) ... ERROR
+test_single_saved_pdf_opens_without_a_website (test_document_preview.DocumentPreviewTests.test_single_saved_pdf_opens_without_a_website) ... ERROR
+test_website_preview_does_not_implicitly_add_documents (test_document_preview.DocumentPreviewTests.test_website_preview_does_not_implicitly_add_documents) ... ok
+
+======================================================================
+ERROR: test_selected_text_is_literal_and_other_text_is_not_exposed (test_document_preview.DocumentPreviewTests.test_selected_text_is_literal_and_other_text_is_not_exposed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_document_preview.py", line 27, in test_selected_text_is_literal_and_other_text_is_not_exposed
+    v,c=self.capture();url=self.preview.show(v,c,document='START_HERE.txt')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interactive_preview.py", line 43, in show
+    raise ValueError('Choose a saved HTML page inside this project')
+ValueError: Choose a saved HTML page inside this project
+
+======================================================================
+ERROR: test_single_saved_pdf_opens_without_a_website (test_document_preview.DocumentPreviewTests.test_single_saved_pdf_opens_without_a_website)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_document_preview.py", line 21, in test_single_saved_pdf_opens_without_a_website
+    (self.project/'report.pdf').write_bytes(self.pdf);v,c=self.capture();url=self.preview.show(v,c)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interactive_preview.py", line 39, in show
+    elif not pages:raise ValueError('No saved website yet. Ask me to make one first.')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: No saved website yet. Ask me to make one first.
+
+======================================================================
+FAIL: test_multiple_pdfs_require_explicit_choice (test_document_preview.DocumentPreviewTests.test_multiple_pdfs_require_explicit_choice)
+----------------------------------------------------------------------
+ValueError: No saved website yet. Ask me to make one first.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_document_preview.py", line 39, in test_multiple_pdfs_require_explicit_choice
+    with self.assertRaisesRegex(ValueError,'preview.*pdf'):self.preview.show(v,c)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "preview.*pdf" does not match "No saved website yet. Ask me to make one first."
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.057s
+
+FAILED (failures=1, errors=2)

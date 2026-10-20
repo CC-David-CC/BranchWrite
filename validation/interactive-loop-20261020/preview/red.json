@@ -1,0 +1,7 @@
+{
+  "status": "EXPECTED_FAIL",
+  "returncode": 1,
+  "tests_run": 7,
+  "errors": 7,
+  "reason": "interactive_preview module absent"
+}

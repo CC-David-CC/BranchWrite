@@ -1,0 +1,17 @@
+{
+  "scope": "Installed dev14 multi-file coding from directory grants plus full artifact handoff; not numerical qualification",
+  "wheel_sha256": "5f93eaee00127fc70f4557194f6f589d621a640702170f47d7a123374eaccc69",
+  "independent_audit_sha256": "0d22122849ba9e7de09d3c94467e9c3cbd17026a5b8b983a8fb7a615e938166f",
+  "generated_tests_sha256": "3ed450a56ba02a991f3c881be57144aa16aafecdf3a16778546806377d0b7003",
+  "prefix_snapshot": "6fd3acbb21f430a0477e9af66682d2ee95cabde9cf754a4f400297b5965cc360",
+  "prefix_consumed": 16442,
+  "model": "pinned Q8 FP16 KV",
+  "thinking": 4096,
+  "sampler": "greedy",
+  "read_dirs": [
+    "."
+  ],
+  "edit_dirs": [
+    "taskboard"
+  ]
+}

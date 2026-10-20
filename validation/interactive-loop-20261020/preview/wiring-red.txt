@@ -1,0 +1,45 @@
+======================================================================
+FAIL: test_missing_preview_is_a_notice_and_does_not_stop_the_session (tests.test_interactive_terminal.InteractiveTerminalTests.test_missing_preview_is_a_notice_and_does_not_stop_the_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/async_case.py", line 90, in _callTestMethod
+    if self._callMaybeAsync(method) is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/async_case.py", line 112, in _callMaybeAsync
+    return self._asyncioRunner.run(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_terminal.py", line 102, in test_missing_preview_is_a_notice_and_does_not_stop_the_session
+    self.assertTrue(any('No saved website' in v for v in messages),messages)
+AssertionError: False is not true : ['BranchWrite: keep talking while I work. /help shows the keys.\nWork edits this project. /explore tries an idea in a separate copy.', 'Browser preview is not connected yet. Current files: unknown']
+
+======================================================================
+FAIL: test_preview_uses_selected_file_version_without_submitting_work_and_closes (tests.test_interactive_terminal.InteractiveTerminalTests.test_preview_uses_selected_file_version_without_submitting_work_and_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/async_case.py", line 90, in _callTestMethod
+    if self._callMaybeAsync(method) is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/async_case.py", line 112, in _callMaybeAsync
+    return self._asyncioRunner.run(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_terminal.py", line 88, in test_preview_uses_selected_file_version_without_submitting_work_and_closes
+    self.assertEqual(len(links),1,messages);url=links[0]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1 : ['BranchWrite: keep talking while I work. /help shows the keys.\nWork edits this project. /explore tries an idea in a separate copy.', 'Browser preview is not connected yet. Current files: /tmp/tmp6gh61ih3/project']
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.118s
+
+FAILED (failures=2)

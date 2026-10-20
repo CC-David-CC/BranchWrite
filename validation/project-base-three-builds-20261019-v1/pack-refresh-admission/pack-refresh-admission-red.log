@@ -1,0 +1,125 @@
+test_changed_pack_gets_new_identity_and_frozen_provenance (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_changed_pack_gets_new_identity_and_frozen_provenance) ... ERROR
+test_cli_refresh_and_resume_preserve_admission (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_cli_refresh_and_resume_preserve_admission) ... ERROR
+test_missing_selected_source_does_not_shrink_pack (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_missing_selected_source_does_not_shrink_pack) ... ERROR
+test_refresh_api_binds_expected_old_identity (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_api_binds_expected_old_identity) ... ERROR
+test_refresh_requires_a_pack_and_new_root (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_requires_a_pack_and_new_root) ... 
+  test_refresh_requires_a_pack_and_new_root (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_requires_a_pack_and_new_root) (kw={'context_pack': None, 'context_pack_id': None}) ... ERROR
+  test_refresh_requires_a_pack_and_new_root (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_requires_a_pack_and_new_root) (kw={'from_prefix': 'old'}) ... ERROR
+  test_refresh_requires_a_pack_and_new_root (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_requires_a_pack_and_new_root) (kw={'refresh_context_pack': 1}) ... ERROR
+test_unchanged_pack_retains_exact_identity (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_unchanged_pack_retains_exact_identity) ... ERROR
+test_wrong_original_identity_rejected_before_new_pack (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_wrong_original_identity_rejected_before_new_pack) ... ERROR
+
+======================================================================
+ERROR: test_changed_pack_gets_new_identity_and_frozen_provenance (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_changed_pack_gets_new_identity_and_frozen_provenance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 22, in test_changed_pack_gets_new_identity_and_frozen_provenance
+    launch=self.launch();pin=launch['config']['context_pack']
+           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 18, in launch
+    args.update(kw);return build_launch(self.project,'Inspect.',self.connection,**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'refresh_context_pack'
+
+======================================================================
+ERROR: test_cli_refresh_and_resume_preserve_admission (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_cli_refresh_and_resume_preserve_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 52, in test_cli_refresh_and_resume_preserve_admission
+    self.assertEqual(main(argv),0);run.assert_called_once()
+                     ^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/__main__.py", line 88, in main
+    args=parser.parse_args(argv)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/argparse.py", line 1911, in parse_args
+    self.error(msg % ' '.join(argv))
+  File "/usr/lib/python3.12/argparse.py", line 2677, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/usr/lib/python3.12/argparse.py", line 2664, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+ERROR: test_missing_selected_source_does_not_shrink_pack (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_missing_selected_source_does_not_shrink_pack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 41, in test_missing_selected_source_does_not_shrink_pack
+    with self.assertRaises(PackError):self.launch()
+                                      ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 18, in launch
+    args.update(kw);return build_launch(self.project,'Inspect.',self.connection,**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'refresh_context_pack'
+
+======================================================================
+ERROR: test_refresh_api_binds_expected_old_identity (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_api_binds_expected_old_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 45, in test_refresh_api_binds_expected_old_identity
+    refresh_pack(self.pack['pack_path'],output=self.root/'packs',as_of='2026-10-19T01:00:00Z',expected_id='f'*64)
+TypeError: refresh_pack() got an unexpected keyword argument 'expected_id'
+
+======================================================================
+ERROR: test_refresh_requires_a_pack_and_new_root (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_requires_a_pack_and_new_root) (kw={'context_pack': None, 'context_pack_id': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 38, in test_refresh_requires_a_pack_and_new_root
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.launch(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 18, in launch
+    args.update(kw);return build_launch(self.project,'Inspect.',self.connection,**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'refresh_context_pack'
+
+======================================================================
+ERROR: test_refresh_requires_a_pack_and_new_root (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_requires_a_pack_and_new_root) (kw={'from_prefix': 'old'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 38, in test_refresh_requires_a_pack_and_new_root
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.launch(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 18, in launch
+    args.update(kw);return build_launch(self.project,'Inspect.',self.connection,**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'refresh_context_pack'
+
+======================================================================
+ERROR: test_refresh_requires_a_pack_and_new_root (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_requires_a_pack_and_new_root) (kw={'refresh_context_pack': 1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 38, in test_refresh_requires_a_pack_and_new_root
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.launch(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 18, in launch
+    args.update(kw);return build_launch(self.project,'Inspect.',self.connection,**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'refresh_context_pack'
+
+======================================================================
+ERROR: test_unchanged_pack_retains_exact_identity (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_unchanged_pack_retains_exact_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 30, in test_unchanged_pack_retains_exact_identity
+    launch=self.launch();self.assertEqual(launch['config']['context_pack']['pack_id'],self.pack['pack_id'])
+           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 18, in launch
+    args.update(kw);return build_launch(self.project,'Inspect.',self.connection,**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'refresh_context_pack'
+
+======================================================================
+ERROR: test_wrong_original_identity_rejected_before_new_pack (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_wrong_original_identity_rejected_before_new_pack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 34, in test_wrong_original_identity_rejected_before_new_pack
+    with self.assertRaises(PackError):self.launch(context_pack_id='f'*64)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_refresh_admission.py", line 18, in launch
+    args.update(kw);return build_launch(self.project,'Inspect.',self.connection,**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'refresh_context_pack'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.022s
+
+FAILED (errors=9)

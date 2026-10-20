@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "status": "FOCUSED_CPU_PASS",
+  "tests": 40,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "real_model_run": false,
+  "scope": "plate geometry, actual CPU render, separate build/check namespaces, registry and CLI configuration",
+  "historical_regression_attempt": "41 tests:1 assertion mismatch on host Python3.14,3 missing test environment errors; retained, to rerun in pinned existing environment"
+}

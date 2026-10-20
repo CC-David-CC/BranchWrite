@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "installed_version": "0.1.0.dev44",
+  "seconds": 1.5584493869682774,
+  "source_sha256": "884d48a6a71747fb2b85b9c31b03addb5077f82a819d5f779c7459ecc161a311",
+  "preview_url": "http://127.0.0.1:39727/MVh3rPDbutVnegnB1rc6Ui_FkHfhYkIY/index.html",
+  "headers": {
+    "Server": "BaseHTTP/0.6 Python/3.14.4",
+    "Date": "Tue, 20 Oct 2026 13:38:46 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "2899",
+    "Cache-Control": "no-store",
+    "Referrer-Policy": "no-referrer",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "remote_tunnel_help": true,
+  "model_operation_records_unchanged": true,
+  "preview_stopped_on_exit": true,
+  "refresh_preserves_port": true,
+  "old_url_retired": true,
+  "wheel_sha256": "4b9f956bfbfef5c973394622ac8cce59d71753cc4fb7243e9bae91f7bcd906e9"
+}

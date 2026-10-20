@@ -1,0 +1,13 @@
+Processing ./src/branchwrite-controller-prefix-20261019
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: branchwrite
+  Building wheel for branchwrite (pyproject.toml): started
+  Building wheel for branchwrite (pyproject.toml): finished with status 'done'
+  Created wheel for branchwrite: filename=branchwrite-0.1.0.dev15-py3-none-any.whl size=181819 sha256=fd3efe7623fb302cc27fcfb144d0de7d14e7429a2b4bcf95d59ff9d56c9c9b51
+  Stored in directory: /home/dflanag3/.cache/pip/wheels/a6/5a/ca/d6346af52ecfd7c47a3c2f3002f175a01544f0c2af460954cf
+Successfully built branchwrite

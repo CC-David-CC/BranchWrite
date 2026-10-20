@@ -1,0 +1,9 @@
+{
+  "exit_code": 1,
+  "test_ids": [
+    "test_continue_without_a_paused_turn_is_rejected_before_admission",
+    "test_continue_while_working_does_not_queue_duplicate_resume",
+    "test_failed_worker_open_requires_reopening_not_an_unhandled_queue"
+  ],
+  "scope": "CPU control admission; no model"
+}

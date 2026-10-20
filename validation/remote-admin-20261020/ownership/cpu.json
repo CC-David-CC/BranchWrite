@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "tests_run": 16,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 0.11511197406798601,
+  "scope": "CPU target ownership/receipt tests with actual process flock; no GPU/model claim",
+  "source_sha256": {
+    "remote_execution.py": "fc1f2974e29383eb9d62d4f47fcad6e08577077bb4db27db0a0e78ea9769a820",
+    "remote_ownership.py": "524856dcfa24e210bc56519a67c4ea960c5cbf1eb11a8679c6dc3df5e1849e1e",
+    "remote_guest.py": "447251b932e1d0dbeb2b7e6aa1c4c74a81fb88d31c6c63a74435ff075a3034c9"
+  }
+}

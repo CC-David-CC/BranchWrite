@@ -1,0 +1,1 @@
+Make a small static website about dogs, keep a copy in this project and put it on my authorized test machine admin01. Check the exact uploaded and served file bytes and that the page responds over HTTP. Preserve any existing unrelated files and report the actual checked address and its reachability limits. Use only the configured target and do not invent credentials or hosts.

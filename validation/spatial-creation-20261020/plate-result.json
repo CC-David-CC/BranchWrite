@@ -1,0 +1,221 @@
+{
+  "status": "MODEL_AUTHORED_PLATE_VERIFIED",
+  "model": "Q4",
+  "client": "installed BW dev56 on llm-49",
+  "server": "COW HTTP on llm-60",
+  "actual_build_attempts": 3,
+  "geometry": {
+    "artifact_sha256": "ce9d8462883c4849a8661e4eece3f378d1ddf3935c33ccb75e8fc12bc4a60c81",
+    "checks": {
+      "bounds": {
+        "actual": [
+          -50.0,
+          50.0,
+          -30.0,
+          30.0,
+          0.0,
+          4.0
+        ],
+        "expected": [
+          -50.0,
+          50.0,
+          -30.0,
+          30.0,
+          0,
+          4
+        ],
+        "pass": true
+      },
+      "edge_material": {
+        "actual": 9.5,
+        "expected": 8,
+        "pass": true
+      },
+      "hole_diameter": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "hole_pattern": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "locating_notch": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "material_geometry": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "single_solid": {
+        "actual": {
+          "all_topology": {
+            "edges": 36,
+            "faces": 14,
+            "vertices": 24
+          },
+          "solid_topology": {
+            "edges": 36,
+            "faces": 14,
+            "vertices": 24
+          },
+          "solids": 1
+        },
+        "expected": "one solid with no loose geometry",
+        "pass": true
+      },
+      "through_holes": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "valid_shape": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "volume": {
+        "actual": 23445.840734641108,
+        "expected": 23445.84073464102,
+        "pass": true
+      }
+    },
+    "feasibility": {
+      "conflicts": [],
+      "feasible": true,
+      "minimum_length_mm": 57.0,
+      "minimum_width_mm": 97.0
+    },
+    "length_tolerance_mm": 1e-06,
+    "measurements": {
+      "bounds_mm": [
+        -50.0,
+        50.0,
+        -30.0,
+        30.0,
+        0.0,
+        4.0
+      ],
+      "extra_material_mm3": 0.0,
+      "holes": [
+        {
+          "axis_z": 1.0,
+          "diameter": 5.0,
+          "x": -38.0,
+          "y": -18.0,
+          "z_max": 4.0,
+          "z_min": 0.0
+        },
+        {
+          "axis_z": 1.0,
+          "diameter": 5.0,
+          "x": -38.0,
+          "y": 18.0,
+          "z_max": 4.0,
+          "z_min": 0.0
+        },
+        {
+          "axis_z": 1.0,
+          "diameter": 5.0,
+          "x": 38.0,
+          "y": -18.0,
+          "z_max": 4.0,
+          "z_min": 0.0
+        },
+        {
+          "axis_z": 1.0,
+          "diameter": 5.0,
+          "x": 38.0,
+          "y": 18.0,
+          "z_max": 4.0,
+          "z_min": 0.0
+        }
+      ],
+      "minimum_edge_material_mm": 9.5,
+      "missing_material_mm3": 0.0,
+      "topology": {
+        "edges": 36,
+        "faces": 14,
+        "vertices": 24
+      },
+      "volume_mm3": 23445.840734641108
+    },
+    "requirements_id": "fb553d7b054a26fc07b64013fe1afc438088afdec708253c1ade1f443d9e43f8",
+    "schema": 1,
+    "status": "PASS",
+    "volume_tolerance_mm3": 1e-05
+  },
+  "tool_sequence": [
+    {
+      "tool": "run_shell",
+      "disposition": "exited",
+      "exit_code": 0
+    },
+    {
+      "tool": "create_text_file",
+      "disposition": "created",
+      "exit_code": 0
+    },
+    {
+      "tool": "inspect_cad",
+      "disposition": "cad_failed",
+      "exit_code": 1
+    },
+    {
+      "tool": "read_file",
+      "disposition": "read",
+      "exit_code": 0
+    },
+    {
+      "tool": "replace_text_file",
+      "disposition": "applied",
+      "exit_code": 0
+    },
+    {
+      "tool": "inspect_cad",
+      "disposition": "cad_failed",
+      "exit_code": 1
+    },
+    {
+      "tool": "read_file",
+      "disposition": "read",
+      "exit_code": 0
+    },
+    {
+      "tool": "replace_text_file",
+      "disposition": "applied",
+      "exit_code": 0
+    },
+    {
+      "tool": "inspect_cad",
+      "disposition": "cad_checked",
+      "exit_code": 0
+    },
+    {
+      "tool": "run_check",
+      "disposition": "exited",
+      "exit_code": 1
+    },
+    {
+      "tool": "run_shell",
+      "disposition": "exited",
+      "exit_code": 0
+    },
+    {
+      "tool": "run_check",
+      "disposition": "exited",
+      "exit_code": 0
+    },
+    {
+      "tool": "finish",
+      "disposition": "completion_requested",
+      "exit_code": null
+    }
+  ],
+  "operator_candidate_edits": 0,
+  "scope": "bounded greedy authorship/self-repair and actual image feedback, not G1-G5 qualification"
+}

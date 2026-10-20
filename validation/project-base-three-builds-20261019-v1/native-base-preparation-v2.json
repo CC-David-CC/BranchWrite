@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "scope": "Administrative HTTP preparation of three native Project Bases; not a BranchWrite coding comparison",
+  "bases": [],
+  "service_supervisor_pid": 718328,
+  "phase": "prefill-B-compact-selected",
+  "error": {
+    "type": "OperationReuseError",
+    "message": "operation ID is bound to different request bytes"
+  },
+  "service_exit": 0,
+  "elapsed_seconds": 83.46066543785855
+}

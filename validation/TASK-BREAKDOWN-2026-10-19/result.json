@@ -1,0 +1,11 @@
+{
+  "status": "SOURCE_CPU_HTTP_PASS",
+  "combined_tests": 42,
+  "validator_tests": 9,
+  "flow_tests": 2,
+  "counts_overlap": true,
+  "gpu": "NOT_RUN",
+  "installed": "NOT_BUILT",
+  "scope": "model-proposed DAG validation through existing interpreter/HTTP fixture; no step scheduling or prefill selection",
+  "initial_fixture_failure": "prepared user context passed to ask; corrected to existing closed-root operation, original failure retained"
+}

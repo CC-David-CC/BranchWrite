@@ -1,0 +1,14 @@
+test_actual_fork_selects_prior_point_and_preserves_failed_tip (test_planning_retry_flow.PlanningRetryFlowTests.test_actual_fork_selects_prior_point_and_preserves_failed_tip) ... ok
+test_append_user_boundary_is_preserved (test_planning_retry_flow.PlanningRetryFlowTests.test_append_user_boundary_is_preserved) ... ok
+test_closed_retry_reopens_without_server_or_new_work (test_planning_retry_flow.PlanningRetryFlowTests.test_closed_retry_reopens_without_server_or_new_work) ... ok
+test_complete_native_output_recovers_without_another_model_request (test_planning_retry_flow.PlanningRetryFlowTests.test_complete_native_output_recovers_without_another_model_request) ... ok
+test_incomplete_output_cannot_close_caller_slot (test_planning_retry_flow.PlanningRetryFlowTests.test_incomplete_output_cannot_close_caller_slot) ... ok
+test_invalid_profile_is_rejected_before_fork_admission (test_planning_retry_flow.PlanningRetryFlowTests.test_invalid_profile_is_rejected_before_fork_admission) ... ok
+test_lost_fork_ack_requires_original_reconciliation (test_planning_retry_flow.PlanningRetryFlowTests.test_lost_fork_ack_requires_original_reconciliation) ... ok
+test_lost_model_ack_retains_original_native_operation (test_planning_retry_flow.PlanningRetryFlowTests.test_lost_model_ack_retains_original_native_operation) ... ok
+test_restart_after_fork_return_before_resume_does_not_refork (test_planning_retry_flow.PlanningRetryFlowTests.test_restart_after_fork_return_before_resume_does_not_refork) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 5.289s
+
+OK

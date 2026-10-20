@@ -1,0 +1,30 @@
+{
+  "forward_tokens": 49815,
+  "prefill_tokens": 43087,
+  "prefill_chunks": 97,
+  "decode_timed_tokens": 6728,
+  "decode_prepare_ns": 8364005043,
+  "decode_compute_ns": 157773543531,
+  "decode_finish_ns": 729395462,
+  "integrity_mismatches": 0,
+  "integrity_device_hashed_bytes": 3418525532160,
+  "captures": 21,
+  "restores": 40,
+  "copied_bytes": 1434451968,
+  "written_file_bytes": 14050441140,
+  "loaded_file_bytes": 0,
+  "live_bytes": 2793406464,
+  "host_heap_allocated_bytes": 6206766192,
+  "native_timed_generation_tps": 40.31954944023243,
+  "native_timed_generation_seconds": 166.866944036,
+  "scope": "Cumulative native prepare+compute+finish timing for both tasks; excludes prompt prefill, tools, HTTP and checkpoint publication. Current memory counters are not peak-memory measurements.",
+  "trace_sha256": "ff90c58892f999a0ccb64cf11feb4c5df4eded40b6fcad5c497b8de861981520",
+  "model_contract_id": "3fcd9cfc2e977dbf56522e710cb3903e03ab00ca2ed5d0daa3d9f840edf5a833",
+  "execution_profile_id": "2e0a61f08d0dca09751c7eee3dd0947b2431b5f73010e268b7608eefdae4ae47",
+  "runtime_sources": {
+    "status": "verified",
+    "files": 56,
+    "files_sha256": "a3df1fa57e9eeb73476559afb0e80fee1ca15c0bfb097e462f84ed2ad56945d7",
+    "declared_source_commit": "6647ae4637cf43ea356cfb1bc799722238212434"
+  }
+}

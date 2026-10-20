@@ -1,0 +1,40 @@
+test_admitted_venv_module_mutation_is_still_rejected (test_python_runtime.SystemPythonRuntimeTests.test_admitted_venv_module_mutation_is_still_rejected) ... ERROR
+test_distro_venv_admits_and_executes_in_retired_isolation (test_python_runtime.SystemPythonRuntimeTests.test_distro_venv_admits_and_executes_in_retired_isolation) ... ERROR
+test_venv_link_to_unrelated_private_file_remains_rejected (test_python_runtime.SystemPythonRuntimeTests.test_venv_link_to_unrelated_private_file_remains_rejected) ... ok
+
+======================================================================
+ERROR: test_admitted_venv_module_mutation_is_still_rejected (test_python_runtime.SystemPythonRuntimeTests.test_admitted_venv_module_mutation_is_still_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_python_runtime.py", line 23, in test_admitted_venv_module_mutation_is_still_rejected
+    runtime=CadRuntime(self.prefix/'bin/python');module.write_text('value=2')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 6, in __init__
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 53, in __post_init__
+    pins=_pins(roots);commands=(NamedCommand('cad-bwrap',('/usr/bin/bwrap',)),NamedCommand('cad-prlimit',('/usr/bin/prlimit',)),NamedCommand('cad-supervisor',('/usr/bin/python3',)))
+         ^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 19, in _pins
+    if not any(target.is_relative_to(r) for r in roots):raise ValueError('CAD runtime link leaves admitted runtime')
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: CAD runtime link leaves admitted runtime
+
+======================================================================
+ERROR: test_distro_venv_admits_and_executes_in_retired_isolation (test_python_runtime.SystemPythonRuntimeTests.test_distro_venv_admits_and_executes_in_retired_isolation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_python_runtime.py", line 12, in test_distro_venv_admits_and_executes_in_retired_isolation
+    runtime=CadRuntime(self.prefix/'bin/python')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 6, in __init__
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 53, in __post_init__
+    pins=_pins(roots);commands=(NamedCommand('cad-bwrap',('/usr/bin/bwrap',)),NamedCommand('cad-prlimit',('/usr/bin/prlimit',)),NamedCommand('cad-supervisor',('/usr/bin/python3',)))
+         ^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 19, in _pins
+    if not any(target.is_relative_to(r) for r in roots):raise ValueError('CAD runtime link leaves admitted runtime')
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: CAD runtime link leaves admitted runtime
+
+----------------------------------------------------------------------
+Ran 3 tests in 22.211s
+
+FAILED (errors=2)

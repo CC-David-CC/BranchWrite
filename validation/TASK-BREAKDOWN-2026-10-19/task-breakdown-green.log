@@ -1,0 +1,14 @@
+test_cycles_rejected_even_when_another_component_is_ready (test_task_breakdown.TaskBreakdownTests.test_cycles_rejected_even_when_another_component_is_ready) ... ok
+test_duplicate_json_keys_and_invalid_schema_rejected (test_task_breakdown.TaskBreakdownTests.test_duplicate_json_keys_and_invalid_schema_rejected) ... ok
+test_empty_oversized_and_invalid_steps_rejected (test_task_breakdown.TaskBreakdownTests.test_empty_oversized_and_invalid_steps_rejected) ... ok
+test_forward_dependencies_and_fifo_ready_order (test_task_breakdown.TaskBreakdownTests.test_forward_dependencies_and_fifo_ready_order) ... ok
+test_independent_steps_follow_deterministic_fifo_order (test_task_breakdown.TaskBreakdownTests.test_independent_steps_follow_deterministic_fifo_order) ... ok
+test_missing_duplicate_and_self_dependencies_rejected (test_task_breakdown.TaskBreakdownTests.test_missing_duplicate_and_self_dependencies_rejected) ... ok
+test_model_cannot_add_tools_grants_templates_or_verification (test_task_breakdown.TaskBreakdownTests.test_model_cannot_add_tools_grants_templates_or_verification) ... ok
+test_source_text_and_size_limits_are_explicit (test_task_breakdown.TaskBreakdownTests.test_source_text_and_size_limits_are_explicit) ... ok
+test_unicode_and_literal_control_tags_remain_proposal_text (test_task_breakdown.TaskBreakdownTests.test_unicode_and_literal_control_tags_remain_proposal_text) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

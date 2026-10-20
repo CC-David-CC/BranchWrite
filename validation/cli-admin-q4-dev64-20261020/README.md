@@ -1,0 +1,7 @@
+# Real dev64 code and admin deployment
+
+PASS: exact admin-deploy.txt via installed dev64 CLI on llm-49, Q4 COW780e824a on llm-60 and pinned SSH to owned QEMU admin01. The model wrote the local dog page, read it, uploaded exact bytes and published /var/www/html/dogs/index.html. Both pre-existing default pages remained unchanged. A separate direct SSH/HTTP audit checked local, staged, published and served SHA256c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5,1269bytes. Both unrelated hashes remained7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662.
+
+The client completed in490.450s with zero operator candidate edits. Its first local checksum check used unavailable awk; it read the error and replaced that part with grep under the same named check. The final recorded local and remote checks passed. This is actual Linux/SSH/service work, not a mocked tool call or a public deployment.
+
+The original independent audit wrongly expected the root homepage to be overwritten. That failure is retained in admin-result.json and its original controller. The task did not require that path and explicitly required preserving unrelated files. The separate independent-acceptance.json checks the actual /dogs/ publication and both original pages, rather than editing model output or weakening preservation requirements. Guest-local reachability is proven; public or arbitrary-LAN reachability is not.

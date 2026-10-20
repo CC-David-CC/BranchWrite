@@ -1,0 +1,10 @@
+{
+  "scope": "Fresh process frozen repair repeat; exact same profile24GiB/64GiB and same prepared B checkpoint",
+  "old_native_pid": 725709,
+  "old_service_exit": 0,
+  "old_native_exit": 0,
+  "old_key_cleanup": {
+    "owned_key_revoked": true,
+    "original_keys_byte_exact": true
+  }
+}

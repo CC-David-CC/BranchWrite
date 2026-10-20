@@ -1,0 +1,24 @@
+{
+  "exe_hashes": {
+    "/home/dflanag3/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome": "377a9fc07b495c3b8d0ab8ec1fdfd153641759f9756fea34d8dfce4de82f5025",
+    "/home/dflanag3/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome_crashpad_handler": "bee81bea55333643a29347fe80ac45a5aad98ef7ca8ea35cd3a32983eafb3bcd",
+    "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/client-env/bin/python": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+    "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/client-env/lib/python3.14/site-packages/playwright/driver/node": "7fde7b8afa198da66257f42ee2001d874c7355631e6d1579a5fb5ef1f246df4c"
+  },
+  "global_restriction": "1",
+  "local_rules_sha256": "281cf0c31c4204af15b255fffc6cb33ec8e916d1ef58492946f7195ca895c554",
+  "namespace_capabilities": [
+    "sys_admin",
+    "sys_chroot"
+  ],
+  "paths": [
+    "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/client-env/bin/python",
+    "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/client-env/lib/python3.14/site-packages/playwright/driver/node",
+    "/home/dflanag3/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome",
+    "/home/dflanag3/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome_crashpad_handler"
+  ],
+  "profile_sha256": "5641e0931f7eb248a745a3bc90d51c1eae45a0db5745a536f40151488c5ede55",
+  "qualified_host": "llm-49 Ubuntu26.04.1 AppArmor5.0.2",
+  "scope": "Normal trusted CLI with registered browser sandbox; no global sysctl change; extra outer browser-client namespace not qualified",
+  "vendor_profile_sha256": "d61facde27707b9c47ffe47921b7273e788784484cb5530eb819e6daac1f1990"
+}

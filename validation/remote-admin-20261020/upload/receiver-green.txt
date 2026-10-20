@@ -1,0 +1,12 @@
+test_bad_hash_and_bad_name_do_not_publish (test_remote_upload.RemoteUploadTests.test_bad_hash_and_bad_name_do_not_publish) ... ok
+test_corrupt_or_hardlinked_blob_is_not_silently_replaced (test_remote_upload.RemoteUploadTests.test_corrupt_or_hardlinked_blob_is_not_silently_replaced) ... ok
+test_exact_bytes_unicode_name_and_content_addressed_path (test_remote_upload.RemoteUploadTests.test_exact_bytes_unicode_name_and_content_addressed_path) ... ok
+test_group_writable_common_share_is_not_used_or_changed (test_remote_upload.RemoteUploadTests.test_group_writable_common_share_is_not_used_or_changed) ... ok
+test_payload_bound_is_enforced_before_creating_directories (test_remote_upload.RemoteUploadTests.test_payload_bound_is_enforced_before_creating_directories) ... ok
+test_same_bytes_reuse_without_replacing_published_inode (test_remote_upload.RemoteUploadTests.test_same_bytes_reuse_without_replacing_published_inode) ... ok
+test_symlinked_parent_or_file_is_rejected_without_following (test_remote_upload.RemoteUploadTests.test_symlinked_parent_or_file_is_rejected_without_following) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.016s
+
+OK

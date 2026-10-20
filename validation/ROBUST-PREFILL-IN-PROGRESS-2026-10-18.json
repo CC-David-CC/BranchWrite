@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "status": "MODEL_COMPONENT_CAMPAIGN_RUNNING_NOT_AUTONOMOUS_L02_PASS",
+  "source_commit": "fa7da85eeb14709ef4d2257311ce6c1a0ec64579",
+  "client_host": "llm-49",
+  "inference_host": "llm-60",
+  "cpu_client_pass": 146,
+  "standalone_terminal_fixtures": 110,
+  "standalone_terminal_commands": 205,
+  "teaching_fixtures": 55,
+  "teaching_commands": 95,
+  "heldout_fixtures": 55,
+  "prefix_tokens_before_template": {
+    "existing_ten": 12426,
+    "expanded": 65290
+  },
+  "native_context_capacity": 98304,
+  "scope": "Interpret ten heldout terminal observations per root independently of autonomous tool selection. JSON grammar constrains shape, not answers.",
+  "initial_observations": {
+    "completed": 3,
+    "passed": 0,
+    "failures": [
+      {
+        "id": "TC008-heldout-47e903bbd90594-step0",
+        "mismatched_fields": [
+          "stdout"
+        ]
+      },
+      {
+        "id": "TC008-heldout-47e903bbd90594-step1",
+        "mismatched_fields": [
+          "stdout"
+        ]
+      },
+      {
+        "id": "TC011-heldout-1b6c0b0f6bcce5-step0",
+        "mismatched_fields": [
+          "stdout"
+        ]
+      }
+    ]
+  },
+  "artifact_directory": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/robust-prefill-components-v1",
+  "auto_cleanup": "Client completion requests owned server stop; server completion revokes scoped SSH key; native service has3600-second bound.",
+  "limits": [
+    "Model campaign incomplete; initial Unicode string-copy mismatches retained.",
+    "No OOD robustness or causal thinking-length result.",
+    "No autonomous L02 rerun yet.",
+    "Q8 deferred,chat remainsOFF,private LAN only.",
+    "Windows is steering; no project artifacts written there."
+  ]
+}

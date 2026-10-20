@@ -1,0 +1,9 @@
+Processing /home/dflanag3/src/branchwrite-beginner-flow-20261020
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: branchwrite
+  Building wheel for branchwrite (pyproject.toml): started
+  Building wheel for branchwrite (pyproject.toml): finished with status 'done'
+  Created wheel for branchwrite: filename=branchwrite-0.1.0.dev29-py3-none-any.whl size=208774 sha256=c6e0c9d3260316a788d9d92c4f22323e374060807f033e89ce612c595dac36ad
+  Stored in directory: /home/dflanag3/.cache/pip/wheels/f8/50/52/66c83ba5442bf3d61260576b6bd43a530a8d86a593386c2d37
+Successfully built branchwrite

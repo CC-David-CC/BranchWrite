@@ -1,0 +1,16 @@
+test_actual_scene_reopen_controlled_views_and_animation (test_blender_execution.BlenderExecutionTests.test_actual_scene_reopen_controlled_views_and_animation) ... ok
+test_missing_fresh_scene_export_fails (test_blender_execution.BlenderExecutionTests.test_missing_fresh_scene_export_fails) ... ok
+test_stdio_tool_executes_actual_build_reopen_views_and_movie (test_blender_mcp.BlenderMcpTests.test_stdio_tool_executes_actual_build_reopen_views_and_movie) ... /home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:51: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(  # noqa: B028  (called from many sources at differing depths, so no stacklevel is correct)
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+ok
+test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection (test_blender_tools.BlenderToolTests.test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection) ... ok
+test_no_host_capability_no_blender_tool (test_blender_tools.BlenderToolTests.test_no_host_capability_no_blender_tool) ... ok
+test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) ... ok
+test_valid_scene_without_world_gets_derived_studio_world (test_blender_framing.BlenderFramingTests.test_valid_scene_without_world_gets_derived_studio_world) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 68.171s
+
+OK

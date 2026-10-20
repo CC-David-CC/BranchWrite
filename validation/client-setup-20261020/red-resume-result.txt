@@ -1,0 +1,32 @@
+test_saved_key_applies_only_to_the_exact_admitted_connection (tests.test_client_setup.ClientSetupTests.test_saved_key_applies_only_to_the_exact_admitted_connection) ... ERROR
+test_verified_copy_is_not_attempted_when_independent_verification_failed (tests.test_guided_cli.GuidedCliTests.test_verified_copy_is_not_attempted_when_independent_verification_failed) ... FAIL
+test_malformed_success_cannot_exit_with_success (tests.test_guided_cli.GuidedCliTests.test_malformed_success_cannot_exit_with_success) ... FAIL
+
+======================================================================
+ERROR: test_saved_key_applies_only_to_the_exact_admitted_connection (tests.test_client_setup.ClientSetupTests.test_saved_key_applies_only_to_the_exact_admitted_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_client_setup.py", line 131, in test_saved_key_applies_only_to_the_exact_admitted_connection
+    from branchwrite.client_setup import connect, read_connection, key_for_connection
+ImportError: cannot import name 'key_for_connection' from 'branchwrite.client_setup' (/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/client_setup.py)
+
+======================================================================
+FAIL: test_verified_copy_is_not_attempted_when_independent_verification_failed (tests.test_guided_cli.GuidedCliTests.test_verified_copy_is_not_attempted_when_independent_verification_failed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_guided_cli.py", line 151, in test_verified_copy_is_not_attempted_when_independent_verification_failed
+    self.assertEqual(code, 3)
+AssertionError: 0 != 3
+
+======================================================================
+FAIL: test_malformed_success_cannot_exit_with_success (tests.test_guided_cli.GuidedCliTests.test_malformed_success_cannot_exit_with_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_guided_cli.py", line 175, in test_malformed_success_cannot_exit_with_success
+    self.assertEqual(code, 2)
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.526s
+
+FAILED (failures=2, errors=1)

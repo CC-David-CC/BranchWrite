@@ -1,0 +1,19 @@
+{
+  "status": "BOUNDED_AUTONOMOUS_REPAIR_REPEAT_ACCEPTED",
+  "parent_review": "Only recursive traversal replaced with explicit stack; validation and permissions unchanged",
+  "independent_audit": "PASS",
+  "malformed_variants": 2200,
+  "malformed_variants_status": "PASS",
+  "parent_interventions_after_start": 0,
+  "cli_seconds": 220.99725587200373,
+  "protected_tests_unchanged": true,
+  "source_sha256": "ad8bcca637c0c5bd23e9c47374f56159f21d5e4d6087240dc1bc4ca2cc1afd65",
+  "repaired_sha256": "8f008e6ef162075dd23c0c0343d48675786adc5d9f899c7a3855a6b31c0b4af3",
+  "scope": "Installed dev21 CLI on llm-49 through HTTP to fresh Q8 native process on llm-60; compact B prefix; original broken A module; host-selected base proposal",
+  "limits": [
+    "No general autonomous base routing",
+    "No full coding-agent or numerical-gate certification",
+    "Canonical B implementation unchanged",
+    "Single frozen repeat, not reliability estimate"
+  ]
+}

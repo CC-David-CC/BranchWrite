@@ -1,0 +1,127 @@
+{
+  "scope": "reported COW per-request timings; no isolated kernel benchmark",
+  "native_chunks": [
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 1800,
+      "generation_seconds": 113.58782468410209,
+      "request_seconds": 129.2350115319714,
+      "capture_seconds": 9.898331315955147
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 490,
+      "generation_seconds": 23.915005792863667,
+      "request_seconds": 33.03241386893205,
+      "capture_seconds": 5.476617350941524
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 30,
+      "generation_seconds": 1.1037506910506636,
+      "request_seconds": 5.2702171159908175,
+      "capture_seconds": 2.760536148911342
+    },
+    {
+      "path": "/cow/text/resume",
+      "tokens": 1905,
+      "generation_seconds": 69.74618518608622,
+      "request_seconds": 72.21990040899254,
+      "capture_seconds": 2.7667510739993304
+    },
+    {
+      "path": "/cow/text/resume",
+      "tokens": 628,
+      "generation_seconds": 28.763739320915192,
+      "request_seconds": 34.494153149891645,
+      "capture_seconds": 4.757882172008976
+    },
+    {
+      "path": "/cow/text/context",
+      "tokens": 0,
+      "generation_seconds": 0.0,
+      "request_seconds": 12.278479397995397,
+      "capture_seconds": 0.7912368502002209
+    },
+    {
+      "path": "/cow/text/ask",
+      "tokens": 2048,
+      "generation_seconds": 62.5533794099465,
+      "request_seconds": 65.18721390818246,
+      "capture_seconds": 1.5161356930620968
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 742,
+      "generation_seconds": 49.05579217104241,
+      "request_seconds": 66.98637676704675,
+      "capture_seconds": 10.292215161956847
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 839,
+      "generation_seconds": 43.081452073995024,
+      "request_seconds": 53.13661162182689,
+      "capture_seconds": 5.883746957173571
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 986,
+      "generation_seconds": 54.19838621211238,
+      "request_seconds": 64.23972814390436,
+      "capture_seconds": 6.499547373037785
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 552,
+      "generation_seconds": 25.944399967091158,
+      "request_seconds": 34.240615357179195,
+      "capture_seconds": 5.101018965011463
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 43,
+      "generation_seconds": 2.2380574957933277,
+      "request_seconds": 12.328951378818601,
+      "capture_seconds": 5.874270864063874
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 2048,
+      "generation_seconds": 117.64747386588715,
+      "request_seconds": 129.43258818099275,
+      "capture_seconds": 7.730094913160428
+    },
+    {
+      "path": "/cow/text/resume",
+      "tokens": 1714,
+      "generation_seconds": 102.96851095301099,
+      "request_seconds": 113.20204841601662,
+      "capture_seconds": 8.66751810000278
+    },
+    {
+      "path": "/cow/text/resume",
+      "tokens": 2048,
+      "generation_seconds": 67.0675260021817,
+      "request_seconds": 68.65282884589396,
+      "capture_seconds": 2.1262415340170264
+    },
+    {
+      "path": "/cow/text/append-user",
+      "tokens": 2048,
+      "generation_seconds": 82.9751203970518,
+      "request_seconds": 89.00238478393294,
+      "capture_seconds": 3.6852951671462506
+    },
+    {
+      "path": "/cow/text/resume",
+      "tokens": 2048,
+      "generation_seconds": 87.8334146970883,
+      "request_seconds": 92.33854834293015,
+      "capture_seconds": 4.513485962990671
+    }
+  ],
+  "total_generated_tokens": 19969,
+  "generation_seconds": 932.6800189202186,
+  "capture_seconds": 88.34092560363933
+}

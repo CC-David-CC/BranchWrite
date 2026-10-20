@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "bash_blocks": 29,
+  "internal_links": 7,
+  "client_install": "INSTALLED_CLIENT_CONTROL_PASS",
+  "html_grants_and_checker": {
+    "status": "PASS",
+    "scope": "Installed dev24 config admission, actual granted file creation and isolated shell; fixture HTML is host-authored, not model-generated.",
+    "create_edit_read_grants": "PASS",
+    "structural_checker_positive_exit": 0,
+    "missing_stylesheet_negative_exit": 1,
+    "original_source_unchanged": true
+  },
+  "server_preflight": {
+    "status": "PASS",
+    "source_pins": {
+      "status": "verified",
+      "files": 56,
+      "files_sha256": "a3df1fa57e9eeb73476559afb0e80fee1ca15c0bfb097e462f84ed2ad56945d7",
+      "declared_source_commit": "6647ae4637cf43ea356cfb1bc799722238212434"
+    },
+    "server_flags": "PASS",
+    "clean_environment": "PASS",
+    "native_process_started": false,
+    "scope": "Exact manual environment, CLI help and execution/source preflight; no service or inference started."
+  },
+  "exact_website_gpu_campaign": "NOT_RUN",
+  "scope": "Documentation command syntax, installed client sandbox controls and server preflight, not an inference or visual-design qualification."
+}

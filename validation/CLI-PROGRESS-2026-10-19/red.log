@@ -1,0 +1,58 @@
+test_broken_observer_does_not_abort_or_repeat_effect (test_progress.ProgressTests.test_broken_observer_does_not_abort_or_repeat_effect) ... ERROR
+test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen (test_progress.ProgressTests.test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen) ... FAIL
+test_invalid_observer_rejected_before_admission (test_progress.ProgressTests.test_invalid_observer_rejected_before_admission) ... ERROR
+test_observer_not_in_identity_and_completed_reopen_is_quiet (test_progress.ProgressTests.test_observer_not_in_identity_and_completed_reopen_is_quiet) ... ERROR
+test_tool_progress_brackets_real_effect_without_payload (test_progress.ProgressTests.test_tool_progress_brackets_real_effect_without_payload) ... ERROR
+
+======================================================================
+ERROR: test_broken_observer_does_not_abort_or_repeat_effect (test_progress.ProgressTests.test_broken_observer_does_not_abort_or_repeat_effect)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cli-progress-20261019/tests/test_progress.py", line 35, in test_broken_observer_does_not_abort_or_repeat_effect
+    runtime=self.start(broken)
+  File "/home/dflanag3/src/branchwrite-cli-progress-20261019/tests/test_progress.py", line 18, in start
+    r=Interpreter(self.kernel,self.registry,progress=progress)
+TypeError: Interpreter.__init__() got an unexpected keyword argument 'progress'
+
+======================================================================
+ERROR: test_invalid_observer_rejected_before_admission (test_progress.ProgressTests.test_invalid_observer_rejected_before_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cli-progress-20261019/tests/test_progress.py", line 41, in test_invalid_observer_rejected_before_admission
+    Interpreter(self.kernel,self.registry,progress=42)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Interpreter.__init__() got an unexpected keyword argument 'progress'
+
+======================================================================
+ERROR: test_observer_not_in_identity_and_completed_reopen_is_quiet (test_progress.ProgressTests.test_observer_not_in_identity_and_completed_reopen_is_quiet)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cli-progress-20261019/tests/test_progress.py", line 45, in test_observer_not_in_identity_and_completed_reopen_is_quiet
+    runtime=self.start(lambda _:None)
+  File "/home/dflanag3/src/branchwrite-cli-progress-20261019/tests/test_progress.py", line 18, in start
+    r=Interpreter(self.kernel,self.registry,progress=progress)
+TypeError: Interpreter.__init__() got an unexpected keyword argument 'progress'
+
+======================================================================
+ERROR: test_tool_progress_brackets_real_effect_without_payload (test_progress.ProgressTests.test_tool_progress_brackets_real_effect_without_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cli-progress-20261019/tests/test_progress.py", line 26, in test_tool_progress_brackets_real_effect_without_payload
+    runtime=self.start(observe)
+  File "/home/dflanag3/src/branchwrite-cli-progress-20261019/tests/test_progress.py", line 18, in start
+    r=Interpreter(self.kernel,self.registry,progress=progress)
+TypeError: Interpreter.__init__() got an unexpected keyword argument 'progress'
+
+======================================================================
+FAIL: test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen (test_progress.ProgressTests.test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cli-progress-20261019/tests/test_progress.py", line 62, in test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen
+    self.assertIn('[BranchWrite] Running a tool.',p.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '[BranchWrite] Running a tool.' not found in ''
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.133s
+
+FAILED (failures=1, errors=4)

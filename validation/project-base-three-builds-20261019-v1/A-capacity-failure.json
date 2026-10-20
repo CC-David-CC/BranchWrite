@@ -1,0 +1,40 @@
+{
+  "status": "CAPACITY_FAILURE_WITH_UNRESOLVED_CLIENT_OPERATION",
+  "ram_pool": {
+    "resident_bytes": 3984225900,
+    "reserved_bytes": 0,
+    "dirty_bytes": 0,
+    "failed_entries": 0,
+    "failed_bytes": 0,
+    "entries": 1,
+    "unique_payloads": 1,
+    "pins": 0,
+    "peak_accounted_bytes": 12816067108,
+    "byte_limit": 12884901888,
+    "clean_evictions": 20,
+    "failed_evictions": 0,
+    "idle_evictions": 0,
+    "admission_waits": 1,
+    "loads_pending": 0
+  },
+  "disk_pool": {
+    "file_bytes": 29452061444,
+    "reserved_bytes": 0,
+    "local_reserved_bytes": 0,
+    "byte_limit": 51539607552,
+    "files_evicted": 0,
+    "admission_waits": 0,
+    "idle_evictions": 0,
+    "recency_entries": 21
+  },
+  "native_forward_tokens_during_failed_request": 0,
+  "original_operation": "bwnative-5dc87067b1f64c311061891faa538b21276077415da6de36",
+  "reconciliation": "exit4 unresolved; no silent retry",
+  "service_exit": 0,
+  "native_exit": 0,
+  "key_cleanup": {
+    "owned_key_revoked": true,
+    "original_keys_byte_exact": true
+  },
+  "scope": "A failed under12GiB; new24GiB experiment separately labelled; no model-quality failure inferred"
+}

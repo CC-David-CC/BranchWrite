@@ -1,0 +1,10 @@
+{
+  "status": "CPU_HTTP_AND_INSTALLED_CONTROLS_PASS",
+  "source_commit": "56f641d",
+  "distinct_methods": 158,
+  "skips": 0,
+  "wheel_sha256": "7f16c429bedf52b82f4e5cff02856d291834afd3bcb3d31aeda7aeded3c1b251",
+  "real_gpu_corrected_trial": "NOT_YET_RUN",
+  "legacy_guard": "unchanged test rejecting undeclared ask passes",
+  "http_scope": "actual subprocess/fork/registered grammar/first-question HTTP with CPU arithmetic; not GPU qualification"
+}

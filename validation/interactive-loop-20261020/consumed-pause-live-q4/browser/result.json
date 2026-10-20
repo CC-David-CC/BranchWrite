@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "viewport": [
+        1280,
+        800
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "302578bbd246459d30be5389bbaed0e2fb110a161e0477eaf3543f883d4f91e3",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "computed:Milo",
+            "[{\"weight\":\"700\",\"style\":\"normal\",\"underline\":false}]"
+          ],
+          [
+            "computed:Luna",
+            "[{\"weight\":\"700\",\"style\":\"normal\",\"underline\":false}]"
+          ],
+          [
+            "computed:plays",
+            "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+          ],
+          [
+            "computed:runs",
+            "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+          ],
+          [
+            "click",
+            "Say hello -> Hello, David!"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532975]",
+        "pid_ns": "pid:[4026532973]",
+        "mount_ns": "mnt:[4026532970]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 998447,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004861764144152403
+      },
+      "runtime_errors": [],
+      "source_sha256": "884d48a6a71747fb2b85b9c31b03addb5077f82a819d5f779c7459ecc161a311",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-model-pause-live-20261020/browser/steered-1280.png"
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "302578bbd246459d30be5389bbaed0e2fb110a161e0477eaf3543f883d4f91e3",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "computed:Milo",
+            "[{\"weight\":\"700\",\"style\":\"normal\",\"underline\":false}]"
+          ],
+          [
+            "computed:Luna",
+            "[{\"weight\":\"700\",\"style\":\"normal\",\"underline\":false}]"
+          ],
+          [
+            "computed:plays",
+            "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+          ],
+          [
+            "computed:runs",
+            "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+          ],
+          [
+            "click",
+            "Say hello -> Hello, David!"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026533170]",
+        "pid_ns": "pid:[4026533167]",
+        "mount_ns": "mnt:[4026532971]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 998641,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.005872818874195218
+      },
+      "runtime_errors": [],
+      "source_sha256": "884d48a6a71747fb2b85b9c31b03addb5077f82a819d5f779c7459ecc161a311",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-model-pause-live-20261020/browser/steered-375.png"
+    }
+  ]
+}

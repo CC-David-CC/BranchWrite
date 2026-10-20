@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "status_review_export_apply_retry_resume": true,
+  "complete_project_patch": true,
+  "changed_files": 1,
+  "run_state_unchanged": true,
+  "identical_apply_retry": true,
+  "applied_original_methods": 6,
+  "applied_generated_cases": 200,
+  "isolated_executor": true,
+  "credentials_absent": true
+}

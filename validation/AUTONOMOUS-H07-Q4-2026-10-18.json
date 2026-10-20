@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "status": "AUTONOMOUS_H07_UNVERIFIED_REPEAT_EXHAUSTED",
+  "source_commit": "f99db7aae18e43fdd960ef02f191ec6e71ab0b06",
+  "whole_cli_seconds": 689.1948128440417,
+  "model_outputs": 16,
+  "generated_tokens": 13527,
+  "tool_proposal_counts": {
+    "read_file": 5,
+    "replace": 1,
+    "capture_page": 8,
+    "finish": 2
+  },
+  "captures_accepted": 0,
+  "capture_checksum_matches": 0,
+  "source_edit_applied": true,
+  "original_source_unchanged": true,
+  "all_frames_closed": true,
+  "unknown_operations": 0,
+  "diagnostic_generated_source_check": "PASS",
+  "diagnostic_is_autonomous_pass": false,
+  "image_delivery": false,
+  "source_sha256": "80195d5b0dec421b7859bc4d4bcab15d0ee5c22aded66116ee998d5a24fded02",
+  "raw_failure_audit": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h07-driver-v1/failure-audit.json",
+  "client_cleanup": {
+    "tunnel_absent": true,
+    "positive_pid_absent": true,
+    "keys_and_credentials_removed": true
+  },
+  "native_server_cleanup": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-crosshost-h07-server-v1/cleanup.json",
+  "sampler": "DRY+Min-P default",
+  "thinking_budget": 1024,
+  "numerical_error": "NOT_MEASURED",
+  "limitation": "One trajectory repeatedly mistyped opaque capture checksums; host correctly rejected unobserved hashes. Initial edit did use its initial hash correctly.",
+  "mitigation_branch": "work/branchwrite-observed-source-20261018",
+  "mitigation_live_status": "UNRUN",
+  "lora_candidate": "/home/dflanag3/src/branchwrite-lora-examples/candidates/tool-hash-role-confusion-20261018/h07-checksum-transcription-observation-20261018.json",
+  "catalog_passed": [
+    "H00",
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "H06"
+  ],
+  "catalog_unpassed": [
+    "H07",
+    "H08",
+    "H09",
+    "H10",
+    "H11",
+    "H12"
+  ]
+}

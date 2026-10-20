@@ -1,0 +1,11 @@
+test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) ... ok
+test_incompatible_selection_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_incompatible_selection_rejected) ... ok
+test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) ... ok
+test_real_cli_parser_saves_choice_before_execution (test_base_choice_launch.BaseChoiceLaunchTests.test_real_cli_parser_saves_choice_before_execution) ... ok
+test_saved_choice_survives_reopen_and_changed_choice_is_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_saved_choice_survives_reopen_and_changed_choice_is_rejected) ... ok
+test_selected_snapshot_and_provenance_enter_existing_launch (test_base_choice_launch.BaseChoiceLaunchTests.test_selected_snapshot_and_provenance_enter_existing_launch) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.022s
+
+OK

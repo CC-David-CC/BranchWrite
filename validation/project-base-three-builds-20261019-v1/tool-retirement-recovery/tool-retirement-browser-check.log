@@ -1,0 +1,6 @@
+test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict (test_tool_registry.ToolRegistryTests.test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.467s
+
+OK

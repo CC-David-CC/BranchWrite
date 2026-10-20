@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "valid",
+      "exit_code": 0,
+      "entry_allowed": true,
+      "stdout": "CLI_ENTRY_ALLOWED\n",
+      "stderr": ""
+    },
+    {
+      "case": "syntax_error",
+      "exit_code": 1,
+      "entry_allowed": false,
+      "stdout": "",
+      "stderr": "Error in sitecustomize; set PYTHONVERBOSE for traceback:\nSyntaxError: '(' was never closed (sitecustomize.py, line 1)\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import sitecustomize;assert sitecustomize.BW_AUDIT_ACTIVE is True;print('CLI_ENTRY_ALLOWED')\n    ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/tmpspsywup6/sitecustomize.py\", line 1\n    invalid python (\n                   ^\nSyntaxError: '(' was never closed\n"
+    },
+    {
+      "case": "runtime_error",
+      "exit_code": 1,
+      "entry_allowed": false,
+      "stdout": "",
+      "stderr": "Error in sitecustomize; set PYTHONVERBOSE for traceback:\nRuntimeError: broken guard\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import sitecustomize;assert sitecustomize.BW_AUDIT_ACTIVE is True;print('CLI_ENTRY_ALLOWED')\n    ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/tmpet8i17jk/sitecustomize.py\", line 1, in <module>\n    raise RuntimeError('broken guard')\nRuntimeError: broken guard\n"
+    },
+    {
+      "case": "inactive",
+      "exit_code": 1,
+      "entry_allowed": false,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import sitecustomize;assert sitecustomize.BW_AUDIT_ACTIVE is True;print('CLI_ENTRY_ALLOWED')\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    }
+  ]
+}

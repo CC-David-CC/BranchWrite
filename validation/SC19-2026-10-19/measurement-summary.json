@@ -1,0 +1,26 @@
+{
+  "status": "BOUNDED_AUTONOMOUS_TASK_PASS",
+  "scope": "new coding task, same pinned Q8 profile; not numerical or cumulative gate qualification",
+  "forward_tokens": 6454,
+  "prefill_tokens": 4081,
+  "generated_tokens": 2373,
+  "restored_prefix_tokens": 15537,
+  "loaded_file_bytes": 523907260,
+  "captures": 7,
+  "restores": 11,
+  "written_file_bytes": 3809831748,
+  "integrity_mismatches": 0,
+  "native_timed_generation_tps": 49.3344865241492,
+  "source_profile_sha256": "4d52d646626baedaf6442b7d7bab42a7f4eaca88c01a45ca770e39e4da60a20b",
+  "shutdown": {
+    "native_pid": 708679,
+    "native_exit_code": 0,
+    "close_succeeded": true,
+    "trace_sha256": "b0fc8527c46f84757bfa4de609408ee8fd68cd6c189687a656f02fe2e32fc6cc",
+    "event_count": 27
+  },
+  "key_cleanup": {
+    "owned_key_revoked": true,
+    "original_keys_byte_exact": true
+  }
+}

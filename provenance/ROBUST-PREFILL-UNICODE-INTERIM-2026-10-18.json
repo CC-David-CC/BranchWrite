@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "status": "INTERIM_GPU_GRAMMAR_FIX_PASSES_CASE_MODEL_EXACT_COPY_LIMITS_RETAINED",
+  "recorded_unix_time": 1792369085.978174,
+  "client_source_commit": "fa7da85eeb14709ef4d2257311ce6c1a0ec64579",
+  "notes_base_commit": "e70b3b04b11af0aaf44b43a804a1ee399682e447",
+  "cow_grammar_patch_commit": "0c50aeb42c490740c90064e746edebd25d1f1f5b",
+  "cow_runtime_base_commit": "9a289063450759c8da8c3ca875327808fbaf0e3f",
+  "execution_profile_id": "28c765ed95ce356f9aa02b311472825d6e6863155dfeb879c4cb07447102a9af",
+  "tiny_smoke": {
+    "passed": 1,
+    "failed": 0,
+    "thinking_tokens": 1959,
+    "close_reason": "natural"
+  },
+  "existing_ten": {
+    "passed": 7,
+    "failed": 3,
+    "total": 10,
+    "failure_class": "Composed U+00E9 substituted for decomposed U+0065 U+0301 in stdout; all other fields equal."
+  },
+  "expanded": {
+    "status": "RUNNING",
+    "completed": 1,
+    "passed": 1,
+    "pre_template_prefix_tokens": 65290
+  },
+  "private_completed_arm_backup": {
+    "host": "box-git",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-json-unicode-gpu-interim-v1/evidence.tar.gz",
+    "sha256": "385132ed181f71612eee51eb5b7663eb9cb663e416d8b05b8ef89a6fa7987314"
+  },
+  "client_artifacts": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/robust-prefill-components-v3",
+  "client_session": "bw-json-unicode-model-v3",
+  "server_host": "llm-60",
+  "server_session": "bw-json-unicode-q4-v3",
+  "scope": "Independent interpretation only; no new autonomous catalogue pass, model reliability estimate, numerical or restart oracle. Do not label old restrictive-grammar cases as model defects. Held-out new failures are unreviewed diagnostic captures, not training pairs.",
+  "next": "Poll current live campaign without duplication, retain expanded outcomes, verify owned cleanup and private final evidence. Then prepare autonomous L02 with existing protected assertions unchanged."
+}

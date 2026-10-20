@@ -1,0 +1,10 @@
+{
+  "phase": "replacement-booted",
+  "updated_at": 1792492541.655979,
+  "pid": 2416878,
+  "path": "/home/dflanag3/spatial-artifacts/branchwrite-vm-20261020/replacement-a432129ef6d1.iso",
+  "sha256": "a432129ef6d19441454b62b0e88a36c7488e9ad148a204b03ce80164d0c2753c",
+  "firmware": "uefi",
+  "guest_ssh": "NOT_YET_RETESTED",
+  "installation": "NOT_RUN"
+}

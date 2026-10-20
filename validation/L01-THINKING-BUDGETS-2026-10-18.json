@@ -1,0 +1,30 @@
+[
+  {
+    "attempt": "original",
+    "total_final_call_output_tokens": 4294,
+    "requests": 3,
+    "thinking": {
+      "close_reason": "budget",
+      "closing_tokens": 1,
+      "final_tokens": 196,
+      "max_tokens": 4096,
+      "phase": "final",
+      "reasoning_tokens": 4096,
+      "schema": 1
+    }
+  },
+  {
+    "attempt": "command-provenance",
+    "total_final_call_output_tokens": 739,
+    "requests": 1,
+    "thinking": {
+      "close_reason": "natural",
+      "closing_tokens": 1,
+      "final_tokens": 518,
+      "max_tokens": 4096,
+      "phase": "final",
+      "reasoning_tokens": 219,
+      "schema": 1
+    }
+  }
+]

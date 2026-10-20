@@ -1,0 +1,37 @@
+{
+  "removed": [
+    {
+      "payload": "7d261d32a87c00a7441439d5211b0fcd65790a69dada4d914d4d8d0bf8b20a84.state",
+      "bytes": 683790288,
+      "snapshot": "f5c3bd6ea2a7912668ef308af7c207b15b7c88a625d17335e8d075c878908f32"
+    },
+    {
+      "payload": "82aba7e459bd6b9a4d3dcfd5b40ed549abd89798342a3a7e212978dc699de5c5.state",
+      "bytes": 731425872,
+      "snapshot": "fbf9fcd0c1301f0e64760ddac15eb970bee3ab75f490bd7b4c20183c23527aff"
+    },
+    {
+      "payload": "2651c659e107672c2c2fb2c222a17590b156fbeb221c579a7c21f42e988a321f.state",
+      "bytes": 630304720,
+      "snapshot": "16df4c292ed01843c1aafc4209eb9301bafb022df2b978fbd0fb45d53d5067a4"
+    },
+    {
+      "payload": "7e6695d0af7d1c8e543bfe192fcfe16caa2519689fd206ee789b087eb62400dd.state",
+      "bytes": 716383060,
+      "snapshot": "1095622a6c0c3ae08019b7e74b4a3b7de67039accf77d8a7bbc6b3855c78eb27"
+    },
+    {
+      "payload": "c7c4aaba8aa6b25ba04a1ef4e4d6b8191be1bd9d411ae32f1996bc6336daca10.state",
+      "bytes": 794110424,
+      "snapshot": "5ba9f8cf260f7f1ea8c6ee4fa6f9850bb11fe650aa2fd6240565c56053577e90"
+    }
+  ],
+  "freed_bytes": 3556014364,
+  "kept_snapshots": [
+    "254e94f58c245d53a0db713bb61cd3c6a8f092c9e30a05d2980f09a292ffd41f",
+    "636bd040920d574a236f29f53c7cf27323dd26629c132c678dd4b814a99d85a9",
+    "e26f0506f458fd5fdb9b23d191bf28895f46f005c12176833073da2512a11d78"
+  ],
+  "retained_payloads": 3,
+  "scope": "only optional intermediate native payloads in stopped owned trial store; canonical history/receipts/manifests retained"
+}

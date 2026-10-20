@@ -1,0 +1,16 @@
+test_edit_and_passing_tests_in_a_do_not_change_b_or_sources (test_related_worktrees.RelatedWorktreeTests.test_edit_and_passing_tests_in_a_do_not_change_b_or_sources) ... ok
+test_equal_file_hash_does_not_allow_foreign_observation_or_plan (test_related_worktrees.RelatedWorktreeTests.test_equal_file_hash_does_not_allow_foreign_observation_or_plan) ... ok
+test_real_worktree_administration_is_excluded_from_both_worlds (test_related_worktrees.RelatedWorktreeTests.test_real_worktree_administration_is_excluded_from_both_worlds) ... ok
+test_common_computation_root_does_not_merge_worktree_effect_authority (test_related_worktree_histories.RelatedWorktreeHistoryTests.test_common_computation_root_does_not_merge_worktree_effect_authority) ... ok
+test_model_breakdown_has_source_provenance_and_reopens_offline (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_breakdown_has_source_provenance_and_reopens_offline) ... ok
+test_model_cannot_turn_a_breakdown_into_grants_or_verified_success (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_cannot_turn_a_breakdown_into_grants_or_verified_success) ... ok
+test_actual_read_returns_to_the_exact_parent_slot (test_tool_dispatch.ToolDispatchTests.test_actual_read_returns_to_the_exact_parent_slot) ... ok
+test_after_effect_failure_leaves_waiting_and_never_resends (test_tool_dispatch.ToolDispatchTests.test_after_effect_failure_leaves_waiting_and_never_resends) ... ok
+test_finish_is_a_pure_request_not_an_acceptance_or_automatic_flow_close (test_tool_dispatch.ToolDispatchTests.test_finish_is_a_pure_request_not_an_acceptance_or_automatic_flow_close) ... ok
+test_finished_call_replays_saved_result_after_reopen_without_dispatch (test_tool_dispatch.ToolDispatchTests.test_finished_call_replays_saved_result_after_reopen_without_dispatch) ... ok
+test_relevant_change_becomes_a_durable_known_preflight_rejection (test_tool_dispatch.ToolDispatchTests.test_relevant_change_becomes_a_durable_known_preflight_rejection) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.969s
+
+OK

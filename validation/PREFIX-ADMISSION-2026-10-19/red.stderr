@@ -1,0 +1,40 @@
+test_completed_source_still_uses_append_user (test_prefix_admission.PrefixAdmissionTests.test_completed_source_still_uses_append_user) ... ok
+test_default_completed_source_still_pins_current_tip (test_prefix_admission.PrefixAdmissionTests.test_default_completed_source_still_pins_current_tip) ... ok
+test_default_prefix_root_is_pinned_and_never_reselected (test_prefix_admission.PrefixAdmissionTests.test_default_prefix_root_is_pinned_and_never_reselected) ... ERROR
+test_prefix_uses_ask_without_creating_another_root (test_prefix_admission.PrefixAdmissionTests.test_prefix_uses_ask_without_creating_another_root) ... ERROR
+test_source_forms_are_mutually_exclusive (test_prefix_admission.PrefixAdmissionTests.test_source_forms_are_mutually_exclusive) ... ERROR
+
+======================================================================
+ERROR: test_default_prefix_root_is_pinned_and_never_reselected (test_prefix_admission.PrefixAdmissionTests.test_default_prefix_root_is_pinned_and_never_reselected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-prefix-admission-20261019/tests/test_prefix_admission.py", line 33, in test_default_prefix_root_is_pinned_and_never_reselected
+    self.assertEqual(read_launch(args.state)['fork']['snapshot'],'a'*64)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_prefix_uses_ask_without_creating_another_root (test_prefix_admission.PrefixAdmissionTests.test_prefix_uses_ask_without_creating_another_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-prefix-admission-20261019/tests/test_prefix_admission.py", line 19, in test_prefix_uses_ask_without_creating_another_root
+    value=self.build(from_prefix='parent',from_snapshot='a'*64)
+  File "/home/dflanag3/src/branchwrite-prefix-admission-20261019/tests/test_prefix_admission.py", line 15, in build
+    return build_launch(self.project,'Repair project',self.connection,branch='child',read_paths=['app.py'],test_commands=['python3 -m unittest'],**kwargs)
+TypeError: build_launch() got an unexpected keyword argument 'from_prefix'
+
+======================================================================
+ERROR: test_source_forms_are_mutually_exclusive (test_prefix_admission.PrefixAdmissionTests.test_source_forms_are_mutually_exclusive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-prefix-admission-20261019/tests/test_prefix_admission.py", line 28, in test_source_forms_are_mutually_exclusive
+    with self.assertRaises(ValueError):self.build(from_branch='parent',from_prefix='prefix')
+                                       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-prefix-admission-20261019/tests/test_prefix_admission.py", line 15, in build
+    return build_launch(self.project,'Repair project',self.connection,branch='child',read_paths=['app.py'],test_commands=['python3 -m unittest'],**kwargs)
+TypeError: build_launch() got an unexpected keyword argument 'from_prefix'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.009s
+
+FAILED (errors=3)

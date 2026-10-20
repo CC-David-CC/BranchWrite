@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "status": "BOUNDED_PROJECT_START_PASS",
+  "tests_run": 184,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "client_host": "llm-49",
+  "server_host": "llm-60",
+  "server_model": "Q4",
+  "version": "0.1.0.dev33",
+  "wheel_sha256": "5bb54ba4317d69ebd3cc7db0e3434ab36c8108499c69ae72691eb6345231b03f",
+  "live": {
+    "model_task_seconds": 158.4220724189654,
+    "model_created": "index.html",
+    "model_checks": "passed",
+    "first_review": "failed: review only recognized old command receipts",
+    "corrected_review_export_apply": "PASS on unchanged actual run",
+    "browser_click": "PASS at 1280x800 and 375x812",
+    "canonical_run_unchanged": true
+  },
+  "known_failures": [
+    "Separate legacy registry suite: 32/33 pass; unchanged empty-suite stderr wording assertion fails on both base 7d53c8b and candidate. Actual empty suite exits 1."
+  ],
+  "limits": [
+    "No full G/VC/L/H qualification",
+    "Model-selected checks do not guarantee requirement coverage",
+    "Original project remains unchanged; reviewed result is a separate copy",
+    "Deletion, mode changes, network access and general conversation follow-ups are not newly enabled",
+    "Corrected review/export exercised the completed live run; no second GPU generation was needed for that review-only correction"
+  ]
+}

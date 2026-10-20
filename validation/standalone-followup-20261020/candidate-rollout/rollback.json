@@ -1,0 +1,7 @@
+{
+  "pid": 911143,
+  "source": "/home/dflanag3/src/context-cow-client-setup-20261020",
+  "runtime": "/home/dflanag3/spatial-artifacts/branchwrite-dev29-live-q4-20261020",
+  "timestamp": 1792484353.5349753,
+  "reason": "Candidate startup rejected mismatched execution fingerprint; restore original source/profile without changing saved histories."
+}

@@ -1,0 +1,18 @@
+{
+  "evidence_id": "branchwrite-dev30-client-package-20261020",
+  "source_commit": "b48b8ac9043cb8678329e83f1f6e57abf610c084",
+  "package_version": "0.1.0.dev30",
+  "wheel": "branchwrite-0.1.0.dev30-py3-none-any.whl",
+  "wheel_sha256": "9d71fb5ba0fa6b056145e416bb102f31b677f8f31ecd5ad2c5f6fe4a753ce19c",
+  "checks": {
+    "isolated_build": "PASS",
+    "isolated_install": "PASS",
+    "cli_help_includes_context_build_and_recovery": "PASS",
+    "doctor": "PASS",
+    "branchwrite_suite": {"status": "PASS", "tests": 71, "evidence": "../client-context-recovery-20261019/result.json"},
+    "real_cow_http_cpu_integration": {"status": "PASS", "tests": 8, "evidence": "../client-context-recovery-20261019/result.json"}
+  },
+  "inference": "NOT_RUN",
+  "gpu": "NOT_RUN",
+  "scope": "Private preview package and bounded client-side durable source receipt recovery. No native/GPU process restart claim."
+}

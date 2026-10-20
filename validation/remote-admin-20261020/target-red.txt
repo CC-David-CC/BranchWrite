@@ -1,0 +1,130 @@
+======================================================================
+ERROR: test_keys_are_private_regular_files_and_changed_identity_is_rejected (tests.test_remote_execution.RemoteTargetTests.test_keys_are_private_regular_files_and_changed_identity_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 17, in test_keys_are_private_regular_files_and_changed_identity_is_rejected
+    target=self.target();self.key.write_bytes(b'changed')
+           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_read_receipt_is_non_executing_and_checks_original_binding (tests.test_remote_execution.RemoteTargetTests.test_read_receipt_is_non_executing_and_checks_original_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 36, in test_read_receipt_is_non_executing_and_checks_original_binding
+    from branchwrite.remote_execution import RemoteTransport,RemoteIndeterminate
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_ssh_argv_uses_fixed_destination_and_no_agent_or_host_config (tests.test_remote_execution.RemoteTargetTests.test_ssh_argv_uses_fixed_destination_and_no_agent_or_host_config)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 24, in test_ssh_argv_uses_fixed_destination_and_no_agent_or_host_config
+    target=self.target();args=target.argv('pass')
+           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) (kw={'host': 'example.com'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 15, in test_target_requires_literal_host_exact_types_and_bounded_arguments
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.target(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) (kw={'host': '127.0.0.1; touch /tmp/bad'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 15, in test_target_requires_literal_host_exact_types_and_bounded_arguments
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.target(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) (kw={'port': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 15, in test_target_requires_literal_host_exact_types_and_bounded_arguments
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.target(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) (kw={'port': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 15, in test_target_requires_literal_host_exact_types_and_bounded_arguments
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.target(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) (kw={'user': 'maint;bad'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 15, in test_target_requires_literal_host_exact_types_and_bounded_arguments
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.target(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) (kw={'name': '../other'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 15, in test_target_requires_literal_host_exact_types_and_bounded_arguments
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.target(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) (kw={'timeout': nan})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 15, in test_target_requires_literal_host_exact_types_and_bounded_arguments
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.target(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) (kw={'timeout': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 15, in test_target_requires_literal_host_exact_types_and_bounded_arguments
+    with self.subTest(kw=kw),self.assertRaises(ValueError):self.target(**kw)
+                                                           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 10, in target
+    from branchwrite.remote_execution import RemoteTarget
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+======================================================================
+ERROR: test_unacknowledged_intent_cannot_be_resent (tests.test_remote_execution.RemoteTargetTests.test_unacknowledged_intent_cannot_be_resent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 30, in test_unacknowledged_intent_cannot_be_resent
+    from branchwrite.remote_execution import RemoteTransport,RemoteIndeterminate
+ModuleNotFoundError: No module named 'branchwrite.remote_execution'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (errors=12)

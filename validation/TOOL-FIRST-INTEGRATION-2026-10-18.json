@@ -1,0 +1,170 @@
+{
+  "autonomous_catalogue": {
+    "guided_runs_counted": false,
+    "next": "H00",
+    "passed": 0,
+    "total": 13,
+    "ubuntu_agent_baseline": "NOT_STARTED"
+  },
+  "defaults": "DRY+Min-P plus existing three examples; explicit profiles and saved controllers unchanged",
+  "limitations": [
+    "Single observation per cell, no statistical inference",
+    "Different run/workspace identities; old failed greedy run also used different manual system-prefix instructions",
+    "No numerical oracle or Q8 run",
+    "CPU matcher tests cover partial tool-first parser forks/restores and reject old JSON parser interchange; full GPU branch/restart of the new grammar not run"
+  ],
+  "lora_candidate": "/home/dflanag3/src/branchwrite-lora-examples/candidates/tool-thought-action-divergence-20261018",
+  "rows": [
+    {
+      "actions": [
+        "read_file",
+        "replace",
+        "run_tests",
+        "finish"
+      ],
+      "cli_seconds": 64.01210570381954,
+      "command_exit": 0,
+      "independent_final_test_exit": 0,
+      "layout": "arguments-first JSON Schema",
+      "prefix_tokens": 11112,
+      "result_sha256": "9ada4d7954864e5336639fb16b62804079fcbab1317add008356e1d1378882d4",
+      "run": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-coding-defaults-q4-v1",
+      "sampler": "DRY+Min-P default",
+      "services": [
+        {
+          "native_exit": 0,
+          "native_pid": 395867,
+          "observed_absent": true,
+          "server_exit": 0,
+          "server_pid": 395282
+        }
+      ],
+      "settings": {
+        "dry_allowed_length": 2,
+        "dry_base": 1.75,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 256,
+        "min_p": 0.05,
+        "temperature": 0.7,
+        "top_k": 60,
+        "top_p": 0.95
+      },
+      "status": "BOUNDED_AUTONOMOUS_Q4_PASS",
+      "wrapper_exit": 0
+    },
+    {
+      "actions": [
+        "read_file",
+        "replace",
+        "run_tests",
+        "finish"
+      ],
+      "cli_seconds": 62.511953609995544,
+      "command_exit": 0,
+      "independent_final_test_exit": 0,
+      "layout": "arguments-first JSON Schema",
+      "prefix_tokens": 11112,
+      "result_sha256": "e939d0b3479a2c7c5b2a249529422860b2fe4acaa282968523d5a48f2890f4cf",
+      "run": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-first-json-greedy-q4-v1",
+      "sampler": "greedy",
+      "services": [
+        {
+          "native_exit": 0,
+          "native_pid": 406406,
+          "observed_absent": true,
+          "server_exit": 0,
+          "server_pid": 406383
+        }
+      ],
+      "settings": {
+        "temperature": 0
+      },
+      "status": "BOUNDED_AUTONOMOUS_Q4_PASS",
+      "wrapper_exit": 0
+    },
+    {
+      "actions": [
+        "read_file",
+        "replace",
+        "run_tests",
+        "finish"
+      ],
+      "cli_seconds": 63.51269862195477,
+      "command_exit": 0,
+      "independent_final_test_exit": 0,
+      "layout": "tool-first GBNF",
+      "prefix_tokens": 11112,
+      "result_sha256": "f67fdc4f03b1fad870e3902f601818dddf06a953ab548db0b3a433553ba57181",
+      "run": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-first-greedy-q4-v1",
+      "sampler": "greedy",
+      "services": [
+        {
+          "native_exit": 0,
+          "native_pid": 402228,
+          "observed_absent": true,
+          "server_exit": 0,
+          "server_pid": 401650
+        }
+      ],
+      "settings": {
+        "temperature": 0
+      },
+      "status": "BOUNDED_AUTONOMOUS_Q4_PASS",
+      "wrapper_exit": 0
+    },
+    {
+      "actions": [
+        "read_file",
+        "replace",
+        "run_tests",
+        "finish"
+      ],
+      "cli_seconds": 62.01268137479201,
+      "command_exit": 0,
+      "independent_final_test_exit": 0,
+      "layout": "tool-first GBNF",
+      "prefix_tokens": 11112,
+      "result_sha256": "b11b5c372ce39dc4b09ab512570a9edef0f8a2a2a984557fa0c161832f0b9021",
+      "run": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-first-default-q4-v1",
+      "sampler": "DRY+Min-P default",
+      "services": [
+        {
+          "native_exit": 0,
+          "native_pid": 405873,
+          "observed_absent": true,
+          "server_exit": 0,
+          "server_pid": 405867
+        }
+      ],
+      "settings": {
+        "dry_allowed_length": 2,
+        "dry_base": 1.75,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 256,
+        "min_p": 0.05,
+        "temperature": 0.7,
+        "top_k": 60,
+        "top_p": 0.95
+      },
+      "status": "BOUNDED_AUTONOMOUS_Q4_PASS",
+      "wrapper_exit": 0
+    }
+  ],
+  "schema": 1,
+  "scope": "One small Q4 repair task; descriptive executed observations, not sampler/layout superiority or catalogue certification",
+  "source_hash_manifest": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-first-source-v1.json",
+  "tests": {
+    "focused": {
+      "evidence": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-coding-grammar-green-run-v1",
+      "failed": 0,
+      "passed": 14,
+      "skipped": 0
+    },
+    "full": {
+      "evidence": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-first-full-cpu-run-v1",
+      "failed": 0,
+      "passed": 526,
+      "skipped": 0
+    }
+  }
+}

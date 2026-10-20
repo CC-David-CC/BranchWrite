@@ -1,0 +1,8 @@
+test_edit_and_passing_tests_in_a_do_not_change_b_or_sources (test_related_worktrees.RelatedWorktreeTests.test_edit_and_passing_tests_in_a_do_not_change_b_or_sources) ... ok
+test_equal_file_hash_does_not_allow_foreign_observation_or_plan (test_related_worktrees.RelatedWorktreeTests.test_equal_file_hash_does_not_allow_foreign_observation_or_plan) ... ok
+test_real_worktree_administration_is_excluded_from_both_worlds (test_related_worktrees.RelatedWorktreeTests.test_real_worktree_administration_is_excluded_from_both_worlds) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.151s
+
+OK

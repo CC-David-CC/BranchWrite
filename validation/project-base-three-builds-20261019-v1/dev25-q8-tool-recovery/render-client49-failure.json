@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "host": "llm-49",
+  "component": "optional parent browser audit",
+  "reason": "Chromium sandboxing failed: No usable sandbox",
+  "sandbox_disabled": false,
+  "model_task_and_recovery": "PASS",
+  "diagnostic_files": [
+    "render-worker.stderr",
+    "render-worker-process.json"
+  ],
+  "scope": "Not a model-output failure or failure of CLI text tools. Browser automation on this client is not qualified."
+}

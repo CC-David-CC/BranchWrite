@@ -1,0 +1,6 @@
+test_proposed_base_source_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_proposed_base_source_uses_existing_fork_and_ask_api) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.236s
+
+OK

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Bounded real-Q8 tool retirement recovery and server restart; not cumulative G qualification",
+  "production_modules_equal_tested_wheel": 44,
+  "integrated_recovery_methods": 12,
+  "registered_gate_methods_executed": [],
+  "numerical_max_abs_error": null,
+  "numerical_oracle": "NOT_RUN",
+  "browser_client49": "FAIL: Chromium sandbox unavailable",
+  "browser_reference60": "PASS: desktop and mobile",
+  "raw_evidence": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev25-q8-tool-recovery-v1",
+  "known_limits": [
+    "Broad historical 100-method run: 99 passed, 1 diagnostic-string failure",
+    "Clean-machine native server installer incomplete",
+    "Isolated durable tool dispatch timing increased 35.823%; not whole-agent overhead"
+  ]
+}

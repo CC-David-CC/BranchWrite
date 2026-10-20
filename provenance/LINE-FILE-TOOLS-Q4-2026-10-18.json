@@ -1,0 +1,53 @@
+{
+  "status": "BOUNDED_LINE_FILE_TOOLS_PASS",
+  "source_exercised": "17d728209541f4b90d85174e67a8f88820fbe2d5",
+  "cpu_methods": 120,
+  "new_methods": 23,
+  "q4_mask_checks": 45,
+  "failures": 0,
+  "skips": 0,
+  "model_trials": [
+    {
+      "status": "BOUNDED_AUTONOMOUS_L02_PASS",
+      "tools": [
+        "create_text_file",
+        "read_file",
+        "finish"
+      ],
+      "whole_cli_seconds": 36.459422077052295,
+      "model_calls": 3,
+      "output_tokens": 503,
+      "actual_bytes": 37
+    },
+    {
+      "status": "BOUNDED_LINE_REPAIR_PASS",
+      "tools": [
+        "read_file",
+        "replace_text_file",
+        "read_file",
+        "finish"
+      ],
+      "whole_cli_seconds": 45.07925857708324,
+      "model_calls": 4,
+      "output_tokens": 428,
+      "actual_bytes": 39
+    }
+  ],
+  "backup": {
+    "host": "box-git",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-line-file-tools-v1/evidence.tar.gz",
+    "sha256": "c3a8a67fc1fb87adf0fcf88106a82c4547bdf5c0448b45d97bb4d15630697588",
+    "bytes": 6303093,
+    "outer_files": 317,
+    "client_files": 352
+  },
+  "retained_setup_failure": "v8:0700 directory copied as0755 by existing workspace copier;no model call",
+  "limits": [
+    "One successful stochastic trajectory per task",
+    "No numerical or native-restart oracle",
+    "Full VC/G unqualified",
+    "Q8 deferred"
+  ],
+  "sampler": "unchanged global DRY.8+Min-P",
+  "publication": "private LAN only"
+}

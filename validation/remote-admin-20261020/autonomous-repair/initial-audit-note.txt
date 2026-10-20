@@ -1,0 +1,1 @@
+Initial observer script incorrectly expected both test invocations to use run_check. Actual canonical sequence: run_shell exit1 before repair, run_check exit0 after repair. Corrected observer checks exact commands, exits, test hashes and exact operation feedback binding. No model intervention, fixture edit or product code change.

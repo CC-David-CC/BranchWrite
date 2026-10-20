@@ -1,0 +1,8 @@
+Parsed bounded-revision.bw: 1 top-level definitions
+Parsed continue-and-compose.bw: 2 top-level definitions
+Parsed parallel-repair.bw: 1 top-level definitions
+
+root ::= "ACT run-a plan=plan-a -> outcome-a\n" | "ABANDON reject-a target=attempt-a reason=declined\n"
+Branch A complete: True; Branch B complete: False; B prefix: b'A'
+Explicit child seed splits, oracle draws: A=0.72658301, B=0.49521046
+These are offline oracle values, not native trace or performance measurements.

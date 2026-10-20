@@ -1,0 +1,7 @@
+# BranchWrite client: only these project runtime entrypoints may keep the
+# capability needed for Chromium's inner user namespace. Other bwrap children
+# retain the distribution unpriv_bwrap deny rules. No global sysctl change.
+priority=100 allow pix "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/client-env/bin/python" -> &bwrap//&branchwrite_browser_worker,
+priority=100 allow pix "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/client-env/lib/python3.14/site-packages/playwright/driver/node" -> &bwrap//&branchwrite_browser_worker,
+priority=100 allow pix "/home/dflanag3/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome" -> &bwrap//&branchwrite_browser_worker,
+priority=100 allow pix "/home/dflanag3/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome_crashpad_handler" -> &bwrap//&branchwrite_browser_worker,

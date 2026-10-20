@@ -1,0 +1,125 @@
+{
+  "scope": "Only optional binary payloads in the completed owned integration test store",
+  "canonical_history_preserved": true,
+  "checkpoint_manifests_preserved": true,
+  "kept_snapshots": [
+    "e25d45e42729d0950d184a0d2f5c389f4488ca86cec7ed401021fbfc2cdd5ee6",
+    "e26f0506f458fd5fdb9b23d191bf28895f46f005c12176833073da2512a11d78",
+    "00aff43c493a5a79877d57190e1629b476d9a5cc8daff3afb9f3673e0e17ddd6",
+    "3021eeb7708588111e5a0f4a3df4bcb001dc120c01d0610b6053be6961c124b4"
+  ],
+  "removed": [
+    {
+      "name": "0ccb9742cebb09cecdea8e42c1c564c375d10f710e88c58ba2152c5588a699ef.state",
+      "bytes": 739574064
+    },
+    {
+      "name": "a7e3228dca9d9a0f9f1ac9a2bef6446c7532c47480a0cb4268af0a83c473fb23.state",
+      "bytes": 809780024
+    },
+    {
+      "name": "3ac9408cf19be3dea58829a70fbdf31062f9ed9ef87cc750c236f573c78ce9ee.state",
+      "bytes": 912775376
+    },
+    {
+      "name": "3a9c6523be130a3d19238bc86709e1214fc4367e0c498553bf1e5beac8ddd25c.state",
+      "bytes": 898469960
+    },
+    {
+      "name": "0971adddc1169b73d5ab87711378141131f5d760a4a4e04deeedc10309ccd7c8.state",
+      "bytes": 838612088
+    },
+    {
+      "name": "b49b9c58ff48b76ab6d66eb5ed8eda57ac12249ac2bc2e4c6b66c1cc7d62169e.state",
+      "bytes": 579227976
+    },
+    {
+      "name": "9b8c79be8639c3dceceeb479a04f579c932c4b4b78c11ee7052e2a0901677c77.state",
+      "bytes": 972117080
+    },
+    {
+      "name": "5217eace08270d68b3054a7d76e33aded76ee4b834fd0bf3ca5d5f2539cbeefa.state",
+      "bytes": 725053572
+    },
+    {
+      "name": "be9089a447d111d21bfb22cbf250aa6dfab071fce3cd0cc64ee70395717db6f2.state",
+      "bytes": 676164420
+    },
+    {
+      "name": "dde5d177ee80df5f486ea941e7f5b640a6ddbceb191715fb4750ad2953f67d26.state",
+      "bytes": 649212704
+    },
+    {
+      "name": "2d03650f21117c0e8c07de636944deb2cce6192276a17f5b3fa9a2679c6d651c.state",
+      "bytes": 765481140
+    },
+    {
+      "name": "87b4b215920d4a77d5ab21dd3736fc270f2cb6fea1f9e6286bb5e8e226ba5934.state",
+      "bytes": 661748380
+    },
+    {
+      "name": "d6129139b14735cd281969ec802b59564a9404f9513b281bf654586a797ac411.state",
+      "bytes": 879033508
+    },
+    {
+      "name": "0d68dc224bae375f5e44664f26cf00156ef0a67b292fded9a2c988af712fcc25.state",
+      "bytes": 649735020
+    },
+    {
+      "name": "df9b5f5e2957cec33e7b8db49c1fec98e05c0eed7ed7c5cd78d59a26ff5cea17.state",
+      "bytes": 861379088
+    },
+    {
+      "name": "675b6ee183b9ba970505383a289075b143d557186b1c958c17e23bcb9e22d76a.state",
+      "bytes": 737693708
+    },
+    {
+      "name": "5d6469927d13003d397d4c2115b7d32c27d56cabfee25c2ad9f09b3aeea32a16.state",
+      "bytes": 825449624
+    },
+    {
+      "name": "5a2e500bdfbaa250e6e3f7171626146309948b8dab2ff15b1ab3d3bc90908606.state",
+      "bytes": 703220588
+    },
+    {
+      "name": "c4afdb5a382158c3a7a915f59d5e33764fcd54ab5e6b8f33c153b9e85c19a5b5.state",
+      "bytes": 787314112
+    },
+    {
+      "name": "2d376523ab243bbee118c153c9ccf6314733d5cfd6b55cbd94caa3645457a8c9.state",
+      "bytes": 579639680
+    },
+    {
+      "name": "5a17889d8850b339c92e5dee6f2d6ec17bf3859a380150778ebbd0eea0bfc682.state",
+      "bytes": 851455008
+    },
+    {
+      "name": "95497284f0de1bf2e147ffc10ae90c6310ecb653bdd2d147f191be7f967eb6bc.state",
+      "bytes": 789298932
+    },
+    {
+      "name": "33d3dcb2f47183a1bb92809d32d1fbefe9db4f67e6b69d971f043fefc57a95bb.state",
+      "bytes": 864414696
+    }
+  ],
+  "freed_bytes": 17756850748,
+  "kept_payloads": [
+    {
+      "name": "78e972ddd17c9210fdaee98febc92133d1368eca958dcc247ee79077937f2fdb.state",
+      "bytes": 813534580
+    },
+    {
+      "name": "9eb2b7550d0c600e8516e2b1c4c1d87b78cdad38339ce0a57c121f99761dd33d.state",
+      "bytes": 531586236
+    },
+    {
+      "name": "a5fddad8acc92a2713fb24091fbd8fc91245bc61a6ef189ea02b5e2d403eff86.state",
+      "bytes": 922490532
+    },
+    {
+      "name": "318c278d4d6cb576b748ac45241bd55f52495396be16a895e234c35aba11f35d.state",
+      "bytes": 999068792
+    }
+  ],
+  "finished": 1792498442.0042462
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Dogs</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18324a;
+      --muted: #536b80;
+      --paper: #f7fbff;
+      --card: #ffffff;
+      --accent: #167d68;
+      --accent-dark: #0f5f4f;
+      --sun: #ffd166;
+      --shadow: 0 18px 45px rgba(24, 50, 74, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(255, 209, 102, 0.42), transparent 28rem),
+        radial-gradient(circle at 88% 18%, rgba(22, 125, 104, 0.22), transparent 24rem),
+        linear-gradient(135deg, #eef9ff, #f8fff8);
+    }
+
+    main {
+      width: min(1040px, calc(100% - 1.5rem));
+      margin-inline: auto;
+      padding: clamp(1rem, 3vw, 2.5rem) 0 2rem;
+    }
+
+    .hero {
+      display: grid;
+      gap: 1rem;
+      padding: clamp(1.25rem, 4vw, 2.5rem);
+      border-radius: 34px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(238, 250, 255, 0.88));
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(24, 50, 74, 0.08);
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--accent-dark);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    h1 {
+      margin: 0;
+      line-height: 0.95;
+      font-size: clamp(2.4rem, 10vw, 5.2rem);
+      letter-spacing: -0.055em;
+    }
+
+    .lede {
+      margin: 0;
+      max-width: 62ch;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.4vw, 1.2rem);
+      line-height: 1.6;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 0.25rem;
+    }
+
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 1rem 1.35rem;
+      min-height: 48px;
+      font: inherit;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      box-shadow: 0 12px 24px rgba(15, 95, 79, 0.24);
+      cursor: pointer;
+    }
+
+    button:focus-visible {
+      outline: 4px solid var(--sun);
+      outline-offset: 3px;
+    }
+
+    .greeting {
+      min-height: 1.5rem;
+      margin: 0;
+      font-weight: 800;
+      color: var(--accent-dark);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      padding: 1.25rem;
+      border-radius: 28px;
+      background: var(--card);
+      box-shadow: 0 14px 34px rgba(24, 50, 74, 0.10);
+      border: 1px solid rgba(24, 50, 74, 0.07);
+    }
+
+    .card h2 {
+      margin: 0 0 0.55rem;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .paw {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 0.55rem;
+    }
+
+    footer {
+      margin-top: 1rem;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">A friendly dog page</p>
+      <h1>Happy Dogs</h1>
+      <p class="lede">A bright, phone-friendly page about good dogs, gentle play, and happy greetings.</p>
+      <div class="button-row">
+        <button id="helloButton" type="button">Say hello</button>
+        <p id="greeting" class="greeting" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="cards" aria-label="Dog notes">
+      <article class="card">
+        <div class="paw" aria-hidden="true">🐾</div>
+        <h2>Playtime</h2>
+        <p>Milo plays.</p>
+      </article>
+      <article class="card">
+        <div class="paw" aria-hidden="true">🐕</div>
+        <h2>Zoomies</h2>
+        <p>Luna runs.</p>
+      </article>
+      <article class="card">
+        <div class="paw" aria-hidden="true">🦴</div>
+        <h2>Good dogs</h2>
+        <p>Every dog deserves sunshine, sniff walks, and a cozy nap spot.</p>
+      </article>
+    </section>
+
+    <footer>Open this page on a phone or desktop browser.</footer>
+  </main>
+
+  <script>
+    document.getElementById("helloButton").addEventListener("click", function () {
+      document.getElementById("greeting").textContent = "Hello, David!";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "prefix_bytes_unchanged": true,
+  "prefix_consumed": 15537,
+  "payload_bytes": 524900540,
+  "payload_sha256": "57091df412b49984e06b1481d7cca03c369f8c315fec200d5dbc297eb4fe2c1f",
+  "final_consumed": 45903,
+  "forward_tokens": 30366,
+  "prefill_tokens": 20368,
+  "generated_tokens": 9998,
+  "integrity_mismatches": 0,
+  "server_exit": 0,
+  "native_exit": 0,
+  "scoped_key_revoked": true,
+  "numerical_oracle": "NOT_RUN"
+}

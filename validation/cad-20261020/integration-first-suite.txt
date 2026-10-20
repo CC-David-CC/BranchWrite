@@ -1,0 +1,43 @@
+...................E.......F.....E......E
+======================================================================
+ERROR: test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict (test_tool_registry.ToolRegistryTests.test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_tool_registry.py", line 133, in test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict
+    browser=BrowserConfig(Path(os.environ['BW_BROWSER_EXECUTABLE']))
+                               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 714, in __getitem__
+KeyError: 'BW_BROWSER_EXECUTABLE'
+
+======================================================================
+ERROR: test_schema_compiles_in_existing_cow_json_grammar_and_rejects_illegal_tool (test_tool_registry.ToolRegistryTests.test_schema_compiles_in_existing_cow_json_grammar_and_rejects_illegal_tool)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_tool_registry.py", line 150, in test_schema_compiles_in_existing_cow_json_grammar_and_rejects_illegal_tool
+    from serve.cow_grammar import GrammarRegistry
+ModuleNotFoundError: No module named 'serve'
+
+======================================================================
+ERROR: test_tool_progress (unittest.loader._FailedTest.test_tool_progress)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_tool_progress
+Traceback (most recent call last):
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'test_tool_progress'
+
+
+======================================================================
+FAIL: test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass (test_tool_registry.ToolRegistryTests.test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_tool_registry.py", line 102, in test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass
+    self.assertEqual(result.exit_code,1);self.assertIn(b'Start directory is not importable',result.stderr)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'Start directory is not importable' not found in b'\n----------------------------------------------------------------------\nRan 0 tests in 0.000s\n\nNO TESTS RAN\nNo test cases found; an empty suite is not a successful verification.\n'
+
+----------------------------------------------------------------------
+Ran 41 tests in 26.126s
+
+FAILED (failures=1, errors=3)

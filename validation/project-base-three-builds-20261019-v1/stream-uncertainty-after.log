@@ -1,0 +1,11 @@
+test_eof_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_eof_retains_original_pending_identity) ... /usr/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 404: 'Not Found'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_error_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_error_retains_original_pending_identity) ... ok
+test_failure_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_failure_retains_original_pending_identity) ... ok
+test_first_cli_failure_reports_unresolved_original_operation (test_generation_stream_uncertainty.StreamUncertaintyTests.test_first_cli_failure_reports_unresolved_original_operation) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.048s
+
+OK

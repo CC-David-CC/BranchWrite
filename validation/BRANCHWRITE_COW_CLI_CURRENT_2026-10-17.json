@@ -1,0 +1,1591 @@
+{
+  "branchwrite_source_sha256": {
+    "branchwrite/__init__.py": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c",
+    "branchwrite/coding_contract.py": "4c0f0435523dbc8d8f4e45553ac5068dd09bd2f549e99d6b1732ca747f952eac",
+    "branchwrite/cow_client.py": "7a49bf63ad8bdc81ee1dc8e8d57579894ecd316cb49715176df9bf172f4871d8",
+    "branchwrite/execution.py": "b536066e50d4557c266e93e26fab0c615d232ebf0b81e5e89695552f02ef525e",
+    "tools/run_cow_coding_pilot.py": "14c3ce1e2992f08187f32bfd25df66e2bb8b1f5ed04a29b8c93d197d6d26864b",
+    "tools/show_example.py": "bce2fd3b55ba015c8956954e701e235aa7eebfa1a529c12d1983856beae7dde2",
+    "tools/verify_handoff.py": "cc597e9767557a97609d5e8321ebcfc14030c490537ef6a9a300ff40a52ba63a",
+    "validation/run_cow_coding_campaign.py": "c434a0a9d81f2877c1573410bff8af764b523b0287474cdebee75c42201eaa25"
+  },
+  "cases": [
+    {
+      "label": "add-baseline",
+      "result": {
+        "after_exit": null,
+        "arm": "baseline",
+        "before_exit": 1,
+        "elapsed_seconds": 2.3964739681687206,
+        "feedback_seconds": 0.0,
+        "format_valid": false,
+        "patch_sha256": "",
+        "prepare_seconds": 1.0634192880243063,
+        "prompt_sha256": "299e8b34d32a1728cb64155d7ed719beec4fd3dc6ef4fb2ee8e3a84ff9a96bd5",
+        "proposal_seconds": 1.1243125461041927,
+        "proposal_sha256": "5510b422682c61bc1534be5713f0793f2525219bfac51a88f6619a24da94979f",
+        "proposal_tokens": 20,
+        "report_sha256": "",
+        "report_tokens": 0,
+        "report_truthful": false,
+        "status": "FORMAT_REJECTED",
+        "task": "add"
+      },
+      "status_after": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 2,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 250550339,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 2,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 2,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 710663560,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 250547016,
+          "unique_payloads": 2
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      },
+      "status_before": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 0,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 0,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 0,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 0
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 0,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 0,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 0,
+          "unique_payloads": 0
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 0,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "add-example",
+      "result": {
+        "after_exit": null,
+        "arm": "example",
+        "before_exit": 1,
+        "elapsed_seconds": 2.3595777950249612,
+        "feedback_seconds": 0.0,
+        "format_valid": false,
+        "patch_sha256": "",
+        "prepare_seconds": 1.0022284139413387,
+        "prompt_sha256": "aab44bcbf357c07ebca4f61a2f48de02f8fd05c54bd2f5e8159836f6498ac0b9",
+        "proposal_seconds": 1.1663189609535038,
+        "proposal_sha256": "5510b422682c61bc1534be5713f0793f2525219bfac51a88f6619a24da94979f",
+        "proposal_tokens": 20,
+        "report_sha256": "",
+        "report_tokens": 0,
+        "report_truthful": false,
+        "status": "FORMAT_REJECTED",
+        "task": "add"
+      },
+      "status_after": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 4,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 504861398,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 4,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 4,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 963091824,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 504854752,
+          "unique_payloads": 4
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      },
+      "status_before": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 2,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 250550339,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 2,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 2,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 710663560,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 250547016,
+          "unique_payloads": 2
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "add-gbnf",
+      "result": {
+        "after_exit": 0,
+        "arm": "gbnf",
+        "before_exit": 1,
+        "elapsed_seconds": 5.435180471045896,
+        "feedback_seconds": 2.8097331360913813,
+        "format_valid": true,
+        "patch_sha256": "ba1a531f581d2e6094e978ed6f7aca7a8d92eeb62c6e7ad73ee692f7f18bc772",
+        "prepare_seconds": 0.5802906041499227,
+        "prompt_sha256": "299e8b34d32a1728cb64155d7ed719beec4fd3dc6ef4fb2ee8e3a84ff9a96bd5",
+        "proposal_seconds": 1.7671539618168026,
+        "proposal_sha256": "a10101ad1128802f5276e52209c6a29996fefc386a8f7a4c7af1d67b46ae903a",
+        "proposal_tokens": 21,
+        "report_sha256": "f42ee51056a50f401b156feb6cc4d029c8f3f53926eecfa2f4454e281899f4d8",
+        "report_tokens": 61,
+        "report_truthful": true,
+        "status": "TASK_PASS",
+        "task": "add"
+      },
+      "status_after": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 7,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 761626643,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 6,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 6,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 1216043264,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 761571304,
+          "unique_payloads": 6
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      },
+      "status_before": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 4,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 504861398,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 4,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 4,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 963091824,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 504854752,
+          "unique_payloads": 4
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "add-both",
+      "result": {
+        "after_exit": 0,
+        "arm": "both",
+        "before_exit": 1,
+        "elapsed_seconds": 4.8812222559936345,
+        "feedback_seconds": 2.765631476882845,
+        "format_valid": true,
+        "patch_sha256": "ba1a531f581d2e6094e978ed6f7aca7a8d92eeb62c6e7ad73ee692f7f18bc772",
+        "prepare_seconds": 0.5406972211785614,
+        "prompt_sha256": "aab44bcbf357c07ebca4f61a2f48de02f8fd05c54bd2f5e8159836f6498ac0b9",
+        "proposal_seconds": 1.3050495230127126,
+        "proposal_sha256": "a10101ad1128802f5276e52209c6a29996fefc386a8f7a4c7af1d67b46ae903a",
+        "proposal_tokens": 21,
+        "report_sha256": "30206b3c784fdf564ad62d55b123a69d19b9ee3bc5275e3e83dcb15ef8183754",
+        "report_tokens": 58,
+        "report_truthful": true,
+        "status": "TASK_PASS",
+        "task": "add"
+      },
+      "status_after": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 10,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 1022151270,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 8,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 8,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 1474647172,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 1022048564,
+          "unique_payloads": 8
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      },
+      "status_before": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 7,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 761626643,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 6,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 6,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 1216043264,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 761571304,
+          "unique_payloads": 6
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "multiply-baseline",
+      "result": {
+        "after_exit": null,
+        "arm": "baseline",
+        "before_exit": 1,
+        "elapsed_seconds": 1.8123756418935955,
+        "feedback_seconds": 0.0,
+        "format_valid": false,
+        "patch_sha256": "",
+        "prepare_seconds": 0.7652521110139787,
+        "prompt_sha256": "5d0ee80202fbfdbe361148646f5e7ab7e9c8cb5f4b87aedbae7b0a1f65dbfd9f",
+        "proposal_seconds": 0.9491601651534438,
+        "proposal_sha256": "dad5d866593b72eda5c773f3bb15abbef1c57d12dfd44b6786b1218588b82c02",
+        "proposal_tokens": 20,
+        "report_sha256": "",
+        "report_tokens": 0,
+        "report_truthful": false,
+        "status": "FORMAT_REJECTED",
+        "task": "multiply"
+      },
+      "status_after": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 12,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 1272910545,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 10,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 10,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 1732816652,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 1272804516,
+          "unique_payloads": 10
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      },
+      "status_before": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 10,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 1022151270,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 8,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 8,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 1474647172,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 1022048564,
+          "unique_payloads": 8
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "multiply-example",
+      "result": {
+        "after_exit": null,
+        "arm": "example",
+        "before_exit": 1,
+        "elapsed_seconds": 1.8699878209736198,
+        "feedback_seconds": 0.0,
+        "format_valid": false,
+        "patch_sha256": "",
+        "prepare_seconds": 0.8053147338796407,
+        "prompt_sha256": "9a033acff59879dae33d747100f5991963203c7837eb65f6e89e15ce943f14c0",
+        "proposal_seconds": 0.9671313539147377,
+        "proposal_sha256": "dad5d866593b72eda5c773f3bb15abbef1c57d12dfd44b6786b1218588b82c02",
+        "proposal_tokens": 20,
+        "report_sha256": "",
+        "report_tokens": 0,
+        "report_truthful": false,
+        "status": "FORMAT_REJECTED",
+        "task": "multiply"
+      },
+      "status_after": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 14,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 1527442828,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 12,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 12,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 1985459996,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 1527333476,
+          "unique_payloads": 12
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      },
+      "status_before": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 12,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 1272910545,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 10,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 10,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 1732816652,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 1272804516,
+          "unique_payloads": 10
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "multiply-gbnf",
+      "result": {
+        "after_exit": 0,
+        "arm": "gbnf",
+        "before_exit": 1,
+        "elapsed_seconds": 3.9181694120634347,
+        "feedback_seconds": 2.2119789549615234,
+        "format_valid": true,
+        "patch_sha256": "12141ca5171ea43624b961e04b6ef0e709db4d1b90d1c967bea2706afe4aad27",
+        "prepare_seconds": 0.44421550584957004,
+        "prompt_sha256": "5d0ee80202fbfdbe361148646f5e7ab7e9c8cb5f4b87aedbae7b0a1f65dbfd9f",
+        "proposal_seconds": 1.128810030175373,
+        "proposal_sha256": "72c6db802fa1dc929dcd5a49ad6370bd581e3bb513b0d4dade6f0a27f32ffd49",
+        "proposal_tokens": 21,
+        "report_sha256": "e2bacb8b808c920ce74098e0252043a2c8e6692be96c104710860978e64b6646",
+        "report_tokens": 45,
+        "report_truthful": true,
+        "status": "TASK_PASS",
+        "task": "multiply"
+      },
+      "status_after": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 17,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 1784090385,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 14,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 14,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 2238626324,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 1783939412,
+          "unique_payloads": 14
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      },
+      "status_before": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 14,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 1527442828,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 12,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 12,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 1985459996,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 1527333476,
+          "unique_payloads": 12
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "multiply-both",
+      "result": {
+        "after_exit": 0,
+        "arm": "both",
+        "before_exit": 1,
+        "elapsed_seconds": 4.579002560116351,
+        "feedback_seconds": 2.8350997399538755,
+        "format_valid": true,
+        "patch_sha256": "12141ca5171ea43624b961e04b6ef0e709db4d1b90d1c967bea2706afe4aad27",
+        "prepare_seconds": 0.46411436703056097,
+        "prompt_sha256": "9a033acff59879dae33d747100f5991963203c7837eb65f6e89e15ce943f14c0",
+        "proposal_seconds": 1.1480362720321864,
+        "proposal_sha256": "72c6db802fa1dc929dcd5a49ad6370bd581e3bb513b0d4dade6f0a27f32ffd49",
+        "proposal_tokens": 21,
+        "report_sha256": "324558561f70b4c5097f9260b9637df2443d9826c318edb94a4a9f28b506e3d6",
+        "report_tokens": 60,
+        "report_truthful": true,
+        "status": "TASK_PASS",
+        "task": "multiply"
+      },
+      "status_after": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 20,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 2045027592,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 16,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 16,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 2497218136,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 2044828368,
+          "unique_payloads": 16
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      },
+      "status_before": {
+        "GPU": [
+          0
+        ],
+        "active_per_gpu": {
+          "0": 0
+        },
+        "cancelled": 0,
+        "completed": 17,
+        "disk": {
+          "admission_waits": 0,
+          "byte_limit": 137438953472,
+          "file_bytes": 1784090385,
+          "files_evicted": 0,
+          "idle_evictions": 0,
+          "local_reserved_bytes": 0,
+          "recency_entries": 14,
+          "reserved_bytes": 0
+        },
+        "failed": 0,
+        "failed_publications": 0,
+        "idle_expiry": {
+          "last_error": null,
+          "last_result": {
+            "disk": 0,
+            "ram": 0
+          },
+          "running": false,
+          "runs": 0,
+          "seconds": null
+        },
+        "max_active_per_gpu": {
+          "0": 1
+        },
+        "pending_branches": 0,
+        "physical_gpu_count": 1,
+        "preload_failures": 0,
+        "queued": 0,
+        "ram": {
+          "admission_waits": 0,
+          "byte_limit": 103079215104,
+          "clean_evictions": 0,
+          "dirty_bytes": 0,
+          "entries": 14,
+          "failed_bytes": 0,
+          "failed_entries": 0,
+          "failed_evictions": 0,
+          "idle_evictions": 0,
+          "loads_pending": 0,
+          "peak_accounted_bytes": 2238626324,
+          "pins": 0,
+          "reserved_bytes": 0,
+          "resident_bytes": 1783939412,
+          "unique_payloads": 14
+        },
+        "worker_count": 1,
+        "workers": {
+          "0": {
+            "active": 0,
+            "failure_reason": null,
+            "health": "healthy",
+            "max_active": 1,
+            "pid": 4180448,
+            "restarts": 0
+          }
+        }
+      }
+    }
+  ],
+  "chat_server": "NOT_STARTED",
+  "cow_runtime_closure": {
+    "files": {
+      "experimental/branching_context/src/context_time_travel/__init__.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/__init__.py",
+        "sha256": "9643d943ad663858a0132ad597715748727b3efd4720b2b87739156bc47b0929"
+      },
+      "experimental/branching_context/src/context_time_travel/adaptive_p.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/adaptive_p.py",
+        "sha256": "c756845f283e1db42f4c66079d0d78ca45e2ed066d3b869b5b67cef3ec54c9fd"
+      },
+      "experimental/branching_context/src/context_time_travel/adaptive_p_pipeline.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/adaptive_p_pipeline.py",
+        "sha256": "8891025d2f43c7916490bbd1bba3405d6182757a668c1e90dd29ba288656f7cb"
+      },
+      "experimental/branching_context/src/context_time_travel/checkpoint_cache.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/checkpoint_cache.py",
+        "sha256": "84e32e9d2208a87fb41f5cc576c84d8e47fa6afc7c82f16c2ad8b78918aaac55"
+      },
+      "experimental/branching_context/src/context_time_travel/controller.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/controller.py",
+        "sha256": "f67e8f9f2aa7cefa315478308e52988fb620945b30389595c1d64c22ae043dbf"
+      },
+      "experimental/branching_context/src/context_time_travel/coordinator.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/coordinator.py",
+        "sha256": "47ba2d432b1bbdc5d8e0973649497e2a856a297c7c111886aab304132c79d1e5"
+      },
+      "experimental/branching_context/src/context_time_travel/digest_attestation.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/digest_attestation.py",
+        "sha256": "8b2e89a35a9304e72e6a9eb1c121dfff901037f3f5920d1fda77b149ec83cb15"
+      },
+      "experimental/branching_context/src/context_time_travel/dry.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/dry.py",
+        "sha256": "cdf0b57a8856cecf576484d6a9a042558e6f4e5c6c10e452f0d276f3a4cc14bf"
+      },
+      "experimental/branching_context/src/context_time_travel/dynatemp.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/dynatemp.py",
+        "sha256": "1f50719f0c410f1ec22f306fcafff194cfdfbeb8833f73a0e96c7015b6ac6c6b"
+      },
+      "experimental/branching_context/src/context_time_travel/evaluation.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/evaluation.py",
+        "sha256": "bb26837681e30fa510d6dd961126669e68f174ef940449a09ef3ebda3938097d"
+      },
+      "experimental/branching_context/src/context_time_travel/evaluation_worker.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/evaluation_worker.py",
+        "sha256": "068fc01ef740e23e5bf8610f79ed6626323ead4a50b5f741ae43c4e7608f0688"
+      },
+      "experimental/branching_context/src/context_time_travel/execution_receipt.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/execution_receipt.py",
+        "sha256": "19b272462bb0ef6209ce8053f4aea1152be556b3471c51684cb5966080d4145c"
+      },
+      "experimental/branching_context/src/context_time_travel/grammar_first.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/grammar_first.py",
+        "sha256": "131097cff80d001d17e6a23b2061f2eebde59336b4e1776a883c01588fa3c012"
+      },
+      "experimental/branching_context/src/context_time_travel/input_spans.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/input_spans.py",
+        "sha256": "9304236e4e8c81cc3dc8d1dc8059b99bc536af3c2a17abbfbe22f2e745eb6ec2"
+      },
+      "experimental/branching_context/src/context_time_travel/min_p.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/min_p.py",
+        "sha256": "651a7c0bc2623b2f7b223fa82597e89119fae3ab1b9e2a2bdcc625868d1884fd"
+      },
+      "experimental/branching_context/src/context_time_travel/mirostat2.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/mirostat2.py",
+        "sha256": "969576f04b5e5b74c34f3dd53a810675145ee837111250d7d6737f07d9f9aba9"
+      },
+      "experimental/branching_context/src/context_time_travel/numerics.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/numerics.py",
+        "sha256": "ed7edce5915bdd94aa87120ee104c1813028cd1a43d826ce757d87c81d3e6d70"
+      },
+      "experimental/branching_context/src/context_time_travel/oracle.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/oracle.py",
+        "sha256": "361501062020efa77f9380a0e42eaef704c45b57d5dc21202397ae78f2d94496"
+      },
+      "experimental/branching_context/src/context_time_travel/pools.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/pools.py",
+        "sha256": "95a39407b18fa2047ce6a835d404c389406cbf3ec4b5aca32c834b45b6260c44"
+      },
+      "experimental/branching_context/src/context_time_travel/presentation_binding.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/presentation_binding.py",
+        "sha256": "a911b28eafd87b75b7adeea0f1b7c7f110b71598bd730943b97983b0499e6f0d"
+      },
+      "experimental/branching_context/src/context_time_travel/presentation_request.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/presentation_request.py",
+        "sha256": "08f9e5b55e4850af8f3b7537453d6e859d869b6366afbd4a5f607e84e71cdcf7"
+      },
+      "experimental/branching_context/src/context_time_travel/real.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/real.py",
+        "sha256": "412491800d34734ee8b4898b4813be43235235aeb914d0a31cfaff8a3b0bbc07"
+      },
+      "experimental/branching_context/src/context_time_travel/sampled_controller.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/sampled_controller.py",
+        "sha256": "d6e3abda5e4680db8c2ab81aae236c78bb0e8dbf9b6dfa1fa9a2e0fae33e8393"
+      },
+      "experimental/branching_context/src/context_time_travel/sampling_proposal.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/sampling_proposal.py",
+        "sha256": "84b1da4a4a7f355ecb91b9c3389f6d7e175615becdeb2f1f564b441120c3d34c"
+      },
+      "experimental/branching_context/src/context_time_travel/seed_controls.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/seed_controls.py",
+        "sha256": "a62b8f4e574f1114ef1b0d3723764bba9c4dad1b1b49d2b5a4b071936d5e5d7b"
+      },
+      "experimental/branching_context/src/context_time_travel/slots.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/slots.py",
+        "sha256": "d53bc6fe3ba76f3b5d33db9e86764dfef55c70a14ff79c1e83e282ffdb5df3a5"
+      },
+      "experimental/branching_context/src/context_time_travel/store.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/store.py",
+        "sha256": "5b90557ab135aa73674ebc8de9e511cfe348d05d22d5aa913ccf4fb386fbb4b2"
+      },
+      "experimental/branching_context/src/context_time_travel/strata_backend.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/strata_backend.py",
+        "sha256": "70f762479452cac9f88cbdd0d6b37dc0c799c7754834105414faf31d57338c0d"
+      },
+      "experimental/branching_context/src/context_time_travel/text_stops.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/text_stops.py",
+        "sha256": "92ce3ca23286aa3dbb8bcf271ab37f4ed5022f27fdde90e9f2c5d0c7850e0619"
+      },
+      "experimental/branching_context/src/context_time_travel/typical.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/typical.py",
+        "sha256": "5bb3dd9fff53b169f066fac02965979f2430c36b562714704108ffa565afbe5e"
+      },
+      "experimental/branching_context/src/context_time_travel/vision_artifacts.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/vision_artifacts.py",
+        "sha256": "c654c71ee0ed91db01ccd8cccf6ebca62a6734fa2a535734b0694bfec8138b9d"
+      },
+      "experimental/branching_context/src/context_time_travel/vision_controllers.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/vision_controllers.py",
+        "sha256": "f331177a771fe3fc7b307ef218a35aa6f40009dbeafd5fbe0b228833a0871030"
+      },
+      "experimental/branching_context/src/context_time_travel/vision_dry.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/vision_dry.py",
+        "sha256": "8879d5bab64f0983ae6dc83b62a02922872b2d22949f6c2bf11f8163ba05315a"
+      },
+      "experimental/branching_context/src/context_time_travel/vision_embeddings.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/vision_embeddings.py",
+        "sha256": "08580b3e588a654e49dd7edde8240d92add1fc4150445989c33d8bd3b03eade6"
+      },
+      "experimental/branching_context/src/context_time_travel/vision_execution.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/vision_execution.py",
+        "sha256": "9d2c4d2d9561fa6f1e80c833e29984831b1ec7585ce4e8e00475d77c6ad9d24f"
+      },
+      "experimental/branching_context/src/context_time_travel/xtc_pipeline.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/xtc_pipeline.py",
+        "sha256": "a481e823d1ca9e7a2ad9fc29773d35a954c95a6d215dece7178dc90d6d25c386"
+      },
+      "serve/cow_adapter.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_adapter.py",
+        "sha256": "ad36139a015bf3cb493b48f4bbb62391fd183c9b166b569dbfd4dac9d383eaad"
+      },
+      "serve/cow_browser_fixture.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_browser_fixture.py",
+        "sha256": "8068e278867bf61017138cd31a03a88736220fe90cf4bd50ac6592f44221a183"
+      },
+      "serve/cow_grammar.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_grammar.py",
+        "sha256": "a56b760963fe2672cdb7ab293b63bfbe49ae66d301130acf2bf5a95ccd67e042"
+      },
+      "serve/cow_http.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_http.py",
+        "sha256": "c9ddf48cbd7edea6b105d726d5c01986f00c44183add1632872547d931ad2599"
+      },
+      "serve/cow_prefix.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_prefix.py",
+        "sha256": "83a0feaa70b7d0305ba6a14de378b67b5da302c6df20ede57c9694671aef38db"
+      },
+      "serve/cow_prompt_encoder.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_prompt_encoder.py",
+        "sha256": "1a9b7aa021a72f69bf022f47b6e25bdefffdc88c849955071b5368c473aacfc8"
+      },
+      "serve/cow_renderer.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_renderer.py",
+        "sha256": "90c2b552559c0e88fedecf58cdc71c86344e757b645eff18378f5a9401496b06"
+      },
+      "serve/cow_text_adapter.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_text_adapter.py",
+        "sha256": "1e77b804e8cd8d7dc74f532f47247ae3c176f87602ff40f440901e047bed143e"
+      },
+      "serve/cow_vision.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_vision.py",
+        "sha256": "fbf0bbb9196436d55a092c733505c300eff8f4dc4122b43e02a30269037aca86"
+      },
+      "serve/cow_vision_encoder.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_vision_encoder.py",
+        "sha256": "9ce50dbcea21eff029473f206c0a758c15b063fe08ca63dedd387f49bb12a4b5"
+      },
+      "serve/cow_vision_preparer.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_vision_preparer.py",
+        "sha256": "f9231af1d7258f161872c03149578ed078e1df9e25230507ec421845a81f5057"
+      },
+      "serve/cow_workspace.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_workspace.py",
+        "sha256": "3d223b38936d24b4fb7857101fdfd3fd429affb98ec86c9cb8b376a0e95e97af"
+      },
+      "tools/cow_cli.py": {
+        "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/tools/cow_cli.py",
+        "sha256": "60d290d2938a652bb8bdfce4fc9561dc03f971b676107fa835fe78b92a6cd142"
+      }
+    },
+    "files_sha256": "c7098249e0dc5d84cbc47fcde7da220d7c4e96049ec2710e1176d7081071138b",
+    "source_commit": null
+  },
+  "endpoint_binding": {
+    "attestation": "root-owned launch; not HTTP-attested",
+    "pin": "b0bf276e24b04e48498c93e4a84e8db4961dd82f0bf3d198b1a82a2a9f05d50d"
+  },
+  "execution_profile_id": "e729ab6d912d67861176bf0bd719554c5ecd68905b051159b0bc383fbc85d864",
+  "failures": [],
+  "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+  "native_binary_sha256": "ae62045f75a8e11ba9d01b4da301d3bb87fe4ff342bab0ea7edc57276377824e",
+  "native_executable": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-native-build-v1/strata-vision-dry-combinations-cow",
+  "phase": "stop-service-1",
+  "profile_sha256": "fef185fd901307e44e30383befb69805a42dfd4a9d5a56c55286a4b792af458b",
+  "registry_sha256": "498662a717f4a11788e5180ceddce83c574f1d94a004dd8138deceba6c11d423",
+  "requested_arms": [
+    "baseline",
+    "example",
+    "gbnf",
+    "both"
+  ],
+  "requested_tasks": [
+    "add",
+    "multiply"
+  ],
+  "schema": "bw-coding-campaign-v1",
+  "scope": "bounded Q4 coding pilot, no full product/gate qualification",
+  "services": [
+    {
+      "argv_redacted": [
+        "/home/dflanag3/src/Strata/.venv/bin/python",
+        "-B",
+        "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-cli-gpu-v1/server-bootstrap-1.py",
+        "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-state-v2/profile.json",
+        "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8",
+        "--profile",
+        "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-state-v2/profile.json",
+        "--store",
+        "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-cli-gpu-v1/store",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "0",
+        "--text",
+        "--api-key",
+        "<REDACTED>",
+        "--ram-gib",
+        "96",
+        "--disk-gib",
+        "128",
+        "--pool-trace-output",
+        "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-cli-gpu-v1/pool-1.json"
+      ],
+      "native_trace": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-cli-gpu-v1/native-1.jsonl",
+      "ordinal": 1,
+      "pid": 4180442,
+      "pool_trace": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-cli-gpu-v1/pool-1.json",
+      "ready": {
+        "address": [
+          "127.0.0.1",
+          33929
+        ],
+        "event": "ready",
+        "execution_profile_id": "e729ab6d912d67861176bf0bd719554c5ecd68905b051159b0bc383fbc85d864"
+      },
+      "source_imports": {
+        "context_time_travel.coordinator": {
+          "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/coordinator.py",
+          "sha256": "47ba2d432b1bbdc5d8e0973649497e2a856a297c7c111886aab304132c79d1e5"
+        },
+        "context_time_travel.grammar_first": {
+          "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/grammar_first.py",
+          "sha256": "131097cff80d001d17e6a23b2061f2eebde59336b4e1776a883c01588fa3c012"
+        },
+        "context_time_travel.real": {
+          "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/real.py",
+          "sha256": "412491800d34734ee8b4898b4813be43235235aeb914d0a31cfaff8a3b0bbc07"
+        },
+        "context_time_travel.store": {
+          "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/experimental/branching_context/src/context_time_travel/store.py",
+          "sha256": "5b90557ab135aa73674ebc8de9e511cfe348d05d22d5aa913ccf4fb386fbb4b2"
+        },
+        "serve.cow_http": {
+          "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8/serve/cow_http.py",
+          "sha256": "c9ddf48cbd7edea6b105d726d5c01986f00c44183add1632872547d931ad2599"
+        }
+      },
+      "startup_seconds": 19.51336965104565,
+      "stop": {
+        "command": [
+          "/home/dflanag3/src/Strata/.venv/bin/python",
+          "-B",
+          "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-cli-gpu-v1/server-bootstrap-1.py",
+          "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-state-v2/profile.json",
+          "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-source-v8",
+          "--profile",
+          "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-state-v2/profile.json",
+          "--store",
+          "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-cli-gpu-v1/store",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "0",
+          "--text",
+          "--api-key",
+          "<REDACTED>",
+          "--ram-gib",
+          "96",
+          "--disk-gib",
+          "128",
+          "--pool-trace-output",
+          "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-integration-cli-gpu-v1/pool-1.json"
+        ],
+        "exit_code": 0,
+        "forced_process_group_cleanup": false,
+        "graceful": true,
+        "pid": 4180442
+      },
+      "worker_shutdown": {
+        "close_succeeded": true,
+        "event_count": 49,
+        "native_exit_code": 0,
+        "native_pid": 4180448,
+        "trace_sha256": "c37f32698c88b1db07f7e5cb58d2dce0ffa6d1fb870d7cf5b4dfca099dc13262"
+      }
+    }
+  ],
+  "status": "MODEL_OUTCOMES_RECORDED",
+  "transport": "cli"
+}

@@ -1,0 +1,90 @@
+test_boolean_code_is_invalid (test_command_summary.SummaryTests.test_boolean_code_is_invalid) ... FAIL
+test_empty (test_command_summary.SummaryTests.test_empty) ... ok
+test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) ... 
+  test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) (row={'label': 3, 'exit_code': 0}) ... FAIL
+  test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) (row={'label': 'x', 'exit_code': '0'}) ... FAIL
+  test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) (row={'label': 'x'}) ... FAIL
+  test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) (row=None) ... FAIL
+test_mixed (test_command_summary.SummaryTests.test_mixed) ... FAIL
+test_no_mutation (test_command_summary.SummaryTests.test_no_mutation) ... ok
+test_unicode_and_order (test_command_summary.SummaryTests.test_unicode_and_order) ... FAIL
+
+======================================================================
+FAIL: test_boolean_code_is_invalid (test_command_summary.SummaryTests.test_boolean_code_is_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13A-generic-bootstrap-dev15-20261019-v1/source/tests/test_command_summary.py", line 13, in test_boolean_code_is_invalid
+    with self.assertRaises(ValueError):summarize([dict(label='x',exit_code=True)])
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) (row={'label': 3, 'exit_code': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13A-generic-bootstrap-dev15-20261019-v1/source/tests/test_command_summary.py", line 16, in test_invalid_fields
+    with self.subTest(row=row),self.assertRaises(ValueError):summarize([row])
+                               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) (row={'label': 'x', 'exit_code': '0'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13A-generic-bootstrap-dev15-20261019-v1/source/tests/test_command_summary.py", line 16, in test_invalid_fields
+    with self.subTest(row=row),self.assertRaises(ValueError):summarize([row])
+                               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) (row={'label': 'x'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13A-generic-bootstrap-dev15-20261019-v1/source/tests/test_command_summary.py", line 16, in test_invalid_fields
+    with self.subTest(row=row),self.assertRaises(ValueError):summarize([row])
+                               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_fields (test_command_summary.SummaryTests.test_invalid_fields) (row=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13A-generic-bootstrap-dev15-20261019-v1/source/tests/test_command_summary.py", line 16, in test_invalid_fields
+    with self.subTest(row=row),self.assertRaises(ValueError):summarize([row])
+                               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_mixed (test_command_summary.SummaryTests.test_mixed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13A-generic-bootstrap-dev15-20261019-v1/source/tests/test_command_summary.py", line 7, in test_mixed
+    self.assertEqual(summarize(rows),dict(passed=1,failed=2,failed_labels=['test','lint']))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'passed': 3, 'failed': 0, 'failed_labels': []} != {'passed': 1, 'failed': 2, 'failed_labels': ['test', 'lint']}
+- {'failed': 0, 'failed_labels': [], 'passed': 3}
+?            ^                                 ^
+
++ {'failed': 2, 'failed_labels': ['test', 'lint'], 'passed': 1}
+?            ^                    ++++++++++++++             ^
+
+
+======================================================================
+FAIL: test_unicode_and_order (test_command_summary.SummaryTests.test_unicode_and_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13A-generic-bootstrap-dev15-20261019-v1/source/tests/test_command_summary.py", line 9, in test_unicode_and_order
+    self.assertEqual(summarize([dict(label='雪',exit_code=1),dict(label='café',exit_code=1)]),dict(passed=0,failed=2,failed_labels=['雪','café']))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'passed': 2, 'failed': 0, 'failed_labels': []} != {'passed': 0, 'failed': 2, 'failed_labels': ['雪', 'café']}
+- {'failed': 0, 'failed_labels': [], 'passed': 2}
+?            ^                                 ^
+
++ {'failed': 2, 'failed_labels': ['雪', 'café'], 'passed': 0}
+?            ^                    +++++++++++             ^
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (failures=7)

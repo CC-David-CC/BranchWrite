@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My First BranchWrite Page</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 1rem;
+      line-height: 1.5;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+    }
+
+    #message {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>My First BranchWrite Page</h1>
+  <p>Welcome! This is a simple one-file page.</p>
+  <button id="hello-button">Say hello.</button>
+  <p id="message" aria-live="polite"></p>
+  <script>
+    document.getElementById("hello-button").addEventListener("click", function () {
+      document.getElementById("message").textContent = "Hello, David!";
+    });
+  </script>
+</body>
+</html>

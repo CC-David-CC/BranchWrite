@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "scope": "Administrative HTTP preparation of three native Project Bases; not a BranchWrite coding comparison",
+  "bases": [],
+  "service_supervisor_pid": 717934,
+  "phase": "prefill-B-compact-selected",
+  "error": {
+    "type": "RequestRejected",
+    "message": "COW HTTP 400: Invalid presentation namespace"
+  },
+  "service_exit": 0,
+  "elapsed_seconds": 79.69890149100684
+}

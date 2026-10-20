@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "expected_disposition": "UNKNOWN_EFFECT_REMAINS_UNRESOLVED",
+  "exit_code": 4,
+  "original_tool_operation_counts": {
+    "dispatched": 1,
+    "returned": 0,
+    "settled": 0
+  },
+  "file_inode_mtime_hash_unchanged": true,
+  "repeated_resume_ledger_unchanged": true,
+  "scope": "Actual before-return process exit and repeated normal CLI resume; no owner-side completion proof is fabricated."
+}

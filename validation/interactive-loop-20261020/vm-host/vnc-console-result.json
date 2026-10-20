@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "scope": "QEMU private Unix-socket VNC console only; guest desktop sharing is available on demand but was not started",
+  "banner": "RFB 003.008\n",
+  "checked_at": 1792491246.73185
+}

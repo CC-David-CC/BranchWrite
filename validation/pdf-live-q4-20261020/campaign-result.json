@@ -1,0 +1,30 @@
+{
+  "status": "CLIENT_VERIFIED_PENDING_INDEPENDENT_AUDIT",
+  "controller_pid": 2467427,
+  "client_host": "r4090",
+  "argv": [
+    "/home/dflanag3/spatial-artifacts/bw-pdf-cli-dev59-20261020/venv/bin/branchwrite",
+    "code",
+    "/home/dflanag3/projects/bw-pdf-dev59-20261020",
+    "--project-files",
+    "--task-file",
+    "/home/dflanag3/src/branchwrite-documents-20261020/examples/prompts/pdf.txt",
+    "--connection",
+    "/home/dflanag3/spatial-artifacts/bw-pdf-cli-dev59-20261020/connection.json",
+    "--state",
+    "/home/dflanag3/spatial-artifacts/bw-pdf-cli-dev59-20261020/pdf-run",
+    "--branch",
+    "bw-pdf-dev59-20261020",
+    "--sampler",
+    "greedy",
+    "--max-steps",
+    "2048"
+  ],
+  "prompt_sha256": "a849ff6a55f9de2f076da52ef1031a664f7d4b542ef465f2a91dc8303dae92e8",
+  "operator_candidate_edits": 0,
+  "scope": "installed BW CLI on llm-49 -> authenticated COW HTTP -> Q4 on llm-60; actual isolated PDF workers on llm-49",
+  "elapsed_seconds": 493.6347805300029,
+  "updated_unix": 1792526116.1801157,
+  "client_pid": 2467429,
+  "exit_code": 0
+}

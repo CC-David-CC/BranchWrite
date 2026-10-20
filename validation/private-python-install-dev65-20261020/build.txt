@@ -1,0 +1,230 @@
+Building wheel...
+running egg_info
+writing branchwrite.egg-info/PKG-INFO
+writing dependency_links to branchwrite.egg-info/dependency_links.txt
+writing entry points to branchwrite.egg-info/entry_points.txt
+writing requirements to branchwrite.egg-info/requires.txt
+writing top-level names to branchwrite.egg-info/top_level.txt
+reading manifest file 'branchwrite.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'branchwrite.egg-info/SOURCES.txt'
+running bdist_wheel
+running build
+running build_py
+copying branchwrite/pdf_tools.py -> build/lib/branchwrite
+copying branchwrite/verification.py -> build/lib/branchwrite
+copying branchwrite/cad_tools.py -> build/lib/branchwrite
+copying branchwrite/blender_tools.py -> build/lib/branchwrite
+running egg_info
+writing branchwrite.egg-info/PKG-INFO
+writing dependency_links to branchwrite.egg-info/dependency_links.txt
+writing entry points to branchwrite.egg-info/entry_points.txt
+writing requirements to branchwrite.egg-info/requires.txt
+writing top-level names to branchwrite.egg-info/top_level.txt
+reading manifest file 'branchwrite.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'branchwrite.egg-info/SOURCES.txt'
+warning: ClientBuild: byte-compiling is disabled, skipping.
+
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/branchwrite
+copying build/lib/branchwrite/project_context.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/image_feedback.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/remote_execution.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/coding_defaults.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/tool_progress.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/pdf_tools.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/pdf_inspect_worker.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/guided_cli.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_config.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/project_scope.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_requirements.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_render.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_execution.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/coding_reconciliation.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/run_report.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/planning_retry.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_inspect.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/coding_review.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/http_request.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/control_contract.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/blender_mcp_server.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+creating build/bdist.linux-x86_64/wheel/branchwrite/_examples
+copying build/lib/branchwrite/_examples/tool-worked-examples.txt -> build/bdist.linux-x86_64/wheel/./branchwrite/_examples
+copying build/lib/branchwrite/_examples/line-file-worked-examples.txt -> build/bdist.linux-x86_64/wheel/./branchwrite/_examples
+copying build/lib/branchwrite/_examples/literal-file-worked-examples.txt -> build/bdist.linux-x86_64/wheel/./branchwrite/_examples
+copying build/lib/branchwrite/_examples/terminal-worked-examples.txt -> build/bdist.linux-x86_64/wheel/./branchwrite/_examples
+copying build/lib/branchwrite/_examples/coding.bw -> build/bdist.linux-x86_64/wheel/./branchwrite/_examples
+copying build/lib/branchwrite/remote_ownership.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/tool_dispatch.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/model_dispatch.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/coding_contract.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/remote_upload.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_build_worker.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/base_cli.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/coding_cli.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/terminal_worker.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/session_controls.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/interactive_cli.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/receipt_cli.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/golden_path.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/blender_mcp.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/pdf_build_worker.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/workspace_versions.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/context_pack.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/tool_registry.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/browser_assets.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/task_breakdown.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/browser_isolation.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/execution.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/run_cli.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/command_outputs.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/component_model.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/client_doctor.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/records.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/remote_guest.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/remote_config.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/text_file_codec.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cow_fork.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/browser_worker.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/project_baseline.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/project_apply.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/interactive_preview.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_evaluate_worker.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/blender_execution.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/project_export.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/thinking_ladder.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/client_setup.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cow_client.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/verification.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/pdf_execution.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/interactive_session.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/interpreter.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/blender_worker.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/interactive_terminal.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/base_choice.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/chat_cli.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/__init__.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_tools.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/pdf_contract.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/terminal_components.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/browser_capture.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/__main__.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cad_carrier.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/cow_actions.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/language.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/session_ledger.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/terminal.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/kernel.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/model_pause.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/model_inputs.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/blender_tools.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+copying build/lib/branchwrite/coding_status.py -> build/bdist.linux-x86_64/wheel/./branchwrite
+warning: install_lib: byte-compiling is disabled, skipping.
+
+running install_egg_info
+Copying branchwrite.egg-info to build/bdist.linux-x86_64/wheel/./branchwrite-0.1.0.dev65-py3.12.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/branchwrite-0.1.0.dev65.dist-info/WHEEL
+creating '/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/wheels/.tmp-edoltmnw/branchwrite-0.1.0.dev65-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'branchwrite/__init__.py'
+adding 'branchwrite/__main__.py'
+adding 'branchwrite/base_choice.py'
+adding 'branchwrite/base_cli.py'
+adding 'branchwrite/blender_execution.py'
+adding 'branchwrite/blender_mcp.py'
+adding 'branchwrite/blender_mcp_server.py'
+adding 'branchwrite/blender_tools.py'
+adding 'branchwrite/blender_worker.py'
+adding 'branchwrite/browser_assets.py'
+adding 'branchwrite/browser_capture.py'
+adding 'branchwrite/browser_isolation.py'
+adding 'branchwrite/browser_worker.py'
+adding 'branchwrite/cad_build_worker.py'
+adding 'branchwrite/cad_carrier.py'
+adding 'branchwrite/cad_config.py'
+adding 'branchwrite/cad_evaluate_worker.py'
+adding 'branchwrite/cad_execution.py'
+adding 'branchwrite/cad_inspect.py'
+adding 'branchwrite/cad_render.py'
+adding 'branchwrite/cad_requirements.py'
+adding 'branchwrite/cad_tools.py'
+adding 'branchwrite/chat_cli.py'
+adding 'branchwrite/client_doctor.py'
+adding 'branchwrite/client_setup.py'
+adding 'branchwrite/coding_cli.py'
+adding 'branchwrite/coding_contract.py'
+adding 'branchwrite/coding_defaults.py'
+adding 'branchwrite/coding_reconciliation.py'
+adding 'branchwrite/coding_review.py'
+adding 'branchwrite/coding_status.py'
+adding 'branchwrite/command_outputs.py'
+adding 'branchwrite/component_model.py'
+adding 'branchwrite/context_pack.py'
+adding 'branchwrite/control_contract.py'
+adding 'branchwrite/cow_actions.py'
+adding 'branchwrite/cow_client.py'
+adding 'branchwrite/cow_fork.py'
+adding 'branchwrite/execution.py'
+adding 'branchwrite/golden_path.py'
+adding 'branchwrite/guided_cli.py'
+adding 'branchwrite/http_request.py'
+adding 'branchwrite/image_feedback.py'
+adding 'branchwrite/interactive_cli.py'
+adding 'branchwrite/interactive_preview.py'
+adding 'branchwrite/interactive_session.py'
+adding 'branchwrite/interactive_terminal.py'
+adding 'branchwrite/interpreter.py'
+adding 'branchwrite/kernel.py'
+adding 'branchwrite/language.py'
+adding 'branchwrite/model_dispatch.py'
+adding 'branchwrite/model_inputs.py'
+adding 'branchwrite/model_pause.py'
+adding 'branchwrite/pdf_build_worker.py'
+adding 'branchwrite/pdf_contract.py'
+adding 'branchwrite/pdf_execution.py'
+adding 'branchwrite/pdf_inspect_worker.py'
+adding 'branchwrite/pdf_tools.py'
+adding 'branchwrite/planning_retry.py'
+adding 'branchwrite/project_apply.py'
+adding 'branchwrite/project_baseline.py'
+adding 'branchwrite/project_context.py'
+adding 'branchwrite/project_export.py'
+adding 'branchwrite/project_scope.py'
+adding 'branchwrite/receipt_cli.py'
+adding 'branchwrite/records.py'
+adding 'branchwrite/remote_config.py'
+adding 'branchwrite/remote_execution.py'
+adding 'branchwrite/remote_guest.py'
+adding 'branchwrite/remote_ownership.py'
+adding 'branchwrite/remote_upload.py'
+adding 'branchwrite/run_cli.py'
+adding 'branchwrite/run_report.py'
+adding 'branchwrite/session_controls.py'
+adding 'branchwrite/session_ledger.py'
+adding 'branchwrite/task_breakdown.py'
+adding 'branchwrite/terminal.py'
+adding 'branchwrite/terminal_components.py'
+adding 'branchwrite/terminal_worker.py'
+adding 'branchwrite/text_file_codec.py'
+adding 'branchwrite/thinking_ladder.py'
+adding 'branchwrite/tool_dispatch.py'
+adding 'branchwrite/tool_progress.py'
+adding 'branchwrite/tool_registry.py'
+adding 'branchwrite/verification.py'
+adding 'branchwrite/workspace_versions.py'
+adding 'branchwrite/_examples/coding.bw'
+adding 'branchwrite/_examples/line-file-worked-examples.txt'
+adding 'branchwrite/_examples/literal-file-worked-examples.txt'
+adding 'branchwrite/_examples/terminal-worked-examples.txt'
+adding 'branchwrite/_examples/tool-worked-examples.txt'
+adding 'branchwrite-0.1.0.dev65.dist-info/METADATA'
+adding 'branchwrite-0.1.0.dev65.dist-info/WHEEL'
+adding 'branchwrite-0.1.0.dev65.dist-info/entry_points.txt'
+adding 'branchwrite-0.1.0.dev65.dist-info/top_level.txt'
+adding 'branchwrite-0.1.0.dev65.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel
+Successfully built spatial-artifacts/bw-private-install-dev65-20261020/wheels/branchwrite-0.1.0.dev65-py3-none-any.whl

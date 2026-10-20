@@ -1,0 +1,19 @@
+======================================================================
+ERROR: test_corrupt_retained_outcome_is_indeterminate_not_a_preexecution_rejection (tests.test_remote_execution.RemoteTargetTests.test_corrupt_retained_outcome_is_indeterminate_not_a_preexecution_rejection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 78, in test_corrupt_retained_outcome_is_indeterminate_not_a_preexecution_rejection
+    with self.assertRaises(RemoteIndeterminate):t.read_receipt('op-one','a'*64,'true')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/remote_execution.py", line 157, in read_receipt
+    return self._decode(intent,json.loads(_private(folder/'receipt.json')))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/remote_execution.py", line 137, in _decode
+    if type(response) is not dict or set(response)!=keys or type(response['schema']) is not int or response['schema']!=1 or response['operation_id']!=intent['operation_id'] or response['request_sha256']!=sha256(self._request(intent)).hexdigest():raise ValueError('remote acknowledgment has wrong original binding')
+                                                                                                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: remote acknowledgment has wrong original binding
+
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+FAILED (errors=1)

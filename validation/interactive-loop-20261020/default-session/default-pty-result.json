@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "Installed no-argument CLI, real PTY and authenticated LAN server; no inference requested",
+  "version": "0.1.0.dev42",
+  "client_host": "r4090",
+  "server": "llm-60",
+  "project": "/home/dflanag3/projects/branchwrite-default-dev42-smoke",
+  "exit_code": 0,
+  "key_in_output": false,
+  "key_saved": false,
+  "project_unchanged": true,
+  "completed_gpu_requests_before": 0,
+  "completed_gpu_requests_after": 0,
+  "controls": [
+    "help",
+    "plan",
+    "history",
+    "work",
+    "exit"
+  ],
+  "wheel_sha256": "2bd0822ea845092631f76d99c9eac2cbd21ffb68b9434cf6feed9da84fb7ec60"
+}

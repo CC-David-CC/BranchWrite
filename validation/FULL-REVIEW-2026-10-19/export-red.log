@@ -1,0 +1,37 @@
+test_binary_creation_and_exact_newline_flags (test_full_project_review.FullProjectReviewTests.test_binary_creation_and_exact_newline_flags) ... ok
+test_file_deletion_has_no_implicit_permission (test_full_project_review.FullProjectReviewTests.test_file_deletion_has_no_implicit_permission) ... ok
+test_mode_change_requires_mode_grant (test_full_project_review.FullProjectReviewTests.test_mode_change_requires_mode_grant) ... ok
+test_shell_written_edit_is_in_complete_review (test_full_project_review.FullProjectReviewTests.test_shell_written_edit_is_in_complete_review) ... ok
+test_ungranted_shell_write_is_rejected (test_full_project_review.FullProjectReviewTests.test_ungranted_shell_write_is_rejected) ... ok
+test_complete_export_contains_exact_binary_and_text_bytes (test_project_export.ProjectExportTests.test_complete_export_contains_exact_binary_and_text_bytes) ... ERROR
+test_existing_destination_is_preserved (test_project_export.ProjectExportTests.test_existing_destination_is_preserved) ... ERROR
+test_failed_review_creates_no_export (test_project_export.ProjectExportTests.test_failed_review_creates_no_export) ... ERROR
+
+======================================================================
+ERROR: test_complete_export_contains_exact_binary_and_text_bytes (test_project_export.ProjectExportTests.test_complete_export_contains_exact_binary_and_text_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-full-review-20261019/tests/test_project_export.py", line 13, in test_complete_export_contains_exact_binary_and_text_bytes
+    from branchwrite.project_export import export_changes
+ModuleNotFoundError: No module named 'branchwrite.project_export'
+
+======================================================================
+ERROR: test_existing_destination_is_preserved (test_project_export.ProjectExportTests.test_existing_destination_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-full-review-20261019/tests/test_project_export.py", line 27, in test_existing_destination_is_preserved
+    from branchwrite.project_export import export_changes
+ModuleNotFoundError: No module named 'branchwrite.project_export'
+
+======================================================================
+ERROR: test_failed_review_creates_no_export (test_project_export.ProjectExportTests.test_failed_review_creates_no_export)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-full-review-20261019/tests/test_project_export.py", line 33, in test_failed_review_creates_no_export
+    from branchwrite.project_export import export_changes
+ModuleNotFoundError: No module named 'branchwrite.project_export'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.048s
+
+FAILED (errors=3)

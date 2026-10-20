@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "prefix_bytes_unchanged": true,
+  "payload_sha256": "57091df412b49984e06b1481d7cca03c369f8c315fec200d5dbc297eb4fe2c1f",
+  "payload_bytes": 524900540,
+  "prefix_consumed": 15537,
+  "final_consumed": 25791,
+  "forward_tokens": 10254,
+  "prefill_tokens": 5298,
+  "generated_tokens": 4956,
+  "integrity_mismatches": 0,
+  "numerical_oracle": "NOT_RUN"
+}

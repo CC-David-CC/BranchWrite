@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "status": "95_CLIENT_107_SERVER_CPU_PASS_LIVE_MITIGATION_UNRUN",
+  "base": "2659b59480e3901705e2ee84faf9afce624566c5",
+  "examples": 10,
+  "actual_sandboxed_shell_invocations": 15,
+  "host_authored_final_reports": true,
+  "example_file": {
+    "path": "/home/dflanag3/src/branchwrite-terminal-examples-20261018/examples/terminal-worked-examples.txt",
+    "bytes": 39145,
+    "sha256": "2a33b84781509f23d117c1502691a8cab1e767a8bf0bde3f0552bfca2ed9bfbe"
+  },
+  "client": {
+    "passed": 95,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "report": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/terminal-examples-tests-v1/client-regression-v1.json"
+  },
+  "server": {
+    "passed": 107,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "report": "llm-60:/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-terminal-examples-cpu-v1/server-regression-v1.json"
+  },
+  "model_inference": "NOT_RUN_FOR_THIS_CHANGE",
+  "thinking_tokens": 4096,
+  "samplers": "unchanged DRY+Min-P",
+  "limits": [
+    "Teaching examples are independently executed synthetic fixtures, not model successes.",
+    "No protected L01 answers supplied as examples.",
+    "File-only prompts remain byte-identical.",
+    "An initial overbroad English-phrase rendering guard was corrected; completed fixtures reopened with execution prohibited.",
+    "No semantic report verifier, numerical oracle or full VC/G qualification added."
+  ]
+}

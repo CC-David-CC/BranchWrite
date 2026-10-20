@@ -1,0 +1,27 @@
+{
+  "status": "FAIL",
+  "tests": 4,
+  "failures": 1,
+  "errors": 2,
+  "skips": 0,
+  "seconds": 0.05699997302144766,
+  "results": [
+    {
+      "id": "test_document_preview.DocumentPreviewTests.test_multiple_pdfs_require_explicit_choice",
+      "status": "FAIL"
+    },
+    {
+      "id": "test_document_preview.DocumentPreviewTests.test_selected_text_is_literal_and_other_text_is_not_exposed",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_document_preview.DocumentPreviewTests.test_single_saved_pdf_opens_without_a_website",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_document_preview.DocumentPreviewTests.test_website_preview_does_not_implicitly_add_documents",
+      "status": "PASS",
+      "seconds": 0.017905588960275054
+    }
+  ]
+}

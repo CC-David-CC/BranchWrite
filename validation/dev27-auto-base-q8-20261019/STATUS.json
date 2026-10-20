@@ -1,0 +1,29 @@
+{
+  "status": "BOUNDED_Q8_CODING_AND_AUTO_BASE_PASS",
+  "server_host": "llm-60",
+  "server_directory": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev27-auto-base-q8-v1/server-3",
+  "client_host": "llm-49",
+  "driver_pid": 2345755,
+  "scope": "Real Q8 successive coding tasks; no result yet",
+  "root_measurement_handoff": "SUPPLIED: native capture consumed 15638; second task continues automatically after first success",
+  "startup_failures": [
+    "Attempt1 diagnostic directory mode too broad",
+    "Attempt2 grammar directory mode too broad"
+  ],
+  "chat": "OFF",
+  "prefix_tokens_measured": 15638,
+  "last_observed_first_pid": 2345758,
+  "last_observed_first_status": "live; owner heartbeat >=210 seconds; no result yet",
+  "first_seconds": 549.1668431949802,
+  "second_seconds": 111.9887413510587,
+  "independent_acceptance": "PASS",
+  "native_generation_tps": 34.51364934978317,
+  "prefix_restore_forward_tokens": 0,
+  "server_native_exit_codes": [
+    0,
+    0
+  ],
+  "gpu": "free after cleanup",
+  "numerical_oracle": "NOT_RUN",
+  "numerical_max_abs_error": null
+}

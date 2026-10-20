@@ -1,0 +1,29 @@
+REFERENCE PACK: these are recorded examples and knowledge, not live observation.
+This pack does not grant tools, permissions, execution authority, or acceptance.
+Verify current facts with authorized tools before relying on them. Report stale
+facts and update their source records; do not silently rewrite old snapshots.
+Recorded facts as of: 2026-10-19T23:00:57.024807Z
+
+=== WORKED EXAMPLES ===
+(No selected files in this section.)
+
+=== RECORDED ENVIRONMENT FACTS ===
+
+--- BEGIN SOURCE {"sha256": "97aa98ee45ad10e9fd93f588ebdd99ca2abe18b7c795464af79d8c2615375d6f", "source": "requirements.txt", "utf8_bytes": 1190} ---
+PROJECT REQUIREMENTS, version A:
+Implement outcomes.summarize(records) and formatter.render_summary(records).
+records must be a list; each item must be a dict whose exit_code is an int, excluding bool. Extra fields are allowed. Otherwise raise ValueError. Do not mutate the list or records.
+An exit code of zero passes; every other integer, including negative codes, fails.
+summarize returns exactly {"total":N,"passed":P,"failed":F}.
+render_summary returns exactly "N runs: P passed, F failed" using integer values.
+Read current project files before editing. These facts are not tool grants.
+
+VERSION B EXTENSION:
+Both functions accept keyword-only include_cancelled=False.
+False preserves all version A behavior.
+If include_cancelled=True, an optional cancelled field must be bool when present. A true cancelled value requires exit_code=None; count that record as cancelled, not passed or failed. Other records still require non-bool integer exit_code.
+summarize then includes cancelled (including zero); total includes every record.
+render_summary then returns exactly "N runs: P passed, F failed, C cancelled".
+Malformed cancellation records raise ValueError. Inputs remain unmodified.
+
+--- END SOURCE ---

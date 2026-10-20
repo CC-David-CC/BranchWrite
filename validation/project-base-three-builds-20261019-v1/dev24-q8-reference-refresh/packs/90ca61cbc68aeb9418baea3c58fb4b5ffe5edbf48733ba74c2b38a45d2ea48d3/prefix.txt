@@ -1,0 +1,21 @@
+REFERENCE PACK: these are recorded examples and knowledge, not live observation.
+This pack does not grant tools, permissions, execution authority, or acceptance.
+Verify current facts with authorized tools before relying on them. Report stale
+facts and update their source records; do not silently rewrite old snapshots.
+Recorded facts as of: 2026-10-19T22:58:24.266204Z
+
+=== WORKED EXAMPLES ===
+(No selected files in this section.)
+
+=== RECORDED ENVIRONMENT FACTS ===
+
+--- BEGIN SOURCE {"sha256": "0121803b9acf62c6c6fa883d77e0159a19e10ee7a4c66343a3b445c4aaf104f6", "source": "requirements.txt", "utf8_bytes": 593} ---
+PROJECT REQUIREMENTS, version A:
+Implement outcomes.summarize(records) and formatter.render_summary(records).
+records must be a list; each item must be a dict whose exit_code is an int, excluding bool. Extra fields are allowed. Otherwise raise ValueError. Do not mutate the list or records.
+An exit code of zero passes; every other integer, including negative codes, fails.
+summarize returns exactly {"total":N,"passed":P,"failed":F}.
+render_summary returns exactly "N runs: P passed, F failed" using integer values.
+Read current project files before editing. These facts are not tool grants.
+
+--- END SOURCE ---

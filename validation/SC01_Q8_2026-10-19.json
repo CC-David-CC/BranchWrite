@@ -1,0 +1,68 @@
+{
+  "status": "BOUNDED_AUTONOMOUS_SC01_PASS",
+  "failures": [],
+  "model": "Q8_0",
+  "kv": "FP16",
+  "sampler": "greedy",
+  "thinking_tokens": 4096,
+  "domain_examples_added": 0,
+  "model_calls": 7,
+  "output_tokens": 1171,
+  "whole_cli_seconds": 135.44121186598204,
+  "visible_test_methods": 8,
+  "heldout_methods": 1,
+  "heldout_generated_cases": 64,
+  "seed": 7375,
+  "ledger_unchanged": true,
+  "final_answer": "Repaired only `ledger.py` to implement `summarize(lines)` per README: trim lines, skip blank/comment lines, split on the first colon, validate nonempty names and nonnegative integer counts, raise `ValueError` for malformed/empty/negative records, and sum repeated names.\n\nActual test command: `python3 -m unittest discover -s tests -v`\n- Disposition: exited\n- Exit status: 0\n- Stdout: empty\n- Stderr: all 8 tests passed (`Ran 8 tests in 0.000s`, `OK`)",
+  "diff": "--- ledger.py before\n+++ ledger.py after\n@@ -1,6 +1,21 @@\n def summarize(lines):\n-    result = {}\n+    totals = {}\n     for line in lines:\n-        name, count = line.split(\":\")\n-        result[name] = int(count)\n-    return result\n+        stripped = line.strip()\n+        if not stripped or stripped.startswith(\"#\"):\n+            continue\n+        if \":\" not in stripped:\n+            raise ValueError(\"malformed record\")\n+        name, count_text = stripped.split(\":\", 1)\n+        name = name.strip()\n+        count_text = count_text.strip()\n+        if not name:\n+            raise ValueError(\"empty name\")\n+        try:\n+            count = int(count_text)\n+        except ValueError as exc:\n+            raise ValueError(\"invalid count\") from exc\n+        if count < 0:\n+            raise ValueError(\"negative count\")\n+        totals[name] = totals.get(name, 0) + count\n+    return totals\n",
+  "scope": "One model-selected coding trajectory,not general certification or fresh-logit equivalence",
+  "client_source_commit": "4a5f6f7687c12704919932478ad8a6552f919770",
+  "native_work": {
+    "counters": {
+      "forward_tokens": 21077,
+      "consumed": 21077,
+      "prefill_tokens": 19906,
+      "prefill_chunks": 45,
+      "decode_prepare_ns": 1360321418,
+      "decode_compute_ns": 21133525979,
+      "decode_finish_ns": 152539262,
+      "decode_timed_tokens": 1171,
+      "integrity_device_hashed_bytes": 523776294912,
+      "copied_bytes": 528482304,
+      "cow_pages": 252
+    },
+    "commands": {
+      "stats": 2477,
+      "vision_info": 1211,
+      "reset": 1,
+      "feed": 8,
+      "capture": 8,
+      "pages": 8,
+      "logits": 8,
+      "restore": 15,
+      "write": 8,
+      "ram_clear": 8,
+      "sample_mask_v2": 1171,
+      "decode": 1171,
+      "quit": 1
+    },
+    "scope": "Native instrumentation values; timings may not cover every grammar-controlled execution path. No cache speedup comparison or fresh-logit oracle run.",
+    "native_decode_section_seconds": 22.646386659,
+    "native_decode_section_tps": 51.70802820036757,
+    "source_acquisitions": {
+      "model_cache": 7
+    },
+    "initial_profile_id": "15ef2e771faf1b5858fb138b5a03201105bd467361ef033ce3b07ec7fc77fce8",
+    "limitations": [
+      "Counter-defined decode section,not whole request TPS",
+      "No stock-serving speedup comparison",
+      "No fresh-logit oracle",
+      "No power-loss or full certification"
+    ]
+  },
+  "numerical_max_error": "NOT_MEASURED",
+  "startup_scope": "Native/model startup excluded from whole_cli_seconds",
+  "general_tool_examples_present": true,
+  "protected_tests_modified": false
+}

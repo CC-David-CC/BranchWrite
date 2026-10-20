@@ -1,0 +1,1 @@
+{"status": "PASS", "exit_code": 0, "changed": ["branchwrite/base_choice.py"], "original_source_unchanged": true, "protected_tests_unchanged": true, "scope": "Visible repair regression plus independent original checks and fresh mixed/Unicode cases in read-only OS sandbox; parent review still required"}

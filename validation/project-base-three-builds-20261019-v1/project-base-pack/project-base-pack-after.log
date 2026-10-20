@@ -1,0 +1,12 @@
+test_foreign_parent_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_foreign_parent_rejected_before_context_mutation) ... ok
+test_initial_pack_version_binds_exact_identity (test_project_base_pack.ProjectBasePackTests.test_initial_pack_version_binds_exact_identity) ... ok
+test_observation_refresh_after_rebuild_uses_closed_root_boundary (test_project_base_pack.ProjectBasePackTests.test_observation_refresh_after_rebuild_uses_closed_root_boundary) ... ok
+test_rebuilt_root_keeps_lineage_without_moving_old_worker (test_project_base_pack.ProjectBasePackTests.test_rebuilt_root_keeps_lineage_without_moving_old_worker) ... ok
+test_same_operation_is_idempotent_without_reprefill (test_project_base_pack.ProjectBasePackTests.test_same_operation_is_idempotent_without_reprefill) ... ok
+test_stale_source_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_stale_source_rejected_before_context_mutation) ... ok
+test_wrong_pack_id_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_wrong_pack_id_rejected_before_context_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.785s
+
+OK

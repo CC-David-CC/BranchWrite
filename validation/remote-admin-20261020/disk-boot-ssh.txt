@@ -1,0 +1,7 @@
+/dev/vda2 ext4
+branchwrite-admin01
+active
+active
+d7148a9a-4dfa-4583-92ac-625f8a101632
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda2        31G  3.4G   26G  12% /

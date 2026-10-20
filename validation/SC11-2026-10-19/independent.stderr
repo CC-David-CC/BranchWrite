@@ -1,0 +1,12 @@
+test_generated (tests.test_generated.GeneratedTests.test_generated) ... ok
+test_boolean_code_is_invalid (tests.test_original.SummaryTests.test_boolean_code_is_invalid) ... ok
+test_empty (tests.test_original.SummaryTests.test_empty) ... ok
+test_invalid_fields (tests.test_original.SummaryTests.test_invalid_fields) ... ok
+test_mixed (tests.test_original.SummaryTests.test_mixed) ... ok
+test_no_mutation (tests.test_original.SummaryTests.test_no_mutation) ... ok
+test_unicode_and_order (tests.test_original.SummaryTests.test_unicode_and_order) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.007s
+
+OK

@@ -1,0 +1,68 @@
+{
+  "history": [
+    {
+      "id": "turn-1-c2ec91c0e5d0c19b",
+      "input": {
+        "item_ids": [
+          "input-31343ccbc3f64d8385a09299525a258f"
+        ],
+        "items": [
+          {
+            "id": "input-31343ccbc3f64d8385a09299525a258f",
+            "kind": "send",
+            "message": "Make a pretty, phone-friendly website about dogs, all in index.html with no downloads. Include these two short sentences: Milo plays. Luna runs. Add a Say hello button that shows Hello, David! when clicked.",
+            "mode": "work"
+          }
+        ],
+        "message": "Make a pretty, phone-friendly website about dogs, all in index.html with no downloads. Include these two short sentences: Milo plays. Luna runs. Add a Say hello button that shows Hello, David! when clicked.",
+        "mode": "work",
+        "schema": 1,
+        "source": {
+          "context": null,
+          "file_commit": null,
+          "mode": "work",
+          "turn": null,
+          "workdir": "/home/dflanag3/projects/bw-stop-resume-project-20261020"
+        }
+      },
+      "result": {
+        "acceptance": "not_independently_established",
+        "action": "work",
+        "answer": null,
+        "before": "a16a6c982a7225e80187e011312a70c40f018420",
+        "checks_passed": null,
+        "context": {
+          "branch": "bw-session-c22fa1fe2d4dcb99582efb3a11afce83fa064e4a",
+          "execution_profile_id": "3020f9c9c2e9602074a4c2ee32923a07471e29682b0a28f349963d96ed02e227",
+          "mode": "ask",
+          "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+          "revision": 1,
+          "root": "e26f0506f458fd5fdb9b23d191bf28895f46f005c12176833073da2512a11d78",
+          "tip": "e26f0506f458fd5fdb9b23d191bf28895f46f005c12176833073da2512a11d78"
+        },
+        "file_commit": "2264b326c16562698683ea4031ec6a0e13eb2c26",
+        "mode": "work",
+        "paths": [],
+        "status": "interrupted",
+        "unfinished_request": true,
+        "workdir": "/home/dflanag3/projects/bw-stop-resume-project-20261020",
+        "workflow": "/home/dflanag3/spatial-artifacts/bw-stop-resume-client-20261020/session/turns/turn-1-c2ec91c0e5d0c19b"
+      }
+    }
+  ],
+  "current": {
+    "context": {
+      "branch": "bw-session-c22fa1fe2d4dcb99582efb3a11afce83fa064e4a",
+      "execution_profile_id": "3020f9c9c2e9602074a4c2ee32923a07471e29682b0a28f349963d96ed02e227",
+      "mode": "ask",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "revision": 1,
+      "root": "e26f0506f458fd5fdb9b23d191bf28895f46f005c12176833073da2512a11d78",
+      "tip": "e26f0506f458fd5fdb9b23d191bf28895f46f005c12176833073da2512a11d78"
+    },
+    "file_commit": "2264b326c16562698683ea4031ec6a0e13eb2c26",
+    "workdir": "/home/dflanag3/projects/bw-stop-resume-project-20261020",
+    "mode": "work",
+    "turn": "turn-1-c2ec91c0e5d0c19b"
+  }
+}

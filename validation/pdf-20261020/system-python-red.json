@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "tests": 3,
+  "failures": 0,
+  "errors": 2,
+  "skips": 0,
+  "seconds": 22.21116709301714,
+  "results": [
+    {
+      "id": "test_python_runtime.SystemPythonRuntimeTests.test_admitted_venv_module_mutation_is_still_rejected",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_python_runtime.SystemPythonRuntimeTests.test_distro_venv_admits_and_executes_in_retired_isolation",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_python_runtime.SystemPythonRuntimeTests.test_venv_link_to_unrelated_private_file_remains_rejected",
+      "status": "PASS",
+      "seconds": 0.04614642390515655
+    }
+  ]
+}

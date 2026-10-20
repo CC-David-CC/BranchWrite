@@ -1,0 +1,10 @@
+{
+  "archive": "/home/dflanag3/spatial-artifacts/branchwrite-dev44-preview-20261020.tar.gz",
+  "bytes": 512042,
+  "sha256": "469762b4db10cb4bab948db27767ae1ef9d728708aa73f249c9cd0ba998e52d6",
+  "excludes": [
+    "operator-test-key.txt",
+    "venv",
+    "*.pyc"
+  ]
+}

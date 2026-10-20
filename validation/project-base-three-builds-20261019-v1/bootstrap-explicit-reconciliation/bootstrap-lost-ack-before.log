@@ -1,0 +1,29 @@
+test_lost_root_reply_is_explicitly_reconciled_before_admission (test_coding_pack_http.CodingPackHTTPTests.test_lost_root_reply_is_explicitly_reconciled_before_admission) ... FAIL
+
+======================================================================
+FAIL: test_lost_root_reply_is_explicitly_reconciled_before_admission (test_coding_pack_http.CodingPackHTTPTests.test_lost_root_reply_is_explicitly_reconciled_before_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_http.py", line 101, in test_lost_root_reply_is_explicitly_reconciled_before_admission
+    case.test_code_prepares_real_context_and_resume_keeps_pinned_setup()
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_launcher_http.py", line 45, in test_code_prepares_real_context_and_resume_keeps_pinned_setup
+    first=subprocess.run(argv,capture_output=True,text=True,env=env,timeout=30)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1199, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_http.py", line 92, in run
+    self.assertEqual(recovered.returncode,0,recovered.stderr)
+AssertionError: 2 != 0 : branchwrite: "'program'"
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.841s
+
+FAILED (failures=1)

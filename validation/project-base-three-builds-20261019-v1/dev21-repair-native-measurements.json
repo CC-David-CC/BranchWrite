@@ -1,0 +1,20 @@
+{
+  "scope": "Settled dev21 repair counter deltas after A24; not same-task speed comparison with initial creation",
+  "counters": {
+    "forward_tokens": 14823,
+    "prefill_tokens": 10272,
+    "decode_timed_tokens": 4551,
+    "decode_prepare_ns": 9913663024,
+    "decode_compute_ns": 71746679214,
+    "decode_finish_ns": 545236369,
+    "loaded_file_bytes": 884203600,
+    "written_file_bytes": 11005208956,
+    "captures": 11,
+    "restores": 19,
+    "integrity_mismatches": 0,
+    "integrity_device_hashed_bytes": 4321273970688
+  },
+  "native_decode_tps": 55.36120634533763,
+  "trace_end_bytes": 101844821,
+  "trace_end_sha256": "ea81f0f75737dd177a81286d51fc3dc49d837d1a3deab07f788c8b7c8daf91ed"
+}

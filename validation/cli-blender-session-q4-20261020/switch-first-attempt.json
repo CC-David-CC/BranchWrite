@@ -1,0 +1,10 @@
+{
+  "status": "HARNESS_TIMEOUT_BEFORE_ANY_CONTROL_ADMISSION",
+  "client_pid": 2487945,
+  "client_observed_exited": true,
+  "canonical_history_rows": 2,
+  "pending": null,
+  "cause": "harness sent /switch before background session history finished opening; no model or file-version operation was admitted",
+  "original_terminal_bytes": "not captured by initial harness; not reconstructed",
+  "correction": "wait for rendered ready state; capture terminal incrementally"
+}

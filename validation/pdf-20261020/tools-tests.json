@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "tests": 13,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 6.90244013001211,
+  "results": [
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_build_cannot_read_home_credentials_or_use_network",
+      "status": "PASS",
+      "seconds": 0.1883684159256518
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_hung_script_is_retired_without_partial_pdf",
+      "status": "PASS",
+      "seconds": 1.4127938570454717
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_invalid_pdf_and_page_numbers_fail_explicitly",
+      "status": "PASS",
+      "seconds": 0.7567927410127595
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_link_export_is_rejected_before_parsing",
+      "status": "PASS",
+      "seconds": 0.09405757498461753
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_old_export_cannot_masquerade_as_fresh_build",
+      "status": "PASS",
+      "seconds": 0.09494244307279587
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_real_pdf_two_pages_and_actual_png_use_same_bytes",
+      "status": "PASS",
+      "seconds": 0.7828877420397475
+    },
+    {
+      "id": "test_pdf_execution.PdfInitialInstallTests.test_dependencies_are_default_not_optional_task_configuration",
+      "status": "PASS",
+      "seconds": 0.0020253030816093087
+    },
+    {
+      "id": "test_pdf_execution.PdfLongDocumentTests.test_twenty_page_document_renders_selected_last_page",
+      "status": "PASS",
+      "seconds": 0.794430528068915
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_absent_capability_and_ungranted_destinations_are_rejected",
+      "status": "PASS",
+      "seconds": 0.0329461710061878
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_actual_pdf_is_published_and_selected_page_is_rendered",
+      "status": "PASS",
+      "seconds": 0.9831464700400829
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_changed_preimages_reject_frozen_build_before_execution",
+      "status": "PASS",
+      "seconds": 0.05098226899281144
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_failed_new_build_preserves_previous_pdf",
+      "status": "PASS",
+      "seconds": 1.0164534259820357
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_page_schema_and_host_reject_bool_zero_and_out_of_bounds",
+      "status": "PASS",
+      "seconds": 0.0009761269902810454
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "viewport": [
+        1280,
+        800
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "fd9f1c02b0b5d738b39c521af208dcc5aee480d12248f9f2128ae237ec3d368d",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "Say hello -> Hello, David!"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532975]",
+        "pid_ns": "pid:[4026532973]",
+        "mount_ns": "mnt:[4026532970]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 1003954,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.005505925044417381
+      },
+      "runtime_errors": [],
+      "source_sha256": "0bd0a840a0ab2f3dab0831c4552abdfb892abdefa9c530a0520661c437060adb",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-stop-resume-live-20261020/browser/resumed-1280.png"
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "fd9f1c02b0b5d738b39c521af208dcc5aee480d12248f9f2128ae237ec3d368d",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "Say hello -> Hello, David!"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026533169]",
+        "pid_ns": "pid:[4026533167]",
+        "mount_ns": "mnt:[4026532971]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 1004124,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.005281317047774792
+      },
+      "runtime_errors": [],
+      "source_sha256": "0bd0a840a0ab2f3dab0831c4552abdfb892abdefa9c530a0520661c437060adb",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-stop-resume-live-20261020/browser/resumed-375.png"
+    }
+  ]
+}

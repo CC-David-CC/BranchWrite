@@ -1,0 +1,49 @@
+test_blank_inline_task_uses_existing_task_validation (test_inline_task.InlineTaskTests.test_blank_inline_task_uses_existing_task_validation) ... FAIL
+test_both_input_forms_are_rejected_before_state (test_inline_task.InlineTaskTests.test_both_input_forms_are_rejected_before_state) ... FAIL
+test_file_task_still_works_and_is_unchanged (test_inline_task.InlineTaskTests.test_file_task_still_works_and_is_unchanged) ... ok
+test_inline_task_is_preserved_exactly (test_inline_task.InlineTaskTests.test_inline_task_is_preserved_exactly) ... FAIL
+test_inline_text_is_never_executed (test_inline_task.InlineTaskTests.test_inline_text_is_never_executed) ... FAIL
+test_missing_input_is_rejected_before_state (test_inline_task.InlineTaskTests.test_missing_input_is_rejected_before_state) ... ok
+
+======================================================================
+FAIL: test_blank_inline_task_uses_existing_task_validation (test_inline_task.InlineTaskTests.test_blank_inline_task_uses_existing_task_validation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v1/source/tests/test_inline_task.py", line 41, in test_blank_inline_task_uses_existing_task_validation
+    self.assertEqual(code,2);self.assertIn('bounded nonempty task',err)
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'bounded nonempty task' not found in 'branchwrite: "[Errno 2] No such file or directory: \'   \'"\n'
+
+======================================================================
+FAIL: test_both_input_forms_are_rejected_before_state (test_inline_task.InlineTaskTests.test_both_input_forms_are_rejected_before_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v1/source/tests/test_inline_task.py", line 34, in test_both_input_forms_are_rejected_before_state
+    self.assertEqual(code,2);self.assertIn('not allowed',err)
+                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: 'not allowed' not found in 'branchwrite: "[Errno 2] No such file or directory: \'Inline\'"\n'
+
+======================================================================
+FAIL: test_inline_task_is_preserved_exactly (test_inline_task.InlineTaskTests.test_inline_task_is_preserved_exactly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v1/source/tests/test_inline_task.py", line 26, in test_inline_task_is_preserved_exactly
+    self.assertEqual(code,0,err);run.assert_called_once()
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: 2 != 0 : branchwrite: '[Errno 2] No such file or directory: "Inspect caf\xe9\'s $HOME; do not expand $(echo hi).\\nSecond line.\\n"'
+
+
+======================================================================
+FAIL: test_inline_text_is_never_executed (test_inline_task.InlineTaskTests.test_inline_text_is_never_executed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v1/source/tests/test_inline_task.py", line 47, in test_inline_text_is_never_executed
+    self.assertEqual(code,0,err);self.assertFalse(marker.exists())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: 2 != 0 : branchwrite: '[Errno 2] No such file or directory: \'$(touch /tmp/tmpyjbj08_b/executed); __import__("os").system("false")\''
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.014s
+
+FAILED (failures=4)

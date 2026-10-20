@@ -1,0 +1,9 @@
+{
+  "status": "INCOMPLETE",
+  "reason": "Cancellation fixture failed, then cleanup waited on its unreleased test gate. Terminated only this owned CPU test runner and its subprocesses.",
+  "pid": 896473,
+  "children": [
+    897332,
+    897337
+  ]
+}

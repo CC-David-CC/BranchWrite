@@ -1,0 +1,42 @@
+{
+  "scope": "Installeddev21 selected B root restored before new forward work; not numerical oracle or automatic-model-choice proof",
+  "snapshot": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6",
+  "payload_file_bytes": 885196880,
+  "observations": [
+    {
+      "consumed": 29334,
+      "forward_token_delta": 0,
+      "native_loaded_file_bytes_delta": 884203600,
+      "integrity_mismatches": 0,
+      "cold_restore_copy_bytes_delta": 766021632
+    },
+    {
+      "consumed": 29334,
+      "forward_token_delta": 0,
+      "native_loaded_file_bytes_delta": 884203600,
+      "integrity_mismatches": 0,
+      "cold_restore_copy_bytes_delta": 766021632
+    },
+    {
+      "consumed": 29334,
+      "forward_token_delta": 0,
+      "native_loaded_file_bytes_delta": 884203600,
+      "integrity_mismatches": 0,
+      "cold_restore_copy_bytes_delta": 766021632
+    },
+    {
+      "consumed": 29334,
+      "forward_token_delta": 0,
+      "native_loaded_file_bytes_delta": 884203600,
+      "integrity_mismatches": 0,
+      "cold_restore_copy_bytes_delta": 766021632
+    },
+    {
+      "consumed": 29334,
+      "forward_token_delta": 0,
+      "native_loaded_file_bytes_delta": 884203600,
+      "integrity_mismatches": 0,
+      "cold_restore_copy_bytes_delta": 766021632
+    }
+  ]
+}

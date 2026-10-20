@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "scope": "real Q4 installed dev64 follow-up; independent desktop/phone Chromium and screenshot review",
+  "prompt_sha256": "f22003822c8704bba1ff53119129f4e8efbfcb1968c2cff8bbd2e7a9ba62f897",
+  "html_sha256": "5ca359a21fda098d2203e0714965cfa77499550eb189eb4b3e9c16cf9a30abba",
+  "recovery": "original run resumed with zero new model operations after unrelated shared-base bytecode mutation",
+  "reuse_limitation": "expired checkpoints required56876 positions of explicit reconstruction; not cached speedup",
+  "qualification": "bounded example, not cumulative G1-G5"
+}

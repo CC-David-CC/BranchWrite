@@ -1,0 +1,1 @@
+{"status": "BROWSER_CHECKS_PASS_PENDING_VISUAL_NAMES_REVIEW", "html_sha256": "073078f69493316f72cc4a1e9c7ed605768141c2868d38523cf9cbf711721715", "scope": "actual isolated Chromium desktop/phone, blue h1, button causes visible greeting, no overflow/no JS or external resources, exact served source; dog names reviewed visually separately"}

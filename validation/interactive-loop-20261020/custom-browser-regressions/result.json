@@ -1,0 +1,128 @@
+{
+  "status": "FAIL",
+  "tests_run": 29,
+  "failures": 0,
+  "errors": 1,
+  "skips": 0,
+  "seconds": 39.17293242900632,
+  "scope": "Real sandboxed Chromium and host-owned inspection regressions; protected catalog assertions unchanged. No model/GPU.",
+  "tests": [
+    {
+      "id": "tests.test_browser_host_inspection.HostInspectionTests.test_custom_checks_cannot_publish_an_invalid_action_receipt",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_host_inspection.HostInspectionTests.test_italic_alone_does_not_pass_bold_name_requirement",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_host_inspection.HostInspectionTests.test_missing_underline_is_a_failed_inspection",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_host_inspection.HostInspectionTests.test_real_computed_style_and_interaction_are_checked_in_the_sandbox",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_html_inspection.HtmlInspectionTests.test_changed_inspector_rejects_before_starting_a_worker",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_html_inspection.HtmlInspectionTests.test_same_real_capture_passes_supplied_dom_and_pixel_assertions",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_html_inspection.HtmlInspectionTests.test_wrong_heading_retains_actual_png_and_is_a_task_failure",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_greeting_inspection.GreetingInspectionTests.test_actual_cli_fill_click_protected_check_and_offline_reopen",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_greeting_inspection.GreetingInspectionTests.test_actual_cli_rejects_unsafe_handler_with_image_retained",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_greeting_inspection.GreetingInspectionTests.test_greeting_does_not_excuse_broken_existing_counter",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_greeting_inspection.GreetingInspectionTests.test_real_checker_preserves_counter_and_greets_literal_markup",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_greeting_inspection.GreetingInspectionTests.test_unknown_inspection_target_remains_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_greeting_inspection.GreetingInspectionTests.test_unsafe_html_greeting_is_not_accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_isolation.BrowserIsolationTests.test_actual_chromium_capture_binds_isolation_and_exact_source",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_isolation.BrowserIsolationTests.test_actual_namespace_cannot_read_host_secret_or_connect_to_host_listener",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_isolation.BrowserIsolationTests.test_deadline_reaps_an_owned_namespace_with_a_spawned_child",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_actual_registry_returns_error_exit_and_exact_resource_artifacts",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_direct_executor_raises_typed_error_with_complete_capture",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_error_count_and_each_message_are_bounded",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_failed_artifact_publication_stays_unresolved_and_cannot_resend",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_failed_canonical_publication_keeps_original_intent_unresolved",
+      "status": "ERROR",
+      "detail": "Traceback (most recent call last):\n  File \"/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/tool_dispatch.py\", line 108, in dispatch_tool\n    value,provenance=outcome.publish(kernel.log)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/tool_registry.py\", line 90, in publish\n    stdout=log.put_artifact(self.stdout);stderr=log.put_artifact(self.stderr);refs=[stdout,stderr]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/unittest/mock.py\", line 1134, in __call__\n    return self._mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/unittest/mock.py\", line 1138, in _mock_call\n    return self._execute_mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/unittest/mock.py\", line 1193, in _execute_mock_call\n    raise effect\nOSError: injected canonical publication failure\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_errors.py\", line 98, in test_failed_canonical_publication_keeps_original_intent_unresolved\n    with self.assertRaises(OSError):dispatch_tool(k,r,'click')\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/tool_dispatch.py\", line 120, in dispatch_tool\n    raise EffectIndeterminate(operation_id,plan.sha256) from exc\nbranchwrite.tool_registry.EffectIndeterminate: tool outcome is unresolved; reconcile the original operation instead of resending\n"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_failed_capture_cannot_publish_through_foreign_executor_or_operation",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_initial_script_exception_is_also_a_bounded_observation",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_malformed_runtime_error_wire_records_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_real_click_exception_keeps_png_text_exact_actions_and_retirement",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_settled_error_dispatch_reopens_without_executing_again",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_typed_error_cannot_claim_unproven_cleanup",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_unproven_namespace_retirement_stays_unresolved",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_browser_errors.BrowserErrorTests.test_worker_failure_never_becomes_a_settled_javascript_error",
+      "status": "PASS"
+    }
+  ]
+}

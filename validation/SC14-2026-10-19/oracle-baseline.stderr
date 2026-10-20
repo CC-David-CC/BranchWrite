@@ -1,0 +1,814 @@
+test_cli_freezes_read_and_edit_directory_without_creation_rights (tests.test_directory_grants.DirectoryGrantTests.test_cli_freezes_read_and_edit_directory_without_creation_rights) ... ok
+test_exact_sorted_files_skip_git_and_keep_unicode (tests.test_directory_grants.DirectoryGrantTests.test_exact_sorted_files_skip_git_and_keep_unicode) ... ok
+test_linked_directory_and_escape_are_refused (tests.test_directory_grants.DirectoryGrantTests.test_linked_directory_and_escape_are_refused) ... ok
+test_linked_file_in_selected_tree_is_refused (tests.test_directory_grants.DirectoryGrantTests.test_linked_file_in_selected_tree_is_refused) ... ok
+test_ancestor_scopes_walk_the_union_once (tests.test_directory_scope_overlap.ScopeOverlapTests.test_ancestor_scopes_walk_the_union_once) ... FAIL
+test_empty_scopes_do_no_walk (tests.test_directory_scope_overlap.ScopeOverlapTests.test_empty_scopes_do_no_walk) ... ok
+test_invalid_explicit_scope_is_not_hidden_by_root (tests.test_directory_scope_overlap.ScopeOverlapTests.test_invalid_explicit_scope_is_not_hidden_by_root) ... ok
+test_root_scope_covers_all_named_children (tests.test_directory_scope_overlap.ScopeOverlapTests.test_root_scope_covers_all_named_children) ... FAIL
+test_sibling_name_prefix_is_not_ancestry (tests.test_directory_scope_overlap.ScopeOverlapTests.test_sibling_name_prefix_is_not_ancestry) ... ok
+test_covered_invalid_scope_still_rejected (tests.test_independent.IndependentScopeTests.test_covered_invalid_scope_still_rejected) ... ok
+test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) ... 
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=1) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=3) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=4) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=5) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=6) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=7) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=8) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=9) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=11) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=12) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=13) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=14) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=15) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=16) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=17) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=18) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=19) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=20) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=21) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=22) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=23) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=24) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=25) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=26) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=27) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=28) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=30) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=31) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=32) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=34) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=35) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=36) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=37) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=40) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=41) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=43) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=44) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=45) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=46) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=47) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=48) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=50) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=51) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=52) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=53) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=54) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=56) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=58) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=59) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=60) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=61) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=62) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=63) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=64) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=65) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=66) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=68) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=70) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=71) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=73) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=74) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=75) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=76) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=79) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=80) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=82) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=83) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=84) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=85) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=89) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=90) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=93) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=94) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=95) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=96) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=97) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=98) ... FAIL
+  test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=99) ... FAIL
+
+======================================================================
+FAIL: test_ancestor_scopes_walk_the_union_once (tests.test_directory_scope_overlap.ScopeOverlapTests.test_ancestor_scopes_walk_the_union_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_directory_scope_overlap.py", line 23, in test_ancestor_scopes_walk_the_union_once
+    self.assertEqual(calls,1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: 3 != 1
+
+======================================================================
+FAIL: test_root_scope_covers_all_named_children (tests.test_directory_scope_overlap.ScopeOverlapTests.test_root_scope_covers_all_named_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_directory_scope_overlap.py", line 27, in test_root_scope_covers_all_named_children
+    self.assertEqual(calls,1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: 4 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 8 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=13)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=14)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=16)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=18)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=20)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=21)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=22)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=23)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 4
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=24)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=25)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=26)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 4
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=27)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=28)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=30)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=31)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=32)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=34)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=35)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=36)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 4
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=37)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=40)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=41)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=43)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=44)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=45)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=46)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=47)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=48)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=50)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=51)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=52)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=53)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=54)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=56)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=58)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=59)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=60)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=61)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 4
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=62)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=63)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 4
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=64)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=65)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=66)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=68)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=70)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=71)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=73)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=74)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=75)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=76)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 4
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=79)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 3
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=80)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 4
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=82)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 8 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=83)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 4
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=84)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=85)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=89)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=90)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=93)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 7 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=94)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 4 != 2
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=95)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=96)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=97)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=98)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 1
+
+======================================================================
+FAIL: test_seeded_scope_unions_and_minimal_walks (tests.test_independent.IndependentScopeTests.test_seeded_scope_unions_and_minimal_walks) (case=99)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_independent.py", line 24, in test_seeded_scope_unions_and_minimal_walks
+    self.assertEqual(len(calls),len(minimal))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 5 != 4
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.112s
+
+FAILED (failures=80)

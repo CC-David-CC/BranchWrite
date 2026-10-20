@@ -1,0 +1,34 @@
+test_complete_output_recovers_offline (test_generation_reconciliation.GenerationReconciliationTests.test_complete_output_recovers_offline) ... ok
+test_durable_lost_reply_recovers_original_bytes_without_forward_work (test_generation_reconciliation.GenerationReconciliationTests.test_durable_lost_reply_recovers_original_bytes_without_forward_work) ... ok
+test_known_failed_request_cannot_trigger_another_post (test_generation_reconciliation.GenerationReconciliationTests.test_known_failed_request_cannot_trigger_another_post) ... ok
+test_receipt_only_record_can_restore_exact_answer_without_regeneration (test_generation_reconciliation.GenerationReconciliationTests.test_receipt_only_record_can_restore_exact_answer_without_regeneration) ... ok
+test_replay_receipt_must_equal_the_prior_durable_proof (test_generation_reconciliation.GenerationReconciliationTests.test_replay_receipt_must_equal_the_prior_durable_proof) ... ok
+test_unknown_request_cannot_trigger_a_post (test_generation_reconciliation.GenerationReconciliationTests.test_unknown_request_cannot_trigger_a_post) ... ok
+test_wrong_endpoint_rejected_before_network (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_endpoint_rejected_before_network) ... FAIL
+test_wrong_observed_receipt_cannot_trigger_replay (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_observed_receipt_cannot_trigger_replay) ... ok
+
+======================================================================
+FAIL: test_wrong_endpoint_rejected_before_network (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_endpoint_rejected_before_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 65, in test_wrong_endpoint_rejected_before_network
+    with self.assertRaises(OperationReuseError):other.reconcile_generation('recovery-answer')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<mutant-skip-endpoint-owner>", line 28, in reconcile_generation
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 937, in operation
+    response = self.transport.request("GET", "/cow/operation?" + urlencode({"operation": operation_id}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+AssertionError: wrong endpoint must not send
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.752s
+
+FAILED (failures=1)

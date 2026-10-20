@@ -1,0 +1,76 @@
+test_continue_and_reconcile_repeat_the_current_paused_notice (tests.test_interactive_outcomes.ControllerNoticeTests.test_continue_and_reconcile_repeat_the_current_paused_notice) ... FAIL
+test_eof_at_code_prompt_preserves_the_existing_conversation (tests.test_interactive_outcomes.ControllerNoticeTests.test_eof_at_code_prompt_preserves_the_existing_conversation) ... FAIL
+test_code_switch_pins_the_completed_conversation_in_a_new_workflow (test_guided_conversation.GuidedConversationTests.test_code_switch_pins_the_completed_conversation_in_a_new_workflow) ... ok
+test_coding_failure_exits_through_coding_recovery_instead_of_chatting_again (test_guided_conversation.GuidedConversationTests.test_coding_failure_exits_through_coding_recovery_instead_of_chatting_again) ... ok
+test_existing_start_accepts_chat_without_a_filename_wizard (test_guided_conversation.GuidedConversationTests.test_existing_start_accepts_chat_without_a_filename_wizard) ... ok
+test_external_tip_move_rejects_coding_selection_without_model_work (test_guided_conversation.GuidedConversationTests.test_external_tip_move_rejects_coding_selection_without_model_work) ... ok
+test_open_and_exit_makes_no_namespace_or_model_request (test_guided_conversation.GuidedConversationTests.test_open_and_exit_makes_no_namespace_or_model_request) ... ok
+test_resume_cannot_silently_select_a_different_profile (test_guided_conversation.GuidedConversationTests.test_resume_cannot_silently_select_a_different_profile) ... ok
+test_resume_talk_keeps_the_same_branch_and_adds_one_turn (test_guided_conversation.GuidedConversationTests.test_resume_talk_keeps_the_same_branch_and_adds_one_turn) ... ok
+test_talk_keeps_two_turns_without_starting_coding_or_reading_project (test_guided_conversation.GuidedConversationTests.test_talk_keeps_two_turns_without_starting_coding_or_reading_project) ... ok
+test_unfinished_answer_cannot_become_a_coding_source (test_guided_conversation.GuidedConversationTests.test_unfinished_answer_cannot_become_a_coding_source) ... ok
+test_unknown_slash_command_is_not_sent_as_a_user_message (test_guided_conversation.GuidedConversationTests.test_unknown_slash_command_is_not_sent_as_a_user_message) ... ok
+test_unsent_queue_prevents_picking_an_older_coding_source (test_guided_conversation.GuidedConversationTests.test_unsent_queue_prevents_picking_an_older_coding_source) ... ok
+test_checks_cannot_hide_the_actual_not_done_answer (tests.test_interactive_outcomes.OutcomeTests.test_checks_cannot_hide_the_actual_not_done_answer) ... FAIL
+test_failed_checks_still_show_the_final_explanation (tests.test_interactive_outcomes.OutcomeTests.test_failed_checks_still_show_the_final_explanation) ... FAIL
+test_terminal_controls_from_model_are_rendered_as_text (tests.test_interactive_outcomes.OutcomeTests.test_terminal_controls_from_model_are_rendered_as_text) ... ERROR
+
+======================================================================
+ERROR: test_terminal_controls_from_model_are_rendered_as_text (tests.test_interactive_outcomes.OutcomeTests.test_terminal_controls_from_model_are_rendered_as_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_outcomes.py", line 48, in test_terminal_controls_from_model_are_rendered_as_text
+    from branchwrite.run_report import read_report, terminal_text
+ModuleNotFoundError: No module named 'branchwrite.run_report'
+
+======================================================================
+FAIL: test_continue_and_reconcile_repeat_the_current_paused_notice (tests.test_interactive_outcomes.ControllerNoticeTests.test_continue_and_reconcile_repeat_the_current_paused_notice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_outcomes.py", line 63, in test_continue_and_reconcile_repeat_the_current_paused_notice
+    self.assertEqual(out.count("answer is paused at its token budget"),3,out)
+AssertionError: 1 != 3 : BranchWrite
+Client machine: dflanag3-B650-GAMING-X-AX
+Project files are on this client machine; the COW server runs the model.
+Project: /tmp/branchwrite-cow-flow-r1uraiu3/project
+Conversation mode. Type a question or talk through an idea.
+/code YOUR TASK starts editing in a separate project copy. /exit leaves the conversation.
+/continue finishes a paused answer. /history, /status, /reconcile and /help are also available.
+Resume this conversation: branchwrite talk --state /tmp/branchwrite-cow-flow-r1uraiu3/home/state/branchwrite/runs/bw-talk-e99b28dad4dd41f5963394c4dd9ce4e6
+[assistant text is provisional until COW confirms the saved receipt]
+hi
+The answer is paused at its token budget. Use /continue to keep the same answer going.
+[assistant text is provisional until COW confirms the saved receipt]
+hi
+{"branch": "bw-talk-e99b28dad4dd41f5963394c4dd9ce4e6", "head": {"revision": 3, "root": "dc4f19922058899f3cbf1acdf4a8e7dec9b050341685eb4f2efdf9f00d5c3f50", "tip": "8b48536b77286d41b3342c739e6834253cde41e6d8a5ca287db593b44f00d6e3"}, "status": "ready"}
+Resume this conversation: branchwrite talk --state /tmp/branchwrite-cow-flow-r1uraiu3/home/state/branchwrite/runs/bw-talk-e99b28dad4dd41f5963394c4dd9ce4e6
+
+
+======================================================================
+FAIL: test_eof_at_code_prompt_preserves_the_existing_conversation (tests.test_interactive_outcomes.ControllerNoticeTests.test_eof_at_code_prompt_preserves_the_existing_conversation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_outcomes.py", line 72, in test_eof_at_code_prompt_preserves_the_existing_conversation
+    self.assertEqual(code,0,output)
+AssertionError: 130 != 0 : ['BranchWrite', 'Client machine: dflanag3-B650-GAMING-X-AX', 'Project files are on this client machine; the COW server runs the model.', 'Project: /tmp/branchwrite-cow-flow-b22rkvlg/project', 'Conversation mode. Type a question or talk through an idea.', '/code YOUR TASK starts editing in a separate project copy. /exit leaves the conversation.', '/continue finishes a paused answer. /history, /status, /reconcile and /help are also available.', 'Resume this conversation: branchwrite talk --state /tmp/branchwrite-cow-flow-b22rkvlg/home/state/branchwrite/runs/bw-talk-cc924e76bf6742deabe95e917cb6cfed', 'Canceled before the task was submitted. Nothing was sent and no run was created.']
+
+======================================================================
+FAIL: test_checks_cannot_hide_the_actual_not_done_answer (tests.test_interactive_outcomes.OutcomeTests.test_checks_cannot_hide_the_actual_not_done_answer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_outcomes.py", line 35, in test_checks_cannot_hide_the_actual_not_done_answer
+    self.assertIn(answer, "\n".join(output))
+AssertionError: 'Not done. SSH failed. The file was NOT copied.' not found in 'BranchWrite ran its chosen checks successfully. Review the result below.\nYour original project folder is unchanged.\nSaved run: /tmp/tmpwp71yso9/run\nNo project files changed.'
+
+======================================================================
+FAIL: test_failed_checks_still_show_the_final_explanation (tests.test_interactive_outcomes.OutcomeTests.test_failed_checks_still_show_the_final_explanation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_outcomes.py", line 45, in test_failed_checks_still_show_the_final_explanation
+    self.assertIn("A dependency is unavailable", "\n".join(output))
+AssertionError: 'A dependency is unavailable' not found in 'This run did not verify successfully. Nothing was copied into your project.\nSaved work: /tmp/tmpntjc1m2r/run/world/workspace\nTo continue later, use: branchwrite resume /tmp/tmpntjc1m2r/run'
+
+----------------------------------------------------------------------
+Ran 16 tests in 7.799s
+
+FAILED (failures=4, errors=1)

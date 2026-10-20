@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "qualification": "FOCUSED_CPU_PASS_GPU_AND_AUTOMATIC_RETRY_UNRUN",
+  "date": "2026-10-18",
+  "base_commit": "61af8f432b50c83fac98ab99551d30c53a594e65",
+  "client": {
+    "host": "llm-49",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "result": {
+      "executed_ids": [
+        "tests.test_task_verdict.TaskVerdictTests.test_actual_failed_finish_is_bound_to_its_tool_operation_in_ledger",
+        "tests.test_task_verdict.TaskVerdictTests.test_actual_success_keeps_original_verification_acceptance",
+        "tests.test_task_verdict.TaskVerdictTests.test_host_pass_stops_after_actual_finish",
+        "tests.test_task_verdict.TaskVerdictTests.test_intentional_nonzero_probe_does_not_escalate_thinking",
+        "tests.test_task_verdict.TaskVerdictTests.test_not_finished_verification_is_progress_not_failed_task",
+        "tests.test_task_verdict.TaskVerdictTests.test_only_a_completed_rejected_finish_is_a_verified_failure",
+        "tests.test_task_verdict.TaskVerdictTests.test_unknown_effects_and_infrastructure_faults_are_not_task_retries",
+        "tests.test_task_verdict.TaskVerdictTests.test_unrecognized_host_status_is_rejected",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_actual_test_receipt_from_another_registry_cannot_verify",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_changed_current_files_invalidate_joined_success",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_joined_current_receipt_survives_real_log_reopen",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_kernel_prevents_another_root_in_same_log",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_unjoined_actual_test_receipt_cannot_verify_until_resume",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_unjoined_sibling_cannot_supply_successful_tests",
+        "tests.test_thinking_defaults.ThinkingDefaultsTests.test_budget_definitions_are_detached_immutable_and_named",
+        "tests.test_thinking_defaults.ThinkingDefaultsTests.test_failed_natural_thinking_can_escalate_without_model_budget_choice",
+        "tests.test_thinking_defaults.ThinkingDefaultsTests.test_new_default_is_4096_without_1024_answer_target",
+        "tests.test_thinking_defaults.ThinkingDefaultsTests.test_only_verified_task_failure_advances_and_exhaustion_stops",
+        "tests.test_thinking_defaults.ThinkingDefaultsTests.test_recovery_guidance_is_task_level_and_contains_no_reference_answer",
+        "tests.test_thinking_defaults.ThinkingDefaultsTests.test_standard_and_lite_ladders_start_at_their_own_budget",
+        "tests.test_interpreter.InterpreterTests.test_changed_files_invalidate_prior_successful_tests",
+        "tests.test_interpreter.InterpreterTests.test_feedback_names_world_and_file_hash_and_keeps_actual_source",
+        "tests.test_interpreter.InterpreterTests.test_finish_request_without_host_tests_is_not_verified",
+        "tests.test_interpreter.InterpreterTests.test_malformed_proposal_becomes_feedback_not_an_effect",
+        "tests.test_interpreter.InterpreterTests.test_model_profiles_are_detached_after_freeze",
+        "tests.test_interpreter.InterpreterTests.test_passed_actual_tests_and_finish_are_verified",
+        "tests.test_interpreter.InterpreterTests.test_plan_act_does_not_re_freeze_and_stale_world_returns_rejection",
+        "tests.test_interpreter.InterpreterTests.test_registry_or_program_change_refused_on_reopen",
+        "tests.test_interpreter.InterpreterTests.test_rejected_proposal_does_not_erase_a_previously_visible_read",
+        "tests.test_interpreter.InterpreterTests.test_repeat_exhaustion_and_step_budget_keep_distinct_statuses",
+        "tests.test_interpreter.InterpreterTests.test_restart_after_tool_return_before_parent_resume_never_reexecutes",
+        "tests.test_interpreter.InterpreterTests.test_text_value_plan_act_uses_actual_files_and_preserves_original",
+        "tests.test_interpreter.InterpreterTests.test_type_and_missing_binding_reject_before_root_admission",
+        "tests.test_interpreter.InterpreterTests.test_unknown_post_effect_does_not_retry_after_reopen",
+        "tests.test_interpreter.InterpreterTests.test_whole_program_rejects_late_unsupported_operation_before_any_dispatch",
+        "tests.test_interpreter.InterpreterTests.test_zero_tests_cannot_verify",
+        "tests.test_file_completion.FileCompletionCliTests.test_file_only_prefix_does_not_demand_ungranted_tests",
+        "tests.test_file_completion.FileCompletionCliTests.test_real_cli_file_policy_and_separate_process_receipt_replay",
+        "tests.test_file_completion.FileCompletionTests.test_closed_read_child_is_not_visible_until_parent_resumes",
+        "tests.test_file_completion.FileCompletionTests.test_create_observation_cannot_substitute_for_a_read",
+        "tests.test_file_completion.FileCompletionTests.test_create_read_finish_without_test_grant_passes_actual_bytes",
+        "tests.test_file_completion.FileCompletionTests.test_file_changed_after_read_fails",
+        "tests.test_file_completion.FileCompletionTests.test_finish_claim_with_correct_file_but_no_tool_read_fails",
+        "tests.test_file_completion.FileCompletionTests.test_host_policy_is_detached_and_changed_policy_cannot_resume",
+        "tests.test_file_completion.FileCompletionTests.test_invalid_or_ungranted_policy_is_rejected",
+        "tests.test_file_completion.FileCompletionTests.test_missing_host_policy_rejected_at_program_preflight",
+        "tests.test_file_completion.FileCompletionTests.test_read_in_another_run_cannot_verify",
+        "tests.test_file_completion.FileCompletionTests.test_scope_close_rechecks_bytes_after_verification",
+        "tests.test_file_completion.FileCompletionTests.test_successful_read_without_finish_is_not_completion",
+        "tests.test_file_completion.FileCompletionTests.test_wrong_expected_hash_fails",
+        "tests.test_viewport_cli.ViewportCliTests.test_real_cli_two_viewports_original_checks_and_offline_reopen"
+      ],
+      "tests_run": 51,
+      "failures": [],
+      "errors": [],
+      "skips": [],
+      "seconds": 8.977484936942346
+    },
+    "raw_path": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/task-verdict-regression-result-v5.json",
+    "raw_sha256": "fb2678c678c64651f2393e502eed8ec03e1de03e2addefc88e250c937be2b689"
+  },
+  "server": {
+    "result": {
+      "executed_ids": [
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_actual_test_receipt_from_another_registry_cannot_verify",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_changed_current_files_invalidate_joined_success",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_joined_current_receipt_survives_real_log_reopen",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_kernel_prevents_another_root_in_same_log",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_unjoined_actual_test_receipt_cannot_verify_until_resume",
+        "tests.test_unit_verifier_scope.UnitVerifierScopeTests.test_unjoined_sibling_cannot_supply_successful_tests",
+        "tests.test_interpreter.ModelInterpreterTests.test_model_chosen_read_edit_test_finish_with_feedback_and_restart",
+        "tests.test_run_cli.HttpRunCliTests.test_real_subprocess_model_http_edit_test_finish",
+        "tests.test_coding_defaults.CodingDefaultsTests.test_actual_cli_bootstrap_uses_examples_then_completes_and_reopens",
+        "tests.test_coding_defaults.CodingDefaultsTests.test_bad_workflow_types_reject_before_bootstrap_prefix_computation",
+        "tests.test_coding_defaults.CodingDefaultsTests.test_default_workflow_is_generic_and_parseable",
+        "tests.test_coding_defaults.CodingDefaultsTests.test_exact_dry_minp_preset_and_thinking_admission",
+        "tests.test_coding_defaults.CodingDefaultsTests.test_omitted_profiles_select_default_but_explicit_profile_is_preserved",
+        "tests.test_coding_defaults.CodingDefaultsTests.test_reusable_prefix_contains_three_examples_and_live_schema"
+      ],
+      "tests_run": 14,
+      "failures": [],
+      "errors": [],
+      "skips": [],
+      "seconds": 4.819751545088366
+    },
+    "result_sha256": "ceae103418c3712cbb40495670c9318f652f44af3d5720d85eb510e76f03d7fc",
+    "backup": {
+      "status": "PRIVATE_ARCHIVE_ALL_MEMBERS_VERIFIED",
+      "destination": "box-git:/srv/data/git/private_context_cow.evidence/20261018-bw-task-verdict-v1/evidence.tar.gz",
+      "archive_bytes": 666159,
+      "archive_sha256": "9732db558144a7e44f3944aa18a2ccbd53bddc273a77052b04e35320b6023ff3",
+      "regular_members": 438,
+      "individually_verified_data_files": 437,
+      "manifest_note": "Inventory itself covered by archive SHA256"
+    }
+  },
+  "source_sha256": {
+    "branchwrite/interpreter.py": "8d3eff11201bcf0acde0e5f5ff100276f0b017ca22634b94ab37212bb4aec8c1",
+    "branchwrite/thinking_ladder.py": "a3b51ea2131a5b4045894c47b2a136e422899391f9c6983113675c5ba0a32b32",
+    "tests/test_task_verdict.py": "0223c0923d89e8607914dbbafff99d62860f93d71bbf016f2f6f4eeff792d8f8",
+    "tests/test_unit_verifier_scope.py": "9a8b7b73ddded2efec9f88cfa4ef333831548b14a77b95dd196a72c29633b604"
+  },
+  "red": {
+    "task_verdict": "8 errors before implementation",
+    "scope": "3 assertion failures across 6 executed tests; earlier invalid second-root fixture retained separately"
+  },
+  "engineering_failures": [
+    "client regression v1 missing import path",
+    "v2 namespace-package preflight error",
+    "v4 viewport setup missing BW_BASIC_LOOP_PACK; 50 pass, 1 setup error"
+  ],
+  "limits": [
+    "No new 4K GPU trial",
+    "Automatic retry selection and timing not connected",
+    "G/VC qualification unchanged",
+    "Unit verifier remains a named unit-test receipt policy, not universal semantic acceptance"
+  ],
+  "owner_answer_budget": "No 1024-token final-answer cap; observe natural termination and adjust finite resource admission explicitly"
+}

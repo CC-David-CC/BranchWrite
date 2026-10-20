@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "status": "DEFAULT_CODING_PROFILE_BOUNDED_Q4_PASS",
+  "base": "1c22b4a4c0186ef2a2c857976618eda7b8e3e436",
+  "behavior": "Omitted profiles select DRY+Min-P control profile; coding bootstrap creates actual COW context with live tool schema and three examples; explicit profiles remain exact; saved controllers are never rewritten",
+  "tests": {
+    "focused": 6,
+    "full_cpu": 518,
+    "failures": 0,
+    "skips": 0,
+    "G0": 51,
+    "G0_scope": "same unchanged COW baseline; not a new numerical gate"
+  },
+  "real_gpu": {
+    "host": "llm-60",
+    "GPU": [
+      0
+    ],
+    "prefix_consumed_tokens": 11112,
+    "three_example_document_tokens": 10511,
+    "profile": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+    "sampler": {
+      "name": "default",
+      "settings": {
+        "dry_allowed_length": 2,
+        "dry_base": 1.75,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 256,
+        "min_p": 0.05,
+        "temperature": 0.7,
+        "top_k": 60,
+        "top_p": 0.95
+      }
+    },
+    "cli_config_profiles_omitted": true,
+    "context_created_by": "public CLI",
+    "cli_seconds": 64.01210570381954,
+    "time_scope": "includes context bootstrap/prefill; not directly comparable to47s post-setup observations",
+    "actions": [
+      "read_file",
+      "replace",
+      "run_tests",
+      "finish"
+    ],
+    "output_tokens": [
+      90,
+      130,
+      25,
+      40
+    ],
+    "independent_test_exit": 0,
+    "source_unchanged": true,
+    "cli_exit": 0,
+    "wrapper_exit": 0,
+    "server_exit": 0,
+    "native_exit": 0,
+    "numerical_max_error": null,
+    "numerical_oracle": "NOT_RUN",
+    "storage": "tmpfs cache; no reboot-durability claim",
+    "raw": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-coding-defaults-q4-v1"
+  },
+  "raw_cpu": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-coding-defaults-full-cpu-run-v1",
+  "source_map": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-coding-defaults-source-v1.json",
+  "retained_red": "Bad workflow initially computed47041 CPU-fixture prefix tokens before rejecting; production preflight now rejects with0 forward tokens",
+  "next": "separate tool-first GBNF9624152 remains CPU31-pass, not integrated/GPU-qualified; then changed workloads",
+  "original_certification": "G1-G5/full VC09 UNQUALIFIED; one small task is not broad autonomous quality proof"
+}

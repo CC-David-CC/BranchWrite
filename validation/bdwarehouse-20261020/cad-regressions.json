@@ -1,0 +1,275 @@
+{
+  "status": "PASS",
+  "tests": 53,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 40.583771642064676,
+  "results": [
+    {
+      "id": "test_cad_carrier.CarrierTests.test_actual_pair_reopened_has_correct_nominal_fit_and_no_interference",
+      "status": "PASS",
+      "seconds": 0.09968006704002619
+    },
+    {
+      "id": "test_cad_carrier.CarrierTests.test_mirrored_key_notch_rejected",
+      "status": "PASS",
+      "seconds": 0.10303030197974294
+    },
+    {
+      "id": "test_cad_carrier.CarrierTests.test_shifted_carrier_rejected_even_if_it_still_fits",
+      "status": "PASS",
+      "seconds": 0.13557628996204585
+    },
+    {
+      "id": "test_cad_carrier.CarrierTests.test_thicker_carrier_keeps_interface_identity_and_base",
+      "status": "PASS",
+      "seconds": 0.09651978895999491
+    },
+    {
+      "id": "test_cad_carrier.CarrierTests.test_unknown_requirements_cannot_change_contract",
+      "status": "PASS",
+      "seconds": 4.174897912889719e-05
+    },
+    {
+      "id": "test_cad_cli.CadCliTests.test_blender_directory_launch_uses_same_interpreter_with_image_feedback",
+      "status": "PASS",
+      "seconds": 0.004184474004432559
+    },
+    {
+      "id": "test_cad_cli.CadCliTests.test_normal_directory_launch_binds_requirements_and_actual_image_feedback",
+      "status": "PASS",
+      "seconds": 0.00031276606023311615
+    },
+    {
+      "id": "test_cad_cli.CadCliTests.test_readonly_cannot_gain_cad_execution",
+      "status": "PASS",
+      "seconds": 0.0006678310455754399
+    },
+    {
+      "id": "test_cad_cli.CadCliTests.test_unknown_or_unbounded_configuration_rejected",
+      "status": "PASS",
+      "seconds": 0.00010885810479521751
+    },
+    {
+      "id": "test_cad_evaluation.CadEvaluationTests.test_bad_geometry_is_failure_not_execution_success",
+      "status": "PASS",
+      "seconds": 1.454963497002609
+    },
+    {
+      "id": "test_cad_evaluation.CadEvaluationTests.test_checked_and_rendered_same_export_in_retired_independent_worker",
+      "status": "PASS",
+      "seconds": 2.153699781978503
+    },
+    {
+      "id": "test_cad_evaluation.CadEvaluationTests.test_infeasible_requirement_is_reported_without_tolerance_changes",
+      "status": "PASS",
+      "seconds": 2.1059427650179714
+    },
+    {
+      "id": "test_cad_evaluation.CadEvaluationTests.test_render_library_configuration_required_before_execution",
+      "status": "PASS",
+      "seconds": 1.5215873919660226
+    },
+    {
+      "id": "test_cad_evaluation.CadEvaluationTests.test_spec_cannot_include_unrecognized_fields_or_loosen_contract",
+      "status": "PASS",
+      "seconds": 6.427895277738571e-05
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_build_export_reopen_and_namespace_retirement",
+      "status": "PASS",
+      "seconds": 1.652533374959603
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_fork_denied_but_threads_allowed",
+      "status": "PASS",
+      "seconds": 0.2699875859543681
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_host_home_checker_and_network_are_unavailable",
+      "status": "PASS",
+      "seconds": 0.26852504606358707
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_input_file_directory_collision_rejected",
+      "status": "PASS",
+      "seconds": 7.445900700986385e-05
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_invalid_paths_and_duplicate_inputs_fail_before_execution",
+      "status": "PASS",
+      "seconds": 5.609903018921614e-05
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_link_output_rejected",
+      "status": "PASS",
+      "seconds": 0.2649920230032876
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_no_export_cannot_reuse_old_output",
+      "status": "PASS",
+      "seconds": 0.26246047602035105
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_output_flood_is_bounded_and_namespace_retired",
+      "status": "PASS",
+      "seconds": 0.2742939390009269
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_project_helpers_work_without_host_import_access",
+      "status": "PASS",
+      "seconds": 0.26676889893133193
+    },
+    {
+      "id": "test_cad_execution.CadExecutionTests.test_timeout_retires_processes",
+      "status": "PASS",
+      "seconds": 2.790346171008423
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_bad_parameters_rejected",
+      "status": "PASS",
+      "seconds": 0.000168067985214293
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_blind_holes_rejected",
+      "status": "PASS",
+      "seconds": 0.05575118993874639
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_claimed_diameter_cannot_replace_measured_geometry",
+      "status": "PASS",
+      "seconds": 0.05945934995543212
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_equal_volume_unrequested_features_rejected",
+      "status": "PASS",
+      "seconds": 0.08972935902420431
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_exact_minimum_width_passes",
+      "status": "PASS",
+      "seconds": 0.05672161700204015
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_extra_body_rejected",
+      "status": "PASS",
+      "seconds": 0.06725080695468932
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_extra_non_solid_geometry_is_rejected",
+      "status": "PASS",
+      "seconds": 0.11467496794648468
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_hole_spacing_changed_rejected",
+      "status": "PASS",
+      "seconds": 0.0738753390032798
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_linked_parent_input_rejected",
+      "status": "PASS",
+      "seconds": 0.014851412968710065
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_mirrored_notch_same_bbox_and_volume_is_rejected",
+      "status": "PASS",
+      "seconds": 0.060347719001583755
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_missing_hole_rejected",
+      "status": "PASS",
+      "seconds": 0.04801676294300705
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_roundtrip_valid_plate",
+      "status": "PASS",
+      "seconds": 0.056165314046666026
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_symlink_input_rejected",
+      "status": "PASS",
+      "seconds": 0.015220107976347208
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_widened_plate_with_floating_old_notch_rejected",
+      "status": "PASS",
+      "seconds": 0.060019613010808825
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_width90_has_explicit_contradiction",
+      "status": "PASS",
+      "seconds": 7.248902693390846e-05
+    },
+    {
+      "id": "test_cad_geometry.CadGeometryTests.test_width_revision_moves_notch_preserves_pattern",
+      "status": "PASS",
+      "seconds": 0.05612140498124063
+    },
+    {
+      "id": "test_cad_render.CadRenderTests.test_existing_output_directory_is_not_overwritten",
+      "status": "PASS",
+      "seconds": 0.4729143329896033
+    },
+    {
+      "id": "test_cad_render.CadRenderTests.test_views_are_derived_from_exact_step_and_revisions_change_pixels",
+      "status": "PASS",
+      "seconds": 0.28742047504056245
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_changed_source_after_plan_is_rejected_before_build",
+      "status": "PASS",
+      "seconds": 0.22195508400909603
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_current_inventory_required_after_any_edit",
+      "status": "PASS",
+      "seconds": 4.072925304993987
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_later_failed_attempt_supersedes_old_pass",
+      "status": "PASS",
+      "seconds": 4.139234356000088
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_model_cannot_change_requirements",
+      "status": "PASS",
+      "seconds": 0.0007352100219577551
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_readonly_policy_rejects_enabled_cad_execution",
+      "status": "PASS",
+      "seconds": 0.0008211290696635842
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_tool_builds_checks_renders_and_roots_exact_export",
+      "status": "PASS",
+      "seconds": 4.100156184984371
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_without_host_capability_cad_tool_is_absent",
+      "status": "PASS",
+      "seconds": 0.0008935079677030444
+    },
+    {
+      "id": "test_cad_warehouse.WarehouseEnvironmentTests.test_catalogue_queries_and_positioned_component",
+      "status": "PASS",
+      "seconds": 1.6825364760588855
+    },
+    {
+      "id": "test_cad_warehouse.WarehouseEnvironmentTests.test_initial_environment_has_pinned_companion",
+      "status": "PASS",
+      "seconds": 0.0006596709135919809
+    },
+    {
+      "id": "test_cad_warehouse.WarehouseEnvironmentTests.test_matching_clearance_hole_changes_actual_solid",
+      "status": "PASS",
+      "seconds": 1.6691723839612678
+    },
+    {
+      "id": "test_cad_warehouse.WarehouseEnvironmentTests.test_user_m4_socket_head_example_exports_reopenable_solid",
+      "status": "PASS",
+      "seconds": 1.688223710982129
+    }
+  ]
+}

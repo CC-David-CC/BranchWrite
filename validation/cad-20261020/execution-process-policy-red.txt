@@ -1,0 +1,26 @@
+.F.E......
+======================================================================
+ERROR: test_input_file_directory_collision_rejected (test_cad_execution.CadExecutionTests.test_input_file_directory_collision_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_execution.py", line 76, in test_input_file_directory_collision_rejected
+    build_candidate((('model.py',b'pass'),('a',b'x'),('a/b.py',b'pass')),'model.py',self.runtime)
+  File "/home/dflanag3/src/branchwrite-cad-20261020/branchwrite/cad_execution.py", line 82, in build_candidate
+    target=projection/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(body);target.chmod(0o400)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/tmp/bw-cad-build-ylzk0jy4/input/a'
+
+======================================================================
+FAIL: test_fork_denied_but_threads_allowed (test_cad_execution.CadExecutionTests.test_fork_denied_but_threads_allowed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_execution.py", line 67, in test_fork_denied_but_threads_allowed
+    self.assertEqual(r['exit_code'],0,r['stderr'])
+AssertionError: 1 != 0 : b'Traceback (most recent call last):\n  File "<string>", line 1, in <module>\n  File "<frozen runpy>", line 287, in run_path\n  File "<frozen runpy>", line 98, in _run_module_code\n  File "<frozen runpy>", line 88, in _run_code\n  File "/work/model.py", line 10, in <module>\n    raise AssertionError(\'candidate could create processes\')\nAssertionError: candidate could create processes\n'
+
+----------------------------------------------------------------------
+Ran 10 tests in 7.606s
+
+FAILED (failures=1, errors=1)

@@ -1,0 +1,18 @@
+test_task_breakdown (unittest.loader._FailedTest.test_task_breakdown) ... ERROR
+
+======================================================================
+ERROR: test_task_breakdown (unittest.loader._FailedTest.test_task_breakdown)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_task_breakdown
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown.py", line 3, in <module>
+    from branchwrite.task_breakdown import parse_breakdown
+ModuleNotFoundError: No module named 'branchwrite.task_breakdown'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

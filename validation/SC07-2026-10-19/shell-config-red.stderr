@@ -1,0 +1,60 @@
+test_bad_parameters_still_rejected_before_execution (test_shell_configuration.ShellConfigurationTests.test_bad_parameters_still_rejected_before_execution) ... ok
+test_build_launch_does_not_admit_a_host_executable (test_shell_configuration.ShellConfigurationTests.test_build_launch_does_not_admit_a_host_executable) ... FAIL
+test_real_namespace_can_parse_but_cannot_admit_unmapped_host_ownership (test_shell_configuration.ShellConfigurationTests.test_real_namespace_can_parse_but_cannot_admit_unmapped_host_ownership) ... FAIL
+
+======================================================================
+FAIL: test_build_launch_does_not_admit_a_host_executable (test_shell_configuration.ShellConfigurationTests.test_build_launch_does_not_admit_a_host_executable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-real-repository-20261019/tests/test_shell_configuration.py", line 12, in test_build_launch_does_not_admit_a_host_executable
+    value=build_launch(t,'Repair',dict(endpoint_url='http://127.0.0.1:1',endpoint_pin='owned',model_contract_id='m',execution_profile_id='p',eos_tokens=[256]),branch='new',edit_paths=['app.py'],test_commands=['python3 -m unittest'])
+  File "/home/dflanag3/src/branchwrite-real-repository-20261019/branchwrite/coding_cli.py", line 45, in build_launch
+    config=_config(_bytes(config).decode())
+  File "/home/dflanag3/src/branchwrite-real-repository-20261019/branchwrite/run_cli.py", line 87, in _config
+    if 'shell' in config:_shell_config(config['shell'])
+                         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-real-repository-20261019/branchwrite/run_cli.py", line 68, in _shell_config
+    return ShellConfig(timeout=spec['timeout'],expected_hostname=spec.get('expected_hostname'))
+  File "<string>", line 5, in __init__
+  File "/home/dflanag3/src/branchwrite-real-repository-20261019/branchwrite/terminal.py", line 207, in __post_init__
+    command=NamedCommand('shell',('/usr/bin/bash','--noprofile','--norc'),self.timeout)
+  File "/usr/lib/python3.14/unittest/mock.py", line 1176, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/unittest/mock.py", line 1180, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/unittest/mock.py", line 1241, in _execute_mock_call
+    raise effect
+AssertionError: host admission during parsing
+
+======================================================================
+FAIL: test_real_namespace_can_parse_but_cannot_admit_unmapped_host_ownership (test_shell_configuration.ShellConfigurationTests.test_real_namespace_can_parse_but_cannot_admit_unmapped_host_ownership)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-real-repository-20261019/tests/test_shell_configuration.py", line 41, in test_real_namespace_can_parse_but_cannot_admit_unmapped_host_ownership
+    self.assertEqual(result.exit_code,0,result.stderr.read_bytes().decode())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/tmp/tmp9q4461xr/world/workspace/probe.py", line 6, in <module>
+    v=build_launch(p,'Repair',dict(endpoint_url='http://127.0.0.1:1',endpoint_pin='owned',model_contract_id='m',execution_profile_id='p',eos_tokens=[256]),branch='new',edit_paths=['app.py'],test_commands=['python3 -m unittest'])
+  File "/tmp/tmp9q4461xr/world/workspace/branchwrite/coding_cli.py", line 45, in build_launch
+    config=_config(_bytes(config).decode())
+  File "/tmp/tmp9q4461xr/world/workspace/branchwrite/run_cli.py", line 87, in _config
+    if 'shell' in config:_shell_config(config['shell'])
+                         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp9q4461xr/world/workspace/branchwrite/run_cli.py", line 68, in _shell_config
+    return ShellConfig(timeout=spec['timeout'],expected_hostname=spec.get('expected_hostname'))
+  File "<string>", line 5, in __init__
+  File "/tmp/tmp9q4461xr/world/workspace/branchwrite/terminal.py", line 207, in __post_init__
+    command=NamedCommand('shell',('/usr/bin/bash','--noprofile','--norc'),self.timeout)
+  File "<string>", line 6, in __init__
+  File "/tmp/tmp9q4461xr/world/workspace/branchwrite/terminal.py", line 45, in __post_init__
+    raise ToolRejected('command target has writable or non-root ownership')
+branchwrite.execution.ToolRejected: command target has writable or non-root ownership
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.179s
+
+FAILED (failures=2)

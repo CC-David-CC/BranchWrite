@@ -1,0 +1,462 @@
+test_actual_scene_reopen_controlled_views_and_animation (test_blender_execution.BlenderExecutionTests.test_actual_scene_reopen_controlled_views_and_animation) ... ok
+test_missing_fresh_scene_export_fails (test_blender_execution.BlenderExecutionTests.test_missing_fresh_scene_export_fails) ... ok
+test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) ... 
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24') ... FAIL
+  test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24') ... FAIL
+test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) ... ERROR
+test_valid_scene_without_world_gets_derived_studio_world (test_blender_framing.BlenderFramingTests.test_valid_scene_without_world_gets_derived_studio_world) ... FAIL
+
+======================================================================
+ERROR: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 29, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertEqual(scene['framing_frames'],list(range(1,25)))
+                     ~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'framing_frames'
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 8.478589534759521 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 8.478589534759521 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 8.478589534759521 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 8.478589534759521 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.4785895347595215 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.4785895347595215 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.4785895347595215 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.4785895347595215 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 9.521410508951867 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 9.521410508951867 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.521410508951867 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.521410508951867 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 9.52141042152909 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 9.52141042152909 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.52141042152909 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='top', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.52141042152909 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 8.478589534759521 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 8.478589534759521 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 8.478589534759521 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 8.478589534759521 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.4785895347595215 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.4785895347595215 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.4785895347595215 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.4785895347595215 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 9.521410508951867 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 9.521410508951867 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.521410508951867 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.521410508951867 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 9.52141042152909 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 9.52141042152909 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.52141042152909 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='front', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.52141042152909 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.702376255254419 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.702376019984894 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 5.288162661972714 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 5.288162426703189 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 5.288162723789955 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 5.28816248852043 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 3.8739491305082505 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 3.8739488952387258 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.025545589743 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.025545825012525 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 4.6113319964612955 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 4.61133223173082 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.4397591212074685 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 7.439759356476993 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.025545527925765 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) (view='isometric', frame='24')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 27, in test_fast_moving_mesh_stays_in_all_controlled_views
+    self.assertLessEqual(abs(horizontal),view['scale']/2+1e-5)
+AssertionError: 6.025545763195289 not less than or equal to 2.542260156402588
+
+======================================================================
+FAIL: test_valid_scene_without_world_gets_derived_studio_world (test_blender_framing.BlenderFramingTests.test_valid_scene_without_world_gets_derived_studio_world)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_blender_framing.py", line 33, in test_valid_scene_without_world_gets_derived_studio_world
+    self.assertEqual(result['status'],'PASS',result.get('error'))
+AssertionError: 'FAIL' != 'PASS'
+- FAIL
++ PASS
+ : AttributeError: 'NoneType' object has no attribute 'use_nodes'
+
+----------------------------------------------------------------------
+Ran 4 tests in 24.999s
+
+FAILED (failures=49, errors=1)

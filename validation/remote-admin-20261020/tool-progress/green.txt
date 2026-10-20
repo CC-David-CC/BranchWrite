@@ -1,0 +1,15 @@
+test_detail_brackets_real_effect_and_excludes_file_payload (test_tool_progress_details.ToolProgressDetailTests.test_detail_brackets_real_effect_and_excludes_file_payload) ... ok
+test_interactive_output_is_specific_without_generic_duplicate (test_tool_progress_details.ToolProgressDetailTests.test_interactive_output_is_specific_without_generic_duplicate) ... ok
+test_noninteractive_detail_stays_on_stderr (test_tool_progress_details.ToolProgressDetailTests.test_noninteractive_detail_stays_on_stderr) ... ok
+test_only_closed_tool_names_are_displayed (test_tool_progress_details.ToolProgressDetailTests.test_only_closed_tool_names_are_displayed) ... ok
+test_wrong_world_definition_or_malformed_plan_has_no_label (test_tool_progress_details.ToolProgressDetailTests.test_wrong_world_definition_or_malformed_plan_has_no_label) ... ok
+test_broken_observer_does_not_abort_or_repeat_effect (test_progress.ProgressTests.test_broken_observer_does_not_abort_or_repeat_effect) ... ok
+test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen (test_progress.ProgressTests.test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen) ... ok
+test_invalid_observer_rejected_before_admission (test_progress.ProgressTests.test_invalid_observer_rejected_before_admission) ... ok
+test_observer_not_in_identity_and_completed_reopen_is_quiet (test_progress.ProgressTests.test_observer_not_in_identity_and_completed_reopen_is_quiet) ... ok
+test_tool_progress_brackets_real_effect_without_payload (test_progress.ProgressTests.test_tool_progress_brackets_real_effect_without_payload) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.277s
+
+OK

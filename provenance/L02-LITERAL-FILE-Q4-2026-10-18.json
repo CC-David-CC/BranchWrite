@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "status": "BOUNDED_AUTONOMOUS_L02_PASS_WITH_PRIOR_FAILURES_RETAINED",
+  "executed_feature_commit": "3110fccf92d92550e9b1f54b8844521ace27c7e2",
+  "integration_commit": "2e3c2fd8999888a4be4750090bc63baa7241f7ea",
+  "client_host": "llm-49",
+  "model_host": "llm-60",
+  "gpu": 0,
+  "execution_profile_id": "28c765ed95ce356f9aa02b311472825d6e6863155dfeb879c4cb07447102a9af",
+  "sampler": {
+    "temperature": 0.7,
+    "min_p": 0.05,
+    "top_k": 60,
+    "top_p": 0.95,
+    "dry_multiplier": 0.0,
+    "dry_base": 1.75,
+    "dry_allowed_length": 2,
+    "dry_penalty_last_n": 256
+  },
+  "global_defaults_changed": false,
+  "protected_acceptance": {
+    "task": "L02",
+    "task_and_checker_unchanged": true,
+    "bytes": 37,
+    "tools": [
+      "create_file",
+      "read_file",
+      "finish"
+    ],
+    "model_calls": 3,
+    "output_tokens": 419,
+    "whole_cli_seconds": 32.858126364066266,
+    "failures": [],
+    "skips": []
+  },
+  "thinking": {
+    "budget": 4096,
+    "reasoning_tokens": [
+      170,
+      6,
+      116
+    ],
+    "close_reasons": [
+      "natural",
+      "natural",
+      "natural"
+    ]
+  },
+  "regression": {
+    "unique_focused_methods": 23,
+    "pass_count": 23,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "prior_runs": [
+    {
+      "attempt": "v4",
+      "status": "FAIL",
+      "failure": "extra leading space;no edit grant",
+      "bytes": 38,
+      "seconds": 757.6932863069233
+    },
+    {
+      "attempt": "v5",
+      "status": "FAIL",
+      "failure": "missing final LF;identity replacements",
+      "bytes": 36,
+      "seconds": 381.44480385200586
+    }
+  ],
+  "private_pass_archive": {
+    "path": "box-git:/srv/data/git/private_context_cow.evidence/20261018-literal-l02-pass-v1/evidence.tar.gz",
+    "sha256": "94a6a6f8725de1feeda703bc36b5ab74e2a475345b172d79c42bfa8fb570e7ad",
+    "bytes": 2085204,
+    "outer_files_verified": 59,
+    "client_files_verified": 146
+  },
+  "limitations": [
+    "One passed trajectory with unpaired RNG;not a causal DRY result or broad model reliability.",
+    "No numerical/native-restart oracle in this task.",
+    "Original G1-G5 and fullVC09 remain unqualified.",
+    "Structured line-writing is proposed only;not implemented."
+  ]
+}

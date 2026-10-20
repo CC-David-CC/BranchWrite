@@ -1,0 +1,10 @@
+test_cli_passes_explicit_choice_to_normal_admission (test_coding_sampler_choice.CodingSamplerChoiceTests.test_cli_passes_explicit_choice_to_normal_admission) ... ok
+test_default_keeps_existing_greedy_launch_bytes (test_coding_sampler_choice.CodingSamplerChoiceTests.test_default_keeps_existing_greedy_launch_bytes) ... ok
+test_new_admissions_select_exact_existing_presets (test_coding_sampler_choice.CodingSamplerChoiceTests.test_new_admissions_select_exact_existing_presets) ... ok
+test_saved_sampler_cannot_be_replaced_on_same_run (test_coding_sampler_choice.CodingSamplerChoiceTests.test_saved_sampler_cannot_be_replaced_on_same_run) ... ok
+test_unknown_preset_fails_before_state_or_network (test_coding_sampler_choice.CodingSamplerChoiceTests.test_unknown_preset_fails_before_state_or_network) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK

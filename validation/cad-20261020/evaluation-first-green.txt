@@ -1,0 +1,22 @@
+E...............................
+======================================================================
+ERROR: test_bad_geometry_is_failure_not_execution_success (test_cad_evaluation.CadEvaluationTests.test_bad_geometry_is_failure_not_execution_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_evaluation.py", line 23, in test_bad_geometry_is_failure_not_execution_success
+    r=evaluate_candidate(b'not a STEP',spec(),self.runtime)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-cad-20261020/branchwrite/cad_execution.py", line 149, in evaluate_candidate
+    data=json.loads(out)
+         ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 276)
+
+----------------------------------------------------------------------
+Ran 32 tests in 17.232s
+
+FAILED (errors=1)

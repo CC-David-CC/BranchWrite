@@ -1,0 +1,66 @@
+test_multiple_pdfs_require_explicit_choice (test_document_preview.DocumentPreviewTests.test_multiple_pdfs_require_explicit_choice) ... ok
+test_selected_text_is_literal_and_other_text_is_not_exposed (test_document_preview.DocumentPreviewTests.test_selected_text_is_literal_and_other_text_is_not_exposed) ... ok
+test_single_saved_pdf_opens_without_a_website (test_document_preview.DocumentPreviewTests.test_single_saved_pdf_opens_without_a_website) ... ok
+test_website_preview_does_not_implicitly_add_documents (test_document_preview.DocumentPreviewTests.test_website_preview_does_not_implicitly_add_documents) ... ok
+test_asset_count_limit_is_explicit_and_preserves_previous_preview (test_interactive_preview.PreviewTests.test_asset_count_limit_is_explicit_and_preserves_previous_preview) ... ok
+test_document_selection_is_bounded_and_does_not_leak_non_web_files (test_interactive_preview.PreviewTests.test_document_selection_is_bounded_and_does_not_leak_non_web_files) ... ok
+test_help_distinguishes_local_browser_from_remote_client (test_interactive_preview.PreviewTests.test_help_distinguishes_local_browser_from_remote_client) ... ok
+test_host_and_absolute_url_aliases_are_rejected (test_interactive_preview.PreviewTests.test_host_and_absolute_url_aliases_are_rejected) ... ok
+test_http_serves_exact_saved_version_and_relative_assets_without_model_work (test_interactive_preview.PreviewTests.test_http_serves_exact_saved_version_and_relative_assets_without_model_work) ... ok
+test_missing_default_has_actionable_choice_without_starting_server (test_interactive_preview.PreviewTests.test_missing_default_has_actionable_choice_without_starting_server) ... ok
+test_only_token_scoped_captured_resources_are_served (test_interactive_preview.PreviewTests.test_only_token_scoped_captured_resources_are_served) ... ok
+test_refresh_retires_previous_url_and_close_releases_port (test_interactive_preview.PreviewTests.test_refresh_retires_previous_url_and_close_releases_port) ... ok
+test_slow_request_cannot_hold_preview_shutdown (test_interactive_preview.PreviewTests.test_slow_request_cannot_hold_preview_shutdown) ... ok
+test_unreferenced_git_blob_corruption_is_not_accepted (test_interactive_preview.PreviewTests.test_unreferenced_git_blob_corruption_is_not_accepted) ... ok
+test_escape_stops_work_without_erasing_the_draft (test_interactive_terminal.InteractiveTerminalTests.test_escape_stops_work_without_erasing_the_draft) ... ok
+test_missing_preview_is_a_notice_and_does_not_stop_the_session (test_interactive_terminal.InteractiveTerminalTests.test_missing_preview_is_a_notice_and_does_not_stop_the_session) ... FAIL
+test_plan_aside_history_and_unknown_commands_are_not_work_requests (test_interactive_terminal.InteractiveTerminalTests.test_plan_aside_history_and_unknown_commands_are_not_work_requests) ... ok
+test_plan_mode_cannot_restore_or_edit_files_via_branch_controls (test_interactive_terminal.InteractiveTerminalTests.test_plan_mode_cannot_restore_or_edit_files_via_branch_controls) ... ok
+test_preview_uses_selected_file_version_without_submitting_work_and_closes (test_interactive_terminal.InteractiveTerminalTests.test_preview_uses_selected_file_version_without_submitting_work_and_closes) ... ok
+test_typing_survives_progress_tab_queues_and_enter_steers (test_interactive_terminal.InteractiveTerminalTests.test_typing_survives_progress_tab_queues_and_enter_steers) ... ok
+test_blender_work_uses_same_worker_and_plan_has_no_domain_execution (test_interactive_domains.InteractiveDomainTests.test_blender_work_uses_same_worker_and_plan_has_no_domain_execution) ... ok
+test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them (test_interactive_domains.InteractiveDomainTests.test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them) ... ok
+test_cli_session_exposes_operator_domain_configuration (test_interactive_domains.InteractiveDomainTests.test_cli_session_exposes_operator_domain_configuration) ... ok
+test_conflicting_domains_reject_before_session_state_creation (test_interactive_domains.InteractiveDomainTests.test_conflicting_domains_reject_before_session_state_creation) ... ok
+test_recovery_uses_original_domain_launch_without_regranting_new_work (test_interactive_domains.InteractiveDomainTests.test_recovery_uses_original_domain_launch_without_regranting_new_work) ... ok
+test_saved_exports_are_visible_and_survive_session_reopen (test_interactive_domains.InteractiveDomainTests.test_saved_exports_are_visible_and_survive_session_reopen) ... ok
+test_branch_controls_wait_for_settled_work (test_interactive_session.InteractiveSessionTests.test_branch_controls_wait_for_settled_work) ... ok
+test_continue_while_working_does_not_queue_duplicate_resume (test_interactive_session.InteractiveSessionTests.test_continue_while_working_does_not_queue_duplicate_resume) ... ok
+test_continue_without_a_paused_turn_is_rejected_before_admission (test_interactive_session.InteractiveSessionTests.test_continue_without_a_paused_turn_is_rejected_before_admission) ... ok
+test_edit_first_request_reuses_the_recorded_prepared_model_prefix (test_interactive_session.InteractiveSessionTests.test_edit_first_request_reuses_the_recorded_prepared_model_prefix) ... ok
+test_edit_first_request_uses_its_preceding_files_and_context (test_interactive_session.InteractiveSessionTests.test_edit_first_request_uses_its_preceding_files_and_context) ... ok
+test_explicit_continue_unpauses_a_stopped_worker (test_interactive_session.InteractiveSessionTests.test_explicit_continue_unpauses_a_stopped_worker) ... ok
+test_explore_old_context_with_current_files_and_switch_back_without_inference (test_interactive_session.InteractiveSessionTests.test_explore_old_context_with_current_files_and_switch_back_without_inference) ... ok
+test_failed_worker_open_requires_reopening_not_an_unhandled_queue (test_interactive_session.InteractiveSessionTests.test_failed_worker_open_requires_reopening_not_an_unhandled_queue) ... ok
+test_input_worktree_preserves_private_file_modes (test_interactive_session.InteractiveSessionTests.test_input_worktree_preserves_private_file_modes) ... ok
+test_invalid_control_target_rejects_before_admission (test_interactive_session.InteractiveSessionTests.test_invalid_control_target_rejects_before_admission) ... ok
+test_lost_alternative_publication_reply_recovers_without_model_rerun (test_interactive_session.InteractiveSessionTests.test_lost_alternative_publication_reply_recovers_without_model_rerun) ... ok
+test_new_sampler_does_not_rewrite_an_unresolved_saved_launch (test_interactive_session.InteractiveSessionTests.test_new_sampler_does_not_rewrite_an_unresolved_saved_launch) ... ok
+test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context (test_interactive_session.InteractiveSessionTests.test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context) ... ok
+test_queued_followups_combine_without_stopping_active_work (test_interactive_session.InteractiveSessionTests.test_queued_followups_combine_without_stopping_active_work) ... ok
+test_selected_sampler_applies_only_to_new_admissions (test_interactive_session.InteractiveSessionTests.test_selected_sampler_applies_only_to_new_admissions) ... ok
+test_steering_interrupts_at_safe_boundary_then_uses_new_request (test_interactive_session.InteractiveSessionTests.test_steering_interrupts_at_safe_boundary_then_uses_new_request) ... ok
+test_switch_conflict_preserves_user_edit_and_original_control_id (test_interactive_session.InteractiveSessionTests.test_switch_conflict_preserves_user_edit_and_original_control_id) ... ok
+test_switch_restores_matching_files_then_followup_uses_that_exact_tip (test_interactive_session.InteractiveSessionTests.test_switch_restores_matching_files_then_followup_uses_that_exact_tip) ... ok
+test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch (test_interactive_session.InteractiveSessionTests.test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch) ... ok
+test_unknown_sampler_fails_before_opening_workflow (test_interactive_session.InteractiveSessionTests.test_unknown_sampler_fails_before_opening_workflow) ... ok
+test_work_publishes_in_current_directory_and_followup_forks_saved_context (test_interactive_session.InteractiveSessionTests.test_work_publishes_in_current_directory_and_followup_forks_saved_context) ... ok
+
+======================================================================
+FAIL: test_missing_preview_is_a_notice_and_does_not_stop_the_session (test_interactive_terminal.InteractiveTerminalTests.test_missing_preview_is_a_notice_and_does_not_stop_the_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_interactive_terminal.py", line 102, in test_missing_preview_is_a_notice_and_does_not_stop_the_session
+    self.assertTrue(any('No saved website' in v for v in messages),messages)
+AssertionError: False is not true : ['BranchWrite: keep talking while I work. /help shows the keys.\nWork edits this project. /explore tries an idea in a separate copy.', 'No saved project version yet. Ask me to make something first.']
+
+----------------------------------------------------------------------
+Ran 47 tests in 6.696s
+
+FAILED (failures=1)

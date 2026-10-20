@@ -1,0 +1,52 @@
+{
+  "status": "FAIL",
+  "tests": 10,
+  "failures": 5,
+  "errors": 3,
+  "skips": 0,
+  "seconds": 11.597709193010814,
+  "results": [
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_canonical_receipt_and_page_artifact_cannot_be_forged",
+      "status": "FAIL"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_cli_export_contains_pdf_and_actual_page_images",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_edit_after_build_invalidates_document_even_with_new_file_check",
+      "status": "FAIL"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_every_current_page_and_a_current_named_check_can_pass",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_invalid_selected_page_is_an_explicit_tool_failure",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_latest_failed_build_cannot_accept_previous_preserved_pdf",
+      "status": "FAIL"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_passing_file_check_cannot_hide_an_unrendered_page",
+      "status": "FAIL"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_readonly_policy_rejects_pdf_execution_capability",
+      "status": "PASS",
+      "seconds": 0.001732447068206966
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_rebuild_cannot_reuse_page_receipts_from_old_pdf",
+      "status": "FAIL"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_reopened_ledger_revalidates_same_actual_page_evidence",
+      "status": "PASS",
+      "seconds": 1.26877828896977
+    }
+  ]
+}

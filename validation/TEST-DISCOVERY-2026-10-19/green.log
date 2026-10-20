@@ -1,0 +1,16 @@
+test_package_free_assertion_failure_is_executed_not_import_failure (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_assertion_failure_is_executed_not_import_failure) ... ok
+test_package_free_tests_import_project_and_preserve_all_bytes (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_tests_import_project_and_preserve_all_bytes) ... ok
+test_package_free_tests_keep_readonly_and_host_boundaries (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_tests_keep_readonly_and_host_boundaries) ... ok
+test_packaged_relative_imports_still_work (test_test_discovery_layouts.DiscoveryLayoutTests.test_packaged_relative_imports_still_work) ... ok
+test_absolute_deadline_stops_owned_process (test_execution.ExecutionTests.test_absolute_deadline_stops_owned_process) ... ok
+test_denied_edit_and_stale_preimage_do_not_change_file (test_execution.ExecutionTests.test_denied_edit_and_stale_preimage_do_not_change_file) ... ok
+test_missing_test_grant_rejects_before_process_creation (test_execution.ExecutionTests.test_missing_test_grant_rejects_before_process_creation) ... ok
+test_process_cannot_modify_protected_tests_or_read_host_sentinel (test_execution.ExecutionTests.test_process_cannot_modify_protected_tests_or_read_host_sentinel) ... ok
+test_real_test_edit_test_loop_preserves_input_and_protected_tests (test_execution.ExecutionTests.test_real_test_edit_test_loop_preserves_input_and_protected_tests) ... ok
+test_run_directory_collision_is_never_cleaned_up_as_owned (test_execution.ExecutionTests.test_run_directory_collision_is_never_cleaned_up_as_owned) ... ok
+test_symlink_input_is_rejected (test_execution.ExecutionTests.test_symlink_input_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.603s
+
+OK

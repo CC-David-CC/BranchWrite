@@ -1,0 +1,241 @@
+test_evidence_is_not_valid_for_unrelated_transform_contracts (test_tool_verification_feedback.VerificationFeedbackTests.test_evidence_is_not_valid_for_unrelated_transform_contracts) ... ERROR
+test_failed_finish_receives_real_verifier_reason_and_identity (test_tool_verification_feedback.VerificationFeedbackTests.test_failed_finish_receives_real_verifier_reason_and_identity) ... ERROR
+test_feedback_allowlist_does_not_export_protected_details (test_tool_verification_feedback.VerificationFeedbackTests.test_feedback_allowlist_does_not_export_protected_details) ... ERROR
+test_other_tool_outcome_cannot_borrow_an_earlier_verdict (test_tool_verification_feedback.VerificationFeedbackTests.test_other_tool_outcome_cannot_borrow_an_earlier_verdict) ... ERROR
+test_preflight_requires_an_already_bound_verification (test_tool_verification_feedback.VerificationFeedbackTests.test_preflight_requires_an_already_bound_verification) ... 
+  test_preflight_requires_an_already_bound_verification (test_tool_verification_feedback.VerificationFeedbackTests.test_preflight_requires_an_already_bound_verification) (program='FLOW task\nPLAN p from=request against=world -> plan\nACT a plan=plan -> outcome\nVERIFY v input=outcome contract=unit-tests-and-finish -> verified\nTRANSFORM f input=outcome contract=tool-feedback evidence=request -> feedback\nEND\n') ... ERROR
+  test_preflight_requires_an_already_bound_verification (test_tool_verification_feedback.VerificationFeedbackTests.test_preflight_requires_an_already_bound_verification) (program='FLOW task\nPLAN p from=request against=world -> plan\nACT a plan=plan -> outcome\nTRANSFORM f input=outcome contract=tool-feedback evidence=verified -> feedback\nEND\n') ... ERROR
+test_restart_reuses_recorded_verdict_without_running_verifier_again (test_tool_verification_feedback.VerificationFeedbackTests.test_restart_reuses_recorded_verdict_without_running_verifier_again) ... ERROR
+
+======================================================================
+ERROR: test_evidence_is_not_valid_for_unrelated_transform_contracts (test_tool_verification_feedback.VerificationFeedbackTests.test_evidence_is_not_valid_for_unrelated_transform_contracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 133, in parse
+    header,definition=_read_header(line);count+=1
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 115, in _read_header
+    definition,fields=_header(parts[0],parts[1],tuple(fields),output)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 72, in _header
+    raise ProgramSyntaxError('missing or unknown field')
+branchwrite.language.ProgramSyntaxError: missing or unknown field
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_tool_verification_feedback.py", line 54, in test_evidence_is_not_valid_for_unrelated_transform_contracts
+    with self.assertRaises(AdmissionError):self.runtime.start(source,{'request':Value('ToolProposal','unused')})
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 187, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 126, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 131, in preflight
+    program=parse(source)
+            ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 148, in parse
+    raise ProgramSyntaxError('line '+str(at)+': '+str(exc)) from exc
+branchwrite.language.ProgramSyntaxError: line 2: missing or unknown field
+
+======================================================================
+ERROR: test_failed_finish_receives_real_verifier_reason_and_identity (test_tool_verification_feedback.VerificationFeedbackTests.test_failed_finish_receives_real_verifier_reason_and_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 133, in parse
+    header,definition=_read_header(line);count+=1
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 115, in _read_header
+    definition,fields=_header(parts[0],parts[1],tuple(fields),output)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 72, in _header
+    raise ProgramSyntaxError('missing or unknown field')
+branchwrite.language.ProgramSyntaxError: missing or unknown field
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_tool_verification_feedback.py", line 24, in test_failed_finish_receives_real_verifier_reason_and_identity
+    self.runtime.start(self.program(),{'request':self.proposal('finish',answer='done')})
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 187, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 126, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 131, in preflight
+    program=parse(source)
+            ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 148, in parse
+    raise ProgramSyntaxError('line '+str(at)+': '+str(exc)) from exc
+branchwrite.language.ProgramSyntaxError: line 5: missing or unknown field
+
+======================================================================
+ERROR: test_feedback_allowlist_does_not_export_protected_details (test_tool_verification_feedback.VerificationFeedbackTests.test_feedback_allowlist_does_not_export_protected_details)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 133, in parse
+    header,definition=_read_header(line);count+=1
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 115, in _read_header
+    definition,fields=_header(parts[0],parts[1],tuple(fields),output)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 72, in _header
+    raise ProgramSyntaxError('missing or unknown field')
+branchwrite.language.ProgramSyntaxError: missing or unknown field
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_tool_verification_feedback.py", line 40, in test_feedback_allowlist_does_not_export_protected_details
+    self.runtime.start(self.program(),{'request':self.proposal('finish',answer='done')})
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 187, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 126, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 131, in preflight
+    program=parse(source)
+            ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 148, in parse
+    raise ProgramSyntaxError('line '+str(at)+': '+str(exc)) from exc
+branchwrite.language.ProgramSyntaxError: line 5: missing or unknown field
+
+======================================================================
+ERROR: test_other_tool_outcome_cannot_borrow_an_earlier_verdict (test_tool_verification_feedback.VerificationFeedbackTests.test_other_tool_outcome_cannot_borrow_an_earlier_verdict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 133, in parse
+    header,definition=_read_header(line);count+=1
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 115, in _read_header
+    definition,fields=_header(parts[0],parts[1],tuple(fields),output)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 72, in _header
+    raise ProgramSyntaxError('missing or unknown field')
+branchwrite.language.ProgramSyntaxError: missing or unknown field
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_tool_verification_feedback.py", line 33, in test_other_tool_outcome_cannot_borrow_an_earlier_verdict
+    self.runtime.start(program,{'request':self.proposal('read_file',path='data.txt'),'other':self.proposal('finish',answer='done')})
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 187, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 126, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 131, in preflight
+    program=parse(source)
+            ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 148, in parse
+    raise ProgramSyntaxError('line '+str(at)+': '+str(exc)) from exc
+branchwrite.language.ProgramSyntaxError: line 7: missing or unknown field
+
+======================================================================
+ERROR: test_preflight_requires_an_already_bound_verification (test_tool_verification_feedback.VerificationFeedbackTests.test_preflight_requires_an_already_bound_verification) (program='FLOW task\nPLAN p from=request against=world -> plan\nACT a plan=plan -> outcome\nVERIFY v input=outcome contract=unit-tests-and-finish -> verified\nTRANSFORM f input=outcome contract=tool-feedback evidence=request -> feedback\nEND\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 133, in parse
+    header,definition=_read_header(line);count+=1
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 115, in _read_header
+    definition,fields=_header(parts[0],parts[1],tuple(fields),output)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 72, in _header
+    raise ProgramSyntaxError('missing or unknown field')
+branchwrite.language.ProgramSyntaxError: missing or unknown field
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_tool_verification_feedback.py", line 37, in test_preflight_requires_an_already_bound_verification
+    with self.subTest(program=program),self.assertRaises(AdmissionError):self.runtime.start(program,{'request':self.proposal('finish',answer='done')})
+                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 187, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 126, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 131, in preflight
+    program=parse(source)
+            ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 148, in parse
+    raise ProgramSyntaxError('line '+str(at)+': '+str(exc)) from exc
+branchwrite.language.ProgramSyntaxError: line 5: missing or unknown field
+
+======================================================================
+ERROR: test_preflight_requires_an_already_bound_verification (test_tool_verification_feedback.VerificationFeedbackTests.test_preflight_requires_an_already_bound_verification) (program='FLOW task\nPLAN p from=request against=world -> plan\nACT a plan=plan -> outcome\nTRANSFORM f input=outcome contract=tool-feedback evidence=verified -> feedback\nEND\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 133, in parse
+    header,definition=_read_header(line);count+=1
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 115, in _read_header
+    definition,fields=_header(parts[0],parts[1],tuple(fields),output)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 72, in _header
+    raise ProgramSyntaxError('missing or unknown field')
+branchwrite.language.ProgramSyntaxError: missing or unknown field
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_tool_verification_feedback.py", line 37, in test_preflight_requires_an_already_bound_verification
+    with self.subTest(program=program),self.assertRaises(AdmissionError):self.runtime.start(program,{'request':self.proposal('finish',answer='done')})
+                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 187, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 126, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 131, in preflight
+    program=parse(source)
+            ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 148, in parse
+    raise ProgramSyntaxError('line '+str(at)+': '+str(exc)) from exc
+branchwrite.language.ProgramSyntaxError: line 4: missing or unknown field
+
+======================================================================
+ERROR: test_restart_reuses_recorded_verdict_without_running_verifier_again (test_tool_verification_feedback.VerificationFeedbackTests.test_restart_reuses_recorded_verdict_without_running_verifier_again)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 133, in parse
+    header,definition=_read_header(line);count+=1
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 115, in _read_header
+    definition,fields=_header(parts[0],parts[1],tuple(fields),output)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 72, in _header
+    raise ProgramSyntaxError('missing or unknown field')
+branchwrite.language.ProgramSyntaxError: missing or unknown field
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_tool_verification_feedback.py", line 46, in test_restart_reuses_recorded_verdict_without_running_verifier_again
+    source=self.program();bindings={'request':self.proposal('finish',answer='done')};self.runtime.start(source,bindings)
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 187, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 126, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/interpreter.py", line 131, in preflight
+    program=parse(source)
+            ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/language.py", line 148, in parse
+    raise ProgramSyntaxError('line '+str(at)+': '+str(exc)) from exc
+branchwrite.language.ProgramSyntaxError: line 5: missing or unknown field
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.018s
+
+FAILED (errors=7)

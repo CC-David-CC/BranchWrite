@@ -1,0 +1,12 @@
+test_direct_intent_recording_rejects_path_escape_and_incompatible_target (tests.test_remote_execution.RemoteTargetTests.test_direct_intent_recording_rejects_path_escape_and_incompatible_target) ... ok
+test_keys_are_private_regular_files_and_changed_identity_is_rejected (tests.test_remote_execution.RemoteTargetTests.test_keys_are_private_regular_files_and_changed_identity_is_rejected) ... ok
+test_read_receipt_is_non_executing_and_checks_original_binding (tests.test_remote_execution.RemoteTargetTests.test_read_receipt_is_non_executing_and_checks_original_binding) ... ok
+test_reply_validation_rejects_bool_exit_wrong_hash_and_wrong_process_identity (tests.test_remote_execution.RemoteTargetTests.test_reply_validation_rejects_bool_exit_wrong_hash_and_wrong_process_identity) ... ok
+test_ssh_argv_uses_fixed_destination_and_no_agent_or_host_config (tests.test_remote_execution.RemoteTargetTests.test_ssh_argv_uses_fixed_destination_and_no_agent_or_host_config) ... ok
+test_target_requires_literal_host_exact_types_and_bounded_arguments (tests.test_remote_execution.RemoteTargetTests.test_target_requires_literal_host_exact_types_and_bounded_arguments) ... ok
+test_unacknowledged_intent_cannot_be_resent (tests.test_remote_execution.RemoteTargetTests.test_unacknowledged_intent_cannot_be_resent) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.049s
+
+OK

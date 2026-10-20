@@ -1,0 +1,26 @@
+test_bad_parameters_rejected (test_cad_geometry.CadGeometryTests.test_bad_parameters_rejected) ... ok
+test_blind_holes_rejected (test_cad_geometry.CadGeometryTests.test_blind_holes_rejected) ... ok
+test_claimed_diameter_cannot_replace_measured_geometry (test_cad_geometry.CadGeometryTests.test_claimed_diameter_cannot_replace_measured_geometry) ... ok
+test_equal_volume_unrequested_features_rejected (test_cad_geometry.CadGeometryTests.test_equal_volume_unrequested_features_rejected) ... ok
+test_exact_minimum_width_passes (test_cad_geometry.CadGeometryTests.test_exact_minimum_width_passes) ... ok
+test_extra_body_rejected (test_cad_geometry.CadGeometryTests.test_extra_body_rejected) ... ok
+test_hole_spacing_changed_rejected (test_cad_geometry.CadGeometryTests.test_hole_spacing_changed_rejected) ... ok
+test_linked_parent_input_rejected (test_cad_geometry.CadGeometryTests.test_linked_parent_input_rejected) ... ok
+test_mirrored_notch_same_bbox_and_volume_is_rejected (test_cad_geometry.CadGeometryTests.test_mirrored_notch_same_bbox_and_volume_is_rejected) ... ok
+test_missing_hole_rejected (test_cad_geometry.CadGeometryTests.test_missing_hole_rejected) ... ok
+test_roundtrip_valid_plate (test_cad_geometry.CadGeometryTests.test_roundtrip_valid_plate) ... ok
+test_symlink_input_rejected (test_cad_geometry.CadGeometryTests.test_symlink_input_rejected) ... ok
+test_widened_plate_with_floating_old_notch_rejected (test_cad_geometry.CadGeometryTests.test_widened_plate_with_floating_old_notch_rejected) ... ok
+test_width90_has_explicit_contradiction (test_cad_geometry.CadGeometryTests.test_width90_has_explicit_contradiction) ... ok
+test_width_revision_moves_notch_preserves_pattern (test_cad_geometry.CadGeometryTests.test_width_revision_moves_notch_preserves_pattern) ... ok
+test_existing_output_directory_is_not_overwritten (test_cad_render.CadRenderTests.test_existing_output_directory_is_not_overwritten) ... ok
+test_views_are_derived_from_exact_step_and_revisions_change_pixels (test_cad_render.CadRenderTests.test_views_are_derived_from_exact_step_and_revisions_change_pixels) ... /home/dflanag3/src/branchwrite-cad-20261020/branchwrite/cad_render.py:42: DeprecationWarning: Call to deprecated method AddActor2D. (Use AddViewProp() instead.) -- Deprecated since version 9.5.0.
+  label=vtk.vtkTextActor();label.SetPosition(20,510);label.GetTextProperty().SetFontSize(20);label.GetTextProperty().SetColor(.1,.15,.2);renderer.AddActor2D(label)
+/home/dflanag3/src/branchwrite-cad-20261020/branchwrite/cad_render.py:44: DeprecationWarning: Call to deprecated method AddActor2D. (Use AddViewProp() instead.) -- Deprecated since version 9.5.0.
+  bound_text.SetInput('Measured bounds (mm): X [%g, %g]  Y [%g, %g]  Z [%g, %g]'%(box.min.X,box.max.X,box.min.Y,box.max.Y,box.min.Z,box.max.Z));renderer.AddActor2D(bound_text)
+ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.461s
+
+OK

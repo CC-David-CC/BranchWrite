@@ -1,0 +1,15 @@
+{
+  "status": "INDEPENDENT_COMPATIBILITY_FAIL",
+  "declared_cli_workflow_pass": true,
+  "declared_methods": 19,
+  "independent_methods_run": 22,
+  "independent_errors": 1,
+  "generated_cases_executed": 0,
+  "reason": "Optional args.task access breaks legacy argparse.Namespace callers",
+  "failed_test": "test_valid_connection_still_prepares_exact_launch",
+  "model_calls": 9,
+  "output_tokens": 2305,
+  "whole_cli_seconds": 213.17640130000655,
+  "prefix_forward_tokens": 0,
+  "scope": "Candidate is not accepted for integration; original ledger/patch preserved"
+}

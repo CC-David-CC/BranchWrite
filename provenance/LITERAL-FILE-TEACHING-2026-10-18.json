@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "status": "LITERAL_FILE_TEACHING_CPU_PASS_MODEL_UNRUN",
+  "host": "llm-49",
+  "base_commit": "4ca28a711652b0e1a5047b6db9ed65af828e0706",
+  "branch": "feat/branchwrite-literal-file-prefill-20261018",
+  "source": {
+    "branchwrite/coding_defaults.py": "75b07f00be60525a6a7b33c0e7cbebe24e477ccbd3bdc30b47ac356d44296b89",
+    "examples/literal-file-worked-examples.txt": "f8891dbb0980a5578ed7436c1ae5b212e853b280a57c41bffbb4588c61d95251",
+    "scripts/build_literal_file_examples.py": "830cbb7135d014c0e9ce5688a7d7634f1526602dbf48782e0391e748836e189a",
+    "tests/test_literal_file_examples.py": "2ef1ceaaf673223ffb75265d753bbaed37d6f8e03588fe558e6fabd878f1dbfb",
+    "docs/LITERAL_FILE_TEACHING.md": "9d362ed9401e50dd1b7a7d524d319cd7fad58a63db84d83146d65794d52b0a48"
+  },
+  "tests": {
+    "new_methods": 6,
+    "new_pass": 6,
+    "related_distinct_methods": 23,
+    "related_pass": 23,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "red": {
+      "methods": 6,
+      "failures": 1,
+      "errors": 4
+    }
+  },
+  "raw_artifacts": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/literal-prefill-cpu-v1",
+  "retained_builder_errors": [
+    "Initial scripts directory absent before generator started.",
+    "Builder/replay initially omitted explicit latest observed file receipts for replace; host correctly rejected. Both now pass actual observations, no host check removed."
+  ],
+  "protected_l02": {
+    "status": "FAIL",
+    "prior_source_commit": "4ca28a711652b0e1a5047b6db9ed65af828e0706",
+    "actual_bytes": 38,
+    "expected_bytes": 37,
+    "model_calls": 16,
+    "actual_tool_calls": 13,
+    "output_tokens": 13804,
+    "seconds": 757.6932863069233,
+    "first_error": "Unrequested leading space on second line in actual model proposal.",
+    "repair_limit": "Fixture grants create/read only; no edit grant.",
+    "protected_checker_unchanged": true,
+    "numerical_oracle": "NOT_RUN"
+  },
+  "limits": [
+    "No new model/GPU pass.",
+    "No numerical/restart/G/VC certification.",
+    "Examples are generic synthetic tasks;protected L02 answer not included."
+  ]
+}

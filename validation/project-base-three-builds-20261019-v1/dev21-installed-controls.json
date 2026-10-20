@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "methods": 56,
+  "tests": [
+    {
+      "test": "test_cow_client.py",
+      "exit_code": 0,
+      "methods": 16
+    },
+    {
+      "test": "test_base_choice_launch.py",
+      "exit_code": 0,
+      "methods": 6
+    },
+    {
+      "test": "test_base_choice.py",
+      "exit_code": 0,
+      "methods": 11
+    },
+    {
+      "test": "test_coding_launcher.py",
+      "exit_code": 0,
+      "methods": 13
+    },
+    {
+      "test": "test_coding_sampler_choice.py",
+      "exit_code": 0,
+      "methods": 5
+    },
+    {
+      "test": "test_generation_stream_uncertainty.py",
+      "exit_code": 0,
+      "methods": 5
+    }
+  ],
+  "scope": "Installed CLI/transport/admission controls with actual HTTP test server; no GPU qualification"
+}

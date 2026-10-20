@@ -1,0 +1,986 @@
+{
+  "status": "PASS",
+  "ledger_unchanged": true,
+  "model_calls": 9,
+  "output_tokens": 2305,
+  "whole_cli_seconds": 213.17640130000655,
+  "installed_modules": [
+    {
+      "name": "branchwrite",
+      "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+    },
+    {
+      "name": "branchwrite.language",
+      "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+    },
+    {
+      "name": "branchwrite.records",
+      "sha256": "cbc34ddb6b510217a2a1995e2c31ea092f1b0c211b2daa1039dca18a2093d09b"
+    },
+    {
+      "name": "branchwrite.kernel",
+      "sha256": "cb6a345521f496ead177c9cfbb908929af8c268ce50a440a78086a66d5343e10"
+    },
+    {
+      "name": "branchwrite.execution",
+      "sha256": "6a595a6a38dee451042f31303ea9f8b7398ab6a0b8f721999d9f2d27637ecb5b"
+    },
+    {
+      "name": "branchwrite.text_file_codec",
+      "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+    },
+    {
+      "name": "branchwrite.tool_registry",
+      "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+    },
+    {
+      "name": "branchwrite.tool_dispatch",
+      "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+    },
+    {
+      "name": "branchwrite.cow_client",
+      "sha256": "a08bd70de75399583cfc19229dc6e0a6ff5447286d5b8856b5322e5eda2f86d7"
+    },
+    {
+      "name": "branchwrite.cow_actions",
+      "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+    },
+    {
+      "name": "branchwrite.model_inputs",
+      "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+    },
+    {
+      "name": "branchwrite.thinking_ladder",
+      "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+    },
+    {
+      "name": "branchwrite.model_dispatch",
+      "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+    },
+    {
+      "name": "branchwrite.cow_fork",
+      "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+    },
+    {
+      "name": "branchwrite.planning_retry",
+      "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+    },
+    {
+      "name": "branchwrite.verification",
+      "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+    },
+    {
+      "name": "branchwrite.image_feedback",
+      "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+    },
+    {
+      "name": "branchwrite.interpreter",
+      "sha256": "cbb7a20a1d9015968c2b81aa4c61ac2a17d9a4f33b8496199f586a7593852d94"
+    },
+    {
+      "name": "branchwrite.coding_defaults",
+      "sha256": "e11f62a6b8c49c644afeeb154908137c5a415de55b67529cd39c0e0a97a0c34c"
+    },
+    {
+      "name": "branchwrite.run_cli",
+      "sha256": "c1b9e787b02e8b7ff49ab24ac1228223b3387464fe3373417e3ef06cb680b7d2"
+    },
+    {
+      "name": "branchwrite.coding_cli",
+      "sha256": "7d000afd621e8adfe8ce7a836388b660e81d9c0c0bbc5e1b96d49f87fb0530c8"
+    },
+    {
+      "name": "branchwrite.__main__",
+      "sha256": "2747cf076051ea3a7d248bbc239336a3b7396404ca1724c27e4f5ebc7fe8516a"
+    },
+    {
+      "name": "branchwrite.terminal",
+      "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+    },
+    {
+      "name": "branchwrite.browser_assets",
+      "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+    },
+    {
+      "name": "branchwrite.command_outputs",
+      "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+    },
+    {
+      "name": "branchwrite.browser_isolation",
+      "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+    },
+    {
+      "name": "branchwrite.terminal_worker",
+      "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+    }
+  ],
+  "wheel_sha256": "7f16c429bedf52b82f4e5cff02856d291834afd3bcb3d31aeda7aeded3c1b251",
+  "tools": [
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "branchwrite/coding_cli.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Prepare the existing coding workflow; COW and RuntimeLog remain authoritative.\"\"\"\nimport hashlib,json,os,re,stat,tempfile\nfrom pathlib import Path\nfrom .run_cli import _config,_pairs,execute,_source_notice\nfrom .cow_client import CowClient,HTTPTransport,OperationJournal,OperationIndeterminate\nPROGRAM=\"\"\"FLOW coding\nREPEAT attempts exhausted=stop max=32 until=verified\nEXPAND decide from=current profile=control task=task -> proposed\nPLAN freeze against=world from=proposed -> plan\nACT perform plan=plan -> outcome\nTRANSFORM advance contract=cow-source input=proposed -> current\nTRANSFORM feedback contract=tool-feedback input=outcome -> task\nVERIFY check contract=command-evidence-and-finish input=outcome -> verified\nEND\nEND\n\"\"\"\nMAX_LAUNCH_BYTES=1024*1024\ndef _bytes(value):\n    return json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False).encode()\ndef build_launch(project,task,connection,*,branch,read_paths=(),edit_paths=(),create_paths=(),test_commands=(),from_branch=None,from_prefix=None,from_snapshot=None,shell_timeout=120):\n    if from_prefix is not None and from_branch is not None:\n        raise ValueError('choose a prepared prefix or a completed branch, not both')\n    if from_prefix is not None:from_branch=from_prefix\n    project=Path(project).resolve(strict=True)\n    if not project.is_dir():raise ValueError('project must be a directory')\n    keys={'endpoint_url','endpoint_pin','model_contract_id','execution_profile_id','eos_tokens'}\n    if type(connection) is not dict or set(connection)!=keys:\n        raise ValueError('connection needs only endpoint/profile identities and EOS IDs; credentials belong in BW_COW_API_KEY')\n    HTTPTransport(connection['endpoint_url'])\n    if type(task) is not str or not task.strip() or len(task.encode('utf8'))>262144:raise ValueError('bounded nonempty task text required')\n    if type(branch) is not str or not 1<=len(branch)<=128:raise ValueError('bounded branch name required')\n    if not test_commands or any(type(c) is not str or not c.strip() for c in test_commands):\n        raise ValueError('at least one explicit verification command is required')\n    if from_snapshot is not None and from_branch is None:raise ValueError('a snapshot requires its source branch')\n    if from_branch is not None and (type(from_branch) is not str or not from_branch):raise ValueError('source branch required')\n    if from_snapshot is not None and (type(from_snapshot) is not str or not re.fullmatch('[0-9a-f]{64}',from_snapshot)):raise ValueError('invalid source snapshot')\n    cow=dict(connection,branch=branch,mode='ask',bootstrap='coding',grammar_registration='inline')\n    fork=None\n    if from_branch is not None:\n        cow.pop('bootstrap');cow['mode']='ask' if from_prefix is not None else 'append_user'\n        fork=dict(source_branch=from_branch,snapshot=from_snapshot)\n    config=dict(schema=1,source=str(project),source_policy='metadata-free-project-v1',run_id=branch,\n        grant=dict(read_paths=sorted(set(read_paths)|set(edit_paths)|set(create_paths)),\n                   edit_paths=list(edit_paths),create_paths=list(create_paths),allow_tests=False,allow_shell=True),\n        bindings=dict(task=dict(type='Text',value=task)),cow=cow,\n        shell=dict(timeout=shell_timeout),\n        verification=dict(schema=1,commands=[dict(command=c,disposition='exited',exit_code=0) for c in test_commands]))\n    config=_config(_bytes(config).decode(),prepared_prefix=from_prefix is not None)\n    return dict(schema=1,program=PROGRAM,config=config,fork=fork)\ndef _prefix_launch(launch):\n    config=launch.get('config')\n    return (launch.get('fork') is not None and type(config) is dict\n        and type(config.get('cow')) is dict and config['cow'].get('mode')=='ask')\ndef _validate(launch):\n    if type(launch) is not dict or set(launch)!={'schema','program','config','fork'} or type(launch['schema']) is not int or launch['schema']!=1 or launch['program']!=PROGRAM:\n        raise ValueError('unsupported coding launch')\n    _config(_bytes(launch['config']).decode(),prepared_prefix=_prefix_launch(launch))\n    fork=launch['fork']\n    if fork is not None:\n        if (type(fork) is not dict or set(fork)!={'source_branch','snapshot'}\n                or type(fork['source_branch']) is not str or not fork['source_branch']\n                or type(fork['snapshot']) is not str or not re.fullmatch('[0-9a-f]{64}',fork['snapshot'])\n                or launch['config']['cow'].get('mode') not in ('append_user','ask')\n                or 'bootstrap' in launch['config']['cow']):\n            raise ValueError('retained launch must pin an exact source snapshot')\n    elif launch['config']['cow'].get('bootstrap')!='coding':\n        raise ValueError('new coding launch requires its bootstrap')\ndef _state(state,*,create=False,source=None):\n    state=Path(state).absolute()\n    if state.is_symlink():raise ValueError('state must be a real owned directory')\n    if source is not None and state.resolve().is_relative_to(Path(source).resolve()):\n        raise ValueError('run state must be outside the source project')\n    if create and not state.exists():state.mkdir(mode=0o700)\n    info=state.lstat()\n    if not stat.S_ISDIR(info.st_mode) or stat.S_IMODE(info.st_mode)!=0o700 or info.st_uid!=os.getuid():\n        raise ValueError('state must be an owned directory with mode0700')\n    return state\ndef save_launch(state,launch):\n    import fcntl\n    _validate(launch)\n    state=_state(state,create=True,source=launch['config']['source'])\n    raw=_bytes(dict(launch=launch,sha256=hashlib.sha256(_bytes(launch)).hexdigest()))+b'\\n'\n    if len(raw)>MAX_LAUNCH_BYTES:raise ValueError('coding launch is too large')\n    path=state/'coding-launch.json'\n    # Serialize trusted setup publishers; atomic rename leaves one file link\n    # even if the process stops before staging cleanup. No workflow lives here.\n    lockfd=os.open(state/'.coding-launch.lock',os.O_RDWR|os.O_CREAT|getattr(os,'O_NOFOLLOW',0),0o600)\n    with os.fdopen(lockfd,'r+b') as lock:\n        info=os.fstat(lock.fileno())\n        if not stat.S_ISREG(info.st_mode) or info.st_nlink!=1 or info.st_uid!=os.getuid() or stat.S_IMODE(info.st_mode)!=0o600:\n            raise ValueError('invalid coding setup lock')\n        fcntl.flock(lock.fileno(),fcntl.LOCK_EX)\n        if path.exists() or path.is_symlink():\n            if read_launch(state)!=launch:raise ValueError('run setup changed; use a new run state')\n            return\n        fd,name=tempfile.mkstemp(prefix='.coding-launch-',dir=state);temporary=Path(name)\n        try:\n            with os.fdopen(fd,'wb') as stream:\n                os.fchmod(stream.fileno(),0o600);stream.write(raw);stream.flush();os.fsync(stream.fileno())\n            os.replace(temporary,path)\n            directory=os.open(state,os.O_RDONLY|getattr(os,'O_DIRECTORY',0))\n            try:os.fsync(directory)\n            finally:os.close(directory)\n        finally:\n            if temporary.exists():temporary.unlink()\ndef read_launch(state):\n    state=_state(state)\n    fd=os.open(state/'coding-launch.json',os.O_RDONLY|getattr(os,'O_NOFOLLOW',0)|getattr(os,'O_NONBLOCK',0))\n    with os.fdopen(fd,'rb') as stream:\n        info=os.fstat(stream.fileno())\n        if not stat.S_ISREG(info.st_mode) or info.st_nlink!=1 or info.st_uid!=os.getuid() or stat.S_IMODE(info.st_mode)!=0o600:\n            raise ValueError('coding launch must be a private owned regular file')\n        raw=stream.read(MAX_LAUNCH_BYTES+1)\n    if len(raw)>MAX_LAUNCH_BYTES:raise ValueError('coding launch is too large')\n    envelope=json.loads(raw)\n    if type(envelope) is not dict or set(envelope)!={'launch','sha256'} or envelope['sha256']!=hashlib.sha256(_bytes(envelope['launch'])).hexdigest():\n        raise ValueError('coding launch integrity check failed')\n    _validate(envelope['launch'])\n    return envelope['launch']\ndef _client(state,launch):\n    cow=launch['config']['cow']\n    return CowClient.http(cow['endpoint_url'],journal=OperationJournal(Path(state)/'cow-operations'),api_key=os.environ.get('BW_COW_API_KEY'),endpoint_pin=cow['endpoint_pin'],notice_handler=_source_notice)\ndef run_saved(state,*,max_steps=1024):\n    if type(max_steps) is not int or max_steps<=0:raise ValueError('finite positive step budget required')\n    launch=read_launch(state)\n    if launch['fork'] is not None:\n        fork=launch['fork'];operation='bw-code-fork-'+hashlib.sha256(_bytes(launch)).hexdigest()[:40]\n        # The original pinned source and journal ID survive retries. An uncertain\n        # fork remains uncertain; never select a newer head or invent a new ID.\n        try:\n            _client(state,launch).fork(fork['source_branch'],fork['snapshot'],launch['config']['cow']['branch'],operation)\n        except OperationIndeterminate as exc:\n            raise OperationIndeterminate('Original fork operation '+operation+' is unresolved; reconcile its original journal intent before continuing') from exc\n    return execute('run',launch['program'],_bytes(launch['config']).decode(),state,max_steps=max_steps,**({'prepared_prefix':True} if _prefix_launch(launch) else {}))\ndef start(args):\n    if type(args.max_steps) is not int or args.max_steps<=0:raise ValueError('finite positive step budget required')\n    from .__main__ import _source\n    connection=json.loads(_source(args.connection),object_pairs_hook=_pairs)\n    launch=build_launch(args.project,_source(args.task_file),connection,branch=args.branch,\n        read_paths=args.read,edit_paths=args.edit,create_paths=args.create,\n        test_commands=args.test_command,from_branch=args.from_branch,\n        from_prefix=getattr(args,'from_prefix',None),from_snapshot=args.from_snapshot,shell_timeout=args.shell_timeout)\n    existing=Path(args.state)/'coding-launch.json'\n    if launch['fork'] is not None and launch['fork']['snapshot'] is None:\n        if existing.exists():\n            prior=read_launch(args.state)\n            if prior['fork'] is not None and prior['fork']['source_branch']==launch['fork']['source_branch']:\n                launch['fork']['snapshot']=prior['fork']['snapshot']\n        if launch['fork']['snapshot'] is None:\n            # Read-only selection before publication. The snapshot,not a live\n            # branch name,is saved before any mutating setup/inference request.\n            head=_client(args.state,launch).head(launch['fork']['source_branch'])\n            launch['fork']['snapshot']=head.root if launch['config']['cow']['mode']=='ask' else head.tip\n    save_launch(args.state,launch)\n    return run_saved(args.state,max_steps=args.max_steps)\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "branchwrite/__main__.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Inspect or execute .bw programs through the one production interpreter.\"\"\"\nimport argparse\nimport hashlib\nimport os\nimport stat\nfrom pathlib import Path\nimport sys\nfrom .language import parse,render,ProgramSyntaxError,MAX_SOURCE_BYTES\n\ndef _source(path):\n    # Nonblocking open avoids a FIFO waiting for its writer before fstat can\n    # reject it. Read the opened descriptor, not a separately checked path.\n    flags=os.O_RDONLY|getattr(os,'O_NONBLOCK',0)\n    fd=os.open(path,flags)\n    with os.fdopen(fd,'rb') as stream:\n        if not stat.S_ISREG(os.fstat(stream.fileno()).st_mode):\n            raise ProgramSyntaxError('program source must be a regular file')\n        raw=stream.read(MAX_SOURCE_BYTES+1)\n    if len(raw)>MAX_SOURCE_BYTES:raise ProgramSyntaxError('source byte limit exceeded')\n    try:return raw.decode('utf8')\n    except UnicodeError as exc:raise ProgramSyntaxError('source must be valid UTF-8') from exc\n\ndef _run_result(action):\n    from .kernel import TransitionError\n    from .cow_client import CowClientError\n    from .tool_registry import EffectIndeterminate\n    from .tool_dispatch import ReconciliationRequired\n    from .model_dispatch import ModelReconciliationRequired\n    import json\n    try:\n        code,result=action()\n        print(json.dumps(result,sort_keys=True));return code\n    except (EffectIndeterminate,ReconciliationRequired,ModelReconciliationRequired) as exc:\n        print('branchwrite: unresolved original operation '+ascii(str(getattr(exc,'operation_id','unknown')))+'; reconcile before continuing',file=sys.stderr);return 4\n    except (TransitionError,CowClientError,ValueError,KeyError,TypeError) as exc:\n        print('branchwrite: '+ascii(str(exc)),file=sys.stderr);return 2\n\ndef main(argv=None):\n    parser=argparse.ArgumentParser(prog='branchwrite',description='Inspect .bw syntax or execute a host-authorized workflow.')\n    commands=parser.add_subparsers(dest='command',required=True)\n    for name in ['check','canonicalize']:\n        child=commands.add_parser(name);child.add_argument('program',type=Path)\n    for name in ['run','step']:\n        child=commands.add_parser(name);child.add_argument('program',type=Path)\n        child.add_argument('--config',type=Path,required=True);child.add_argument('--state',type=Path,required=True)\n        child.add_argument('--max-steps',type=int,default=1024)\n    code=commands.add_parser('code',help='Start coding in an owned copy with explicit file grants.')\n    code.add_argument('project',type=Path)\n    for name in ('task-file','connection','state'):\n        code.add_argument('--'+name,type=Path,required=True)\n    code.add_argument('--branch',required=True)\n    for name in ('read','edit','create','test-command'):\n        code.add_argument('--'+name,action='append',default=[])\n    origin=code.add_mutually_exclusive_group()\n    origin.add_argument('--from-branch',help='Fork a completed conversation tip.')\n    origin.add_argument('--from-prefix',help='Ask from a retained idle context root.')\n    code.add_argument('--from-snapshot')\n    code.add_argument('--shell-timeout',type=float,default=120)\n    code.add_argument('--max-steps',type=int,default=1024)\n    resume=commands.add_parser('resume',help='Resume a saved coding setup without changing its task or source.')\n    resume.add_argument('state',type=Path);resume.add_argument('--max-steps',type=int,default=1024)\n    args=parser.parse_args(argv)\n    try:\n        if args.command in ('code','resume'):\n            from .coding_cli import start,run_saved\n            return _run_result(lambda:start(args) if args.command=='code' else run_saved(args.state,max_steps=args.max_steps))\n        source=_source(args.program)\n        if args.command in ('run','step'):\n            # Lazy import: inspection commands remain read-only and dispatch-free.\n            from .run_cli import execute\n            return _run_result(lambda:execute(args.command,source,_source(args.config),args.state,max_steps=args.max_steps))\n        nodes=parse(source);canonical=render(nodes)\n        if args.command=='canonicalize':sys.stdout.buffer.write(canonical.encode('utf8'))\n        else:\n            count=0;pending=list(nodes)\n            while pending:\n                node=pending.pop();count+=1;pending.extend(node.body)\n            print('Syntax OK: '+str(count)+' statements; canonical SHA256 '+hashlib.sha256(canonical.encode('utf8')).hexdigest())\n            print('Execution: NOT_RUN (names, types, grants and effects are not admitted by syntax checking)')\n        return 0\n    except (OSError,ProgramSyntaxError) as exc:\n        # Controlled syntax reasons contain no source text. Escape OS filename\n        # data as a representation so it cannot become terminal control codes.\n        print('branchwrite: '+ascii(str(exc)),file=sys.stderr);return 2\n\nif __name__=='__main__':raise SystemExit(main())\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "tests/test_inline_task.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Public inline-task input must preserve literal text and file compatibility.\"\"\"\nimport contextlib,io,json,tempfile,unittest\nfrom pathlib import Path\nfrom unittest.mock import patch\nfrom branchwrite.__main__ import main\nfrom branchwrite.coding_cli import read_launch\nclass InlineTaskTests(unittest.TestCase):\n def setUp(self):\n  self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)\n  self.root=Path(self.tmp.name);self.project=self.root/'project';self.project.mkdir()\n  (self.project/'app.py').write_text('pass\\n')\n  self.task=self.root/'task.txt';self.task.write_text('Original file task\\n')\n  self.connection=self.root/'connection.json'\n  self.connection.write_text(json.dumps(dict(endpoint_url='http://127.0.0.1:1',endpoint_pin='owned',model_contract_id='m',execution_profile_id='p',eos_tokens=[256])))\n  self.state=self.root/'state'\n def invoke(self,task_args):\n  args=['code',str(self.project),'--connection',str(self.connection),'--state',str(self.state),'--branch','new','--edit','app.py','--test-command','python3 -m unittest',*task_args]\n  stdout=io.StringIO();stderr=io.StringIO()\n  with patch('branchwrite.coding_cli.run_saved',return_value=(0,{'verified':True})) as run,contextlib.redirect_stdout(stdout),contextlib.redirect_stderr(stderr):\n   try:code=main(args)\n   except SystemExit as e:code=e.code\n  return code,stdout.getvalue(),stderr.getvalue(),run\n def test_inline_task_is_preserved_exactly(self):\n  text=\"Inspect caf\u00e9's $HOME; do not expand $(echo hi).\\nSecond line.\\n\"\n  code,out,err,run=self.invoke(['--task',text])\n  self.assertEqual(code,0,err);run.assert_called_once()\n  self.assertEqual(read_launch(self.state)['config']['bindings']['task']['value'],text)\n def test_file_task_still_works_and_is_unchanged(self):\n  code,out,err,run=self.invoke(['--task-file',str(self.task)])\n  self.assertEqual(code,0,err);run.assert_called_once()\n  self.assertEqual(read_launch(self.state)['config']['bindings']['task']['value'],self.task.read_text())\n def test_both_input_forms_are_rejected_before_state(self):\n  code,out,err,run=self.invoke(['--task-file',str(self.task),'--task','Inline'])\n  self.assertEqual(code,2);self.assertIn('not allowed',err)\n  self.assertFalse(self.state.exists());run.assert_not_called()\n def test_missing_input_is_rejected_before_state(self):\n  code,out,err,run=self.invoke([])\n  self.assertEqual(code,2);self.assertFalse(self.state.exists());run.assert_not_called()\n def test_blank_inline_task_uses_existing_task_validation(self):\n  code,out,err,run=self.invoke(['--task','   '])\n  self.assertEqual(code,2);self.assertIn('bounded nonempty task',err)\n  self.assertFalse(self.state.exists());run.assert_not_called()\n def test_inline_text_is_never_executed(self):\n  marker=self.root/'executed'\n  text='$(touch '+str(marker)+'); __import__(\"os\").system(\"false\")'\n  code,out,err,run=self.invoke(['--task',text])\n  self.assertEqual(code,0,err);self.assertFalse(marker.exists())\n  self.assertEqual(read_launch(self.state)['config']['bindings']['task']['value'],text)\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "tests/test_coding_launcher.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Project/task admission; launcher never owns another workflow or history.\"\"\"\nimport json,tempfile,unittest\nfrom pathlib import Path\nclass CodingLauncherTests(unittest.TestCase):\n def setUp(self):\n  self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)\n  self.base=Path(self.tmp.name);self.project=self.base/'project';self.project.mkdir()\n  (self.project/'app.py').write_text('broken')\n  self.connection=dict(endpoint_url='http://127.0.0.1:1',endpoint_pin='owned',model_contract_id='model',execution_profile_id='profile',eos_tokens=[256])\n def build(self,**kwargs):\n  from branchwrite.coding_cli import build_launch\n  return build_launch(self.project,'Repair app.',self.connection,branch='coding',read_paths=['tests/test_app.py'],edit_paths=['app.py'],create_paths=['new.py'],test_commands=['python3 -m unittest'],**kwargs)\n def test_fresh_launch_uses_existing_workflow_and_explicit_grants(self):\n  launch=self.build()\n  cfg=launch['config']\n  self.assertEqual(cfg['source'],str(self.project))\n  self.assertEqual(cfg['cow']['bootstrap'],'coding')\n  self.assertEqual(cfg['cow']['grammar_registration'],'inline')\n  self.assertEqual(cfg['grant']['edit_paths'],['app.py'])\n  self.assertEqual(set(cfg['grant']['read_paths']),{'app.py','new.py','tests/test_app.py'})\n  self.assertIn('command-evidence-and-finish',launch['program'])\n  self.assertEqual(cfg['verification']['commands'][0]['exit_code'],0)\n def test_retained_launch_does_not_bootstrap_or_rebase(self):\n  launch=self.build(from_branch='parent',from_snapshot='a'*64)\n  self.assertNotIn('bootstrap',launch['config']['cow'])\n  self.assertEqual(launch['config']['cow']['mode'],'append_user')\n  self.assertEqual(launch['fork'],dict(source_branch='parent',snapshot='a'*64))\n def test_connection_cannot_contain_credentials_or_unknown_fields(self):\n  self.connection['api_key']='must-not-be-written'\n  with self.assertRaises(ValueError):self.build()\n def test_manifest_reopens_exactly_and_cannot_be_replaced(self):\n  from branchwrite.coding_cli import save_launch,read_launch\n  launch=self.build();state=self.base/'run'\n  save_launch(state,launch)\n  self.assertEqual(read_launch(state),launch)\n  changed=self.build();changed['config']['bindings']['task']['value']='Different task'\n  with self.assertRaises(ValueError):save_launch(state,changed)\n  self.assertEqual(read_launch(state),launch)\n def test_state_cannot_be_inside_source_or_a_symlink(self):\n  from branchwrite.coding_cli import save_launch\n  with self.assertRaises(ValueError):save_launch(self.project/'run',self.build())\n  alias=self.base/'alias';alias.symlink_to(self.project,target_is_directory=True)\n  with self.assertRaises(ValueError):save_launch(alias,self.build())\n def test_tampered_manifest_rejected(self):\n  from branchwrite.coding_cli import save_launch,read_launch\n  state=self.base/'run';save_launch(state,self.build())\n  p=state/'coding-launch.json';raw=json.loads(p.read_text())\n  raw['launch']['config']['bindings']['task']['value']='tampered'\n  p.write_text(json.dumps(raw))\n  with self.assertRaises(ValueError):read_launch(state)\n def test_interrupted_stage_cleanup_cannot_strand_a_published_manifest(self):\n  from branchwrite.coding_cli import save_launch,read_launch\n  from unittest.mock import patch\n  original=Path.unlink\n  def interrupted(path,*args,**kwargs):\n   if path.name.startswith('.coding-launch-'):raise OSError('stage cleanup interrupted')\n   return original(path,*args,**kwargs)\n  state=self.base/'run';launch=self.build()\n  with patch.object(Path,'unlink',interrupted):\n   try:save_launch(state,launch)\n   except OSError:pass\n  self.assertEqual(read_launch(state),launch)\n def test_uncertain_fork_reports_original_id_and_never_starts_interpreter(self):\n  from branchwrite.coding_cli import save_launch,run_saved\n  from branchwrite.cow_client import OperationIndeterminate\n  from unittest.mock import patch,Mock\n  state=self.base/'run';launch=self.build(from_branch='parent',from_snapshot='a'*64);save_launch(state,launch)\n  client=Mock();client.fork.side_effect=OperationIndeterminate('lost acknowledgment')\n  with patch('branchwrite.coding_cli._client',return_value=client),patch('branchwrite.coding_cli.execute') as execute:\n   with self.assertRaisesRegex(OperationIndeterminate,'bw-code-fork-'):\n    run_saved(state)\n   execute.assert_not_called()\n  self.assertEqual(client.fork.call_args.args[:3],('parent','a'*64,'coding'))\n def test_unresolved_fork_cannot_be_published(self):\n  from branchwrite.coding_cli import save_launch\n  with self.assertRaises(ValueError):save_launch(self.base/'run',self.build(from_branch='parent'))\n\nclass CodingLauncherCommandTests(unittest.TestCase):\n setUp=CodingLauncherTests.setUp\n build=CodingLauncherTests.build\n def cli(self,*args):\n  import os,subprocess,sys\n  env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1')\n  return subprocess.run([sys.executable,'-B','-m','branchwrite',*map(str,args)],capture_output=True,text=True,env=env,timeout=15)\n def test_code_and_resume_are_public_commands(self):\n  r=self.cli('--help')\n  self.assertEqual(r.returncode,0,r.stderr)\n  self.assertIn('code',r.stdout);self.assertIn('resume',r.stdout)\n def test_invalid_connection_does_not_create_a_run(self):\n  connection=self.base/'connection.json';connection.write_text(json.dumps(dict(self.connection,api_key='not-allowed')))\n  task=self.base/'task.txt';task.write_text('Repair app')\n  state=self.base/'run'\n  r=self.cli('code',self.project,'--task-file',task,'--connection',connection,'--state',state,'--branch','new','--edit','app.py','--test-command','python3 -m unittest')\n  self.assertEqual(r.returncode,2,r.stderr)\n  self.assertIn('credentials',r.stderr)\n  self.assertFalse(state.exists())\n def test_tampered_resume_does_not_create_a_world(self):\n  from branchwrite.coding_cli import save_launch\n  state=self.base/'run';save_launch(state,self.build())\n  p=state/'coding-launch.json';value=json.loads(p.read_text());value['sha256']='0'*64;p.write_text(json.dumps(value))\n  r=self.cli('resume',state)\n  self.assertEqual(r.returncode,2)\n  self.assertIn('integrity',r.stderr)\n  self.assertFalse((state/'world').exists())\n\n def test_invalid_budget_fails_before_transport_or_state_creation(self):\n  connection=self.base/'connection.json';connection.write_text(json.dumps(self.connection))\n  task=self.base/'task.txt';task.write_text('Repair app')\n  state=self.base/'run'\n  r=self.cli('code',self.project,'--task-file',task,'--connection',connection,'--state',state,'--branch','new','--edit','app.py','--test-command','python3 -m unittest','--max-steps','0')\n  self.assertEqual(r.returncode,2)\n  self.assertIn('step budget',r.stderr)\n  self.assertFalse(state.exists())\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "replace",
+      "arguments": {
+        "after": "    for name in ('connection','state'):\n        code.add_argument('--'+name,type=Path,required=True)\n    task_input=code.add_mutually_exclusive_group(required=True)\n    task_input.add_argument('--task-file',type=Path)\n    task_input.add_argument('--task',help='Inline task text; never executed.')\n",
+        "before": "    for name in ('task-file','connection','state'):\n        code.add_argument('--'+name,type=Path,required=True)\n",
+        "path": "branchwrite/__main__.py",
+        "source_sha256": "2747cf076051ea3a7d248bbc239336a3b7396404ca1724c27e4f5ebc7fe8516a"
+      },
+      "disposition": "applied",
+      "exit_code": 0,
+      "stdout": "replacement applied\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "replace",
+      "arguments": {
+        "after": "    task=args.task if args.task is not None else _source(args.task_file)\n    launch=build_launch(args.project,task,connection,branch=args.branch,\n",
+        "before": "    launch=build_launch(args.project,_source(args.task_file),connection,branch=args.branch,\n",
+        "path": "branchwrite/coding_cli.py",
+        "source_sha256": "7d000afd621e8adfe8ce7a836388b660e81d9c0c0bbc5e1b96d49f87fb0530c8"
+      },
+      "disposition": "applied",
+      "exit_code": 0,
+      "stdout": "replacement applied\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "run_shell",
+      "arguments": {
+        "command": "python3 -m unittest discover -s tests -p test_inline_task.py -v"
+      },
+      "disposition": "exited",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_blank_inline_task_uses_existing_task_validation (test_inline_task.InlineTaskTests.test_blank_inline_task_uses_existing_task_validation) ... ok\ntest_both_input_forms_are_rejected_before_state (test_inline_task.InlineTaskTests.test_both_input_forms_are_rejected_before_state) ... ok\ntest_file_task_still_works_and_is_unchanged (test_inline_task.InlineTaskTests.test_file_task_still_works_and_is_unchanged) ... ok\ntest_inline_task_is_preserved_exactly (test_inline_task.InlineTaskTests.test_inline_task_is_preserved_exactly) ... ok\ntest_inline_text_is_never_executed (test_inline_task.InlineTaskTests.test_inline_text_is_never_executed) ... ok\ntest_missing_input_is_rejected_before_state (test_inline_task.InlineTaskTests.test_missing_input_is_rejected_before_state) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.013s\n\nOK\n",
+      "details": {
+        "argv": [
+          "/usr/bin/bash",
+          "--noprofile",
+          "--norc",
+          "-c",
+          "python3 -m unittest discover -s tests -p test_inline_task.py -v"
+        ],
+        "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+        "command": "shell",
+        "cwd": "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v2/state/world/workspace",
+        "execution_host": {
+          "euid": 1000,
+          "gid": 1000,
+          "hostname": "r4090",
+          "uid": 1000
+        },
+        "inputs": [
+          {
+            "bytes": 5543,
+            "mode": "0644",
+            "path": "AGENTS.md",
+            "sha256": "935676582e4d262540ff3da251b6b5f5c7395ab97dd625d82bfd73e1d734338e"
+          },
+          {
+            "bytes": 6404,
+            "mode": "0644",
+            "path": "README.md",
+            "sha256": "6a7d648a9523ff7feada4e285c868f4904fc79961ba0cbfb3d7c834ff47c2490"
+          },
+          {
+            "bytes": 42,
+            "mode": "0644",
+            "path": "branchwrite/__init__.py",
+            "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+          },
+          {
+            "bytes": 5040,
+            "mode": "0644",
+            "path": "branchwrite/__main__.py",
+            "sha256": "b47d2f2e861fd44e9a589edfbda57ca3e1f4367f8e5e38a7e59fca0f75d2594a"
+          },
+          {
+            "bytes": 2711,
+            "mode": "0644",
+            "path": "branchwrite/browser_assets.py",
+            "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+          },
+          {
+            "bytes": 19255,
+            "mode": "0644",
+            "path": "branchwrite/browser_capture.py",
+            "sha256": "fe2cf850c0fda370fd286e5e9907aaeaa8607d3bb1bb21c88b5efb03160dfdec"
+          },
+          {
+            "bytes": 9288,
+            "mode": "0644",
+            "path": "branchwrite/browser_isolation.py",
+            "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+          },
+          {
+            "bytes": 4088,
+            "mode": "0644",
+            "path": "branchwrite/browser_worker.py",
+            "sha256": "d37e44545734c614c053a37c2dc77a57f90c9dbc26b8789d26022c8cad6b1fe1"
+          },
+          {
+            "bytes": 10632,
+            "mode": "0644",
+            "path": "branchwrite/coding_cli.py",
+            "sha256": "f083773c6af67a17cdbacf303ab8f1bbb68bf62fd73b1098c2660d9a0dc36495"
+          },
+          {
+            "bytes": 4716,
+            "mode": "0644",
+            "path": "branchwrite/coding_contract.py",
+            "sha256": "4c0f0435523dbc8d8f4e45553ac5068dd09bd2f549e99d6b1732ca747f952eac"
+          },
+          {
+            "bytes": 10781,
+            "mode": "0644",
+            "path": "branchwrite/coding_defaults.py",
+            "sha256": "e11f62a6b8c49c644afeeb154908137c5a415de55b67529cd39c0e0a97a0c34c"
+          },
+          {
+            "bytes": 11868,
+            "mode": "0644",
+            "path": "branchwrite/command_outputs.py",
+            "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+          },
+          {
+            "bytes": 8369,
+            "mode": "0644",
+            "path": "branchwrite/component_model.py",
+            "sha256": "cdfa18438cff524f9a37a3e44dac0351eda736fb6222c93a7fb37f36c4901b5b"
+          },
+          {
+            "bytes": 22832,
+            "mode": "0644",
+            "path": "branchwrite/context_pack.py",
+            "sha256": "eef9e480df1cc1561bafbd1c25a5b3b4e2f3cf31c8a724defab671afdc3b2c75"
+          },
+          {
+            "bytes": 2125,
+            "mode": "0644",
+            "path": "branchwrite/control_contract.py",
+            "sha256": "69982583752013c32270932b7e5cf1cb5e03d0afb9691d7c3dc88948bb9270e6"
+          },
+          {
+            "bytes": 3351,
+            "mode": "0644",
+            "path": "branchwrite/cow_actions.py",
+            "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+          },
+          {
+            "bytes": 77648,
+            "mode": "0644",
+            "path": "branchwrite/cow_client.py",
+            "sha256": "a08bd70de75399583cfc19229dc6e0a6ff5447286d5b8856b5322e5eda2f86d7"
+          },
+          {
+            "bytes": 6080,
+            "mode": "0644",
+            "path": "branchwrite/cow_fork.py",
+            "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+          },
+          {
+            "bytes": 49349,
+            "mode": "0644",
+            "path": "branchwrite/execution.py",
+            "sha256": "6a595a6a38dee451042f31303ea9f8b7398ab6a0b8f721999d9f2d27637ecb5b"
+          },
+          {
+            "bytes": 9645,
+            "mode": "0644",
+            "path": "branchwrite/golden_path.py",
+            "sha256": "084ea3467edbbc3b57f65c41c93693f76c0447350f5d4bc30264190491ec9316"
+          },
+          {
+            "bytes": 5412,
+            "mode": "0644",
+            "path": "branchwrite/image_feedback.py",
+            "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+          },
+          {
+            "bytes": 38353,
+            "mode": "0644",
+            "path": "branchwrite/interpreter.py",
+            "sha256": "cbb7a20a1d9015968c2b81aa4c61ac2a17d9a4f33b8496199f586a7593852d94"
+          },
+          {
+            "bytes": 14996,
+            "mode": "0644",
+            "path": "branchwrite/kernel.py",
+            "sha256": "cb6a345521f496ead177c9cfbb908929af8c268ce50a440a78086a66d5343e10"
+          },
+          {
+            "bytes": 9266,
+            "mode": "0644",
+            "path": "branchwrite/language.py",
+            "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+          },
+          {
+            "bytes": 21138,
+            "mode": "0644",
+            "path": "branchwrite/model_dispatch.py",
+            "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+          },
+          {
+            "bytes": 1730,
+            "mode": "0644",
+            "path": "branchwrite/model_inputs.py",
+            "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+          },
+          {
+            "bytes": 7728,
+            "mode": "0644",
+            "path": "branchwrite/planning_retry.py",
+            "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+          },
+          {
+            "bytes": 13119,
+            "mode": "0644",
+            "path": "branchwrite/records.py",
+            "sha256": "cbc34ddb6b510217a2a1995e2c31ea092f1b0c211b2daa1039dca18a2093d09b"
+          },
+          {
+            "bytes": 19408,
+            "mode": "0644",
+            "path": "branchwrite/run_cli.py",
+            "sha256": "c1b9e787b02e8b7ff49ab24ac1228223b3387464fe3373417e3ef06cb680b7d2"
+          },
+          {
+            "bytes": 14731,
+            "mode": "0644",
+            "path": "branchwrite/terminal.py",
+            "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+          },
+          {
+            "bytes": 12786,
+            "mode": "0644",
+            "path": "branchwrite/terminal_components.py",
+            "sha256": "e583db55b25ae9171581ba3234e984d574b6aeaa3733de43211735fb1225e5e8"
+          },
+          {
+            "bytes": 2388,
+            "mode": "0644",
+            "path": "branchwrite/terminal_worker.py",
+            "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+          },
+          {
+            "bytes": 1800,
+            "mode": "0644",
+            "path": "branchwrite/text_file_codec.py",
+            "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+          },
+          {
+            "bytes": 5119,
+            "mode": "0644",
+            "path": "branchwrite/thinking_ladder.py",
+            "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+          },
+          {
+            "bytes": 4205,
+            "mode": "0644",
+            "path": "branchwrite/tool_dispatch.py",
+            "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+          },
+          {
+            "bytes": 32148,
+            "mode": "0644",
+            "path": "branchwrite/tool_registry.py",
+            "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+          },
+          {
+            "bytes": 30228,
+            "mode": "0644",
+            "path": "branchwrite/verification.py",
+            "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+          },
+          {
+            "bytes": 1691,
+            "mode": "0644",
+            "path": "examples/README.md",
+            "sha256": "a196a50617a4e29369efd668db5c7bf5cc0a7ae142fb579fa47cea6691bb7042"
+          },
+          {
+            "bytes": 576,
+            "mode": "0644",
+            "path": "examples/bounded-revision.bw",
+            "sha256": "4d85d62b158e147da82bf166e79acd5c147174cc8c177377e3bc416bb6e16e87"
+          },
+          {
+            "bytes": 417,
+            "mode": "0644",
+            "path": "examples/coding.bw",
+            "sha256": "cdfac36f6fe9d1b7571ee5437e39c2ced28bfed330f2487e4a0feeb3b55c9238"
+          },
+          {
+            "bytes": 779,
+            "mode": "0644",
+            "path": "examples/continue-and-compose.bw",
+            "sha256": "77a3d447c2441df991a029218117cdb237aa887de865c0c13627bd2633d64b1c"
+          },
+          {
+            "bytes": 419,
+            "mode": "0644",
+            "path": "examples/file-task.bw",
+            "sha256": "20029c79318bccf4ed9a9d9b7cc86985cdcaeb6003e994032b71899746c107bd"
+          },
+          {
+            "bytes": 443,
+            "mode": "0644",
+            "path": "examples/generated-page-task.bw",
+            "sha256": "0e83e4fdbb5ac40cf431f28e8f7b7d0a9309af22d7a7f433ae48ebf79b8f1699"
+          },
+          {
+            "bytes": 455,
+            "mode": "0644",
+            "path": "examples/interactive-page-task.bw",
+            "sha256": "1c522dfd100902648d94ed6160f609862dee2c561236f737f191716f85b97fde"
+          },
+          {
+            "bytes": 7372,
+            "mode": "0644",
+            "path": "examples/line-file-worked-examples.txt",
+            "sha256": "ac811099e2d58f8f1a8ee0e88626048d24552ed2b927ac9b5398889a9a9d7776"
+          },
+          {
+            "bytes": 6489,
+            "mode": "0644",
+            "path": "examples/literal-file-worked-examples.txt",
+            "sha256": "f8891dbb0980a5578ed7436c1ae5b212e853b280a57c41bffbb4588c61d95251"
+          },
+          {
+            "bytes": 417,
+            "mode": "0644",
+            "path": "examples/page-task.bw",
+            "sha256": "eb1429be03c079b10196d4737dbdb169a46727769af111e92a967a678f2aae0b"
+          },
+          {
+            "bytes": 1734,
+            "mode": "0644",
+            "path": "examples/parallel-repair.bw",
+            "sha256": "a31dd48696096137862573a3fffdfb4e69aebba76c28ccc5744c17c284794520"
+          },
+          {
+            "bytes": 39145,
+            "mode": "0644",
+            "path": "examples/terminal-worked-examples.txt",
+            "sha256": "2a33b84781509f23d117c1502691a8cab1e767a8bf0bde3f0552bfca2ed9bfbe"
+          },
+          {
+            "bytes": 45809,
+            "mode": "0644",
+            "path": "examples/tool-worked-examples.txt",
+            "sha256": "410e5092a535372d80e712acbe784aedfde28782a8f920dea9d6ad7936ee656c"
+          },
+          {
+            "bytes": 395,
+            "mode": "0644",
+            "path": "pyproject.toml",
+            "sha256": "5249d760ff268a740ffa852e40eafc13c770aefd753cbff879aa60e249e505e8"
+          },
+          {
+            "bytes": 610,
+            "mode": "0644",
+            "path": "setup.py",
+            "sha256": "4441787767380a630c009c32f53671ce758a8b2f5ccdb57d902d53c0ff177b20"
+          },
+          {
+            "bytes": 6649,
+            "mode": "0644",
+            "path": "tests/test_coding_launcher.py",
+            "sha256": "1f21a6440a6eea7f8d22553be11a6491ccc538574f6d35754ef186f31f698177"
+          },
+          {
+            "bytes": 2394,
+            "mode": "0644",
+            "path": "tests/test_connection_admission.py",
+            "sha256": "de824cadd44193e16f7e76dc363d89285fcf72cc7ef5452927d79f85cabb11ce"
+          },
+          {
+            "bytes": 3024,
+            "mode": "0644",
+            "path": "tests/test_inline_task.py",
+            "sha256": "fa48568fb25abbf20be3b69121c302df96dcf93fc154c66fff4a66c0e8f90a11"
+          }
+        ],
+        "isolation": {
+          "kind": "bubblewrap-terminal-v1",
+          "launcher_pid": 2262365,
+          "mount_ns": "mnt:[4026532775]",
+          "namespace_members_after": [],
+          "net_ns": "net:[4026532781]",
+          "pid_ns": "pid:[4026532778]",
+          "worker_exited": true
+        },
+        "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+        "scope": "model-written Bash; read-only captured readable files; no network or host home",
+        "workspace_after_sha256": "f9df815b8ce12395c35e3a3a4338472c5a8ac5d3071876a07e350dad0c1918c2"
+      }
+    },
+    {
+      "tool": "run_shell",
+      "arguments": {
+        "command": "python3 -m unittest discover -s tests -p test_coding_launcher.py -v"
+      },
+      "disposition": "exited",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_code_and_resume_are_public_commands (test_coding_launcher.CodingLauncherCommandTests.test_code_and_resume_are_public_commands) ... ok\ntest_invalid_budget_fails_before_transport_or_state_creation (test_coding_launcher.CodingLauncherCommandTests.test_invalid_budget_fails_before_transport_or_state_creation) ... ok\ntest_invalid_connection_does_not_create_a_run (test_coding_launcher.CodingLauncherCommandTests.test_invalid_connection_does_not_create_a_run) ... ok\ntest_tampered_resume_does_not_create_a_world (test_coding_launcher.CodingLauncherCommandTests.test_tampered_resume_does_not_create_a_world) ... ok\ntest_connection_cannot_contain_credentials_or_unknown_fields (test_coding_launcher.CodingLauncherTests.test_connection_cannot_contain_credentials_or_unknown_fields) ... ok\ntest_fresh_launch_uses_existing_workflow_and_explicit_grants (test_coding_launcher.CodingLauncherTests.test_fresh_launch_uses_existing_workflow_and_explicit_grants) ... ok\ntest_interrupted_stage_cleanup_cannot_strand_a_published_manifest (test_coding_launcher.CodingLauncherTests.test_interrupted_stage_cleanup_cannot_strand_a_published_manifest) ... ok\ntest_manifest_reopens_exactly_and_cannot_be_replaced (test_coding_launcher.CodingLauncherTests.test_manifest_reopens_exactly_and_cannot_be_replaced) ... ok\ntest_retained_launch_does_not_bootstrap_or_rebase (test_coding_launcher.CodingLauncherTests.test_retained_launch_does_not_bootstrap_or_rebase) ... ok\ntest_state_cannot_be_inside_source_or_a_symlink (test_coding_launcher.CodingLauncherTests.test_state_cannot_be_inside_source_or_a_symlink) ... ok\ntest_tampered_manifest_rejected (test_coding_launcher.CodingLauncherTests.test_tampered_manifest_rejected) ... ok\ntest_uncertain_fork_reports_original_id_and_never_starts_interpreter (test_coding_launcher.CodingLauncherTests.test_uncertain_fork_reports_original_id_and_never_starts_interpreter) ... ok\ntest_unresolved_fork_cannot_be_published (test_coding_launcher.CodingLauncherTests.test_unresolved_fork_cannot_be_published) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.475s\n\nOK\n",
+      "details": {
+        "argv": [
+          "/usr/bin/bash",
+          "--noprofile",
+          "--norc",
+          "-c",
+          "python3 -m unittest discover -s tests -p test_coding_launcher.py -v"
+        ],
+        "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+        "command": "shell",
+        "cwd": "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v2/state/world/workspace",
+        "execution_host": {
+          "euid": 1000,
+          "gid": 1000,
+          "hostname": "r4090",
+          "uid": 1000
+        },
+        "inputs": [
+          {
+            "bytes": 5543,
+            "mode": "0644",
+            "path": "AGENTS.md",
+            "sha256": "935676582e4d262540ff3da251b6b5f5c7395ab97dd625d82bfd73e1d734338e"
+          },
+          {
+            "bytes": 6404,
+            "mode": "0644",
+            "path": "README.md",
+            "sha256": "6a7d648a9523ff7feada4e285c868f4904fc79961ba0cbfb3d7c834ff47c2490"
+          },
+          {
+            "bytes": 42,
+            "mode": "0644",
+            "path": "branchwrite/__init__.py",
+            "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+          },
+          {
+            "bytes": 5040,
+            "mode": "0644",
+            "path": "branchwrite/__main__.py",
+            "sha256": "b47d2f2e861fd44e9a589edfbda57ca3e1f4367f8e5e38a7e59fca0f75d2594a"
+          },
+          {
+            "bytes": 2711,
+            "mode": "0644",
+            "path": "branchwrite/browser_assets.py",
+            "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+          },
+          {
+            "bytes": 19255,
+            "mode": "0644",
+            "path": "branchwrite/browser_capture.py",
+            "sha256": "fe2cf850c0fda370fd286e5e9907aaeaa8607d3bb1bb21c88b5efb03160dfdec"
+          },
+          {
+            "bytes": 9288,
+            "mode": "0644",
+            "path": "branchwrite/browser_isolation.py",
+            "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+          },
+          {
+            "bytes": 4088,
+            "mode": "0644",
+            "path": "branchwrite/browser_worker.py",
+            "sha256": "d37e44545734c614c053a37c2dc77a57f90c9dbc26b8789d26022c8cad6b1fe1"
+          },
+          {
+            "bytes": 10632,
+            "mode": "0644",
+            "path": "branchwrite/coding_cli.py",
+            "sha256": "f083773c6af67a17cdbacf303ab8f1bbb68bf62fd73b1098c2660d9a0dc36495"
+          },
+          {
+            "bytes": 4716,
+            "mode": "0644",
+            "path": "branchwrite/coding_contract.py",
+            "sha256": "4c0f0435523dbc8d8f4e45553ac5068dd09bd2f549e99d6b1732ca747f952eac"
+          },
+          {
+            "bytes": 10781,
+            "mode": "0644",
+            "path": "branchwrite/coding_defaults.py",
+            "sha256": "e11f62a6b8c49c644afeeb154908137c5a415de55b67529cd39c0e0a97a0c34c"
+          },
+          {
+            "bytes": 11868,
+            "mode": "0644",
+            "path": "branchwrite/command_outputs.py",
+            "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+          },
+          {
+            "bytes": 8369,
+            "mode": "0644",
+            "path": "branchwrite/component_model.py",
+            "sha256": "cdfa18438cff524f9a37a3e44dac0351eda736fb6222c93a7fb37f36c4901b5b"
+          },
+          {
+            "bytes": 22832,
+            "mode": "0644",
+            "path": "branchwrite/context_pack.py",
+            "sha256": "eef9e480df1cc1561bafbd1c25a5b3b4e2f3cf31c8a724defab671afdc3b2c75"
+          },
+          {
+            "bytes": 2125,
+            "mode": "0644",
+            "path": "branchwrite/control_contract.py",
+            "sha256": "69982583752013c32270932b7e5cf1cb5e03d0afb9691d7c3dc88948bb9270e6"
+          },
+          {
+            "bytes": 3351,
+            "mode": "0644",
+            "path": "branchwrite/cow_actions.py",
+            "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+          },
+          {
+            "bytes": 77648,
+            "mode": "0644",
+            "path": "branchwrite/cow_client.py",
+            "sha256": "a08bd70de75399583cfc19229dc6e0a6ff5447286d5b8856b5322e5eda2f86d7"
+          },
+          {
+            "bytes": 6080,
+            "mode": "0644",
+            "path": "branchwrite/cow_fork.py",
+            "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+          },
+          {
+            "bytes": 49349,
+            "mode": "0644",
+            "path": "branchwrite/execution.py",
+            "sha256": "6a595a6a38dee451042f31303ea9f8b7398ab6a0b8f721999d9f2d27637ecb5b"
+          },
+          {
+            "bytes": 9645,
+            "mode": "0644",
+            "path": "branchwrite/golden_path.py",
+            "sha256": "084ea3467edbbc3b57f65c41c93693f76c0447350f5d4bc30264190491ec9316"
+          },
+          {
+            "bytes": 5412,
+            "mode": "0644",
+            "path": "branchwrite/image_feedback.py",
+            "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+          },
+          {
+            "bytes": 38353,
+            "mode": "0644",
+            "path": "branchwrite/interpreter.py",
+            "sha256": "cbb7a20a1d9015968c2b81aa4c61ac2a17d9a4f33b8496199f586a7593852d94"
+          },
+          {
+            "bytes": 14996,
+            "mode": "0644",
+            "path": "branchwrite/kernel.py",
+            "sha256": "cb6a345521f496ead177c9cfbb908929af8c268ce50a440a78086a66d5343e10"
+          },
+          {
+            "bytes": 9266,
+            "mode": "0644",
+            "path": "branchwrite/language.py",
+            "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+          },
+          {
+            "bytes": 21138,
+            "mode": "0644",
+            "path": "branchwrite/model_dispatch.py",
+            "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+          },
+          {
+            "bytes": 1730,
+            "mode": "0644",
+            "path": "branchwrite/model_inputs.py",
+            "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+          },
+          {
+            "bytes": 7728,
+            "mode": "0644",
+            "path": "branchwrite/planning_retry.py",
+            "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+          },
+          {
+            "bytes": 13119,
+            "mode": "0644",
+            "path": "branchwrite/records.py",
+            "sha256": "cbc34ddb6b510217a2a1995e2c31ea092f1b0c211b2daa1039dca18a2093d09b"
+          },
+          {
+            "bytes": 19408,
+            "mode": "0644",
+            "path": "branchwrite/run_cli.py",
+            "sha256": "c1b9e787b02e8b7ff49ab24ac1228223b3387464fe3373417e3ef06cb680b7d2"
+          },
+          {
+            "bytes": 14731,
+            "mode": "0644",
+            "path": "branchwrite/terminal.py",
+            "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+          },
+          {
+            "bytes": 12786,
+            "mode": "0644",
+            "path": "branchwrite/terminal_components.py",
+            "sha256": "e583db55b25ae9171581ba3234e984d574b6aeaa3733de43211735fb1225e5e8"
+          },
+          {
+            "bytes": 2388,
+            "mode": "0644",
+            "path": "branchwrite/terminal_worker.py",
+            "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+          },
+          {
+            "bytes": 1800,
+            "mode": "0644",
+            "path": "branchwrite/text_file_codec.py",
+            "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+          },
+          {
+            "bytes": 5119,
+            "mode": "0644",
+            "path": "branchwrite/thinking_ladder.py",
+            "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+          },
+          {
+            "bytes": 4205,
+            "mode": "0644",
+            "path": "branchwrite/tool_dispatch.py",
+            "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+          },
+          {
+            "bytes": 32148,
+            "mode": "0644",
+            "path": "branchwrite/tool_registry.py",
+            "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+          },
+          {
+            "bytes": 30228,
+            "mode": "0644",
+            "path": "branchwrite/verification.py",
+            "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+          },
+          {
+            "bytes": 1691,
+            "mode": "0644",
+            "path": "examples/README.md",
+            "sha256": "a196a50617a4e29369efd668db5c7bf5cc0a7ae142fb579fa47cea6691bb7042"
+          },
+          {
+            "bytes": 576,
+            "mode": "0644",
+            "path": "examples/bounded-revision.bw",
+            "sha256": "4d85d62b158e147da82bf166e79acd5c147174cc8c177377e3bc416bb6e16e87"
+          },
+          {
+            "bytes": 417,
+            "mode": "0644",
+            "path": "examples/coding.bw",
+            "sha256": "cdfac36f6fe9d1b7571ee5437e39c2ced28bfed330f2487e4a0feeb3b55c9238"
+          },
+          {
+            "bytes": 779,
+            "mode": "0644",
+            "path": "examples/continue-and-compose.bw",
+            "sha256": "77a3d447c2441df991a029218117cdb237aa887de865c0c13627bd2633d64b1c"
+          },
+          {
+            "bytes": 419,
+            "mode": "0644",
+            "path": "examples/file-task.bw",
+            "sha256": "20029c79318bccf4ed9a9d9b7cc86985cdcaeb6003e994032b71899746c107bd"
+          },
+          {
+            "bytes": 443,
+            "mode": "0644",
+            "path": "examples/generated-page-task.bw",
+            "sha256": "0e83e4fdbb5ac40cf431f28e8f7b7d0a9309af22d7a7f433ae48ebf79b8f1699"
+          },
+          {
+            "bytes": 455,
+            "mode": "0644",
+            "path": "examples/interactive-page-task.bw",
+            "sha256": "1c522dfd100902648d94ed6160f609862dee2c561236f737f191716f85b97fde"
+          },
+          {
+            "bytes": 7372,
+            "mode": "0644",
+            "path": "examples/line-file-worked-examples.txt",
+            "sha256": "ac811099e2d58f8f1a8ee0e88626048d24552ed2b927ac9b5398889a9a9d7776"
+          },
+          {
+            "bytes": 6489,
+            "mode": "0644",
+            "path": "examples/literal-file-worked-examples.txt",
+            "sha256": "f8891dbb0980a5578ed7436c1ae5b212e853b280a57c41bffbb4588c61d95251"
+          },
+          {
+            "bytes": 417,
+            "mode": "0644",
+            "path": "examples/page-task.bw",
+            "sha256": "eb1429be03c079b10196d4737dbdb169a46727769af111e92a967a678f2aae0b"
+          },
+          {
+            "bytes": 1734,
+            "mode": "0644",
+            "path": "examples/parallel-repair.bw",
+            "sha256": "a31dd48696096137862573a3fffdfb4e69aebba76c28ccc5744c17c284794520"
+          },
+          {
+            "bytes": 39145,
+            "mode": "0644",
+            "path": "examples/terminal-worked-examples.txt",
+            "sha256": "2a33b84781509f23d117c1502691a8cab1e767a8bf0bde3f0552bfca2ed9bfbe"
+          },
+          {
+            "bytes": 45809,
+            "mode": "0644",
+            "path": "examples/tool-worked-examples.txt",
+            "sha256": "410e5092a535372d80e712acbe784aedfde28782a8f920dea9d6ad7936ee656c"
+          },
+          {
+            "bytes": 395,
+            "mode": "0644",
+            "path": "pyproject.toml",
+            "sha256": "5249d760ff268a740ffa852e40eafc13c770aefd753cbff879aa60e249e505e8"
+          },
+          {
+            "bytes": 610,
+            "mode": "0644",
+            "path": "setup.py",
+            "sha256": "4441787767380a630c009c32f53671ce758a8b2f5ccdb57d902d53c0ff177b20"
+          },
+          {
+            "bytes": 6649,
+            "mode": "0644",
+            "path": "tests/test_coding_launcher.py",
+            "sha256": "1f21a6440a6eea7f8d22553be11a6491ccc538574f6d35754ef186f31f698177"
+          },
+          {
+            "bytes": 2394,
+            "mode": "0644",
+            "path": "tests/test_connection_admission.py",
+            "sha256": "de824cadd44193e16f7e76dc363d89285fcf72cc7ef5452927d79f85cabb11ce"
+          },
+          {
+            "bytes": 3024,
+            "mode": "0644",
+            "path": "tests/test_inline_task.py",
+            "sha256": "fa48568fb25abbf20be3b69121c302df96dcf93fc154c66fff4a66c0e8f90a11"
+          }
+        ],
+        "isolation": {
+          "kind": "bubblewrap-terminal-v1",
+          "launcher_pid": 2262423,
+          "mount_ns": "mnt:[4026532775]",
+          "namespace_members_after": [],
+          "net_ns": "net:[4026532781]",
+          "pid_ns": "pid:[4026532778]",
+          "worker_exited": true
+        },
+        "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+        "scope": "model-written Bash; read-only captured readable files; no network or host home",
+        "workspace_after_sha256": "f9df815b8ce12395c35e3a3a4338472c5a8ac5d3071876a07e350dad0c1918c2"
+      }
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "answer": "Implemented the inline task input in `branchwrite/__main__.py` and wired it through in `branchwrite/coding_cli.py`.\n\nChanges:\n- `branchwrite code` now has a required mutually exclusive task input group:\n  - `--task-file PATH` remains supported.\n  - `--task TEXT` accepts inline task text.\n- `start()` uses `args.task` exactly when provided; otherwise it reads `args.task_file` through the existing `_source()` path.\n- Inline text is passed directly to `build_launch()`, which applies the existing bounded nonempty task validation. It is stored as task binding text and is not executed.\n- Existing `run`, `step`, `resume`, and file-task launcher behavior were not changed.\n\nActual test receipts:\n- `python3 -m unittest discover -s tests -p test_inline_task.py -v` exited 0; 6 tests passed.\n- `python3 -m unittest discover -s tests -p test_coding_launcher.py -v` exited 0; 13 tests passed."
+      },
+      "disposition": "completion_requested",
+      "exit_code": null,
+      "stdout": "Implemented the inline task input in `branchwrite/__main__.py` and wired it through in `branchwrite/coding_cli.py`.\n\nChanges:\n- `branchwrite code` now has a required mutually exclusive task input group:\n  - `--task-file PATH` remains supported.\n  - `--task TEXT` accepts inline task text.\n- `start()` uses `args.task` exactly when provided; otherwise it reads `args.task_file` through the existing `_source()` path.\n- Inline text is passed directly to `build_launch()`, which applies the existing bounded nonempty task validation. It is stored as task binding text and is not executed.\n- Existing `run`, `step`, `resume`, and file-task launcher behavior were not changed.\n\nActual test receipts:\n- `python3 -m unittest discover -s tests -p test_inline_task.py -v` exited 0; 6 tests passed.\n- `python3 -m unittest discover -s tests -p test_coding_launcher.py -v` exited 0; 13 tests passed.",
+      "stderr": "",
+      "details": {}
+    }
+  ],
+  "model_requests": [
+    {
+      "tokens": 186,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    },
+    {
+      "tokens": 36,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    },
+    {
+      "tokens": 34,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    },
+    {
+      "tokens": 322,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    },
+    {
+      "tokens": 1008,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    },
+    {
+      "tokens": 92,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    },
+    {
+      "tokens": 59,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    },
+    {
+      "tokens": 45,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    },
+    {
+      "tokens": 523,
+      "grammar_state": "gea748b127ed576fa56141b3249c74ef096cca009780b4a41a8493f249965c733_s0"
+    }
+  ],
+  "numerical_oracle": "NOT_RUN"
+}

@@ -1,0 +1,12 @@
+{
+  "source_revision": "3ef08001129e37e436d98053f09e40ec5b7cc972",
+  "wheel": "branchwrite-0.1.0.dev26-py3-none-any.whl",
+  "wheel_sha256": "bc3257fcbce1f0e9a4e4aa69a4b3788572c23b0789df1c5ed6f4e783a77e1d46",
+  "status": "INSTALLED_CLIENT_CONTROL_PASS",
+  "scope": "Actual file creation and isolated shell; no new GPU run",
+  "build_tools": {
+    "setuptools": "78.1.1",
+    "wheel": "0.46.3"
+  },
+  "first_build": "Failed: tested runtime intentionally lacked build-only setuptools; separate builder used"
+}

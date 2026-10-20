@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "fixture": "original",
+      "exit_code": 1,
+      "methods": 12,
+      "package_marker_added": false
+    },
+    {
+      "fixture": "candidate",
+      "exit_code": 0,
+      "methods": 12,
+      "package_marker_added": false
+    },
+    {
+      "fixture": "independent",
+      "exit_code": 0,
+      "methods": 13,
+      "package_marker_added": false
+    }
+  ],
+  "scope": "Original and model-produced SC18 bytes unchanged; actual built-in executor without package markers"
+}

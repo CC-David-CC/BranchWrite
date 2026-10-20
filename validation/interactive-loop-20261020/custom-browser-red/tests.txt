@@ -1,0 +1,53 @@
+test_italic_alone_does_not_pass_bold_name_requirement (tests.test_browser_host_inspection.HostInspectionTests.test_italic_alone_does_not_pass_bold_name_requirement) ... ERROR
+test_missing_underline_is_a_failed_inspection (tests.test_browser_host_inspection.HostInspectionTests.test_missing_underline_is_a_failed_inspection) ... ERROR
+test_real_computed_style_and_interaction_are_checked_in_the_sandbox (tests.test_browser_host_inspection.HostInspectionTests.test_real_computed_style_and_interaction_are_checked_in_the_sandbox) ... ERROR
+
+======================================================================
+ERROR: test_italic_alone_does_not_pass_bold_name_requirement (tests.test_browser_host_inspection.HostInspectionTests.test_italic_alone_does_not_pass_bold_name_requirement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_host_inspection.py", line 46, in test_italic_alone_does_not_pass_bold_name_requirement
+    result=self.inspect(PAGE.replace(b'<strong id="name">Rex</strong>',b'<em id="name">Rex</em>'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_host_inspection.py", line 30, in inspect
+    inspection=PageInspection(source,hashlib.sha256(source.read_bytes()).hexdigest(),'custom')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 6, in __init__
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/browser_capture.py", line 38, in __post_init__
+    raise ValueError('invalid host page inspection descriptor')
+ValueError: invalid host page inspection descriptor
+
+======================================================================
+ERROR: test_missing_underline_is_a_failed_inspection (tests.test_browser_host_inspection.HostInspectionTests.test_missing_underline_is_a_failed_inspection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_host_inspection.py", line 42, in test_missing_underline_is_a_failed_inspection
+    result=self.inspect(PAGE.replace(b'text-decoration:underline',b'text-decoration:none'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_host_inspection.py", line 30, in inspect
+    inspection=PageInspection(source,hashlib.sha256(source.read_bytes()).hexdigest(),'custom')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 6, in __init__
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/browser_capture.py", line 38, in __post_init__
+    raise ValueError('invalid host page inspection descriptor')
+ValueError: invalid host page inspection descriptor
+
+======================================================================
+ERROR: test_real_computed_style_and_interaction_are_checked_in_the_sandbox (tests.test_browser_host_inspection.HostInspectionTests.test_real_computed_style_and_interaction_are_checked_in_the_sandbox)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_host_inspection.py", line 34, in test_real_computed_style_and_interaction_are_checked_in_the_sandbox
+    result=self.inspect(PAGE)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_host_inspection.py", line 30, in inspect
+    inspection=PageInspection(source,hashlib.sha256(source.read_bytes()).hexdigest(),'custom')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 6, in __init__
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/browser_capture.py", line 38, in __post_init__
+    raise ValueError('invalid host page inspection descriptor')
+ValueError: invalid host page inspection descriptor
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (errors=3)

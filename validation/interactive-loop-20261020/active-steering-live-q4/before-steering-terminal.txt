@@ -1,0 +1,32 @@
+BranchWrite
+Client: r4090 | Project: /home/dflanag3/projects/branchwrite-interactive-dev39-U01
+Project files stay on this client. Model requests go to your configured COW server.
+Saved session: /home/dflanag3/spatial-artifacts/branchwrite-dev39-interactive-20261020/U01-session
+BranchWrite: keep talking while I work. /help shows the keys.
+Work edits this project. /explore tries an idea in a separate copy.
+You> Add a small section called Meet our dogs to this page: Rex runs. Luna jumps. Milo plays. Keep everything
+else, including the greeting button, working.
+Working...
+Thinking about the next step...
+You>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

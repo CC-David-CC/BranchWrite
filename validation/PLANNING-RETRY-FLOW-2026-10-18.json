@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "date": "2026-10-18",
+  "qualification": "36_CPU_HTTP_COW_FOCUSED_PASS_AUTOMATIC_SELECTION_GPU_UNRUN",
+  "base_commit": "8296e3c5ad9d87c8a01e2e0bfb91848586f849d6",
+  "executed": {
+    "result": {
+      "executed_ids": [
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_actual_fork_selects_prior_point_and_preserves_failed_tip",
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_append_user_boundary_is_preserved",
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_closed_retry_reopens_without_server_or_new_work",
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_complete_native_output_recovers_without_another_model_request",
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_incomplete_output_cannot_close_caller_slot",
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_invalid_profile_is_rejected_before_fork_admission",
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_lost_fork_ack_requires_original_reconciliation",
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_lost_model_ack_retains_original_native_operation",
+        "tests.test_planning_retry_flow.PlanningRetryFlowTests.test_restart_after_fork_return_before_resume_does_not_refork",
+        "tests.test_cow_fork_dispatch.PlanningForkTests.test_client_complete_before_kernel_return_recovers_offline",
+        "tests.test_cow_fork_dispatch.PlanningForkTests.test_closed_fork_reopens_without_server_or_client_journal_read",
+        "tests.test_cow_fork_dispatch.PlanningForkTests.test_fork_keeps_failed_tip_and_selects_prior_snapshot_without_forward",
+        "tests.test_cow_fork_dispatch.PlanningForkTests.test_lost_server_ack_requires_reconciliation_and_never_resends",
+        "tests.test_cow_fork_dispatch.PlanningForkTests.test_missing_client_intent_after_dispatch_is_not_assumed_unsent",
+        "tests.test_cow_fork_dispatch.PlanningForkTests.test_restart_before_send_dispatches_one_original_fork",
+        "tests.test_cow_fork_dispatch.PlanningForkTests.test_two_out_of_order_forks_fill_only_their_own_slots",
+        "tests.test_cow_fork_dispatch.PlanningForkTests.test_wrong_root_receipt_cannot_close_workflow",
+        "tests.test_model_dispatch.ModelFlowTests.test_adapter_profile_change_cannot_reinterpret_existing_flow",
+        "tests.test_model_dispatch.ModelFlowTests.test_budget_exhaustion_retains_partial_without_typed_parent_return",
+        "tests.test_model_dispatch.ModelFlowTests.test_committed_client_reply_recovers_before_kernel_return_without_network",
+        "tests.test_model_dispatch.ModelFlowTests.test_constrained_and_thinking_formats_require_explicit_named_grammar",
+        "tests.test_model_dispatch.ModelFlowTests.test_controller_frame_inventory_is_detached",
+        "tests.test_model_dispatch.ModelFlowTests.test_five_thousand_output_tokens_use_opaque_native_receipts_not_typed_lists",
+        "tests.test_model_dispatch.ModelFlowTests.test_independent_branches_return_in_reverse_order_without_sibling_visibility",
+        "tests.test_model_dispatch.ModelFlowTests.test_missing_reply_never_resends_and_explicit_original_replay_recovers",
+        "tests.test_model_dispatch.ModelFlowTests.test_other_unresolved_operation_owns_the_branch",
+        "tests.test_model_dispatch.ModelFlowTests.test_partial_model_flow_keeps_branch_owner_between_native_requests",
+        "tests.test_model_dispatch.ModelFlowTests.test_partial_text_byte_budget_stops_before_another_request",
+        "tests.test_model_dispatch.ModelFlowTests.test_partial_then_restart_continue_returns_once_at_consumed_eos",
+        "tests.test_model_dispatch.ModelFlowTests.test_rejected_stopped_metadata_cannot_trigger_hidden_continuation",
+        "tests.test_model_dispatch.ModelFlowTests.test_saved_native_return_recovers_before_parent_resume_without_new_call",
+        "tests.test_model_dispatch.ModelFlowTests.test_stale_source_never_dispatches_inference",
+        "tests.test_cow_fork_receipts.ForkReceiptTests.test_completed_fork_is_read_locally_without_transport_or_forward_work",
+        "tests.test_cow_fork_receipts.ForkReceiptTests.test_lost_fork_ack_recovers_by_read_only_status_then_local_receipt",
+        "tests.test_cow_fork_receipts.ForkReceiptTests.test_missing_pending_and_generation_records_cannot_be_fork_receipts",
+        "tests.test_cow_fork_receipts.ForkReceiptTests.test_recovery_refuses_self_consistent_receipt_for_wrong_snapshot"
+      ],
+      "tests_run": 36,
+      "failures": [],
+      "errors": [],
+      "skips": [],
+      "seconds": 19.743943372974172
+    },
+    "result_path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-planning-retry-cpu-v4/regression-result.json",
+    "result_sha256": "7a18506ae6143979514975f137ae690467185f1119f9fd74b1773b3d70d07d3b",
+    "backup": {
+      "status": "PRIVATE_ARCHIVE_ALL_MEMBERS_VERIFIED",
+      "destination": "box-git:/srv/data/git/private_context_cow.evidence/20261018-bw-planning-retry-flow-v1/evidence.tar.gz",
+      "archive_bytes": 897150,
+      "archive_sha256": "d8a560789097b8c84c8eaa132f1602072d37761f382b1d49c5ea05980c25a27b",
+      "regular_members": 544,
+      "individually_verified_data_files": 543,
+      "manifest_note": "Inventory itself covered by archive SHA256"
+    }
+  },
+  "source_sha256": {
+    "branchwrite/planning_retry.py": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946",
+    "tests/test_planning_retry_flow.py": "152dc4f7cdbb83a5b14e0cd22cd39fd9f2eb58410c89be7461e7d542498352fd"
+  },
+  "retained_attempts": {
+    "red": "7 missing-module errors",
+    "green_v1": "6 pass, 1 new test expected wrong empty-slot exception",
+    "green_v2": "9 pass",
+    "regressions": "36 pass"
+  },
+  "scope": [
+    "Real CPU Store/HTTP and model-protocol fixture; not a GPU substitute",
+    "Preserves explicit ask/append_user mode and failed source branch",
+    "Uses existing fork/native journals and FrameKernel; no retry decision or second history",
+    "Unknown fork/model sends block until original-operation reconciliation",
+    "Incomplete model output leaves caller waiting"
+  ],
+  "remaining": [
+    "Interpreter automatic failed-verdict selection",
+    "4K to 8K real thinking trial",
+    "Settled timing enforcement",
+    "Q8 and complete VC/G qualification"
+  ]
+}

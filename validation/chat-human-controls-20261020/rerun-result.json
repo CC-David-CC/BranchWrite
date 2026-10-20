@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "status": "PASS_BOUNDED",
+  "date": "2026-10-20",
+  "scope": "BranchWrite local chat queue, stop-and-add, HTTP/COW client-flow regression",
+  "source": {
+    "branchwrite_commit": "b1cd5578caccabd8d940d390b7ba44c687569c19",
+    "chat_test_sha256": "83ffa71ebd9f46907d8c1cddbf6ccd9168b240b600ba89f88bbad5d3bf759ef1",
+    "context_cow_commit": "cffc8225938b6ddc9e601d5a34702c739b1ba625"
+  },
+  "environment": {
+    "test_host": "llm-60",
+    "python": "3.12.3",
+    "cow_backend": "CPU FlowModel fixture behind actual Context COW Store/coordinator/HTTP handler",
+    "gpu_inference": false,
+    "installed_wheel": false
+  },
+  "command": "COW_CLI_SCRIPT=/home/dflanag3/src/context-cow-history-counts-20261019/tools/cow_cli.py PYTHONPATH=tests:/home/dflanag3/src/context-cow-history-counts-20261019/experimental/branching_context/src:/home/dflanag3/src/context-cow-history-counts-20261019 python3 -m unittest test_chat_cli_http test_cow_client_flow -v",
+  "tests": {
+    "passed": 12,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 10.862
+  },
+  "coverage": [
+    "full 128-byte branch and operation names",
+    "user-conversation tip remains current while work forks are independent",
+    "FIFO message remains in private client state while the prior answer runs, then sends in order",
+    "queued message survives client process death and drains after reconciliation",
+    "lost client acknowledgment reconciles the original operation",
+    "stop-and-add cancels before output and retries with both user inputs",
+    "real COW HTTP and CLI client-flow regressions"
+  ],
+  "limitations": [
+    "CPU fixture only; no real model/GPU cancellation or inference qualification.",
+    "No installed-wheel validation of chat commands.",
+    "Queue is local to one BranchWrite state directory; it is not shared among client machines."
+  ],
+  "log": {
+    "path": "rerun-llm60-tests.log",
+    "sha256": "8978ffa48fec2ad7f6d6ff0a0bfe673f89327c3cd07d167fe04ecbb539a4b737"
+  }
+}

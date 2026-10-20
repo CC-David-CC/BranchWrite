@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "deployed website and exact saved project; first20min timeout retained, resumed completion separate",
+  "sha256": "2aa55f1f3565506ac3ddc8759f51ecaec365a65c9b1a6a5532174e4b6ad91174",
+  "bytes": 4609,
+  "http_status": 200,
+  "project": "/home/dflanag3/projects/bw-code-deploy-dev51-20261020",
+  "client_finished": true,
+  "checks_passed": true,
+  "resume_seconds": 2.3334075859747827,
+  "new_native_requests": 0,
+  "new_remote_receipts": 0
+}

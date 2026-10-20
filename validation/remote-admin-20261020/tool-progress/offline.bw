@@ -1,0 +1,9 @@
+FLOW work
+PLAN p0 from=p0 against=world -> plan
+ACT a0 plan=plan -> outcome
+PLAN p1 from=p1 against=world -> plan
+ACT a1 plan=plan -> outcome
+PLAN p2 from=p2 against=world -> plan
+ACT a2 plan=plan -> outcome
+VERIFY verify input=outcome contract=project-checks-and-finish -> verified
+END

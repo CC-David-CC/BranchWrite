@@ -1,0 +1,5 @@
+{
+  "python": "/home/dflanag3/spatial-artifacts/branchwrite-mode-tool-20261019-v1/test-env/bin/python",
+  "PYTHONPATH": "/home/dflanag3/src/branchwrite-model-reconciliation-20261019:/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests:/home/dflanag3/src/context-cow-binding-cache-20261019:/home/dflanag3/src/context-cow-binding-cache-20261019/tools:/home/dflanag3/src/context-cow-binding-cache-20261019/experimental/branching_context/src:/home/dflanag3/src/context-cow-binding-cache-20261019/experimental/branching_context/scripts:/home/dflanag3/spatial-artifacts/grammar-first-20261016-v1/deps:/home/dflanag3/src/context-cow-binding-cache-20261019/experimental/branching_context/tests/implementation",
+  "scope": "CPU HTTP fixture, not real-GPU inference"
+}

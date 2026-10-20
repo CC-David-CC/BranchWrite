@@ -1,0 +1,36 @@
+test_package_free_assertion_failure_is_executed_not_import_failure (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_assertion_failure_is_executed_not_import_failure) ... FAIL
+test_package_free_tests_import_project_and_preserve_all_bytes (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_tests_import_project_and_preserve_all_bytes) ... FAIL
+test_package_free_tests_keep_readonly_and_host_boundaries (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_tests_keep_readonly_and_host_boundaries) ... FAIL
+test_packaged_relative_imports_still_work (test_test_discovery_layouts.DiscoveryLayoutTests.test_packaged_relative_imports_still_work) ... ok
+
+======================================================================
+FAIL: test_package_free_assertion_failure_is_executed_not_import_failure (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_assertion_failure_is_executed_not_import_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_test_discovery_layouts.py", line 25, in test_package_free_assertion_failure_is_executed_not_import_failure
+    self.assertEqual(r.exit_code,1);self.assertIn(b'Ran 1 test',text);self.assertIn(b'AssertionError',text);self.assertNotIn(b'Start directory is not importable',text)
+                                    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'Ran 1 test' not found in b'Traceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "/usr/lib/python3.14/unittest/__main__.py", line 18, in <module>\n    main(module=None)\n    ~~~~^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 103, in __init__\n    self.parseArgs(argv)\n    ~~~~~~~~~~~~~~^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 119, in parseArgs\n    self._do_discovery(argv[2:])\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 242, in _do_discovery\n    self.createTests(from_discovery=True, Loader=Loader)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 149, in createTests\n    self.test = loader.discover(self.start, self.pattern, self.top)\n                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/loader.py", line 334, in discover\n    raise ImportError(\'Start directory is not importable: %r\' % start_dir)\nImportError: Start directory is not importable: \'/work/tests\'\n'
+
+======================================================================
+FAIL: test_package_free_tests_import_project_and_preserve_all_bytes (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_tests_import_project_and_preserve_all_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_test_discovery_layouts.py", line 20, in test_package_free_tests_import_project_and_preserve_all_bytes
+    self.assertEqual(r.exit_code,0,r.stderr.read_bytes());self.assertIn(b'Ran 1 test',r.stderr.read_bytes())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : b'Traceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "/usr/lib/python3.14/unittest/__main__.py", line 18, in <module>\n    main(module=None)\n    ~~~~^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 103, in __init__\n    self.parseArgs(argv)\n    ~~~~~~~~~~~~~~^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 119, in parseArgs\n    self._do_discovery(argv[2:])\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 242, in _do_discovery\n    self.createTests(from_discovery=True, Loader=Loader)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 149, in createTests\n    self.test = loader.discover(self.start, self.pattern, self.top)\n                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/loader.py", line 334, in discover\n    raise ImportError(\'Start directory is not importable: %r\' % start_dir)\nImportError: Start directory is not importable: \'/work/tests\'\n'
+
+======================================================================
+FAIL: test_package_free_tests_keep_readonly_and_host_boundaries (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_tests_keep_readonly_and_host_boundaries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_test_discovery_layouts.py", line 33, in test_package_free_tests_keep_readonly_and_host_boundaries
+    self.assertEqual(r.exit_code,0,r.stderr.read_bytes());self.assertEqual(self.files(e.workspace),before);self.assertEqual(sentinel.read_text(),'not mounted')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : b'Traceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "/usr/lib/python3.14/unittest/__main__.py", line 18, in <module>\n    main(module=None)\n    ~~~~^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 103, in __init__\n    self.parseArgs(argv)\n    ~~~~~~~~~~~~~~^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 119, in parseArgs\n    self._do_discovery(argv[2:])\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 242, in _do_discovery\n    self.createTests(from_discovery=True, Loader=Loader)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/main.py", line 149, in createTests\n    self.test = loader.discover(self.start, self.pattern, self.top)\n                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3.14/unittest/loader.py", line 334, in discover\n    raise ImportError(\'Start directory is not importable: %r\' % start_dir)\nImportError: Start directory is not importable: \'/work/tests\'\n'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.158s
+
+FAILED (failures=3)

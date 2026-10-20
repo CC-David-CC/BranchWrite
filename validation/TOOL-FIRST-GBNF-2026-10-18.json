@@ -1,0 +1,29 @@
+{
+  "status": "FOCUSED_CPU_PASS_GPU_UNRUN",
+  "counts": {
+    "focused": 5,
+    "registry_regressions": 31,
+    "failures": 0,
+    "skips": 0
+  },
+  "source_sha256": {
+    "branchwrite/tool_registry.py": "b7fdb9d1420d8c4a5b9534c9c908281b17c4714e36dc15d7c33cd96929149151",
+    "tests/test_tool_gbnf.py": "11acbe7fa5978c0e1c8e68ec617c31f819c016c479a11faa3da20fecec1d24d9"
+  },
+  "runs": [
+    "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-gbnf-red-run-v1",
+    "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-gbnf-green-run-v1",
+    "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-gbnf-regression-run-v1",
+    "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-tool-gbnf-regression-run-v2"
+  ],
+  "failures_retained": [
+    "new fixture syntax error, corrected before RED",
+    "missing model_gbnf RED",
+    "missing BW_BROWSER_EXECUTABLE launcher prerequisite; corrected v2"
+  ],
+  "limits": [
+    "actual CPU llguidance1.9.1, no GPU yet",
+    "new tool-first arrangement not interchangeable with existing parser checkpoints",
+    "host byte limits/live preimages/grants remain mandatory"
+  ]
+}

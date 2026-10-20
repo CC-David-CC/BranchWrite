@@ -1,0 +1,11 @@
+{
+  "status": "CPU_AND_INSTALLED_CONTROLS_PASS",
+  "source_commit": "084799f",
+  "implementation_broad_suite_source": "289df579f873429c1a0f4f233a49c703c1e4886b",
+  "distinct_methods": 152,
+  "skips": 0,
+  "additional_real_git_subcases": "directory and linked worktree passed after suite",
+  "wheel_sha256": "0a8aa263c588f928c64931008f822664e72625bb5b5f002758d8c96f9e393e5c",
+  "autonomous_dev3": "NOT_YET_RUN",
+  "initial_broad_failure": "wrong host created state; existing assertion retained and implementation fixed"
+}

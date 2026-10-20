@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "restored_prefix_tokens": 16442,
+  "prefix_forward_tokens": 0,
+  "first_suffix_tokens": 894,
+  "first_suffix_end": 17336,
+  "final_forward_tokens": 4953,
+  "prefill_tokens": 3361,
+  "generated_consumed_tokens": 1592,
+  "shutdown": {
+    "owned_key_revoked": true,
+    "original_keys_byte_exact": true
+  },
+  "numerical_oracle": "NOT_RUN",
+  "original_prefix_bytes_unchanged": true,
+  "gpu_compute_processes_after": ""
+}

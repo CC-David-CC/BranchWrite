@@ -1,0 +1,41 @@
+{
+  "status": "CLIENT_CPU102_SERVER_CPU137_FUNCTIONAL_L05_PASS_REPORTING_LIMITATION",
+  "unique_output_tests": 19,
+  "selected_regressions": {
+    "executed": 102,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "protocol": "schema2onlyforexplicitoutputgrants;readonlylegacyunchanged",
+  "limits": {
+    "output_leaves": 64,
+    "total_tmpfs_bytes": 8388608,
+    "per_file_bytes": 4194304
+  },
+  "L05": {
+    "functional": "PASS",
+    "model_calls": 11,
+    "output_tokens": 1360,
+    "whole_cli_seconds": 162.4814316900447,
+    "added_examples": 0,
+    "model": "Q8_0",
+    "kv": "FP16",
+    "reporting": "FAIL_OVERBROAD_METADATA_CLAIM",
+    "evidence": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/report-l05-q8-v1"
+  },
+  "original_failures_retained": true,
+  "publication": "ExistingRuntimeLogartifactsandfilesystemhelpers;noatomicmultifilepromise;unknownresultmustnotresend",
+  "raw_evidence": "/home/dflanag3/spatial-artifacts/branchwrite-command-outputs-20261019-v1",
+  "server_regressions": {
+    "executed": 137,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "shutdown": {
+    "server_exit": 0,
+    "native_exit": 0,
+    "owned_key_revoked": true
+  }
+}

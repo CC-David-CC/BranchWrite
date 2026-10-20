@@ -1,0 +1,50 @@
+test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context (tests.test_interactive_session.InteractiveSessionTests.test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context) ... ERROR
+test_queued_followups_combine_without_stopping_active_work (tests.test_interactive_session.InteractiveSessionTests.test_queued_followups_combine_without_stopping_active_work) ... ERROR
+test_steering_interrupts_at_safe_boundary_then_uses_new_request (tests.test_interactive_session.InteractiveSessionTests.test_steering_interrupts_at_safe_boundary_then_uses_new_request) ... ERROR
+test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch (tests.test_interactive_session.InteractiveSessionTests.test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch) ... ERROR
+test_work_publishes_in_current_directory_and_followup_forks_saved_context (tests.test_interactive_session.InteractiveSessionTests.test_work_publishes_in_current_directory_and_followup_forks_saved_context) ... ERROR
+
+======================================================================
+ERROR: test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context (tests.test_interactive_session.InteractiveSessionTests.test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 35, in setUp
+    from branchwrite.interactive_session import SessionService
+ModuleNotFoundError: No module named 'branchwrite.interactive_session'
+
+======================================================================
+ERROR: test_queued_followups_combine_without_stopping_active_work (tests.test_interactive_session.InteractiveSessionTests.test_queued_followups_combine_without_stopping_active_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 35, in setUp
+    from branchwrite.interactive_session import SessionService
+ModuleNotFoundError: No module named 'branchwrite.interactive_session'
+
+======================================================================
+ERROR: test_steering_interrupts_at_safe_boundary_then_uses_new_request (tests.test_interactive_session.InteractiveSessionTests.test_steering_interrupts_at_safe_boundary_then_uses_new_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 35, in setUp
+    from branchwrite.interactive_session import SessionService
+ModuleNotFoundError: No module named 'branchwrite.interactive_session'
+
+======================================================================
+ERROR: test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch (tests.test_interactive_session.InteractiveSessionTests.test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 35, in setUp
+    from branchwrite.interactive_session import SessionService
+ModuleNotFoundError: No module named 'branchwrite.interactive_session'
+
+======================================================================
+ERROR: test_work_publishes_in_current_directory_and_followup_forks_saved_context (tests.test_interactive_session.InteractiveSessionTests.test_work_publishes_in_current_directory_and_followup_forks_saved_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 35, in setUp
+    from branchwrite.interactive_session import SessionService
+ModuleNotFoundError: No module named 'branchwrite.interactive_session'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (errors=5)

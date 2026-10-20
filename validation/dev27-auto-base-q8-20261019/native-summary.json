@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "metrics": {
+    "forward_tokens": 35784,
+    "prefill_tokens": 27570,
+    "decode_timed_tokens": 8214,
+    "decode_prepare_ns": 10453920822,
+    "decode_compute_ns": 226575287659,
+    "decode_finish_ns": 963590158,
+    "captures": 18,
+    "restores": 35,
+    "loaded_file_bytes": 0,
+    "written_file_bytes": 12263007328,
+    "copied_bytes": 1283457024,
+    "integrity_mismatches": 0,
+    "native_generation_tps": 34.51364934978317
+  },
+  "root_restore_events": [
+    {
+      "command": "restore",
+      "time": 1792456475.0352802,
+      "consumed": 15638,
+      "forward_delta": 0,
+      "prefill_delta": 0,
+      "forward_before": 15638
+    },
+    {
+      "command": "restore",
+      "time": 1792456478.1856956,
+      "consumed": 15638,
+      "forward_delta": 0,
+      "prefill_delta": 0,
+      "forward_before": 15638
+    },
+    {
+      "command": "restore",
+      "time": 1792456983.6538336,
+      "consumed": 15638,
+      "forward_delta": 0,
+      "prefill_delta": 0,
+      "forward_before": 27219
+    }
+  ],
+  "numerical_oracle": "NOT_RUN",
+  "numerical_max_abs_error": null,
+  "memory_scope": "No sampled peak claim"
+}

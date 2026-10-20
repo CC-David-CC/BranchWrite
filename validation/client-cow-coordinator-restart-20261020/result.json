@@ -1,0 +1,88 @@
+{
+  "schema": 2,
+  "status": "PASS_BOUNDED",
+  "date_utc": "2026-10-20",
+  "milestone": "BranchWrite user-conversation tip and durable client receipt recovery across Context COW coordinator restart",
+  "source": {
+    "branch": "feat/explicit-model-reconciliation-20261019",
+    "branchwrite_base_commit": "1eb2c0b79cd04af2f2a7fb413a3f1c4ff00ff911",
+    "cow_branch": "feat/canonical-history-counts-20261019",
+    "cow_commit": "b561ddaa725d62db66107da255c9fb40ed477ade",
+    "cow_prior_grammar_name_fix": "93ebd820550230dfe97321c5bc5494f289d1545d"
+  },
+  "tests": {
+    "client_receipt_status_and_transport": {
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 4.668
+    },
+    "branchwrite_cli_and_cow_http_restart_integration": {
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 23.243
+    },
+    "conversation_tip_and_128_byte_names_flow": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 4.383,
+      "included_again_in_integration_suite": true
+    },
+    "cow_store_branch_catalog": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 0.119
+    },
+    "cow_grammar_canonical_flow": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_seconds": 0.424
+    }
+  },
+  "restart_and_receipt_behavior": {
+    "coordinator_and_store_reopened_before_project_source_capture": true,
+    "client_process_killed_after_cow_commit_before_local_answer_receipt": true,
+    "coordinator_and_store_reopened_again_before_receipt_reconciliation": true,
+    "same_operation_id_reconciled_to_original_answer": true,
+    "local_receipt_inspected_without_cow_http_or_api_key": true,
+    "forward_token_work_during_reconciliation_and_inspection": 0,
+    "project_context_includes_latest_user_conversation_tip": true,
+    "work_branch_is_forked_independently_and_does_not_receive_later_user_turn": true,
+    "branch_and_operation_identifiers_accept_128_ascii_bytes_and_reject_129": true,
+    "grammar_state_names_allow_128_utf8_bytes_and_survive_commit_validation": true,
+    "client_crash_exit_codes": [
+      78,
+      79
+    ]
+  },
+  "environment": {
+    "branchwrite_client_host": "llm-49",
+    "cow_service_and_integration_host": "llm-60",
+    "backend": "deterministic CPU fixture through Context COW Store, coordinator and HTTP API",
+    "gpu_inference": false,
+    "python": "llm-49 /usr/bin/python3 3.14.4; llm-60 Strata venv Python 3.12.3"
+  },
+  "limitations": [
+    "Bounded CPU integration evidence; not cumulative G2 certification.",
+    "No native KV payload restoration across a native process restart, GPU inference, power-loss testing, actual disk-full testing, or broad crash-stage campaign.",
+    "The conversation-tip flow is exercised through the BranchWrite COW client and coding CLI source capture; there is not yet a general interactive chat command or GUI.",
+    "No claim of autonomous coding reliability or model quality."
+  ],
+  "test_files_sha256": {
+    "tests/test_project_context_real_cow_restart.py": "5d5cd7e90a2f53788f703b3696f5eaca6d4566add527a079e744685da808cf6f",
+    "tests/test_cow_client.py": "0b32e1aa579ddbb04c78d48fecc986332755bce2c60418b8ff01050f03b7d1c5",
+    "tests/test_cow_client_flow.py": "2fe459daceffe0ecf74cba8ca0f886938ec3017f199d6b884e8c7b956a65a45b",
+    "experimental/branching_context/src/context_time_travel/store.py": "not in BranchWrite checkout; COW commit b561ddaa"
+  },
+  "evidence_files": [
+    "client-tests.log",
+    "cow-http-tests.log",
+    "cow-client-flow-tests.log",
+    "cow-store-branch-catalog-tests.log",
+    "cow-grammar-canonical-tests.log"
+  ]
+}

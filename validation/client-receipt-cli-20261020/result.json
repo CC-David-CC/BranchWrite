@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "milestone": "branchwrite-client-durable-receipt-cli",
+  "status": "PASS_BOUNDED",
+  "date_utc": "2026-10-20",
+  "source": {
+    "repository": "box-git:/srv/data/git/BranchWrite.git",
+    "branch": "feat/explicit-model-reconciliation-20261019",
+    "commit": "92a68349bdbac5e2e2d58f11a358a91aad4b4f62"
+  },
+  "tests": {
+    "focused_branchwrite": {
+      "command": "PYTHONPATH=tests:. PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest test_project_context_receipt test_base_project_prepare test_base_catalog_publication test_coding_launcher test_coding_pack_launch test_coding_pack_refresh_admission test_context_pack test_receipt_cli test_coding_status -v",
+      "passed": 84,
+      "failed": 0,
+      "skipped": 0
+    },
+    "context_cow_http": {
+      "command": "python -B -m unittest test_base_choice_http test_project_context_real_cow_restart -v",
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "server": "real local Context COW coordinator/Store/HTTP API",
+      "inference_backend": "deterministic CPU fake",
+      "branchwrite_processes_restarted": true,
+      "cow_http_server_stopped_and_recreated": true,
+      "cow_coordinator_store_and_fake_native_backend_restarted": false
+    },
+    "process_crash_exit_codes": [
+      78,
+      79
+    ],
+    "gpu": {
+      "host": "llm-60",
+      "used_for_inference": false,
+      "observed_gpu0": "0% utilization, 15 MiB used, 97235 MiB free"
+    }
+  },
+  "behavior": {
+    "command": "branchwrite receipt STATE --operation-id ORIGINAL_ID [--show-answer] [--json]",
+    "inspection_contacts_cow_server": false,
+    "answer_withheld_by_default": true,
+    "only_shows_text_with_show_answer": true,
+    "unresolved_operation_replayed": false,
+    "distinguishes_saved_answer_from_gpu_residency": true,
+    "recovery_uses_original_operation_id": true,
+    "recovery_caused_additional_fake_backend_forward_tokens": 0,
+    "recovery_moved_worker_branch": false,
+    "source_branch_changed": false
+  },
+  "package": {
+    "version": "0.1.0.dev31",
+    "wheel": "/home/dflanag3/spatial-artifacts/branchwrite-dev31-package-20261020-v1/wheel/branchwrite-0.1.0.dev31-py3-none-any.whl",
+    "sha256": "218874ab43a7fc3a792698d0ed2f1b184f933b8fbe5f22bb7970e1a1b94dcbbb",
+    "isolated_venv_install": true,
+    "cli_help_smoke": "PASS",
+    "receipt_help_smoke": "PASS",
+    "doctor": "PASS; inference NOT_RUN"
+  },
+  "limits": [
+    "CPU fake inference only; no Q4/Q8 quality, logits, or throughput qualification.",
+    "COW HTTP server was recreated over the same live in-process coordinator, Store, and fake native backend; no full COW/native process restart was tested.",
+    "No power-loss, state-directory loss, tool-effect recovery, or broad autonomous coding reliability claim.",
+    "A durable answer receipt proves retained output, not current GPU residency or reusable KV state."
+  ],
+  "evidence_files": [
+    "branchwrite-tests.log",
+    "cow-http-tests.log",
+    "README.md"
+  ]
+}

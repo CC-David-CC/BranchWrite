@@ -1,0 +1,105 @@
+test_real_sandbox_reports_retirement_and_preserves_literal_bytes (test_client_doctor.ClientDoctorTests.test_real_sandbox_reports_retirement_and_preserves_literal_bytes) ... usage: branchwrite [-h]
+                   {check,canonicalize,run,step,code,resume,apply,export,review,status,reconcile} ...
+branchwrite: error: argument command: invalid choice: 'doctor' (choose from check, canonicalize, run, step, code, resume, apply, export, review, status, reconcile)
+ERROR
+test_sandbox_refusal_is_failure_without_unsafe_fallback (test_client_doctor.ClientDoctorTests.test_sandbox_refusal_is_failure_without_unsafe_fallback) ... usage: branchwrite [-h]
+                   {check,canonicalize,run,step,code,resume,apply,export,review,status,reconcile} ...
+branchwrite: error: argument command: invalid choice: 'doctor' (choose from check, canonicalize, run, step, code, resume, apply, export, review, status, reconcile)
+ERROR
+
+======================================================================
+ERROR: test_real_sandbox_reports_retirement_and_preserves_literal_bytes (test_client_doctor.ClientDoctorTests.test_real_sandbox_reports_retirement_and_preserves_literal_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2310, in _parse_known_args
+    stop_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'doctor' (choose from check, canonicalize, run, step, code, resume, apply, export, review, status, reconcile)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_client_doctor.py", line 8, in test_real_sandbox_reports_retirement_and_preserves_literal_bytes
+    with redirect_stdout(out):code=main(['doctor'])
+                                   ~~~~^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/__main__.py", line 91, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+======================================================================
+ERROR: test_sandbox_refusal_is_failure_without_unsafe_fallback (test_client_doctor.ClientDoctorTests.test_sandbox_refusal_is_failure_without_unsafe_fallback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2310, in _parse_known_args
+    stop_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'doctor' (choose from check, canonicalize, run, step, code, resume, apply, export, review, status, reconcile)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_client_doctor.py", line 16, in test_sandbox_refusal_is_failure_without_unsafe_fallback
+    with patch.object(Executor,'run_shell',side_effect=ValueError('sandbox unavailable')),redirect_stdout(out):code=main(['doctor'])
+                                                                                                                    ~~~~^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/__main__.py", line 91, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.011s
+
+FAILED (errors=2)

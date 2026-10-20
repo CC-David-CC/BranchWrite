@@ -1,0 +1,281 @@
+test_new_pack_admission_preserves_original_base_and_worker (test_context_pack_refresh_http.ContextPackRefreshHTTPTests.test_new_pack_admission_preserves_original_base_and_worker) ... ERROR
+test_absolute_and_parent_selections_rejected (test_context_pack.ContextPackTests.test_absolute_and_parent_selections_rejected) ... ok
+test_addition_modification_deletion_are_stale_and_old_pack_retained (test_context_pack.ContextPackTests.test_addition_modification_deletion_are_stale_and_old_pack_retained) ... ok
+test_cli_build_and_stale_verify_exit_codes (test_context_pack.ContextPackTests.test_cli_build_and_stale_verify_exit_codes) ... ok
+test_duplicate_overlapping_selection_deduplicated_but_cross_section_rejected (test_context_pack.ContextPackTests.test_duplicate_overlapping_selection_deduplicated_but_cross_section_rejected) ... ok
+test_each_limit_fails_without_truncation (test_context_pack.ContextPackTests.test_each_limit_fails_without_truncation) ... ok
+test_explicit_file_selection_does_not_crawl_siblings (test_context_pack.ContextPackTests.test_explicit_file_selection_does_not_crawl_siblings) ... ok
+test_failed_publication_has_no_partial_visible_pack (test_context_pack.ContextPackTests.test_failed_publication_has_no_partial_visible_pack) ... ok
+test_file_directory_and_root_symlinks_rejected (test_context_pack.ContextPackTests.test_file_directory_and_root_symlinks_rejected) ... ok
+test_file_mutation_inside_read_detected (test_context_pack.ContextPackTests.test_file_mutation_inside_read_detected) ... ok
+test_four_byte_unicode_and_no_final_newline_are_retained (test_context_pack.ContextPackTests.test_four_byte_unicode_and_no_final_newline_are_retained) ... ok
+test_invalid_utf8_rejected_without_partial_pack (test_context_pack.ContextPackTests.test_invalid_utf8_rejected_without_partial_pack) ... ok
+test_large_text_pack_exact_bytes_and_freshness (test_context_pack.ContextPackTests.test_large_text_pack_exact_bytes_and_freshness) ... ok
+test_load_can_pin_expected_identity (test_context_pack.ContextPackTests.test_load_can_pin_expected_identity) ... ok
+test_load_returns_the_same_bytes_that_were_integrity_checked (test_context_pack.ContextPackTests.test_load_returns_the_same_bytes_that_were_integrity_checked) ... ok
+test_manifest_corruption_rejected (test_context_pack.ContextPackTests.test_manifest_corruption_rejected) ... ok
+test_missing_root_explicitly_stale (test_context_pack.ContextPackTests.test_missing_root_explicitly_stale) ... ok
+test_nonregular_file_rejected_without_opening_fifo (test_context_pack.ContextPackTests.test_nonregular_file_rejected_without_opening_fifo) ... ok
+test_output_symlink_is_rejected (test_context_pack.ContextPackTests.test_output_symlink_is_rejected) ... ok
+test_output_under_source_root_rejected (test_context_pack.ContextPackTests.test_output_under_source_root_rejected) ... ok
+test_pack_payload_corruption_rejected (test_context_pack.ContextPackTests.test_pack_payload_corruption_rejected) ... ok
+test_read_mutation_rejected (test_context_pack.ContextPackTests.test_read_mutation_rejected) ... ok
+test_rechecks_identity_schema_even_with_updated_manifest_checksum (test_context_pack.ContextPackTests.test_rechecks_identity_schema_even_with_updated_manifest_checksum) ... ok
+test_same_text_at_different_paths_has_distinct_identity (test_context_pack.ContextPackTests.test_same_text_at_different_paths_has_distinct_identity) ... ok
+test_sections_and_as_of_are_part_of_identity (test_context_pack.ContextPackTests.test_sections_and_as_of_are_part_of_identity) ... ok
+test_sections_provenance_and_no_authority_warning (test_context_pack.ContextPackTests.test_sections_provenance_and_no_authority_warning) ... ok
+test_selection_order_does_not_churn_identity (test_context_pack.ContextPackTests.test_selection_order_does_not_churn_identity) ... ok
+test_source_failure_becomes_explicit_stale_status (test_context_pack.ContextPackTests.test_source_failure_becomes_explicit_stale_status) ... ok
+test_stable_identity_excludes_capture_clock_and_mtime (test_context_pack.ContextPackTests.test_stable_identity_excludes_capture_clock_and_mtime) ... ok
+test_unicode_normalization_is_not_silently_applied (test_context_pack.ContextPackTests.test_unicode_normalization_is_not_silently_applied) ... ok
+test_unzoned_asof_and_accidental_string_selector_rejected (test_context_pack.ContextPackTests.test_unzoned_asof_and_accidental_string_selector_rejected) ... ok
+test_competing_base_versions_remain_independent_and_questions_pin_each (test_project_base_questions.ProjectBaseQuestionTests.test_competing_base_versions_remain_independent_and_questions_pin_each) ... ERROR
+test_foreign_endpoint_version_rejected_before_transport (test_project_base_questions.ProjectBaseQuestionTests.test_foreign_endpoint_version_rejected_before_transport) ... ERROR
+test_invalid_question_rejected_before_fork (test_project_base_questions.ProjectBaseQuestionTests.test_invalid_question_rejected_before_fork) ... ERROR
+test_public_name_is_one_implementation_and_questions_leave_base_unchanged (test_project_base_questions.ProjectBaseQuestionTests.test_public_name_is_one_implementation_and_questions_leave_base_unchanged) ... ERROR
+test_question_on_summary_version_uses_append_without_editing_reference (test_project_base_questions.ProjectBaseQuestionTests.test_question_on_summary_version_uses_append_without_editing_reference) ... ERROR
+test_retry_retains_original_ids_and_does_not_generate_again (test_project_base_questions.ProjectBaseQuestionTests.test_retry_retains_original_ids_and_does_not_generate_again) ... ERROR
+test_proposed_base_source_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_proposed_base_source_uses_existing_fork_and_ask_api) ... ERROR
+test_destination_created_at_publication_is_preserved (test_project_apply.ProjectApplyTests.test_destination_created_at_publication_is_preserved) ... ok
+test_exact_copy_applied_without_touching_original (test_project_apply.ProjectApplyTests.test_exact_copy_applied_without_touching_original) ... ok
+test_existing_empty_destination_is_not_replaced (test_project_apply.ProjectApplyTests.test_existing_empty_destination_is_not_replaced) ... ok
+test_flush_failure_before_publication_leaves_no_output (test_project_apply.ProjectApplyTests.test_flush_failure_before_publication_leaves_no_output) ... ok
+test_hash_pinned_but_malformed_manifest_is_rejected (test_project_apply.ProjectApplyTests.test_hash_pinned_but_malformed_manifest_is_rejected) ... ok
+test_overlapping_destination_is_rejected (test_project_apply.ProjectApplyTests.test_overlapping_destination_is_rejected) ... ok
+test_source_drift_is_rejected (test_project_apply.ProjectApplyTests.test_source_drift_is_rejected) ... ok
+test_wrong_archive_hash_is_rejected_before_output (test_project_apply.ProjectApplyTests.test_wrong_archive_hash_is_rejected_before_output) ... ok
+test_active_writer_is_reported_without_ledger_read (test_coding_status.CodingStatusTests.test_active_writer_is_reported_without_ledger_read) ... ok
+test_closed_result_is_recorded_not_claimed_reverified (test_coding_status.CodingStatusTests.test_closed_result_is_recorded_not_claimed_reverified) ... ok
+test_corrupt_log_is_not_repaired (test_coding_status.CodingStatusTests.test_corrupt_log_is_not_repaired) ... ok
+test_human_output_labels_verification_scope (test_coding_status.CodingStatusTests.test_human_output_labels_verification_scope) ... ok
+test_incomplete_run_does_not_claim_success (test_coding_status.CodingStatusTests.test_incomplete_run_does_not_claim_success) ... ok
+test_missing_state_is_not_created (test_coding_status.CodingStatusTests.test_missing_state_is_not_created) ... ok
+test_model_guidance_explains_durable_only_recovery_and_resume (test_coding_status.CodingStatusTests.test_model_guidance_explains_durable_only_recovery_and_resume) ... ok
+test_pending_model_status_supplies_exact_recovery_argv_without_execution (test_coding_status.CodingStatusTests.test_pending_model_status_supplies_exact_recovery_argv_without_execution) ... ok
+test_pending_tool_is_not_presented_as_model_output_recovery (test_coding_status.CodingStatusTests.test_pending_tool_is_not_presented_as_model_output_recovery) ... ok
+test_unsettled_operation_is_visible (test_coding_status.CodingStatusTests.test_unsettled_operation_is_visible) ... ok
+test_actual_cli_exports_without_changing_the_ledger (test_project_export.ProjectExportTests.test_actual_cli_exports_without_changing_the_ledger) ... ok
+test_complete_export_contains_exact_binary_and_text_bytes (test_project_export.ProjectExportTests.test_complete_export_contains_exact_binary_and_text_bytes) ... ok
+test_existing_destination_is_preserved (test_project_export.ProjectExportTests.test_existing_destination_is_preserved) ... ok
+test_export_cannot_write_into_original_project_or_run_state (test_project_export.ProjectExportTests.test_export_cannot_write_into_original_project_or_run_state) ... ok
+test_failed_review_creates_no_export (test_project_export.ProjectExportTests.test_failed_review_creates_no_export) ... ok
+test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) ... ok
+test_incompatible_selection_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_incompatible_selection_rejected) ... ok
+test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) ... ok
+test_real_cli_parser_saves_choice_before_execution (test_base_choice_launch.BaseChoiceLaunchTests.test_real_cli_parser_saves_choice_before_execution) ... ok
+test_saved_choice_survives_reopen_and_changed_choice_is_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_saved_choice_survives_reopen_and_changed_choice_is_rejected) ... ok
+test_selected_snapshot_and_provenance_enter_existing_launch (test_base_choice_launch.BaseChoiceLaunchTests.test_selected_snapshot_and_provenance_enter_existing_launch) ... ok
+test_any_offered_compatible_base_can_be_selected (test_base_choice.ChoiceTests.test_any_offered_compatible_base_can_be_selected) ... ok
+test_boolean_and_negative_budget_rejected (test_base_choice.ChoiceTests.test_boolean_and_negative_budget_rejected) ... ok
+test_budget_boundary_and_shortfall (test_base_choice.ChoiceTests.test_budget_boundary_and_shortfall) ... ok
+test_duplicate_catalog_ids_and_empty_catalog_rejected (test_base_choice.ChoiceTests.test_duplicate_catalog_ids_and_empty_catalog_rejected) ... ok
+test_duplicate_json_keys_and_boolean_schema_rejected (test_base_choice.ChoiceTests.test_duplicate_json_keys_and_boolean_schema_rejected) ... ok
+test_invalid_catalog_counts_rejected (test_base_choice.ChoiceTests.test_invalid_catalog_counts_rejected) ... ok
+test_model_cannot_supply_grants_or_replace_host_fields (test_base_choice.ChoiceTests.test_model_cannot_supply_grants_or_replace_host_fields) ... ok
+test_reason_is_bounded_text_data (test_base_choice.ChoiceTests.test_reason_is_bounded_text_data) ... ok
+test_unknown_base_rejected (test_base_choice.ChoiceTests.test_unknown_base_rejected) ... ok
+test_valid_choice_returns_detached_host_reference_and_reason (test_base_choice.ChoiceTests.test_valid_choice_returns_detached_host_reference_and_reason) ... ok
+test_wrong_revision_or_execution_profile_rejected (test_base_choice.ChoiceTests.test_wrong_revision_or_execution_profile_rejected) ... ok
+test_foreign_parent_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_foreign_parent_rejected_before_context_mutation) ... ERROR
+test_initial_pack_version_binds_exact_identity (test_project_base_pack.ProjectBasePackTests.test_initial_pack_version_binds_exact_identity) ... ERROR
+test_observation_refresh_after_rebuild_uses_closed_root_boundary (test_project_base_pack.ProjectBasePackTests.test_observation_refresh_after_rebuild_uses_closed_root_boundary) ... ERROR
+test_rebuild_cannot_overwrite_existing_base_branch (test_project_base_pack.ProjectBasePackTests.test_rebuild_cannot_overwrite_existing_base_branch) ... ERROR
+test_rebuilt_root_keeps_lineage_without_moving_old_worker (test_project_base_pack.ProjectBasePackTests.test_rebuilt_root_keeps_lineage_without_moving_old_worker) ... ERROR
+test_same_operation_is_idempotent_without_reprefill (test_project_base_pack.ProjectBasePackTests.test_same_operation_is_idempotent_without_reprefill) ... ERROR
+test_stale_source_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_stale_source_rejected_before_context_mutation) ... ERROR
+test_wrong_pack_id_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_wrong_pack_id_rejected_before_context_mutation) ... ERROR
+test_cli_refresh_reports_new_identity (test_context_pack_refresh.ContextPackRefreshTests.test_cli_refresh_reports_new_identity) ... ok
+test_corrupt_old_pack_is_not_a_refreshable_source (test_context_pack_refresh.ContextPackRefreshTests.test_corrupt_old_pack_is_not_a_refreshable_source) ... ok
+test_directory_additions_and_deletions_are_reported (test_context_pack_refresh.ContextPackRefreshTests.test_directory_additions_and_deletions_are_reported) ... ok
+test_invalid_as_of_is_rejected_even_when_unchanged (test_context_pack_refresh.ContextPackRefreshTests.test_invalid_as_of_is_rejected_even_when_unchanged) ... ok
+test_link_in_source_is_rejected_without_publication (test_context_pack_refresh.ContextPackRefreshTests.test_link_in_source_is_rejected_without_publication) ... ok
+test_missing_explicit_selection_is_an_error_not_scope_expansion (test_context_pack_refresh.ContextPackRefreshTests.test_missing_explicit_selection_is_an_error_not_scope_expansion) ... ok
+test_modified_source_builds_new_identity_with_exact_content (test_context_pack_refresh.ContextPackRefreshTests.test_modified_source_builds_new_identity_with_exact_content) ... ok
+test_unchanged_does_not_publish_or_retimestamp (test_context_pack_refresh.ContextPackRefreshTests.test_unchanged_does_not_publish_or_retimestamp) ... ok
+test_active_writer_excludes_review (test_coding_review.CodingReviewTests.test_active_writer_excludes_review) ... ok
+test_changed_launch_grants_are_rejected (test_coding_review.CodingReviewTests.test_changed_launch_grants_are_rejected) ... ok
+test_exact_saved_preimage_and_current_bytes_form_diff (test_coding_review.CodingReviewTests.test_exact_saved_preimage_and_current_bytes_form_diff) ... ok
+test_post_completion_workspace_change_is_rejected (test_coding_review.CodingReviewTests.test_post_completion_workspace_change_is_rejected) ... ok
+test_links_are_rejected_without_reading_target (test_project_baseline.ProjectBaselineTests.test_links_are_rejected_without_reading_target) ... ok
+test_manifest_is_chunked_beyond_codec_container_limit (test_project_baseline.ProjectBaselineTests.test_manifest_is_chunked_beyond_codec_container_limit) ... ok
+test_missing_payload_is_rejected (test_project_baseline.ProjectBaselineTests.test_missing_payload_is_rejected) ... ok
+test_real_cli_binds_manifest_and_reuses_it_after_a_restart (test_project_baseline.ProjectBaselineTests.test_real_cli_binds_manifest_and_reuses_it_after_a_restart) ... ok
+test_saved_bytes_do_not_follow_later_workspace_or_original_changes (test_project_baseline.ProjectBaselineTests.test_saved_bytes_do_not_follow_later_workspace_or_original_changes) ... ok
+
+======================================================================
+ERROR: test_new_pack_admission_preserves_original_base_and_worker (test_context_pack_refresh_http.ContextPackRefreshHTTPTests.test_new_pack_admission_preserves_original_base_and_worker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh_http.py", line 9, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_competing_base_versions_remain_independent_and_questions_pin_each (test_project_base_questions.ProjectBaseQuestionTests.test_competing_base_versions_remain_independent_and_questions_pin_each)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 10, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp();self.client=self.case._client('http','project-base')
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_foreign_endpoint_version_rejected_before_transport (test_project_base_questions.ProjectBaseQuestionTests.test_foreign_endpoint_version_rejected_before_transport)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 10, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp();self.client=self.case._client('http','project-base')
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_invalid_question_rejected_before_fork (test_project_base_questions.ProjectBaseQuestionTests.test_invalid_question_rejected_before_fork)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 10, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp();self.client=self.case._client('http','project-base')
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_public_name_is_one_implementation_and_questions_leave_base_unchanged (test_project_base_questions.ProjectBaseQuestionTests.test_public_name_is_one_implementation_and_questions_leave_base_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 10, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp();self.client=self.case._client('http','project-base')
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_question_on_summary_version_uses_append_without_editing_reference (test_project_base_questions.ProjectBaseQuestionTests.test_question_on_summary_version_uses_append_without_editing_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 10, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp();self.client=self.case._client('http','project-base')
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_retry_retains_original_ids_and_does_not_generate_again (test_project_base_questions.ProjectBaseQuestionTests.test_retry_retains_original_ids_and_does_not_generate_again)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 10, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp();self.client=self.case._client('http','project-base')
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_proposed_base_source_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_proposed_base_source_uses_existing_fork_and_ask_api)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_http.py", line 5, in test_proposed_base_source_uses_existing_fork_and_ask_api
+    from test_thinking_grammar import ThinkingTokenizer
+ModuleNotFoundError: No module named 'test_thinking_grammar'
+
+======================================================================
+ERROR: test_foreign_parent_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_foreign_parent_rejected_before_context_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 12, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_initial_pack_version_binds_exact_identity (test_project_base_pack.ProjectBasePackTests.test_initial_pack_version_binds_exact_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 12, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_observation_refresh_after_rebuild_uses_closed_root_boundary (test_project_base_pack.ProjectBasePackTests.test_observation_refresh_after_rebuild_uses_closed_root_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 12, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_rebuild_cannot_overwrite_existing_base_branch (test_project_base_pack.ProjectBasePackTests.test_rebuild_cannot_overwrite_existing_base_branch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 12, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_rebuilt_root_keeps_lineage_without_moving_old_worker (test_project_base_pack.ProjectBasePackTests.test_rebuilt_root_keeps_lineage_without_moving_old_worker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 12, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_same_operation_is_idempotent_without_reprefill (test_project_base_pack.ProjectBasePackTests.test_same_operation_is_idempotent_without_reprefill)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 12, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_stale_source_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_stale_source_rejected_before_context_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 12, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+======================================================================
+ERROR: test_wrong_pack_id_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_wrong_pack_id_rejected_before_context_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 12, in setUp
+    self.case=fixture.CowClientFlowTests();self.addCleanup(self.case.doCleanups);self.case.setUp()
+                                                                                 ~~~~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_client_flow.py", line 18, in setUp
+    from context_time_travel.coordinator import ContextCoordinator
+ModuleNotFoundError: No module named 'context_time_travel'
+
+----------------------------------------------------------------------
+Ran 103 tests in 1.336s
+
+FAILED (errors=16)

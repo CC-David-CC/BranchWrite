@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "changed": [
+    "branchwrite/coding_cli.py"
+  ],
+  "original_source_unchanged": true,
+  "original_git_admin_unchanged": true,
+  "git_admin_absent_from_workspace": true,
+  "protected_tests": [
+    {
+      "pattern": "test_inline_task.py",
+      "exit_code": 0
+    },
+    {
+      "pattern": "test_coding_launcher.py",
+      "exit_code": 0
+    },
+    {
+      "pattern": "test_connection_admission.py",
+      "exit_code": 0
+    },
+    {
+      "pattern": "test_prefix_admission.py",
+      "exit_code": 0
+    }
+  ],
+  "generated_cases": 64,
+  "seed": 7419,
+  "scope": "Functional coding/client result, not numerical certification"
+}

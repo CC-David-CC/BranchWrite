@@ -1,0 +1,25 @@
+test_a_later_unjoined_sibling_does_not_replace_prior_observation (test_visible_results.VisibleResultTests.test_a_later_unjoined_sibling_does_not_replace_prior_observation) ... ERROR
+test_unresumed_children_are_not_visible_and_resumed_children_are (test_visible_results.VisibleResultTests.test_unresumed_children_are_not_visible_and_resumed_children_are) ... ERROR
+
+======================================================================
+ERROR: test_a_later_unjoined_sibling_does_not_replace_prior_observation (test_visible_results.VisibleResultTests.test_a_later_unjoined_sibling_does_not_replace_prior_observation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-patch-review-20261019/tests/test_visible_results.py", line 28, in test_a_later_unjoined_sibling_does_not_replace_prior_observation
+    got=k.visible_results(k.frame('program'),c.wire)
+        ^^^^^^^^^^^^^^^^^
+AttributeError: 'FrameKernel' object has no attribute 'visible_results'
+
+======================================================================
+ERROR: test_unresumed_children_are_not_visible_and_resumed_children_are (test_visible_results.VisibleResultTests.test_unresumed_children_are_not_visible_and_resumed_children_are)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-patch-review-20261019/tests/test_visible_results.py", line 14, in test_unresumed_children_are_not_visible_and_resumed_children_are
+    self.assertEqual(k.visible_results(k.frame('program'),c.wire),())
+                     ^^^^^^^^^^^^^^^^^
+AttributeError: 'FrameKernel' object has no attribute 'visible_results'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+FAILED (errors=2)

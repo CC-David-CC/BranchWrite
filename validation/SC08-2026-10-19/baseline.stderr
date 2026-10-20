@@ -1,0 +1,58 @@
+test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) ... 
+  test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='endpoint_url') ... FAIL
+  test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='endpoint_pin') ... FAIL
+  test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='model_contract_id') ... FAIL
+  test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='execution_profile_id') ... FAIL
+  test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='eos_tokens') ... FAIL
+test_expression_is_not_executed (test_connection_admission.ConnectionAdmissionTests.test_expression_is_not_executed) ... ok
+test_valid_connection_still_prepares_exact_launch (test_connection_admission.ConnectionAdmissionTests.test_valid_connection_still_prepares_exact_launch) ... ok
+
+======================================================================
+FAIL: test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='endpoint_url')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-real-repository-20261019-v2/source/tests/test_connection_admission.py", line 20, in test_each_duplicate_identity_is_rejected_before_effects
+    with self.assertRaises(ValueError):start(self.args)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='endpoint_pin')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-real-repository-20261019-v2/source/tests/test_connection_admission.py", line 20, in test_each_duplicate_identity_is_rejected_before_effects
+    with self.assertRaises(ValueError):start(self.args)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='model_contract_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-real-repository-20261019-v2/source/tests/test_connection_admission.py", line 20, in test_each_duplicate_identity_is_rejected_before_effects
+    with self.assertRaises(ValueError):start(self.args)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='execution_profile_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-real-repository-20261019-v2/source/tests/test_connection_admission.py", line 20, in test_each_duplicate_identity_is_rejected_before_effects
+    with self.assertRaises(ValueError):start(self.args)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) (field='eos_tokens')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-real-repository-20261019-v2/source/tests/test_connection_admission.py", line 20, in test_each_duplicate_identity_is_rejected_before_effects
+    with self.assertRaises(ValueError):start(self.args)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.012s
+
+FAILED (failures=5)

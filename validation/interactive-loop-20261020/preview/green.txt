@@ -1,0 +1,12 @@
+test_asset_count_limit_is_explicit_and_preserves_previous_preview (tests.test_interactive_preview.PreviewTests.test_asset_count_limit_is_explicit_and_preserves_previous_preview) ... ok
+test_document_selection_is_bounded_and_does_not_leak_non_web_files (tests.test_interactive_preview.PreviewTests.test_document_selection_is_bounded_and_does_not_leak_non_web_files) ... ok
+test_http_serves_exact_saved_version_and_relative_assets_without_model_work (tests.test_interactive_preview.PreviewTests.test_http_serves_exact_saved_version_and_relative_assets_without_model_work) ... ok
+test_missing_default_has_actionable_choice_without_starting_server (tests.test_interactive_preview.PreviewTests.test_missing_default_has_actionable_choice_without_starting_server) ... ok
+test_only_token_scoped_captured_resources_are_served (tests.test_interactive_preview.PreviewTests.test_only_token_scoped_captured_resources_are_served) ... ok
+test_refresh_retires_previous_url_and_close_releases_port (tests.test_interactive_preview.PreviewTests.test_refresh_retires_previous_url_and_close_releases_port) ... ok
+test_unreferenced_git_blob_corruption_is_not_accepted (tests.test_interactive_preview.PreviewTests.test_unreferenced_git_blob_corruption_is_not_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.348s
+
+OK

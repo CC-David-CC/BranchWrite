@@ -1,0 +1,29 @@
+test_process_exit_after_root_before_workflow_uses_original_prefix (test_coding_pack_http.CodingPackHTTPTests.test_process_exit_after_root_before_workflow_uses_original_prefix) ... FAIL
+
+======================================================================
+FAIL: test_process_exit_after_root_before_workflow_uses_original_prefix (test_coding_pack_http.CodingPackHTTPTests.test_process_exit_after_root_before_workflow_uses_original_prefix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_http.py", line 66, in test_process_exit_after_root_before_workflow_uses_original_prefix
+    case.test_code_prepares_real_context_and_resume_keeps_pinned_setup()
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_launcher_http.py", line 45, in test_code_prepares_real_context_and_resume_keeps_pinned_setup
+    first=subprocess.run(argv,capture_output=True,text=True,env=env,timeout=30)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1199, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_pack_http.py", line 53, in run
+    with RuntimeLog(state/'ledger',read_only=True) as log:self.assertEqual(FrameKernel(log).frames(),[])
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: () != []
+
+----------------------------------------------------------------------
+Ran 1 test in 0.856s
+
+FAILED (failures=1)

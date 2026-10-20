@@ -1,0 +1,164 @@
+{
+  "diagnostic_only": true,
+  "worker_seconds": 12.614108503097668,
+  "outcome": "returned",
+  "source_sha256": "41d03f936f37cada3f331411541ab494d7cbf5be3276e45e50a775ecedba805b",
+  "top_self": [
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'acquire' of '_thread.lock' objects>",
+      "primitive_calls": 470,
+      "total_calls": 1150,
+      "self_seconds": 3.1620351930000004,
+      "cumulative_seconds": 3.307460744
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'poll' of 'select.epoll' objects>",
+      "primitive_calls": 658,
+      "total_calls": 658,
+      "self_seconds": 1.6200087980000002,
+      "cumulative_seconds": 1.6582094820000002
+    },
+    {
+      "file": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc-rerun-20261018-v1/runtime-grammar-rebuild-v1/experimental/branching_context/src/context_time_travel/store.py",
+      "line": 119,
+      "function": "<genexpr>",
+      "primitive_calls": 14034739,
+      "total_calls": 14034739,
+      "self_seconds": 1.166862557,
+      "cumulative_seconds": 1.166863188
+    },
+    {
+      "file": "/usr/lib/python3.12/json/decoder.py",
+      "line": 343,
+      "function": "raw_decode",
+      "primitive_calls": 2995,
+      "total_calls": 2995,
+      "self_seconds": 1.106351766,
+      "cumulative_seconds": 1.106437748
+    },
+    {
+      "file": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc-rerun-20261018-v1/runtime-grammar-rebuild-v1/experimental/branching_context/src/context_time_travel/vision_execution.py",
+      "line": 29,
+      "function": "input_binding",
+      "primitive_calls": 388,
+      "total_calls": 388,
+      "self_seconds": 0.9199771240000001,
+      "cumulative_seconds": 2.869584701
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _struct.pack>",
+      "primitive_calls": 7092303,
+      "total_calls": 7092303,
+      "self_seconds": 0.59889479,
+      "cumulative_seconds": 0.59889479
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.any>",
+      "primitive_calls": 3992,
+      "total_calls": 4160,
+      "self_seconds": 0.53626624,
+      "cumulative_seconds": 1.7176450570000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'extend' of 'bytearray' objects>",
+      "primitive_calls": 7089564,
+      "total_calls": 7089564,
+      "self_seconds": 0.487064906,
+      "cumulative_seconds": 0.487064906
+    },
+    {
+      "file": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc-rerun-20261018-v1/runtime-grammar-rebuild-v1/experimental/branching_context/src/context_time_travel/input_spans.py",
+      "line": 107,
+      "function": "native_tokens",
+      "primitive_calls": 647,
+      "total_calls": 647,
+      "self_seconds": 0.41481457800000004,
+      "cumulative_seconds": 1.09014198
+    },
+    {
+      "file": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc-rerun-20261018-v1/runtime-grammar-rebuild-v1/experimental/branching_context/src/context_time_travel/input_spans.py",
+      "line": 109,
+      "function": "<genexpr>",
+      "primitive_calls": 9297070,
+      "total_calls": 9297070,
+      "self_seconds": 0.37485329,
+      "cumulative_seconds": 0.37485329
+    },
+    {
+      "file": "/usr/lib/python3.12/copy.py",
+      "line": 118,
+      "function": "deepcopy",
+      "primitive_calls": 146,
+      "total_calls": 869223,
+      "self_seconds": 0.303237348,
+      "cumulative_seconds": 0.6221576630000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'poll' of 'select.poll' objects>",
+      "primitive_calls": 26,
+      "total_calls": 26,
+      "self_seconds": 0.299688864,
+      "cumulative_seconds": 0.299688864
+    },
+    {
+      "file": "/usr/lib/python3.12/json/encoder.py",
+      "line": 205,
+      "function": "iterencode",
+      "primitive_calls": 1881,
+      "total_calls": 1881,
+      "self_seconds": 0.27088479600000004,
+      "cumulative_seconds": 0.27088479600000004
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'readline' of '_io.TextIOWrapper' objects>",
+      "primitive_calls": 658,
+      "total_calls": 658,
+      "self_seconds": 0.18325464000000002,
+      "cumulative_seconds": 0.19339907
+    },
+    {
+      "file": "/usr/lib/python3.12/threading.py",
+      "line": 323,
+      "function": "wait",
+      "primitive_calls": 234,
+      "total_calls": 237,
+      "self_seconds": 0.13198147000000002,
+      "cumulative_seconds": 3.922652224
+    }
+  ],
+  "binding_calls": [
+    {
+      "file": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc-rerun-20261018-v1/runtime-grammar-rebuild-v1/experimental/branching_context/src/context_time_travel/vision_execution.py",
+      "line": 29,
+      "function": "input_binding",
+      "primitive_calls": 388,
+      "total_calls": 388,
+      "self_seconds": 0.9199771240000001,
+      "cumulative_seconds": 2.869584701
+    },
+    {
+      "file": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc-rerun-20261018-v1/runtime-grammar-rebuild-v1/experimental/branching_context/src/context_time_travel/input_spans.py",
+      "line": 107,
+      "function": "native_tokens",
+      "primitive_calls": 647,
+      "total_calls": 647,
+      "self_seconds": 0.41481457800000004,
+      "cumulative_seconds": 1.09014198
+    }
+  ],
+  "scope": "Instrumented function times include overhead and overlap; no causal performance improvement claimed"
+}

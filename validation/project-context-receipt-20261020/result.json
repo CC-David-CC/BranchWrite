@@ -1,0 +1,53 @@
+{
+  "assertions": [
+    "source snapshot crash recovery before outer receipt publication",
+    "source receipt and pack resume without recapturing changed files or branch tip",
+    "normal code CLI binds source receipt hash into immutable coding launch",
+    "real CPU COW HTTP prefill creates a root from selected project files plus completed saved branch history",
+    "unselected project file is absent from pack",
+    "source branch remains unchanged",
+    "existing namespace/context acknowledgment recovery tests pass"
+  ],
+  "branchwrite": {
+    "branch": "feat/explicit-model-reconciliation-20261019",
+    "commit": "47c759a9b44609d6c810ed2a72049092bd27bf40",
+    "host": "llm-49"
+  },
+  "context_cow": {
+    "branch": "feat/canonical-history-counts-20261019",
+    "commit": "895251441266dda1dd4d6437d98fda7251027b68",
+    "host": "llm-60"
+  },
+  "gpu_inference": false,
+  "limitations": [
+    "CPU fake-model backend only; no numerical/logit or model-quality claim",
+    "project image/multimodal branch history is explicitly rejected",
+    "project context building is opt-in and uses explicit read grants; no whole-tree crawl or automatic refresh",
+    "broad COW server crash-stage matrix remains separate"
+  ],
+  "q4_q8_validation": "NOT_RUN",
+  "result": "CPU_INTEGRATION_PASS",
+  "scope": "BranchWrite client project-context receipt milestone",
+  "tests": [
+    {
+      "command": "PYTHONPATH=tests:. PYTHONDONTWRITEBYTECODE=1 python3 -m unittest test_project_context_receipt test_base_project_prepare test_base_catalog_publication test_coding_launcher test_coding_pack_launch test_coding_pack_refresh_admission test_context_pack -v",
+      "failed": 0,
+      "host": "llm-49",
+      "log": "branchwrite-cpu.log",
+      "passed": 71,
+      "result": "PASS",
+      "skipped": 0,
+      "suite": "project-context and relevant BranchWrite client tests"
+    },
+    {
+      "command": "PYTHONPATH=tests:.:<COW source>:<COW branching_context src>:<COW implementation tests> PYTHONDONTWRITEBYTECODE=1 python -m unittest test_base_choice_http -v",
+      "failed": 0,
+      "host": "llm-60",
+      "log": "cow-http-cpu.log",
+      "passed": 7,
+      "result": "PASS",
+      "skipped": 0,
+      "suite": "real local CPU Context COW HTTP integration and existing base-choice recovery cases"
+    }
+  ]
+}

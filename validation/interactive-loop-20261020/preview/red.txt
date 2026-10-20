@@ -1,0 +1,72 @@
+======================================================================
+ERROR: test_asset_count_limit_is_explicit_and_preserves_previous_preview (tests.test_interactive_preview.PreviewTests.test_asset_count_limit_is_explicit_and_preserves_previous_preview)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 55, in test_asset_count_limit_is_explicit_and_preserves_previous_preview
+    preview,url=self.preview()
+                ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 15, in preview
+    from branchwrite.interactive_preview import Preview
+ModuleNotFoundError: No module named 'branchwrite.interactive_preview'
+
+======================================================================
+ERROR: test_document_selection_is_bounded_and_does_not_leak_non_web_files (tests.test_interactive_preview.PreviewTests.test_document_selection_is_bounded_and_does_not_leak_non_web_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 42, in test_document_selection_is_bounded_and_does_not_leak_non_web_files
+    from branchwrite.interactive_preview import Preview
+ModuleNotFoundError: No module named 'branchwrite.interactive_preview'
+
+======================================================================
+ERROR: test_http_serves_exact_saved_version_and_relative_assets_without_model_work (tests.test_interactive_preview.PreviewTests.test_http_serves_exact_saved_version_and_relative_assets_without_model_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 18, in test_http_serves_exact_saved_version_and_relative_assets_without_model_work
+    preview,url=self.preview();(self.project/'index.html').write_text('new unsaved edit')
+                ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 15, in preview
+    from branchwrite.interactive_preview import Preview
+ModuleNotFoundError: No module named 'branchwrite.interactive_preview'
+
+======================================================================
+ERROR: test_missing_default_has_actionable_choice_without_starting_server (tests.test_interactive_preview.PreviewTests.test_missing_default_has_actionable_choice_without_starting_server)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 47, in test_missing_default_has_actionable_choice_without_starting_server
+    from branchwrite.interactive_preview import Preview
+ModuleNotFoundError: No module named 'branchwrite.interactive_preview'
+
+======================================================================
+ERROR: test_only_token_scoped_captured_resources_are_served (tests.test_interactive_preview.PreviewTests.test_only_token_scoped_captured_resources_are_served)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 28, in test_only_token_scoped_captured_resources_are_served
+    preview,url=self.preview();origin=url.split('/')[0]+'//'+url.split('/')[2];folder=url.rsplit('/',1)[0]
+                ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 15, in preview
+    from branchwrite.interactive_preview import Preview
+ModuleNotFoundError: No module named 'branchwrite.interactive_preview'
+
+======================================================================
+ERROR: test_refresh_retires_previous_url_and_close_releases_port (tests.test_interactive_preview.PreviewTests.test_refresh_retires_previous_url_and_close_releases_port)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 36, in test_refresh_retires_previous_url_and_close_releases_port
+    preview,url=self.preview();port=preview.port
+                ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 15, in preview
+    from branchwrite.interactive_preview import Preview
+ModuleNotFoundError: No module named 'branchwrite.interactive_preview'
+
+======================================================================
+ERROR: test_unreferenced_git_blob_corruption_is_not_accepted (tests.test_interactive_preview.PreviewTests.test_unreferenced_git_blob_corruption_is_not_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 61, in test_unreferenced_git_blob_corruption_is_not_accepted
+    from branchwrite.interactive_preview import Preview
+ModuleNotFoundError: No module named 'branchwrite.interactive_preview'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.111s
+
+FAILED (errors=7)

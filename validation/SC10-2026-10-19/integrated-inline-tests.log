@@ -1,0 +1,11 @@
+test_blank_inline_task_uses_existing_task_validation (test_inline_task.InlineTaskTests.test_blank_inline_task_uses_existing_task_validation) ... ok
+test_both_input_forms_are_rejected_before_state (test_inline_task.InlineTaskTests.test_both_input_forms_are_rejected_before_state) ... ok
+test_file_task_still_works_and_is_unchanged (test_inline_task.InlineTaskTests.test_file_task_still_works_and_is_unchanged) ... ok
+test_inline_task_is_preserved_exactly (test_inline_task.InlineTaskTests.test_inline_task_is_preserved_exactly) ... ok
+test_inline_text_is_never_executed (test_inline_task.InlineTaskTests.test_inline_text_is_never_executed) ... ok
+test_missing_input_is_rejected_before_state (test_inline_task.InlineTaskTests.test_missing_input_is_rejected_before_state) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.015s
+
+OK

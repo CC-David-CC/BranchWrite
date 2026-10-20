@@ -1,0 +1,13 @@
+FLOW continuation
+VALUE partial type=CommittedActivePartial ref=partial-receipt
+CONTINUE finish from=partial profile=explore -> complete-proposal
+SAVE keep input=complete-proposal name=complete-design
+END
+FLOW integration
+SELECT choose input=required-component-results rule=all-required-verified -> components
+COMPOSE integrate input=components contract=integration-contract -> integration-proposal
+PLAN freeze-integration from=integration-proposal against=integration-world -> integration-plan
+ACT apply-integration plan=integration-plan -> integrated
+VERIFY combined input=integrated contract=protected-integration-tests -> verified-integration
+COMMIT publish-combined input=verified-integration target=owned-test-ref evidence=verified-integration -> published-integration
+END

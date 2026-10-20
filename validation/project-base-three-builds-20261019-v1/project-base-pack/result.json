@@ -1,0 +1,27 @@
+{
+  "status": "BOUNDED_CPU_HTTP_PASS",
+  "new_methods": 8,
+  "combined_tests": 77,
+  "failures": 0,
+  "skips": 0,
+  "baseline": "Initial7 methods failed before implementation; eighth overwrite-refusal regression added afterward",
+  "scope": "Actual HTTP/Store and filesystem packs with synthetic CPU backend; no new GPU/wheel qualification",
+  "new_capability": "Prepare exact current reference pack as an existing GoldenVersion and canonical COW root, optionally with previous-version provenance",
+  "boundary_fix": "Version lineage number is not turn state: rebuilt roots use ask; completed summaries use append_user",
+  "unchanged": [
+    "GoldenVersion persisted fields",
+    "Canonical COW history",
+    "Old root and worker references",
+    "Host authority and pinned source limits"
+  ],
+  "remaining": [
+    "Normal coding-workflow retention and selection",
+    "Automatic refresh/compaction scheduling",
+    "Installed-client and real-Q8 validation"
+  ],
+  "logs_sha256": {
+    "project-base-pack-after.log": "c4d7fe4a17f47794eb19058f94c93debf4c806fe101b5eb20ff5b943b1cb9f47",
+    "project-base-pack-before.log": "39a9f07d6f95c350c2a2b058426a03321cf91f8e65a77e3455aa6fab9e9c472b",
+    "project-base-pack-integration.log": "3fdd3f9074932dde04c775e869102fb2efd713a8fe5556e833015a07d480948c"
+  }
+}

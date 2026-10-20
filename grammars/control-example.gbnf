@@ -1,0 +1,1 @@
+root ::= "ACT run-a plan=plan-a -> outcome-a\n" | "ABANDON reject-a target=attempt-a reason=declined\n"

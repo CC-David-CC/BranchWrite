@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "original_request": "Make a pretty, phone-friendly website about dogs, all in index.html with no downloads. Include these two short sentences: Milo plays. Luna runs. Add a Say hello button that shows Hello, David! when clicked.",
+  "new_instruction": "One change: make the dog names Milo and Luna bold, and make the verbs plays and runs both italic and underlined. Keep all the other parts of my request.",
+  "submitted_during_pending_native_request": true,
+  "steering_kind": "steer",
+  "turn_results": [
+    "interrupted",
+    "finished"
+  ],
+  "html_sha256": "884d48a6a71747fb2b85b9c31b03addb5077f82a819d5f779c7459ecc161a311"
+}

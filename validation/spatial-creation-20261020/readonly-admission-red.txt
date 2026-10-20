@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_readonly_policy_rejects_enabled_cad_execution (test_cad_tools.CadToolTests.test_readonly_policy_rejects_enabled_cad_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_tools.py", line 55, in test_readonly_policy_rejects_enabled_cad_execution
+    with self.assertRaises(ValueError):ReadOnlyPolicy.admit(dict(schema=1,read_only=True),r)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 1.599s
+
+FAILED (failures=1)

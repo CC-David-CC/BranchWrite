@@ -1,0 +1,7 @@
+Processing ./spatial-artifacts/branchwrite-dev30-package-20261020-v1/wheel/branchwrite-0.1.0.dev30-py3-none-any.whl
+Installing collected packages: branchwrite
+  Attempting uninstall: branchwrite
+    Found existing installation: branchwrite 0.1.0.dev30
+    Uninstalling branchwrite-0.1.0.dev30:
+      Successfully uninstalled branchwrite-0.1.0.dev30
+Successfully installed branchwrite-0.1.0.dev30

@@ -1,0 +1,13 @@
+test_kill_after_durable_return_consumes_original_result_once (test_tool_process_recovery.ToolProcessRecoveryTests.test_kill_after_durable_return_consumes_original_result_once) ... ok
+test_kill_after_effect_before_return_retains_unresolved_operation (test_tool_process_recovery.ToolProcessRecoveryTests.test_kill_after_effect_before_return_retains_unresolved_operation) ... ok
+test_kill_before_dispatch_admits_one_fresh_execution (test_tool_process_recovery.ToolProcessRecoveryTests.test_kill_before_dispatch_admits_one_fresh_execution) ... ok
+test_actual_read_returns_to_the_exact_parent_slot (test_tool_dispatch.ToolDispatchTests.test_actual_read_returns_to_the_exact_parent_slot) ... ok
+test_after_effect_failure_leaves_waiting_and_never_resends (test_tool_dispatch.ToolDispatchTests.test_after_effect_failure_leaves_waiting_and_never_resends) ... ok
+test_finish_is_a_pure_request_not_an_acceptance_or_automatic_flow_close (test_tool_dispatch.ToolDispatchTests.test_finish_is_a_pure_request_not_an_acceptance_or_automatic_flow_close) ... ok
+test_finished_call_replays_saved_result_after_reopen_without_dispatch (test_tool_dispatch.ToolDispatchTests.test_finished_call_replays_saved_result_after_reopen_without_dispatch) ... ok
+test_relevant_change_becomes_a_durable_known_preflight_rejection (test_tool_dispatch.ToolDispatchTests.test_relevant_change_becomes_a_durable_known_preflight_rejection) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.195s
+
+OK

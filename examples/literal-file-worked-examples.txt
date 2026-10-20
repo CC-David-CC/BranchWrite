@@ -1,0 +1,54 @@
+# Literal file operations
+
+These are hypothetical tasks on different files, not the current task. Actions and feedback were executed through the real registered file tools.
+Do not add indentation when copying lines from a code block. Preserve Unicode code points, spaces, quotes, dollar expressions and line endings exactly. JSON escapes encode characters, not literal backslash text.
+A create grant permits the exact leaf and its necessary private parents. It never permits overwriting an existing file. Read back the actual bytes before requesting finish. A create receipt alone is not readback.
+If readback is wrong, repair only with an explicit edit grant and the latest observation. Without an edit grant, report the limitation; do not claim success or invent tools.
+Example paths, byte counts, hex strings and observation identities are not permissions or answers to copy into another task. Preserve existing neighbors.
+
+## Literal file example 1: nested literal text
+TASK: {"title": "nested literal text", "path": "notes/session/report.txt", "utf8_hex": "736179202768656c6c6f272024555345520a6e6578743a20cebb20c3a92065cc810a", "utf8_bytes": 34, "text": "say 'hello' $USER\nnext: \u03bb \u00e9 e\u0301\n", "repair": false}
+
+ACTION: {"tool": "create_file", "arguments": {"path": "notes/session/report.txt", "content": "say 'hello' $USER\nnext: \u03bb \u00e9 e\u0301\n"}}
+FEEDBACK: {"tool": "create_file", "disposition": "created", "exit_code": 0, "stdout": "file created\n", "stderr": "", "observation": {"world": "4c2006cf9a63262c8dc29dbfc258e04372948a94103a715ad4d7fdf66f0de132", "path": "notes/session/report.txt", "source_sha256": "ce1de4ad850b4cc39885f90f256261ef310967e847a4f36b2ae48cbe6c2b5dd4"}}
+
+ACTION: {"tool": "read_file", "arguments": {"path": "notes/session/report.txt"}}
+FEEDBACK: {"tool": "read_file", "disposition": "read", "exit_code": 0, "stdout": "say 'hello' $USER\nnext: \u03bb \u00e9 e\u0301\n", "stderr": "", "observation": {"world": "4c2006cf9a63262c8dc29dbfc258e04372948a94103a715ad4d7fdf66f0de132", "path": "notes/session/report.txt", "source_sha256": "ce1de4ad850b4cc39885f90f256261ef310967e847a4f36b2ae48cbe6c2b5dd4"}}
+
+Byte comparison: matches the requested bytes.
+ACTION: {"tool": "finish", "arguments": {"answer": "Created the requested file and read back its exact bytes."}}
+FEEDBACK: {"tool": "finish", "disposition": "completion_requested", "exit_code": null, "stdout": "Created the requested file and read back its exact bytes.", "stderr": "", "observation": null}
+
+## Literal file example 2: CRLF and no final newline
+TASK: {"title": "CRLF and no final newline", "path": "captures/line endings.txt", "utf8_hex": "ceb10d0a62657461092455534552", "utf8_bytes": 14, "text": "\u03b1\r\nbeta\t$USER", "repair": false}
+
+ACTION: {"tool": "create_file", "arguments": {"path": "captures/line endings.txt", "content": "\u03b1\r\nbeta\t$USER"}}
+FEEDBACK: {"tool": "create_file", "disposition": "created", "exit_code": 0, "stdout": "file created\n", "stderr": "", "observation": {"world": "27659ac6e0e9644afd33b534bc6b7d725108c7fbe269757f696ec9cb40ba3201", "path": "captures/line endings.txt", "source_sha256": "387af3e18557152603005add12758f3a73efb5bf45c9a8855097712cca7528e6"}}
+
+ACTION: {"tool": "read_file", "arguments": {"path": "captures/line endings.txt"}}
+FEEDBACK: {"tool": "read_file", "disposition": "read", "exit_code": 0, "stdout": "\u03b1\r\nbeta\t$USER", "stderr": "", "observation": {"world": "27659ac6e0e9644afd33b534bc6b7d725108c7fbe269757f696ec9cb40ba3201", "path": "captures/line endings.txt", "source_sha256": "387af3e18557152603005add12758f3a73efb5bf45c9a8855097712cca7528e6"}}
+
+Byte comparison: matches the requested bytes.
+ACTION: {"tool": "finish", "arguments": {"answer": "Created the requested file and read back its exact bytes."}}
+FEEDBACK: {"tool": "finish", "disposition": "completion_requested", "exit_code": null, "stdout": "Created the requested file and read back its exact bytes.", "stderr": "", "observation": null}
+
+## Literal file example 3: repair unwanted indentation
+TASK: {"title": "repair unwanted indentation", "path": "drafts/receipt.txt", "utf8_hex": "666972737420726f770a7365636f6e6420726f773a20cea90a", "utf8_bytes": 25, "text": "first row\nsecond row: \u03a9\n", "repair": true}
+
+ACTION: {"tool": "create_file", "arguments": {"path": "drafts/receipt.txt", "content": "first row\n second row: \u03a9\n"}}
+FEEDBACK: {"tool": "create_file", "disposition": "created", "exit_code": 0, "stdout": "file created\n", "stderr": "", "observation": {"world": "66939fb0f87cf0406beb218ef53c9682e5d2ed78b5da4756b4d1d9ba810a319c", "path": "drafts/receipt.txt", "source_sha256": "3f88717bcfae8fe047090a38414887fa08319ab6b4601d2f4e3d62f2003dc266"}}
+
+ACTION: {"tool": "read_file", "arguments": {"path": "drafts/receipt.txt"}}
+FEEDBACK: {"tool": "read_file", "disposition": "read", "exit_code": 0, "stdout": "first row\n second row: \u03a9\n", "stderr": "", "observation": {"world": "66939fb0f87cf0406beb218ef53c9682e5d2ed78b5da4756b4d1d9ba810a319c", "path": "drafts/receipt.txt", "source_sha256": "3f88717bcfae8fe047090a38414887fa08319ab6b4601d2f4e3d62f2003dc266"}}
+
+Byte comparison: does NOT match: the second line has an unwanted leading space. Use the permitted exact replacement; do not request finish.
+ACTION: {"tool": "replace", "arguments": {"path": "drafts/receipt.txt", "before": "\n second row", "after": "\nsecond row"}}
+FEEDBACK: {"tool": "replace", "disposition": "applied", "exit_code": 0, "stdout": "replacement applied\n", "stderr": "", "observation": {"world": "66939fb0f87cf0406beb218ef53c9682e5d2ed78b5da4756b4d1d9ba810a319c", "path": "drafts/receipt.txt", "source_sha256": "b6ea9a7f51f423cf473e8e0624e779b3600ec165e943a1abea90249aab1751a2"}}
+
+ACTION: {"tool": "read_file", "arguments": {"path": "drafts/receipt.txt"}}
+FEEDBACK: {"tool": "read_file", "disposition": "read", "exit_code": 0, "stdout": "first row\nsecond row: \u03a9\n", "stderr": "", "observation": {"world": "66939fb0f87cf0406beb218ef53c9682e5d2ed78b5da4756b4d1d9ba810a319c", "path": "drafts/receipt.txt", "source_sha256": "b6ea9a7f51f423cf473e8e0624e779b3600ec165e943a1abea90249aab1751a2"}}
+
+Byte comparison: matches the requested bytes.
+ACTION: {"tool": "finish", "arguments": {"answer": "Created the requested file and read back its exact bytes."}}
+FEEDBACK: {"tool": "finish", "disposition": "completion_requested", "exit_code": null, "stdout": "Created the requested file and read back its exact bytes.", "stderr": "", "observation": null}
+

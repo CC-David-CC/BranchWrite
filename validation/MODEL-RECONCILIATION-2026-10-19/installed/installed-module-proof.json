@@ -1,0 +1,10 @@
+{
+  "module": "/home/dflanag3/spatial-artifacts/branchwrite-dev17-package-20261019-v1/installation/venv/lib/python3.14/site-packages/branchwrite/__init__.py",
+  "paths": [
+    "/usr/lib/python314.zip",
+    "/usr/lib/python3.14",
+    "/usr/lib/python3.14/lib-dynload",
+    "/home/dflanag3/spatial-artifacts/branchwrite-dev17-package-20261019-v1/installation/venv/lib/python3.14/site-packages"
+  ],
+  "wheel_python_modules_verified": 42
+}

@@ -1,0 +1,2 @@
+{"status": "PASS", "scope": "installed CLI/Interpreter/Kernel/real SSH/owned persistent VM, no model/GPU", "source_wheel_sha256": "8299bf8569420897ee1cb30e62ba14026cf9eb5ab53892ee6ffd7ce41d5e7dce"}
+completed_cases 11

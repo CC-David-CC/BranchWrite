@@ -1,0 +1,18 @@
+test_asset_count_limit_is_explicit_and_preserves_previous_preview (tests.test_interactive_preview.PreviewTests.test_asset_count_limit_is_explicit_and_preserves_previous_preview) ... ok
+test_document_selection_is_bounded_and_does_not_leak_non_web_files (tests.test_interactive_preview.PreviewTests.test_document_selection_is_bounded_and_does_not_leak_non_web_files) ... ok
+test_http_serves_exact_saved_version_and_relative_assets_without_model_work (tests.test_interactive_preview.PreviewTests.test_http_serves_exact_saved_version_and_relative_assets_without_model_work) ... ok
+test_missing_default_has_actionable_choice_without_starting_server (tests.test_interactive_preview.PreviewTests.test_missing_default_has_actionable_choice_without_starting_server) ... ok
+test_only_token_scoped_captured_resources_are_served (tests.test_interactive_preview.PreviewTests.test_only_token_scoped_captured_resources_are_served) ... ok
+test_refresh_retires_previous_url_and_close_releases_port (tests.test_interactive_preview.PreviewTests.test_refresh_retires_previous_url_and_close_releases_port) ... ok
+test_unreferenced_git_blob_corruption_is_not_accepted (tests.test_interactive_preview.PreviewTests.test_unreferenced_git_blob_corruption_is_not_accepted) ... ok
+test_escape_stops_work_without_erasing_the_draft (tests.test_interactive_terminal.InteractiveTerminalTests.test_escape_stops_work_without_erasing_the_draft) ... ok
+test_missing_preview_is_a_notice_and_does_not_stop_the_session (tests.test_interactive_terminal.InteractiveTerminalTests.test_missing_preview_is_a_notice_and_does_not_stop_the_session) ... ok
+test_plan_aside_history_and_unknown_commands_are_not_work_requests (tests.test_interactive_terminal.InteractiveTerminalTests.test_plan_aside_history_and_unknown_commands_are_not_work_requests) ... ok
+test_plan_mode_cannot_restore_or_edit_files_via_branch_controls (tests.test_interactive_terminal.InteractiveTerminalTests.test_plan_mode_cannot_restore_or_edit_files_via_branch_controls) ... ok
+test_preview_uses_selected_file_version_without_submitting_work_and_closes (tests.test_interactive_terminal.InteractiveTerminalTests.test_preview_uses_selected_file_version_without_submitting_work_and_closes) ... ok
+test_typing_survives_progress_tab_queues_and_enter_steers (tests.test_interactive_terminal.InteractiveTerminalTests.test_typing_survives_progress_tab_queues_and_enter_steers) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 2.511s
+
+OK

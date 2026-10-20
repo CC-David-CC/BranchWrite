@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "scope": "installed dev59 CLI/Q4 authored two-page PDF, actual page images submitted in settled native requests, current named checks and canonical finish; no general layout certification",
+  "elapsed_seconds": 493.6347805300029,
+  "operator_candidate_edits": 0,
+  "pdf_sha256": "6a4091fd136a8e202280edb0f2fef9d2795a151b565fe8a882451948992f9e43",
+  "pages": {
+    "1": "0ad76e711b614be706c15d24b8d96dd7b2f4a7be1596f792210b798ecf5d7cc3",
+    "2": "83f7d05c8eb6ab050445cdb12fe9dcd3ff097faf4e62e59ada7c6d0dcaa243f0"
+  },
+  "actual_image_native_frames": {
+    "1": [
+      "native-76b40ef0f5c4325b92c4eef12efd28ae71c817f81936e737"
+    ],
+    "2": [
+      "native-16242660509e01237bef34db12b63d84b8c09858b0a9de97"
+    ]
+  },
+  "model_frames": 8,
+  "native_requests": 10,
+  "checks": [
+    {
+      "frame": "call-87b6374fbd47e01a2a5d52ed44d92e692e53464c343440a6",
+      "tool": "run_check",
+      "disposition": "exited",
+      "exit_code": 1,
+      "operation_id": "bwtool-88aa825b8563a8ce03e92eb8e644560249e0d76c8fa6b3f2"
+    },
+    {
+      "frame": "call-3db872a3ffaade7769e592d96100170969a59cab4a1b5985",
+      "tool": "run_check",
+      "disposition": "exited",
+      "exit_code": 0,
+      "operation_id": "bwtool-cfde5d27b982099212b8d7f73f2af15f7100e7dca7e8875c"
+    }
+  ],
+  "tool_sequence": [
+    {
+      "frame": "call-e491549034703f0acb1c9245a23d63fdf997e063956caea0",
+      "tool": "run_shell",
+      "disposition": "exited",
+      "exit_code": 0,
+      "operation_id": "bwtool-4af3d79bf8559d7961b9e4de82f0684296d941516fad6d35"
+    },
+    {
+      "frame": "call-55f4a94901ac2ed20a22162b4c704f267acd54db781baa19",
+      "tool": "create_file",
+      "disposition": "created",
+      "exit_code": 0,
+      "operation_id": "bwtool-16273872826e74ed330c086af0e68f54b5df7307c1df9159"
+    },
+    {
+      "frame": "call-f0a54bb558f96879860eb04357adc7369932ded8908be7b1",
+      "tool": "build_pdf",
+      "disposition": "pdf_built",
+      "exit_code": 0,
+      "operation_id": "bwtool-cc9364bb23765076e487cc17ce284e5fe5510bc8ee21fa12"
+    },
+    {
+      "frame": "call-89349e0c67d9e3be2ab618c9b2f3056f0b39ce2ae28fe80e",
+      "tool": "render_pdf",
+      "disposition": "pdf_rendered",
+      "exit_code": 0,
+      "operation_id": "bwtool-4cda9991fe51ae92722b5182b53bcb094d122efae8574dec"
+    },
+    {
+      "frame": "call-87b6374fbd47e01a2a5d52ed44d92e692e53464c343440a6",
+      "tool": "run_check",
+      "disposition": "exited",
+      "exit_code": 1,
+      "operation_id": "bwtool-88aa825b8563a8ce03e92eb8e644560249e0d76c8fa6b3f2"
+    },
+    {
+      "frame": "call-03f6a160785671c019890b27750ccc18607dea48396c2372",
+      "tool": "run_shell",
+      "disposition": "exited",
+      "exit_code": 0,
+      "operation_id": "bwtool-40fd8d0d8fceebdb5f79af31d8cc8417fa711cbedc45a0b4"
+    },
+    {
+      "frame": "call-3db872a3ffaade7769e592d96100170969a59cab4a1b5985",
+      "tool": "run_check",
+      "disposition": "exited",
+      "exit_code": 0,
+      "operation_id": "bwtool-cfde5d27b982099212b8d7f73f2af15f7100e7dca7e8875c"
+    },
+    {
+      "frame": "call-8f980df091483377bcaa3dfdf0f5efd8b445acfa1828b502",
+      "tool": "finish",
+      "disposition": "completion_requested",
+      "exit_code": null,
+      "operation_id": "bwtool-2921eaa6702d6b04c0b995b62d99dac49a5b0b2ea7982042"
+    }
+  ],
+  "connection": {
+    "endpoint_pin": "bw-origin-af4a47d5a3a6908bdd8427ea3aec994931c87f0d46917c6960ece7765cd6a922",
+    "endpoint_url": "http://10.0.7.68:8099",
+    "eos_tokens": [
+      248044,
+      248046
+    ],
+    "execution_profile_id": "62a8bc71db2436477fc6e5c010d4357287034c04ea41123a887418694a5d42b6",
+    "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53"
+  },
+  "wheel": {
+    "source": "726bb3652e8ac876f80d9cf209a23b2e28156910",
+    "wheel": "/home/dflanag3/spatial-artifacts/bw-pdf-cli-dev59-20261020/dist/branchwrite-0.1.0.dev59-py3-none-any.whl",
+    "wheel_sha256": "799eee93ae47e1ee1bee2258a14cb0a1fea1a0ceb81db6f3f789ebc5d0971b24",
+    "host": "r4090"
+  },
+  "visual_inspection": "actual page contact sheet inspected: both headings/table/checklist/page numbers readable; no visible overlap or clipping"
+}

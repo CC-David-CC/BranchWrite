@@ -1,0 +1,14 @@
+test_fault_proxy_selects_first_native_request_then_recovery_does_no_work (test_generation_reconciliation.GenerationReconciliationTests.test_fault_proxy_selects_first_native_request_then_recovery_does_no_work) ... FAIL
+
+======================================================================
+FAIL: test_fault_proxy_selects_first_native_request_then_recovery_does_no_work (test_generation_reconciliation.GenerationReconciliationTests.test_fault_proxy_selects_first_native_request_then_recovery_does_no_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 104, in test_fault_proxy_selects_first_native_request_then_recovery_does_no_work
+    with self.assertRaises(OperationIndeterminate):
+AssertionError: OperationIndeterminate not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 1.129s
+
+FAILED (failures=1)

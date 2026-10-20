@@ -1,0 +1,13 @@
+{
+  "status": "ACCEPTED_BOUNDED_CODING_RUN",
+  "diff": "Only calculator.py changes: return a - b becomes return a + b",
+  "independent_audit": "PASS",
+  "protected_tests_unchanged": true,
+  "original_source_unchanged": true,
+  "parent_interventions_after_resume": 0,
+  "limitations": [
+    "Trivial coding fixture, not broad catalog qualification",
+    "No fresh full-logit numerical oracle",
+    "Earlier harness/backend failures retained"
+  ]
+}

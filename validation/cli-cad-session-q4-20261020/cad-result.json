@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "controller_pid": 2482529,
+  "client_host": "r4090",
+  "prompt_sha256": "e5b1e0c674443ea5de958b904612d5a9f5d340b5ab99d3e367d62a6e62f1163a",
+  "task": "Build a parameterized mounting plate in model.py using build123d. Make it 100 by 60 by 4 mm, centered in X and Y with the bottom at Z=0. Put four 5 mm through-holes at centered spacings 76 mm in X and 36 mm in Y. Cut a locating notch 6 mm deep and 10 mm wide into the positive-X edge, centered in Y and through the thickness. Preserve at least 8 mm material from each hole wall to outer walls including the notch. One connected body, no extra features. Export part.step. Use inspect_cad to obtain actual geometry measurements and actual views, fix any failed checks, and finish only when accepted. Do not use run_shell to build it; inspect_cad has the configured CAD environment.",
+  "operator_candidate_edits": 0,
+  "scope": "installed dev63 interactive session -> candidate780e824a HTTP/Q4; fixed geometry and real image feedback; no operator task revisions",
+  "elapsed_seconds": 241.36838602507487,
+  "client_pid": 2482531,
+  "submitted_seconds": 0.3094553609844297,
+  "completed_seconds": 241.31092403898947,
+  "client_exit_code": 0,
+  "workflow": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc",
+  "file_commit": "93b4a4c662112b4de32a0188089fe475f9d6b4bb",
+  "context": {
+    "branch": "bw-session-4bbe294319a03e767f8ffec42a0d9678ff0e55cc",
+    "execution_profile_id": "5f488c1cc91d67422402a59ddf56efdd757593f3cd4300971380c15ba33876b7",
+    "mode": "append_user",
+    "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+    "revision": 8,
+    "root": "b4b5332378cb065b7201e93931454722a0151e4f5f853f987cd70a14af22c261",
+    "tip": "1f34bea8ca1a226e7bd1e5fc0bb09b2eb49fb2cd9cd499c3e251e5783ba8af89"
+  },
+  "exports": [
+    {
+      "bytes": 44127,
+      "media_type": "application/step",
+      "name": "part.step",
+      "path": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc/ledger/artifacts/96946c71e7627eac6b13fb3e7a7663e2d7f0c0edfd9eceee17fdf74997f7c705",
+      "sha256": "96946c71e7627eac6b13fb3e7a7663e2d7f0c0edfd9eceee17fdf74997f7c705",
+      "source_id": "95c4c91beb41ed42b5a92d1e29ec74bce1e1007d3b2a368d1d3bbf973037f174",
+      "tool_frame": "call-e110eca655c36376c0ba0e3265f457540e9fce075fb68840"
+    },
+    {
+      "bytes": 11053,
+      "media_type": "image/png",
+      "name": "bottom.png",
+      "path": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc/ledger/artifacts/7207d10853fbc61d7f8cb87a00159cbfc1c15b5e20a956faf920078861dc02df",
+      "sha256": "7207d10853fbc61d7f8cb87a00159cbfc1c15b5e20a956faf920078861dc02df",
+      "source_id": "95c4c91beb41ed42b5a92d1e29ec74bce1e1007d3b2a368d1d3bbf973037f174",
+      "tool_frame": "call-e110eca655c36376c0ba0e3265f457540e9fce075fb68840"
+    },
+    {
+      "bytes": 63431,
+      "media_type": "text/html",
+      "name": "index.html",
+      "path": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc/ledger/artifacts/7707ac37f819706aea1c0375d396dd79e8185f8cdd2859cb5030b31a50f09462",
+      "sha256": "7707ac37f819706aea1c0375d396dd79e8185f8cdd2859cb5030b31a50f09462",
+      "source_id": "95c4c91beb41ed42b5a92d1e29ec74bce1e1007d3b2a368d1d3bbf973037f174",
+      "tool_frame": "call-e110eca655c36376c0ba0e3265f457540e9fce075fb68840"
+    },
+    {
+      "bytes": 13824,
+      "media_type": "image/png",
+      "name": "isometric.png",
+      "path": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc/ledger/artifacts/28e751ff65c6bb14b9a5b91bda08e605b5b7308d7c05d7ddf820f1dbca657515",
+      "sha256": "28e751ff65c6bb14b9a5b91bda08e605b5b7308d7c05d7ddf820f1dbca657515",
+      "source_id": "95c4c91beb41ed42b5a92d1e29ec74bce1e1007d3b2a368d1d3bbf973037f174",
+      "tool_frame": "call-e110eca655c36376c0ba0e3265f457540e9fce075fb68840"
+    },
+    {
+      "bytes": 9156,
+      "media_type": "application/json",
+      "name": "render.json",
+      "path": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc/ledger/artifacts/e301a9c09811ba75c0c9784db775c3287514aecdc7b7f26500a659e3422602df",
+      "sha256": "e301a9c09811ba75c0c9784db775c3287514aecdc7b7f26500a659e3422602df",
+      "source_id": "95c4c91beb41ed42b5a92d1e29ec74bce1e1007d3b2a368d1d3bbf973037f174",
+      "tool_frame": "call-e110eca655c36376c0ba0e3265f457540e9fce075fb68840"
+    },
+    {
+      "bytes": 11650,
+      "media_type": "image/png",
+      "name": "side.png",
+      "path": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc/ledger/artifacts/b602fffe88ad174fc6381c76215116503dc2ffabaf34462dd12bbd889ef008ee",
+      "sha256": "b602fffe88ad174fc6381c76215116503dc2ffabaf34462dd12bbd889ef008ee",
+      "source_id": "95c4c91beb41ed42b5a92d1e29ec74bce1e1007d3b2a368d1d3bbf973037f174",
+      "tool_frame": "call-e110eca655c36376c0ba0e3265f457540e9fce075fb68840"
+    },
+    {
+      "bytes": 10521,
+      "media_type": "image/png",
+      "name": "top.png",
+      "path": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc/ledger/artifacts/acee12ffd52955128373316fd9566ca936dc9d3e2e48cd0a78c77248eefa0221",
+      "sha256": "acee12ffd52955128373316fd9566ca936dc9d3e2e48cd0a78c77248eefa0221",
+      "source_id": "95c4c91beb41ed42b5a92d1e29ec74bce1e1007d3b2a368d1d3bbf973037f174",
+      "tool_frame": "call-e110eca655c36376c0ba0e3265f457540e9fce075fb68840"
+    },
+    {
+      "bytes": 30551,
+      "media_type": "image/png",
+      "name": "views.png",
+      "path": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session/turns/turn-1-523eea3c274c7ebc/ledger/artifacts/3474b09a7e7439d2bbae7c692eafc7b508ceb8f012a8b282920bcd37b94623c7",
+      "sha256": "3474b09a7e7439d2bbae7c692eafc7b508ceb8f012a8b282920bcd37b94623c7",
+      "source_id": "95c4c91beb41ed42b5a92d1e29ec74bce1e1007d3b2a368d1d3bbf973037f174",
+      "tool_frame": "call-e110eca655c36376c0ba0e3265f457540e9fce075fb68840"
+    }
+  ],
+  "cad_builds": 2,
+  "geometry": {
+    "artifact_sha256": "96946c71e7627eac6b13fb3e7a7663e2d7f0c0edfd9eceee17fdf74997f7c705",
+    "checks": {
+      "bounds": {
+        "actual": [
+          -50.0,
+          50.0,
+          -30.0,
+          30.0,
+          0.0,
+          4.0
+        ],
+        "expected": [
+          -50.0,
+          50.0,
+          -30.0,
+          30.0,
+          0,
+          4
+        ],
+        "pass": true
+      },
+      "edge_material": {
+        "actual": 9.5,
+        "expected": 8,
+        "pass": true
+      },
+      "hole_diameter": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "hole_pattern": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "locating_notch": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "material_geometry": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "single_solid": {
+        "actual": {
+          "all_topology": {
+            "edges": 36,
+            "faces": 14,
+            "vertices": 24
+          },
+          "solid_topology": {
+            "edges": 36,
+            "faces": 14,
+            "vertices": 24
+          },
+          "solids": 1
+        },
+        "expected": "one solid with no loose geometry",
+        "pass": true
+      },
+      "through_holes": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "valid_shape": {
+        "actual": null,
+        "expected": null,
+        "pass": true
+      },
+      "volume": {
+        "actual": 23445.840734641108,
+        "expected": 23445.84073464102,
+        "pass": true
+      }
+    },
+    "feasibility": {
+      "conflicts": [],
+      "feasible": true,
+      "minimum_length_mm": 57.0,
+      "minimum_width_mm": 97.0
+    },
+    "length_tolerance_mm": 1e-06,
+    "measurements": {
+      "bounds_mm": [
+        -50.0,
+        50.0,
+        -30.0,
+        30.0,
+        0.0,
+        4.0
+      ],
+      "extra_material_mm3": 0.0,
+      "holes": [
+        {
+          "axis_z": 1.0,
+          "diameter": 5.0,
+          "x": -38.0,
+          "y": -18.0,
+          "z_max": 4.0,
+          "z_min": 0.0
+        },
+        {
+          "axis_z": 1.0,
+          "diameter": 5.0,
+          "x": -38.0,
+          "y": 18.0,
+          "z_max": 4.0,
+          "z_min": 0.0
+        },
+        {
+          "axis_z": 1.0,
+          "diameter": 5.0,
+          "x": 38.0,
+          "y": -18.0,
+          "z_max": 4.0,
+          "z_min": 0.0
+        },
+        {
+          "axis_z": 1.0,
+          "diameter": 5.0,
+          "x": 38.0,
+          "y": 18.0,
+          "z_max": 4.0,
+          "z_min": 0.0
+        }
+      ],
+      "minimum_edge_material_mm": 9.5,
+      "missing_material_mm3": 0.0,
+      "topology": {
+        "edges": 36,
+        "faces": 14,
+        "vertices": 24
+      },
+      "volume_mm3": 23445.840734641108
+    },
+    "requirements_id": "fb553d7b054a26fc07b64013fe1afc438088afdec708253c1ade1f443d9e43f8",
+    "schema": 1,
+    "status": "PASS",
+    "volume_tolerance_mm3": 1e-05
+  },
+  "project": "/home/dflanag3/projects/bw-candidate-spatial-dev63-20261020",
+  "session_state": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/spatial-session",
+  "visual_review": {
+    "status": "PASS",
+    "reviewer": "Codex",
+    "scope": "actual views.png: four through holes, positive-X notch, thin connected plate, no visible extra body; actual geometry independently checked"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "methods": 53,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "scope": "Actual CLI subprocess and local authenticated COW HTTP with CPU inference fixture; no Q8/native exactness qualification",
+  "source_revision": "ab41320789d6f2e769629c79d71a72761c7dc605",
+  "assertions": [
+    "Incompatible catalog entry excluded",
+    "No match rejects before state creation",
+    "Exact selected snapshot enters immutable launch",
+    "Existing grammar endpoint used",
+    "Child continues while base remains unchanged"
+  ],
+  "next": "Installed package and real-Q8 successive tasks with automatic base selection; automatic refresh/adoption still incomplete"
+}

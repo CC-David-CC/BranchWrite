@@ -1,0 +1,42 @@
+test_any_offered_compatible_base_can_be_selected (test_base_choice.ChoiceTests.test_any_offered_compatible_base_can_be_selected) ... ok
+test_boolean_and_negative_budget_rejected (test_base_choice.ChoiceTests.test_boolean_and_negative_budget_rejected) ... ok
+test_budget_boundary_and_shortfall (test_base_choice.ChoiceTests.test_budget_boundary_and_shortfall) ... ok
+test_duplicate_catalog_ids_and_empty_catalog_rejected (test_base_choice.ChoiceTests.test_duplicate_catalog_ids_and_empty_catalog_rejected) ... ok
+test_duplicate_json_keys_and_boolean_schema_rejected (test_base_choice.ChoiceTests.test_duplicate_json_keys_and_boolean_schema_rejected) ... ok
+test_invalid_catalog_counts_rejected (test_base_choice.ChoiceTests.test_invalid_catalog_counts_rejected) ... ok
+test_model_cannot_supply_grants_or_replace_host_fields (test_base_choice.ChoiceTests.test_model_cannot_supply_grants_or_replace_host_fields) ... ok
+test_reason_is_bounded_text_data (test_base_choice.ChoiceTests.test_reason_is_bounded_text_data) ... ok
+test_unknown_base_rejected (test_base_choice.ChoiceTests.test_unknown_base_rejected) ... ok
+test_valid_choice_returns_detached_host_reference_and_reason (test_base_choice.ChoiceTests.test_valid_choice_returns_detached_host_reference_and_reason) ... ok
+test_wrong_revision_or_execution_profile_rejected (test_base_choice.ChoiceTests.test_wrong_revision_or_execution_profile_rejected) ... ok
+test_invalid_nested_reason_is_a_value_error (test_deep_input_rejection.DeepInputRejection.test_invalid_nested_reason_is_a_value_error) ... ERROR
+
+======================================================================
+ERROR: test_invalid_nested_reason_is_a_value_error (test_deep_input_rejection.DeepInputRejection.test_invalid_nested_reason_is_a_value_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_deep_input_rejection.py", line 7, in test_invalid_nested_reason_is_a_value_error
+    with self.assertRaises(ValueError):resolve_base_proposal(text,[row],required_revision='a'*40,required_profile='b'*64,reserve_tokens=8192)
+                                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/branchwrite/base_choice.py", line 79, in resolve_base_proposal
+    _finite(proposal)
+    ~~~~~~~^^^^^^^^^^
+  File "/work/branchwrite/base_choice.py", line 29, in _finite
+    for item in value.values():_finite(item)
+                               ~~~~~~~^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  [Previous line repeated 981 more times]
+RecursionError: maximum recursion depth exceeded
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.031s
+
+FAILED (errors=1)

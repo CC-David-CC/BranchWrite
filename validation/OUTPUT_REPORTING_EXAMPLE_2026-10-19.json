@@ -1,0 +1,16 @@
+{
+  "status": "BOUNDED_Q8_L05_REPORTING_MITIGATION_PASS",
+  "mechanism": "actual tempfile/os.replace yields mode0600",
+  "example_sha256": "69037cf61c0666912488be2051a597e458182a151aaa2beb638ae07424e6b2c1",
+  "warning_sha256": "c83765a489877caf33d6106e0ffb8fe3965f51fff7f74051d08f507ce72198d7",
+  "protected_answer_included": false,
+  "model_calls": 12,
+  "output_tokens": 2102,
+  "whole_cli_seconds": 202.54385586606804,
+  "failures": [],
+  "evidence": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/report-l05-q8-example1-v2",
+  "scope": "One trajectory, same fixture; not a generalization claim",
+  "harness_limitations": [
+    "Initial preflight classifier rejected harmless control commands; retained zero-work trace verified after barrier release."
+  ]
+}

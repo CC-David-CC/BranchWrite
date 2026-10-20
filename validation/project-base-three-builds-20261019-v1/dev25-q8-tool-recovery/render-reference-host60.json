@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "renders": [
+    {
+      "viewport": "desktop",
+      "width": 1280,
+      "height": 900,
+      "png_bytes": 102884,
+      "png_sha256": "eb3c6b4b07d4441d02907b7c1adfb5d967c3bb1390dd3ef0054e3bc67b18136c",
+      "browser_version": "155.0.8059.79",
+      "http_status": 200,
+      "runtime_errors": [],
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532970]",
+        "pid_ns": "pid:[4026532960]",
+        "mount_ns": "mnt:[4026532956]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 761011,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.003784711007028818
+      },
+      "scope": "Parent headless render check, not model browser use or visual-design acceptance."
+    },
+    {
+      "viewport": "mobile",
+      "width": 390,
+      "height": 844,
+      "png_bytes": 63288,
+      "png_sha256": "92b499f1e281e485db8f78670c9e12181558f76ab5d36732921d97c2c9b5c976",
+      "browser_version": "155.0.8059.79",
+      "http_status": 200,
+      "runtime_errors": [],
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026533165]",
+        "pid_ns": "pid:[4026533162]",
+        "mount_ns": "mnt:[4026532958]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 761159,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.0036640011239796877
+      },
+      "scope": "Parent headless render check, not model browser use or visual-design acceptance."
+    }
+  ]
+}

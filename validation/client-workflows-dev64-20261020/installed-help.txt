@@ -1,0 +1,39 @@
+usage: branchwrite [-h]
+                   {start,session,talk,connect,chat,check,canonicalize,run,step,doctor,prepare-base,context-status,code,resume,apply,export,review,status,receipt,reconcile}
+                   ...
+
+Inspect .bw syntax or execute a host-authorized workflow.
+
+positional arguments:
+  {start,session,talk,connect,chat,check,canonicalize,run,step,doctor,prepare-base,context-status,code,resume,apply,export,review,status,receipt,reconcile}
+    start               Guide you through one coding task in the current
+                        project folder.
+    session             Keep talking while BranchWrite edits this project.
+    talk                Talk through an idea; use /code when ready to edit the
+                        project.
+    connect             Save COW server settings; the API key is not saved by
+                        default.
+    chat                Use a durable user conversation stored in Context COW.
+    doctor              Check real client file and shell isolation without
+                        inference.
+    prepare-base        Build context from project files and saved COW
+                        branches, or admit an existing verified pack.
+    context-status      Show the last durable project-context step and COW
+                        receipts without inference.
+    code                Start coding in an owned copy with explicit file
+                        grants.
+    resume              Resume a saved coding setup without changing its task
+                        or source.
+    apply               Apply a pinned export into a new owned project copy.
+    export              Export complete reviewed changes into a new archive.
+    review              Inspect recorded file-tool changes without
+                        publication.
+    status              Read recorded run status without execution or
+                        inference.
+    receipt             Inspect an exact locally retained COW generation
+                        receipt without contacting the server.
+    reconcile           Recover proven durable output for one pending model
+                        operation; does not advance the workflow.
+
+options:
+  -h, --help            show this help message and exit

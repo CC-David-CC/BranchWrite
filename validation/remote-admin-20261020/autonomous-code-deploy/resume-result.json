@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "resume same interrupted code/deploy session; initial20min attempt remains TIMEOUT",
+  "pid": 2437129,
+  "seconds": 2.3334075859747827,
+  "client_exit": 0,
+  "new_remote_receipts": [],
+  "new_native_requests": [],
+  "original_receipt_bytes_unchanged": true
+}

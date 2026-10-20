@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "runtime_sources": {
+    "status": "verified",
+    "files": 56,
+    "files_sha256": "b6d7be0904a32bdae7bd28c59ef90c085a6626e0eeffb18b0e985fcebe6ea2eb",
+    "declared_source_commit": "895251441266dda1dd4d6437d98fda7251027b68"
+  },
+  "execution_profile_id": "7ed02ba4f2e842b82c798b9194a8a7b489c6e86c85de9f41a0770a40f9d79e36",
+  "previous_execution_profile_id": "2e0a61f08d0dca09751c7eee3dd0947b2431b5f73010e268b7608eefdae4ae47",
+  "changed_files": [
+    "serve/cow_workspace.py"
+  ],
+  "numerical_oracle": "NOT_RUN"
+}

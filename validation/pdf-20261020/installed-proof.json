@@ -1,0 +1,88 @@
+{
+  "status": "INSTALLED_WHEEL_CPU_PASS",
+  "python": "/home/dflanag3/spatial-artifacts/bw-pdf-20261020/venv/bin/python",
+  "packages": {
+    "branchwrite": "0.1.0.dev59",
+    "reportlab": "5.0.1",
+    "pypdfium2": "5.14.0",
+    "pypdf": "6.21.1"
+  },
+  "runtime_id": "ce1bd749a0958bd331e035c9d7406d96c6705b4ae1212310074ee3fa1bfd6098",
+  "pdf_sha256": "1bfe94aa386db9bdbbad2c521eea6b0f9815f91e715d8257f64d21ab118b765b",
+  "pdf_bytes": 2065,
+  "build_seconds": 0.18246064498089254,
+  "build_isolation": {
+    "kind": "bubblewrap-cad-v1",
+    "pid_ns": "pid:[4026532782]",
+    "net_ns": "net:[4026532785]",
+    "mount_ns": "mnt:[4026532778]",
+    "worker_exited": true,
+    "launcher_pid": 2463233,
+    "namespace_members_after": []
+  },
+  "pages": [
+    {
+      "schema": 1,
+      "status": "PASS",
+      "error": null,
+      "page_count": 2,
+      "page": 1,
+      "text": "BranchWrite Report\r\nA measured result, not a claimed result.",
+      "pdf_sha256": "1bfe94aa386db9bdbbad2c521eea6b0f9815f91e715d8257f64d21ab118b765b",
+      "size_points": [
+        612.0,
+        792.0
+      ],
+      "size_pixels": [
+        1224,
+        1584
+      ],
+      "render_profile": "bw.pdfium-page-rgb-v1",
+      "forms": "not initialized; no JavaScript execution",
+      "runtime_id": "ce1bd749a0958bd331e035c9d7406d96c6705b4ae1212310074ee3fa1bfd6098",
+      "isolation": {
+        "kind": "bubblewrap-cad-v1",
+        "pid_ns": "pid:[4026532782]",
+        "net_ns": "net:[4026532785]",
+        "mount_ns": "mnt:[4026532778]",
+        "worker_exited": true,
+        "launcher_pid": 2463237,
+        "namespace_members_after": []
+      },
+      "elapsed_seconds": 0.33801789907738566,
+      "stderr": ""
+    },
+    {
+      "schema": 1,
+      "status": "PASS",
+      "error": null,
+      "page_count": 2,
+      "page": 2,
+      "text": "Measurements\r\nPrefix reused. Files checked. Pages reviewed.",
+      "pdf_sha256": "1bfe94aa386db9bdbbad2c521eea6b0f9815f91e715d8257f64d21ab118b765b",
+      "size_points": [
+        612.0,
+        792.0
+      ],
+      "size_pixels": [
+        1224,
+        1584
+      ],
+      "render_profile": "bw.pdfium-page-rgb-v1",
+      "forms": "not initialized; no JavaScript execution",
+      "runtime_id": "ce1bd749a0958bd331e035c9d7406d96c6705b4ae1212310074ee3fa1bfd6098",
+      "isolation": {
+        "kind": "bubblewrap-cad-v1",
+        "pid_ns": "pid:[4026532782]",
+        "net_ns": "net:[4026532785]",
+        "mount_ns": "mnt:[4026532778]",
+        "worker_exited": true,
+        "launcher_pid": 2463240,
+        "namespace_members_after": []
+      },
+      "elapsed_seconds": 0.34291649400256574,
+      "stderr": ""
+    }
+  ],
+  "model_inference": false
+}

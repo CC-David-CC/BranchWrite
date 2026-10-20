@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "installed_package": "/home/dflanag3/spatial-artifacts/branchwrite-dev20-package-20261019-v1/venv/lib/python3.14/site-packages/branchwrite",
+  "module_count": 44,
+  "all_wheel_module_bytes_match": true,
+  "source_not_on_import_path": true,
+  "tests": [
+    {
+      "test": "test_base_choice_launch.py",
+      "exit_code": 0
+    },
+    {
+      "test": "test_base_choice.py",
+      "exit_code": 0
+    },
+    {
+      "test": "test_coding_launcher.py",
+      "exit_code": 0
+    },
+    {
+      "test": "test_coding_sampler_choice.py",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Installed admission/persistence tests; no new GPU qualification"
+}

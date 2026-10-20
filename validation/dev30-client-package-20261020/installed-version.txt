@@ -1,0 +1,10 @@
+Name: branchwrite
+Version: 0.1.0.dev30
+Summary: Private experimental coding client for Context COW
+Home-page: 
+Author: 
+Author-email: 
+License: 
+Location: /home/dflanag3/spatial-artifacts/branchwrite-dev30-package-20261020-v1/installed-check/venv/lib/python3.14/site-packages
+Requires: 
+Required-by: 

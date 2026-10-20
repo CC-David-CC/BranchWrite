@@ -1,0 +1,7 @@
+# Controlled Blender views, dev58
+
+Two actual renderer failures reproduced first: the middle-frame camera cropped a moving cube at other frames, and a world-less scene failed derived lighting setup. The new v2 profile fits evaluated mesh bounds over all 24 rendered frames, accounts for camera-space aspect ratio, uses explicit horizontal sensor fit and scaled clipping, and creates a studio world if needed. The authored .blend remains unchanged. Independent camera-space containment assertions use recorded matrices and separate trigonometry.
+
+Seven real Blender/MCP tests passed, no failures or skips, using the dedicated MCP interpreter. Seven CLI/completion-context tests passed. The initial combined attempt used the wrong CAD interpreter and hit a missing MCP import; retained separately, with the unchanged suite rerun correctly. An earlier red run also discovered two existing tests through an imported TestCase alias; the new module imports fixture constants directly now, without editing existing tests.
+
+This is bounded CPU tool evidence, no Q4 or cumulative-gate claim for dev58. The live model-authored Blender dev57 task retains its original installation and render profile. Broader 471-case integration rerun remains required before promoting this version. User reprioritized document production before further CAD/Blender ladder trials; queued carrier is held, original Blender client is left to settle.

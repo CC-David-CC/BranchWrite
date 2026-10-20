@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "CPU canonical-intent derivation and real ledger/Git restart/publication recovery; not installed live first-thought steering",
+  "new_tests": 9,
+  "combined_tests": 363,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "source_unchanged": true,
+  "code_sha256": {
+    "branchwrite/interactive_session.py": "8629a29c2e458d302ef6eb9cc9e94c345d46c16b09dc911bd572e961a4b471f3",
+    "branchwrite/run_report.py": "a14d1706bb88ebad2574cdaba73527a48436de57b237b69e9a5c80e9798db39d",
+    "branchwrite/session_controls.py": "19a2020ca9d88bf0c53238d84adfa024d614405797d96dcc01a0190aafaa24d3"
+  },
+  "limits": [
+    "Client model-request pause watcher not wired; installeddev42 unchanged.",
+    "New server HTTP consumed pause remains CPU-qualified, no live GPU pause evidence.",
+    "Existing context/source records remain immutable; new combined task is derived from prior canonical user intents."
+  ]
+}

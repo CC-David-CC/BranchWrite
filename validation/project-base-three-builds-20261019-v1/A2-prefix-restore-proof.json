@@ -1,0 +1,40 @@
+{
+  "scope": "Native stats after A checkpoint load before new forward work; not full-logit oracle comparison",
+  "observations": [
+    {
+      "consumed": 147997,
+      "forward_tokens": 0,
+      "prefill_tokens": 0,
+      "loaded_file_bytes": 3983232620,
+      "integrity_mismatches": 0
+    },
+    {
+      "consumed": 147997,
+      "forward_tokens": 0,
+      "prefill_tokens": 0,
+      "loaded_file_bytes": 3983232620,
+      "integrity_mismatches": 0
+    },
+    {
+      "consumed": 147997,
+      "forward_tokens": 0,
+      "prefill_tokens": 0,
+      "loaded_file_bytes": 3983232620,
+      "integrity_mismatches": 0
+    },
+    {
+      "consumed": 147997,
+      "forward_tokens": 0,
+      "prefill_tokens": 0,
+      "loaded_file_bytes": 3983232620,
+      "integrity_mismatches": 0
+    },
+    {
+      "consumed": 147997,
+      "forward_tokens": 0,
+      "prefill_tokens": 0,
+      "loaded_file_bytes": 3983232620,
+      "integrity_mismatches": 0
+    }
+  ]
+}

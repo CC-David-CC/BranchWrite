@@ -1,0 +1,53 @@
+{
+  "branchwrite": {
+    "branch": "feat/explicit-model-reconciliation-20261019",
+    "commit": "c4499c76e81264e5dc83d7a351cfe74d30c8c14d",
+    "host": "llm-49"
+  },
+  "context_cow": {
+    "branch": "feat/canonical-history-counts-20261019",
+    "commit": "895251441266dda1dd4d6437d98fda7251027b68",
+    "host": "llm-60"
+  },
+  "limitations": [
+    "Deterministic CPU fake model backend only; no Q4/Q8 inference, GPU, or model-quality claim.",
+    "The first recovered code invocation stubs run_saved while COW HTTP is offline; a later actual resume command runs against a restarted HTTP server and a one-step budget.",
+    "The local COW coordinator/store and fake native backend remain in process; this does not prove full server/native process restart or long autonomous task continuation.",
+    "The orphan status is a recovery candidate; resume verifies snapshot file hashes and request compatibility before using it.",
+    "This is not complete crash/pressure certification or a full standalone coding-agent release."
+  ],
+  "result": "CLIENT_CONTEXT_RECEIPT_RECOVERY_PASS",
+  "schema": 1,
+  "scope": "BranchWrite client-side project context receipt and user-visible recovery status",
+  "tests": [
+    {
+      "command": "cd /home/dflanag3/src/branchwrite-model-reconciliation-20261019 && PYTHONPATH=tests:. PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest test_project_context_receipt test_base_project_prepare test_base_catalog_publication test_coding_launcher test_coding_pack_launch test_coding_pack_refresh_admission test_context_pack -v",
+      "failed": 0,
+      "host": "llm-49",
+      "log": "branchwrite-cpu.log",
+      "passed": 71,
+      "skipped": 0,
+      "suite": "BranchWrite project-context receipt and prepare"
+    },
+    {
+      "command": "PYTHONPATH=/tmp/bw-client-receipt-campaign:/home/dflanag3/src/context-cow-history-counts-20261019:/home/dflanag3/src/context-cow-history-counts-20261019/experimental/branching_context/src:/home/dflanag3/src/context-cow-history-counts-20261019/experimental/branching_context/tests/implementation:/home/dflanag3/spatial-artifacts/grammar-first-20261016-v1/deps PYTHONDONTWRITEBYTECODE=1 /home/dflanag3/src/Strata/.venv/bin/python -B -m unittest test_base_choice_http test_project_context_real_cow_restart -v",
+      "failed": 0,
+      "host": "llm-60",
+      "log": "cow-http-cpu.log",
+      "passed": 8,
+      "skipped": 0,
+      "suite": "local CPU Context COW HTTP integration plus receipt recovery"
+    }
+  ],
+  "verified": [
+    "Actual local Context COW HTTP server and canonical Store supplied a completed saved branch history to the BranchWrite code CLI.",
+    "Child client exited with code 78 after the frozen source snapshot directory was renamed and durably synced, immediately before publishing the outer source receipt.",
+    "context-status reported SOURCE_SNAPSHOT_RECOVERY_CANDIDATE and displayed a human instruction to rerun the original code command with the same state and source selections.",
+    "The COW HTTP server was stopped before the recovery process. Recovery succeeded offline from the embedded receipt and frozen snapshot.",
+    "After project README changed, recovered pack retained the pre-crash bytes and saved COW branch history.",
+    "Recovered coding launch bound the exact source-receipt SHA-256; context-status reported PACK_DURABLE and the frozen source branch tip.",
+    "Source COW branch head was unchanged before server shutdown.",
+    "After offline receipt recovery, the local COW HTTP server was recreated against the same CPU coordinator/store and the actual branchwrite resume STATE --max-steps 1 command ran.",
+    "The resumed client created the worker branch, left the saved source branch unchanged, and branchwrite status STATE --json read the workflow ledger."
+  ]
+}

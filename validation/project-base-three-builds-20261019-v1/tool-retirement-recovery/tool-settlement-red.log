@@ -1,0 +1,65 @@
+test_altered_retirement_proof_is_rejected (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_altered_retirement_proof_is_rejected) ... FAIL
+test_changed_registry_cannot_settle_prior_effect (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_changed_registry_cannot_settle_prior_effect) ... FAIL
+test_completed_replay_has_no_new_event (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_completed_replay_has_no_new_event) ... FAIL
+test_effect_without_durable_return_is_not_recovered_by_file_contents (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_effect_without_durable_return_is_not_recovered_by_file_contents) ... ok
+test_known_preflight_rejection_also_has_explicit_settlement (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_known_preflight_rejection_also_has_explicit_settlement) ... FAIL
+test_recorded_retired_result_resumes_without_reexecution (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_recorded_retired_result_resumes_without_reexecution) ... FAIL
+test_unproven_settling_result_stays_unresolved (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_unproven_settling_result_stays_unresolved) ... ok
+
+======================================================================
+FAIL: test_altered_retirement_proof_is_rejected (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_altered_retirement_proof_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 69, in test_altered_retirement_proof_is_rejected
+    self.interrupted();frame=self.kernel.frame('tool');payload=decode(self.log.read_artifact(Artifact(*frame['result'])))
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 27, in interrupted
+    with self.assertRaises(EffectIndeterminate):dispatch_tool(self.kernel,self.registry,'tool')
+AssertionError: EffectIndeterminate not raised
+
+======================================================================
+FAIL: test_changed_registry_cannot_settle_prior_effect (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_changed_registry_cannot_settle_prior_effect)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 63, in test_changed_registry_cannot_settle_prior_effect
+    self.interrupted();self.reopen()
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 27, in interrupted
+    with self.assertRaises(EffectIndeterminate):dispatch_tool(self.kernel,self.registry,'tool')
+AssertionError: EffectIndeterminate not raised
+
+======================================================================
+FAIL: test_completed_replay_has_no_new_event (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_completed_replay_has_no_new_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 41, in test_completed_replay_has_no_new_event
+    self.interrupted();self.reopen();value=dispatch_tool(self.kernel,self.registry,'tool');before=self.log.event_count
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 27, in interrupted
+    with self.assertRaises(EffectIndeterminate):dispatch_tool(self.kernel,self.registry,'tool')
+AssertionError: EffectIndeterminate not raised
+
+======================================================================
+FAIL: test_known_preflight_rejection_also_has_explicit_settlement (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_known_preflight_rejection_also_has_explicit_settlement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 61, in test_known_preflight_rejection_also_has_explicit_settlement
+    self.assertIsNotNone(frame['settlement_receipt']);self.assertTrue(frame['result_settled'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_recorded_retired_result_resumes_without_reexecution (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_recorded_retired_result_resumes_without_reexecution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 33, in test_recorded_retired_result_resumes_without_reexecution
+    self.interrupted();self.reopen()
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_recovery.py", line 27, in interrupted
+    with self.assertRaises(EffectIndeterminate):dispatch_tool(self.kernel,self.registry,'tool')
+AssertionError: EffectIndeterminate not raised
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.071s
+
+FAILED (failures=5)

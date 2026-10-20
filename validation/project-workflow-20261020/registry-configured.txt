@@ -1,0 +1,60 @@
+E.......F.....E..................
+======================================================================
+ERROR: test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict (tests.test_tool_registry.ToolRegistryTests.test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/execution.py", line 609, in _capture_page
+    rendered = render_snapshot(payload, browser,assets=assets,document_path=relative)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/browser_capture.py", line 168, in render_snapshot
+    return render_isolated(payload, config, assets=assets, document_path=document_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/browser_isolation.py", line 118, in render_isolated
+    raise ValueError('isolated browser failed: ' + reason)
+ValueError: isolated browser failed: ModuleNotFoundError: No module named 'playwright'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/tool_registry.py", line 472, in execute
+    if tool=='interact_page' else self.executor.capture_page(operation_id,self._grant,args['path'],args['source_sha256'],**viewport_options))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/execution.py", line 565, in capture_page
+    return self._capture_page(operation_id, grant, path, expected_sha256,viewport=viewport)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/execution.py", line 611, in _capture_page
+    raise ToolRejected("browser capture failed: " + str(exc)[:512]) from exc
+branchwrite.execution.ToolRejected: browser capture failed: isolated browser failed: ModuleNotFoundError: No module named 'playwright'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_tool_registry.py", line 138, in test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict
+    result=registry.execute(plan,'capture-html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/tool_registry.py", line 508, in execute
+    except Exception as exc:raise EffectIndeterminate(operation_id,plan.sha256) from exc
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.tool_registry.EffectIndeterminate: tool outcome is unresolved; reconcile the original operation instead of resending
+
+======================================================================
+ERROR: test_schema_compiles_in_existing_cow_json_grammar_and_rejects_illegal_tool (tests.test_tool_registry.ToolRegistryTests.test_schema_compiles_in_existing_cow_json_grammar_and_rejects_illegal_tool)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_tool_registry.py", line 151, in test_schema_compiles_in_existing_cow_json_grammar_and_rejects_illegal_tool
+    from test_grammar_first import TinyByteTokenizer
+ModuleNotFoundError: No module named 'test_grammar_first'
+
+======================================================================
+FAIL: test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass (tests.test_tool_registry.ToolRegistryTests.test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_tool_registry.py", line 102, in test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass
+    self.assertEqual(result.exit_code,1);self.assertIn(b'Start directory is not importable',result.stderr)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'Start directory is not importable' not found in b'\n----------------------------------------------------------------------\nRan 0 tests in 0.000s\n\nNO TESTS RAN\nNo test cases found; an empty suite is not a successful verification.\n'
+
+----------------------------------------------------------------------
+Ran 33 tests in 2.143s
+
+FAILED (failures=1, errors=2)

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "required_command": "python3 -m unittest discover -s tests -p test_command_summary.py -v",
+  "shell_commands": [
+    {
+      "command": "python3 -m unittest discover -s tests -p test_command_summary.py -v",
+      "exit_code": 0
+    }
+  ],
+  "stale_command_count": 0
+}

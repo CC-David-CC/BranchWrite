@@ -1,0 +1,9 @@
+test_catalogue_queries_and_positioned_component (test_cad_warehouse.WarehouseEnvironmentTests.test_catalogue_queries_and_positioned_component) ... ok
+test_initial_environment_has_pinned_companion (test_cad_warehouse.WarehouseEnvironmentTests.test_initial_environment_has_pinned_companion) ... ok
+test_matching_clearance_hole_changes_actual_solid (test_cad_warehouse.WarehouseEnvironmentTests.test_matching_clearance_hole_changes_actual_solid) ... ok
+test_user_m4_socket_head_example_exports_reopenable_solid (test_cad_warehouse.WarehouseEnvironmentTests.test_user_m4_socket_head_example_exports_reopenable_solid) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.546s
+
+OK

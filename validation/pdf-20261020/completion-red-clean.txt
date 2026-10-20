@@ -1,0 +1,101 @@
+test_canonical_receipt_and_page_artifact_cannot_be_forged (test_pdf_completion.PdfCompletionTests.test_canonical_receipt_and_page_artifact_cannot_be_forged) ... FAIL
+test_cli_export_contains_pdf_and_actual_page_images (test_pdf_completion.PdfCompletionTests.test_cli_export_contains_pdf_and_actual_page_images) ... ERROR
+test_edit_after_build_invalidates_document_even_with_new_file_check (test_pdf_completion.PdfCompletionTests.test_edit_after_build_invalidates_document_even_with_new_file_check) ... FAIL
+test_every_current_page_and_a_current_named_check_can_pass (test_pdf_completion.PdfCompletionTests.test_every_current_page_and_a_current_named_check_can_pass) ... ERROR
+test_invalid_selected_page_is_an_explicit_tool_failure (test_pdf_completion.PdfCompletionTests.test_invalid_selected_page_is_an_explicit_tool_failure) ... ERROR
+test_latest_failed_build_cannot_accept_previous_preserved_pdf (test_pdf_completion.PdfCompletionTests.test_latest_failed_build_cannot_accept_previous_preserved_pdf) ... FAIL
+test_passing_file_check_cannot_hide_an_unrendered_page (test_pdf_completion.PdfCompletionTests.test_passing_file_check_cannot_hide_an_unrendered_page) ... FAIL
+test_readonly_policy_rejects_pdf_execution_capability (test_pdf_completion.PdfCompletionTests.test_readonly_policy_rejects_pdf_execution_capability) ... ok
+test_rebuild_cannot_reuse_page_receipts_from_old_pdf (test_pdf_completion.PdfCompletionTests.test_rebuild_cannot_reuse_page_receipts_from_old_pdf) ... FAIL
+test_reopened_ledger_revalidates_same_actual_page_evidence (test_pdf_completion.PdfCompletionTests.test_reopened_ledger_revalidates_same_actual_page_evidence) ... ok
+
+======================================================================
+ERROR: test_cli_export_contains_pdf_and_actual_page_images (test_pdf_completion.PdfCompletionTests.test_cli_export_contains_pdf_and_actual_page_images)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 83, in test_cli_export_contains_pdf_and_actual_page_images
+    from branchwrite.run_cli import _artifact_exports
+ImportError: cannot import name '_artifact_exports' from 'branchwrite.run_cli' (/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/run_cli.py)
+
+======================================================================
+ERROR: test_every_current_page_and_a_current_named_check_can_pass (test_pdf_completion.PdfCompletionTests.test_every_current_page_and_a_current_named_check_can_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 50, in test_every_current_page_and_a_current_named_check_can_pass
+    self.assertEqual(self.verdict()['pdf_documents'][0]['rendered_pages'],[1,2])
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'pdf_documents'
+
+======================================================================
+ERROR: test_invalid_selected_page_is_an_explicit_tool_failure (test_pdf_completion.PdfCompletionTests.test_invalid_selected_page_is_an_explicit_tool_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 539, in execute
+    return execute_pdf(self,plan,operation_id,args,inventory,tool)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_tools.py", line 40, in execute_pdf
+    view=inspect_document(raw,page,cap.runtime)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_execution.py", line 89, in inspect_document
+    if result.get('page_count') is not None and page>result['page_count']:raise ValueError('PDF page is outside the document')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: PDF page is outside the document
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 79, in test_invalid_selected_page_is_an_explicit_tool_failure
+    outcome=self.registry.execute(plan,'pdf-outside')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 601, in execute
+    except Exception as exc:raise EffectIndeterminate(operation_id,plan.sha256) from exc
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.tool_registry.EffectIndeterminate: tool outcome is unresolved; reconcile the original operation instead of resending
+
+======================================================================
+FAIL: test_canonical_receipt_and_page_artifact_cannot_be_forged (test_pdf_completion.PdfCompletionTests.test_canonical_receipt_and_page_artifact_cannot_be_forged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 62, in test_canonical_receipt_and_page_artifact_cannot_be_forged
+    self.assertEqual(self.verdict(forged)['status'],'fail')
+AssertionError: 'pass' != 'fail'
+- pass
++ fail
+
+
+======================================================================
+FAIL: test_edit_after_build_invalidates_document_even_with_new_file_check (test_pdf_completion.PdfCompletionTests.test_edit_after_build_invalidates_document_even_with_new_file_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 52, in test_edit_after_build_invalidates_document_even_with_new_file_check
+    self.assertFalse(self.execute([self.build(),self.page(2),self.check()],mutate_after=(1,SOURCE+b'\n# changed construction\n')))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_latest_failed_build_cannot_accept_previous_preserved_pdf (test_pdf_completion.PdfCompletionTests.test_latest_failed_build_cannot_accept_previous_preserved_pdf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 70, in test_latest_failed_build_cannot_accept_previous_preserved_pdf
+    self.assertFalse(self.execute([self.build(),self.page(2),self.build(),self.check()],mutate_after=(2,b'raise RuntimeError("broken revision")')))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_passing_file_check_cannot_hide_an_unrendered_page (test_pdf_completion.PdfCompletionTests.test_passing_file_check_cannot_hide_an_unrendered_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 46, in test_passing_file_check_cannot_hide_an_unrendered_page
+    self.assertFalse(self.execute([self.build(),self.check()]))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_rebuild_cannot_reuse_page_receipts_from_old_pdf (test_pdf_completion.PdfCompletionTests.test_rebuild_cannot_reuse_page_receipts_from_old_pdf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 55, in test_rebuild_cannot_reuse_page_receipts_from_old_pdf
+    self.assertFalse(self.execute([self.build(),self.page(2),self.build(),self.check()],mutate_after=(2,new)))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 10 tests in 11.598s
+
+FAILED (failures=5, errors=3)

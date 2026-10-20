@@ -1,0 +1,348 @@
+test_active_writer_is_reported_without_ledger_read (test_coding_status.CodingStatusTests.test_active_writer_is_reported_without_ledger_read) ... ERROR
+test_closed_result_is_recorded_not_claimed_reverified (test_coding_status.CodingStatusTests.test_closed_result_is_recorded_not_claimed_reverified) ... ERROR
+test_corrupt_log_is_not_repaired (test_coding_status.CodingStatusTests.test_corrupt_log_is_not_repaired) ... ERROR
+test_human_output_labels_verification_scope (test_coding_status.CodingStatusTests.test_human_output_labels_verification_scope) ... ERROR
+test_incomplete_run_does_not_claim_success (test_coding_status.CodingStatusTests.test_incomplete_run_does_not_claim_success) ... ERROR
+test_missing_state_is_not_created (test_coding_status.CodingStatusTests.test_missing_state_is_not_created) ... ERROR
+test_unsettled_operation_is_visible (test_coding_status.CodingStatusTests.test_unsettled_operation_is_visible) ... ERROR
+
+======================================================================
+ERROR: test_active_writer_is_reported_without_ledger_read (test_coding_status.CodingStatusTests.test_active_writer_is_reported_without_ledger_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2287, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'status' (choose from check, canonicalize, run, step, code, resume)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 47, in test_active_writer_is_reported_without_ledger_read
+    code,out,err=self.invoke('--json');self.assertEqual(code,2);self.assertIn('busy',err.lower())
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 23, in invoke
+    code=main(['status',str(self.state),*extra])
+  File "/home/dflanag3/src/branchwrite-review-20261019/branchwrite/__main__.py", line 62, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+======================================================================
+ERROR: test_closed_result_is_recorded_not_claimed_reverified (test_coding_status.CodingStatusTests.test_closed_result_is_recorded_not_claimed_reverified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2287, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'status' (choose from check, canonicalize, run, step, code, resume)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 26, in test_closed_result_is_recorded_not_claimed_reverified
+    self.make(True);before=self.snapshot();code,out,err=self.invoke('--json')
+                                                        ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 23, in invoke
+    code=main(['status',str(self.state),*extra])
+  File "/home/dflanag3/src/branchwrite-review-20261019/branchwrite/__main__.py", line 62, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+======================================================================
+ERROR: test_corrupt_log_is_not_repaired (test_coding_status.CodingStatusTests.test_corrupt_log_is_not_repaired)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2287, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'status' (choose from check, canonicalize, run, step, code, resume)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 51, in test_corrupt_log_is_not_repaired
+    before=self.snapshot();code,out,err=self.invoke('--json');self.assertEqual(code,2)
+                                        ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 23, in invoke
+    code=main(['status',str(self.state),*extra])
+  File "/home/dflanag3/src/branchwrite-review-20261019/branchwrite/__main__.py", line 62, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+======================================================================
+ERROR: test_human_output_labels_verification_scope (test_coding_status.CodingStatusTests.test_human_output_labels_verification_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2310, in _parse_known_args
+    stop_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'status' (choose from check, canonicalize, run, step, code, resume)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 54, in test_human_output_labels_verification_scope
+    self.make(True);code,out,err=self.invoke()
+                                 ~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 23, in invoke
+    code=main(['status',str(self.state),*extra])
+  File "/home/dflanag3/src/branchwrite-review-20261019/branchwrite/__main__.py", line 62, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+======================================================================
+ERROR: test_incomplete_run_does_not_claim_success (test_coding_status.CodingStatusTests.test_incomplete_run_does_not_claim_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2287, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'status' (choose from check, canonicalize, run, step, code, resume)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 32, in test_incomplete_run_does_not_claim_success
+    self.make();code,out,err=self.invoke('--json');self.assertEqual(code,0,err)
+                             ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 23, in invoke
+    code=main(['status',str(self.state),*extra])
+  File "/home/dflanag3/src/branchwrite-review-20261019/branchwrite/__main__.py", line 62, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+======================================================================
+ERROR: test_missing_state_is_not_created (test_coding_status.CodingStatusTests.test_missing_state_is_not_created)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2287, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'status' (choose from check, canonicalize, run, step, code, resume)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 43, in test_missing_state_is_not_created
+    code,out,err=self.invoke('--json');self.assertEqual(code,2);self.assertFalse(self.state.exists())
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 23, in invoke
+    code=main(['status',str(self.state),*extra])
+  File "/home/dflanag3/src/branchwrite-review-20261019/branchwrite/__main__.py", line 62, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+======================================================================
+ERROR: test_unsettled_operation_is_visible (test_coding_status.CodingStatusTests.test_unsettled_operation_is_visible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/argparse.py", line 2055, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2287, in _parse_known_args
+    positionals_end_index = consume_positionals(start_index)
+  File "/usr/lib/python3.14/argparse.py", line 2262, in consume_positionals
+    take_action(action, args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2116, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "/usr/lib/python3.14/argparse.py", line 2642, in _get_values
+    self._check_value(action, value[0])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2708, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'status' (choose from check, canonicalize, run, step, code, resume)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 40, in test_unsettled_operation_is_visible
+    code,out,err=self.invoke('--json');self.assertEqual(code,0,err)
+                 ~~~~~~~~~~~^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-review-20261019/tests/test_coding_status.py", line 23, in invoke
+    code=main(['status',str(self.state),*extra])
+  File "/home/dflanag3/src/branchwrite-review-20261019/branchwrite/__main__.py", line 62, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2016, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2026, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2057, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.030s
+
+FAILED (errors=7)

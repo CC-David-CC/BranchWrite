@@ -1,0 +1,50 @@
+test_foreign_endpoint_version_rejected_before_transport (test_project_base_questions.ProjectBaseQuestionTests.test_foreign_endpoint_version_rejected_before_transport) ... ERROR
+test_invalid_question_rejected_before_fork (test_project_base_questions.ProjectBaseQuestionTests.test_invalid_question_rejected_before_fork) ... ERROR
+test_public_name_is_one_implementation_and_questions_leave_base_unchanged (test_project_base_questions.ProjectBaseQuestionTests.test_public_name_is_one_implementation_and_questions_leave_base_unchanged) ... ERROR
+test_question_on_summary_version_uses_append_without_editing_reference (test_project_base_questions.ProjectBaseQuestionTests.test_question_on_summary_version_uses_append_without_editing_reference) ... ERROR
+test_retry_retains_original_ids_and_does_not_generate_again (test_project_base_questions.ProjectBaseQuestionTests.test_retry_retains_original_ids_and_does_not_generate_again) ... ERROR
+
+======================================================================
+ERROR: test_foreign_endpoint_version_rejected_before_transport (test_project_base_questions.ProjectBaseQuestionTests.test_foreign_endpoint_version_rejected_before_transport)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 9, in setUp
+    from branchwrite.golden_path import ProjectBase
+ImportError: cannot import name 'ProjectBase' from 'branchwrite.golden_path' (/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/golden_path.py)
+
+======================================================================
+ERROR: test_invalid_question_rejected_before_fork (test_project_base_questions.ProjectBaseQuestionTests.test_invalid_question_rejected_before_fork)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 9, in setUp
+    from branchwrite.golden_path import ProjectBase
+ImportError: cannot import name 'ProjectBase' from 'branchwrite.golden_path' (/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/golden_path.py)
+
+======================================================================
+ERROR: test_public_name_is_one_implementation_and_questions_leave_base_unchanged (test_project_base_questions.ProjectBaseQuestionTests.test_public_name_is_one_implementation_and_questions_leave_base_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 9, in setUp
+    from branchwrite.golden_path import ProjectBase
+ImportError: cannot import name 'ProjectBase' from 'branchwrite.golden_path' (/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/golden_path.py)
+
+======================================================================
+ERROR: test_question_on_summary_version_uses_append_without_editing_reference (test_project_base_questions.ProjectBaseQuestionTests.test_question_on_summary_version_uses_append_without_editing_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 9, in setUp
+    from branchwrite.golden_path import ProjectBase
+ImportError: cannot import name 'ProjectBase' from 'branchwrite.golden_path' (/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/golden_path.py)
+
+======================================================================
+ERROR: test_retry_retains_original_ids_and_does_not_generate_again (test_project_base_questions.ProjectBaseQuestionTests.test_retry_retains_original_ids_and_does_not_generate_again)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_questions.py", line 9, in setUp
+    from branchwrite.golden_path import ProjectBase
+ImportError: cannot import name 'ProjectBase' from 'branchwrite.golden_path' (/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/golden_path.py)
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.038s
+
+FAILED (errors=5)

@@ -1,0 +1,46 @@
+test_cli_cannot_reconcile_a_tool_effect (test_coding_reconciliation.CodingReconciliationTests.test_cli_cannot_reconcile_a_tool_effect) ... ok
+test_cli_refuses_live_workflow_writer (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_live_workflow_writer) ... FAIL
+test_cli_refuses_operation_not_owned_by_pending_model_frame (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_operation_not_owned_by_pending_model_frame) ... ok
+test_cli_restores_output_then_existing_step_resumes_without_new_work (test_coding_reconciliation.CodingReconciliationTests.test_cli_restores_output_then_existing_step_resumes_without_new_work) ... FAIL
+test_failed_uncommitted_model_operation_stays_unresolved (test_coding_reconciliation.CodingReconciliationTests.test_failed_uncommitted_model_operation_stays_unresolved) ... FAIL
+test_self_consistent_changed_launch_rejected_before_network (test_coding_reconciliation.CodingReconciliationTests.test_self_consistent_changed_launch_rejected_before_network) ... ok
+
+======================================================================
+FAIL: test_cli_refuses_live_workflow_writer (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_live_workflow_writer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 70, in test_cli_refuses_live_workflow_writer
+    self.assertEqual(r.returncode,2);self.assertIn('busy',r.stderr.lower());self.assertEqual(self.hashes(),before)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'busy' not found in "usage: branchwrite [-h]\n                   {check,canonicalize,run,step,code,resume,apply,export,review,status}\n                   ...\nbranchwrite: error: argument command: invalid choice: 'reconcile' (choose from 'check', 'canonicalize', 'run', 'step', 'code', 'resume', 'apply', 'export', 'review', 'status')\n"
+
+======================================================================
+FAIL: test_cli_restores_output_then_existing_step_resumes_without_new_work (test_coding_reconciliation.CodingReconciliationTests.test_cli_restores_output_then_existing_step_resumes_without_new_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 57, in test_cli_restores_output_then_existing_step_resumes_without_new_work
+    self.assertEqual(r.returncode,0,r.stderr);value=json.loads(r.stdout)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : usage: branchwrite [-h]
+                   {check,canonicalize,run,step,code,resume,apply,export,review,status}
+                   ...
+branchwrite: error: argument command: invalid choice: 'reconcile' (choose from 'check', 'canonicalize', 'run', 'step', 'code', 'resume', 'apply', 'export', 'review', 'status')
+
+
+======================================================================
+FAIL: test_failed_uncommitted_model_operation_stays_unresolved (test_coding_reconciliation.CodingReconciliationTests.test_failed_uncommitted_model_operation_stays_unresolved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 83, in test_failed_uncommitted_model_operation_stays_unresolved
+    self.assertEqual(r.returncode,4,r.stderr);self.assertEqual(self.hashes(),before);self.assertEqual(self.case.trace,trace)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 4 : usage: branchwrite [-h]
+                   {check,canonicalize,run,step,code,resume,apply,export,review,status}
+                   ...
+branchwrite: error: argument command: invalid choice: 'reconcile' (choose from 'check', 'canonicalize', 'run', 'step', 'code', 'resume', 'apply', 'export', 'review', 'status')
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.272s
+
+FAILED (failures=3)

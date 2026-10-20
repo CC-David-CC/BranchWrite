@@ -1,0 +1,34 @@
+{
+  "scope": "actual pinned Q8 tokenizer, serving renderer and literal protection; CPU metadata only, no native prefill",
+  "model_contract_id": "3fcd9cfc2e977dbf56522e710cb3903e03ab00ca2ed5d0daa3d9f840edf5a833",
+  "execution_profile_id": "23818a15779e1ce655859a5d37ed56ef8eee250480fef91b8846fa8df1522df9",
+  "candidates": [
+    {
+      "candidate": "A-all-product-source",
+      "pack_id": "79adce6e75242de89b74073eb76053edfa8d3d1eb231a4431aae1504dff7f53e",
+      "prefix_tokens": 147997,
+      "capacity": 98304,
+      "reserve_tokens": 16384,
+      "fits_current_profile": false,
+      "content_sha256": "a4e7a38b50da2a9796c09a153c25b723b4cff3f2f7a67652bdfd866b80e3e440"
+    },
+    {
+      "candidate": "B-compact-selected",
+      "pack_id": "6fe378507df1035663cc2a05dccea3ab2dd005213611dc60cf969b76be9842bd",
+      "prefix_tokens": 29334,
+      "capacity": 98304,
+      "reserve_tokens": 16384,
+      "fits_current_profile": true,
+      "content_sha256": "8fdd404abcdccd632b6b19e2671b64b9dff4470db2e0fe990a449a6676ad0621"
+    },
+    {
+      "candidate": "C-compact-examples",
+      "pack_id": "699da3a82bc654fb32d44bfc1c1e26e95707629c621b164824df9f9196ca4143",
+      "prefix_tokens": 44676,
+      "capacity": 98304,
+      "reserve_tokens": 16384,
+      "fits_current_profile": true,
+      "content_sha256": "55339c69d072e38ae8353fad8681064da84e53bc98ef6fbd226a00f6f6aa4d62"
+    }
+  ]
+}

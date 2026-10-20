@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "real ffprobe on owned VM, temp movie removed",
+  "result": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 320,
+        "height": 240,
+        "r_frame_rate": "12/1",
+        "duration": "2.000000",
+        "nb_read_frames": "24"
+      }
+    ]
+  }
+}

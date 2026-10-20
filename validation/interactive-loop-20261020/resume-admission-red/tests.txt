@@ -1,0 +1,32 @@
+test_continue_without_a_paused_turn_is_rejected_before_admission (tests.test_interactive_session.InteractiveSessionTests.test_continue_without_a_paused_turn_is_rejected_before_admission) ... FAIL
+test_continue_while_working_does_not_queue_duplicate_resume (tests.test_interactive_session.InteractiveSessionTests.test_continue_while_working_does_not_queue_duplicate_resume) ... FAIL
+test_failed_worker_open_requires_reopening_not_an_unhandled_queue (tests.test_interactive_session.InteractiveSessionTests.test_failed_worker_open_requires_reopening_not_an_unhandled_queue) ... FAIL
+
+======================================================================
+FAIL: test_continue_without_a_paused_turn_is_rejected_before_admission (tests.test_interactive_session.InteractiveSessionTests.test_continue_without_a_paused_turn_is_rejected_before_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 117, in test_continue_without_a_paused_turn_is_rejected_before_admission
+    with self.assertRaisesRegex(ValueError,'paused'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_continue_while_working_does_not_queue_duplicate_resume (tests.test_interactive_session.InteractiveSessionTests.test_continue_while_working_does_not_queue_duplicate_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 130, in test_continue_while_working_does_not_queue_duplicate_resume
+    with self.assertRaisesRegex(ValueError,'already working'):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_failed_worker_open_requires_reopening_not_an_unhandled_queue (tests.test_interactive_session.InteractiveSessionTests.test_failed_worker_open_requires_reopening_not_an_unhandled_queue)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 142, in test_failed_worker_open_requires_reopening_not_an_unhandled_queue
+    with self.assertRaisesRegex(ValueError,'reopen'):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.156s
+
+FAILED (failures=3)

@@ -1,0 +1,19 @@
+{
+  "schema": "bw.plate.v1",
+  "units": "mm",
+  "frame": "X-width,Y-length,Z-up; origin mid-XY,bottom-Z",
+  "holes": "four centered through-holes",
+  "notch": "positive-X,centered-Y,through-thickness",
+  "additional_features": false,
+  "dimensions": {
+    "width_x": 100,
+    "length_y": 60,
+    "thickness_z": 4,
+    "hole_diameter": 5,
+    "spacing_x": 76,
+    "spacing_y": 36,
+    "edge_material": 8,
+    "notch_depth": 6,
+    "notch_width": 10
+  }
+}

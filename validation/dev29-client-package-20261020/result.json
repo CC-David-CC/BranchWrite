@@ -1,0 +1,28 @@
+{
+  "GPU": "NOT_RUN",
+  "artifact_directory": "/home/dflanag3/spatial-artifacts/branchwrite-dev29-package-20261020-v1",
+  "cli_features": [
+    "code --build-project-context",
+    "code --context-source-branch",
+    "context-status"
+  ],
+  "cpu_evidence": {
+    "branchwrite_tests": 71,
+    "cow_http_tests": 7,
+    "location": "validation/project-context-receipt-20261020"
+  },
+  "doctor": {
+    "inference": "NOT_RUN",
+    "status": "PASS"
+  },
+  "installed_venv": "/home/dflanag3/spatial-artifacts/branchwrite-dev29-package-20261020-v1/installed-check/venv",
+  "limitations": [
+    "No Q4/Q8 server or model run",
+    "Full end-to-end autonomous coding remains unqualified"
+  ],
+  "model": "NOT_RUN",
+  "source_revision": "5fb74d46772d7005dc0177444610055ba7204842",
+  "status": "INSTALLED_CLIENT_SMOKE_PASS",
+  "wheel": "branchwrite-0.1.0.dev29-py3-none-any.whl",
+  "wheel_sha256": "c90952d4fdb99b1a044dd07ef70130018c6e9067568e081a83ef3298c131354f"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "label": "B-compact-selected",
+    "snapshot": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6",
+    "status": "RECEIPT_BOUND_NOT_RUN"
+  },
+  {
+    "label": "C-compact-examples",
+    "snapshot": "af0bce7f4682ff08128d5c81e4b28cf52decfe73220bf905cd5e3a9566ccf1da",
+    "status": "RECEIPT_BOUND_NOT_RUN"
+  },
+  {
+    "label": "A-all-product-source",
+    "snapshot": "2c059bba47c94a3342618b2edcab9351e5ab188e359dc5df0e2fce8973b5208a",
+    "status": "RECEIPT_BOUND_NOT_RUN"
+  }
+]

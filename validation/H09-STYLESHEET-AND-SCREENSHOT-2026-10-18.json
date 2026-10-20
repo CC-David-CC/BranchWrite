@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "status": "275_SELECTED_CPU_CHECKS_PASS_AUTONOMOUS_H09_UNRUN",
+  "base": "950d591dc056795d56177606dcd26cb21b697b00",
+  "client": {
+    "host": "llm-49",
+    "tests_run": 259,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "result": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h09-client-regression-result.json",
+    "result_sha256": "968a38fdf74ad4e4f52762fc6967b83a2774d280d5b98230838d41b704b1c23d"
+  },
+  "server_cpu": {
+    "host": "llm-60",
+    "tests_run": 16,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "result": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-h09-cpu-v1/result.json",
+    "scope": "Synthetic FlowModel peers and actual grammar;not GPU"
+  },
+  "failure_history": [
+    "Initial new-test syntax error:zero executed methods",
+    "H09 target unsupported:6 methods,1 failure,4 errors",
+    "H09 admitted:6 methods,2 failures due empty style attribute left by screenshot caret hiding",
+    "DOM distinguishing red:2 methods,1 failure",
+    "Focused corrected caller:9 methods PASS",
+    "Full selected rerun:259+16 PASS"
+  ],
+  "cause": "Installed Playwright1.64 default hideCaret restores a CSS property but leaves style= on previously unstyled inputs",
+  "fix": "Caller uses caret=initial plus temporary screenshot stylesheet;no Playwright package changes or candidate attribute scrubbing",
+  "checks_preserved": [
+    "Original protected checks.py hash59c93e1f003fe8e62abe606894ef34a478b5911a67178b017cf39c014223bf73",
+    "Intentional empty inline attribute still rejected",
+    "Wrong CSS pixels and stale CSS artifacts rejected",
+    "Original/extracted complete PNGs byte-identical",
+    "Focused caret screenshot repeat deterministic"
+  ],
+  "source_sha256": {
+    "branchwrite/browser_capture.py": "8af55eb929cbd0efb4c0276ca59ebd33762f99fe9bbd544d318fa0ecdad642b7",
+    "tests/test_stylesheet_inspection.py": "beee61e854e9a0b6b297dc0831b07fd81585d5dce5cda66205d86cbf9ada15f8",
+    "tests/test_screenshot_dom.py": "27cc2ee134b2b7328aa49bbbd8439cab069d554dc8ea5b34e6f4d07cd3b29458"
+  },
+  "autonomous_catalog": {
+    "passed": 9,
+    "total": 13,
+    "H09": "UNRUN",
+    "H10": "UNRUN",
+    "H11": "UNRUN",
+    "H12": "UNRUN"
+  },
+  "native_runtime_changed": false,
+  "numerical_oracle": "NOT_RUN",
+  "full_vc_g_qualified": false,
+  "github_touched": false
+}

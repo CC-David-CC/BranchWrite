@@ -1,0 +1,13 @@
+{
+  "status": "COMBINED_CPU83_PASS_1_ENVIRONMENT_ERROR",
+  "executed": 84,
+  "passed": 83,
+  "failures": 0,
+  "errors": 1,
+  "skips": 0,
+  "error": "test_run_cli.HttpRunCliTests: COW module absent on intentionally separate client host",
+  "new_command_policy_tests": 10,
+  "new_command_policy_result": "PASS",
+  "live_policy": "NOT_RUN",
+  "raw_evidence": "/home/dflanag3/spatial-artifacts/branchwrite-command-verification-20261019-v1"
+}

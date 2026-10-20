@@ -1,0 +1,141 @@
+test_code_switch_pins_the_completed_conversation_in_a_new_workflow (tests.test_guided_conversation.GuidedConversationTests.test_code_switch_pins_the_completed_conversation_in_a_new_workflow) ... ERROR
+test_existing_start_accepts_chat_without_a_filename_wizard (tests.test_guided_conversation.GuidedConversationTests.test_existing_start_accepts_chat_without_a_filename_wizard) ... FAIL
+test_open_and_exit_makes_no_namespace_or_model_request (tests.test_guided_conversation.GuidedConversationTests.test_open_and_exit_makes_no_namespace_or_model_request) ... ERROR
+test_resume_talk_keeps_the_same_branch_and_adds_one_turn (tests.test_guided_conversation.GuidedConversationTests.test_resume_talk_keeps_the_same_branch_and_adds_one_turn) ... ERROR
+test_talk_keeps_two_turns_without_starting_coding_or_reading_project (tests.test_guided_conversation.GuidedConversationTests.test_talk_keeps_two_turns_without_starting_coding_or_reading_project) ... ERROR
+test_unfinished_answer_cannot_become_a_coding_source (tests.test_guided_conversation.GuidedConversationTests.test_unfinished_answer_cannot_become_a_coding_source) ... ERROR
+test_unknown_slash_command_is_not_sent_as_a_user_message (tests.test_guided_conversation.GuidedConversationTests.test_unknown_slash_command_is_not_sent_as_a_user_message) ... ERROR
+test_talk_uses_the_same_guided_setup_without_saving_the_key (tests.test_guided_conversation.TalkEntrypointTests.test_talk_uses_the_same_guided_setup_without_saving_the_key) ... usage: branchwrite [-h]
+                   {start,connect,chat,check,canonicalize,run,step,doctor,prepare-base,context-status,code,resume,apply,export,review,status,receipt,reconcile}
+                   ...
+branchwrite: error: argument command: invalid choice: 'talk' (choose from 'start', 'connect', 'chat', 'check', 'canonicalize', 'run', 'step', 'doctor', 'prepare-base', 'context-status', 'code', 'resume', 'apply', 'export', 'review', 'status', 'receipt', 'reconcile')
+ERROR
+
+======================================================================
+ERROR: test_code_switch_pins_the_completed_conversation_in_a_new_workflow (tests.test_guided_conversation.GuidedConversationTests.test_code_switch_pins_the_completed_conversation_in_a_new_workflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 62, in test_code_switch_pins_the_completed_conversation_in_a_new_workflow
+    code,out,coding=self.run_chat(['Keep the title blue.','/code Create index.html'],mode='chat')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 37, in run_chat
+    code=guided_cli.run(cwd=self.project,home=self.home,environ=self.env,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run() got an unexpected keyword argument 'mode'
+
+======================================================================
+ERROR: test_open_and_exit_makes_no_namespace_or_model_request (tests.test_guided_conversation.GuidedConversationTests.test_open_and_exit_makes_no_namespace_or_model_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 73, in test_open_and_exit_makes_no_namespace_or_model_request
+    code,out,coding=self.run_chat(['/exit'],mode='chat')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 37, in run_chat
+    code=guided_cli.run(cwd=self.project,home=self.home,environ=self.env,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run() got an unexpected keyword argument 'mode'
+
+======================================================================
+ERROR: test_resume_talk_keeps_the_same_branch_and_adds_one_turn (tests.test_guided_conversation.GuidedConversationTests.test_resume_talk_keeps_the_same_branch_and_adds_one_turn)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 86, in test_resume_talk_keeps_the_same_branch_and_adds_one_turn
+    self.run_chat(['First thought.','/exit'],mode='chat')
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 37, in run_chat
+    code=guided_cli.run(cwd=self.project,home=self.home,environ=self.env,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run() got an unexpected keyword argument 'mode'
+
+======================================================================
+ERROR: test_talk_keeps_two_turns_without_starting_coding_or_reading_project (tests.test_guided_conversation.GuidedConversationTests.test_talk_keeps_two_turns_without_starting_coding_or_reading_project)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 47, in test_talk_keeps_two_turns_without_starting_coding_or_reading_project
+    code,out,coding=self.run_chat(['Explain blue headings.','What about phones?','/exit'],mode='chat')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 37, in run_chat
+    code=guided_cli.run(cwd=self.project,home=self.home,environ=self.env,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run() got an unexpected keyword argument 'mode'
+
+======================================================================
+ERROR: test_unfinished_answer_cannot_become_a_coding_source (tests.test_guided_conversation.GuidedConversationTests.test_unfinished_answer_cannot_become_a_coding_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 96, in test_unfinished_answer_cannot_become_a_coding_source
+    code,out,coding=self.run_chat(['Explain this.','/code Build now.','/exit'],mode='chat')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 37, in run_chat
+    code=guided_cli.run(cwd=self.project,home=self.home,environ=self.env,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run() got an unexpected keyword argument 'mode'
+
+======================================================================
+ERROR: test_unknown_slash_command_is_not_sent_as_a_user_message (tests.test_guided_conversation.GuidedConversationTests.test_unknown_slash_command_is_not_sent_as_a_user_message)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 103, in test_unknown_slash_command_is_not_sent_as_a_user_message
+    code,out,coding=self.run_chat(['/oops','/exit'],mode='chat')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 37, in run_chat
+    code=guided_cli.run(cwd=self.project,home=self.home,environ=self.env,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run() got an unexpected keyword argument 'mode'
+
+======================================================================
+ERROR: test_talk_uses_the_same_guided_setup_without_saving_the_key (tests.test_guided_conversation.TalkEntrypointTests.test_talk_uses_the_same_guided_setup_without_saving_the_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/argparse.py", line 1941, in parse_known_args
+    namespace, args = self._parse_known_args(args, namespace)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/argparse.py", line 2165, in _parse_known_args
+    stop_index = consume_positionals(start_index)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/argparse.py", line 2121, in consume_positionals
+    take_action(action, args)
+  File "/usr/lib/python3.12/argparse.py", line 2001, in take_action
+    argument_values = self._get_values(action, argument_strings)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/argparse.py", line 2554, in _get_values
+    self._check_value(action, value[0])
+  File "/usr/lib/python3.12/argparse.py", line 2600, in _check_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument command: invalid choice: 'talk' (choose from 'start', 'connect', 'chat', 'check', 'canonicalize', 'run', 'step', 'doctor', 'prepare-base', 'context-status', 'code', 'resume', 'apply', 'export', 'review', 'status', 'receipt', 'reconcile')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 112, in test_talk_uses_the_same_guided_setup_without_saving_the_key
+    self.assertEqual(main(['talk']),0)
+                     ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/branchwrite/__main__.py", line 168, in main
+    args=parser.parse_args(argv)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/argparse.py", line 1908, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/argparse.py", line 1943, in parse_known_args
+    self.error(str(err))
+  File "/usr/lib/python3.12/argparse.py", line 2677, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/usr/lib/python3.12/argparse.py", line 2664, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+FAIL: test_existing_start_accepts_chat_without_a_filename_wizard (tests.test_guided_conversation.GuidedConversationTests.test_existing_start_accepts_chat_without_a_filename_wizard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 81, in test_existing_start_accepts_chat_without_a_filename_wizard
+    self.assertEqual(code,0,out);coding.assert_not_called()
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 905, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected '_run_and_report' to not have been called. Called 1 times.
+Calls: [call(Namespace(project=PosixPath('/tmp/branchwrite-cow-flow-ujur6iek/project'), connection=PosixPath('/tmp/branchwrite-cow-flow-ujur6iek/connection.json'), state=PosixPath('/tmp/branchwrite-cow-flow-ujur6iek/home/state/branchwrite/runs/bw-chat-60b69229'), task='/chat', task_file=None, branch='bw-chat-60b69229', sampler='greedy', project_files=True, read=[], edit=[], create=[], read_dir=[], edit_dir=[], test_command=[], from_branch=None, from_prefix=None, from_snapshot=None, shell_timeout=120, max_steps=1024, project_bases=None, base_choice=None, base_revision=None, base_reserve_tokens=None, context_pack=None, context_pack_id=None, refresh_context_pack=False, auto_base=False), PosixPath('/tmp/branchwrite-cow-flow-ujur6iek/project'), PosixPath('/tmp/branchwrite-cow-flow-ujur6iek/home/state/branchwrite/runs/bw-chat-60b69229'), 'bw-chat-60b69229', PosixPath('/tmp/branchwrite-cow-flow-ujur6iek/home/state/branchwrite/runs'), <function GuidedConversationTests.run_chat.<locals>.answer at 0x7cdd8ad8bba0>, <built-in function print>)].
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.644s
+
+FAILED (failures=1, errors=7)

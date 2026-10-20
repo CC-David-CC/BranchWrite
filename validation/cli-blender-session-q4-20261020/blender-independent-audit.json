@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "sampled_rotation_degrees": {
+    "Platform": 0.0,
+    "RobotBody": 0.0,
+    "RobotHead": 0.0,
+    "EyeLeft": 0.0,
+    "EyeRight": 0.0,
+    "PupilLeft": 0.0,
+    "PupilRight": 0.0,
+    "ArmRight": 45.00000000000001,
+    "ArmLeft": 0.0
+  },
+  "sampled_translation_distance": {
+    "Platform": 0.0,
+    "RobotBody": 0.0,
+    "RobotHead": 0.0,
+    "EyeLeft": 0.0,
+    "EyeRight": 0.0,
+    "PupilLeft": 0.0,
+    "PupilRight": 0.0,
+    "ArmRight": 0.0,
+    "ArmLeft": 0.0
+  },
+  "scope": "actual exported scene reopened in independent process; endpoint transforms1/24, unchanged non-arm meshes, actual24-frame video; not CAD/material metrology",
+  "movie_sha256": "2d100a0e477f998884a406a064bbe66234cc9f49cc3f4bb30e997f19d428f0ec",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 320,
+        "height": 240,
+        "r_frame_rate": "12/1",
+        "duration": "2.000000",
+        "nb_read_frames": "24"
+      }
+    ]
+  },
+  "ffprobe_execution": "owned admin01 VM; input streamed to anonymous memfd; no ordinary remote movie file"
+}

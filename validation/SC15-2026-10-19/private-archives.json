@@ -1,0 +1,16 @@
+{
+  "client-SC15-dev16-two-trees-complete-handoffs-pass-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/client-SC15-dev16-two-trees-complete-handoffs-pass-20261019/evidence.tar.gz",
+    "sha256": "786976bf48025af028c5de913b30ae7d45172f733b87518fa14e497f7e81be1f",
+    "bytes": 711160,
+    "files": 967
+  },
+  "service-SC15-dev16-two-clients-serialized-pass-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/service-SC15-dev16-two-clients-serialized-pass-20261019/evidence.tar.gz",
+    "sha256": "6e8970da3cc3e1408b5809ba2717b4eef2c214cd378565a31849cfda142282c4",
+    "bytes": 3800141,
+    "files": 42
+  }
+}

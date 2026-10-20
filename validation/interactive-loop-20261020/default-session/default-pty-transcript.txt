@@ -1,0 +1,118 @@
+BranchWrite
+Client: r4090 | Project: /home/dflanag3/projects/branchwrite-default-dev42-smoke
+Project files stay on this client. Model requests go to your configured COW server.
+Saved session: /home/dflanag3/.local/state/branchwrite/sessions/project-c7563274b0903cd9435eec83
+[?12l[?25h[6n[?2004h[?1l[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[?25l[?7l[5D[0m[J[0mYou> /help[10D[0m
+[J[?7h[0m[?12l[?25h[?2004l[0m[?7h[0mBranchWrite: keep talking while I work. /help shows the keys.
+Work edits this project. /explore tries an idea in a separate copy.
+[0m[6n[?2004h[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[5D[J[0m[?7h[?2004l[0m[?7h[0mDescribe what you want in ordinary words. Keep typing while I work.
+Enter steers current work; Tab queues one combined next turn; Esc stops.
+/plan  /work  /chat  /aside QUESTION  /history WORDS
+/edit [NUMBER] NEW REQUEST  /explore [NUMBER] NEW REQUEST  /switch NUMBER
+/continue  /exit. Alt-Enter adds a line; Ctrl-R searches prompts.
+Edit replaces an earlier Work request. Explore keeps these files and uses older context in a separate copy. Switch restores matching files and context.
+[0m[6n[?2004h[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[?25l[?7l[5D[0m[J[0mYou> /plan[10D[0m
+[J[?7h[0m[?12l[?25h[?2004l[6n[?2004h[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[?25l[?7l[5D[0mYou>[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[0m [0m
+[0;7mplan | starting | Enter: send/steer   Tab: queue   Esc: stop   Ctrl-R: history                                         [119C [31A[5C[?7h[0m[?12l[?25h[5D[J[0m[?7h[?2004l[0m[?7h[0mPlan mode: I can inspect and explain; files stay unchanged.
+[0m/history
+[6n[?2004h[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[?25l[?7l[5D[0m[J[0mYou> /history[13D[0m
+[J[?7h[0m[?12l[?25h[?2004l[6n[?2004h[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[?25l[?7l[5D[0mYou>[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[0m [0m
+[0;7mplan | starting | Enter: send/steer   Tab: queue   Esc: stop   Ctrl-R: history                                         [119C [31A[5C[?7h[0m[?12l[?25h[5D[J[0m[?7h[?2004l[0m[?7h[0mNo saved turns yet.
+[0m/work
+[6n[?2004h[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[?25l[?7l[5D[0m[J[0mYou> /work[10D[0m
+[J[?7h[0m[?12l[?25h[?2004l[6n[?2004h[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[5D[J[0m[?7h[?2004l[0m[?7h[0mWork mode: I can edit and test this project.
+[0m/exit
+[6n[?2004h[?25l[0m[?7l[0m[J[0mYou>[4D[5C[?7h[0m[?12l[?25h[?25l[?7l[5D[0mYou> /exit[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[0m [31A[10C[?7h[0m[?12l[?25h[?25l[?7l[10D[0m[J[0mYou> /exit[10D[0m
+[J[?7h[0m[?12l[?25h[?2004l[0m[?7h[0mSettling current work and saving session state...
+[0m

@@ -1,0 +1,51 @@
+{
+  "disposition": "completion_requested",
+  "exit_code": null,
+  "observation": null,
+  "operation_id": "bwtool-b5be26d3e2d6a98d165b5503148f581aa841c9615178f8fb",
+  "plan_sha256": "01612d7a4321cc5883095b707a7d066d16a2a7b795606ec6b35d5882ff51cd90",
+  "stderr": "",
+  "stderr_artifact": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr_display": {
+    "encoding": "utf-8",
+    "errors": "replace",
+    "lossy": false,
+    "source_bytes": 0
+  },
+  "stderr_truncated": false,
+  "stdout": "Selected checks completed.",
+  "stdout_artifact": {
+    "bytes": 26,
+    "sha256": "3b69d131dc1fd153c5115174b11f05241095e4800332716d227c038c6368c12d"
+  },
+  "stdout_display": {
+    "encoding": "utf-8",
+    "errors": "replace",
+    "lossy": false,
+    "source_bytes": 26
+  },
+  "stdout_truncated": false,
+  "tool": "finish",
+  "verification": {
+    "checks": [
+      {
+        "disposition": "exited",
+        "exit_code": 0,
+        "name": "site",
+        "status": "fail"
+      }
+    ],
+    "local_checks_required": true,
+    "outcome_operation_id": "bwtool-b5be26d3e2d6a98d165b5503148f581aa841c9615178f8fb",
+    "policy": "project-checks-and-finish",
+    "reason": "local edits need current local checks; each used remote target needs a passing final check with no later remote operation",
+    "remote_checks": [],
+    "remote_targets_requiring_checks": [],
+    "scope": "recorded checked boundary",
+    "status": "fail",
+    "task_verdict": "verified_failure"
+  }
+}

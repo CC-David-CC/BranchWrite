@@ -1,0 +1,18 @@
+test_real_cli_binds_manifest_and_reuses_it_after_a_restart (test_project_baseline.ProjectBaselineTests.test_real_cli_binds_manifest_and_reuses_it_after_a_restart) ... ERROR
+
+======================================================================
+ERROR: test_real_cli_binds_manifest_and_reuses_it_after_a_restart (test_project_baseline.ProjectBaselineTests.test_real_cli_binds_manifest_and_reuses_it_after_a_restart)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-baseline-20261019/tests/test_project_baseline.py", line 60, in test_real_cli_binds_manifest_and_reuses_it_after_a_restart
+    ref,initial=baseline()
+                ~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-project-baseline-20261019/tests/test_project_baseline.py", line 58, in baseline
+    typed=inputs['bindings'][BINDING];self.assertEqual(typed[0],'Text')
+          ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'project-input-manifest'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.130s
+
+FAILED (errors=1)

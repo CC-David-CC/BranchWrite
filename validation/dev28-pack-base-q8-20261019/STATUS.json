@@ -1,0 +1,25 @@
+{
+  "status": "BOUNDED_INSTALLED_Q8_PREPARE_AND_CODE_PASS",
+  "client_host": "llm-49",
+  "client_pid": 2351183,
+  "server_host": "llm-60",
+  "GPU": [
+    0
+  ],
+  "source_revision": "28befcae4e8c24d9a6d6b53361791beac0ee72be",
+  "cow_source": "895251441266dda1dd4d6437d98fda7251027b68",
+  "prefix_cells": 13068,
+  "preparation_retry": "PASS: no additional native commands",
+  "model_quality": "PASS: 7 protected methods plus independent 1000 seeded cases and2 probes",
+  "independent_oracle": "PASS: algorithmic occupancy oracle; original module rejected",
+  "numerical_oracle": "NOT_RUN",
+  "remaining": "Automatic refresh/adoption, broader unfamiliar tasks and full release qualification",
+  "numerical_max_abs_error": null,
+  "code_seconds": 86.53995324100833,
+  "native_generation_tps": 50.80985367006324,
+  "server_native_exit_codes": [
+    0,
+    0
+  ],
+  "gpu": "free after cleanup"
+}

@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "source_sha256": "1b4136b361b9cef8be126cd5d809eb1d98726657586e4d640d3c84a0bc2390ff",
+  "checks": [
+    {
+      "viewport": [
+        1280,
+        800
+      ],
+      "status": "PASS",
+      "text": "My First BranchWrite Page\n\nWelcome! This is a simple one-file page.\n\nSay hello.\n\nHello, David!",
+      "actions": [
+        {
+          "kind": "click",
+          "target": "hello-button",
+          "value": ""
+        }
+      ],
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532975]",
+        "pid_ns": "pid:[4026532973]",
+        "mount_ns": "mnt:[4026532970]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 894708,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004100705962628126
+      },
+      "screenshot": "/home/dflanag3/spatial-artifacts/branchwrite-dev32-project-20261020/website-1280.png"
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "status": "PASS",
+      "text": "My First BranchWrite Page\n\nWelcome! This is a simple one-file page.\n\nSay hello.\n\nHello, David!",
+      "actions": [
+        {
+          "kind": "click",
+          "target": "hello-button",
+          "value": ""
+        }
+      ],
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026533170]",
+        "pid_ns": "pid:[4026533167]",
+        "mount_ns": "mnt:[4026532971]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 894869,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004056090954691172
+      },
+      "screenshot": "/home/dflanag3/spatial-artifacts/branchwrite-dev32-project-20261020/website-375.png"
+    }
+  ],
+  "scope": "Actual isolated Chromium click and visible text at desktop/mobile sizes; screenshots retained. Not a browser feature matrix."
+}

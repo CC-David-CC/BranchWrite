@@ -1,0 +1,10 @@
+{
+  "status": "PINNED_GENERIC_ROOT",
+  "source_branch": "standalone-sc13a-controller-q8-dev15-20261019-v1",
+  "snapshot": "4164a409a37ba67670189cb7bbbf43d66fa89341c8aaff428f9a63e5c2d6f506",
+  "prefix_text_sha256": "7041aa392595677e78dee188db4c8eb6ba1f5c7ad57c9f7e821ef1890e99481b",
+  "prefix_utf8_bytes": 48954,
+  "model_contract_id": "3fcd9cfc2e977dbf56522e710cb3903e03ab00ca2ed5d0daa3d9f840edf5a833",
+  "execution_profile_id": "27ddba3e4d7f208b002828554f875cecb8824de1cc80b9eae3cbd00b4ef8b09e",
+  "contains_project_commands": false
+}

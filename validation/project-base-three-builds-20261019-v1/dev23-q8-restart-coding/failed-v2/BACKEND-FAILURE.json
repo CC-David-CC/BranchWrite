@@ -1,0 +1,7 @@
+{
+  "status": "FAIL_REAL_BACKEND_ROOT_REPLAY",
+  "reason": "Typed canonical text root mismatched token-tuple expected view after process restart",
+  "operation": "bw-root-d7f36167152b492f5a66a0afa441d6d145bffed5",
+  "client_journal": "pending and preserved",
+  "fix": "COW2a083b85; separate fresh profile test required, no old-profile checkpoint imported"
+}

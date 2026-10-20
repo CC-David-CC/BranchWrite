@@ -1,0 +1,10 @@
+test_actual_cli_subprocess_conforms_to_http_client_flow (test_cow_client_flow.CowClientFlowTests.test_actual_cli_subprocess_conforms_to_http_client_flow) ... ok
+test_http_client_prepare_fork_continue_history_tool_observation (test_cow_client_flow.CowClientFlowTests.test_http_client_prepare_fork_continue_history_tool_observation) ... ok
+test_http_stale_revision_reaches_server_and_is_rejected_before_inference (test_cow_client_flow.CowClientFlowTests.test_http_stale_revision_reaches_server_and_is_rejected_before_inference) ... ok
+test_real_http_accepts_128_byte_branch_and_operation_names (test_cow_client_flow.CowClientFlowTests.test_real_http_accepts_128_byte_branch_and_operation_names) ... ok
+test_user_conversation_tip_stays_current_and_work_fork_is_independent (test_cow_client_flow.CowClientFlowTests.test_user_conversation_tip_stays_current_and_work_fork_is_independent) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 4.383s
+
+OK

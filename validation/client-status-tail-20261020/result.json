@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "milestone": "branchwrite-user-facing-crash-recovery-status-tail",
+  "status": "PASS_BOUNDED",
+  "date_utc": "2026-10-20",
+  "source": {
+    "repository": "box-git:/srv/data/git/BranchWrite.git",
+    "branch": "feat/explicit-model-reconciliation-20261019",
+    "product_commit": "38abad675a24da773a3be1df8367d576b0be45ea",
+    "evidence_tip": "d7ec1a8b90882240cf8fa63287173e0876e4243b",
+    "earlier_receipt_commit": "92a68349bdbac5e2e2d58f11a358a91aad4b4f62"
+  },
+  "behavior": {
+    "command": "branchwrite status STATE [--tail N] [--json]",
+    "default_tail": 12,
+    "allowed_tail_range": [
+      0,
+      64
+    ],
+    "data_source": "existing hash-chained workflow ledger",
+    "emits_only": [
+      "sequence",
+      "event kind",
+      "workflow step/frame IDs",
+      "original operation IDs",
+      "settled flag/epoch when relevant"
+    ],
+    "omits": [
+      "prompts",
+      "model text",
+      "stdout/stderr",
+      "artifact payloads",
+      "native KV data"
+    ],
+    "state_mutated": false,
+    "extra_history_store_created": false
+  },
+  "tests": {
+    "focused_branchwrite": {
+      "command": "PYTHONPATH=tests:. PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest test_project_context_receipt test_base_project_prepare test_base_catalog_publication test_coding_launcher test_coding_pack_launch test_coding_pack_refresh_admission test_context_pack test_receipt_cli test_coding_status -v",
+      "passed": 87,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "context_cow_http": {
+      "command": "python -B -m unittest test_base_choice_http test_project_context_real_cow_restart -v",
+      "passed": 8,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "server": "actual Context COW coordinator/Store/HTTP API",
+      "inference_backend": "deterministic CPU fake",
+      "client_and_http_recovery_scope": "client process crash/restart; HTTP stopped/recreated over live coordinator and Store"
+    },
+    "test_first_red": {
+      "baseline": "status rejected --tail before implementation; new positive activity tests failed",
+      "protected_assertions_modified": false
+    },
+    "installed_cli": {
+      "package_version": "0.1.0.dev32",
+      "clean_venv_install": true,
+      "main_help": "PASS",
+      "status_tail_help": "PASS",
+      "receipt_help": "PASS",
+      "runtime_status_json_smoke": "PASS; exact event order and operation ID; no request/artifact payloads",
+      "doctor": "PASS; inference NOT_RUN"
+    }
+  },
+  "package": {
+    "wheel": "/home/dflanag3/spatial-artifacts/branchwrite-dev32-package-20261020-v1/wheel/branchwrite-0.1.0.dev32-py3-none-any.whl",
+    "sha256": "5892f05cc96f7a74a6e72bf5a29bcb105ff8bc2d5bf163fe8ec9e42411edc15a",
+    "private_backup": "box-git:/srv/data/git/private_context_cow.evidence/branchwrite-dev32-package-20261020-v1/wheel/branchwrite-0.1.0.dev32-py3-none-any.whl"
+  },
+  "hardware": {
+    "inference_run": false,
+    "llm60_gpu0_observed": "0% utilization; 15 MiB used"
+  },
+  "limits": [
+    "Status shows event summaries, not the actual stdout/stderr or artifact contents; use a specific result/receipt command to inspect retained outputs.",
+    "The COW integration uses a deterministic CPU fake and did not restart the COW coordinator, Store or native backend.",
+    "No Q4/Q8 quality, logits, throughput, power-loss, tool-effect recovery or broad coding-workload claim follows."
+  ],
+  "evidence_files": [
+    "branchwrite-tests.log",
+    "cow-http-tests.log",
+    "README.md"
+  ]
+}

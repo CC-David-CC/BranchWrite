@@ -1,0 +1,17 @@
+[
+  {
+    "label": "A-all-product-source",
+    "status": "PASS",
+    "scope": "installed CLI launch validation, placeholder identity only; no HTTP or inference"
+  },
+  {
+    "label": "B-compact-selected",
+    "status": "PASS",
+    "scope": "installed CLI launch validation, placeholder identity only; no HTTP or inference"
+  },
+  {
+    "label": "C-compact-examples",
+    "status": "PASS",
+    "scope": "installed CLI launch validation, placeholder identity only; no HTTP or inference"
+  }
+]

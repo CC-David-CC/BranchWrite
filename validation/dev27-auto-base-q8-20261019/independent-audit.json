@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "Independent structural checks and requested meeting content; no visual or numerical oracle",
+  "checks": {
+    "first": {
+      "structural_exit": 0,
+      "stdout": "PASS: basic HTML structure and local stylesheet\n",
+      "isolation": {
+        "kind": "bubblewrap-terminal-v1",
+        "pid_ns": "pid:[4026532781]",
+        "net_ns": "net:[4026532783]",
+        "mount_ns": "mnt:[4026532777]",
+        "worker_exited": true,
+        "launcher_pid": 2347220,
+        "namespace_members_after": []
+      },
+      "files": {
+        "style.css": "82120186b2749fc2eabd85e4243515842c0ac1b6c14e946fb412f51a4a9736a0",
+        "check_site.py": "efce01c7b325f7a1e400927163acdb523ba43fd4ec4e204d79e442025a3d77b5",
+        "index.html": "f8de5135f452bc7cf47287b7670352925890d64fde7445f0165c92ac31113226"
+      }
+    },
+    "second": {
+      "structural_exit": 0,
+      "stdout": "PASS: basic HTML structure and local stylesheet\n",
+      "isolation": {
+        "kind": "bubblewrap-terminal-v1",
+        "pid_ns": "pid:[4026532782]",
+        "net_ns": "net:[4026532786]",
+        "mount_ns": "mnt:[4026532778]",
+        "worker_exited": true,
+        "launcher_pid": 2347224,
+        "namespace_members_after": []
+      },
+      "files": {
+        "style.css": "538f0303d0b2fcaed25774bc843e37538c1dd5213ca306c0ae719a2edd3faabf",
+        "check_site.py": "efce01c7b325f7a1e400927163acdb523ba43fd4ec4e204d79e442025a3d77b5",
+        "index.html": "07a6b5f1241b7b7ab2e3ed1f62ed97587bf28618c66d731928e437106d877c07"
+      }
+    }
+  },
+  "choice": {
+    "base": {
+      "base_id": "1111111111111111111111111111111111111111111111111111111111111111",
+      "branch": "dev27-site-first",
+      "capacity": 262144,
+      "execution_profile_id": "2e0a61f08d0dca09751c7eee3dd0947b2431b5f73010e268b7608eefdae4ae47",
+      "prefix_tokens": 15638,
+      "snapshot": "059d2c862a8b47ccfafd86a189bad92822459e140f2acec8e29b8dc2b9fac455",
+      "source_revision": "29f7bb25d3c9f9d62efde61f7afb3e5708abadfb"
+    },
+    "reason": "host-longest-fitting-v1: longest compatible offered prefix; base ID breaks ties"
+  }
+}

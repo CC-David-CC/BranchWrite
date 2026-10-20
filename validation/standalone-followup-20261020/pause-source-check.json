@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "tested_source_fingerprints_still_match": true,
+  "source_files_checked": 147,
+  "diff_check_exit_code": 2,
+  "diff_check_output": "tests/cow_process_restart_server.py:79: new blank line at EOF.\ntests/test_cow_http_process_restart.py:150: new blank line at EOF.\nvalidation/dev30-client-package-20261020/installed-version.txt:4: trailing whitespace.\n+Home-page: \nvalidation/dev30-client-package-20261020/installed-version.txt:5: trailing whitespace.\n+Author: \nvalidation/dev30-client-package-20261020/installed-version.txt:6: trailing whitespace.\n+Author-email: \nvalidation/dev30-client-package-20261020/installed-version.txt:7: trailing whitespace.\n+License: \nvalidation/dev30-client-package-20261020/installed-version.txt:9: trailing whitespace.\n+Requires: \nvalidation/dev30-client-package-20261020/installed-version.txt:10: trailing whitespace.\n+Required-by: \n",
+  "interpretation": "Whitespace warnings are inherited added-test EOF blank lines and exact pip metadata output. Preserved test source and raw evidence while pausing; no source change to the passing dev38 suite."
+}

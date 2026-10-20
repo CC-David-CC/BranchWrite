@@ -1,0 +1,41 @@
+test_links_are_rejected_without_reading_target (test_project_baseline.ProjectBaselineTests.test_links_are_rejected_without_reading_target) ... ERROR
+test_manifest_is_chunked_beyond_codec_container_limit (test_project_baseline.ProjectBaselineTests.test_manifest_is_chunked_beyond_codec_container_limit) ... ERROR
+test_missing_payload_is_rejected (test_project_baseline.ProjectBaselineTests.test_missing_payload_is_rejected) ... ERROR
+test_saved_bytes_do_not_follow_later_workspace_or_original_changes (test_project_baseline.ProjectBaselineTests.test_saved_bytes_do_not_follow_later_workspace_or_original_changes) ... ERROR
+
+======================================================================
+ERROR: test_links_are_rejected_without_reading_target (test_project_baseline.ProjectBaselineTests.test_links_are_rejected_without_reading_target)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-baseline-20261019/tests/test_project_baseline.py", line 31, in test_links_are_rejected_without_reading_target
+    from branchwrite.project_baseline import capture
+ModuleNotFoundError: No module named 'branchwrite.project_baseline'
+
+======================================================================
+ERROR: test_manifest_is_chunked_beyond_codec_container_limit (test_project_baseline.ProjectBaselineTests.test_manifest_is_chunked_beyond_codec_container_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-baseline-20261019/tests/test_project_baseline.py", line 36, in test_manifest_is_chunked_beyond_codec_container_limit
+    from branchwrite.project_baseline import capture,load
+ModuleNotFoundError: No module named 'branchwrite.project_baseline'
+
+======================================================================
+ERROR: test_missing_payload_is_rejected (test_project_baseline.ProjectBaselineTests.test_missing_payload_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-baseline-20261019/tests/test_project_baseline.py", line 25, in test_missing_payload_is_rejected
+    from branchwrite.project_baseline import capture,load
+ModuleNotFoundError: No module named 'branchwrite.project_baseline'
+
+======================================================================
+ERROR: test_saved_bytes_do_not_follow_later_workspace_or_original_changes (test_project_baseline.ProjectBaselineTests.test_saved_bytes_do_not_follow_later_workspace_or_original_changes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-baseline-20261019/tests/test_project_baseline.py", line 16, in test_saved_bytes_do_not_follow_later_workspace_or_original_changes
+    from branchwrite.project_baseline import capture,load
+ModuleNotFoundError: No module named 'branchwrite.project_baseline'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+FAILED (errors=4)

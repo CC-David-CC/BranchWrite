@@ -1,0 +1,250 @@
+{
+  "status": "PASS",
+  "tests": 48,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 6.751147416071035,
+  "results": [
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_blender_work_uses_same_worker_and_plan_has_no_domain_execution",
+      "status": "PASS",
+      "seconds": 0.0843963649822399
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them",
+      "status": "PASS",
+      "seconds": 0.041576300049200654
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_cli_session_exposes_operator_domain_configuration",
+      "status": "PASS",
+      "seconds": 0.014860129915177822
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_conflicting_domains_reject_before_session_state_creation",
+      "status": "PASS",
+      "seconds": 0.00017812801524996758
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_recovery_uses_original_domain_launch_without_regranting_new_work",
+      "status": "PASS",
+      "seconds": 0.08237320196349174
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_saved_exports_are_visible_and_survive_session_reopen",
+      "status": "PASS",
+      "seconds": 0.06193964707199484
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_branch_controls_wait_for_settled_work",
+      "status": "PASS",
+      "seconds": 0.04350311495363712
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_continue_while_working_does_not_queue_duplicate_resume",
+      "status": "PASS",
+      "seconds": 0.04382314998656511
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_continue_without_a_paused_turn_is_rejected_before_admission",
+      "status": "PASS",
+      "seconds": 0.06174161902163178
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_edit_first_request_reuses_the_recorded_prepared_model_prefix",
+      "status": "PASS",
+      "seconds": 0.10285594698507339
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_edit_first_request_uses_its_preceding_files_and_context",
+      "status": "PASS",
+      "seconds": 0.14353411993943155
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_explicit_continue_unpauses_a_stopped_worker",
+      "status": "PASS",
+      "seconds": 0.06458873103838414
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_explore_old_context_with_current_files_and_switch_back_without_inference",
+      "status": "PASS",
+      "seconds": 0.20522302901372313
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_failed_worker_open_requires_reopening_not_an_unhandled_queue",
+      "status": "PASS",
+      "seconds": 0.04124909499660134
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_input_worktree_preserves_private_file_modes",
+      "status": "PASS",
+      "seconds": 0.04151340201497078
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_invalid_control_target_rejects_before_admission",
+      "status": "PASS",
+      "seconds": 0.020901159034110606
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_lost_alternative_publication_reply_recovers_without_model_rerun",
+      "status": "PASS",
+      "seconds": 0.1433853810885921
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_new_sampler_does_not_rewrite_an_unresolved_saved_launch",
+      "status": "PASS",
+      "seconds": 0.10523211490362883
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context",
+      "status": "PASS",
+      "seconds": 0.123129692976363
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_queued_followups_combine_without_stopping_active_work",
+      "status": "PASS",
+      "seconds": 0.0845706220716238
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_selected_sampler_applies_only_to_new_admissions",
+      "status": "PASS",
+      "seconds": 0.04443552205339074
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_steering_interrupts_at_safe_boundary_then_uses_new_request",
+      "status": "PASS",
+      "seconds": 0.08381755196023732
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_switch_conflict_preserves_user_edit_and_original_control_id",
+      "status": "PASS",
+      "seconds": 0.16348528093658388
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_switch_restores_matching_files_then_followup_uses_that_exact_tip",
+      "status": "PASS",
+      "seconds": 0.20415063307154924
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch",
+      "status": "PASS",
+      "seconds": 0.10222459502983838
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_unknown_sampler_fails_before_opening_workflow",
+      "status": "PASS",
+      "seconds": 0.00333578500431031
+    },
+    {
+      "id": "test_interactive_session.InteractiveSessionTests.test_work_publishes_in_current_directory_and_followup_forks_saved_context",
+      "status": "PASS",
+      "seconds": 0.10257296997588128
+    },
+    {
+      "id": "test_interactive_control.InteractiveControlTests.test_interrupt_before_tool_then_resume_executes_once",
+      "status": "PASS",
+      "seconds": 0.010143004008568823
+    },
+    {
+      "id": "test_interactive_control.InteractiveControlTests.test_pause_after_consumed_effect_keeps_real_receipt",
+      "status": "PASS",
+      "seconds": 0.005909719970077276
+    },
+    {
+      "id": "test_interactive_terminal.InteractiveTerminalTests.test_escape_stops_work_without_erasing_the_draft",
+      "status": "PASS",
+      "seconds": 0.8148594179656357
+    },
+    {
+      "id": "test_interactive_terminal.InteractiveTerminalTests.test_missing_preview_is_a_notice_and_does_not_stop_the_session",
+      "status": "PASS",
+      "seconds": 0.15943163493648171
+    },
+    {
+      "id": "test_interactive_terminal.InteractiveTerminalTests.test_plan_aside_history_and_unknown_commands_are_not_work_requests",
+      "status": "PASS",
+      "seconds": 0.301249718060717
+    },
+    {
+      "id": "test_interactive_terminal.InteractiveTerminalTests.test_plan_mode_cannot_restore_or_edit_files_via_branch_controls",
+      "status": "PASS",
+      "seconds": 0.3426842399640009
+    },
+    {
+      "id": "test_interactive_terminal.InteractiveTerminalTests.test_preview_uses_selected_file_version_without_submitting_work_and_closes",
+      "status": "PASS",
+      "seconds": 0.26901033194735646
+    },
+    {
+      "id": "test_interactive_terminal.InteractiveTerminalTests.test_typing_survives_progress_tab_queues_and_enter_steers",
+      "status": "PASS",
+      "seconds": 0.26321717898827046
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_asset_count_limit_is_explicit_and_preserves_previous_preview",
+      "status": "PASS",
+      "seconds": 0.09733852103818208
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_document_selection_is_bounded_and_does_not_leak_non_web_files",
+      "status": "PASS",
+      "seconds": 0.01819938502740115
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_help_distinguishes_local_browser_from_remote_client",
+      "status": "PASS",
+      "seconds": 0.0121427959529683
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_host_and_absolute_url_aliases_are_rejected",
+      "status": "PASS",
+      "seconds": 0.06650384608656168
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_http_serves_exact_saved_version_and_relative_assets_without_model_work",
+      "status": "PASS",
+      "seconds": 0.017271747929044068
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_missing_default_has_actionable_choice_without_starting_server",
+      "status": "PASS",
+      "seconds": 0.08138228510506451
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_only_token_scoped_captured_resources_are_served",
+      "status": "PASS",
+      "seconds": 0.01938797894399613
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_refresh_retires_previous_url_and_close_releases_port",
+      "status": "PASS",
+      "seconds": 0.020315847010351717
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_slow_request_cannot_hold_preview_shutdown",
+      "status": "PASS",
+      "seconds": 2.0167905209818855
+    },
+    {
+      "id": "test_interactive_preview.PreviewTests.test_unreferenced_git_blob_corruption_is_not_accepted",
+      "status": "PASS",
+      "seconds": 0.014920959016308188
+    },
+    {
+      "id": "test_pdf_cli.PdfDefaultCliTests.test_document_tool_card_explains_builtin_packages_and_real_page_review",
+      "status": "PASS",
+      "seconds": 9.046902414411306e-05
+    },
+    {
+      "id": "test_pdf_cli.PdfDefaultCliTests.test_normal_work_launch_includes_page_image_feedback_without_pdf_config",
+      "status": "PASS",
+      "seconds": 0.00026307604275643826
+    },
+    {
+      "id": "test_pdf_cli.PdfDefaultCliTests.test_readonly_launch_does_not_gain_python_execution",
+      "status": "PASS",
+      "seconds": 0.0003279750235378742
+    }
+  ]
+}

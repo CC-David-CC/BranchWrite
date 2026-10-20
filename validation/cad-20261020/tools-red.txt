@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_cad_tools (unittest.loader._FailedTest.test_cad_tools)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_cad_tools
+Traceback (most recent call last):
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_tools.py", line 7, in <module>
+    from branchwrite.cad_tools import CadCapability,CadPolicy
+ModuleNotFoundError: No module named 'branchwrite.cad_tools'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

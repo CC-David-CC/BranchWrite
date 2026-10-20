@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "status": "COMPARISON_FAIL_EXACT_TEACHING_PAIR_PLUS_TWO_TRANSFER_CASES_PASS",
+  "comparison": {
+    "tiny-quote": {
+      "status": "PASS",
+      "passed": 1,
+      "failed": 0,
+      "thinking_median": 1959
+    },
+    "existing-ten": {
+      "status": "FAIL",
+      "passed": 7,
+      "failed": 3,
+      "thinking_median": 1330.0
+    },
+    "expanded-55": {
+      "status": "FAIL",
+      "passed": 7,
+      "failed": 3,
+      "thinking_median": 843.0
+    }
+  },
+  "exact_example": {
+    "status": "BOUNDED_EXACT_DEMONSTRATION_AND_TWO_NEARBY_TRANSFER_CASES_PASS",
+    "seen_cases": 1,
+    "transfer_cases": 2,
+    "heldout_qualification": false,
+    "profiles": {
+      "seen-exact": "28c765ed95ce356f9aa02b311472825d6e6863155dfeb879c4cb07447102a9af",
+      "new-seed": "28c765ed95ce356f9aa02b311472825d6e6863155dfeb879c4cb07447102a9af"
+    },
+    "cases": [
+      {
+        "arm": "seen-exact",
+        "id": "TC011-heldout-1b6c0b0f6bcce5-step0",
+        "status": "PASS",
+        "stdout_utf8_hex": "c3a92065cc812024484f4d452031623663306230663662636365350a",
+        "expected_stdout_utf8_hex": "c3a92065cc812024484f4d452031623663306230663662636365350a",
+        "thinking": {
+          "schema": 1,
+          "phase": "final",
+          "max_tokens": 4096,
+          "reasoning_tokens": 1359,
+          "closing_tokens": 1,
+          "final_tokens": 77,
+          "close_reason": "natural"
+        },
+        "question_seconds": 44.04041458899155
+      },
+      {
+        "arm": "new-seed",
+        "id": "TC011-heldout-c5df535205f37a-step0",
+        "status": "PASS",
+        "stdout_utf8_hex": "c3a92065cc812024484f4d452063356466353335323035663337610a",
+        "expected_stdout_utf8_hex": "c3a92065cc812024484f4d452063356466353335323035663337610a",
+        "thinking": {
+          "schema": 1,
+          "phase": "final",
+          "max_tokens": 4096,
+          "reasoning_tokens": 907,
+          "closing_tokens": 1,
+          "final_tokens": 77,
+          "close_reason": "natural"
+        },
+        "question_seconds": 30.356957026058808
+      },
+      {
+        "arm": "new-seed",
+        "id": "TC011-heldout-c5df535205f37a-step1",
+        "status": "PASS",
+        "stdout_utf8_hex": "c3a92065cc812024484f4d45206335646635333532303566333761",
+        "expected_stdout_utf8_hex": "c3a92065cc812024484f4d45206335646635333532303566333761",
+        "thinking": {
+          "schema": 1,
+          "phase": "final",
+          "max_tokens": 4096,
+          "reasoning_tokens": 895,
+          "closing_tokens": 1,
+          "final_tokens": 81,
+          "close_reason": "natural"
+        },
+        "question_seconds": 30.14992281794548
+      }
+    ],
+    "scope": "Exact first question/desired response deliberately supplied by owner. Transfer changes random marker and final-newline presence. Not OOD robustness,statistical accuracy, numerical or restart oracle. Same comparator/settings/schema/model; only the system prefix changed.",
+    "prefix_sha256": "84c6e4d1d12acfdef90a6d39473856c9f97100982dc72df09813ccdf4384e9b2"
+  },
+  "private_comparison_archive": {
+    "path": "box-git:/srv/data/git/private_context_cow.evidence/20261018-json-unicode-final-v1/evidence.tar.gz",
+    "bytes": 31007836,
+    "sha256": "26665be4033fb273ecfc47045405a26eb341bb3c788f81266a4ebeb999223aed"
+  },
+  "private_exact_archive": {
+    "path": "box-git:/srv/data/git/private_context_cow.evidence/20261018-unicode-exact-example-v1/evidence.tar.gz",
+    "bytes": 3612434,
+    "sha256": "ea94e704bf42c2d23209c4f02e6cc3e545198e3d9644e8f13a76604e0d8faf30"
+  },
+  "cow_evidence_commit": "9f7ad6e400d6e350256419d8fce9cdcc1fd5c376",
+  "nested_file_feature": {
+    "commit": "4ca28a711652b0e1a5047b6db9ed65af828e0706",
+    "private_branch": "fix/branchwrite-nested-file-create-20261018",
+    "qualification": "87 unique CPU filesystem/Chromium/grammar methods PASS;actual autonomousL02 UNRUN",
+    "integration": "Not yet integrated into this main working branch."
+  },
+  "cleanup": "Both model services/native exited0;client/tunnels/keys/credentials retired;chat OFF.",
+  "scope": "No new numerical/restart/VC/G qualification. No model/sampler/schema/comparator changes for the exact-example experiment;only teaching prefix. Exact seen case cannot remain a held-out evaluation. Q8 deferred,Windows steering,private LAN only."
+}

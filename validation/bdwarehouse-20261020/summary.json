@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "purpose": "initial CAD environment includes the separately installed standard-parts companion",
+  "model_inference_in_this_check": false,
+  "packages": {
+    "build123d": "0.13.0",
+    "bd-warehouse": "0.4.0",
+    "bd-materials": "0.2.4"
+  },
+  "python": "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/cadvenv/bin/python",
+  "client_host": "llm-49/r4090",
+  "new_tests": 4,
+  "regressions": {
+    "status": "PASS",
+    "tests": 53,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 40.583771642064676
+  },
+  "initial_expected_failures": {
+    "failures": 3,
+    "errors": 1,
+    "reason": "bd_warehouse absent before installation"
+  },
+  "lock_sha256": "a124c9b0a7018216b15c2a3e93f083ad3f5176199a2459529e7b9e4d701c1caa",
+  "example_export": {
+    "path": "/home/dflanag3/spatial-artifacts/bw-bdwarehouse-20261020/example-export/m4_socket_head_screw.step",
+    "bytes": 35651,
+    "sha256": "a94b0a71ff9044e1bb00709bebdf54a84fec8a4d9455bb8ad9c1c34b7adcf229"
+  },
+  "limitations": [
+    "Only simplified M4 screw and its Normal clearance hole qualified here, not the entire catalogue",
+    "No hardware-assembly design-acceptance policy added",
+    "No G1-G5 or model reasoning qualification from CPU setup checks"
+  ],
+  "private_only": true
+}

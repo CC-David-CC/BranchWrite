@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "label": "explore",
+      "color": "green",
+      "viewport": [
+        1280,
+        800
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "f0a649602a5a34ac3b11f276bf97b3745a49559bc44fc146507ab445674e5efc",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "bird button -> feathers fact"
+          ],
+          [
+            "heading-color",
+            "rgb(0, 128, 0)"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532975]",
+        "pid_ns": "pid:[4026532973]",
+        "mount_ns": "mnt:[4026532970]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 979056,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004200374940410256
+      },
+      "runtime_errors": [],
+      "source_sha256": "d29b1deeea4b9da6507c9f3214064ed2bf1f3f17cd483ee9e294a91d3eb01a88",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-fast-integration-20261020/browser/explore-1280.png"
+    },
+    {
+      "label": "explore",
+      "color": "green",
+      "viewport": [
+        375,
+        812
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "f0a649602a5a34ac3b11f276bf97b3745a49559bc44fc146507ab445674e5efc",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "bird button -> feathers fact"
+          ],
+          [
+            "heading-color",
+            "rgb(0, 128, 0)"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026533172]",
+        "pid_ns": "pid:[4026533168]",
+        "mount_ns": "mnt:[4026532971]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 979219,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004155720118433237
+      },
+      "runtime_errors": [],
+      "source_sha256": "d29b1deeea4b9da6507c9f3214064ed2bf1f3f17cd483ee9e294a91d3eb01a88",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-fast-integration-20261020/browser/explore-375.png"
+    }
+  ]
+}

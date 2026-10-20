@@ -1,0 +1,45 @@
+test_cli_freezes_read_and_edit_directory_without_creation_rights (test_directory_grants.DirectoryGrantTests.test_cli_freezes_read_and_edit_directory_without_creation_rights) ... usage: branchwrite [-h]
+                   {check,canonicalize,run,step,code,resume,apply,export,review,status} ...
+branchwrite: error: unrecognized arguments: --read-dir . --edit-dir src
+FAIL
+test_exact_sorted_files_skip_git_and_keep_unicode (test_directory_grants.DirectoryGrantTests.test_exact_sorted_files_skip_git_and_keep_unicode) ... ERROR
+test_linked_directory_and_escape_are_refused (test_directory_grants.DirectoryGrantTests.test_linked_directory_and_escape_are_refused) ... ERROR
+test_linked_file_in_selected_tree_is_refused (test_directory_grants.DirectoryGrantTests.test_linked_file_in_selected_tree_is_refused) ... ERROR
+
+======================================================================
+ERROR: test_exact_sorted_files_skip_git_and_keep_unicode (test_directory_grants.DirectoryGrantTests.test_exact_sorted_files_skip_git_and_keep_unicode)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-directory-grants-20261019/tests/test_directory_grants.py", line 15, in test_exact_sorted_files_skip_git_and_keep_unicode
+    from branchwrite.project_scope import expand_directories
+ModuleNotFoundError: No module named 'branchwrite.project_scope'
+
+======================================================================
+ERROR: test_linked_directory_and_escape_are_refused (test_directory_grants.DirectoryGrantTests.test_linked_directory_and_escape_are_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-directory-grants-20261019/tests/test_directory_grants.py", line 18, in test_linked_directory_and_escape_are_refused
+    from branchwrite.project_scope import expand_directories
+ModuleNotFoundError: No module named 'branchwrite.project_scope'
+
+======================================================================
+ERROR: test_linked_file_in_selected_tree_is_refused (test_directory_grants.DirectoryGrantTests.test_linked_file_in_selected_tree_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-directory-grants-20261019/tests/test_directory_grants.py", line 24, in test_linked_file_in_selected_tree_is_refused
+    from branchwrite.project_scope import expand_directories
+ModuleNotFoundError: No module named 'branchwrite.project_scope'
+
+======================================================================
+FAIL: test_cli_freezes_read_and_edit_directory_without_creation_rights (test_directory_grants.DirectoryGrantTests.test_cli_freezes_read_and_edit_directory_without_creation_rights)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-directory-grants-20261019/tests/test_directory_grants.py", line 35, in test_cli_freezes_read_and_edit_directory_without_creation_rights
+    self.assertEqual(code,0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+FAILED (failures=1, errors=3)

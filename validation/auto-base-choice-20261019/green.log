@@ -1,0 +1,15 @@
+test_auto_admission_records_exact_choice_without_proposal (test_auto_base_choice.AutoBaseChoiceTests.test_auto_admission_records_exact_choice_without_proposal) ... ok
+test_longest_compatible_fitting_prefix_and_stable_tie (test_auto_base_choice.AutoBaseChoiceTests.test_longest_compatible_fitting_prefix_and_stable_tie) ... ok
+test_no_compatible_base_is_explicit_failure (test_auto_base_choice.AutoBaseChoiceTests.test_no_compatible_base_is_explicit_failure) ... ok
+test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) ... ok
+test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) ... ok
+test_incompatible_selection_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_incompatible_selection_rejected) ... ok
+test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) ... ok
+test_real_cli_parser_saves_choice_before_execution (test_base_choice_launch.BaseChoiceLaunchTests.test_real_cli_parser_saves_choice_before_execution) ... ok
+test_saved_choice_survives_reopen_and_changed_choice_is_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_saved_choice_survives_reopen_and_changed_choice_is_rejected) ... ok
+test_selected_snapshot_and_provenance_enter_existing_launch (test_base_choice_launch.BaseChoiceLaunchTests.test_selected_snapshot_and_provenance_enter_existing_launch) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.020s
+
+OK

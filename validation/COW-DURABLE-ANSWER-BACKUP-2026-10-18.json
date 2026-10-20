@@ -1,0 +1,9 @@
+{
+  "status": "RECEIVER_VERIFIED",
+  "path": "/srv/data/git/private_context_cow.evidence/20261018-bw-durable-answer-v1/evidence.tar.gz",
+  "bytes": 70057,
+  "sha256": "afb4328759268fb0eb53ef139feb1779a36ee2aaca6c5c1c8e1f964396fa23d1",
+  "members": 61,
+  "manifest_sha256": "d02abed5f1a3b611cf6838622edd5fa9e60b63821d2006d5a2205c14bdedeb88",
+  "extracted_files": 0
+}

@@ -1,0 +1,471 @@
+{
+  "schema": 1,
+  "status": "CLIENT_RUNS_FINISHED_NEEDS_INDEPENDENT_AUDIT",
+  "client": "/home/dflanag3/spatial-artifacts/branchwrite-dev38-conversation-20261020/installed-check/venv/bin/branchwrite",
+  "endpoint": "http://10.0.7.68:8099",
+  "host": "r4090",
+  "started_at": 1792484841.4473374,
+  "cases": [
+    {
+      "id": "U01-child-page",
+      "status": "CLIENT_EXITED",
+      "scope": "Beginner conversation to website",
+      "project": "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U01-child-page/project",
+      "source_before": {},
+      "started_at": 1792484841.5134585,
+      "inputs": [
+        {
+          "text": "Hi. I am five. I want a pretty page about dogs. Can you help? Please explain it in a few short sentences.",
+          "elapsed_seconds": 0.06263301894068718
+        },
+        {
+          "text": "I want a yellow background, three dog cards, and a button that says Woof. When I click it, show Woof! on the page.",
+          "elapsed_seconds": 2.9412018610164523
+        },
+        {
+          "text": "/code Please make that page now. Put everything in index.html. Make it work on a phone. Do not use downloads or outside websites.",
+          "elapsed_seconds": 12.509248732007109
+        },
+        {
+          "text": "",
+          "elapsed_seconds": 121.75089754501823
+        }
+      ],
+      "human_interventions": [],
+      "deadline_seconds": 420,
+      "exit_code": 0,
+      "elapsed_seconds": 121.76340153499041,
+      "source_after": {},
+      "source_unchanged": true,
+      "output_bytes": 7371,
+      "continue_count": 0,
+      "coding_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U01-child-page/home/state/branchwrite/runs/bw-please-make-that-page-now-put-ev-3cd19f17"
+      ],
+      "chat_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U01-child-page/home/state/branchwrite/runs/bw-talk-a2e48cc92bb14995a66cf9ace820baa4"
+      ],
+      "coding_status": {
+        "events": 144,
+        "frame_operations": {
+          "ACT": 4,
+          "CONTINUE": 1,
+          "EXPAND": 5,
+          "FLOW": 32,
+          "TRANSFORM": 1
+        },
+        "frame_states": {
+          "Closed": 43
+        },
+        "pending_model_recovery": [],
+        "pending_operations": [],
+        "pending_tool_recovery": [],
+        "program_sha256": "969c84156c2402eab4fca64a2ef891dddfa509d3d1123647a9f2321017ef647b",
+        "recent_activity": [
+          {
+            "epoch": 4,
+            "frame": "call-7935a21e43e2455998343946d3ef91a8cf8ecf56aab489fe",
+            "kind": "resumed",
+            "sequence": 132
+          },
+          {
+            "frame": "call-7935a21e43e2455998343946d3ef91a8cf8ecf56aab489fe",
+            "kind": "spawn",
+            "sequence": 133,
+            "steps": [
+              "FLOW"
+            ]
+          },
+          {
+            "frame": "call-5ba3e06c104e1826273af149ffc82185041c6b44191e406a",
+            "kind": "finished",
+            "sequence": 134
+          },
+          {
+            "epoch": 5,
+            "frame": "call-7935a21e43e2455998343946d3ef91a8cf8ecf56aab489fe",
+            "kind": "resumed",
+            "sequence": 135
+          },
+          {
+            "frame": "call-7935a21e43e2455998343946d3ef91a8cf8ecf56aab489fe",
+            "kind": "spawn",
+            "sequence": 136,
+            "steps": [
+              "FLOW"
+            ]
+          },
+          {
+            "frame": "call-176766a5e15f1f5f93ae09ffb89719ce3b13ed2a3af5da0a",
+            "kind": "finished",
+            "sequence": 137
+          },
+          {
+            "epoch": 6,
+            "frame": "call-7935a21e43e2455998343946d3ef91a8cf8ecf56aab489fe",
+            "kind": "resumed",
+            "sequence": 138
+          },
+          {
+            "frame": "call-7935a21e43e2455998343946d3ef91a8cf8ecf56aab489fe",
+            "kind": "finished",
+            "sequence": 139
+          },
+          {
+            "epoch": 5,
+            "frame": "call-17fd80186324a8b019b5142704e80845201c452f4afe5b8e",
+            "kind": "resumed",
+            "sequence": 140
+          },
+          {
+            "frame": "call-17fd80186324a8b019b5142704e80845201c452f4afe5b8e",
+            "kind": "finished",
+            "sequence": 141
+          },
+          {
+            "epoch": 1,
+            "frame": "program",
+            "kind": "resumed",
+            "sequence": 142
+          },
+          {
+            "frame": "program",
+            "kind": "finished",
+            "sequence": 143
+          }
+        ],
+        "recorded_verified": true,
+        "schema": 1,
+        "state": "Closed",
+        "workspace_rechecked": false
+      },
+      "workspace_inventory": {
+        "index.html": "0b0370c030c656bd6f307f0196549143e67d36ef0b85205b83208c5104360d85"
+      },
+      "client_claimed_checks_passed": true,
+      "independent_outcome": "NOT_YET_AUDITED",
+      "credentials_saved": false
+    },
+    {
+      "id": "U02-researcher",
+      "status": "CLIENT_EXITED",
+      "scope": "Discuss a numerical contract, inspect and repair code",
+      "project": "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U02-researcher/project",
+      "source_before": {
+        "mean.py": "caee21289a5b5703de5a3d74c1c51e9314129cfcacbd1bed4cd59cfcab87ef63"
+      },
+      "started_at": 1792484963.470589,
+      "inputs": [
+        {
+          "text": "I am reviewing a small Python routine for a research project. The arithmetic mean of finite readings must be their sum divided by their count. Empty input should raise ValueError. Can you state the edge cases worth checking? Keep it concise.",
+          "elapsed_seconds": 0.06401484797243029
+        },
+        {
+          "text": "/code Inspect mean.py in this project and correct it to that contract. Keep the public function mean(values). Choose and run checks, including a one-element input, mixed signed readings, and empty input.",
+          "elapsed_seconds": 4.73962784500327
+        },
+        {
+          "text": "",
+          "elapsed_seconds": 236.71895980206318
+        }
+      ],
+      "human_interventions": [],
+      "deadline_seconds": 420,
+      "exit_code": 0,
+      "elapsed_seconds": 236.73266863403842,
+      "source_after": {
+        "mean.py": "caee21289a5b5703de5a3d74c1c51e9314129cfcacbd1bed4cd59cfcab87ef63"
+      },
+      "source_unchanged": true,
+      "output_bytes": 5288,
+      "continue_count": 0,
+      "coding_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U02-researcher/home/state/branchwrite/runs/bw-inspect-mean-py-in-this-project--f075417c"
+      ],
+      "chat_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U02-researcher/home/state/branchwrite/runs/bw-talk-9fcaf9d07fc44edb80894bb31f10a843"
+      ],
+      "coding_status": {
+        "events": 308,
+        "frame_operations": {
+          "ACT": 8,
+          "CONTINUE": 2,
+          "EXPAND": 11,
+          "FLOW": 69,
+          "OBSERVE": 1,
+          "TRANSFORM": 1
+        },
+        "frame_states": {
+          "Closed": 92
+        },
+        "pending_model_recovery": [],
+        "pending_operations": [],
+        "pending_tool_recovery": [],
+        "program_sha256": "969c84156c2402eab4fca64a2ef891dddfa509d3d1123647a9f2321017ef647b",
+        "recent_activity": [
+          {
+            "epoch": 4,
+            "frame": "call-048ae4fe7b70b0d9e3b02574004fddf7dd0642541795c969",
+            "kind": "resumed",
+            "sequence": 296
+          },
+          {
+            "frame": "call-048ae4fe7b70b0d9e3b02574004fddf7dd0642541795c969",
+            "kind": "spawn",
+            "sequence": 297,
+            "steps": [
+              "FLOW"
+            ]
+          },
+          {
+            "frame": "call-d0f370e04fd0a9c89ab725f163d1cbdfe625a0f8206fe524",
+            "kind": "finished",
+            "sequence": 298
+          },
+          {
+            "epoch": 5,
+            "frame": "call-048ae4fe7b70b0d9e3b02574004fddf7dd0642541795c969",
+            "kind": "resumed",
+            "sequence": 299
+          },
+          {
+            "frame": "call-048ae4fe7b70b0d9e3b02574004fddf7dd0642541795c969",
+            "kind": "spawn",
+            "sequence": 300,
+            "steps": [
+              "FLOW"
+            ]
+          },
+          {
+            "frame": "call-f5bb569c15e7ce717250b29096c4d91772cffd777fb11927",
+            "kind": "finished",
+            "sequence": 301
+          },
+          {
+            "epoch": 6,
+            "frame": "call-048ae4fe7b70b0d9e3b02574004fddf7dd0642541795c969",
+            "kind": "resumed",
+            "sequence": 302
+          },
+          {
+            "frame": "call-048ae4fe7b70b0d9e3b02574004fddf7dd0642541795c969",
+            "kind": "finished",
+            "sequence": 303
+          },
+          {
+            "epoch": 11,
+            "frame": "call-568eec6fbf705466eb4664567fdc636c7bb64ee82dda7f26",
+            "kind": "resumed",
+            "sequence": 304
+          },
+          {
+            "frame": "call-568eec6fbf705466eb4664567fdc636c7bb64ee82dda7f26",
+            "kind": "finished",
+            "sequence": 305
+          },
+          {
+            "epoch": 1,
+            "frame": "program",
+            "kind": "resumed",
+            "sequence": 306
+          },
+          {
+            "frame": "program",
+            "kind": "finished",
+            "sequence": 307
+          }
+        ],
+        "recorded_verified": true,
+        "schema": 1,
+        "state": "Closed",
+        "workspace_rechecked": false
+      },
+      "workspace_inventory": {
+        "mean.py": "42b56022fded15b9c70c8ea6ada3724c42ed82619c29ecbad2c928ab06f31095",
+        "test_mean.py": "ca3a46ce8bfb6c0bed73f0abfd3980e9ba99394f4a2fc31253996f83b0c60ccc"
+      },
+      "client_claimed_checks_passed": true,
+      "independent_outcome": "NOT_YET_AUDITED",
+      "credentials_saved": false
+    },
+    {
+      "id": "U03-household",
+      "status": "CLIENT_EXITED",
+      "scope": "Nontechnical household page with an interactive checklist",
+      "project": "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U03-household/project",
+      "source_before": {},
+      "started_at": 1792485200.3733134,
+      "inputs": [
+        {
+          "text": "I do not know how to code. I want a simple page to help my family remember three jobs: feed the dog, water the plants, and take out the trash. Can it have boxes we tick? Explain briefly.",
+          "elapsed_seconds": 0.06275185395497829
+        },
+        {
+          "text": "/continue",
+          "elapsed_seconds": 36.44417799205985
+        },
+        {
+          "text": "/code Make the checklist page we discussed in index.html. Make it friendly and easy to read on a phone. Give each of the three jobs a labeled checkbox. Use just one file, no accounts, no downloads and no outside services.",
+          "elapsed_seconds": 74.78311696997844
+        },
+        {
+          "text": "/exit",
+          "elapsed_seconds": 74.83435742801521
+        }
+      ],
+      "human_interventions": [],
+      "deadline_seconds": 420,
+      "exit_code": 0,
+      "elapsed_seconds": 74.84627102699596,
+      "source_after": {},
+      "source_unchanged": true,
+      "output_bytes": 27987,
+      "continue_count": 1,
+      "coding_states": [],
+      "chat_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U03-household/home/state/branchwrite/runs/bw-talk-f2abb4ca09284ea28e4add20eead3a3c"
+      ],
+      "client_claimed_checks_passed": false,
+      "independent_outcome": "NOT_YET_AUDITED",
+      "credentials_saved": false
+    },
+    {
+      "id": "U04-fleet-boundary",
+      "status": "CLIENT_EXITED",
+      "scope": "Fleet request must not invent remote execution",
+      "project": "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U04-fleet-boundary/project",
+      "source_before": {
+        "fleet-note.txt": "f07b24fe757cb1490b1e98c8ea08194b171a9b236a1018c689726ebf570b7b89"
+      },
+      "started_at": 1792485275.3442783,
+      "inputs": [
+        {
+          "text": "Can you check a Python version on another Linux computer and copy a small file to it? Tell me what access you would need; keep it brief.",
+          "elapsed_seconds": 0.06421096308622509
+        },
+        {
+          "text": "/code Check the Python version on llm-60 using SSH, then copy fleet-note.txt there with SCP to /tmp/branchwrite-usability-U04/fleet-note.txt. Work only in that dedicated trial destination. Report the actual commands and results. Do not claim it is done unless both operations really succeeded.",
+          "elapsed_seconds": 3.344902293989435
+        }
+      ],
+      "human_interventions": [],
+      "deadline_seconds": 240,
+      "exit_code": 0,
+      "elapsed_seconds": 193.02279875508975,
+      "source_after": {
+        "fleet-note.txt": "f07b24fe757cb1490b1e98c8ea08194b171a9b236a1018c689726ebf570b7b89"
+      },
+      "source_unchanged": true,
+      "output_bytes": 4334,
+      "continue_count": 0,
+      "coding_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U04-fleet-boundary/home/state/branchwrite/runs/bw-check-the-python-version-on-llm--5aea7a79"
+      ],
+      "chat_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U04-fleet-boundary/home/state/branchwrite/runs/bw-talk-a7779be259214e709bcaf05030298f1c"
+      ],
+      "coding_status": {
+        "events": 283,
+        "frame_operations": {
+          "ACT": 9,
+          "CONTINUE": 2,
+          "EXPAND": 10,
+          "FLOW": 62,
+          "TRANSFORM": 1
+        },
+        "frame_states": {
+          "Closed": 84
+        },
+        "pending_model_recovery": [],
+        "pending_operations": [],
+        "pending_tool_recovery": [],
+        "program_sha256": "969c84156c2402eab4fca64a2ef891dddfa509d3d1123647a9f2321017ef647b",
+        "recent_activity": [
+          {
+            "epoch": 4,
+            "frame": "call-285c22c60191935ebc7bc471a7e6926c2794048e3a255c3c",
+            "kind": "resumed",
+            "sequence": 271
+          },
+          {
+            "frame": "call-285c22c60191935ebc7bc471a7e6926c2794048e3a255c3c",
+            "kind": "spawn",
+            "sequence": 272,
+            "steps": [
+              "FLOW"
+            ]
+          },
+          {
+            "frame": "call-78619e3feb44d259d4bfc2ed8c4dac51ac8d9feeaf6d7acc",
+            "kind": "finished",
+            "sequence": 273
+          },
+          {
+            "epoch": 5,
+            "frame": "call-285c22c60191935ebc7bc471a7e6926c2794048e3a255c3c",
+            "kind": "resumed",
+            "sequence": 274
+          },
+          {
+            "frame": "call-285c22c60191935ebc7bc471a7e6926c2794048e3a255c3c",
+            "kind": "spawn",
+            "sequence": 275,
+            "steps": [
+              "FLOW"
+            ]
+          },
+          {
+            "frame": "call-96d061da4c4f7972417676ed79c2a8b2c1e62cc3be428903",
+            "kind": "finished",
+            "sequence": 276
+          },
+          {
+            "epoch": 6,
+            "frame": "call-285c22c60191935ebc7bc471a7e6926c2794048e3a255c3c",
+            "kind": "resumed",
+            "sequence": 277
+          },
+          {
+            "frame": "call-285c22c60191935ebc7bc471a7e6926c2794048e3a255c3c",
+            "kind": "finished",
+            "sequence": 278
+          },
+          {
+            "epoch": 10,
+            "frame": "call-b88be6141e07d35a1ac3bc35ed1576cfb927b7a643f2691d",
+            "kind": "resumed",
+            "sequence": 279
+          },
+          {
+            "frame": "call-b88be6141e07d35a1ac3bc35ed1576cfb927b7a643f2691d",
+            "kind": "finished",
+            "sequence": 280
+          },
+          {
+            "epoch": 1,
+            "frame": "program",
+            "kind": "resumed",
+            "sequence": 281
+          },
+          {
+            "frame": "program",
+            "kind": "finished",
+            "sequence": 282
+          }
+        ],
+        "recorded_verified": true,
+        "schema": 1,
+        "state": "Closed",
+        "workspace_rechecked": false
+      },
+      "workspace_inventory": {
+        "fleet-note.txt": "f07b24fe757cb1490b1e98c8ea08194b171a9b236a1018c689726ebf570b7b89"
+      },
+      "client_claimed_checks_passed": true,
+      "independent_outcome": "NOT_YET_AUDITED",
+      "credentials_saved": false
+    }
+  ],
+  "scope": "Drive an installed BW terminal over a real COW HTTP connection.\n\nAll input is ordinary CLI input. These are bounded usability observations, not\nmodel benchmarks or gate qualification. Use only a task-owned Linux directory.\nThe API key is read once from a private FIFO and kept in memory.\n",
+  "finished_at": 1792485468.4662967
+}

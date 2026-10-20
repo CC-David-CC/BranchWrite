@@ -1,0 +1,32 @@
+test_cli_freezes_read_and_edit_directory_without_creation_rights (test_directory_grants.DirectoryGrantTests.test_cli_freezes_read_and_edit_directory_without_creation_rights) ... ok
+test_exact_sorted_files_skip_git_and_keep_unicode (test_directory_grants.DirectoryGrantTests.test_exact_sorted_files_skip_git_and_keep_unicode) ... ok
+test_linked_directory_and_escape_are_refused (test_directory_grants.DirectoryGrantTests.test_linked_directory_and_escape_are_refused) ... ok
+test_linked_file_in_selected_tree_is_refused (test_directory_grants.DirectoryGrantTests.test_linked_file_in_selected_tree_is_refused) ... ok
+test_ancestor_scopes_walk_the_union_once (test_directory_scope_overlap.ScopeOverlapTests.test_ancestor_scopes_walk_the_union_once) ... FAIL
+test_empty_scopes_do_no_walk (test_directory_scope_overlap.ScopeOverlapTests.test_empty_scopes_do_no_walk) ... ok
+test_invalid_explicit_scope_is_not_hidden_by_root (test_directory_scope_overlap.ScopeOverlapTests.test_invalid_explicit_scope_is_not_hidden_by_root) ... ok
+test_root_scope_covers_all_named_children (test_directory_scope_overlap.ScopeOverlapTests.test_root_scope_covers_all_named_children) ... FAIL
+test_sibling_name_prefix_is_not_ancestry (test_directory_scope_overlap.ScopeOverlapTests.test_sibling_name_prefix_is_not_ancestry) ... ok
+
+======================================================================
+FAIL: test_ancestor_scopes_walk_the_union_once (test_directory_scope_overlap.ScopeOverlapTests.test_ancestor_scopes_walk_the_union_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC14-repository-scope-dev15-20261019-v1/source/tests/test_directory_scope_overlap.py", line 23, in test_ancestor_scopes_walk_the_union_once
+    self.assertEqual(calls,1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: 3 != 1
+
+======================================================================
+FAIL: test_root_scope_covers_all_named_children (test_directory_scope_overlap.ScopeOverlapTests.test_root_scope_covers_all_named_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC14-repository-scope-dev15-20261019-v1/source/tests/test_directory_scope_overlap.py", line 27, in test_root_scope_covers_all_named_children
+    self.assertEqual(calls,1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: 4 != 1
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.013s
+
+FAILED (failures=2)

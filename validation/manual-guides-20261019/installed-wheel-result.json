@@ -1,0 +1,44 @@
+{
+  "status": "INSTALLED_CLIENT_CONTROL_PASS",
+  "wheel_sha256": "6ea1b1cfe521a1349310f71811eb403d3c8dff61ea58a2780eba0d4a43824537",
+  "checks": [
+    {
+      "id": "wheel-boundary",
+      "status": "PASS",
+      "assets": {
+        "branchwrite/_examples/coding.bw": "cdfac36f6fe9d1b7571ee5437e39c2ced28bfed330f2487e4a0feeb3b55c9238",
+        "branchwrite/_examples/line-file-worked-examples.txt": "ac811099e2d58f8f1a8ee0e88626048d24552ed2b927ac9b5398889a9a9d7776",
+        "branchwrite/_examples/literal-file-worked-examples.txt": "f8891dbb0980a5578ed7436c1ae5b212e853b280a57c41bffbb4588c61d95251",
+        "branchwrite/_examples/terminal-worked-examples.txt": "2a33b84781509f23d117c1502691a8cab1e767a8bf0bde3f0552bfca2ed9bfbe",
+        "branchwrite/_examples/tool-worked-examples.txt": "410e5092a535372d80e712acbe784aedfde28782a8f920dea9d6ad7936ee656c"
+      }
+    },
+    {
+      "id": "installed-console",
+      "status": "PASS"
+    },
+    {
+      "id": "installed-tools-and-assets",
+      "status": "PASS",
+      "observed": {
+        "status": "PASS",
+        "python": "3.14.4",
+        "module_path": "/home/dflanag3/spatial-artifacts/branchwrite-manual-guide-checks-20261019-v1/install-check/venv/lib/python3.14/site-packages/branchwrite/__init__.py",
+        "workflow_sha256": "cdfac36f6fe9d1b7571ee5437e39c2ced28bfed330f2487e4a0feeb3b55c9238",
+        "prefix_sha256": "3d8f34e03272f37c820adf658f957c74d0b08897bd8cbe342921d17fae21a766",
+        "created": "created",
+        "shell": "exited",
+        "isolation": {
+          "kind": "bubblewrap-terminal-v1",
+          "pid_ns": "pid:[4026532778]",
+          "net_ns": "net:[4026532781]",
+          "mount_ns": "mnt:[4026532775]",
+          "worker_exited": true,
+          "launcher_pid": 2337746,
+          "namespace_members_after": []
+        }
+      }
+    }
+  ],
+  "scope": "Real Linux file creation/read-only sandbox and packaged assets; no inference, new installed-agent GPU run, adversarial security certification or release qualification."
+}

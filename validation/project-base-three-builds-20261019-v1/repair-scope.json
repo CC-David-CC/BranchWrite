@@ -1,0 +1,10 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "scope": "Real repair of rejected A implementation via compact B and installeddev21 proposed-base CLI",
+  "original_model_run": "A24",
+  "source_original": "Q8-generated A module; no parent code patch",
+  "feedback_attempt": 1,
+  "protected_tests": 12,
+  "selection": "host fixture proposal; not automatic model routing",
+  "independent_review": "fresh deeper/mixed-family cases after completion"
+}

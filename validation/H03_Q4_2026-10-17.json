@@ -1,0 +1,244 @@
+{
+  "schema": 1,
+  "status": "H03_BOUNDED_WITH_EXPLICIT_OBSERVER_RETRY_PASS",
+  "host": "llm-60",
+  "GPU": [
+    0
+  ],
+  "base": "96a303eab517da27c2dcfe577001ba9ffeb296eb",
+  "sources": {
+    "branchwrite/browser_capture.py": "8b65d3498e86a4f75c607df231d69dbfbba552106c1d8a81b00d22e473336b49",
+    "branchwrite/browser_isolation.py": "36243fb1c5bf9ec8ab414aa67b2e40d786fff9e329d1c321e494eb15ad484c23",
+    "branchwrite/browser_worker.py": "26e412dbe7f37927dd7546733a69ee58329446e539c0061df13d384c58c6a384",
+    "branchwrite/execution.py": "b18a6c5a7447a6d6390dfe9db98e9e654fd745f777fcbc7cff75b5e7cf45ba03",
+    "tools/capture_page.py": "d8e41d2ff4652af2a71dceae88aa955daf283e68cc0f0f7756a6ad1ee27fe527",
+    "tools/run_cow_coding_pilot.py": "cfded5f5fa41c9f63c3acd6a4894361afc114451a0ccabb5f62ff71f8192150f",
+    "tests/test_html_inspection.py": "55fd3309c94f39641bf041c71235fa18e6ac797e99994648e70a99b4388dedda",
+    "tests/test_html_create_grammar.py": "0d98e5ece5fb5ac1ccfb5555f29886254696929d014511c71a53f70f67fe77d3",
+    "tests/test_html_loop.py": "8772ca75ba797178421d55ec2a63481d7b933187f9110ef7d98cb9b39963ae4c",
+    "validation/run_basic_loop_html.py": "c4e415f1d39ba150b1517e19f68c428324a7c60528c6c53443b1caeccb6b6c77",
+    "validation/run_html_observer_retry.py": "52c5433afebaf54d7931da2d73844e75b3dd601221762c16642e8e3fe81e58c2"
+  },
+  "execution_profile_id": "63f39af869d7a664fa3f1d2207988d4c1b0aab72d9191c3254dd0a818d20455a",
+  "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+  "native_executable": {
+    "path": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/vc07-dry-entropy-native-build-v1/strata-vision-dry-combinations-cow",
+    "sha256": "ae62045f75a8e11ba9d01b4da301d3bb87fe4ff342bab0ea7edc57276377824e"
+  },
+  "runs": [
+    {
+      "run": "branchwrite-h03-inspection-red-run-v1",
+      "exits": {
+        "command.exit": 1,
+        "wrapper.exit": 1
+      },
+      "summaries": [
+        "Ran 4 tests in 0.001s",
+        "FAILED (errors=4)"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-inspection-green-run-v1",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summaries": [
+        "Ran 34 tests in 8.870s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-inspection-full-run-v1",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summaries": [
+        "Ran 345 tests in 34.438s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-loop-red-run-v1",
+      "exits": {
+        "command.exit": 1,
+        "wrapper.exit": 1
+      },
+      "summaries": [
+        "Ran 1 test in 0.000s",
+        "FAILED (errors=1)"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-loop-green-run-v1",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summaries": [
+        "Ran 37 tests in 8.857s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-loop-full-run-v1",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summaries": [
+        "Ran 348 tests in 34.446s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-loop-green-run-v2",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summaries": [
+        "Ran 38 tests in 8.862s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-loop-full-run-v2",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summaries": [
+        "Ran 349 tests in 34.097s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-gpu-run-v1",
+      "exits": {
+        "command.exit": 1,
+        "wrapper.exit": 1
+      },
+      "summaries": []
+    },
+    {
+      "run": "branchwrite-h03-observer-retry-run-v1",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summaries": []
+    }
+  ],
+  "processes_absent": [
+    102987,
+    102993,
+    108648,
+    108654
+  ],
+  "original": {
+    "status": "H03_TASK_FAIL_OUTCOME_RETAINED",
+    "writer": {
+      "created_sha256": "e9b0fb0146555f81d5795c7545f48e8280f821b200f28edbfe1e69640249fe8a",
+      "elapsed_seconds": 5.556585225975141,
+      "format_valid": true,
+      "prepare_seconds": 0.8459435608237982,
+      "prompt_sha256": "9a277d7e9a01d960a2d972f770c7e03223243b3f54693523cc25471a554f41fe",
+      "proposal_seconds": 4.620730032911524,
+      "proposal_sha256": "ba65e43ea69d334893b248a97fb4f26c7846fe236bc53a742eb316001499733c",
+      "proposal_tokens": 147,
+      "readback_bytes": 275,
+      "readback_sha256": "e9b0fb0146555f81d5795c7545f48e8280f821b200f28edbfe1e69640249fe8a",
+      "status": "FILE_CREATED_AND_READ",
+      "task": "H03"
+    },
+    "capture": {
+      "browser_executable": "/snap/chromium/3554/usr/lib/chromium-browser/chrome",
+      "browser_version": "155.0.8059.39",
+      "chromium_sandbox": true,
+      "elapsed_seconds": 0.8989744340069592,
+      "height": 480,
+      "http_status": 200,
+      "image_artifact": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-h03-cli-gpu-v1/capture/artifacts/17dd060789294d0f98451f4f7ab8c4dc.bin",
+      "image_bytes": 3887,
+      "image_sha256": "aa3dce555f4d84703c273d45c2cc2d8040813836a33bc9e2266703da9c5bbd6d",
+      "inspection_sha256": "59c93e1f003fe8e62abe606894ef34a478b5911a67178b017cf39c014223bf73",
+      "inspection_status": "PASS",
+      "inspection_target": "H03",
+      "isolation_kind": "bubblewrap-browser-v1",
+      "isolation_launcher_pid": 103133,
+      "isolation_mount_namespace": "mnt:[4026532970]",
+      "isolation_namespace_empty": true,
+      "isolation_net_namespace": "net:[4026532975]",
+      "isolation_pid_namespace": "pid:[4026532973]",
+      "isolation_worker_exited": true,
+      "operation_id": "capture",
+      "scope": "isolated single-document capture; no assets/interactions or model-vision claim",
+      "served_sha256": "e9b0fb0146555f81d5795c7545f48e8280f821b200f28edbfe1e69640249fe8a",
+      "source_artifact": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-h03-cli-gpu-v1/capture/artifacts/e6616b1cd7c34f5880209eb2c826e6b5.bin",
+      "source_bytes": 275,
+      "source_path": "index.html",
+      "source_sha256": "e9b0fb0146555f81d5795c7545f48e8280f821b200f28edbfe1e69640249fe8a",
+      "url": "http://127.0.0.1:33801/index.html",
+      "width": 640
+    },
+    "report": {
+      "arrangement": "none",
+      "color": "blue",
+      "heading": "Loop Lab",
+      "square_count": 1
+    },
+    "quality": "FAIL",
+    "observer_tokens": 28,
+    "observer_generation_seconds": 0.3276542890816927
+  },
+  "retry": {
+    "status": "H03_OBSERVER_RETRY_PASS",
+    "question": "Inspect only the attached screenshot. Report the visible heading, number of squares, their main color, and whether their arrangement is single, horizontal, vertical, other or none. Do not infer from filenames or task descriptions.\nCategory guide: none means zero squares; single means exactly one square. Horizontal, vertical and other arrangements refer to two or more squares. Independent example, not this screenshot: a page headed Demo with one red square has heading Demo, square_count 1, color red, arrangement single. Inspect the actual screenshot; do not copy the example.",
+    "report": {
+      "arrangement": "single",
+      "color": "blue",
+      "heading": "Loop Lab",
+      "square_count": 1
+    },
+    "prior": {
+      "image_sha256": "aa3dce555f4d84703c273d45c2cc2d8040813836a33bc9e2266703da9c5bbd6d",
+      "inspector_sha256": "59c93e1f003fe8e62abe606894ef34a478b5911a67178b017cf39c014223bf73",
+      "original_quality": "FAIL",
+      "original_report": {
+        "arrangement": "none",
+        "color": "blue",
+        "heading": "Loop Lab",
+        "square_count": 1
+      },
+      "result_sha256": "51b0706b40677ac7844cf4aec255a0dbb0fedd5dec4082c2d996418c40f21e89",
+      "source_sha256": "e9b0fb0146555f81d5795c7545f48e8280f821b200f28edbfe1e69640249fe8a"
+    },
+    "writer_generations": 0,
+    "file_actions": 0,
+    "output_tokens": 28,
+    "generation_seconds": 0.35652740905061364
+  },
+  "numerical_max_error": null,
+  "numerical_oracle": "NOT_RUN",
+  "q8": "DEFERRED",
+  "chat_server": "OFF",
+  "qualification": "Bounded application/tool flow, not VC/G certification or general visual accuracy.",
+  "limits": [
+    "Original neutral observer quality FAIL retained; only independent-example retry passed.",
+    "One H03 page; H04/H05 not executed by this evidence.",
+    "No thinking enabled, no sampler sweep, restart/fault or independent full-vector comparison.",
+    "Browser per-process limits, not aggregate memory/CPU quota.",
+    "Native COW/model unchanged; previous G0 51/51 not rerun in this application-only increment."
+  ],
+  "excluded_state_bytes": 775335132,
+  "archive": {
+    "host": "box-git",
+    "path": "/srv/data/git/private_context_cow.evidence/20261017-branchwrite-h03-v1/evidence.tar.gz",
+    "sha256": "4b6dfeeda6da64844ba8a8664b58956f2e47ee7ea5830ea31e07c2dca38d7b78",
+    "bytes": 4059597,
+    "members": 584,
+    "receiver_verified": true
+  }
+}

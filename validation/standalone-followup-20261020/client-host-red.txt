@@ -1,0 +1,14 @@
+test_start_names_the_client_machine_that_owns_the_project_files (tests.test_guided_cli.GuidedCliTests.test_start_names_the_client_machine_that_owns_the_project_files) ... FAIL
+
+======================================================================
+FAIL: test_start_names_the_client_machine_that_owns_the_project_files (tests.test_guided_cli.GuidedCliTests.test_start_names_the_client_machine_that_owns_the_project_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_cli.py", line 84, in test_start_names_the_client_machine_that_owns_the_project_files
+    self.assertIn("Client machine: llm-49",output)
+AssertionError: 'Client machine: llm-49' not found in 'BranchWrite\nProject: /tmp/tmpecnvbpcd/garden-site\nBranchWrite will work in a separate copy. Your project folder stays unchanged.\nBW can read, create and edit files in this project, and will choose checks for its work.\nProject contents used for the task are sent to your configured model server.\nTo talk through an idea first, type /chat.\nStarting the saved BranchWrite + Context COW workflow...\nBranchWrite ran its chosen checks successfully. Review the result below.\nYour original project folder is unchanged.\nSaved run: /tmp/tmpecnvbpcd/home/.local/state/branchwrite/runs/bw-fix-the-garden-club-page-and-kee-3ebdc256\nNo project files changed.\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.076s
+
+FAILED (failures=1)

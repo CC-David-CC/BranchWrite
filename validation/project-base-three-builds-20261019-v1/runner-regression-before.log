@@ -1,0 +1,28 @@
+test_audit_failure_propagates (__main__.RunnerExitTests.test_audit_failure_propagates) ... FAIL
+test_client_failure_stops_before_audit (__main__.RunnerExitTests.test_client_failure_stops_before_audit) ... ok
+test_success_requires_both (__main__.RunnerExitTests.test_success_requires_both) ... ok
+
+======================================================================
+FAIL: test_audit_failure_propagates (__main__.RunnerExitTests.test_audit_failure_propagates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/test_comparison_runner.py", line 16, in test_audit_failure_propagates
+    def test_audit_failure_propagates(self):self.assertEqual(self.run_case(0,9),(9,True))
+                                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (0, True) != (9, True)
+
+First differing element 0:
+0
+9
+
+- (0, True)
+?  ^
+
++ (9, True)
+?  ^
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.118s
+
+FAILED (failures=1)

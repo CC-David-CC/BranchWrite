@@ -1,0 +1,7 @@
+{
+  "reason": "Every explicit directory must remain valid even when covered by a parent; do not silently drop missing directories or regular files.",
+  "timing": "Prepared before candidate inspection; producer still live",
+  "original_oracle_unchanged": true,
+  "source_tests_unchanged": true,
+  "additional_methods": 3
+}

@@ -1,0 +1,15 @@
+test_bad_cancel (tests.test_cancelled.Cancellation.test_bad_cancel) ... ok
+test_empty (tests.test_cancelled.Cancellation.test_empty) ... ok
+test_mixed_cancel (tests.test_cancelled.Cancellation.test_mixed_cancel) ... ok
+test_cancelled_seeded (tests.test_independent.Independent.test_cancelled_seeded) ... ok
+test_seeded (tests.test_independent.Independent.test_seeded) ... ok
+test_empty (tests.test_reports.Reports.test_empty) ... ok
+test_invalid (tests.test_reports.Reports.test_invalid) ... ok
+test_mixed (tests.test_reports.Reports.test_mixed) ... ok
+test_no_mutation (tests.test_reports.Reports.test_no_mutation) ... ok
+test_render (tests.test_reports.Reports.test_render) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.030s
+
+OK

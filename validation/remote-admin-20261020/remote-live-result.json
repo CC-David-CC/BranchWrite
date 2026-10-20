@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "scope": "installed transport candidate over real pinned SSH to owned persistent QEMU VM; no model/tool-registry/CLI dispatch claim",
+  "installed_version": "0.1.0.dev45",
+  "client_host": "r4090",
+  "target_identity": "67d3135cadb681852a2275988e3a86d72dc4a8ce6c18a45d264303029e638a60",
+  "rows": [
+    {
+      "id": "RA-L01-owned-disk-root",
+      "status": "PASS",
+      "operation_id": "ra-f9b3c2bc0427-root",
+      "disposition": "exited",
+      "exit_code": 0,
+      "elapsed_seconds": 0.011158967000028497,
+      "receipt_sha256": "70efe748e249d6dafd9e9225174f0f2b6a03c58e8004915e8895ffc033f519de"
+    },
+    {
+      "id": "RA-L02-literals-unicode-status",
+      "status": "PASS",
+      "operation_id": "ra-f9b3c2bc0427-text",
+      "disposition": "exited",
+      "exit_code": 23,
+      "elapsed_seconds": 0.010997865999968326,
+      "receipt_sha256": "2c708c6463c1a9266047f27211e038e8151aca11a6a6cd19c6a5da63e71d1e36"
+    },
+    {
+      "id": "RA-L03-remote-exit255-is-not-SSH-loss",
+      "status": "PASS",
+      "operation_id": "ra-f9b3c2bc0427-exit255",
+      "disposition": "exited",
+      "exit_code": 255,
+      "elapsed_seconds": 0.011017545999948197,
+      "receipt_sha256": "343655b781cc2a1fc797a62c9450291aeb468a63c05465aa6ae57883a4c2f925"
+    },
+    {
+      "id": "RA-L04-exact-binary",
+      "status": "PASS",
+      "bytes": 4096,
+      "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+      "operation_id": "ra-f9b3c2bc0427-binary",
+      "disposition": "exited",
+      "exit_code": 0,
+      "elapsed_seconds": 0.01110320700001921,
+      "receipt_sha256": "0a8366d64301273d679994df46e0ce1a93f4ec8b9a5d0c3efc73a1861159a29f"
+    },
+    {
+      "id": "RA-L05-completed-receipt-reopen-no-reexecution",
+      "status": "PASS",
+      "marker_count": 1,
+      "operation_id": "ra-f9b3c2bc0427-once",
+      "disposition": "exited",
+      "exit_code": 0,
+      "elapsed_seconds": 0.021091925999996874,
+      "receipt_sha256": "429bd058833b81513ee8412d62a60e90d5617cde1b735a4773f4674f649c2fe2"
+    },
+    {
+      "id": "RA-L06-unknown-intent-not-resent",
+      "status": "PASS",
+      "operation_id": "ra-f9b3c2bc0427-verify-unknown",
+      "disposition": "exited",
+      "exit_code": 0,
+      "elapsed_seconds": 0.0110276659999613,
+      "receipt_sha256": "c67551e64e1e09804b78c2849f351534b81bd98f5cc52e4bea1a89e3f4203a34"
+    },
+    {
+      "id": "RA-L07-remote-deadline",
+      "status": "PASS",
+      "operation_id": "ra-f9b3c2bc0427-timeout",
+      "disposition": "timeout",
+      "exit_code": -9,
+      "elapsed_seconds": 0.10300830099998848,
+      "receipt_sha256": "a63a40b8ef17f1ed792c12e38423ef23a3bf3a22fd190bb11d7531d6a52d8fa9"
+    },
+    {
+      "id": "RA-L08-bounded-output",
+      "status": "PASS",
+      "bytes": 1048576,
+      "operation_id": "ra-f9b3c2bc0427-output",
+      "disposition": "output_limit",
+      "exit_code": -9,
+      "elapsed_seconds": 0.014663042999984555,
+      "receipt_sha256": "114fbca4c7f5c0a9daa31d198713f155341592c0f50e2fa879553ea4a1c5623f"
+    }
+  ],
+  "seconds": 1.5612755600595847,
+  "limitations": [
+    "not model-facing yet",
+    "abrupt client death before receipt publication remains indeterminate; no automatic resend",
+    "VM-wide admin scope intentionally permits services to survive commands"
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "mutant": "skip-durable-proof",
+    "executed": 8,
+    "failures": 0,
+    "errors": 1,
+    "detected": true
+  },
+  {
+    "mutant": "skip-endpoint-owner",
+    "executed": 8,
+    "failures": 1,
+    "errors": 0,
+    "detected": true
+  },
+  {
+    "mutant": "skip-proof-receipt-comparison",
+    "executed": 8,
+    "failures": 1,
+    "errors": 0,
+    "detected": true
+  }
+]

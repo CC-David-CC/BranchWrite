@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "executed_methods": 103,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "initial_attempt": {
+    "errors": 16,
+    "reason": "COW test dependency missing on client host"
+  },
+  "scope": "CPU and real local HTTP using test inference models; no real GPU or numerical oracle",
+  "source_revision": "865cfaed975a8104937d0ef69db1bc0e45857286",
+  "remaining_product_gap": "Automatic base selection, consultation scheduling and refresh/adoption in normal code workflow"
+}

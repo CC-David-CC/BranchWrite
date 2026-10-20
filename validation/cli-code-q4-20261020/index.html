@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dogs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1rem;
+      line-height: 1.5;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+    }
+
+    #message {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dogs</h1>
+  <p>Welcome to a simple page about friendly dogs.</p>
+
+  <h2>Dog names</h2>
+  <ul>
+    <li>Bella</li>
+    <li>Max</li>
+    <li>Luna</li>
+  </ul>
+
+  <button id="helloButton">Say hello</button>
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("helloButton").addEventListener("click", function () {
+      document.getElementById("message").textContent = "Hello, David!";
+    });
+  </script>
+</body>
+</html>

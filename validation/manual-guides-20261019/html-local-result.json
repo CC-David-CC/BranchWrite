@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "Installed dev24 config admission, actual granted file creation and isolated shell; fixture HTML is host-authored, not model-generated.",
+  "create_edit_read_grants": "PASS",
+  "structural_checker_positive_exit": 0,
+  "missing_stylesheet_negative_exit": 1,
+  "original_source_unchanged": true
+}

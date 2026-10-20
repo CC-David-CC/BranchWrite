@@ -1,0 +1,73 @@
+{
+  "status": "BROWSER_CHECKS_PASS_PENDING_VISUAL_REVIEW",
+  "html_sha256": "5ca359a21fda098d2203e0714965cfa77499550eb189eb4b3e9c16cf9a30abba",
+  "actual_checks": [
+    {
+      "viewport": "desktop",
+      "width": 1280,
+      "height": 800,
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "d75d28056248a8778c82314ded8e110d5c49c82ada6d6f2d8b28719b0f1b0a21",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "Say hello caused Hello, David! to become visible"
+          ]
+        ]
+      },
+      "runtime_errors": [],
+      "served_sha256": "5ca359a21fda098d2203e0714965cfa77499550eb189eb4b3e9c16cf9a30abba",
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532779]",
+        "pid_ns": "pid:[4026532777]",
+        "mount_ns": "mnt:[4026532772]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 2493797,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.0026220650179311633
+      }
+    },
+    {
+      "viewport": "phone",
+      "width": 375,
+      "height": 812,
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "d75d28056248a8778c82314ded8e110d5c49c82ada6d6f2d8b28719b0f1b0a21",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "Say hello caused Hello, David! to become visible"
+          ]
+        ]
+      },
+      "runtime_errors": [],
+      "served_sha256": "5ca359a21fda098d2203e0714965cfa77499550eb189eb4b3e9c16cf9a30abba",
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532894]",
+        "pid_ns": "pid:[4026532890]",
+        "mount_ns": "mnt:[4026532775]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 2493951,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.002609674003906548
+      }
+    }
+  ],
+  "scope": "actual isolated Chromium desktop/phone, blue h1, button causes visible greeting, no overflow/no JS or external resources, exact served source; actual bold names, italic+underlined Welcome, unchanged wording; visuals reviewed separately"
+}

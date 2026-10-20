@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Real QEMU/KVM guest: authenticated SSH, sudo, exact nonzero exit status and SCP byte roundtrip. Not BranchWrite admin integration.",
+  "checks": [
+    "guest-identity",
+    "public-key-login",
+    "guest-sudo",
+    "exit-23-preserved",
+    "scp-spaces-unicode-binary-newline"
+  ],
+  "guest_facts": "codiserver-vm\nmaint\n7.0.14-codiserver-base\nkvm\noverlay /cow\nactive\nState  Recv-Q Send-Q Local Address:Port Peer Address:Port\nLISTEN 0      0         127.0.0.54:53        0.0.0.0:*   \nLISTEN 0      0            0.0.0.0:22        0.0.0.0:*   \nLISTEN 0      0         127.0.0.53:53        0.0.0.0:*   \nLISTEN 0      0            0.0.0.0:631       0.0.0.0:*   \nLISTEN 0      0                  *:22              *:*   \nLISTEN 0      0                  *:631             *:*   \nFilesystem      Size  Used Avail Use% Mounted on\n/cow            2.0G   51M  1.9G   3% /\n               total        used        free      shared  buff/cache   available\nMem:            3913         356         110          63        3582        3556\nSwap:              0           0           0\n",
+  "roundtrip_bytes": 16394,
+  "roundtrip_sha256": "cb2dbcd2f34c36260bedf45fe259f39f38719daa3f1dc55ee2e15f1357651214",
+  "roundtrip_seconds": 0.3182342950021848,
+  "hostkey_pin_method": "TOFU on private loopback port, owned QEMU PID and launch attested; subsequently StrictHostKeyChecking=yes",
+  "checked_at": 1792490640.171442
+}

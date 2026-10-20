@@ -1,0 +1,14 @@
+{
+  "status": "BUILT_INSTALLED_NOT_GPU_QUALIFIED",
+  "source_revision": "a024011698fa45afeed744159a5865f9e4dad896",
+  "wheel": "branchwrite-0.1.0.dev22-py3-none-any.whl",
+  "wheel_sha256": "037c9eccc0337d4af1bec016aaaeaa35ef54c48298d4c4c6623a6ec190ac3b06",
+  "build_tools": {
+    "setuptools": "78.1.1",
+    "wheel": "0.46.3"
+  },
+  "installed_package": "/home/dflanag3/spatial-artifacts/branchwrite-dev22-package-20261019-v1/venv/lib/python3.14/site-packages/branchwrite",
+  "module_count": 44,
+  "all_wheel_module_bytes_match": true,
+  "builder_sha256": "c25dd1bc0e6fd29c863e0112fd4e641790a99d245203f3a2cd6e6b8ae1d82951"
+}

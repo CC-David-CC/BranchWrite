@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "id": "RI01-large-real-file-write",
+      "status": "PASS",
+      "verified": true,
+      "cli_exit": 0,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev49-output-capture-20261020/RI01-large-real-file-write-53a9200f4a/state"
+    },
+    {
+      "id": "RI02-real-package-install",
+      "status": "PASS",
+      "verified": true,
+      "cli_exit": 0,
+      "state": "/home/dflanag3/spatial-artifacts/branchwrite-dev49-output-capture-20261020/RI02-real-package-install-53a9200f4a/state"
+    }
+  ],
+  "scope": "installed CLI to real SSH/VM package installation; operator-specified workflow, not autonomous model evidence"
+}

@@ -1,0 +1,120 @@
+{
+  "actions": [
+    "create_file",
+    "read_file",
+    "finish"
+  ],
+  "baseline_commit": "2dbadba567b7df9576b8a1ba99b20cf3cf699782",
+  "client_checkout": "/home/dflanag3/src/branchwrite-cross-host-client-20261018",
+  "client_host": "llm-49 (r4090)",
+  "client_python": "3.14.4",
+  "client_seconds": 53.28103720198851,
+  "client_source_hashes": {
+    "branchwrite/__init__.py": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c",
+    "branchwrite/__main__.py": "e739115143701940874b55359238009f7612f2930980eade9c26fe5b0d8e356b",
+    "branchwrite/browser_capture.py": "e27bb3acbeda88247c008153dabf4cdef44ab8a0530ab769dd0ce751dde04663",
+    "branchwrite/browser_isolation.py": "b147bede754376f9d509183acc3d762c63022ab93544a56d30022f7b9a8ed704",
+    "branchwrite/browser_worker.py": "26e412dbe7f37927dd7546733a69ee58329446e539c0061df13d384c58c6a384",
+    "branchwrite/coding_contract.py": "4c0f0435523dbc8d8f4e45553ac5068dd09bd2f549e99d6b1732ca747f952eac",
+    "branchwrite/coding_defaults.py": "fdc46f9cf6b7e25ae113a73c9584a79717acf11d3ccd8a1f5d41a90b3c282d1e",
+    "branchwrite/control_contract.py": "69982583752013c32270932b7e5cf1cb5e03d0afb9691d7c3dc88948bb9270e6",
+    "branchwrite/cow_actions.py": "4693adb596e24f7b1c859df8ca2a26fc4241010db75e39de67affabaca179638",
+    "branchwrite/cow_client.py": "104df831ceb53f1512bea95e3f103fa4e4c58968b996b0e302e0ad749b21cda5",
+    "branchwrite/execution.py": "b18a6c5a7447a6d6390dfe9db98e9e654fd745f777fcbc7cff75b5e7cf45ba03",
+    "branchwrite/golden_path.py": "084ea3467edbbc3b57f65c41c93693f76c0447350f5d4bc30264190491ec9316",
+    "branchwrite/interpreter.py": "ae4ce4bb42937d490461c4d8e02debf2fd94de42fcd5a1e11988431892caa4ad",
+    "branchwrite/kernel.py": "cb6a345521f496ead177c9cfbb908929af8c268ce50a440a78086a66d5343e10",
+    "branchwrite/language.py": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985",
+    "branchwrite/model_dispatch.py": "1d91926ce5b28f288346f8c83f29c9dda06e68d7bcf9457d0b4bff00526c3a95",
+    "branchwrite/records.py": "cbc34ddb6b510217a2a1995e2c31ea092f1b0c211b2daa1039dca18a2093d09b",
+    "branchwrite/run_cli.py": "751b40f95fcbd64db1c669c79c7962ea9e28671ab9d7fc5122ecddd518d00bdc",
+    "branchwrite/tool_dispatch.py": "bc68a77d7afa4e0c964289b89c5a57be1e8f01cb5bdd8a177a521851b2080e83",
+    "branchwrite/tool_registry.py": "b7fdb9d1420d8c4a5b9534c9c908281b17c4714e36dc15d7c33cd96929149151",
+    "branchwrite/verification.py": "1a979b7db327e3dca8e3dc87b7d1e0f035847bfa5a9a081ab8fe3b9c441d1598"
+  },
+  "consumed_output_tokens": [
+    159,
+    29,
+    63
+  ],
+  "harness_sha256": "b8e254ca4b7ed75810c99579494fce0c44bb6c4e7f576bbeacd25a830de1c3fb",
+  "limitations": [
+    "Bounded H00 only; autonomous ladder stays1/13, H01 not run",
+    "Authenticated HTTP over an SSH forward; not TLS-endpoint certification or adversarial security proof",
+    "Completed-run reopen is client workflow receipt recovery, not a native model process restart test",
+    "No numerical oracle, max logit error NOT_MEASURED, no TPS comparison",
+    "Python3.14.4 on client, Python3.12.3 on model server; no COW implementation copied to client",
+    "Temporary server/tunnel credentials removed; chat remains OFF, Q8 deferred"
+  ],
+  "native_receipts": [
+    {
+      "branch": {
+        "name": "cross-host-file",
+        "revision": 2,
+        "root": "0ea1df478086c0c3b7517fe68eed83cbeac1a17b445235cef00935b78e9a3919",
+        "tip": "e05809a9a6323d946b78e63d5c35c949e7e60791d7bf41d76f40732c70ba02d5"
+      },
+      "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "payload_sha256": "d59aa4128296281325d1a6e3f9231553caf7c518dfd8035c29fa7821b16f8e22",
+      "snapshot": "e05809a9a6323d946b78e63d5c35c949e7e60791d7bf41d76f40732c70ba02d5"
+    },
+    {
+      "branch": {
+        "name": "cross-host-file",
+        "revision": 3,
+        "root": "0ea1df478086c0c3b7517fe68eed83cbeac1a17b445235cef00935b78e9a3919",
+        "tip": "3cd0f866308b2715705db74989569322a25508416587c963af8b54bc2bc7adc0"
+      },
+      "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "payload_sha256": "7f15d0211092662bace536a1b65f501767c92bff0c276368413b6d855aa996a0",
+      "snapshot": "3cd0f866308b2715705db74989569322a25508416587c963af8b54bc2bc7adc0"
+    },
+    {
+      "branch": {
+        "name": "cross-host-file",
+        "revision": 4,
+        "root": "0ea1df478086c0c3b7517fe68eed83cbeac1a17b445235cef00935b78e9a3919",
+        "tip": "a42e6f8fb3507ccf4de754b32cdbaff61b13e16caf90aeaed682e6ad5320101c"
+      },
+      "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "payload_sha256": "cf73cbe6bc919d84a0c07dd9ffaabb192518142897459e486225f51fa36d7a44",
+      "snapshot": "a42e6f8fb3507ccf4de754b32cdbaff61b13e16caf90aeaed682e6ad5320101c"
+    }
+  ],
+  "negative_result": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h00-driver-v1/unauthorized.stderr",
+  "next": "Finish H01 generic browser CLI/capture completion on this separate client, preserving both outer and Chromium sandboxes",
+  "proof": {
+    "attempted_native_import_rejected": true,
+    "authorized_cli_exit0": true,
+    "closed_transport_reopen_same_receipt": true,
+    "no_client_gpu_devices": true,
+    "no_client_server_or_model_paths": true,
+    "no_server_native_imports": true,
+    "wrong_api_key_http401": true
+  },
+  "protected_checker": "Original unchanged H00 byte checker passes; its native_agent_loop field remains NOT_RUN because it is independent of the actual CLI harness",
+  "raw_client_result": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h00-driver-v1/result.json",
+  "reopen_seconds": 0.20084988803137094,
+  "schema": 1,
+  "server_host": "llm-60",
+  "status": "BOUNDED_CROSS_HOST_AUTONOMOUS_CLI_PASS",
+  "tests": {
+    "browser_regressions": {
+      "attempts": 3,
+      "errors": 1,
+      "failures": 3,
+      "passed": 5,
+      "status": "FAIL; missing ALSA library corrected, stacked AppArmor deny remains",
+      "total": 9
+    },
+    "file_cli_regressions": {
+      "failed": 0,
+      "passed": 14,
+      "skipped": 0
+    },
+    "real_cross_host_h00": "PASS"
+  }
+}

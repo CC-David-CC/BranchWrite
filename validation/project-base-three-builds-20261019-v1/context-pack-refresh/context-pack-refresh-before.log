@@ -1,0 +1,99 @@
+test_cli_refresh_reports_new_identity (test_context_pack_refresh.ContextPackRefreshTests.test_cli_refresh_reports_new_identity) ... FAIL
+test_corrupt_old_pack_is_not_a_refreshable_source (test_context_pack_refresh.ContextPackRefreshTests.test_corrupt_old_pack_is_not_a_refreshable_source) ... ERROR
+test_directory_additions_and_deletions_are_reported (test_context_pack_refresh.ContextPackRefreshTests.test_directory_additions_and_deletions_are_reported) ... ERROR
+test_invalid_as_of_is_rejected_even_when_unchanged (test_context_pack_refresh.ContextPackRefreshTests.test_invalid_as_of_is_rejected_even_when_unchanged) ... ERROR
+test_link_in_source_is_rejected_without_publication (test_context_pack_refresh.ContextPackRefreshTests.test_link_in_source_is_rejected_without_publication) ... ERROR
+test_missing_explicit_selection_is_an_error_not_scope_expansion (test_context_pack_refresh.ContextPackRefreshTests.test_missing_explicit_selection_is_an_error_not_scope_expansion) ... ERROR
+test_modified_source_builds_new_identity_with_exact_content (test_context_pack_refresh.ContextPackRefreshTests.test_modified_source_builds_new_identity_with_exact_content) ... ERROR
+test_unchanged_does_not_publish_or_retimestamp (test_context_pack_refresh.ContextPackRefreshTests.test_unchanged_does_not_publish_or_retimestamp) ... ERROR
+
+======================================================================
+ERROR: test_corrupt_old_pack_is_not_a_refreshable_source (test_context_pack_refresh.ContextPackRefreshTests.test_corrupt_old_pack_is_not_a_refreshable_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 50, in test_corrupt_old_pack_is_not_a_refreshable_source
+    with self.assertRaises(packs.PackError):self.refresh()
+                                            ~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 17, in refresh
+    return packs.refresh_pack(self.path,output=self.next,as_of='2026-10-19T01:00:00Z')
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.context_pack' has no attribute 'refresh_pack'
+
+======================================================================
+ERROR: test_directory_additions_and_deletions_are_reported (test_context_pack_refresh.ContextPackRefreshTests.test_directory_additions_and_deletions_are_reported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 35, in test_directory_additions_and_deletions_are_reported
+    r=self.refresh()
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 17, in refresh
+    return packs.refresh_pack(self.path,output=self.next,as_of='2026-10-19T01:00:00Z')
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.context_pack' has no attribute 'refresh_pack'
+
+======================================================================
+ERROR: test_invalid_as_of_is_rejected_even_when_unchanged (test_context_pack_refresh.ContextPackRefreshTests.test_invalid_as_of_is_rejected_even_when_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 53, in test_invalid_as_of_is_rejected_even_when_unchanged
+    with self.assertRaises(packs.SourceError):packs.refresh_pack(self.path,output=self.next,as_of='not a time')
+                                              ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.context_pack' has no attribute 'refresh_pack'
+
+======================================================================
+ERROR: test_link_in_source_is_rejected_without_publication (test_context_pack_refresh.ContextPackRefreshTests.test_link_in_source_is_rejected_without_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 46, in test_link_in_source_is_rejected_without_publication
+    with self.assertRaises(packs.SourceError):self.refresh()
+                                              ~~~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 17, in refresh
+    return packs.refresh_pack(self.path,output=self.next,as_of='2026-10-19T01:00:00Z')
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.context_pack' has no attribute 'refresh_pack'
+
+======================================================================
+ERROR: test_missing_explicit_selection_is_an_error_not_scope_expansion (test_context_pack_refresh.ContextPackRefreshTests.test_missing_explicit_selection_is_an_error_not_scope_expansion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 41, in test_missing_explicit_selection_is_an_error_not_scope_expansion
+    with self.assertRaises(packs.SourceError):packs.refresh_pack(selected['pack_path'],output=self.next,as_of='2026-10-19T01:00:00Z')
+                                              ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.context_pack' has no attribute 'refresh_pack'
+
+======================================================================
+ERROR: test_modified_source_builds_new_identity_with_exact_content (test_context_pack_refresh.ContextPackRefreshTests.test_modified_source_builds_new_identity_with_exact_content)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 27, in test_modified_source_builds_new_identity_with_exact_content
+    r=self.refresh();self.assertEqual(r['action'],'rebuilt')
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 17, in refresh
+    return packs.refresh_pack(self.path,output=self.next,as_of='2026-10-19T01:00:00Z')
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.context_pack' has no attribute 'refresh_pack'
+
+======================================================================
+ERROR: test_unchanged_does_not_publish_or_retimestamp (test_context_pack_refresh.ContextPackRefreshTests.test_unchanged_does_not_publish_or_retimestamp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 21, in test_unchanged_does_not_publish_or_retimestamp
+    r=self.refresh()
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 17, in refresh
+    return packs.refresh_pack(self.path,output=self.next,as_of='2026-10-19T01:00:00Z')
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.context_pack' has no attribute 'refresh_pack'
+
+======================================================================
+FAIL: test_cli_refresh_reports_new_identity (test_context_pack_refresh.ContextPackRefreshTests.test_cli_refresh_reports_new_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_context_pack_refresh.py", line 58, in test_cli_refresh_reports_new_identity
+    self.assertEqual(r.returncode,0,r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : usage: python3 -m branchwrite.context_pack [-h] {build,verify} ...
+python3 -m branchwrite.context_pack: error: argument command: invalid choice: 'refresh' (choose from build, verify)
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.045s
+
+FAILED (failures=1, errors=7)

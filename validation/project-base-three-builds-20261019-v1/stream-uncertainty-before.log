@@ -1,0 +1,74 @@
+test_eof_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_eof_retains_original_pending_identity) ... ERROR
+test_error_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_error_retains_original_pending_identity) ... ERROR
+test_failure_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_failure_retains_original_pending_identity) ... ERROR
+test_first_cli_failure_reports_unresolved_original_operation (test_generation_stream_uncertainty.StreamUncertaintyTests.test_first_cli_failure_reports_unresolved_original_operation) ... FAIL
+
+======================================================================
+ERROR: test_eof_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_eof_retains_original_pending_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_stream_uncertainty.py", line 32, in test_eof_retains_original_pending_identity
+    def test_eof_retains_original_pending_identity(self):self.check_pending('empty')
+                                                         ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_stream_uncertainty.py", line 26, in check_pending
+    self.assertEqual(caught.exception.operation_id,op);self.assertEqual(self.client.journal.read(op)['state'],'pending')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'OperationIndeterminate' object has no attribute 'operation_id'
+
+======================================================================
+ERROR: test_error_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_error_retains_original_pending_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_stream_uncertainty.py", line 30, in test_error_retains_original_pending_identity
+    def test_error_retains_original_pending_identity(self):self.check_pending('error')
+                                                           ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_stream_uncertainty.py", line 25, in check_pending
+    with self.assertRaises(OperationIndeterminate) as caught:self.client.answer('main',0,op,3)
+                                                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1060, in answer
+    return self._generation_mutation(operation_id, "/cow/text/answer", body, branch=branch,
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                     revision=revision, frame_key=frame_key)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1237, in _generation_mutation
+    return self._accept_stream(response, record, intent)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1372, in _accept_stream
+    raise RequestRejected("COW stream error: " + str(event.get("error", "unknown error")))
+branchwrite.cow_client.RequestRejected: COW stream error: capacity unavailable
+
+======================================================================
+ERROR: test_failure_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_failure_retains_original_pending_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_stream_uncertainty.py", line 31, in test_failure_retains_original_pending_identity
+    def test_failure_retains_original_pending_identity(self):self.check_pending('failure')
+                                                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_stream_uncertainty.py", line 25, in check_pending
+    with self.assertRaises(OperationIndeterminate) as caught:self.client.answer('main',0,op,3)
+                                                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1060, in answer
+    return self._generation_mutation(operation_id, "/cow/text/answer", body, branch=branch,
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                     revision=revision, frame_key=frame_key)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1237, in _generation_mutation
+    return self._accept_stream(response, record, intent)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1374, in _accept_stream
+    raise RequestRejected("COW stream failure: " + str(event.get("error", "unknown failure")))
+branchwrite.cow_client.RequestRejected: COW stream failure: capacity unavailable
+
+======================================================================
+FAIL: test_first_cli_failure_reports_unresolved_original_operation (test_generation_stream_uncertainty.StreamUncertaintyTests.test_first_cli_failure_reports_unresolved_original_operation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_stream_uncertainty.py", line 37, in test_first_cli_failure_reports_unresolved_original_operation
+    self.assertEqual(code,4);self.assertIn('original-stream',err.getvalue());self.assertIn('reconcile',err.getvalue());self.assertEqual(self.posts,1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: 2 != 4
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.046s
+
+FAILED (failures=1, errors=3)

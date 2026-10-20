@@ -1,0 +1,10 @@
+{
+  "initial_run": "TIMEOUT at20min, graceful client exit with saved continuation",
+  "resume": "PASS in2.3334075859747827s; no new native inference request or remote receipt",
+  "http": "PASS200 exact4609byte local/deployed equality",
+  "browser": "PASS desktop1280x800 and mobile375x812; checked separately on llm-60",
+  "limitation": "greedy repeated irrelevant thinking; final answer suggested guest NAT address, not verified client reachability",
+  "overall": "bounded functionality and recovery evidence; latency/usability unfinished",
+  "source_commit": "efca748f",
+  "installed_wheel_sha256": "8299bf8569420897ee1cb30e62ba14026cf9eb5ab53892ee6ffd7ce41d5e7dce"
+}

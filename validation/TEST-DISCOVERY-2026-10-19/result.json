@@ -1,0 +1,11 @@
+{
+  "scope": "CPU sandbox, browser and workflow regression; not GPU qualification",
+  "executed": 92,
+  "passed": 91,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failing_id": "test_tool_registry.ToolRegistryTests.test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass",
+  "candidate": "cc0ec63",
+  "installed": false
+}

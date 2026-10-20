@@ -1,0 +1,53 @@
+test_copying_the_receipt_does_not_copy_publication_ownership (test_apply_reconciliation.ApplyReconciliationTests.test_copying_the_receipt_does_not_copy_publication_ownership) ... ERROR
+test_modified_published_result_is_not_acknowledged (test_apply_reconciliation.ApplyReconciliationTests.test_modified_published_result_is_not_acknowledged) ... ERROR
+test_other_operation_cannot_claim_existing_output (test_apply_reconciliation.ApplyReconciliationTests.test_other_operation_cannot_claim_existing_output) ... ERROR
+test_retry_returns_identical_receipt_after_source_changes (test_apply_reconciliation.ApplyReconciliationTests.test_retry_returns_identical_receipt_after_source_changes) ... ERROR
+
+======================================================================
+ERROR: test_copying_the_receipt_does_not_copy_publication_ownership (test_apply_reconciliation.ApplyReconciliationTests.test_copying_the_receipt_does_not_copy_publication_ownership)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-apply-reconciliation-20261019/tests/test_apply_reconciliation.py", line 22, in test_copying_the_receipt_does_not_copy_publication_ownership
+    c=self.case.case;self.apply();dest=c.root/'result';saved=c.root/'saved'
+                     ~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-apply-reconciliation-20261019/tests/test_apply_reconciliation.py", line 10, in apply
+    return apply_export(self.case.archive,c.source,c.root/'result',expected_sha256=self.case.export['sha256'],operation_id=operation)
+TypeError: apply_export() got an unexpected keyword argument 'operation_id'
+
+======================================================================
+ERROR: test_modified_published_result_is_not_acknowledged (test_apply_reconciliation.ApplyReconciliationTests.test_modified_published_result_is_not_acknowledged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-apply-reconciliation-20261019/tests/test_apply_reconciliation.py", line 19, in test_modified_published_result_is_not_acknowledged
+    c=self.case.case;self.apply();(c.root/'result/app.py').write_bytes(b'changed later')
+                     ~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-apply-reconciliation-20261019/tests/test_apply_reconciliation.py", line 10, in apply
+    return apply_export(self.case.archive,c.source,c.root/'result',expected_sha256=self.case.export['sha256'],operation_id=operation)
+TypeError: apply_export() got an unexpected keyword argument 'operation_id'
+
+======================================================================
+ERROR: test_other_operation_cannot_claim_existing_output (test_apply_reconciliation.ApplyReconciliationTests.test_other_operation_cannot_claim_existing_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-apply-reconciliation-20261019/tests/test_apply_reconciliation.py", line 16, in test_other_operation_cannot_claim_existing_output
+    self.apply()
+    ~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-apply-reconciliation-20261019/tests/test_apply_reconciliation.py", line 10, in apply
+    return apply_export(self.case.archive,c.source,c.root/'result',expected_sha256=self.case.export['sha256'],operation_id=operation)
+TypeError: apply_export() got an unexpected keyword argument 'operation_id'
+
+======================================================================
+ERROR: test_retry_returns_identical_receipt_after_source_changes (test_apply_reconciliation.ApplyReconciliationTests.test_retry_returns_identical_receipt_after_source_changes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-apply-reconciliation-20261019/tests/test_apply_reconciliation.py", line 12, in test_retry_returns_identical_receipt_after_source_changes
+    c=self.case.case;first=self.apply();inode=(c.root/'result').stat().st_ino
+                           ~~~~~~~~~~^^
+  File "/home/dflanag3/src/branchwrite-apply-reconciliation-20261019/tests/test_apply_reconciliation.py", line 10, in apply
+    return apply_export(self.case.archive,c.source,c.root/'result',expected_sha256=self.case.export['sha256'],operation_id=operation)
+TypeError: apply_export() got an unexpected keyword argument 'operation_id'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.039s
+
+FAILED (errors=4)

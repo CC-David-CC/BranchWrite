@@ -1,0 +1,29 @@
+{
+  "status": "FOCUSED_SOURCE_AND_INSTALLED_PASS_GPU_UNRUN",
+  "focused": 50,
+  "focused_failures": 0,
+  "focused_errors": 0,
+  "focused_skips": 0,
+  "broader": {
+    "tests": 100,
+    "passes": 99,
+    "failures": 1,
+    "errors": 0,
+    "skips": 0,
+    "known_failure": "test_tool_registry.ToolRegistryTests.test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass: current nonzero empty-suite result differs from older diagnostic string expectation; assertion unchanged"
+  },
+  "g0": 51,
+  "proof_version": "bw.tool-retirement.v2",
+  "remaining": [
+    "real Q8 interrupted-edit resume",
+    "broader resource/crash campaign",
+    "whole-agent performance comparison"
+  ],
+  "scope": "No cumulative backend certification, numerical oracle or whole-agent overhead comparison.",
+  "installed_tests": 20,
+  "installed_failures": 0,
+  "installed_errors": 0,
+  "installed_skips": 0,
+  "source_revision": "c8a2e721e36d4e28ba72890f6934a65ea898b26b",
+  "wheel_sha256": "251366753de7e4bc7313b5112b63ece518c7a4d5d0e482d44e787a6dd36e778f"
+}

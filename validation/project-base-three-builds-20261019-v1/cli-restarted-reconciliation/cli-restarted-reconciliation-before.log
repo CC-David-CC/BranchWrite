@@ -1,0 +1,38 @@
+test_cli_cannot_reconcile_a_tool_effect (test_coding_reconciliation.CodingReconciliationTests.test_cli_cannot_reconcile_a_tool_effect) ... ok
+test_cli_reconciles_after_checkpoint_eviction_and_server_reconstruction (test_coding_reconciliation.CodingReconciliationTests.test_cli_reconciles_after_checkpoint_eviction_and_server_reconstruction) ... FAIL
+test_cli_reconciles_after_server_reconstruction_without_new_work (test_coding_reconciliation.CodingReconciliationTests.test_cli_reconciles_after_server_reconstruction_without_new_work) ... FAIL
+test_cli_refuses_live_workflow_writer (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_live_workflow_writer) ... ok
+test_cli_refuses_operation_not_owned_by_pending_model_frame (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_operation_not_owned_by_pending_model_frame) ... ok
+test_cli_restores_output_then_existing_step_resumes_without_new_work (test_coding_reconciliation.CodingReconciliationTests.test_cli_restores_output_then_existing_step_resumes_without_new_work) ... ok
+test_failed_operation_remains_unresolved_after_server_reconstruction (test_coding_reconciliation.CodingReconciliationTests.test_failed_operation_remains_unresolved_after_server_reconstruction) ... ok
+test_failed_uncommitted_model_operation_stays_unresolved (test_coding_reconciliation.CodingReconciliationTests.test_failed_uncommitted_model_operation_stays_unresolved) ... ok
+test_self_consistent_changed_launch_rejected_before_network (test_coding_reconciliation.CodingReconciliationTests.test_self_consistent_changed_launch_rejected_before_network) ... ok
+
+======================================================================
+FAIL: test_cli_reconciles_after_checkpoint_eviction_and_server_reconstruction (test_coding_reconciliation.CodingReconciliationTests.test_cli_reconciles_after_checkpoint_eviction_and_server_reconstruction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 134, in test_cli_reconciles_after_checkpoint_eviction_and_server_reconstruction
+    self.assert_restart_reconciliation(evict_checkpoints=True)
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 118, in assert_restart_reconciliation
+    self.assertEqual(r.returncode,0,r.stderr)
+AssertionError: 4 != 0 : branchwrite: unresolved original operation 'bwnative-dc020f5111d1442f5ace4b8aad61e052783a82a3b6a38021'; reconcile before continuing
+Use branchwrite reconcile STATE --operation-id ORIGINAL_ID, then branchwrite resume STATE. Unknown work remains unresolved.
+
+
+======================================================================
+FAIL: test_cli_reconciles_after_server_reconstruction_without_new_work (test_coding_reconciliation.CodingReconciliationTests.test_cli_reconciles_after_server_reconstruction_without_new_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 132, in test_cli_reconciles_after_server_reconstruction_without_new_work
+    self.assert_restart_reconciliation()
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 118, in assert_restart_reconciliation
+    self.assertEqual(r.returncode,0,r.stderr)
+AssertionError: 4 != 0 : branchwrite: unresolved original operation 'bwnative-904c867f848ef77cf4e6d172126ef1231061d8592b897bd5'; reconcile before continuing
+Use branchwrite reconcile STATE --operation-id ORIGINAL_ID, then branchwrite resume STATE. Unknown work remains unresolved.
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 7.022s
+
+FAILED (failures=2)

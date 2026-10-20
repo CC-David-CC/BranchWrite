@@ -1,0 +1,18 @@
+test_automatic_host_selection_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_automatic_host_selection_uses_existing_fork_and_ask_api) ... ok
+test_code_cli_builds_project_receipt_then_uses_real_cpu_cow_root (test_base_choice_http.BaseChoiceHttpTests.test_code_cli_builds_project_receipt_then_uses_real_cpu_cow_root) ... ok
+test_prepare_base_cli_publishes_catalog_and_retries_without_prefill (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_cli_publishes_catalog_and_retries_without_prefill) ... ok
+test_prepare_base_recovers_context_ack_loss_without_prefix_recompute (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_recovers_context_ack_loss_without_prefix_recompute) ... ok
+test_prepare_base_recovers_namespace_ack_loss_in_new_process (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_recovers_namespace_ack_loss_in_new_process) ... ok
+test_prepare_base_unknown_context_is_not_replayed (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_unknown_context_is_not_replayed) ... ok
+test_proposed_base_source_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_proposed_base_source_uses_existing_fork_and_ask_api) ... ok
+test_client_recovers_source_and_committed_answer_receipts (test_project_context_real_cow_restart.RealCowClientReceiptTests.test_client_recovers_source_and_committed_answer_receipts) ... ok
+test_actual_cli_subprocess_conforms_to_http_client_flow (test_cow_client_flow.CowClientFlowTests.test_actual_cli_subprocess_conforms_to_http_client_flow) ... ok
+test_http_client_prepare_fork_continue_history_tool_observation (test_cow_client_flow.CowClientFlowTests.test_http_client_prepare_fork_continue_history_tool_observation) ... ok
+test_http_stale_revision_reaches_server_and_is_rejected_before_inference (test_cow_client_flow.CowClientFlowTests.test_http_stale_revision_reaches_server_and_is_rejected_before_inference) ... ok
+test_real_http_accepts_128_byte_branch_and_operation_names (test_cow_client_flow.CowClientFlowTests.test_real_http_accepts_128_byte_branch_and_operation_names) ... ok
+test_user_conversation_tip_stays_current_and_work_fork_is_independent (test_cow_client_flow.CowClientFlowTests.test_user_conversation_tip_stays_current_and_work_fork_is_independent) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 23.243s
+
+OK

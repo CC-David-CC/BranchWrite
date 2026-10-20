@@ -1,0 +1,1 @@
+Repair this project according to README.md. Find the relevant modules and fix parsing plus report aggregation, preserving labels exactly and rejecting invalid input. Do not change tests or README. Run the unit tests and finish. The project is granted read access; only taskboard/ is editable. Do not publish or modify the original project.

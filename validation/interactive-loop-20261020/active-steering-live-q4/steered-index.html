@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fde68a">
+  <meta name="description" content="A lightweight, mobile-friendly dog guide with no external downloads.">
+  <title>Paws & People | Friendly Dog Guide</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1f2937;
+      background: #f8fafc;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .skip {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: #111827;
+      color: #fff;
+      padding: .75rem 1rem;
+      border-radius: 0 0 .75rem 0;
+      z-index: 10;
+    }
+    .skip:focus { left: 0; }
+    .wrap { width: min(100% - 2rem, 960px); margin-inline: auto; }
+    .hero {
+      background: linear-gradient(135deg, #fde68a, #fca5a5, #a7f3d0);
+      padding: clamp(2rem, 8vw, 5rem) 0;
+      color: #111827;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, .72);
+      padding: .45rem .75rem;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: .9rem;
+    }
+    h1 {
+      color: #2563eb;
+      font-size: clamp(2.2rem, 8vw, 4.5rem);
+      line-height: 1.05;
+      margin: .75rem 0;
+    }
+    .lede {
+      font-size: clamp(1.05rem, 3vw, 1.35rem);
+      max-width: 60ch;
+      margin: 0 0 1.5rem;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .8rem 1.1rem;
+      border-radius: 999px;
+      background: #111827;
+      color: #fff;
+      text-decoration: none;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+    }
+    .button.ghost {
+      background: rgba(255, 255, 255, .75);
+      color: #111827;
+      border: 1px solid rgba(17, 24, 39, .15);
+    }
+    .hello-message {
+      margin: 1rem 0 0;
+      font-weight: 800;
+      color: #1d4ed8;
+      min-height: 1.5rem;
+    }
+    .dog-list {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    .dog-list li {
+      margin: .35rem 0;
+    }
+    .dog-name {
+      font-weight: 800;
+    }
+    .dog-action {
+      font-style: italic;
+      text-decoration: underline;
+    }
+    main { padding: 2rem 0 3rem; }
+    section { margin: 2.5rem 0; }
+    h2 { font-size: clamp(1.5rem, 5vw, 2.25rem); margin: 0 0 1rem; }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 1.25rem;
+      padding: 1.1rem;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, .06);
+    }
+    .card h3 { margin: 0 0 .5rem; font-size: 1.15rem; }
+    .tag { color: #475569; font-size: .9rem; font-weight: 800; }
+    details {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1rem 1.1rem;
+      margin-bottom: .75rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      min-height: 2rem;
+    }
+    ul { margin: .75rem 0 0; padding-left: 1.25rem; }
+    .facts {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    }
+    .fact {
+      background: #fff;
+      border-left: 6px solid #f59e0b;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, .05);
+    }
+    .fact-number {
+      display: inline-grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 900;
+      margin-bottom: .5rem;
+    }
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: #475569;
+      border-top: 1px solid #e5e7eb;
+      background: #fff;
+    }
+    :focus-visible {
+      outline: 3px solid #2563eb;
+      outline-offset: 3px;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0b1220; color: #e5e7eb; }
+      .card, details, footer, .fact { background: #111827; border-color: #1f2937; color: #e5e7eb; }
+      .tag, footer { color: #94a3b8; }
+      .button.ghost { background: rgba(255, 255, 255, .08); color: #e5e7eb; border-color: rgba(255, 255, 255, .16); }
+      .badge { background: rgba(255, 255, 255, .14); color: #f8fafc; }
+      .hero { color: #f8fafc; }
+      h1 { color: #93c5fd; }
+      .hello-message { color: #bfdbfe; }
+      .fact-number { background: #78350f; color: #fef3c7; }
+    }
+    @media (max-width: 640px) {
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="badge">No extra downloads · Phone friendly</p>
+      <h1>Dogs are wonderful.</h1>
+      <p class="lede">A quick, readable guide to dog breeds, care basics, and fun facts — designed for phones first.</p>
+      <div class="hero-actions">
+        <a class="button" href="#breeds">Browse breeds</a>
+        <a class="button ghost" href="#care">Care tips</a>
+        <button class="button" type="button" id="say-hello">Say hello</button>
+      </div>
+      <p id="hello-message" class="hello-message" role="status" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section id="breeds" aria-labelledby="breeds-title">
+      <h2 id="breeds-title">Popular breeds</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Labrador Retriever</h3>
+          <p>Friendly, energetic, and eager to please. Great for active families.</p>
+          <p class="tag">Family · Exercise</p>
+        </article>
+        <article class="card">
+          <h3>Golden Retriever</h3>
+          <p>Gentle and trainable, with a happy expression that suits many homes.</p>
+          <p class="tag">Gentle · Smart</p>
+        </article>
+        <article class="card">
+          <h3>Beagle</h3>
+          <p>Curious and sociable, with a nose that loves a good adventure.</p>
+          <p class="tag">Curious · Compact</p>
+        </article>
+        <article class="card">
+          <h3>Poodle</h3>
+          <p>Intelligent and adaptable, available in several sizes and many colors.</p>
+          <p class="tag">Smart · Variety</p>
+        </article>
+        <article class="card">
+          <h3>German Shepherd</h3>
+          <p>Loyal and confident, often drawn to work, training, and active routines.</p>
+          <p class="tag">Loyal · Working</p>
+        </article>
+        <article class="card">
+          <h3>Dachshund</h3>
+          <p>Brave and charming, with a personality that often feels bigger than the body.</p>
+          <p class="tag">Bold · Cozy</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="meet-our-dogs" aria-labelledby="meet-our-dogs-title">
+      <h2 id="meet-our-dogs-title">Meet our dogs</h2>
+      <ul class="dog-list">
+        <li><strong class="dog-name">Rex</strong> <em class="dog-action">runs</em>.</li>
+        <li><strong class="dog-name">Luna</strong> <em class="dog-action">jumps</em>.</li>
+        <li><strong class="dog-name">Milo</strong> <em class="dog-action">plays</em>.</li>
+      </ul>
+    </section>
+
+    <section id="care" aria-labelledby="care-title">
+      <h2 id="care-title">Care basics</h2>
+      <details open>
+        <summary>Daily needs</summary>
+        <ul>
+          <li>Fresh water and a consistent feeding routine.</li>
+          <li>Walks, sniff time, and safe play every day.</li>
+          <li>A comfortable resting spot away from drafts and noise.</li>
+          <li>Basic grooming: brushing, nail checks, and ear checks.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Training</summary>
+        <ul>
+          <li>Use short, positive sessions with treats or praise.</li>
+          <li>Teach cues like come, sit, stay, and leave it.</li>
+          <li>Be patient with house training and socialization.</li>
+          <li>Keep routines predictable to reduce stress.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Health</summary>
+        <ul>
+          <li>Schedule regular veterinary checkups and vaccinations.</li>
+          <li>Watch appetite, energy, breathing, and stool changes.</li>
+          <li>Keep a safe chew and toy rotation to prevent boredom.</li>
+          <li>Ask a veterinarian about spay/neuter and parasite prevention.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="facts" aria-labelledby="facts-title">
+      <h2 id="facts-title">Fun facts</h2>
+      <div class="facts">
+        <div class="fact">
+          <span class="fact-number">1</span>
+          <p>Dogs can smell roughly 10,000 to 100,000 times better than humans.</p>
+        </div>
+        <div class="fact">
+          <span class="fact-number">2</span>
+          <p>A dog’s nose print can be as unique as a human fingerprint.</p>
+        </div>
+        <div class="fact">
+          <span class="fact-number">3</span>
+          <p>Puppies are born deaf and blind, then gradually discover the world.</p>
+        </div>
+        <div class="fact">
+          <span class="fact-number">4</span>
+          <p>Many dogs dream, and small movements may show what they are dreaming about.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lightweight" aria-labelledby="lightweight-title">
+      <h2 id="lightweight-title">Why this page is lightweight</h2>
+      <p>This site uses system fonts, inline styles, and a small inline script, with no external images, scripts, or stylesheets. That means fewer downloads and faster reading on mobile data.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for dog lovers. 🐾</p>
+  </footer>
+
+  <script>
+    document.getElementById('say-hello').addEventListener('click', function () {
+      document.getElementById('hello-message').textContent = 'Hello, David!';
+    });
+  </script>
+</body>
+</html>

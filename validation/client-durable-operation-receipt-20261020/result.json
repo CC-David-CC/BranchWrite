@@ -1,0 +1,86 @@
+{
+  "branchwrite": {
+    "branch": "feat/explicit-model-reconciliation-20261019",
+    "host": "llm-49",
+    "source_commit": "5980a1be350c81f60e76df5e79d81afcda13f627",
+    "test_commit": "a3adf08b6af99491c03e7d71c8cae64f6bad86c1"
+  },
+  "context_cow": {
+    "branch": "feat/canonical-history-counts-20261019",
+    "coordinator_store_native_fixture": "real Store/coordinator with deterministic CPU fake model; remained in process",
+    "host": "llm-60",
+    "http_server": "actual local HTTP adapter/API",
+    "source_commit": "895251441266dda1dd4d6437d98fda7251027b68"
+  },
+  "crash_points": [
+    {
+      "boundary": "Frozen project snapshot directory fsynced and renamed; outer context-source receipt not yet published",
+      "exit_code": 78,
+      "recovered": true,
+      "requires_cow_http": false
+    },
+    {
+      "boundary": "COW generation committed; BranchWrite OperationJournal.complete fsynced answer and receipt; workflow ledger result not yet recorded",
+      "cli_status_identifies_operation": true,
+      "exit_code": 79,
+      "reconcile_offline_without_api_key": true,
+      "recovered": true,
+      "resume_uses_original_receipt_without_additional_forward_work": true
+    }
+  ],
+  "evidence_id": "branchwrite-client-durable-operation-receipt-20261020",
+  "fixture_profile": {
+    "execution": {
+      "actual_gpu_execution": false,
+      "capacity": 131072,
+      "declared_gpu_assignment": [
+        0
+      ],
+      "generated_operator": "normal-verifier-decode",
+      "note": "CPU fixture metadata only; no GPU/model qualification",
+      "prefill_chunk": 16,
+      "sampling_protocol": "full-vocab-adaptive-p-u53-v7"
+    },
+    "execution_profile_id": "e repeated 64",
+    "model_contract_id": "c repeated 64"
+  },
+  "full_context_cow_process_restart": "NOT_TESTED",
+  "gpu_inference": "NOT_RUN",
+  "measured_invariants": {
+    "answer_read_back_matches_journal_bytes": true,
+    "cpu_fake_backend_forward_tokens_increase_during_receipt_recovery": false,
+    "exact_original_operation_id_reused": true,
+    "receipt_snapshot_matches_committed_branch_tip_at_crash": true,
+    "reconcile_advances_workflow": false,
+    "source_branch_changes": false,
+    "worker_branch_head_changes_during_recovery": false
+  },
+  "model_quality": "NOT_TESTED",
+  "overall_scope": "Bounded client-side durable receipt recovery on CPU fixture; not cumulative G2 or release certification.",
+  "power_loss_durability": "NOT_TESTED",
+  "schema": 1,
+  "tests": [
+    {
+      "command": "PYTHONPATH=tests:. PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest test_project_context_receipt test_base_project_prepare test_base_catalog_publication test_coding_launcher test_coding_pack_launch test_coding_pack_refresh_admission test_context_pack -v",
+      "failed": 0,
+      "host": "llm-49",
+      "log": "branchwrite-tests.log",
+      "log_sha256": "f15efcca335deda7948dbb26e29e4e249d45b4abe94af4af9db17a70734d118b",
+      "passed": 71,
+      "skipped": 0,
+      "status": "PASS",
+      "suite": "BranchWrite source-context, setup and pack recovery"
+    },
+    {
+      "command": "PYTHONPATH=<isolated BranchWrite source/tests>:<pinned COW source/src>:<pinned COW implementation tests>:<grammar deps> /home/dflanag3/src/Strata/.venv/bin/python -B -m unittest test_base_choice_http test_project_context_real_cow_restart -v",
+      "failed": 0,
+      "host": "llm-60",
+      "log": "cow-http-tests.log",
+      "log_sha256": "4c5dcfa47bcacfd631c8aaeb74370fdc4d6721c6b5c0facec94b3adf9e9c9ac0",
+      "passed": 8,
+      "skipped": 0,
+      "status": "PASS",
+      "suite": "COW HTTP base operations and BranchWrite client receipt recovery"
+    }
+  ]
+}

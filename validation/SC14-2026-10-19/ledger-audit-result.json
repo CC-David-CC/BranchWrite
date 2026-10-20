@@ -1,0 +1,2455 @@
+{
+  "status": "PASS",
+  "ledger_unchanged": true,
+  "model_calls": 10,
+  "output_tokens": 9998,
+  "whole_cli_seconds": 929.8590472940123,
+  "installed_modules": [
+    {
+      "name": "branchwrite",
+      "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+    },
+    {
+      "name": "branchwrite.language",
+      "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+    },
+    {
+      "name": "branchwrite.records",
+      "sha256": "600d0093a8c1768be967e627627a40c244233c118d39fcd24979a76e55b2f677"
+    },
+    {
+      "name": "branchwrite.kernel",
+      "sha256": "106a3a564e0ee5bb190e7a6c3c246336e4c4b91a93df906110e930c02b6a8521"
+    },
+    {
+      "name": "branchwrite.execution",
+      "sha256": "6a595a6a38dee451042f31303ea9f8b7398ab6a0b8f721999d9f2d27637ecb5b"
+    },
+    {
+      "name": "branchwrite.text_file_codec",
+      "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+    },
+    {
+      "name": "branchwrite.tool_registry",
+      "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+    },
+    {
+      "name": "branchwrite.tool_dispatch",
+      "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+    },
+    {
+      "name": "branchwrite.cow_client",
+      "sha256": "a08bd70de75399583cfc19229dc6e0a6ff5447286d5b8856b5322e5eda2f86d7"
+    },
+    {
+      "name": "branchwrite.cow_actions",
+      "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+    },
+    {
+      "name": "branchwrite.model_inputs",
+      "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+    },
+    {
+      "name": "branchwrite.thinking_ladder",
+      "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+    },
+    {
+      "name": "branchwrite.model_dispatch",
+      "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+    },
+    {
+      "name": "branchwrite.cow_fork",
+      "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+    },
+    {
+      "name": "branchwrite.planning_retry",
+      "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+    },
+    {
+      "name": "branchwrite.verification",
+      "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+    },
+    {
+      "name": "branchwrite.image_feedback",
+      "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+    },
+    {
+      "name": "branchwrite.interpreter",
+      "sha256": "a5c3342f271ddf7d41d6b0ab26f42c50e52bff1216ad534528b230ec0970400a"
+    },
+    {
+      "name": "branchwrite.coding_defaults",
+      "sha256": "6e3663b17ae9dbd8b26f8491a01c5453926fa6b3ecc8cbffb9530a00f2e0fe8e"
+    },
+    {
+      "name": "branchwrite.run_cli",
+      "sha256": "ddeed6be5faac60fb05af5342d03807a4c6f681fdb84755d90cdcda121df94a4"
+    },
+    {
+      "name": "branchwrite.coding_cli",
+      "sha256": "85e24915bf23c3bfbb59bb56c10f451d360d0024aa60ed1c3104564484a7bded"
+    },
+    {
+      "name": "branchwrite.__main__",
+      "sha256": "d1f18b35cf4830d001f79f0078fd3420b3d4b92a955b5d59a6c00c530516a0f9"
+    },
+    {
+      "name": "branchwrite.project_scope",
+      "sha256": "7f988e5a72fd6ed23bc31d50e66ea9446bddb0e82a7acdc0e6a54e7f68ee91fa"
+    },
+    {
+      "name": "branchwrite.terminal",
+      "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+    },
+    {
+      "name": "branchwrite.browser_assets",
+      "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+    },
+    {
+      "name": "branchwrite.command_outputs",
+      "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+    },
+    {
+      "name": "branchwrite.browser_isolation",
+      "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+    },
+    {
+      "name": "branchwrite.terminal_worker",
+      "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+    },
+    {
+      "name": "branchwrite.project_baseline",
+      "sha256": "72da8ff7ace695a809a0cf341f8b86d85e2166e8acb9dc08a5bf153ae44c4621"
+    }
+  ],
+  "wheel_sha256": "fd3efe7623fb302cc27fcfb144d0de7d14e7429a2b4bcf95d59ff9d56c9c9b51",
+  "tools": [
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "branchwrite/project_scope.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Expand host-selected project directories into immutable exact file grants.\n\nNo wildcard remains at execution; later files acquire no authority automatically.\nSelection observes names, not a content snapshot. Admission captures actual\ncopied input bytes separately through project_baseline.\n\"\"\"\nimport os,stat\nfrom pathlib import Path\nfrom .execution import Executor,ToolRejected,_relative_path\n\ndef expand_directories(project,directories):\n    project=Path(project).resolve(strict=True)\n    if isinstance(directories,(str,bytes)):raise ValueError('directory list required')\n    directories=tuple(directories)\n    if len(directories)>128:raise ValueError('too many directory scopes')\n    if any(type(value) is not str for value in directories):raise ValueError('relative directories required')\n    reader=Executor(project,project.parent,project)\n    selected=set();seen=set();total=0\n    for directory in sorted(set(directories)):\n        if type(directory) is not str:raise ValueError('relative directory required')\n        if directory!='.':_relative_path(directory)\n        if '.git' in Path(directory).parts:raise ValueError('Git administration is not a project grant')\n        prefix=Path() if directory=='.' else Path(directory)\n        probe=(prefix/'.bw-scope-probe').as_posix()\n        with reader._parent_directory(probe) as (rootfd,_):\n            for current,dirs,files,fd in os.fwalk('.',dir_fd=rootfd,follow_symlinks=False):\n                relative=prefix/Path(current)\n                if len(relative.parts)>64:raise ToolRejected('directory scope exceeds nesting bound')\n                dirs[:]=[name for name in dirs if name!='.git']\n                for name in dirs:\n                    info=os.stat(name,dir_fd=fd,follow_symlinks=False)\n                    if not stat.S_ISDIR(info.st_mode):raise ToolRejected('directory scope contains a link')\n                    seen.add((relative/name).as_posix())\n                for name in files:\n                    if name=='.git':continue\n                    path=(relative/name).as_posix();path.encode('utf8')\n                    info=os.stat(name,dir_fd=fd,follow_symlinks=False)\n                    if not stat.S_ISREG(info.st_mode) or info.st_nlink!=1:\n                        raise ToolRejected('directory scope contains a link or special file')\n                    if path not in selected:total+=info.st_size\n                    selected.add(path);seen.add(path)\n                    if info.st_size>4*1024**2:raise ToolRejected('scoped file exceeds bound')\n                if len(seen)>20000 or total>64*1024**2:raise ToolRejected('directory scope exceeds project bounds')\n    return sorted(selected)\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "tests/test_directory_grants.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Host-selected directory scope is frozen into exact grants, not a wildcard.\"\"\"\nimport tempfile,unittest,json,contextlib,io\nfrom pathlib import Path\nfrom unittest.mock import patch\nfrom branchwrite.__main__ import main\nfrom branchwrite.coding_cli import read_launch\nclass DirectoryGrantTests(unittest.TestCase):\n def setUp(self):\n  self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)\n  self.root=Path(self.tmp.name);self.project=self.root/'project';self.project.mkdir()\n  (self.project/'src').mkdir();(self.project/'src/app.py').write_text('pass')\n  (self.project/'src/\u96ea.py').write_text('pass');(self.project/'.git').mkdir()\n  (self.project/'.git/config').write_text('private');(self.project/'README.md').write_text('readme')\n def test_exact_sorted_files_skip_git_and_keep_unicode(self):\n  from branchwrite.project_scope import expand_directories\n  self.assertEqual(expand_directories(self.project,['.','src']),['README.md','src/app.py','src/\u96ea.py'])\n def test_linked_directory_and_escape_are_refused(self):\n  from branchwrite.project_scope import expand_directories\n  (self.project/'link').symlink_to(self.root,target_is_directory=True)\n  for path in ['link','../','/tmp','.git']:\n   with self.subTest(path=path),self.assertRaises((ValueError,OSError)):\n    expand_directories(self.project,[path])\n def test_linked_file_in_selected_tree_is_refused(self):\n  from branchwrite.project_scope import expand_directories\n  (self.project/'src/link').symlink_to(self.project/'README.md')\n  with self.assertRaises(ValueError):expand_directories(self.project,['src'])\n def test_cli_freezes_read_and_edit_directory_without_creation_rights(self):\n  connection=self.root/'connection.json'\n  connection.write_text(json.dumps(dict(endpoint_url='http://127.0.0.1:1',endpoint_pin='x',model_contract_id='m',execution_profile_id='p',eos_tokens=[256])))\n  state=self.root/'state'\n  args=['code',str(self.project),'--task','Fix app','--connection',str(connection),'--state',str(state),'--branch','r','--read-dir','.','--edit-dir','src','--test-command','true']\n  with patch('branchwrite.coding_cli.run_saved',return_value=(0,{'verified':True})),contextlib.redirect_stdout(io.StringIO()):\n   try:code=main(args)\n   except SystemExit as exc:code=exc.code\n  self.assertEqual(code,0)\n  grant=read_launch(state)['config']['grant']\n  self.assertEqual(grant['edit_paths'],['src/app.py','src/\u96ea.py'])\n  self.assertEqual(grant['create_paths'],[])\n  (self.project/'src/new.py').write_text('pass')\n  self.assertNotIn('src/new.py',read_launch(state)['config']['grant']['read_paths'])\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "tests/test_directory_scope_overlap.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Protected feature acceptance: avoid repeated subtree walks, retain exact grants.\"\"\"\nimport tempfile,unittest,os\nfrom pathlib import Path\nfrom unittest.mock import patch\nfrom branchwrite.project_scope import expand_directories\nclass ScopeOverlapTests(unittest.TestCase):\n def setUp(self):\n  self.t=tempfile.TemporaryDirectory();self.addCleanup(self.t.cleanup)\n  self.root=Path(self.t.name)\n  for n in ['pkg/a.py','pkg/sub/b.py','pkg/sub/deep/c.py','pkg_extra/d.py']:\n   p=self.root/n;p.parent.mkdir(parents=True,exist_ok=True);p.write_text('pass')\n def measured(self,scopes):\n  original=os.fwalk;calls=[]\n  def walk(*args,**kwargs):\n   calls.append((args,kwargs))\n   yield from original(*args,**kwargs)\n  with patch('branchwrite.project_scope.os.fwalk',side_effect=walk):\n   result=expand_directories(self.root,scopes)\n  return result,len(calls)\n def test_ancestor_scopes_walk_the_union_once(self):\n  result,calls=self.measured(['pkg/sub/deep','pkg','pkg/sub','pkg'])\n  self.assertEqual(result,['pkg/a.py','pkg/sub/b.py','pkg/sub/deep/c.py'])\n  self.assertEqual(calls,1)\n def test_root_scope_covers_all_named_children(self):\n  result,calls=self.measured(['pkg/sub','pkg_extra','.','pkg'])\n  self.assertEqual(result,['pkg/a.py','pkg/sub/b.py','pkg/sub/deep/c.py','pkg_extra/d.py'])\n  self.assertEqual(calls,1)\n def test_sibling_name_prefix_is_not_ancestry(self):\n  result,calls=self.measured(['pkg_extra','pkg'])\n  self.assertEqual(result,['pkg/a.py','pkg/sub/b.py','pkg/sub/deep/c.py','pkg_extra/d.py'])\n  self.assertEqual(calls,2)\n def test_invalid_explicit_scope_is_not_hidden_by_root(self):\n  for bad in ['../outside','/tmp','.git','pkg/../pkg']:\n   with self.subTest(bad=bad),self.assertRaises((ValueError,OSError)):\n    expand_directories(self.root,['.',bad])\n def test_empty_scopes_do_no_walk(self):\n  self.assertEqual(self.measured([]),([],0))\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "branchwrite/execution.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Bounded registered tests and grant-checked file creation, reading and editing.\n\nThis module is deliberately a small host boundary, not an arbitrary shell tool.\nTests run in bubblewrap. Optional browser capture uses a host-selected Chromium\nwith its renderer sandbox enabled; trusted-fixture scope is explicit below.\n\"\"\"\nfrom __future__ import annotations\n\nfrom contextlib import contextmanager\nfrom dataclasses import dataclass\nimport hashlib\nimport math\nimport os\nfrom pathlib import Path, PurePosixPath\nimport selectors\nimport signal\nimport stat\nimport subprocess\nimport threading\nimport time\nimport uuid\nimport shutil\n\n\n_BWRAP = Path(\"/usr/bin/bwrap\")\n_PRLIMIT = Path(\"/usr/bin/prlimit\")\n_PYTHON = Path(\"/usr/bin/python3\")\n_MAX_FILE_BYTES = 4 * 1024 * 1024\n_MAX_SOURCE_BYTES = 64 * 1024 * 1024\n_MAX_SOURCE_ENTRIES = 20_000\n_MAX_SOURCE_DEPTH = 64\n_MAX_REPLACEMENT_BYTES = 1024 * 1024\n_MAX_CAPTURE_BYTES = 1024 * 1024\n_MAX_TIMEOUT_SECONDS = 120.0\n\n\nclass ToolRejected(ValueError):\n    \"\"\"The registered operation does not fit its grant or execution boundary.\"\"\"\n\n\nclass _MissingParent(ToolRejected):\n    \"\"\"A missing ancestor, distinct from a symlink or invalid directory.\"\"\"\n\n\n@dataclass(frozen=True)\nclass Grant:\n    edit_paths: tuple[str, ...]\n    allow_tests: bool\n    create_paths: tuple[str, ...] = ()\n    read_paths: tuple[str, ...] = ()\n    capture_paths: tuple[str, ...] = ()\n    interact_paths: tuple[str, ...] = ()\n    asset_paths: tuple[str, ...] = ()\n    command_names: tuple[str, ...] = ()\n    allow_shell: bool = False\n    mode_paths: tuple[str, ...] = ()\n    mode_mask: int = 0\n    output_paths: tuple[str, ...] = ()\n\n    def __post_init__(self):\n        if type(self.allow_shell) is not bool:\n            raise ToolRejected(\"allow_shell must be an exact boolean\")\n        if type(self.allow_tests) is not bool:\n            raise ToolRejected(\"allow_tests must be an exact boolean\")\n        for field in (\"edit_paths\", \"create_paths\", \"read_paths\", \"capture_paths\", \"interact_paths\", \"asset_paths\", \"mode_paths\", \"output_paths\"):\n            values = getattr(self, field)\n            if isinstance(values, (str, bytes)):\n                raise ToolRejected(f\"{field} must be a sequence of relative paths\")\n            try:\n                paths = tuple(_relative_path(value) for value in values)\n            except TypeError as exc:\n                raise ToolRejected(f\"{field} must be an iterable of relative paths\") from exc\n            if len(set(paths)) != len(paths):\n                raise ToolRejected(f\"{field} contains duplicates\")\n            object.__setattr__(self, field, paths)\n        if (type(self.mode_mask) is not int or not 0<=self.mode_mask<=0o777\n                or bool(self.mode_paths)!=bool(self.mode_mask)\n                or any(path not in self.read_paths for path in self.mode_paths)):\n            raise ToolRejected(\"mode changes require explicit readable paths and a basic-permission mask\")\n        if self.output_paths:\n            from .command_outputs import validate_paths\n            validate_paths(self.output_paths,self.read_paths)\n            if not self.allow_shell and not self.command_names:\n                raise ToolRejected(\"command outputs require a command capability\")\n        import re\n        if (type(self.command_names) is not tuple or len(self.command_names)>32\n                or any(type(v) is not str or re.fullmatch('[A-Za-z][A-Za-z0-9_-]{0,31}',v) is None for v in self.command_names)\n                or len(set(self.command_names))!=len(self.command_names)):\n            raise ToolRejected('bounded immutable command-name grants required')\n        from .browser_assets import BrowserAsset\n        if len(self.asset_paths)>64:raise ToolRejected('asset allowlist exceeds64 paths')\n        for path in self.asset_paths:\n            if path not in self.read_paths:raise ToolRejected('assets require explicit read grants')\n            try:BrowserAsset(path,b'')\n            except ValueError as exc:raise ToolRejected('invalid asset path: '+str(exc)) from exc\n        if any(path not in self.capture_paths or path not in self.read_paths for path in self.interact_paths):\n            raise ToolRejected(\"interaction paths require explicit capture and read grants\")\n\n\n@dataclass(frozen=True)\nclass ArtifactRef:\n    \"\"\"Immutable reference to output stored outside the exposed source tree.\"\"\"\n\n    path: Path\n    sha256: str\n    size_bytes: int\n\n    def read_bytes(self) -> bytes:\n        data = self.path.read_bytes()\n        if len(data) != self.size_bytes or hashlib.sha256(data).hexdigest() != self.sha256:\n            raise OSError(\"captured artifact changed after publication\")\n        return data\n\n\n@dataclass(frozen=True)\nclass ToolResult:\n    operation_id: str\n    disposition: str\n    exit_code: int | None\n    elapsed_seconds: float\n    stdout: ArtifactRef\n    stderr: ArtifactRef\n\n\n@dataclass(frozen=True)\nclass PageCaptureResult:\n    operation_id: str\n    source_path: str\n    source: ArtifactRef\n    image: ArtifactRef\n    viewport: tuple[int, int]\n    browser_version: str\n    chromium_sandbox: bool\n    url: str\n    http_status: int\n    served_sha256: str\n    elapsed_seconds: float\n    isolation: dict | None = None\n    inspection: dict | None = None\n    actions: tuple = ()\n    text: str = \"\"\n    asset_manifest: tuple = ()\n    served_assets: tuple = ()\n    assets: tuple = ()\n    document_path: str = \"index.html\"\n    runtime_errors: tuple[str, ...] = ()\n    viewport_name: str | None = None\n\n\n\nclass BrowserExecutionError(ToolRejected):\n    \"\"\"A failed candidate page held in memory after proven browser retirement.\n\n    Direct callers get an error without artifact publication. Only the workflow\n    registry publishes this exact observation; it never reruns the browser.\n    \"\"\"\n    def __init__(self,capture,*,executor,operation_id,source_path,source_bytes,assets,elapsed_seconds,viewport_name=None):\n        from .browser_capture import RenderedPage\n        witness=capture.isolation if isinstance(capture,RenderedPage) else None\n        errors=capture.runtime_errors if isinstance(capture,RenderedPage) else None\n        if (not isinstance(capture,RenderedPage)\n                or type(errors) is not tuple or not 1<=len(errors)<=16\n                or any(type(error) is not str or not 0<len(error)<=1024 for error in errors)\n                or type(witness) is not dict\n                or witness.get('kind')!='bubblewrap-browser-v1'\n                or witness.get('chromium_sandbox') is not True\n                or witness.get('worker_exited') is not True\n                or witness.get('namespace_members_after')!=[]\n                or type(source_bytes) is not bytes\n                or capture.http_status!=200 or capture.served_sha256!=hashlib.sha256(source_bytes).hexdigest()\n                or tuple(a.manifest for a in assets)!=capture.asset_manifest):\n            raise ValueError('complete settled browser error receipt required')\n        selected=executor._browser.for_viewport(viewport_name)\n        self.viewport=(selected.width,selected.height)\n        self.viewport_name=selected.name_for_size(*self.viewport)\n        from PIL import Image\n        import io\n        with Image.open(io.BytesIO(capture.png)) as image:\n            if image.size!=self.viewport:raise ValueError('settled browser error viewport differs')\n        self.capture=capture\n        self.executor=executor\n        self.operation_id=operation_id\n        self.source_path=source_path\n        self.source_bytes=source_bytes\n        self.assets=assets\n        self.elapsed_seconds=elapsed_seconds\n        super().__init__('page execution failed: '+errors[0][:256])\n\n\ndef _relative_path(value: str) -> str:\n    if not isinstance(value, str) or not value or \"\\x00\" in value or \"\\\\\" in value:\n        raise ToolRejected(\"path must be a nonempty POSIX relative path\")\n    path = PurePosixPath(value)\n    if path.is_absolute() or any(part in (\"\", \".\", \"..\") for part in path.parts):\n        raise ToolRejected(\"path escapes or is not relative to the workspace\")\n    normalized = path.as_posix()\n    if normalized != value:\n        raise ToolRejected(\"path must use canonical POSIX spelling\")\n    return normalized\n\n\ndef _operation_id(value: str) -> str:\n    if (not isinstance(value, str) or not value or len(value) > 128\n            or any(ord(char) < 0x20 or ord(char) == 0x7f for char in value)):\n        raise ToolRejected(\"operation_id must be a bounded printable string\")\n    return value\n\n\ndef _copy_directory(source_fd: int, destination: Path, budget: list[int], depth: int = 0, *, project_input=False) -> None:\n    \"\"\"Copy an already-open directory without following links or special files.\"\"\"\n    if depth > _MAX_SOURCE_DEPTH:\n        raise ToolRejected(\"source directory nesting exceeds the registered depth limit\")\n    directory_before = os.fstat(source_fd)\n    with os.scandir(source_fd) as entries:\n        for entry in entries:\n            if entry.name == \".git\":\n                if project_input:continue  # Never inspect/follow shared Git administration.\n                raise ToolRejected(\"source may not include Git administration data\")\n            budget[0] += 1\n            if budget[0] > _MAX_SOURCE_ENTRIES:\n                raise ToolRejected(\"source contains too many filesystem entries\")\n            info = entry.stat(follow_symlinks=False)\n            if stat.S_ISLNK(info.st_mode):\n                raise ToolRejected(f\"source contains a symlink: {entry.name}\")\n            target = destination / entry.name\n            if stat.S_ISDIR(info.st_mode):\n                target.mkdir(mode=0o755)\n                child_fd = os.open(entry.name, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,\n                                   dir_fd=source_fd)\n                try:\n                    opened = os.fstat(child_fd)\n                    if (opened.st_dev, opened.st_ino) != (info.st_dev, info.st_ino):\n                        raise ToolRejected(\"source directory changed during workspace copy\")\n                    _copy_directory(child_fd, target, budget, depth + 1, project_input=project_input)\n                    os.chmod(target, stat.S_IMODE(opened.st_mode) & 0o777)\n                finally:\n                    os.close(child_fd)\n            elif stat.S_ISREG(info.st_mode):\n                if info.st_size > _MAX_FILE_BYTES:\n                    raise ToolRejected(f\"source file exceeds the registered file limit: {entry.name}\")\n                budget[1] += info.st_size\n                if budget[1] > _MAX_SOURCE_BYTES:\n                    raise ToolRejected(\"source exceeds the registered total byte limit\")\n                source_file = os.open(entry.name, os.O_RDONLY | os.O_NOFOLLOW, dir_fd=source_fd)\n                try:\n                    opened = os.fstat(source_file)\n                    if (not stat.S_ISREG(opened.st_mode)\n                            or (opened.st_dev, opened.st_ino) != (info.st_dev, info.st_ino)):\n                        raise ToolRejected(\"source file changed during workspace copy\")\n                    mode = stat.S_IMODE(opened.st_mode) & 0o777\n                    output_fd = os.open(target, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)\n                    try:\n                        with os.fdopen(os.dup(source_file), \"rb\") as reader, os.fdopen(output_fd, \"wb\") as writer:\n                            output_fd = -1\n                            copied = 0\n                            while block := reader.read(min(1024 * 1024, _MAX_FILE_BYTES + 1 - copied)):\n                                copied += len(block)\n                                if copied > _MAX_FILE_BYTES:\n                                    raise ToolRejected(\"source file grew past the registered file limit\")\n                                writer.write(block)\n                            writer.flush()\n                            os.fchmod(writer.fileno(), mode)\n                            os.fsync(writer.fileno())\n                        after = os.fstat(source_file)\n                        if (copied != opened.st_size\n                                or (after.st_size, after.st_mtime_ns) != (opened.st_size, opened.st_mtime_ns)):\n                            raise ToolRejected(\"source file changed during workspace copy\")\n                    finally:\n                        if output_fd >= 0:\n                            os.close(output_fd)\n                finally:\n                    os.close(source_file)\n            else:\n                raise ToolRejected(f\"source contains a non-regular entry: {entry.name}\")\n    directory_after = os.fstat(source_fd)\n    if ((directory_before.st_dev, directory_before.st_ino, directory_before.st_mtime_ns)\n            != (directory_after.st_dev, directory_after.st_ino, directory_after.st_mtime_ns)):\n        raise ToolRejected(\"source directory changed during workspace copy\")\n\n\nclass Executor:\n    \"\"\"Owns a copied workspace, granted file tools and isolated execution.\"\"\"\n\n    def __init__(self, source: Path, run_dir: Path, workspace: Path, *, browser=None, commands=(), shell=None):\n        if browser is not None:\n            from branchwrite.browser_capture import BrowserConfig\n            if not isinstance(browser, BrowserConfig):\n                raise ToolRejected(\"browser configuration must be host-owned BrowserConfig\")\n        from .terminal import command_table\n        self._commands = command_table(commands)\n        from .terminal import ShellConfig\n        if shell is not None and not isinstance(shell,ShellConfig):raise ToolRejected(\"host ShellConfig required\")\n        self._shell = shell\n        self._browser = browser\n        self.source = source\n        self.run_dir = run_dir\n        self.workspace = workspace\n        self.artifacts = run_dir / \"artifacts\"\n        self._lock = threading.RLock()\n        info = workspace.lstat()\n        if not stat.S_ISDIR(info.st_mode):\n            raise ToolRejected(\"workspace must be an owned directory\")\n        self._workspace_identity = (info.st_dev, info.st_ino)\n\n    @classmethod\n    def create(cls, source, run_dir, *, browser=None, commands=(), shell=None, project_input=False):\n        from .terminal import command_table\n        commands = command_table(commands)\n        from .terminal import ShellConfig\n        if shell is not None and not isinstance(shell,ShellConfig):raise ToolRejected(\"host ShellConfig required\")\n        if type(project_input) is not bool:raise ToolRejected('explicit project input policy required')\n        source_input = Path(source).expanduser().absolute()\n        try:\n            source_info = source_input.lstat()\n        except OSError as exc:\n            raise ToolRejected(\"source directory is unavailable\") from exc\n        if stat.S_ISLNK(source_info.st_mode) or not stat.S_ISDIR(source_info.st_mode):\n            raise ToolRejected(\"source must be a real directory, not a link\")\n        source_path = source_input.resolve(strict=True)\n        source_info = source_path.lstat()\n        run_path = Path(run_dir).expanduser().absolute()\n        run_parent = run_path.parent.resolve(strict=True)\n        run_path = run_parent / run_path.name\n        try:\n            run_path.relative_to(source_path)\n        except ValueError:\n            pass\n        else:\n            raise ToolRejected(\"run directory must be outside the input source\")\n        if source_path == run_path or source_path.is_relative_to(run_path):\n            raise ToolRejected(\"source and run directory overlap\")\n        if run_path.exists() or run_path.is_symlink():\n            raise ToolRejected(\"run directory already exists\")\n\n        created_by_this_call = False\n        created_identity = None\n        try:\n            run_path.mkdir(mode=0o700)\n            created_by_this_call = True\n            created_info = run_path.lstat()\n            created_identity = (created_info.st_dev, created_info.st_ino)\n            workspace = run_path / \"workspace\"\n            workspace.mkdir(mode=0o700)\n            artifact_dir = run_path / \"artifacts\"\n            artifact_dir.mkdir(mode=0o700)\n            source_fd = os.open(source_path, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)\n            try:\n                opened = os.fstat(source_fd)\n                if (opened.st_dev, opened.st_ino) != (source_info.st_dev, source_info.st_ino):\n                    raise ToolRejected(\"source directory changed during workspace creation\")\n                _copy_directory(source_fd, workspace, [0, 0], project_input=project_input)\n            finally:\n                os.close(source_fd)\n        except BaseException:\n            if created_by_this_call and created_identity is not None:\n                try:\n                    current_info = run_path.lstat()\n                    if (stat.S_ISDIR(current_info.st_mode)\n                            and (current_info.st_dev, current_info.st_ino) == created_identity):\n                        shutil.rmtree(run_path)\n                except FileNotFoundError:\n                    pass\n            raise\n        return cls(source_path, run_path, workspace, browser=browser, commands=commands, shell=shell)\n\n    def _artifact(self, payload: bytes) -> ArtifactRef:\n        name = uuid.uuid4().hex + \".bin\"\n        path = self.artifacts / name\n        descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)\n        with os.fdopen(descriptor, \"wb\") as stream:\n            stream.write(payload)\n            stream.flush()\n            os.fsync(stream.fileno())\n        os.chmod(path, 0o400)\n        descriptor = os.open(self.artifacts, os.O_RDONLY | os.O_DIRECTORY)\n        try:\n            os.fsync(descriptor)\n        finally:\n            os.close(descriptor)\n        return ArtifactRef(path, hashlib.sha256(payload).hexdigest(), len(payload))\n\n    def _result(self, operation_id, disposition, exit_code, started, stdout, stderr):\n        return ToolResult(operation_id, disposition, exit_code,\n                          max(0.0, time.monotonic() - started),\n                          self._artifact(stdout), self._artifact(stderr))\n\n    @contextmanager\n    def _parent_directory(self, relative, *, create_missing=False):\n        \"\"\"Pin parents without following links; reads never create directories.\n\n        Only create_file, after checking its exact leaf grant and depth, may\n        create the necessary missing parents. Host actions are serialized;\n        same-UID hostile processes still require the registered OS sandbox.\n        On failure remove only newly created, still-identical empty directories.\n        A published file or unresolved side effect is never undone or retried.\n        \"\"\"\n        descriptor = None\n        created = []\n        try:\n            try:\n                descriptor = os.open(self.workspace, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)\n                info = os.fstat(descriptor)\n                if (info.st_dev, info.st_ino) != self._workspace_identity:\n                    raise ToolRejected(\"owned workspace directory was replaced\")\n                for part in PurePosixPath(relative).parts[:-1]:\n                    try:\n                        child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,\n                                        dir_fd=descriptor)\n                    except FileNotFoundError as exc:\n                        if not create_missing:\n                            raise _MissingParent(\"workspace parent is missing\") from exc\n                        os.mkdir(part, 0o700, dir_fd=descriptor)\n                        made = os.stat(part, dir_fd=descriptor, follow_symlinks=False)\n                        identity = (made.st_dev, made.st_ino)\n                        created.append((os.dup(descriptor), part, identity))\n                        os.fsync(descriptor)\n                        child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,\n                                        dir_fd=descriptor)\n                        opened = os.fstat(child)\n                        if (opened.st_dev, opened.st_ino) != identity:\n                            os.close(child)\n                            raise ToolRejected(\"new workspace parent was replaced\")\n                    os.close(descriptor)\n                    descriptor = child\n            except OSError as exc:\n                raise ToolRejected(\"workspace parent is unavailable or is a link\") from exc\n            yield descriptor, PurePosixPath(relative).name\n        except BaseException:\n            for parent, name, identity in reversed(created):\n                try:\n                    info = os.stat(name, dir_fd=parent, follow_symlinks=False)\n                    if stat.S_ISDIR(info.st_mode) and (info.st_dev, info.st_ino) == identity:\n                        os.rmdir(name, dir_fd=parent)\n                        os.fsync(parent)\n                except OSError:\n                    # Nonempty/replaced/unavailable means uncertain effects;\n                    # leave it for the existing operation reconciliation path.\n                    pass\n            raise\n        finally:\n            if descriptor is not None:\n                os.close(descriptor)\n            for parent, _, _ in created:\n                os.close(parent)\n\n    def create_file(self, operation_id, grant, path, payload):\n        \"\"\"Publish bounded bytes without ever replacing an existing name.\n\n        The exact granted leaf also permits its missing private parent directories;\n        it does not grant sibling paths or directory replacement. Existing parent\n        modes are preserved. A returned result acknowledges a completed operation.\n        If artifact publication fails after the file is linked, it may already exist;\n        callers must reconcile by reading, not retry with an overwrite.\n        \"\"\"\n        operation_id = _operation_id(operation_id)\n        if not isinstance(grant, Grant):\n            raise ToolRejected(\"a host Grant is required\")\n        relative = _relative_path(path)\n        if relative not in grant.create_paths:\n            raise ToolRejected(\"creation path is not permitted by the host grant\")\n        if type(payload) is not bytes or len(payload) > _MAX_FILE_BYTES:\n            raise ToolRejected(\"creation requires bytes within the registered file limit\")\n        if len(PurePosixPath(relative).parts) - 1 > _MAX_SOURCE_DEPTH:\n            raise ToolRejected(\"creation parent depth exceeds the source tree limit\")\n        with self._lock, self._parent_directory(relative, create_missing=True) as (parent, name):\n            started = time.monotonic()\n            temporary = \".bw-create-\" + uuid.uuid4().hex + \".tmp\"\n            descriptor = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,\n                                 0o600, dir_fd=parent)\n            try:\n                with os.fdopen(descriptor, \"wb\") as stream:\n                    stream.write(payload)\n                    stream.flush()\n                    os.fsync(stream.fileno())\n                try:\n                    # Unlike replace/rename, link fails atomically on collision.\n                    os.link(temporary, name, src_dir_fd=parent, dst_dir_fd=parent,\n                            follow_symlinks=False)\n                except FileExistsError as exc:\n                    raise ToolRejected(\"creation target already exists\") from exc\n            finally:\n                os.unlink(temporary, dir_fd=parent)\n            os.fsync(parent)\n            return self._result(operation_id, \"created\", 0, started, b\"file created\\n\", b\"\")\n\n    def read_file(self, operation_id, grant, path):\n        \"\"\"Read actual bounded file bytes and publish a hashed output artifact.\"\"\"\n        operation_id = _operation_id(operation_id)\n        if not isinstance(grant, Grant):\n            raise ToolRejected(\"a host Grant is required\")\n        relative = _relative_path(path)\n        if relative not in grant.read_paths:\n            raise ToolRejected(\"read path is not permitted by the host grant\")\n        with self._lock:\n            started = time.monotonic()\n            payload = self._read_private_bytes(relative)\n            return self._result(operation_id, \"read\", 0, started, payload, b\"\")\n\n    def _read_private_bytes(self, relative):\n        \"\"\"Caller holds the executor lock; return a stable no-follow read.\"\"\"\n        with self._parent_directory(relative) as (parent, name):\n            try:\n                descriptor = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK,\n                                     dir_fd=parent)\n            except OSError as exc:\n                raise ToolRejected(\"read target is unavailable or is a link\") from exc\n            try:\n                before = os.fstat(descriptor)\n                if (not stat.S_ISREG(before.st_mode) or before.st_nlink != 1\n                        or before.st_size > _MAX_FILE_BYTES):\n                    raise ToolRejected(\"read target is not a bounded private regular file\")\n                payload = bytearray()\n                while block := os.read(descriptor, min(65536, _MAX_FILE_BYTES + 1 - len(payload))):\n                    payload.extend(block)\n                    if len(payload) > _MAX_FILE_BYTES:\n                        raise ToolRejected(\"read target grew beyond the registered file limit\")\n                after = os.fstat(descriptor)\n                fields = (\"st_dev\", \"st_ino\", \"st_size\", \"st_mtime_ns\", \"st_ctime_ns\", \"st_nlink\")\n                if (len(payload) != before.st_size\n                        or any(getattr(before, field) != getattr(after, field) for field in fields)):\n                    raise ToolRejected(\"read target changed while reading\")\n            finally:\n                os.close(descriptor)\n            return bytes(payload)\n\n    def _browser_assets(self,grant):\n        \"\"\"Read only explicit host-authorized resources, through private no-follow IO.\"\"\"\n        from .browser_assets import BrowserAsset,validate_assets\n        if not isinstance(grant,Grant):raise ToolRejected('host Grant required')\n        try:\n            return validate_assets(tuple(BrowserAsset(path,self._read_private_bytes(path))\n                                         for path in grant.asset_paths))\n        except ValueError as exc:\n            raise ToolRejected('invalid captured resource bundle: '+str(exc)) from exc\n\n    def capture_page(self, operation_id, grant, path, expected_sha256, *, viewport=None):\n        return self._capture_page(operation_id, grant, path, expected_sha256,viewport=viewport)\n\n    def interact_page(self, operation_id, grant, path, expected_sha256, actions, *, viewport=None):\n        from .browser_capture import page_action_recipe\n        try:\n            actions = page_action_recipe(actions)\n        except (ValueError, TypeError) as exc:\n            raise ToolRejected('invalid browser action recipe: ' + str(exc)) from exc\n        return self._capture_page(operation_id, grant, path, expected_sha256, actions=actions,viewport=viewport)\n\n    def _capture_page(self, operation_id, grant, path, expected_sha256, *, actions=None,viewport=None):\n        \"\"\"Render exactly the authorized source revision; publish actual pixels.\n\n        The capture worker runs in its own filesystem/network/PID namespaces\n        with no host home, credentials, service sockets or GPU devices mounted.\n        Chromium's renderer sandbox is also mandatory. Only an explicitly captured\n        document/resource bundle is admitted; interaction requires its own grant and bounded recipe.\n        Capture permission is distinct from permission to read/edit/test files.\n        \"\"\"\n        operation_id = _operation_id(operation_id)\n        relative = _relative_path(path)\n        paths = 'capture_paths' if actions is None else 'interact_paths'\n        if not isinstance(grant, Grant) or relative not in getattr(grant, paths):\n            raise ToolRejected(\"browser operation is not permitted by the host grant\")\n        if self._browser is None:\n            raise ToolRejected(\"no host browser is configured\")\n        if self._browser.actions or (actions is not None and self._browser.inspection is not None):\n            raise ToolRejected(\"host tool browser cannot contain hidden actions or inspection\")\n        from dataclasses import replace\n        try:selected=self._browser.for_viewport(viewport)\n        except ValueError as exc:raise ToolRejected(str(exc)) from exc\n        name=selected.name_for_size(selected.width,selected.height)\n        browser=selected if actions is None else replace(selected,actions=actions)\n        if (type(expected_sha256) is not str or len(expected_sha256) != 64\n                or any(char not in \"0123456789abcdef\" for char in expected_sha256)):\n            raise ToolRejected(\"capture requires an exact lowercase source SHA-256\")\n        with self._lock:\n            started = time.monotonic()\n            payload = self._read_private_bytes(relative)\n            if hashlib.sha256(payload).hexdigest() != expected_sha256:\n                raise ToolRejected(\"capture source revision is stale\")\n            from branchwrite.browser_capture import render_snapshot\n            try:\n                assets=self._browser_assets(grant)\n                rendered = render_snapshot(payload, browser,assets=assets,document_path=relative)\n            except Exception as exc:\n                raise ToolRejected(\"browser capture failed: \" + str(exc)[:512]) from exc\n            elapsed=time.monotonic()-started\n            if rendered.runtime_errors:\n                raise BrowserExecutionError(rendered,executor=self,operation_id=operation_id,\n                    source_path=relative,source_bytes=payload,assets=assets,elapsed_seconds=elapsed,viewport_name=name)\n            return self._publish_page_capture(operation_id,relative,payload,assets,rendered,elapsed,size=(browser.width,browser.height),viewport_name=name)\n\n    def _publish_page_capture(self,operation_id,relative,payload,assets,rendered,elapsed_seconds,*,size,viewport_name=None):\n        \"\"\"Publish one already observed byte bundle; no browser execution here.\"\"\"\n        return PageCaptureResult(operation_id,relative,self._artifact(payload),\n            self._artifact(rendered.png),size,\n            rendered.browser_version,True,rendered.url,rendered.http_status,\n            rendered.served_sha256,elapsed_seconds,rendered.isolation,\n            rendered.inspection,rendered.actions,rendered.text,rendered.asset_manifest,\n            rendered.served_assets,tuple(self._artifact(a.body) for a in assets),\n            rendered.document_path,rendered.runtime_errors,viewport_name)\n\n    def _publish_browser_error(self,error,operation_id,path,*,viewport=None):\n        \"\"\"The registry may retain only this Executor's original failed capture.\"\"\"\n        if (not isinstance(error,BrowserExecutionError) or error.executor is not self\n                or error.operation_id!=operation_id or error.source_path!=path):\n            raise ValueError('browser error belongs to another operation or world')\n        selected=self._browser.for_viewport(viewport)\n        if error.viewport!=(selected.width,selected.height) or error.viewport_name!=selected.name_for_size(selected.width,selected.height):\n            raise ValueError('browser error viewport differs from original observation')\n        with self._lock:\n            return self._publish_page_capture(operation_id,path,error.source_bytes,\n                error.assets,error.capture,error.elapsed_seconds,size=error.viewport,viewport_name=error.viewport_name)\n\n\n    @staticmethod\n    def _replacement_bytes(original, before, after):\n        \"\"\"Pure edit admission, shared by planning and the final write boundary.\n\n        A nonmatching/ambiguous edit is safe to reject before external execution.\n        This does not classify exceptions after write entry as safe to retry.\n        \"\"\"\n        if not isinstance(before, bytes) or not before or not isinstance(after, bytes):\n            raise ToolRejected(\"replacement requires nonempty byte preimage and byte replacement\")\n        if len(before) > _MAX_REPLACEMENT_BYTES or len(after) > _MAX_REPLACEMENT_BYTES:\n            raise ToolRejected(\"replacement exceeds the registered byte limit\")\n        if original.count(before) != 1:\n            raise ToolRejected(\"exact preimage must occur once in the target\")\n        updated = original.replace(before, after, 1)\n        if len(updated) > _MAX_FILE_BYTES:\n            raise ToolRejected(\"replacement would exceed the registered file limit\")\n        return updated\n\n    def set_mode(self, operation_id, grant, path, expected_sha, mode):\n        \"\"\"Change only granted permission bits on one observed private file.\n\n        This is a descriptor-based metadata operation,not a shell escape.\n        The exact mask is host authority. File bytes are read and checked on\n        the same descriptor before and after fchmod,even if read access is removed.\n        \"\"\"\n        import json\n        operation_id=_operation_id(operation_id)\n        relative=_relative_path(path)\n        if not isinstance(grant,Grant) or relative not in grant.mode_paths:\n            raise ToolRejected(\"mode path is not permitted\")\n        if (type(mode) is not str or len(mode)!=4 or mode[0]!='0'\n                or any(c not in '01234567' for c in mode)):\n            raise ToolRejected(\"mode requires four octal digits without special bits\")\n        if (type(expected_sha) is not str or len(expected_sha)!=64\n                or any(c not in '0123456789abcdef' for c in expected_sha)):\n            raise ToolRejected(\"mode requires an exact observed SHA256\")\n        desired=int(mode,8)\n        with self._lock,self._parent_directory(relative) as (parent,name):\n            started=time.monotonic()\n            try:fd=os.open(name,os.O_RDONLY|os.O_NONBLOCK|os.O_NOFOLLOW,dir_fd=parent)\n            except OSError as exc:raise ToolRejected(\"mode target is unavailable or a link\") from exc\n            try:\n                before=os.fstat(fd);old=stat.S_IMODE(before.st_mode)\n                if (not stat.S_ISREG(before.st_mode) or before.st_nlink!=1\n                        or before.st_size>_MAX_FILE_BYTES or old&~0o777):\n                    raise ToolRejected(\"mode target must be a bounded private basic-mode regular file\")\n                if (desired^old)&~grant.mode_mask:\n                    raise ToolRejected(\"mode change exceeds the host bit mask\")\n                def read_body():\n                    os.lseek(fd,0,os.SEEK_SET);data=bytearray()\n                    while chunk:=os.read(fd,min(65536,_MAX_FILE_BYTES+1-len(data))):\n                        data.extend(chunk)\n                        if len(data)>_MAX_FILE_BYTES:raise ToolRejected(\"mode target exceeds file bound\")\n                    return bytes(data)\n                body=read_body()\n                entry=os.stat(name,dir_fd=parent,follow_symlinks=False)\n                if ((entry.st_dev,entry.st_ino)!=(before.st_dev,before.st_ino)\n                        or len(body)!=before.st_size or hashlib.sha256(body).hexdigest()!=expected_sha):\n                    raise ToolRejected(\"mode target preimage is stale\")\n                stable=os.fstat(fd)\n                fields=('st_dev','st_ino','st_size','st_mtime_ns','st_ctime_ns','st_nlink','st_mode')\n                if any(getattr(before,k)!=getattr(stable,k) for k in fields):\n                    raise ToolRejected(\"mode target changed before mutation\")\n                os.fchmod(fd,desired);os.fsync(fd);os.fsync(parent)\n                after=os.fstat(fd);entry=os.stat(name,dir_fd=parent,follow_symlinks=False)\n                if (stat.S_IMODE(after.st_mode)!=desired or after.st_nlink!=1\n                        or (entry.st_dev,entry.st_ino)!=(before.st_dev,before.st_ino)\n                        or read_body()!=body):\n                    raise OSError(\"mode change postcondition is indeterminate\")\n                payload=json.dumps(dict(path=relative,before_mode=format(old,'04o'),\n                    after_mode=mode,content_sha256=expected_sha),sort_keys=True).encode()\n                return self._result(operation_id,\"mode_changed\",0,started,payload,b\"\")\n            finally:os.close(fd)\n\n    def replace(self, operation_id, grant, path, expected_sha, before, after):\n        if not isinstance(before, bytes):\n            raise ToolRejected(\"replacement requires a nonempty byte preimage\")\n        return self._replace_bytes(operation_id, grant, path, expected_sha, before, after)\n\n    def replace_file(self, operation_id, grant, path, expected_sha, payload):\n        \"\"\"Replace one observed whole file; preserve its existing mode.\n\n        The line-based tool resolves to ordinary bytes before this boundary.\n        An empty original file remains a valid full-file replacement target.\n        \"\"\"\n        if type(payload) is not bytes or len(payload) > _MAX_FILE_BYTES:\n            raise ToolRejected(\"full replacement requires bytes within the file limit\")\n        return self._replace_bytes(operation_id, grant, path, expected_sha, None, payload)\n\n    def _replace_bytes(self, operation_id, grant, path, expected_sha, before, after):\n        operation_id = _operation_id(operation_id)\n        if not isinstance(grant, Grant):\n            raise ToolRejected(\"a host Grant is required\")\n        relative = _relative_path(path)\n        if relative not in grant.edit_paths:\n            raise ToolRejected(\"path is not permitted by the host grant\")\n        if (not isinstance(expected_sha, str) or len(expected_sha) != 64\n                or any(char not in \"0123456789abcdef\" for char in expected_sha.lower())):\n            raise ToolRejected(\"expected_sha must be a SHA-256 digest\")\n        with self._lock:\n            target = self._workspace_file(relative)\n            info = target.stat(follow_symlinks=False)\n            if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1 or info.st_size > _MAX_FILE_BYTES:\n                raise ToolRejected(\"target is not a private regular workspace file\")\n            original = target.read_bytes()\n            if hashlib.sha256(original).hexdigest() != expected_sha.lower():\n                raise ToolRejected(\"target preimage digest is stale\")\n            updated = after if before is None else self._replacement_bytes(original, before, after)\n            started = time.monotonic()\n            temporary = target.with_name(\".\" + target.name + \".\" + uuid.uuid4().hex + \".tmp\")\n            mode = stat.S_IMODE(info.st_mode) & 0o777\n            fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,\n                         mode or 0o600)\n            try:\n                with os.fdopen(fd, \"wb\") as stream:\n                    stream.write(updated)\n                    stream.flush()\n                    os.fsync(stream.fileno())\n                os.replace(temporary, target)\n                dir_fd = os.open(target.parent, os.O_RDONLY | os.O_DIRECTORY)\n                try:\n                    os.fsync(dir_fd)\n                finally:\n                    os.close(dir_fd)\n            except BaseException:\n                try:\n                    temporary.unlink()\n                except FileNotFoundError:\n                    pass\n                raise\n            return self._result(operation_id, \"applied\", 0, started,\n                                b\"replacement applied\\n\", b\"\")\n\n    def _workspace_file(self, relative: str) -> Path:\n        current = self.workspace\n        parts = PurePosixPath(relative).parts\n        for part in parts[:-1]:\n            current = current / part\n            info = current.lstat()\n            if stat.S_ISLNK(info.st_mode) or not stat.S_ISDIR(info.st_mode):\n                raise ToolRejected(\"workspace path traverses a non-directory or symlink\")\n        target = current / parts[-1]\n        info = target.lstat()\n        if stat.S_ISLNK(info.st_mode) or not stat.S_ISREG(info.st_mode):\n            raise ToolRejected(\"workspace target must be a regular non-symlink file\")\n        return target\n\n    @staticmethod\n    def _sandbox_command(workspace: Path, timeout: float) -> list[str]:\n        for executable in (_BWRAP, _PRLIMIT, _PYTHON):\n            if not executable.is_file() or not os.access(executable, os.X_OK):\n                raise ToolRejected(f\"required sandbox executable is unavailable: {executable}\")\n        # prlimit applies per process; it is not an aggregate process-tree memory cap.\n        # Bubblewrap also gives tests a fresh 64 MiB /tmp, with no host home/network mount.\n        cpu_limit = max(1, math.ceil(timeout))\n        memory_limit = 2 * 1024 * 1024 * 1024\n        file_limit = 16 * 1024 * 1024\n        return [str(_PRLIMIT), f\"--cpu={cpu_limit}\", f\"--as={memory_limit}\",\n            f\"--fsize={file_limit}\", \"--core=0\", \"--\",\n            str(_BWRAP), \"--die-with-parent\", \"--new-session\", \"--unshare-all\", \"--unshare-user\",\n            \"--disable-userns\", \"--cap-drop\", \"ALL\", \"--clearenv\",\n            \"--ro-bind\", \"/usr\", \"/usr\", \"--ro-bind\", \"/lib\", \"/lib\",\n            \"--ro-bind\", \"/lib64\", \"/lib64\",\n            \"--dir\", \"/work\", \"--ro-bind\", str(workspace), \"/work\",\n            \"--proc\", \"/proc\", \"--dev\", \"/dev\", \"--size\", \"67108864\", \"--tmpfs\", \"/tmp\",\n            \"--chmod\", \"1777\", \"/tmp\", \"--chdir\", \"/work\", \"--\",\n            str(_PYTHON), \"-I\", \"-B\", \"-m\", \"unittest\", \"discover\",\n            \"-s\", \"tests\", \"-t\", \".\", \"-v\"]\n\n    @staticmethod\n    def _signal_group(process, sig):\n        try:\n            os.killpg(process.pid, sig)\n        except ProcessLookupError:\n            pass\n\n    @staticmethod\n    def _capture(process, deadline: float, limit: int):\n        selector = selectors.DefaultSelector()\n        streams = {process.stdout: bytearray(), process.stderr: bytearray()}\n        for stream in streams:\n            os.set_blocking(stream.fileno(), False)\n            selector.register(stream, selectors.EVENT_READ)\n        started = time.monotonic()\n        termination_started = None\n        limited = False\n        timed_out = False\n        while selector.get_map() or process.poll() is None:\n            now = time.monotonic()\n            if now >= deadline and termination_started is None:\n                timed_out = True\n                termination_started = now\n                Executor._signal_group(process, signal.SIGTERM)\n            if limited and termination_started is None:\n                termination_started = now\n                Executor._signal_group(process, signal.SIGTERM)\n            if termination_started is not None and now - termination_started >= 0.25:\n                Executor._signal_group(process, signal.SIGKILL)\n            events = selector.select(0.025 if termination_started is None else 0.01)\n            for key, _ in events:\n                stream = key.fileobj\n                try:\n                    data = os.read(stream.fileno(), 65536)\n                except BlockingIOError:\n                    continue\n                if not data:\n                    selector.unregister(stream)\n                    stream.close()\n                    continue\n                captured = streams[stream]\n                remaining = max(0, limit - len(captured))\n                captured.extend(data[:remaining])\n                if len(data) > remaining:\n                    limited = True\n            if termination_started is not None and now - termination_started > 2.0:\n                for stream in tuple(streams):\n                    try:\n                        selector.unregister(stream)\n                        stream.close()\n                    except (KeyError, OSError):\n                        pass\n                break\n        selector.close()\n        try:\n            process.wait(timeout=1)\n        except subprocess.TimeoutExpired:\n            Executor._signal_group(process, signal.SIGKILL)\n            process.kill()\n            process.wait(timeout=2)\n        return (bytes(streams[process.stdout]), bytes(streams[process.stderr]),\n                timed_out, limited, time.monotonic() - started)\n\n    def check_shell_boundary(self):\n        \"\"\"Probe the real shell sandbox with no project code or input files.\n\n        This is host admission evidence,never a task ToolOutcome or a successful\n        test claim. It cannot satisfy the workflow's completion verifier.\n        \"\"\"\n        from .terminal import NamedCommand,_execute_argv\n        import secrets\n        if self._shell is None:raise ToolRejected('shell sandbox is not configured')\n        with self._lock:\n            self._shell.check_host()\n            probe=NamedCommand('shell-boundary',self._shell._command.argv,5.0)\n            argv=probe.argv+('-c',\"printf '%s\\\\n' BW_SHELL_BOUNDARY_READY_V1\")\n            try:\n                result=_execute_argv(self,'bw-shell-boundary-'+secrets.token_hex(16),\n                    Grant((),False,allow_shell=True),probe,argv)\n            except (OSError,ValueError) as exc:\n                raise ToolRejected('registered shell sandbox is unavailable before inference: '+str(exc)[-512:]) from exc\n            witness=result.details.get('isolation',{})\n            if (result.disposition!='exited' or result.exit_code!=0\n                    or result.stdout.read_bytes()!=b'BW_SHELL_BOUNDARY_READY_V1\\n'\n                    or result.stderr.read_bytes() or witness.get('worker_exited') is not True\n                    or witness.get('namespace_members_after')!=[]):\n                raise ToolRejected('registered shell sandbox is unavailable before inference; check host namespace permissions')\n            return dict(witness)\n\n    def check_test_boundary(self):\n        \"\"\"Probe the actual test sandbox before admitting model or tool work.\n\n        This trusted, isolated command imports no project code. In particular,\n        an outer CLI namespace may prohibit the nested namespace required by\n        run_tests. Do not spend inference trying to repair that host failure.\n        This is admission evidence, not a substitute for executing the tests.\n        \"\"\"\n        with self._lock:\n            command = self._sandbox_command(self.workspace, 5.0)\n            index = command.index(str(_PYTHON))\n            command[index:] = [str(_PYTHON), \"-I\", \"-B\", \"-c\",\n                \"import unittest; print('BW_TEST_BOUNDARY_READY_V1')\"]\n            try:\n                process = subprocess.Popen(command, cwd=self.workspace,\n                    env={\"PATH\": \"/usr/bin:/bin\", \"LANG\": \"C.UTF-8\", \"LC_ALL\": \"C.UTF-8\"},\n                    stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,\n                    stderr=subprocess.PIPE, close_fds=True, start_new_session=True)\n            except OSError as exc:\n                raise ToolRejected(\"registered test sandbox is unavailable before inference\") from exc\n            stdout, stderr, timed_out, limited, _ = self._capture(\n                process, time.monotonic() + 5.0, 16384)\n            if (process.returncode != 0 or timed_out or limited\n                    or stdout != b\"BW_TEST_BOUNDARY_READY_V1\\n\" or stderr):\n                raise ToolRejected(\"registered test sandbox is unavailable before inference; \"\n                    \"check host namespace permissions and CLI sandbox nesting\")\n\n    def run_tests(self, operation_id, grant, timeout=30.0):\n        if not isinstance(grant, Grant) or grant.allow_tests is not True:\n            raise ToolRejected(\"registered tests are not permitted by the host grant\")\n        if isinstance(timeout, bool) or not isinstance(timeout, (int, float)):\n            raise ToolRejected(\"timeout must be a finite positive number\")\n        timeout = float(timeout)\n        if not math.isfinite(timeout) or not 0 < timeout <= _MAX_TIMEOUT_SECONDS:\n            raise ToolRejected(\"timeout is outside the registered bound\")\n        operation_id = _operation_id(operation_id)\n        with self._lock:\n            command = self._sandbox_command(self.workspace, timeout)\n            started = time.monotonic()\n            deadline = started + timeout\n            env = {\"PATH\": \"/usr/bin:/bin\", \"LANG\": \"C.UTF-8\", \"LC_ALL\": \"C.UTF-8\"}\n            try:\n                process = subprocess.Popen(command, cwd=self.workspace, env=env,\n                    stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,\n                    close_fds=True, start_new_session=True)\n            except OSError as exc:\n                raise ToolRejected(\"registered sandbox could not be started\") from exc\n            stdout, stderr, timed_out, limited, _ = self._capture(\n                process, deadline, _MAX_CAPTURE_BYTES)\n            if timed_out:\n                disposition = \"timeout\"\n            elif limited:\n                disposition = \"output_limit\"\n            else:\n                disposition = \"exited\"\n            return self._result(operation_id, disposition, process.returncode,\n                                started, stdout, stderr)\n\n    def run_command(self, operation_id, grant, name):\n        from .terminal import execute_command\n        if not isinstance(grant, Grant):raise ToolRejected(\"host grant required\")\n        with self._lock:\n            return execute_command(self, operation_id, grant, name)\n\n    def run_shell(self, operation_id, grant, command):\n        from .terminal import execute_shell\n        if not isinstance(grant,Grant):raise ToolRejected(\"host grant required\")\n        with self._lock:\n            return execute_shell(self,operation_id,grant,command)\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "run_shell",
+      "arguments": {
+        "command": "grep -R \"expand_directories\" -n branchwrite tests"
+      },
+      "disposition": "exited",
+      "exit_code": 0,
+      "stdout": "branchwrite/project_scope.py:11:def expand_directories(project,directories):\nbranchwrite/coding_cli.py:144:    from .project_scope import expand_directories\nbranchwrite/coding_cli.py:147:    reads=list(args.read)+expand_directories(args.project,read_dirs) if read_dirs else args.read\nbranchwrite/coding_cli.py:148:    edits=list(args.edit)+expand_directories(args.project,edit_dirs) if edit_dirs else args.edit\ntests/test_directory_scope_overlap.py:5:from branchwrite.project_scope import expand_directories\ntests/test_directory_scope_overlap.py:18:   result=expand_directories(self.root,scopes)\ntests/test_directory_scope_overlap.py:35:    expand_directories(self.root,['.',bad])\ntests/test_directory_grants.py:15:  from branchwrite.project_scope import expand_directories\ntests/test_directory_grants.py:16:  self.assertEqual(expand_directories(self.project,['.','src']),['README.md','src/app.py','src/\u96ea.py'])\ntests/test_directory_grants.py:18:  from branchwrite.project_scope import expand_directories\ntests/test_directory_grants.py:22:    expand_directories(self.project,[path])\ntests/test_directory_grants.py:24:  from branchwrite.project_scope import expand_directories\ntests/test_directory_grants.py:26:  with self.assertRaises(ValueError):expand_directories(self.project,['src'])\n",
+      "stderr": "",
+      "details": {
+        "argv": [
+          "/usr/bin/bash",
+          "--noprofile",
+          "--norc",
+          "-c",
+          "grep -R \"expand_directories\" -n branchwrite tests"
+        ],
+        "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+        "command": "shell",
+        "cwd": "/home/dflanag3/spatial-artifacts/branchwrite-SC14-repository-scope-dev15-20261019-v1/state/world/workspace",
+        "execution_host": {
+          "euid": 1000,
+          "gid": 1000,
+          "hostname": "r4090",
+          "uid": 1000
+        },
+        "inputs": [
+          {
+            "bytes": 42,
+            "mode": "0664",
+            "path": "branchwrite/__init__.py",
+            "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+          },
+          {
+            "bytes": 6588,
+            "mode": "0664",
+            "path": "branchwrite/__main__.py",
+            "sha256": "d1f18b35cf4830d001f79f0078fd3420b3d4b92a955b5d59a6c00c530516a0f9"
+          },
+          {
+            "bytes": 2711,
+            "mode": "0664",
+            "path": "branchwrite/browser_assets.py",
+            "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+          },
+          {
+            "bytes": 19255,
+            "mode": "0664",
+            "path": "branchwrite/browser_capture.py",
+            "sha256": "fe2cf850c0fda370fd286e5e9907aaeaa8607d3bb1bb21c88b5efb03160dfdec"
+          },
+          {
+            "bytes": 9288,
+            "mode": "0664",
+            "path": "branchwrite/browser_isolation.py",
+            "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+          },
+          {
+            "bytes": 4088,
+            "mode": "0664",
+            "path": "branchwrite/browser_worker.py",
+            "sha256": "d37e44545734c614c053a37c2dc77a57f90c9dbc26b8789d26022c8cad6b1fe1"
+          },
+          {
+            "bytes": 11133,
+            "mode": "0664",
+            "path": "branchwrite/coding_cli.py",
+            "sha256": "85e24915bf23c3bfbb59bb56c10f451d360d0024aa60ed1c3104564484a7bded"
+          },
+          {
+            "bytes": 4716,
+            "mode": "0664",
+            "path": "branchwrite/coding_contract.py",
+            "sha256": "4c0f0435523dbc8d8f4e45553ac5068dd09bd2f549e99d6b1732ca747f952eac"
+          },
+          {
+            "bytes": 12697,
+            "mode": "0664",
+            "path": "branchwrite/coding_defaults.py",
+            "sha256": "6e3663b17ae9dbd8b26f8491a01c5453926fa6b3ecc8cbffb9530a00f2e0fe8e"
+          },
+          {
+            "bytes": 9985,
+            "mode": "0664",
+            "path": "branchwrite/coding_review.py",
+            "sha256": "38201f5dd50dbc2d4bde1c5318efb9adc6adda2bbcd9380e90ff31f5c7864d1b"
+          },
+          {
+            "bytes": 2909,
+            "mode": "0664",
+            "path": "branchwrite/coding_status.py",
+            "sha256": "a450d9334ec922cd02ae2c84bd04a8062dc5d79115fa6e04e58ae01260fcf2be"
+          },
+          {
+            "bytes": 11868,
+            "mode": "0664",
+            "path": "branchwrite/command_outputs.py",
+            "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+          },
+          {
+            "bytes": 8369,
+            "mode": "0664",
+            "path": "branchwrite/component_model.py",
+            "sha256": "cdfa18438cff524f9a37a3e44dac0351eda736fb6222c93a7fb37f36c4901b5b"
+          },
+          {
+            "bytes": 22832,
+            "mode": "0664",
+            "path": "branchwrite/context_pack.py",
+            "sha256": "eef9e480df1cc1561bafbd1c25a5b3b4e2f3cf31c8a724defab671afdc3b2c75"
+          },
+          {
+            "bytes": 2125,
+            "mode": "0664",
+            "path": "branchwrite/control_contract.py",
+            "sha256": "69982583752013c32270932b7e5cf1cb5e03d0afb9691d7c3dc88948bb9270e6"
+          },
+          {
+            "bytes": 3351,
+            "mode": "0664",
+            "path": "branchwrite/cow_actions.py",
+            "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+          },
+          {
+            "bytes": 77648,
+            "mode": "0664",
+            "path": "branchwrite/cow_client.py",
+            "sha256": "a08bd70de75399583cfc19229dc6e0a6ff5447286d5b8856b5322e5eda2f86d7"
+          },
+          {
+            "bytes": 6080,
+            "mode": "0664",
+            "path": "branchwrite/cow_fork.py",
+            "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+          },
+          {
+            "bytes": 49349,
+            "mode": "0664",
+            "path": "branchwrite/execution.py",
+            "sha256": "6a595a6a38dee451042f31303ea9f8b7398ab6a0b8f721999d9f2d27637ecb5b"
+          },
+          {
+            "bytes": 9645,
+            "mode": "0664",
+            "path": "branchwrite/golden_path.py",
+            "sha256": "084ea3467edbbc3b57f65c41c93693f76c0447350f5d4bc30264190491ec9316"
+          },
+          {
+            "bytes": 5412,
+            "mode": "0664",
+            "path": "branchwrite/image_feedback.py",
+            "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+          },
+          {
+            "bytes": 37093,
+            "mode": "0664",
+            "path": "branchwrite/interpreter.py",
+            "sha256": "a5c3342f271ddf7d41d6b0ab26f42c50e52bff1216ad534528b230ec0970400a"
+          },
+          {
+            "bytes": 16495,
+            "mode": "0664",
+            "path": "branchwrite/kernel.py",
+            "sha256": "106a3a564e0ee5bb190e7a6c3c246336e4c4b91a93df906110e930c02b6a8521"
+          },
+          {
+            "bytes": 9266,
+            "mode": "0664",
+            "path": "branchwrite/language.py",
+            "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+          },
+          {
+            "bytes": 21138,
+            "mode": "0664",
+            "path": "branchwrite/model_dispatch.py",
+            "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+          },
+          {
+            "bytes": 1730,
+            "mode": "0664",
+            "path": "branchwrite/model_inputs.py",
+            "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+          },
+          {
+            "bytes": 7728,
+            "mode": "0664",
+            "path": "branchwrite/planning_retry.py",
+            "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+          },
+          {
+            "bytes": 10338,
+            "mode": "0664",
+            "path": "branchwrite/project_apply.py",
+            "sha256": "a081f1dd0a8a1632b09c63e1456823d0c42bc0e7deef655cf1bf61a91d94cda8"
+          },
+          {
+            "bytes": 4341,
+            "mode": "0664",
+            "path": "branchwrite/project_baseline.py",
+            "sha256": "72da8ff7ace695a809a0cf341f8b86d85e2166e8acb9dc08a5bf153ae44c4621"
+          },
+          {
+            "bytes": 3415,
+            "mode": "0664",
+            "path": "branchwrite/project_export.py",
+            "sha256": "93eb7d71362984038f95801094cc49e82ea599371459b7529bb024207d0fad9e"
+          },
+          {
+            "bytes": 2671,
+            "mode": "0664",
+            "path": "branchwrite/project_scope.py",
+            "sha256": "7f988e5a72fd6ed23bc31d50e66ea9446bddb0e82a7acdc0e6a54e7f68ee91fa"
+          },
+          {
+            "bytes": 13828,
+            "mode": "0664",
+            "path": "branchwrite/records.py",
+            "sha256": "600d0093a8c1768be967e627627a40c244233c118d39fcd24979a76e55b2f677"
+          },
+          {
+            "bytes": 20780,
+            "mode": "0664",
+            "path": "branchwrite/run_cli.py",
+            "sha256": "ddeed6be5faac60fb05af5342d03807a4c6f681fdb84755d90cdcda121df94a4"
+          },
+          {
+            "bytes": 14731,
+            "mode": "0664",
+            "path": "branchwrite/terminal.py",
+            "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+          },
+          {
+            "bytes": 12786,
+            "mode": "0664",
+            "path": "branchwrite/terminal_components.py",
+            "sha256": "e583db55b25ae9171581ba3234e984d574b6aeaa3733de43211735fb1225e5e8"
+          },
+          {
+            "bytes": 2388,
+            "mode": "0664",
+            "path": "branchwrite/terminal_worker.py",
+            "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+          },
+          {
+            "bytes": 1800,
+            "mode": "0664",
+            "path": "branchwrite/text_file_codec.py",
+            "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+          },
+          {
+            "bytes": 5119,
+            "mode": "0664",
+            "path": "branchwrite/thinking_ladder.py",
+            "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+          },
+          {
+            "bytes": 4205,
+            "mode": "0664",
+            "path": "branchwrite/tool_dispatch.py",
+            "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+          },
+          {
+            "bytes": 32148,
+            "mode": "0664",
+            "path": "branchwrite/tool_registry.py",
+            "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+          },
+          {
+            "bytes": 30228,
+            "mode": "0664",
+            "path": "branchwrite/verification.py",
+            "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+          },
+          {
+            "bytes": 3293,
+            "mode": "0664",
+            "path": "tests/test_apply_reconciliation.py",
+            "sha256": "b73a70e4b4a2abb4db8cc9b5b7995b63f8503372367433aba3a1a127040dba74"
+          },
+          {
+            "bytes": 8049,
+            "mode": "0664",
+            "path": "tests/test_browser_asset_completion.py",
+            "sha256": "9242d1c3b90a653420b0e15870df34a1ba530dd92b689d9989b278a48053a37c"
+          },
+          {
+            "bytes": 2594,
+            "mode": "0664",
+            "path": "tests/test_browser_asset_protocol.py",
+            "sha256": "310a5eab762d6419c9cde610bc1aae96de0e1e10b65130846f651ee7cba019a5"
+          },
+          {
+            "bytes": 6311,
+            "mode": "0664",
+            "path": "tests/test_browser_asset_tools.py",
+            "sha256": "2efce962a2c6cae8a8a5fa1bdbc1dc03ddef092a02a7fce64775a29ac5333471"
+          },
+          {
+            "bytes": 5822,
+            "mode": "0664",
+            "path": "tests/test_browser_assets.py",
+            "sha256": "67a7751b965d9c88dabf3de3ee66452247653df03ca7d179dc3c317732d29dcf"
+          },
+          {
+            "bytes": 6682,
+            "mode": "0664",
+            "path": "tests/test_browser_capture.py",
+            "sha256": "301398d81df6f3e73e5b8969b62a5d7b5cf2f2cd03e5c845789d717a0d91c2ab"
+          },
+          {
+            "bytes": 9940,
+            "mode": "0664",
+            "path": "tests/test_browser_errors.py",
+            "sha256": "f8054fa3c3b8b10cd1dfa62baad1da008b62d9ee74d2ea08f5961711418254b0"
+          },
+          {
+            "bytes": 4533,
+            "mode": "0664",
+            "path": "tests/test_browser_interactions.py",
+            "sha256": "2dd81454588d829c1bfe52b65655f44e0459227a548e257fc66805582fb1fabe"
+          },
+          {
+            "bytes": 4804,
+            "mode": "0664",
+            "path": "tests/test_browser_isolation.py",
+            "sha256": "5d2ffdaf20efe4ff549e9222b7b0614499745181c4eee0894a2379797c69373d"
+          },
+          {
+            "bytes": 7746,
+            "mode": "0664",
+            "path": "tests/test_browser_repair.py",
+            "sha256": "4b2956e027a9d5b3b90353d610f5752def14bfd6448a9d6410d6196a12c2d3e8"
+          },
+          {
+            "bytes": 1675,
+            "mode": "0664",
+            "path": "tests/test_browser_retirement.py",
+            "sha256": "b8e0c56c9528dcb324bb8ab6b60bbdfbfaa9b581734c047841d4b5564145bcb9"
+          },
+          {
+            "bytes": 5309,
+            "mode": "0664",
+            "path": "tests/test_browser_viewports.py",
+            "sha256": "8df3d529bb148d5068053311577c856d0a1ba9c2a1d101479eda58bca6b272de"
+          },
+          {
+            "bytes": 2010,
+            "mode": "0664",
+            "path": "tests/test_cancellation_contract.py",
+            "sha256": "c8725762a901b573267064a0a28483e315408b5064715e985e9a05c019e276b5"
+          },
+          {
+            "bytes": 8349,
+            "mode": "0664",
+            "path": "tests/test_capture_cli.py",
+            "sha256": "0be3d908153eb17d347660fcdad1148c5b7232f62711b41b53dcebe460cfcb11"
+          },
+          {
+            "bytes": 3382,
+            "mode": "0664",
+            "path": "tests/test_catalogue.py",
+            "sha256": "a75385c59b8a1a983b079f1f46e8b55c19d77c7ae7635dd7b33049af668f49ed"
+          },
+          {
+            "bytes": 2362,
+            "mode": "0664",
+            "path": "tests/test_codec.py",
+            "sha256": "007039b62b7f728d02b950bd7a545325e2ac71fb53af2bdcab956134d339f1ef"
+          },
+          {
+            "bytes": 2397,
+            "mode": "0664",
+            "path": "tests/test_coding_continuation_admission.py",
+            "sha256": "66c4cc9f1c72b035538914e7f263c4132eb6d1705dcb34997a4902492f68a1e1"
+          },
+          {
+            "bytes": 4254,
+            "mode": "0664",
+            "path": "tests/test_coding_contract.py",
+            "sha256": "e3d994558b8fadb3ab584b9b5a11145d8762634ac5ae566ca03030212ff377cf"
+          },
+          {
+            "bytes": 5699,
+            "mode": "0664",
+            "path": "tests/test_coding_defaults.py",
+            "sha256": "952f2b7c5b32a558cb16a1c8eccac0e86b7da8566660fb84e6ac3126354281f7"
+          },
+          {
+            "bytes": 3119,
+            "mode": "0664",
+            "path": "tests/test_coding_grammar.py",
+            "sha256": "c5c6e4d30281c76a9119b87eb47fd8b2630bbccdf815a0e79fd336e899fd6a61"
+          },
+          {
+            "bytes": 6649,
+            "mode": "0664",
+            "path": "tests/test_coding_launcher.py",
+            "sha256": "1f21a6440a6eea7f8d22553be11a6491ccc538574f6d35754ef186f31f698177"
+          },
+          {
+            "bytes": 4291,
+            "mode": "0664",
+            "path": "tests/test_coding_launcher_http.py",
+            "sha256": "a492b4ec5f17f0c0a34f849684a136f5c3539771f5c25b32f53a8ec3319a4e02"
+          },
+          {
+            "bytes": 4058,
+            "mode": "0664",
+            "path": "tests/test_coding_review.py",
+            "sha256": "02a7dd30af2c26100711548acb2bbb4cb8efa0a7f6668218f632d0fe25349d37"
+          },
+          {
+            "bytes": 3372,
+            "mode": "0664",
+            "path": "tests/test_coding_status.py",
+            "sha256": "58b31ec97db038ba589a3816723adfa13c71feea2a58e9379c42827fb3721a7d"
+          },
+          {
+            "bytes": 11014,
+            "mode": "0664",
+            "path": "tests/test_command_outputs.py",
+            "sha256": "aea46a11490cb84057c41c1f071e42cad189ba881e5bc5a1d012df670e8fce8d"
+          },
+          {
+            "bytes": 881,
+            "mode": "0664",
+            "path": "tests/test_command_prefix.py",
+            "sha256": "1066b32f3565edf4822c0359c434a67229f5fd9419ec8a59a94a595f015167ff"
+          },
+          {
+            "bytes": 7422,
+            "mode": "0664",
+            "path": "tests/test_command_verification.py",
+            "sha256": "1bd19a9b37339c8d1c3579c4e71bedbea8fa2afbeec0c7b0d6ca0ef5bd426de4"
+          },
+          {
+            "bytes": 2093,
+            "mode": "0664",
+            "path": "tests/test_command_visibility.py",
+            "sha256": "7c19571d4db413d462be992ec0dc0f5b1fdb76aca94c90f94b424b74739f88f2"
+          },
+          {
+            "bytes": 2100,
+            "mode": "0664",
+            "path": "tests/test_component_model.py",
+            "sha256": "34aaa31c845c2dc84e9bb5f293485a6651b80063302ac4d67cec1e74651b16fa"
+          },
+          {
+            "bytes": 2394,
+            "mode": "0664",
+            "path": "tests/test_connection_admission.py",
+            "sha256": "de824cadd44193e16f7e76dc363d89285fcf72cc7ef5452927d79f85cabb11ce"
+          },
+          {
+            "bytes": 14803,
+            "mode": "0664",
+            "path": "tests/test_context_pack.py",
+            "sha256": "459bb607994e62a1528b853c88531a0e8efdfc549591b6890a2ea6e27e14c50c"
+          },
+          {
+            "bytes": 2659,
+            "mode": "0664",
+            "path": "tests/test_context_prefix_integration.py",
+            "sha256": "14f4cad43b1407abcb1132e66dae2c42994e46afc7e9fcc142bf1c1948c8d267"
+          },
+          {
+            "bytes": 3294,
+            "mode": "0664",
+            "path": "tests/test_control_contract.py",
+            "sha256": "7b545ea448f60b46d04fad8d28c77ad88b9c1b47cc795f9b94233d4b2abad126"
+          },
+          {
+            "bytes": 4671,
+            "mode": "0664",
+            "path": "tests/test_controller_bootstrap_http.py",
+            "sha256": "c4123b280c0bb0846c7d70654694d84a36924d937c89d0396b7760e286ac8dc3"
+          },
+          {
+            "bytes": 1810,
+            "mode": "0664",
+            "path": "tests/test_controller_prefix.py",
+            "sha256": "c222723df7a06f1735c9ad2663442b2d7e4a46b0d480ee1bc6252cd5979677f3"
+          },
+          {
+            "bytes": 4126,
+            "mode": "0664",
+            "path": "tests/test_cow_actions.py",
+            "sha256": "1320b86b16ba2da88921e83321fd4977e33c02fce8f06340a8c08646824f5b56"
+          },
+          {
+            "bytes": 19515,
+            "mode": "0664",
+            "path": "tests/test_cow_client.py",
+            "sha256": "d5f660bb93c536d5d51cffd679d701e8946ec9d7c9b7a4f407336f9dfd447211"
+          },
+          {
+            "bytes": 9778,
+            "mode": "0664",
+            "path": "tests/test_cow_client_flow.py",
+            "sha256": "49b054edf0b357a1b1c0824740702cf842e216ecba9c8b031a41c77bdb7ab0b6"
+          },
+          {
+            "bytes": 13747,
+            "mode": "0664",
+            "path": "tests/test_cow_coding_pilot.py",
+            "sha256": "d4c6c6a7fac3c26d3771c1cd51de25676be4634402f80206a3c8eda852d6c7a3"
+          },
+          {
+            "bytes": 8153,
+            "mode": "0664",
+            "path": "tests/test_cow_durable_answer.py",
+            "sha256": "1bc7eea5afe52c4c3808c4a6608fc3a217aefda337cda4959064fd95effdd063"
+          },
+          {
+            "bytes": 6674,
+            "mode": "0664",
+            "path": "tests/test_cow_fork_dispatch.py",
+            "sha256": "d149c232e47cdcd9c582cafea47637902b3741e1e7b7aa44075511c49a84a241"
+          },
+          {
+            "bytes": 4359,
+            "mode": "0664",
+            "path": "tests/test_cow_fork_receipts.py",
+            "sha256": "a859b1a3fd798fa38f20976371163642549a137d3ee6c183f8f678eb7cc266d3"
+          },
+          {
+            "bytes": 5691,
+            "mode": "0664",
+            "path": "tests/test_cow_image_lost_ack.py",
+            "sha256": "c1a9b7c80d6396148dcc9dc14747acb7187dfc0a23d6a3446e8638f88a566452"
+          },
+          {
+            "bytes": 8271,
+            "mode": "0664",
+            "path": "tests/test_cow_images.py",
+            "sha256": "117677c481fdee45e7086c23c22a79ac81849c220334f0ea0e1851d98e6132b6"
+          },
+          {
+            "bytes": 2486,
+            "mode": "0664",
+            "path": "tests/test_cow_stream_completion.py",
+            "sha256": "fee357ab074f3c60aa4f808f5bee7085bae96f361fa727a260c0bc6e01a594a0"
+          },
+          {
+            "bytes": 1707,
+            "mode": "0664",
+            "path": "tests/test_cow_structured_load.py",
+            "sha256": "a787ddce0fb356214d306007260a820a3b168d6f2f8777e365f0e60d831ebd5e"
+          },
+          {
+            "bytes": 1292,
+            "mode": "0664",
+            "path": "tests/test_default_sampler_policy.py",
+            "sha256": "5a821b0f768f4f3b02746c1014934dda40ff6ab925877dc5f3be52a98a83a561"
+          },
+          {
+            "bytes": 2577,
+            "mode": "0664",
+            "path": "tests/test_directory_grants.py",
+            "sha256": "258867d433af2cc31b9ebf0036b51e5be7da3e0c5e3f163adc5c6545c0492645"
+          },
+          {
+            "bytes": 1853,
+            "mode": "0664",
+            "path": "tests/test_directory_scope_overlap.py",
+            "sha256": "e02ae1fd8abc37dfb1915847e5900f01f89d8966384ae42bcbe3deddd8f7470d"
+          },
+          {
+            "bytes": 5804,
+            "mode": "0664",
+            "path": "tests/test_execution.py",
+            "sha256": "4e9c43382a518d4d280b04a8d2345fbbc44e483675837d845f23041d7af265b5"
+          },
+          {
+            "bytes": 5192,
+            "mode": "0664",
+            "path": "tests/test_executor_binding.py",
+            "sha256": "f75410e7ca5a48d3a8de3c1df4f1d5c766675edef30248294aa96dc21a7c83c7"
+          },
+          {
+            "bytes": 9429,
+            "mode": "0664",
+            "path": "tests/test_file_completion.py",
+            "sha256": "43388cf91889c3776dc801e191415cbd865e2a6c7fa0223dcbc6369bb75ff6e4"
+          },
+          {
+            "bytes": 9126,
+            "mode": "0664",
+            "path": "tests/test_file_tools.py",
+            "sha256": "ebfe9005150fdcb4dcc398ede515bfd02e7d92850e2c874cb694188bd89bca2c"
+          },
+          {
+            "bytes": 13274,
+            "mode": "0664",
+            "path": "tests/test_frame_kernel.py",
+            "sha256": "addd4b13496cd8b946cd4ad7136091c9850255e85db884acc6367cd90d38b636"
+          },
+          {
+            "bytes": 3863,
+            "mode": "0664",
+            "path": "tests/test_full_project_review.py",
+            "sha256": "aeb35d8256706be17c85c4fbda5283ed7fe571b3bf2edb2dba322dd5a9ea35bd"
+          },
+          {
+            "bytes": 9834,
+            "mode": "0664",
+            "path": "tests/test_generated_page.py",
+            "sha256": "08ae3ec8783c61068cc6fd199f706da4b3a0827f8650a36c9c37ec935a6ab54a"
+          },
+          {
+            "bytes": 7789,
+            "mode": "0664",
+            "path": "tests/test_golden_path.py",
+            "sha256": "b475d3e8be54cf7210acfbf0769546c3ef04bb8bc27f92e2cf7f6963b1ea33a9"
+          },
+          {
+            "bytes": 3281,
+            "mode": "0664",
+            "path": "tests/test_grammar.py",
+            "sha256": "982662d208af712f780fcc311e1ec3b4eff9a883225a1bd9fae46197d8f11b73"
+          },
+          {
+            "bytes": 5879,
+            "mode": "0664",
+            "path": "tests/test_grammar_cli_admission.py",
+            "sha256": "2c71c0ecd3a7a00cc5890ee766b7c0b58fd4eb0e5eb01e59a26d7b336ade2368"
+          },
+          {
+            "bytes": 3412,
+            "mode": "0664",
+            "path": "tests/test_grammar_registration_client.py",
+            "sha256": "307ec1ff2e6b06e716919611d3b3016e11f35674d522db5bb0d133b077bcc703"
+          },
+          {
+            "bytes": 5521,
+            "mode": "0664",
+            "path": "tests/test_greeting_inspection.py",
+            "sha256": "6b93fad9888c07a9714050ab07e057767a4ece75bae8f13c3db1cf54e674cb86"
+          },
+          {
+            "bytes": 4717,
+            "mode": "0664",
+            "path": "tests/test_h00_json.py",
+            "sha256": "1dd268e43cd9bfe571b21f20edaf02089005f899ba9bd5f20dadca6040a0755c"
+          },
+          {
+            "bytes": 1331,
+            "mode": "0664",
+            "path": "tests/test_html_create_grammar.py",
+            "sha256": "0d98e5ece5fb5ac1ccfb5555f29886254696929d014511c71a53f70f67fe77d3"
+          },
+          {
+            "bytes": 2224,
+            "mode": "0664",
+            "path": "tests/test_html_edit_capture.py",
+            "sha256": "118e2f0a5b2a655591c471ba22fd84c9399add8e95925f167bf2ea22f32d16c1"
+          },
+          {
+            "bytes": 2156,
+            "mode": "0664",
+            "path": "tests/test_html_inspection.py",
+            "sha256": "55fd3309c94f39641bf041c71235fa18e6ac797e99994648e70a99b4388dedda"
+          },
+          {
+            "bytes": 3755,
+            "mode": "0664",
+            "path": "tests/test_html_loop.py",
+            "sha256": "8772ca75ba797178421d55ec2a63481d7b933187f9110ef7d98cb9b39963ae4c"
+          },
+          {
+            "bytes": 13278,
+            "mode": "0664",
+            "path": "tests/test_image_feedback.py",
+            "sha256": "3d5b661b31bd97cdb2dd4b9b226e0b8617b1a384f6147433206073f269f47f14"
+          },
+          {
+            "bytes": 3024,
+            "mode": "0664",
+            "path": "tests/test_inline_task.py",
+            "sha256": "fa48568fb25abbf20be3b69121c302df96dcf93fc154c66fff4a66c0e8f90a11"
+          },
+          {
+            "bytes": 3235,
+            "mode": "0664",
+            "path": "tests/test_interact_grammar.py",
+            "sha256": "687cb6b9e983bca80ebae7dfd3e6b94d29f2a3901873c1d7fe157b6539b5c861"
+          },
+          {
+            "bytes": 9164,
+            "mode": "0664",
+            "path": "tests/test_interact_tool.py",
+            "sha256": "642c445fba10484981d7ef32a3c1728763c070e62ae6923ae7437a6137713d36"
+          },
+          {
+            "bytes": 9938,
+            "mode": "0664",
+            "path": "tests/test_interactive_page_policy.py",
+            "sha256": "43d663683fba520cbce9428716fb22edc6f945c9488fb5c5d5d0e0389bd14bdd"
+          },
+          {
+            "bytes": 14495,
+            "mode": "0664",
+            "path": "tests/test_interpreter.py",
+            "sha256": "114d5bc843f33fb4043bd83c7fc2f2b92b5bc982d6687e9c2893cb49be7962b1"
+          },
+          {
+            "bytes": 7604,
+            "mode": "0664",
+            "path": "tests/test_javascript_inspection.py",
+            "sha256": "d4c8b8917fbd3f26c903624cf0cfabf6a82eed1c56a5b4822ff897f7bd62f37f"
+          },
+          {
+            "bytes": 3724,
+            "mode": "0664",
+            "path": "tests/test_language.py",
+            "sha256": "8ca0bedca2c4bd1fd5a64781448d72a5e378a21417596f077e24684a5ab83dc5"
+          },
+          {
+            "bytes": 4038,
+            "mode": "0664",
+            "path": "tests/test_line_file_examples.py",
+            "sha256": "8acfa1e9ee1daee519c91f6abb3f8643291391bc8bb3ea9eddc668902e4fb0fe"
+          },
+          {
+            "bytes": 7675,
+            "mode": "0664",
+            "path": "tests/test_line_file_tools.py",
+            "sha256": "51c528aeb26f4be6984d7b3dbe95b6767bc6455696621505f420584665e8931a"
+          },
+          {
+            "bytes": 4521,
+            "mode": "0664",
+            "path": "tests/test_literal_file_examples.py",
+            "sha256": "2ef1ceaaf673223ffb75265d753bbaed37d6f8e03588fe558e6fabd878f1dbfb"
+          },
+          {
+            "bytes": 2149,
+            "mode": "0664",
+            "path": "tests/test_mode_grammar.py",
+            "sha256": "71a287a73b4db3586ea5830b386e65ec81b32319b574505736b660ffcd2f5ce5"
+          },
+          {
+            "bytes": 1649,
+            "mode": "0664",
+            "path": "tests/test_mode_terminal.py",
+            "sha256": "6e6535efeb84f7f43f727d5d3d40e915e8464d9d8ea75fedd52b83095fb3a551"
+          },
+          {
+            "bytes": 13098,
+            "mode": "0664",
+            "path": "tests/test_model_dispatch.py",
+            "sha256": "e577b378f026870adec49be16a0b5b117026023582e08bcffeab7ece94f7ab5a"
+          },
+          {
+            "bytes": 8825,
+            "mode": "0664",
+            "path": "tests/test_model_inputs.py",
+            "sha256": "ea85f46f3401614db792338ca8d1cd9ab954818c201a537d5cc8f06fd416b402"
+          },
+          {
+            "bytes": 5789,
+            "mode": "0664",
+            "path": "tests/test_nested_file_creation.py",
+            "sha256": "15d144f38993b9985d4e856b0766fe5c5f69a5f9b02e7925a8564ab474656007"
+          },
+          {
+            "bytes": 5059,
+            "mode": "0664",
+            "path": "tests/test_observed_source.py",
+            "sha256": "1dbc514b71e2b596574885cdb876bbe560a98b9a38a3ab604ed6b03d8e5810a9"
+          },
+          {
+            "bytes": 9117,
+            "mode": "0664",
+            "path": "tests/test_output_feedback.py",
+            "sha256": "9e605f0a10d9dfd415e3c2324c7672de78b465c38c04e8a93442aa65e347afb4"
+          },
+          {
+            "bytes": 4257,
+            "mode": "0664",
+            "path": "tests/test_page_actions.py",
+            "sha256": "5259a1a84a6b87b36ecbbfc672df7c77db1d24d2a9c72e64da4d362634e625bd"
+          },
+          {
+            "bytes": 8780,
+            "mode": "0664",
+            "path": "tests/test_planning_retry_flow.py",
+            "sha256": "152dc4f7cdbb83a5b14e0cd22cd39fd9f2eb58410c89be7461e7d542498352fd"
+          },
+          {
+            "bytes": 3171,
+            "mode": "0664",
+            "path": "tests/test_prefix_admission.py",
+            "sha256": "bc96d7af0a90bbd0d17e2f2b2d1d2ef79a7d2214c3a965f5f8589392d8e99f15"
+          },
+          {
+            "bytes": 5445,
+            "mode": "0664",
+            "path": "tests/test_prefix_admission_http.py",
+            "sha256": "19d184437090eb347df2b7a38f84e19bff07add43d5132d746f252c9d38a5c3f"
+          },
+          {
+            "bytes": 3765,
+            "mode": "0664",
+            "path": "tests/test_program_cli.py",
+            "sha256": "8582d6f7b61c7ef6d354307d18aeb58b73d8e97ddada730f6a0384274dcaabe4"
+          },
+          {
+            "bytes": 5561,
+            "mode": "0664",
+            "path": "tests/test_program_language.py",
+            "sha256": "a9b38cc2dc84e4a238aaeae926a845e670b81cfd2f8f0633418099f43f0ee84a"
+          },
+          {
+            "bytes": 4838,
+            "mode": "0664",
+            "path": "tests/test_project_admission.py",
+            "sha256": "ce4ed43e7eb42615b78224b1a7ed127f9312d31495575cdc56447e41a46098d5"
+          },
+          {
+            "bytes": 3084,
+            "mode": "0664",
+            "path": "tests/test_project_apply.py",
+            "sha256": "e3335156905a303344d07f258731f2f6b4723203a5f29d5ac46a4d5b849c86ec"
+          },
+          {
+            "bytes": 3757,
+            "mode": "0664",
+            "path": "tests/test_project_baseline.py",
+            "sha256": "3476c1b7240bedc7f9e967e6dff577e769cef8fcf35b2a90b5d40c4a24e4afe1"
+          },
+          {
+            "bytes": 3034,
+            "mode": "0664",
+            "path": "tests/test_project_export.py",
+            "sha256": "3bef5696a71e03c93296da331bc6b94e226323675acd9dede119a230cad0f437"
+          },
+          {
+            "bytes": 2301,
+            "mode": "0664",
+            "path": "tests/test_readonly_log.py",
+            "sha256": "8c67b29c2c72b7368f8eaf5e3ccc6d46c70680f1ee3e0ef51df71e3eb8da0da8"
+          },
+          {
+            "bytes": 3399,
+            "mode": "0664",
+            "path": "tests/test_registered_grammar_mapping.py",
+            "sha256": "4ccf3783ef90703976d10ee8f9acc26cf0e06c5a1bee73c7e373d2f801798fed"
+          },
+          {
+            "bytes": 6970,
+            "mode": "0664",
+            "path": "tests/test_replace_admission.py",
+            "sha256": "e3ca4fea957e1aa80509b0376dc3945ae0866b5e1c14a4c64bc72a9baca096af"
+          },
+          {
+            "bytes": 5028,
+            "mode": "0664",
+            "path": "tests/test_resource_inspection.py",
+            "sha256": "1bfec6fb76976f8acc7f7e4182e1661c44638ce92e3652c382c70b12645052af"
+          },
+          {
+            "bytes": 3475,
+            "mode": "0664",
+            "path": "tests/test_returns.py",
+            "sha256": "a0dcca6ffc3b42b7239060f16e28a7b65dd449cd260fe12c993adee4a99ca6a9"
+          },
+          {
+            "bytes": 8061,
+            "mode": "0664",
+            "path": "tests/test_run_cli.py",
+            "sha256": "47469db899589478d9dc6fb233c62d661f2834979e99fc172257b60d9369f171"
+          },
+          {
+            "bytes": 11037,
+            "mode": "0664",
+            "path": "tests/test_runtime_records.py",
+            "sha256": "c94a0496bdb5150cf7443867e573af4fa2d958b2d7e6e3c820a1156a3aae28df"
+          },
+          {
+            "bytes": 4713,
+            "mode": "0664",
+            "path": "tests/test_sampling.py",
+            "sha256": "c6a5dfb6219509c6dbb2465a006fb32114dfdc53f8e0a9530bdf3b246d3ac9db"
+          },
+          {
+            "bytes": 7780,
+            "mode": "0664",
+            "path": "tests/test_scoped_mode.py",
+            "sha256": "8d5769d74a03c38a7998290918eca64144a010dcd508610a31722b53ef6d9b22"
+          },
+          {
+            "bytes": 1592,
+            "mode": "0664",
+            "path": "tests/test_screenshot_dom.py",
+            "sha256": "27cc2ee134b2b7328aa49bbbd8439cab069d554dc8ea5b34e6f4d07cd3b29458"
+          },
+          {
+            "bytes": 3054,
+            "mode": "0664",
+            "path": "tests/test_shell_admission.py",
+            "sha256": "6a86707f2479c2c9dd84db0f3b251ad2b0b841ee620a4d4f8093b7e6491ad022"
+          },
+          {
+            "bytes": 1035,
+            "mode": "0664",
+            "path": "tests/test_shell_capability_description.py",
+            "sha256": "5b7fe00563f7f087d45bb04b21bd8208e6f0bacf3f7439e58341cf3ba312c9b5"
+          },
+          {
+            "bytes": 13700,
+            "mode": "0664",
+            "path": "tests/test_shell_cli.py",
+            "sha256": "5f1696ae34ed9a55d7cd8accfdd25c7794bd00a695fc746f6aef7c9a7727ec75"
+          },
+          {
+            "bytes": 2871,
+            "mode": "0664",
+            "path": "tests/test_shell_configuration.py",
+            "sha256": "49462ba40c7e5885c0bcb7c8c14c99f0cbcbd4a9d8104d079a9dd23324b7ae16"
+          },
+          {
+            "bytes": 2886,
+            "mode": "0664",
+            "path": "tests/test_source_notices.py",
+            "sha256": "b15920d936f80d1b7de1bbf086ef2f10f91be71f8599ca4b6b15d7423ae586d9"
+          },
+          {
+            "bytes": 5932,
+            "mode": "0664",
+            "path": "tests/test_state_and_plans.py",
+            "sha256": "9a53f05c9719d4438d03f678270001eee985bff984387ee1daae2bd04fd13be2"
+          },
+          {
+            "bytes": 7761,
+            "mode": "0664",
+            "path": "tests/test_stylesheet_inspection.py",
+            "sha256": "beee61e854e9a0b6b297dc0831b07fd81585d5dce5cda66205d86cbf9ada15f8"
+          },
+          {
+            "bytes": 4026,
+            "mode": "0664",
+            "path": "tests/test_task_verdict.py",
+            "sha256": "0223c0923d89e8607914dbbafff99d62860f93d71bbf016f2f6f4eeff792d8f8"
+          },
+          {
+            "bytes": 8511,
+            "mode": "0664",
+            "path": "tests/test_terminal.py",
+            "sha256": "dd603fe0022f4038f26aa2c096bc188ddd95ddc23665d6ee75bf58ca16c74b0a"
+          },
+          {
+            "bytes": 2897,
+            "mode": "0664",
+            "path": "tests/test_terminal_components.py",
+            "sha256": "333a659762a3b75ab8ea9705adcc9015fbe161c6d429d69fcdf5de170ac67edf"
+          },
+          {
+            "bytes": 1845,
+            "mode": "0664",
+            "path": "tests/test_terminal_examples.py",
+            "sha256": "d40287fb64f0826167cdc8bad7829962004507983b9b7f13cdae39c1b1182983"
+          },
+          {
+            "bytes": 3852,
+            "mode": "0664",
+            "path": "tests/test_test_boundary_admission.py",
+            "sha256": "6854e16452f37d7613eee0fef736eb929c26677228c6912db4772dc7711b1a06"
+          },
+          {
+            "bytes": 2667,
+            "mode": "0664",
+            "path": "tests/test_thinking_budget_grammar.py",
+            "sha256": "262930495377c95afa6a84837f8c079316fa739cc57534c00daa519aa219acb9"
+          },
+          {
+            "bytes": 3614,
+            "mode": "0664",
+            "path": "tests/test_thinking_defaults.py",
+            "sha256": "2c0b4994c3f9baa172bb2c724942381a8c8139d31729c837cd9dc232d23942de"
+          },
+          {
+            "bytes": 6585,
+            "mode": "0664",
+            "path": "tests/test_thinking_plan_context.py",
+            "sha256": "ee5b1e175415023d31e92110df722d9c4d57abddfe16c765d58a30410b2c5173"
+          },
+          {
+            "bytes": 8819,
+            "mode": "0664",
+            "path": "tests/test_thinking_selector.py",
+            "sha256": "6e0964e80f43f42159acd54961fa4c41b83e1d28abba36a94357935c6494bd48"
+          },
+          {
+            "bytes": 4452,
+            "mode": "0664",
+            "path": "tests/test_tool_dispatch.py",
+            "sha256": "c30e6435aeaf65f8f54d5ce6e7abca3553c03f40587954428dde6fca60042005"
+          },
+          {
+            "bytes": 3362,
+            "mode": "0664",
+            "path": "tests/test_tool_gbnf.py",
+            "sha256": "5faf3bec36e6eacc887793e8e9bacfbf97845a389b0b3f53d1fb335cb826f9c3"
+          },
+          {
+            "bytes": 13284,
+            "mode": "0664",
+            "path": "tests/test_tool_registry.py",
+            "sha256": "f710570068f38975cc4f8684029d091b7636629cbdbdc8fabd083e9a29d5e452"
+          },
+          {
+            "bytes": 4245,
+            "mode": "0664",
+            "path": "tests/test_unit_verifier_scope.py",
+            "sha256": "9a8b7b73ddded2efec9f88cfa4ef333831548b14a77b95dd196a72c29633b604"
+          },
+          {
+            "bytes": 11612,
+            "mode": "0664",
+            "path": "tests/test_viewport_cli.py",
+            "sha256": "937373492513f87cbb42de9ffb667c8dccc8a475950968f5e76acd3e80fd1a0a"
+          },
+          {
+            "bytes": 3091,
+            "mode": "0664",
+            "path": "tests/test_viewport_grammar.py",
+            "sha256": "eb25e33b0b0f30c88b62d19373d5566c78466491fd55bae0065d137737d1c4e1"
+          },
+          {
+            "bytes": 1812,
+            "mode": "0664",
+            "path": "tests/test_visible_results.py",
+            "sha256": "e5b291241d105b21a5d50ab78e208dbaa515596503e3ddb62fc44e9c65ea7cc1"
+          },
+          {
+            "bytes": 1979,
+            "mode": "0664",
+            "path": "tests/test_workflow_smoke.py",
+            "sha256": "4b0a2d886c90921272f5d49cbb952416b0e266ce134d28abc767316c7aa2d184"
+          },
+          {
+            "bytes": 2159,
+            "mode": "0664",
+            "path": "tests/test_workload_lineage.py",
+            "sha256": "cc2bb01625cb06a20c863efbc603dc885195360ddb65225161ebc2da38d75898"
+          },
+          {
+            "bytes": 1292,
+            "mode": "0664",
+            "path": "tests/test_workspace_modes.py",
+            "sha256": "c584c7715b62fd7c765918b0caecb990210462febba9f156833af18c46eaf51c"
+          }
+        ],
+        "isolation": {
+          "kind": "bubblewrap-terminal-v1",
+          "launcher_pid": 2280276,
+          "mount_ns": "mnt:[4026532775]",
+          "namespace_members_after": [],
+          "net_ns": "net:[4026532781]",
+          "pid_ns": "pid:[4026532778]",
+          "worker_exited": true
+        },
+        "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+        "scope": "model-written Bash; read-only captured readable files; no network or host home",
+        "workspace_after_sha256": "aeedb9dd1b546ce5335abd5f5aa1e802e3819954c8b617c7b4b9abd4136c303f"
+      }
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "branchwrite/coding_cli.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Prepare the existing coding workflow; COW and RuntimeLog remain authoritative.\"\"\"\nimport hashlib,json,os,re,stat,tempfile\nfrom pathlib import Path\nfrom .run_cli import _config,_pairs,execute,_source_notice\nfrom .cow_client import CowClient,HTTPTransport,OperationJournal,OperationIndeterminate\nPROGRAM=\"\"\"FLOW coding\nREPEAT attempts exhausted=stop max=32 until=verified\nEXPAND decide from=current profile=control task=task -> proposed\nPLAN freeze against=world from=proposed -> plan\nACT perform plan=plan -> outcome\nTRANSFORM advance contract=cow-source input=proposed -> current\nTRANSFORM feedback contract=tool-feedback input=outcome -> task\nVERIFY check contract=command-evidence-and-finish input=outcome -> verified\nEND\nEND\n\"\"\"\nMAX_LAUNCH_BYTES=1024*1024\ndef _bytes(value):\n    return json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False).encode()\ndef build_launch(project,task,connection,*,branch,read_paths=(),edit_paths=(),create_paths=(),test_commands=(),from_branch=None,from_prefix=None,from_snapshot=None,shell_timeout=120):\n    if from_prefix is not None and from_branch is not None:\n        raise ValueError('choose a prepared prefix or a completed branch, not both')\n    if from_prefix is not None:from_branch=from_prefix\n    project=Path(project).resolve(strict=True)\n    if not project.is_dir():raise ValueError('project must be a directory')\n    keys={'endpoint_url','endpoint_pin','model_contract_id','execution_profile_id','eos_tokens'}\n    if type(connection) is not dict or set(connection)!=keys:\n        raise ValueError('connection needs only endpoint/profile identities and EOS IDs; credentials belong in BW_COW_API_KEY')\n    HTTPTransport(connection['endpoint_url'])\n    if type(task) is not str or not task.strip() or len(task.encode('utf8'))>262144:raise ValueError('bounded nonempty task text required')\n    if type(branch) is not str or not 1<=len(branch)<=128:raise ValueError('bounded branch name required')\n    if not test_commands or any(type(c) is not str or not c.strip() for c in test_commands):\n        raise ValueError('at least one explicit verification command is required')\n    if from_snapshot is not None and from_branch is None:raise ValueError('a snapshot requires its source branch')\n    if from_branch is not None and (type(from_branch) is not str or not from_branch):raise ValueError('source branch required')\n    if from_snapshot is not None and (type(from_snapshot) is not str or not re.fullmatch('[0-9a-f]{64}',from_snapshot)):raise ValueError('invalid source snapshot')\n    cow=dict(connection,branch=branch,mode='ask',bootstrap='coding',grammar_registration='inline')\n    fork=None\n    if from_branch is not None:\n        cow.pop('bootstrap');cow['mode']='ask' if from_prefix is not None else 'append_user'\n        fork=dict(source_branch=from_branch,snapshot=from_snapshot)\n    config=dict(schema=1,source=str(project),source_policy='metadata-free-project-v1',run_id=branch,\n        grant=dict(read_paths=sorted(set(read_paths)|set(edit_paths)|set(create_paths)),\n                   edit_paths=list(edit_paths),create_paths=list(create_paths),allow_tests=False,allow_shell=True),\n        bindings=dict(task=dict(type='Text',value=task)),cow=cow,\n        shell=dict(timeout=shell_timeout),\n        verification=dict(schema=1,commands=[dict(command=c,disposition='exited',exit_code=0) for c in test_commands]))\n    config=_config(_bytes(config).decode(),prepared_prefix=from_prefix is not None)\n    return dict(schema=1,program=PROGRAM,config=config,fork=fork)\ndef _prefix_launch(launch):\n    config=launch.get('config')\n    return (launch.get('fork') is not None and type(config) is dict\n        and type(config.get('cow')) is dict and config['cow'].get('mode')=='ask')\ndef _validate(launch):\n    if type(launch) is not dict or set(launch)!={'schema','program','config','fork'} or type(launch['schema']) is not int or launch['schema']!=1 or launch['program']!=PROGRAM:\n        raise ValueError('unsupported coding launch')\n    _config(_bytes(launch['config']).decode(),prepared_prefix=_prefix_launch(launch))\n    fork=launch['fork']\n    if fork is not None:\n        if (type(fork) is not dict or set(fork)!={'source_branch','snapshot'}\n                or type(fork['source_branch']) is not str or not fork['source_branch']\n                or type(fork['snapshot']) is not str or not re.fullmatch('[0-9a-f]{64}',fork['snapshot'])\n                or launch['config']['cow'].get('mode') not in ('append_user','ask')\n                or 'bootstrap' in launch['config']['cow']):\n            raise ValueError('retained launch must pin an exact source snapshot')\n    elif launch['config']['cow'].get('bootstrap')!='coding':\n        raise ValueError('new coding launch requires its bootstrap')\ndef _state(state,*,create=False,source=None):\n    state=Path(state).absolute()\n    if state.is_symlink():raise ValueError('state must be a real owned directory')\n    if source is not None and state.resolve().is_relative_to(Path(source).resolve()):\n        raise ValueError('run state must be outside the source project')\n    if create and not state.exists():state.mkdir(mode=0o700)\n    info=state.lstat()\n    if not stat.S_ISDIR(info.st_mode) or stat.S_IMODE(info.st_mode)!=0o700 or info.st_uid!=os.getuid():\n        raise ValueError('state must be an owned directory with mode0700')\n    return state\ndef save_launch(state,launch):\n    import fcntl\n    _validate(launch)\n    state=_state(state,create=True,source=launch['config']['source'])\n    raw=_bytes(dict(launch=launch,sha256=hashlib.sha256(_bytes(launch)).hexdigest()))+b'\\n'\n    if len(raw)>MAX_LAUNCH_BYTES:raise ValueError('coding launch is too large')\n    path=state/'coding-launch.json'\n    # Serialize trusted setup publishers; atomic rename leaves one file link\n    # even if the process stops before staging cleanup. No workflow lives here.\n    lockfd=os.open(state/'.coding-launch.lock',os.O_RDWR|os.O_CREAT|getattr(os,'O_NOFOLLOW',0),0o600)\n    with os.fdopen(lockfd,'r+b') as lock:\n        info=os.fstat(lock.fileno())\n        if not stat.S_ISREG(info.st_mode) or info.st_nlink!=1 or info.st_uid!=os.getuid() or stat.S_IMODE(info.st_mode)!=0o600:\n            raise ValueError('invalid coding setup lock')\n        fcntl.flock(lock.fileno(),fcntl.LOCK_EX)\n        if path.exists() or path.is_symlink():\n            if read_launch(state)!=launch:raise ValueError('run setup changed; use a new run state')\n            return\n        fd,name=tempfile.mkstemp(prefix='.coding-launch-',dir=state);temporary=Path(name)\n        try:\n            with os.fdopen(fd,'wb') as stream:\n                os.fchmod(stream.fileno(),0o600);stream.write(raw);stream.flush();os.fsync(stream.fileno())\n            os.replace(temporary,path)\n            directory=os.open(state,os.O_RDONLY|getattr(os,'O_DIRECTORY',0))\n            try:os.fsync(directory)\n            finally:os.close(directory)\n        finally:\n            if temporary.exists():temporary.unlink()\ndef read_launch(state):\n    state=_state(state)\n    fd=os.open(state/'coding-launch.json',os.O_RDONLY|getattr(os,'O_NOFOLLOW',0)|getattr(os,'O_NONBLOCK',0))\n    with os.fdopen(fd,'rb') as stream:\n        info=os.fstat(stream.fileno())\n        if not stat.S_ISREG(info.st_mode) or info.st_nlink!=1 or info.st_uid!=os.getuid() or stat.S_IMODE(info.st_mode)!=0o600:\n            raise ValueError('coding launch must be a private owned regular file')\n        raw=stream.read(MAX_LAUNCH_BYTES+1)\n    if len(raw)>MAX_LAUNCH_BYTES:raise ValueError('coding launch is too large')\n    envelope=json.loads(raw)\n    if type(envelope) is not dict or set(envelope)!={'launch','sha256'} or envelope['sha256']!=hashlib.sha256(_bytes(envelope['launch'])).hexdigest():\n        raise ValueError('coding launch integrity check failed')\n    _validate(envelope['launch'])\n    return envelope['launch']\ndef _client(state,launch):\n    cow=launch['config']['cow']\n    return CowClient.http(cow['endpoint_url'],journal=OperationJournal(Path(state)/'cow-operations'),api_key=os.environ.get('BW_COW_API_KEY'),endpoint_pin=cow['endpoint_pin'],notice_handler=_source_notice)\ndef run_saved(state,*,max_steps=1024):\n    if type(max_steps) is not int or max_steps<=0:raise ValueError('finite positive step budget required')\n    launch=read_launch(state)\n    if launch['fork'] is not None:\n        fork=launch['fork'];operation='bw-code-fork-'+hashlib.sha256(_bytes(launch)).hexdigest()[:40]\n        # The original pinned source and journal ID survive retries. An uncertain\n        # fork remains uncertain; never select a newer head or invent a new ID.\n        try:\n            _client(state,launch).fork(fork['source_branch'],fork['snapshot'],launch['config']['cow']['branch'],operation)\n        except OperationIndeterminate as exc:\n            raise OperationIndeterminate('Original fork operation '+operation+' is unresolved; reconcile its original journal intent before continuing') from exc\n    return execute('run',launch['program'],_bytes(launch['config']).decode(),state,max_steps=max_steps,**({'prepared_prefix':True} if _prefix_launch(launch) else {}))\ndef start(args):\n    if type(args.max_steps) is not int or args.max_steps<=0:raise ValueError('finite positive step budget required')\n    from .__main__ import _source\n    connection=json.loads(_source(args.connection),object_pairs_hook=_pairs)\n    task=getattr(args,'task',None)\n    if task is None:\n        task_file=getattr(args,'task_file',None)\n        if task_file is None:raise ValueError('inline task text or task file is required')\n        task=_source(task_file)\n    from .project_scope import expand_directories\n    read_dirs=getattr(args,'read_dir',())\n    edit_dirs=getattr(args,'edit_dir',())\n    reads=list(args.read)+expand_directories(args.project,read_dirs) if read_dirs else args.read\n    edits=list(args.edit)+expand_directories(args.project,edit_dirs) if edit_dirs else args.edit\n    launch=build_launch(args.project,task,connection,branch=args.branch,\n        read_paths=sorted(set(reads)),edit_paths=sorted(set(edits)),create_paths=args.create,\n        test_commands=args.test_command,from_branch=args.from_branch,\n        from_prefix=getattr(args,'from_prefix',None),from_snapshot=args.from_snapshot,shell_timeout=args.shell_timeout)\n    existing=Path(args.state)/'coding-launch.json'\n    if launch['fork'] is not None and launch['fork']['snapshot'] is None:\n        if existing.exists():\n            prior=read_launch(args.state)\n            if prior['fork'] is not None and prior['fork']['source_branch']==launch['fork']['source_branch']:\n                launch['fork']['snapshot']=prior['fork']['snapshot']\n        if launch['fork']['snapshot'] is None:\n            # Read-only selection before publication. The snapshot,not a live\n            # branch name,is saved before any mutating setup/inference request.\n            head=_client(args.state,launch).head(launch['fork']['source_branch'])\n            launch['fork']['snapshot']=head.root if launch['config']['cow']['mode']=='ask' else head.tip\n    save_launch(args.state,launch)\n    return run_saved(args.state,max_steps=args.max_steps)\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "replace_text_file",
+      "arguments": {
+        "final_newline": true,
+        "line_ending": "LF",
+        "lines": [
+          "\"\"\"Expand host-selected project directories into immutable exact file grants.",
+          "",
+          "No wildcard remains at execution; later files acquire no authority automatically.",
+          "Selection observes names, not a content snapshot. Admission captures actual",
+          "copied input bytes separately through project_baseline.",
+          "\"\"\"",
+          "import os,stat",
+          "from pathlib import Path",
+          "from .execution import Executor,ToolRejected,_relative_path",
+          "",
+          "def expand_directories(project,directories):",
+          "    project=Path(project).resolve(strict=True)",
+          "    if isinstance(directories,(str,bytes)):raise ValueError('directory list required')",
+          "    directories=tuple(directories)",
+          "    if len(directories)>128:raise ValueError('too many directory scopes')",
+          "    if any(type(value) is not str for value in directories):raise ValueError('relative directories required')",
+          "    reader=Executor(project,project.parent,project)",
+          "    validated=[]",
+          "    for directory in sorted(set(directories)):",
+          "        if type(directory) is not str:raise ValueError('relative directory required')",
+          "        if directory!='.':_relative_path(directory)",
+          "        if '.git' in Path(directory).parts:raise ValueError('Git administration is not a project grant')",
+          "        prefix=Path() if directory=='.' else Path(directory)",
+          "        probe=(prefix/'.bw-scope-probe').as_posix()",
+          "        with reader._parent_directory(probe) as (rootfd,_):",
+          "            pass",
+          "        validated.append(prefix)",
+          "    validated.sort(key=lambda prefix:(len(prefix.parts),prefix.as_posix()))",
+          "    minimal=[]",
+          "    for prefix in validated:",
+          "        if any(prefix.parts[:len(kept.parts)]==kept.parts for kept in minimal):continue",
+          "        minimal.append(prefix)",
+          "    selected=set();seen=set();total=0",
+          "    for prefix in minimal:",
+          "        probe=(prefix/'.bw-scope-probe').as_posix()",
+          "        with reader._parent_directory(probe) as (rootfd,_):",
+          "            for current,dirs,files,fd in os.fwalk('.',dir_fd=rootfd,follow_symlinks=False):",
+          "                relative=prefix/Path(current)",
+          "                if len(relative.parts)>64:raise ToolRejected('directory scope exceeds nesting bound')",
+          "                dirs[:]=[name for name in dirs if name!='.git']",
+          "                for name in dirs:",
+          "                    info=os.stat(name,dir_fd=fd,follow_symlinks=False)",
+          "                    if not stat.S_ISDIR(info.st_mode):raise ToolRejected('directory scope contains a link')",
+          "                    seen.add((relative/name).as_posix())",
+          "                for name in files:",
+          "                    if name=='.git':continue",
+          "                    path=(relative/name).as_posix();path.encode('utf8')",
+          "                    info=os.stat(name,dir_fd=fd,follow_symlinks=False)",
+          "                    if not stat.S_ISREG(info.st_mode) or info.st_nlink!=1:",
+          "                        raise ToolRejected('directory scope contains a link or special file')",
+          "                    if path not in selected:total+=info.st_size",
+          "                    selected.add(path);seen.add(path)",
+          "                    if info.st_size>4*1024**2:raise ToolRejected('scoped file exceeds bound')",
+          "                if len(seen)>20000 or total>64*1024**2:raise ToolRejected('directory scope exceeds project bounds')",
+          "    return sorted(selected)"
+        ],
+        "path": "branchwrite/project_scope.py",
+        "source_sha256": "7f988e5a72fd6ed23bc31d50e66ea9446bddb0e82a7acdc0e6a54e7f68ee91fa"
+      },
+      "disposition": "applied",
+      "exit_code": 0,
+      "stdout": "replacement applied\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "branchwrite/project_scope.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "\"\"\"Expand host-selected project directories into immutable exact file grants.\n\nNo wildcard remains at execution; later files acquire no authority automatically.\nSelection observes names, not a content snapshot. Admission captures actual\ncopied input bytes separately through project_baseline.\n\"\"\"\nimport os,stat\nfrom pathlib import Path\nfrom .execution import Executor,ToolRejected,_relative_path\n\ndef expand_directories(project,directories):\n    project=Path(project).resolve(strict=True)\n    if isinstance(directories,(str,bytes)):raise ValueError('directory list required')\n    directories=tuple(directories)\n    if len(directories)>128:raise ValueError('too many directory scopes')\n    if any(type(value) is not str for value in directories):raise ValueError('relative directories required')\n    reader=Executor(project,project.parent,project)\n    validated=[]\n    for directory in sorted(set(directories)):\n        if type(directory) is not str:raise ValueError('relative directory required')\n        if directory!='.':_relative_path(directory)\n        if '.git' in Path(directory).parts:raise ValueError('Git administration is not a project grant')\n        prefix=Path() if directory=='.' else Path(directory)\n        probe=(prefix/'.bw-scope-probe').as_posix()\n        with reader._parent_directory(probe) as (rootfd,_):\n            pass\n        validated.append(prefix)\n    validated.sort(key=lambda prefix:(len(prefix.parts),prefix.as_posix()))\n    minimal=[]\n    for prefix in validated:\n        if any(prefix.parts[:len(kept.parts)]==kept.parts for kept in minimal):continue\n        minimal.append(prefix)\n    selected=set();seen=set();total=0\n    for prefix in minimal:\n        probe=(prefix/'.bw-scope-probe').as_posix()\n        with reader._parent_directory(probe) as (rootfd,_):\n            for current,dirs,files,fd in os.fwalk('.',dir_fd=rootfd,follow_symlinks=False):\n                relative=prefix/Path(current)\n                if len(relative.parts)>64:raise ToolRejected('directory scope exceeds nesting bound')\n                dirs[:]=[name for name in dirs if name!='.git']\n                for name in dirs:\n                    info=os.stat(name,dir_fd=fd,follow_symlinks=False)\n                    if not stat.S_ISDIR(info.st_mode):raise ToolRejected('directory scope contains a link')\n                    seen.add((relative/name).as_posix())\n                for name in files:\n                    if name=='.git':continue\n                    path=(relative/name).as_posix();path.encode('utf8')\n                    info=os.stat(name,dir_fd=fd,follow_symlinks=False)\n                    if not stat.S_ISREG(info.st_mode) or info.st_nlink!=1:\n                        raise ToolRejected('directory scope contains a link or special file')\n                    if path not in selected:total+=info.st_size\n                    selected.add(path);seen.add(path)\n                    if info.st_size>4*1024**2:raise ToolRejected('scoped file exceeds bound')\n                if len(seen)>20000 or total>64*1024**2:raise ToolRejected('directory scope exceeds project bounds')\n    return sorted(selected)\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "run_shell",
+      "arguments": {
+        "command": "python3 -m unittest discover -s tests -p 'test_directory*.py' -v"
+      },
+      "disposition": "exited",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_cli_freezes_read_and_edit_directory_without_creation_rights (test_directory_grants.DirectoryGrantTests.test_cli_freezes_read_and_edit_directory_without_creation_rights) ... ok\ntest_exact_sorted_files_skip_git_and_keep_unicode (test_directory_grants.DirectoryGrantTests.test_exact_sorted_files_skip_git_and_keep_unicode) ... ok\ntest_linked_directory_and_escape_are_refused (test_directory_grants.DirectoryGrantTests.test_linked_directory_and_escape_are_refused) ... ok\ntest_linked_file_in_selected_tree_is_refused (test_directory_grants.DirectoryGrantTests.test_linked_file_in_selected_tree_is_refused) ... ok\ntest_ancestor_scopes_walk_the_union_once (test_directory_scope_overlap.ScopeOverlapTests.test_ancestor_scopes_walk_the_union_once) ... ok\ntest_empty_scopes_do_no_walk (test_directory_scope_overlap.ScopeOverlapTests.test_empty_scopes_do_no_walk) ... ok\ntest_invalid_explicit_scope_is_not_hidden_by_root (test_directory_scope_overlap.ScopeOverlapTests.test_invalid_explicit_scope_is_not_hidden_by_root) ... ok\ntest_root_scope_covers_all_named_children (test_directory_scope_overlap.ScopeOverlapTests.test_root_scope_covers_all_named_children) ... ok\ntest_sibling_name_prefix_is_not_ancestry (test_directory_scope_overlap.ScopeOverlapTests.test_sibling_name_prefix_is_not_ancestry) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.012s\n\nOK\n",
+      "details": {
+        "argv": [
+          "/usr/bin/bash",
+          "--noprofile",
+          "--norc",
+          "-c",
+          "python3 -m unittest discover -s tests -p 'test_directory*.py' -v"
+        ],
+        "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+        "command": "shell",
+        "cwd": "/home/dflanag3/spatial-artifacts/branchwrite-SC14-repository-scope-dev15-20261019-v1/state/world/workspace",
+        "execution_host": {
+          "euid": 1000,
+          "gid": 1000,
+          "hostname": "r4090",
+          "uid": 1000
+        },
+        "inputs": [
+          {
+            "bytes": 42,
+            "mode": "0664",
+            "path": "branchwrite/__init__.py",
+            "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+          },
+          {
+            "bytes": 6588,
+            "mode": "0664",
+            "path": "branchwrite/__main__.py",
+            "sha256": "d1f18b35cf4830d001f79f0078fd3420b3d4b92a955b5d59a6c00c530516a0f9"
+          },
+          {
+            "bytes": 2711,
+            "mode": "0664",
+            "path": "branchwrite/browser_assets.py",
+            "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+          },
+          {
+            "bytes": 19255,
+            "mode": "0664",
+            "path": "branchwrite/browser_capture.py",
+            "sha256": "fe2cf850c0fda370fd286e5e9907aaeaa8607d3bb1bb21c88b5efb03160dfdec"
+          },
+          {
+            "bytes": 9288,
+            "mode": "0664",
+            "path": "branchwrite/browser_isolation.py",
+            "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+          },
+          {
+            "bytes": 4088,
+            "mode": "0664",
+            "path": "branchwrite/browser_worker.py",
+            "sha256": "d37e44545734c614c053a37c2dc77a57f90c9dbc26b8789d26022c8cad6b1fe1"
+          },
+          {
+            "bytes": 11133,
+            "mode": "0664",
+            "path": "branchwrite/coding_cli.py",
+            "sha256": "85e24915bf23c3bfbb59bb56c10f451d360d0024aa60ed1c3104564484a7bded"
+          },
+          {
+            "bytes": 4716,
+            "mode": "0664",
+            "path": "branchwrite/coding_contract.py",
+            "sha256": "4c0f0435523dbc8d8f4e45553ac5068dd09bd2f549e99d6b1732ca747f952eac"
+          },
+          {
+            "bytes": 12697,
+            "mode": "0664",
+            "path": "branchwrite/coding_defaults.py",
+            "sha256": "6e3663b17ae9dbd8b26f8491a01c5453926fa6b3ecc8cbffb9530a00f2e0fe8e"
+          },
+          {
+            "bytes": 9985,
+            "mode": "0664",
+            "path": "branchwrite/coding_review.py",
+            "sha256": "38201f5dd50dbc2d4bde1c5318efb9adc6adda2bbcd9380e90ff31f5c7864d1b"
+          },
+          {
+            "bytes": 2909,
+            "mode": "0664",
+            "path": "branchwrite/coding_status.py",
+            "sha256": "a450d9334ec922cd02ae2c84bd04a8062dc5d79115fa6e04e58ae01260fcf2be"
+          },
+          {
+            "bytes": 11868,
+            "mode": "0664",
+            "path": "branchwrite/command_outputs.py",
+            "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+          },
+          {
+            "bytes": 8369,
+            "mode": "0664",
+            "path": "branchwrite/component_model.py",
+            "sha256": "cdfa18438cff524f9a37a3e44dac0351eda736fb6222c93a7fb37f36c4901b5b"
+          },
+          {
+            "bytes": 22832,
+            "mode": "0664",
+            "path": "branchwrite/context_pack.py",
+            "sha256": "eef9e480df1cc1561bafbd1c25a5b3b4e2f3cf31c8a724defab671afdc3b2c75"
+          },
+          {
+            "bytes": 2125,
+            "mode": "0664",
+            "path": "branchwrite/control_contract.py",
+            "sha256": "69982583752013c32270932b7e5cf1cb5e03d0afb9691d7c3dc88948bb9270e6"
+          },
+          {
+            "bytes": 3351,
+            "mode": "0664",
+            "path": "branchwrite/cow_actions.py",
+            "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+          },
+          {
+            "bytes": 77648,
+            "mode": "0664",
+            "path": "branchwrite/cow_client.py",
+            "sha256": "a08bd70de75399583cfc19229dc6e0a6ff5447286d5b8856b5322e5eda2f86d7"
+          },
+          {
+            "bytes": 6080,
+            "mode": "0664",
+            "path": "branchwrite/cow_fork.py",
+            "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+          },
+          {
+            "bytes": 49349,
+            "mode": "0664",
+            "path": "branchwrite/execution.py",
+            "sha256": "6a595a6a38dee451042f31303ea9f8b7398ab6a0b8f721999d9f2d27637ecb5b"
+          },
+          {
+            "bytes": 9645,
+            "mode": "0664",
+            "path": "branchwrite/golden_path.py",
+            "sha256": "084ea3467edbbc3b57f65c41c93693f76c0447350f5d4bc30264190491ec9316"
+          },
+          {
+            "bytes": 5412,
+            "mode": "0664",
+            "path": "branchwrite/image_feedback.py",
+            "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+          },
+          {
+            "bytes": 37093,
+            "mode": "0664",
+            "path": "branchwrite/interpreter.py",
+            "sha256": "a5c3342f271ddf7d41d6b0ab26f42c50e52bff1216ad534528b230ec0970400a"
+          },
+          {
+            "bytes": 16495,
+            "mode": "0664",
+            "path": "branchwrite/kernel.py",
+            "sha256": "106a3a564e0ee5bb190e7a6c3c246336e4c4b91a93df906110e930c02b6a8521"
+          },
+          {
+            "bytes": 9266,
+            "mode": "0664",
+            "path": "branchwrite/language.py",
+            "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+          },
+          {
+            "bytes": 21138,
+            "mode": "0664",
+            "path": "branchwrite/model_dispatch.py",
+            "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+          },
+          {
+            "bytes": 1730,
+            "mode": "0664",
+            "path": "branchwrite/model_inputs.py",
+            "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+          },
+          {
+            "bytes": 7728,
+            "mode": "0664",
+            "path": "branchwrite/planning_retry.py",
+            "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+          },
+          {
+            "bytes": 10338,
+            "mode": "0664",
+            "path": "branchwrite/project_apply.py",
+            "sha256": "a081f1dd0a8a1632b09c63e1456823d0c42bc0e7deef655cf1bf61a91d94cda8"
+          },
+          {
+            "bytes": 4341,
+            "mode": "0664",
+            "path": "branchwrite/project_baseline.py",
+            "sha256": "72da8ff7ace695a809a0cf341f8b86d85e2166e8acb9dc08a5bf153ae44c4621"
+          },
+          {
+            "bytes": 3415,
+            "mode": "0664",
+            "path": "branchwrite/project_export.py",
+            "sha256": "93eb7d71362984038f95801094cc49e82ea599371459b7529bb024207d0fad9e"
+          },
+          {
+            "bytes": 3116,
+            "mode": "0664",
+            "path": "branchwrite/project_scope.py",
+            "sha256": "8977522dd1d76e73721b47a48688abc7517e4998338068613b554c2062e9c64a"
+          },
+          {
+            "bytes": 13828,
+            "mode": "0664",
+            "path": "branchwrite/records.py",
+            "sha256": "600d0093a8c1768be967e627627a40c244233c118d39fcd24979a76e55b2f677"
+          },
+          {
+            "bytes": 20780,
+            "mode": "0664",
+            "path": "branchwrite/run_cli.py",
+            "sha256": "ddeed6be5faac60fb05af5342d03807a4c6f681fdb84755d90cdcda121df94a4"
+          },
+          {
+            "bytes": 14731,
+            "mode": "0664",
+            "path": "branchwrite/terminal.py",
+            "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+          },
+          {
+            "bytes": 12786,
+            "mode": "0664",
+            "path": "branchwrite/terminal_components.py",
+            "sha256": "e583db55b25ae9171581ba3234e984d574b6aeaa3733de43211735fb1225e5e8"
+          },
+          {
+            "bytes": 2388,
+            "mode": "0664",
+            "path": "branchwrite/terminal_worker.py",
+            "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+          },
+          {
+            "bytes": 1800,
+            "mode": "0664",
+            "path": "branchwrite/text_file_codec.py",
+            "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+          },
+          {
+            "bytes": 5119,
+            "mode": "0664",
+            "path": "branchwrite/thinking_ladder.py",
+            "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+          },
+          {
+            "bytes": 4205,
+            "mode": "0664",
+            "path": "branchwrite/tool_dispatch.py",
+            "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+          },
+          {
+            "bytes": 32148,
+            "mode": "0664",
+            "path": "branchwrite/tool_registry.py",
+            "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+          },
+          {
+            "bytes": 30228,
+            "mode": "0664",
+            "path": "branchwrite/verification.py",
+            "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+          },
+          {
+            "bytes": 3293,
+            "mode": "0664",
+            "path": "tests/test_apply_reconciliation.py",
+            "sha256": "b73a70e4b4a2abb4db8cc9b5b7995b63f8503372367433aba3a1a127040dba74"
+          },
+          {
+            "bytes": 8049,
+            "mode": "0664",
+            "path": "tests/test_browser_asset_completion.py",
+            "sha256": "9242d1c3b90a653420b0e15870df34a1ba530dd92b689d9989b278a48053a37c"
+          },
+          {
+            "bytes": 2594,
+            "mode": "0664",
+            "path": "tests/test_browser_asset_protocol.py",
+            "sha256": "310a5eab762d6419c9cde610bc1aae96de0e1e10b65130846f651ee7cba019a5"
+          },
+          {
+            "bytes": 6311,
+            "mode": "0664",
+            "path": "tests/test_browser_asset_tools.py",
+            "sha256": "2efce962a2c6cae8a8a5fa1bdbc1dc03ddef092a02a7fce64775a29ac5333471"
+          },
+          {
+            "bytes": 5822,
+            "mode": "0664",
+            "path": "tests/test_browser_assets.py",
+            "sha256": "67a7751b965d9c88dabf3de3ee66452247653df03ca7d179dc3c317732d29dcf"
+          },
+          {
+            "bytes": 6682,
+            "mode": "0664",
+            "path": "tests/test_browser_capture.py",
+            "sha256": "301398d81df6f3e73e5b8969b62a5d7b5cf2f2cd03e5c845789d717a0d91c2ab"
+          },
+          {
+            "bytes": 9940,
+            "mode": "0664",
+            "path": "tests/test_browser_errors.py",
+            "sha256": "f8054fa3c3b8b10cd1dfa62baad1da008b62d9ee74d2ea08f5961711418254b0"
+          },
+          {
+            "bytes": 4533,
+            "mode": "0664",
+            "path": "tests/test_browser_interactions.py",
+            "sha256": "2dd81454588d829c1bfe52b65655f44e0459227a548e257fc66805582fb1fabe"
+          },
+          {
+            "bytes": 4804,
+            "mode": "0664",
+            "path": "tests/test_browser_isolation.py",
+            "sha256": "5d2ffdaf20efe4ff549e9222b7b0614499745181c4eee0894a2379797c69373d"
+          },
+          {
+            "bytes": 7746,
+            "mode": "0664",
+            "path": "tests/test_browser_repair.py",
+            "sha256": "4b2956e027a9d5b3b90353d610f5752def14bfd6448a9d6410d6196a12c2d3e8"
+          },
+          {
+            "bytes": 1675,
+            "mode": "0664",
+            "path": "tests/test_browser_retirement.py",
+            "sha256": "b8e0c56c9528dcb324bb8ab6b60bbdfbfaa9b581734c047841d4b5564145bcb9"
+          },
+          {
+            "bytes": 5309,
+            "mode": "0664",
+            "path": "tests/test_browser_viewports.py",
+            "sha256": "8df3d529bb148d5068053311577c856d0a1ba9c2a1d101479eda58bca6b272de"
+          },
+          {
+            "bytes": 2010,
+            "mode": "0664",
+            "path": "tests/test_cancellation_contract.py",
+            "sha256": "c8725762a901b573267064a0a28483e315408b5064715e985e9a05c019e276b5"
+          },
+          {
+            "bytes": 8349,
+            "mode": "0664",
+            "path": "tests/test_capture_cli.py",
+            "sha256": "0be3d908153eb17d347660fcdad1148c5b7232f62711b41b53dcebe460cfcb11"
+          },
+          {
+            "bytes": 3382,
+            "mode": "0664",
+            "path": "tests/test_catalogue.py",
+            "sha256": "a75385c59b8a1a983b079f1f46e8b55c19d77c7ae7635dd7b33049af668f49ed"
+          },
+          {
+            "bytes": 2362,
+            "mode": "0664",
+            "path": "tests/test_codec.py",
+            "sha256": "007039b62b7f728d02b950bd7a545325e2ac71fb53af2bdcab956134d339f1ef"
+          },
+          {
+            "bytes": 2397,
+            "mode": "0664",
+            "path": "tests/test_coding_continuation_admission.py",
+            "sha256": "66c4cc9f1c72b035538914e7f263c4132eb6d1705dcb34997a4902492f68a1e1"
+          },
+          {
+            "bytes": 4254,
+            "mode": "0664",
+            "path": "tests/test_coding_contract.py",
+            "sha256": "e3d994558b8fadb3ab584b9b5a11145d8762634ac5ae566ca03030212ff377cf"
+          },
+          {
+            "bytes": 5699,
+            "mode": "0664",
+            "path": "tests/test_coding_defaults.py",
+            "sha256": "952f2b7c5b32a558cb16a1c8eccac0e86b7da8566660fb84e6ac3126354281f7"
+          },
+          {
+            "bytes": 3119,
+            "mode": "0664",
+            "path": "tests/test_coding_grammar.py",
+            "sha256": "c5c6e4d30281c76a9119b87eb47fd8b2630bbccdf815a0e79fd336e899fd6a61"
+          },
+          {
+            "bytes": 6649,
+            "mode": "0664",
+            "path": "tests/test_coding_launcher.py",
+            "sha256": "1f21a6440a6eea7f8d22553be11a6491ccc538574f6d35754ef186f31f698177"
+          },
+          {
+            "bytes": 4291,
+            "mode": "0664",
+            "path": "tests/test_coding_launcher_http.py",
+            "sha256": "a492b4ec5f17f0c0a34f849684a136f5c3539771f5c25b32f53a8ec3319a4e02"
+          },
+          {
+            "bytes": 4058,
+            "mode": "0664",
+            "path": "tests/test_coding_review.py",
+            "sha256": "02a7dd30af2c26100711548acb2bbb4cb8efa0a7f6668218f632d0fe25349d37"
+          },
+          {
+            "bytes": 3372,
+            "mode": "0664",
+            "path": "tests/test_coding_status.py",
+            "sha256": "58b31ec97db038ba589a3816723adfa13c71feea2a58e9379c42827fb3721a7d"
+          },
+          {
+            "bytes": 11014,
+            "mode": "0664",
+            "path": "tests/test_command_outputs.py",
+            "sha256": "aea46a11490cb84057c41c1f071e42cad189ba881e5bc5a1d012df670e8fce8d"
+          },
+          {
+            "bytes": 881,
+            "mode": "0664",
+            "path": "tests/test_command_prefix.py",
+            "sha256": "1066b32f3565edf4822c0359c434a67229f5fd9419ec8a59a94a595f015167ff"
+          },
+          {
+            "bytes": 7422,
+            "mode": "0664",
+            "path": "tests/test_command_verification.py",
+            "sha256": "1bd19a9b37339c8d1c3579c4e71bedbea8fa2afbeec0c7b0d6ca0ef5bd426de4"
+          },
+          {
+            "bytes": 2093,
+            "mode": "0664",
+            "path": "tests/test_command_visibility.py",
+            "sha256": "7c19571d4db413d462be992ec0dc0f5b1fdb76aca94c90f94b424b74739f88f2"
+          },
+          {
+            "bytes": 2100,
+            "mode": "0664",
+            "path": "tests/test_component_model.py",
+            "sha256": "34aaa31c845c2dc84e9bb5f293485a6651b80063302ac4d67cec1e74651b16fa"
+          },
+          {
+            "bytes": 2394,
+            "mode": "0664",
+            "path": "tests/test_connection_admission.py",
+            "sha256": "de824cadd44193e16f7e76dc363d89285fcf72cc7ef5452927d79f85cabb11ce"
+          },
+          {
+            "bytes": 14803,
+            "mode": "0664",
+            "path": "tests/test_context_pack.py",
+            "sha256": "459bb607994e62a1528b853c88531a0e8efdfc549591b6890a2ea6e27e14c50c"
+          },
+          {
+            "bytes": 2659,
+            "mode": "0664",
+            "path": "tests/test_context_prefix_integration.py",
+            "sha256": "14f4cad43b1407abcb1132e66dae2c42994e46afc7e9fcc142bf1c1948c8d267"
+          },
+          {
+            "bytes": 3294,
+            "mode": "0664",
+            "path": "tests/test_control_contract.py",
+            "sha256": "7b545ea448f60b46d04fad8d28c77ad88b9c1b47cc795f9b94233d4b2abad126"
+          },
+          {
+            "bytes": 4671,
+            "mode": "0664",
+            "path": "tests/test_controller_bootstrap_http.py",
+            "sha256": "c4123b280c0bb0846c7d70654694d84a36924d937c89d0396b7760e286ac8dc3"
+          },
+          {
+            "bytes": 1810,
+            "mode": "0664",
+            "path": "tests/test_controller_prefix.py",
+            "sha256": "c222723df7a06f1735c9ad2663442b2d7e4a46b0d480ee1bc6252cd5979677f3"
+          },
+          {
+            "bytes": 4126,
+            "mode": "0664",
+            "path": "tests/test_cow_actions.py",
+            "sha256": "1320b86b16ba2da88921e83321fd4977e33c02fce8f06340a8c08646824f5b56"
+          },
+          {
+            "bytes": 19515,
+            "mode": "0664",
+            "path": "tests/test_cow_client.py",
+            "sha256": "d5f660bb93c536d5d51cffd679d701e8946ec9d7c9b7a4f407336f9dfd447211"
+          },
+          {
+            "bytes": 9778,
+            "mode": "0664",
+            "path": "tests/test_cow_client_flow.py",
+            "sha256": "49b054edf0b357a1b1c0824740702cf842e216ecba9c8b031a41c77bdb7ab0b6"
+          },
+          {
+            "bytes": 13747,
+            "mode": "0664",
+            "path": "tests/test_cow_coding_pilot.py",
+            "sha256": "d4c6c6a7fac3c26d3771c1cd51de25676be4634402f80206a3c8eda852d6c7a3"
+          },
+          {
+            "bytes": 8153,
+            "mode": "0664",
+            "path": "tests/test_cow_durable_answer.py",
+            "sha256": "1bc7eea5afe52c4c3808c4a6608fc3a217aefda337cda4959064fd95effdd063"
+          },
+          {
+            "bytes": 6674,
+            "mode": "0664",
+            "path": "tests/test_cow_fork_dispatch.py",
+            "sha256": "d149c232e47cdcd9c582cafea47637902b3741e1e7b7aa44075511c49a84a241"
+          },
+          {
+            "bytes": 4359,
+            "mode": "0664",
+            "path": "tests/test_cow_fork_receipts.py",
+            "sha256": "a859b1a3fd798fa38f20976371163642549a137d3ee6c183f8f678eb7cc266d3"
+          },
+          {
+            "bytes": 5691,
+            "mode": "0664",
+            "path": "tests/test_cow_image_lost_ack.py",
+            "sha256": "c1a9b7c80d6396148dcc9dc14747acb7187dfc0a23d6a3446e8638f88a566452"
+          },
+          {
+            "bytes": 8271,
+            "mode": "0664",
+            "path": "tests/test_cow_images.py",
+            "sha256": "117677c481fdee45e7086c23c22a79ac81849c220334f0ea0e1851d98e6132b6"
+          },
+          {
+            "bytes": 2486,
+            "mode": "0664",
+            "path": "tests/test_cow_stream_completion.py",
+            "sha256": "fee357ab074f3c60aa4f808f5bee7085bae96f361fa727a260c0bc6e01a594a0"
+          },
+          {
+            "bytes": 1707,
+            "mode": "0664",
+            "path": "tests/test_cow_structured_load.py",
+            "sha256": "a787ddce0fb356214d306007260a820a3b168d6f2f8777e365f0e60d831ebd5e"
+          },
+          {
+            "bytes": 1292,
+            "mode": "0664",
+            "path": "tests/test_default_sampler_policy.py",
+            "sha256": "5a821b0f768f4f3b02746c1014934dda40ff6ab925877dc5f3be52a98a83a561"
+          },
+          {
+            "bytes": 2577,
+            "mode": "0664",
+            "path": "tests/test_directory_grants.py",
+            "sha256": "258867d433af2cc31b9ebf0036b51e5be7da3e0c5e3f163adc5c6545c0492645"
+          },
+          {
+            "bytes": 1853,
+            "mode": "0664",
+            "path": "tests/test_directory_scope_overlap.py",
+            "sha256": "e02ae1fd8abc37dfb1915847e5900f01f89d8966384ae42bcbe3deddd8f7470d"
+          },
+          {
+            "bytes": 5804,
+            "mode": "0664",
+            "path": "tests/test_execution.py",
+            "sha256": "4e9c43382a518d4d280b04a8d2345fbbc44e483675837d845f23041d7af265b5"
+          },
+          {
+            "bytes": 5192,
+            "mode": "0664",
+            "path": "tests/test_executor_binding.py",
+            "sha256": "f75410e7ca5a48d3a8de3c1df4f1d5c766675edef30248294aa96dc21a7c83c7"
+          },
+          {
+            "bytes": 9429,
+            "mode": "0664",
+            "path": "tests/test_file_completion.py",
+            "sha256": "43388cf91889c3776dc801e191415cbd865e2a6c7fa0223dcbc6369bb75ff6e4"
+          },
+          {
+            "bytes": 9126,
+            "mode": "0664",
+            "path": "tests/test_file_tools.py",
+            "sha256": "ebfe9005150fdcb4dcc398ede515bfd02e7d92850e2c874cb694188bd89bca2c"
+          },
+          {
+            "bytes": 13274,
+            "mode": "0664",
+            "path": "tests/test_frame_kernel.py",
+            "sha256": "addd4b13496cd8b946cd4ad7136091c9850255e85db884acc6367cd90d38b636"
+          },
+          {
+            "bytes": 3863,
+            "mode": "0664",
+            "path": "tests/test_full_project_review.py",
+            "sha256": "aeb35d8256706be17c85c4fbda5283ed7fe571b3bf2edb2dba322dd5a9ea35bd"
+          },
+          {
+            "bytes": 9834,
+            "mode": "0664",
+            "path": "tests/test_generated_page.py",
+            "sha256": "08ae3ec8783c61068cc6fd199f706da4b3a0827f8650a36c9c37ec935a6ab54a"
+          },
+          {
+            "bytes": 7789,
+            "mode": "0664",
+            "path": "tests/test_golden_path.py",
+            "sha256": "b475d3e8be54cf7210acfbf0769546c3ef04bb8bc27f92e2cf7f6963b1ea33a9"
+          },
+          {
+            "bytes": 3281,
+            "mode": "0664",
+            "path": "tests/test_grammar.py",
+            "sha256": "982662d208af712f780fcc311e1ec3b4eff9a883225a1bd9fae46197d8f11b73"
+          },
+          {
+            "bytes": 5879,
+            "mode": "0664",
+            "path": "tests/test_grammar_cli_admission.py",
+            "sha256": "2c71c0ecd3a7a00cc5890ee766b7c0b58fd4eb0e5eb01e59a26d7b336ade2368"
+          },
+          {
+            "bytes": 3412,
+            "mode": "0664",
+            "path": "tests/test_grammar_registration_client.py",
+            "sha256": "307ec1ff2e6b06e716919611d3b3016e11f35674d522db5bb0d133b077bcc703"
+          },
+          {
+            "bytes": 5521,
+            "mode": "0664",
+            "path": "tests/test_greeting_inspection.py",
+            "sha256": "6b93fad9888c07a9714050ab07e057767a4ece75bae8f13c3db1cf54e674cb86"
+          },
+          {
+            "bytes": 4717,
+            "mode": "0664",
+            "path": "tests/test_h00_json.py",
+            "sha256": "1dd268e43cd9bfe571b21f20edaf02089005f899ba9bd5f20dadca6040a0755c"
+          },
+          {
+            "bytes": 1331,
+            "mode": "0664",
+            "path": "tests/test_html_create_grammar.py",
+            "sha256": "0d98e5ece5fb5ac1ccfb5555f29886254696929d014511c71a53f70f67fe77d3"
+          },
+          {
+            "bytes": 2224,
+            "mode": "0664",
+            "path": "tests/test_html_edit_capture.py",
+            "sha256": "118e2f0a5b2a655591c471ba22fd84c9399add8e95925f167bf2ea22f32d16c1"
+          },
+          {
+            "bytes": 2156,
+            "mode": "0664",
+            "path": "tests/test_html_inspection.py",
+            "sha256": "55fd3309c94f39641bf041c71235fa18e6ac797e99994648e70a99b4388dedda"
+          },
+          {
+            "bytes": 3755,
+            "mode": "0664",
+            "path": "tests/test_html_loop.py",
+            "sha256": "8772ca75ba797178421d55ec2a63481d7b933187f9110ef7d98cb9b39963ae4c"
+          },
+          {
+            "bytes": 13278,
+            "mode": "0664",
+            "path": "tests/test_image_feedback.py",
+            "sha256": "3d5b661b31bd97cdb2dd4b9b226e0b8617b1a384f6147433206073f269f47f14"
+          },
+          {
+            "bytes": 3024,
+            "mode": "0664",
+            "path": "tests/test_inline_task.py",
+            "sha256": "fa48568fb25abbf20be3b69121c302df96dcf93fc154c66fff4a66c0e8f90a11"
+          },
+          {
+            "bytes": 3235,
+            "mode": "0664",
+            "path": "tests/test_interact_grammar.py",
+            "sha256": "687cb6b9e983bca80ebae7dfd3e6b94d29f2a3901873c1d7fe157b6539b5c861"
+          },
+          {
+            "bytes": 9164,
+            "mode": "0664",
+            "path": "tests/test_interact_tool.py",
+            "sha256": "642c445fba10484981d7ef32a3c1728763c070e62ae6923ae7437a6137713d36"
+          },
+          {
+            "bytes": 9938,
+            "mode": "0664",
+            "path": "tests/test_interactive_page_policy.py",
+            "sha256": "43d663683fba520cbce9428716fb22edc6f945c9488fb5c5d5d0e0389bd14bdd"
+          },
+          {
+            "bytes": 14495,
+            "mode": "0664",
+            "path": "tests/test_interpreter.py",
+            "sha256": "114d5bc843f33fb4043bd83c7fc2f2b92b5bc982d6687e9c2893cb49be7962b1"
+          },
+          {
+            "bytes": 7604,
+            "mode": "0664",
+            "path": "tests/test_javascript_inspection.py",
+            "sha256": "d4c8b8917fbd3f26c903624cf0cfabf6a82eed1c56a5b4822ff897f7bd62f37f"
+          },
+          {
+            "bytes": 3724,
+            "mode": "0664",
+            "path": "tests/test_language.py",
+            "sha256": "8ca0bedca2c4bd1fd5a64781448d72a5e378a21417596f077e24684a5ab83dc5"
+          },
+          {
+            "bytes": 4038,
+            "mode": "0664",
+            "path": "tests/test_line_file_examples.py",
+            "sha256": "8acfa1e9ee1daee519c91f6abb3f8643291391bc8bb3ea9eddc668902e4fb0fe"
+          },
+          {
+            "bytes": 7675,
+            "mode": "0664",
+            "path": "tests/test_line_file_tools.py",
+            "sha256": "51c528aeb26f4be6984d7b3dbe95b6767bc6455696621505f420584665e8931a"
+          },
+          {
+            "bytes": 4521,
+            "mode": "0664",
+            "path": "tests/test_literal_file_examples.py",
+            "sha256": "2ef1ceaaf673223ffb75265d753bbaed37d6f8e03588fe558e6fabd878f1dbfb"
+          },
+          {
+            "bytes": 2149,
+            "mode": "0664",
+            "path": "tests/test_mode_grammar.py",
+            "sha256": "71a287a73b4db3586ea5830b386e65ec81b32319b574505736b660ffcd2f5ce5"
+          },
+          {
+            "bytes": 1649,
+            "mode": "0664",
+            "path": "tests/test_mode_terminal.py",
+            "sha256": "6e6535efeb84f7f43f727d5d3d40e915e8464d9d8ea75fedd52b83095fb3a551"
+          },
+          {
+            "bytes": 13098,
+            "mode": "0664",
+            "path": "tests/test_model_dispatch.py",
+            "sha256": "e577b378f026870adec49be16a0b5b117026023582e08bcffeab7ece94f7ab5a"
+          },
+          {
+            "bytes": 8825,
+            "mode": "0664",
+            "path": "tests/test_model_inputs.py",
+            "sha256": "ea85f46f3401614db792338ca8d1cd9ab954818c201a537d5cc8f06fd416b402"
+          },
+          {
+            "bytes": 5789,
+            "mode": "0664",
+            "path": "tests/test_nested_file_creation.py",
+            "sha256": "15d144f38993b9985d4e856b0766fe5c5f69a5f9b02e7925a8564ab474656007"
+          },
+          {
+            "bytes": 5059,
+            "mode": "0664",
+            "path": "tests/test_observed_source.py",
+            "sha256": "1dbc514b71e2b596574885cdb876bbe560a98b9a38a3ab604ed6b03d8e5810a9"
+          },
+          {
+            "bytes": 9117,
+            "mode": "0664",
+            "path": "tests/test_output_feedback.py",
+            "sha256": "9e605f0a10d9dfd415e3c2324c7672de78b465c38c04e8a93442aa65e347afb4"
+          },
+          {
+            "bytes": 4257,
+            "mode": "0664",
+            "path": "tests/test_page_actions.py",
+            "sha256": "5259a1a84a6b87b36ecbbfc672df7c77db1d24d2a9c72e64da4d362634e625bd"
+          },
+          {
+            "bytes": 8780,
+            "mode": "0664",
+            "path": "tests/test_planning_retry_flow.py",
+            "sha256": "152dc4f7cdbb83a5b14e0cd22cd39fd9f2eb58410c89be7461e7d542498352fd"
+          },
+          {
+            "bytes": 3171,
+            "mode": "0664",
+            "path": "tests/test_prefix_admission.py",
+            "sha256": "bc96d7af0a90bbd0d17e2f2b2d1d2ef79a7d2214c3a965f5f8589392d8e99f15"
+          },
+          {
+            "bytes": 5445,
+            "mode": "0664",
+            "path": "tests/test_prefix_admission_http.py",
+            "sha256": "19d184437090eb347df2b7a38f84e19bff07add43d5132d746f252c9d38a5c3f"
+          },
+          {
+            "bytes": 3765,
+            "mode": "0664",
+            "path": "tests/test_program_cli.py",
+            "sha256": "8582d6f7b61c7ef6d354307d18aeb58b73d8e97ddada730f6a0384274dcaabe4"
+          },
+          {
+            "bytes": 5561,
+            "mode": "0664",
+            "path": "tests/test_program_language.py",
+            "sha256": "a9b38cc2dc84e4a238aaeae926a845e670b81cfd2f8f0633418099f43f0ee84a"
+          },
+          {
+            "bytes": 4838,
+            "mode": "0664",
+            "path": "tests/test_project_admission.py",
+            "sha256": "ce4ed43e7eb42615b78224b1a7ed127f9312d31495575cdc56447e41a46098d5"
+          },
+          {
+            "bytes": 3084,
+            "mode": "0664",
+            "path": "tests/test_project_apply.py",
+            "sha256": "e3335156905a303344d07f258731f2f6b4723203a5f29d5ac46a4d5b849c86ec"
+          },
+          {
+            "bytes": 3757,
+            "mode": "0664",
+            "path": "tests/test_project_baseline.py",
+            "sha256": "3476c1b7240bedc7f9e967e6dff577e769cef8fcf35b2a90b5d40c4a24e4afe1"
+          },
+          {
+            "bytes": 3034,
+            "mode": "0664",
+            "path": "tests/test_project_export.py",
+            "sha256": "3bef5696a71e03c93296da331bc6b94e226323675acd9dede119a230cad0f437"
+          },
+          {
+            "bytes": 2301,
+            "mode": "0664",
+            "path": "tests/test_readonly_log.py",
+            "sha256": "8c67b29c2c72b7368f8eaf5e3ccc6d46c70680f1ee3e0ef51df71e3eb8da0da8"
+          },
+          {
+            "bytes": 3399,
+            "mode": "0664",
+            "path": "tests/test_registered_grammar_mapping.py",
+            "sha256": "4ccf3783ef90703976d10ee8f9acc26cf0e06c5a1bee73c7e373d2f801798fed"
+          },
+          {
+            "bytes": 6970,
+            "mode": "0664",
+            "path": "tests/test_replace_admission.py",
+            "sha256": "e3ca4fea957e1aa80509b0376dc3945ae0866b5e1c14a4c64bc72a9baca096af"
+          },
+          {
+            "bytes": 5028,
+            "mode": "0664",
+            "path": "tests/test_resource_inspection.py",
+            "sha256": "1bfec6fb76976f8acc7f7e4182e1661c44638ce92e3652c382c70b12645052af"
+          },
+          {
+            "bytes": 3475,
+            "mode": "0664",
+            "path": "tests/test_returns.py",
+            "sha256": "a0dcca6ffc3b42b7239060f16e28a7b65dd449cd260fe12c993adee4a99ca6a9"
+          },
+          {
+            "bytes": 8061,
+            "mode": "0664",
+            "path": "tests/test_run_cli.py",
+            "sha256": "47469db899589478d9dc6fb233c62d661f2834979e99fc172257b60d9369f171"
+          },
+          {
+            "bytes": 11037,
+            "mode": "0664",
+            "path": "tests/test_runtime_records.py",
+            "sha256": "c94a0496bdb5150cf7443867e573af4fa2d958b2d7e6e3c820a1156a3aae28df"
+          },
+          {
+            "bytes": 4713,
+            "mode": "0664",
+            "path": "tests/test_sampling.py",
+            "sha256": "c6a5dfb6219509c6dbb2465a006fb32114dfdc53f8e0a9530bdf3b246d3ac9db"
+          },
+          {
+            "bytes": 7780,
+            "mode": "0664",
+            "path": "tests/test_scoped_mode.py",
+            "sha256": "8d5769d74a03c38a7998290918eca64144a010dcd508610a31722b53ef6d9b22"
+          },
+          {
+            "bytes": 1592,
+            "mode": "0664",
+            "path": "tests/test_screenshot_dom.py",
+            "sha256": "27cc2ee134b2b7328aa49bbbd8439cab069d554dc8ea5b34e6f4d07cd3b29458"
+          },
+          {
+            "bytes": 3054,
+            "mode": "0664",
+            "path": "tests/test_shell_admission.py",
+            "sha256": "6a86707f2479c2c9dd84db0f3b251ad2b0b841ee620a4d4f8093b7e6491ad022"
+          },
+          {
+            "bytes": 1035,
+            "mode": "0664",
+            "path": "tests/test_shell_capability_description.py",
+            "sha256": "5b7fe00563f7f087d45bb04b21bd8208e6f0bacf3f7439e58341cf3ba312c9b5"
+          },
+          {
+            "bytes": 13700,
+            "mode": "0664",
+            "path": "tests/test_shell_cli.py",
+            "sha256": "5f1696ae34ed9a55d7cd8accfdd25c7794bd00a695fc746f6aef7c9a7727ec75"
+          },
+          {
+            "bytes": 2871,
+            "mode": "0664",
+            "path": "tests/test_shell_configuration.py",
+            "sha256": "49462ba40c7e5885c0bcb7c8c14c99f0cbcbd4a9d8104d079a9dd23324b7ae16"
+          },
+          {
+            "bytes": 2886,
+            "mode": "0664",
+            "path": "tests/test_source_notices.py",
+            "sha256": "b15920d936f80d1b7de1bbf086ef2f10f91be71f8599ca4b6b15d7423ae586d9"
+          },
+          {
+            "bytes": 5932,
+            "mode": "0664",
+            "path": "tests/test_state_and_plans.py",
+            "sha256": "9a53f05c9719d4438d03f678270001eee985bff984387ee1daae2bd04fd13be2"
+          },
+          {
+            "bytes": 7761,
+            "mode": "0664",
+            "path": "tests/test_stylesheet_inspection.py",
+            "sha256": "beee61e854e9a0b6b297dc0831b07fd81585d5dce5cda66205d86cbf9ada15f8"
+          },
+          {
+            "bytes": 4026,
+            "mode": "0664",
+            "path": "tests/test_task_verdict.py",
+            "sha256": "0223c0923d89e8607914dbbafff99d62860f93d71bbf016f2f6f4eeff792d8f8"
+          },
+          {
+            "bytes": 8511,
+            "mode": "0664",
+            "path": "tests/test_terminal.py",
+            "sha256": "dd603fe0022f4038f26aa2c096bc188ddd95ddc23665d6ee75bf58ca16c74b0a"
+          },
+          {
+            "bytes": 2897,
+            "mode": "0664",
+            "path": "tests/test_terminal_components.py",
+            "sha256": "333a659762a3b75ab8ea9705adcc9015fbe161c6d429d69fcdf5de170ac67edf"
+          },
+          {
+            "bytes": 1845,
+            "mode": "0664",
+            "path": "tests/test_terminal_examples.py",
+            "sha256": "d40287fb64f0826167cdc8bad7829962004507983b9b7f13cdae39c1b1182983"
+          },
+          {
+            "bytes": 3852,
+            "mode": "0664",
+            "path": "tests/test_test_boundary_admission.py",
+            "sha256": "6854e16452f37d7613eee0fef736eb929c26677228c6912db4772dc7711b1a06"
+          },
+          {
+            "bytes": 2667,
+            "mode": "0664",
+            "path": "tests/test_thinking_budget_grammar.py",
+            "sha256": "262930495377c95afa6a84837f8c079316fa739cc57534c00daa519aa219acb9"
+          },
+          {
+            "bytes": 3614,
+            "mode": "0664",
+            "path": "tests/test_thinking_defaults.py",
+            "sha256": "2c0b4994c3f9baa172bb2c724942381a8c8139d31729c837cd9dc232d23942de"
+          },
+          {
+            "bytes": 6585,
+            "mode": "0664",
+            "path": "tests/test_thinking_plan_context.py",
+            "sha256": "ee5b1e175415023d31e92110df722d9c4d57abddfe16c765d58a30410b2c5173"
+          },
+          {
+            "bytes": 8819,
+            "mode": "0664",
+            "path": "tests/test_thinking_selector.py",
+            "sha256": "6e0964e80f43f42159acd54961fa4c41b83e1d28abba36a94357935c6494bd48"
+          },
+          {
+            "bytes": 4452,
+            "mode": "0664",
+            "path": "tests/test_tool_dispatch.py",
+            "sha256": "c30e6435aeaf65f8f54d5ce6e7abca3553c03f40587954428dde6fca60042005"
+          },
+          {
+            "bytes": 3362,
+            "mode": "0664",
+            "path": "tests/test_tool_gbnf.py",
+            "sha256": "5faf3bec36e6eacc887793e8e9bacfbf97845a389b0b3f53d1fb335cb826f9c3"
+          },
+          {
+            "bytes": 13284,
+            "mode": "0664",
+            "path": "tests/test_tool_registry.py",
+            "sha256": "f710570068f38975cc4f8684029d091b7636629cbdbdc8fabd083e9a29d5e452"
+          },
+          {
+            "bytes": 4245,
+            "mode": "0664",
+            "path": "tests/test_unit_verifier_scope.py",
+            "sha256": "9a8b7b73ddded2efec9f88cfa4ef333831548b14a77b95dd196a72c29633b604"
+          },
+          {
+            "bytes": 11612,
+            "mode": "0664",
+            "path": "tests/test_viewport_cli.py",
+            "sha256": "937373492513f87cbb42de9ffb667c8dccc8a475950968f5e76acd3e80fd1a0a"
+          },
+          {
+            "bytes": 3091,
+            "mode": "0664",
+            "path": "tests/test_viewport_grammar.py",
+            "sha256": "eb25e33b0b0f30c88b62d19373d5566c78466491fd55bae0065d137737d1c4e1"
+          },
+          {
+            "bytes": 1812,
+            "mode": "0664",
+            "path": "tests/test_visible_results.py",
+            "sha256": "e5b291241d105b21a5d50ab78e208dbaa515596503e3ddb62fc44e9c65ea7cc1"
+          },
+          {
+            "bytes": 1979,
+            "mode": "0664",
+            "path": "tests/test_workflow_smoke.py",
+            "sha256": "4b0a2d886c90921272f5d49cbb952416b0e266ce134d28abc767316c7aa2d184"
+          },
+          {
+            "bytes": 2159,
+            "mode": "0664",
+            "path": "tests/test_workload_lineage.py",
+            "sha256": "cc2bb01625cb06a20c863efbc603dc885195360ddb65225161ebc2da38d75898"
+          },
+          {
+            "bytes": 1292,
+            "mode": "0664",
+            "path": "tests/test_workspace_modes.py",
+            "sha256": "c584c7715b62fd7c765918b0caecb990210462febba9f156833af18c46eaf51c"
+          }
+        ],
+        "isolation": {
+          "kind": "bubblewrap-terminal-v1",
+          "launcher_pid": 2281234,
+          "mount_ns": "mnt:[4026532775]",
+          "namespace_members_after": [],
+          "net_ns": "net:[4026532781]",
+          "pid_ns": "pid:[4026532778]",
+          "worker_exited": true
+        },
+        "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+        "scope": "model-written Bash; read-only captured readable files; no network or host home",
+        "workspace_after_sha256": "cd820671c8667f6fca324057a4da4654000e542b8213d746c3bdc17f86e69ab5"
+      }
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "answer": "I changed only branchwrite/project_scope.py. expand_directories now first validates every explicit scope (type, canonical relative path, Git exclusion, and real directory ancestry via reader._parent_directory) before normalization. It then sorts scopes by path-component depth and keeps only minimal scopes: a scope is skipped only when an already kept scope is a true component ancestor (root covers all; pkg covers pkg/sub; pkg_extra does not cover pkg). The file walk is performed once for each minimal scope, so ancestor/duplicate subtrees are not rewalked. The traversal and safety checks remain the same: no-follow fwalk, .git excluded, directory/file link/special checks, 4 MiB file, 64 MiB total, 20k entries, 64 depth, sorted exact grants.\n\nActual required command: python3 -m unittest discover -s tests -p 'test_directory*.py' -v exited 0. Stdout was empty; stderr contained the verbose unittest report and 'Ran 9 tests in 0.012s' plus 'OK'. All nine tests passed, including one fwalk call for ancestor/root overlap, two calls for sibling prefix, invalid explicit scope with root still raising, and empty scopes no walk.\n\nLimits: this avoids repeated walks only for directory-subtree overlap (ancestor/duplicate); it does not merge unrelated scopes or follow links. It still opens each explicit scope for validation, so invalid covered scopes are not hidden, but it does not add new permissions or change tests/other code. The test receipt is for the requested test_directory* selection, not the entire suite."
+      },
+      "disposition": "completion_requested",
+      "exit_code": null,
+      "stdout": "I changed only branchwrite/project_scope.py. expand_directories now first validates every explicit scope (type, canonical relative path, Git exclusion, and real directory ancestry via reader._parent_directory) before normalization. It then sorts scopes by path-component depth and keeps only minimal scopes: a scope is skipped only when an already kept scope is a true component ancestor (root covers all; pkg covers pkg/sub; pkg_extra does not cover pkg). The file walk is performed once for each minimal scope, so ancestor/duplicate subtrees are not rewalked. The traversal and safety checks remain the same: no-follow fwalk, .git excluded, directory/file link/special checks, 4 MiB file, 64 MiB total, 20k entries, 64 depth, sorted exact grants.\n\nActual required command: python3 -m unittest discover -s tests -p 'test_directory*.py' -v exited 0. Stdout was empty; stderr contained the verbose unittest report and 'Ran 9 tests in 0.012s' plus 'OK'. All nine tests passed, including one fwalk call for ancestor/root overlap, two calls for sibling prefix, invalid explicit scope with root still raising, and empty scopes no walk.\n\nLimits: this avoids repeated walks only for directory-subtree overlap (ancestor/duplicate); it does not merge unrelated scopes or follow links. It still opens each explicit scope for validation, so invalid covered scopes are not hidden, but it does not add new permissions or change tests/other code. The test receipt is for the requested test_directory* selection, not the entire suite.",
+      "stderr": "",
+      "details": {}
+    }
+  ],
+  "model_requests": [
+    {
+      "tokens": 135,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 85,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 31,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 1656,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 228,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 38,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 4880,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 41,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 51,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    },
+    {
+      "tokens": 2853,
+      "grammar_state": "g19bfe1ba8fd91e22130c252ee9e34b614932bc97996136817243a50d532bc58e_s0"
+    }
+  ],
+  "numerical_oracle": "NOT_RUN"
+}

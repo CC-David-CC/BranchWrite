@@ -1,0 +1,36 @@
+format = "bw.native-capabilities.v1"
+status = "UNBOUND"
+host_alias = "llm-60"
+# Absent fields are unbound, never silently filled from historical endpoints.
+required_bindings = ["source_revision", "service_identity", "store_identity", "model_identity", "tokenizer_identity", "build_identity", "execution_profile", "ownership", "limits", "native_wire_map"]
+
+[[capability]]
+name = "min_p"
+status = "USER_REPORTED_NOT_QUALIFIED"
+[[capability]]
+name = "dry"
+status = "USER_REPORTED_NOT_QUALIFIED"
+[[capability]]
+name = "grammar_first"
+status = "UNQUALIFIED"
+[[capability]]
+name = "branch_local_grammar_progress"
+status = "UNQUALIFIED"
+[[capability]]
+name = "complete_decoder_checkpoint"
+status = "UNQUALIFIED"
+[[capability]]
+name = "typical"
+status = "UNQUALIFIED"
+[[capability]]
+name = "dynatemp"
+status = "UNQUALIFIED"
+[[capability]]
+name = "xtc"
+status = "UNQUALIFIED"
+[[capability]]
+name = "mirostat2"
+status = "UNQUALIFIED"
+[[capability]]
+name = "adaptive_p"
+status = "UNQUALIFIED"

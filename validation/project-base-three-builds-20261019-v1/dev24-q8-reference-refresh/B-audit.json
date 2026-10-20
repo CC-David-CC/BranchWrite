@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "changed": [
+    "formatter.py",
+    "outcomes.py"
+  ],
+  "protected_tests_unchanged": true,
+  "source_unchanged": true,
+  "heldout_sequences": 800,
+  "scope": "Independent read-only OS sandbox; model never saw these checks."
+}

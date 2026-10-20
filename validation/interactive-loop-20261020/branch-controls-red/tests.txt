@@ -1,0 +1,89 @@
+test_edit_first_request_uses_its_preceding_files_and_context (tests.test_interactive_session.InteractiveSessionTests.test_edit_first_request_uses_its_preceding_files_and_context) ... ERROR
+test_explore_old_context_with_current_files_and_switch_back_without_inference (tests.test_interactive_session.InteractiveSessionTests.test_explore_old_context_with_current_files_and_switch_back_without_inference) ... ERROR
+test_switch_restores_matching_files_then_followup_uses_that_exact_tip (tests.test_interactive_session.InteractiveSessionTests.test_switch_restores_matching_files_then_followup_uses_that_exact_tip) ... ERROR
+test_invalid_control_target_rejects_before_admission (tests.test_interactive_session.InteractiveSessionTests.test_invalid_control_target_rejects_before_admission) ... FAIL
+test_branch_controls_wait_for_settled_work (tests.test_interactive_session.InteractiveSessionTests.test_branch_controls_wait_for_settled_work) ... FAIL
+test_switch_conflict_preserves_user_edit_and_original_control_id (tests.test_interactive_session.InteractiveSessionTests.test_switch_conflict_preserves_user_edit_and_original_control_id) ... ERROR
+test_lost_alternative_publication_reply_recovers_without_model_rerun (tests.test_interactive_session.InteractiveSessionTests.test_lost_alternative_publication_reply_recovers_without_model_rerun) ... ERROR
+
+======================================================================
+ERROR: test_edit_first_request_uses_its_preceding_files_and_context (tests.test_interactive_session.InteractiveSessionTests.test_edit_first_request_uses_its_preceding_files_and_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 150, in test_edit_first_request_uses_its_preceding_files_and_context
+    self.service.submit('1 Make green instead',mode='edit',kind='queue');self.finished(3)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/interactive_session.py", line 57, in submit
+    raise ValueError('This control is still being connected; your request was not sent')
+ValueError: This control is still being connected; your request was not sent
+
+======================================================================
+ERROR: test_explore_old_context_with_current_files_and_switch_back_without_inference (tests.test_interactive_session.InteractiveSessionTests.test_explore_old_context_with_current_files_and_switch_back_without_inference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 164, in test_explore_old_context_with_current_files_and_switch_back_without_inference
+    self.service.submit('1 Try green independently',mode='explore',kind='queue');self.finished(3)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/interactive_session.py", line 57, in submit
+    raise ValueError('This control is still being connected; your request was not sent')
+ValueError: This control is still being connected; your request was not sent
+
+======================================================================
+ERROR: test_switch_restores_matching_files_then_followup_uses_that_exact_tip (tests.test_interactive_session.InteractiveSessionTests.test_switch_restores_matching_files_then_followup_uses_that_exact_tip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 183, in test_switch_restores_matching_files_then_followup_uses_that_exact_tip
+    self.service.submit('1',mode='select',kind='queue');self.finished(3)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/interactive_session.py", line 57, in submit
+    raise ValueError('This control is still being connected; your request was not sent')
+ValueError: This control is still being connected; your request was not sent
+
+======================================================================
+ERROR: test_switch_conflict_preserves_user_edit_and_original_control_id (tests.test_interactive_session.InteractiveSessionTests.test_switch_conflict_preserves_user_edit_and_original_control_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 213, in test_switch_conflict_preserves_user_edit_and_original_control_id
+    self.service.submit('1',mode='select',kind='queue')
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/interactive_session.py", line 57, in submit
+    raise ValueError('This control is still being connected; your request was not sent')
+ValueError: This control is still being connected; your request was not sent
+
+======================================================================
+ERROR: test_lost_alternative_publication_reply_recovers_without_model_rerun (tests.test_interactive_session.InteractiveSessionTests.test_lost_alternative_publication_reply_recovers_without_model_rerun)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 234, in test_lost_alternative_publication_reply_recovers_without_model_rerun
+    self.service.submit('last Try green',mode='explore',kind='queue')
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/interactive_session.py", line 57, in submit
+    raise ValueError('This control is still being connected; your request was not sent')
+ValueError: This control is still being connected; your request was not sent
+
+======================================================================
+FAIL: test_invalid_control_target_rejects_before_admission (tests.test_interactive_session.InteractiveSessionTests.test_invalid_control_target_rejects_before_admission)
+----------------------------------------------------------------------
+ValueError: This control is still being connected; your request was not sent
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 193, in test_invalid_control_target_rejects_before_admission
+    with self.assertRaisesRegex(ValueError,'saved turn'):
+AssertionError: "saved turn" does not match "This control is still being connected; your request was not sent"
+
+======================================================================
+FAIL: test_branch_controls_wait_for_settled_work (tests.test_interactive_session.InteractiveSessionTests.test_branch_controls_wait_for_settled_work)
+----------------------------------------------------------------------
+ValueError: This control is still being connected; your request was not sent
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_session.py", line 202, in test_branch_controls_wait_for_settled_work
+    with self.assertRaisesRegex(ValueError,'Stop|settle'):
+AssertionError: "Stop|settle" does not match "This control is still being connected; your request was not sent"
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.688s
+
+FAILED (failures=2, errors=5)

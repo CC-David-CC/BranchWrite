@@ -1,0 +1,51 @@
+test_model_breakdown_has_source_provenance_and_reopens_offline (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_breakdown_has_source_provenance_and_reopens_offline) ... ERROR
+test_model_cannot_turn_a_breakdown_into_grants_or_verified_success (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_cannot_turn_a_breakdown_into_grants_or_verified_success) ... ERROR
+
+======================================================================
+ERROR: test_model_breakdown_has_source_provenance_and_reopens_offline (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_breakdown_has_source_provenance_and_reopens_offline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown_flow.py", line 38, in test_model_breakdown_has_source_provenance_and_reopens_offline
+    result=self.execute_plan(text);value=result['bindings']['breakdown'][1]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown_flow.py", line 32, in execute_plan
+    runtime.start(PROGRAM,dict(current=Value('COWSource',dict(head=dataclasses.asdict(self.head),mode='ask')),goal=Value('Text','Repair the project using smaller evidence-based steps.')))
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 184, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 123, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 172, in preflight
+    check(program[0].body)
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 149, in check
+    if a['contract'] not in _TRANSFORMS:raise AdmissionError('unsupported transform contract')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: unsupported transform contract
+
+======================================================================
+ERROR: test_model_cannot_turn_a_breakdown_into_grants_or_verified_success (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_cannot_turn_a_breakdown_into_grants_or_verified_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown_flow.py", line 46, in test_model_cannot_turn_a_breakdown_into_grants_or_verified_success
+    result=self.execute_plan(text);value=result['bindings']['breakdown'][1];self.assertFalse(value['valid']);self.assertIsNone(value['plan']);self.assertTrue(value['reason']);self.assertFalse(self.registry._grant.allow_shell)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown_flow.py", line 32, in execute_plan
+    runtime.start(PROGRAM,dict(current=Value('COWSource',dict(head=dataclasses.asdict(self.head),mode='ask')),goal=Value('Text','Repair the project using smaller evidence-based steps.')))
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 184, in start
+    root=self._check_program(source,frozen);canonical=render((root,))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 123, in _check_program
+    return self.preflight(source,{name:value.type for name,value in bindings.items()})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 172, in preflight
+    check(program[0].body)
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 149, in check
+    if a['contract'] not in _TRANSFORMS:raise AdmissionError('unsupported transform contract')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: unsupported transform contract
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.123s
+
+FAILED (errors=2)

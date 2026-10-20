@@ -1,0 +1,16 @@
+[
+  {
+    "source": "/home/dflanag3/spatial-artifacts/bw-stop-resume-live-20261020.tar.gz",
+    "destination": "box-git:/srv/data/git/private_context_cow.evidence/branchwrite-interactive-20261020/bw-stop-resume-live-20261020.tar.gz",
+    "bytes": 11022043,
+    "sha256": "441e4104dbca195e0e5d36cc2c12b640ab61d4ca86b7d3e52b32edee074164a6",
+    "remote_verified": true
+  },
+  {
+    "source": "/home/dflanag3/spatial-artifacts/branchwrite-dev44-preview-20261020/branchwrite-dev44-preview-20261020.tar.gz",
+    "destination": "box-git:/srv/data/git/private_context_cow.evidence/branchwrite-interactive-20261020/branchwrite-dev44-preview-20261020.tar.gz",
+    "bytes": 512042,
+    "sha256": "469762b4db10cb4bab948db27767ae1ef9d728708aa73f249c9cd0ba998e52d6",
+    "remote_verified": true
+  }
+]

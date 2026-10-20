@@ -1,0 +1,11 @@
+{
+  "status": "CPU_HTTP_PASS_GPU_UNRUN",
+  "new_methods": 8,
+  "focused_and_existing_pack_tests": 63,
+  "additional_cli_regressions": 46,
+  "g0": 51,
+  "failures": 0,
+  "skips": 0,
+  "initial_red": "Seven newly added methods failed before implementation; nine errors including subtests.",
+  "scope": "Explicit new-run pack refresh, immutable old packs, pinned source identity, actual subprocess CLI and COW HTTP fixture. CPU models do not qualify GPU numerical correctness."
+}

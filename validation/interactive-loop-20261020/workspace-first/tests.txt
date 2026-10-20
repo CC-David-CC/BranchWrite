@@ -1,0 +1,29 @@
+test_checkpoint_preserves_user_git_index_head_and_dirty_files (tests.test_workspace_versions.WorkspaceVersionsTests.test_checkpoint_preserves_user_git_index_head_and_dirty_files) ... ok
+test_conflicting_preimage_fails_before_first_write (tests.test_workspace_versions.WorkspaceVersionsTests.test_conflicting_preimage_fails_before_first_write) ... ok
+test_crash_after_one_file_recovers_same_intent (tests.test_workspace_versions.WorkspaceVersionsTests.test_crash_after_one_file_recovers_same_intent) ... ok
+test_crash_recovery_does_not_overwrite_intervening_edit (tests.test_workspace_versions.WorkspaceVersionsTests.test_crash_recovery_does_not_overwrite_intervening_edit) ... ok
+test_guarded_publication_keeps_unrelated_user_edits_and_is_idempotent (tests.test_workspace_versions.WorkspaceVersionsTests.test_guarded_publication_keeps_unrelated_user_edits_and_is_idempotent) ... ok
+test_old_context_with_new_files_uses_isolated_worktree (tests.test_workspace_versions.WorkspaceVersionsTests.test_old_context_with_new_files_uses_isolated_worktree) ... ok
+test_restore_removes_only_files_owned_by_the_checkpoint_delta (tests.test_workspace_versions.WorkspaceVersionsTests.test_restore_removes_only_files_owned_by_the_checkpoint_delta) ... ok
+test_symlink_cannot_redirect_capture_or_publication (tests.test_workspace_versions.WorkspaceVersionsTests.test_symlink_cannot_redirect_capture_or_publication) ... ERROR
+test_version_names_cannot_escape_or_rebind_a_checkpoint (tests.test_workspace_versions.WorkspaceVersionsTests.test_version_names_cannot_escape_or_rebind_a_checkpoint) ... ok
+
+======================================================================
+ERROR: test_symlink_cannot_redirect_capture_or_publication (tests.test_workspace_versions.WorkspaceVersionsTests.test_symlink_cannot_redirect_capture_or_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 99, in test_symlink_cannot_redirect_capture_or_publication
+    with self.assertRaises((ValueError,RuntimeError)):self.versions.publish("redirect",old,new)
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/workspace_versions.py", line 247, in publish
+    current = self._entry(reader, item)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/workspace_versions.py", line 141, in _entry
+    fd = os.open(leaf, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=parent)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 40] Too many levels of symbolic links: 'a.txt'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.348s
+
+FAILED (errors=1)

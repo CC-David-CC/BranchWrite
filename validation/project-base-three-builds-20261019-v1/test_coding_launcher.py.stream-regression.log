@@ -1,0 +1,18 @@
+test_code_and_resume_are_public_commands (test_coding_launcher.CodingLauncherCommandTests.test_code_and_resume_are_public_commands) ... ok
+test_invalid_budget_fails_before_transport_or_state_creation (test_coding_launcher.CodingLauncherCommandTests.test_invalid_budget_fails_before_transport_or_state_creation) ... ok
+test_invalid_connection_does_not_create_a_run (test_coding_launcher.CodingLauncherCommandTests.test_invalid_connection_does_not_create_a_run) ... ok
+test_tampered_resume_does_not_create_a_world (test_coding_launcher.CodingLauncherCommandTests.test_tampered_resume_does_not_create_a_world) ... ok
+test_connection_cannot_contain_credentials_or_unknown_fields (test_coding_launcher.CodingLauncherTests.test_connection_cannot_contain_credentials_or_unknown_fields) ... ok
+test_fresh_launch_uses_existing_workflow_and_explicit_grants (test_coding_launcher.CodingLauncherTests.test_fresh_launch_uses_existing_workflow_and_explicit_grants) ... ok
+test_interrupted_stage_cleanup_cannot_strand_a_published_manifest (test_coding_launcher.CodingLauncherTests.test_interrupted_stage_cleanup_cannot_strand_a_published_manifest) ... ok
+test_manifest_reopens_exactly_and_cannot_be_replaced (test_coding_launcher.CodingLauncherTests.test_manifest_reopens_exactly_and_cannot_be_replaced) ... ok
+test_retained_launch_does_not_bootstrap_or_rebase (test_coding_launcher.CodingLauncherTests.test_retained_launch_does_not_bootstrap_or_rebase) ... ok
+test_state_cannot_be_inside_source_or_a_symlink (test_coding_launcher.CodingLauncherTests.test_state_cannot_be_inside_source_or_a_symlink) ... ok
+test_tampered_manifest_rejected (test_coding_launcher.CodingLauncherTests.test_tampered_manifest_rejected) ... ok
+test_uncertain_fork_reports_original_id_and_never_starts_interpreter (test_coding_launcher.CodingLauncherTests.test_uncertain_fork_reports_original_id_and_never_starts_interpreter) ... ok
+test_unresolved_fork_cannot_be_published (test_coding_launcher.CodingLauncherTests.test_unresolved_fork_cannot_be_published) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.477s
+
+OK

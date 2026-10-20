@@ -1,0 +1,28 @@
+test_automatic_host_selection_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_automatic_host_selection_uses_existing_fork_and_ask_api) ... ok
+test_prepare_base_cli_publishes_catalog_and_retries_without_prefill (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_cli_publishes_catalog_and_retries_without_prefill) ... ok
+test_prepare_base_recovers_context_ack_loss_without_prefix_recompute (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_recovers_context_ack_loss_without_prefix_recompute) ... ok
+test_prepare_base_recovers_namespace_ack_loss_in_new_process (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_recovers_namespace_ack_loss_in_new_process) ... FAIL
+test_prepare_base_unknown_context_is_not_replayed (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_unknown_context_is_not_replayed) ... ok
+test_proposed_base_source_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_proposed_base_source_uses_existing_fork_and_ask_api) ... ok
+
+======================================================================
+FAIL: test_prepare_base_recovers_namespace_ack_loss_in_new_process (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_recovers_namespace_ack_loss_in_new_process)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-pack-catalog-20261019-v1/source/tests/test_base_choice_http.py", line 11, in test_prepare_base_recovers_namespace_ack_loss_in_new_process
+    self.exercise('cli-namespace-loss')
+  File "/home/dflanag3/spatial-artifacts/branchwrite-pack-catalog-20261019-v1/source/tests/test_base_choice_http.py", line 80, in exercise
+    self.assertEqual(reconciled.returncode,0,reconciled.stderr);self.assertEqual(models[0].backend.stats,after_fault)
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'forward_tokens': 758, 'consumed_tokens': 758, 'loaded_file_bytes': 2667} != {'forward_tokens': 0, 'consumed_tokens': 0, 'loaded_file_bytes': 0}
+- {'consumed_tokens': 758, 'forward_tokens': 758, 'loaded_file_bytes': 2667}
+?                     ^^^                    ^^^                       ^^^^
+
++ {'consumed_tokens': 0, 'forward_tokens': 0, 'loaded_file_bytes': 0}
+?                     ^                    ^                       ^
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 7.366s
+
+FAILED (failures=1)

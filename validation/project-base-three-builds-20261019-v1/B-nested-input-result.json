@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "scope": "Targeted malformed-JSON recursion review, read-only OS sandbox",
+  "depths": 1100,
+  "input_variants": 2200
+}

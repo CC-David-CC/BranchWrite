@@ -1,0 +1,301 @@
+{
+  "status": "PASS",
+  "ledger_unchanged": true,
+  "model_calls": 6,
+  "output_tokens": 2373,
+  "whole_cli_seconds": 155.46576114790514,
+  "installed_modules": [
+    {
+      "name": "branchwrite",
+      "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+    },
+    {
+      "name": "branchwrite.language",
+      "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+    },
+    {
+      "name": "branchwrite.records",
+      "sha256": "600d0093a8c1768be967e627627a40c244233c118d39fcd24979a76e55b2f677"
+    },
+    {
+      "name": "branchwrite.kernel",
+      "sha256": "106a3a564e0ee5bb190e7a6c3c246336e4c4b91a93df906110e930c02b6a8521"
+    },
+    {
+      "name": "branchwrite.execution",
+      "sha256": "3420e5685b4f71baf687b584b802cdaa1f958199b88f39f1912bca370a9d4836"
+    },
+    {
+      "name": "branchwrite.text_file_codec",
+      "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+    },
+    {
+      "name": "branchwrite.tool_registry",
+      "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+    },
+    {
+      "name": "branchwrite.tool_dispatch",
+      "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+    },
+    {
+      "name": "branchwrite.cow_client",
+      "sha256": "4ae860ed042d5039747a081d8ca2a7ca7161d299c26ca1d1dcea12c6f46a0ced"
+    },
+    {
+      "name": "branchwrite.cow_actions",
+      "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+    },
+    {
+      "name": "branchwrite.model_inputs",
+      "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+    },
+    {
+      "name": "branchwrite.thinking_ladder",
+      "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+    },
+    {
+      "name": "branchwrite.model_dispatch",
+      "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+    },
+    {
+      "name": "branchwrite.cow_fork",
+      "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+    },
+    {
+      "name": "branchwrite.planning_retry",
+      "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+    },
+    {
+      "name": "branchwrite.verification",
+      "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+    },
+    {
+      "name": "branchwrite.image_feedback",
+      "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+    },
+    {
+      "name": "branchwrite.interpreter",
+      "sha256": "b405d38f50309c6fff2a13fa320b4a26be6d4d274e4271ed546992af7685c799"
+    },
+    {
+      "name": "branchwrite.coding_defaults",
+      "sha256": "6e3663b17ae9dbd8b26f8491a01c5453926fa6b3ecc8cbffb9530a00f2e0fe8e"
+    },
+    {
+      "name": "branchwrite.run_cli",
+      "sha256": "19c26289a922d0c01eef46b866a4ef5dd31575df785e65fa388d06117a8d8b12"
+    },
+    {
+      "name": "branchwrite.coding_cli",
+      "sha256": "85e24915bf23c3bfbb59bb56c10f451d360d0024aa60ed1c3104564484a7bded"
+    },
+    {
+      "name": "branchwrite.__main__",
+      "sha256": "f9386bb185f9159a7ea6511e1e13eeb9cb7a8efcd99781123a44f650907eb369"
+    },
+    {
+      "name": "branchwrite.project_scope",
+      "sha256": "8977522dd1d76e73721b47a48688abc7517e4998338068613b554c2062e9c64a"
+    },
+    {
+      "name": "branchwrite.terminal",
+      "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+    },
+    {
+      "name": "branchwrite.browser_assets",
+      "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+    },
+    {
+      "name": "branchwrite.command_outputs",
+      "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+    },
+    {
+      "name": "branchwrite.browser_isolation",
+      "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+    },
+    {
+      "name": "branchwrite.terminal_worker",
+      "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+    },
+    {
+      "name": "branchwrite.project_baseline",
+      "sha256": "72da8ff7ace695a809a0cf341f8b86d85e2166e8acb9dc08a5bf153ae44c4621"
+    }
+  ],
+  "wheel_sha256": "7ae92fbdd57220ae2007fa0bed86e06f6c998f8a5ff81d0d91b799840a357ec6",
+  "tools": [
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "dependencies.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "def build_order(graph):\n    return sorted(graph)\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "tests/test_dependencies.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "import unittest\nfrom dependencies import build_order\nclass OrderTests(unittest.TestCase):\n def test_empty(self): self.assertEqual(build_order({}),[])\n def test_chain(self): self.assertEqual(build_order({'app':['lib'],'lib':['base'],'base':[]}),['base','lib','app'])\n def test_ready_tie(self): self.assertEqual(build_order({'z':[],'b':['a'],'a':[]}),['a','b','z'])\n def test_dependency_only(self): self.assertEqual(build_order({'app':['lib']}),['lib','app'])\n def test_duplicates(self): self.assertEqual(build_order({'b':['a','a'],'a':[]}),['a','b'])\n def test_cycle(self):\n  with self.assertRaises(ValueError): build_order({'a':['b'],'b':['a']})\n def test_self_cycle(self):\n  with self.assertRaises(ValueError): build_order({'a':['a']})\n def test_no_mutation(self):\n  g={'b':['a','a'],'a':[]};build_order(g);self.assertEqual(g,{'b':['a','a'],'a':[]})\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "replace_text_file",
+      "arguments": {
+        "final_newline": true,
+        "line_ending": "LF",
+        "lines": [
+          "import heapq",
+          "",
+          "def build_order(graph):",
+          "    nodes = set(graph)",
+          "    for dependencies in graph.values():",
+          "        nodes.update(dependencies)",
+          "",
+          "    indegree = {node: 0 for node in nodes}",
+          "    dependents = {node: set() for node in nodes}",
+          "",
+          "    for task, dependencies in graph.items():",
+          "        unique_dependencies = set(dependencies)",
+          "        indegree[task] = len(unique_dependencies)",
+          "        for dependency in unique_dependencies:",
+          "            dependents[dependency].add(task)",
+          "",
+          "    ready = [node for node, degree in indegree.items() if degree == 0]",
+          "    heapq.heapify(ready)",
+          "",
+          "    order = []",
+          "    while ready:",
+          "        node = heapq.heappop(ready)",
+          "        order.append(node)",
+          "        for dependent in dependents[node]:",
+          "            indegree[dependent] -= 1",
+          "            if indegree[dependent] == 0:",
+          "                heapq.heappush(ready, dependent)",
+          "",
+          "    if len(order) != len(nodes):",
+          "        raise ValueError(\"cycle detected\")",
+          "",
+          "    return order"
+        ],
+        "path": "dependencies.py",
+        "source_sha256": "f776a67d636527dc3115d6c20bdcce8fe99636ce25238e85781db9cb933937cb"
+      },
+      "disposition": "applied",
+      "exit_code": 0,
+      "stdout": "replacement applied\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "dependencies.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "import heapq\n\ndef build_order(graph):\n    nodes = set(graph)\n    for dependencies in graph.values():\n        nodes.update(dependencies)\n\n    indegree = {node: 0 for node in nodes}\n    dependents = {node: set() for node in nodes}\n\n    for task, dependencies in graph.items():\n        unique_dependencies = set(dependencies)\n        indegree[task] = len(unique_dependencies)\n        for dependency in unique_dependencies:\n            dependents[dependency].add(task)\n\n    ready = [node for node, degree in indegree.items() if degree == 0]\n    heapq.heapify(ready)\n\n    order = []\n    while ready:\n        node = heapq.heappop(ready)\n        order.append(node)\n        for dependent in dependents[node]:\n            indegree[dependent] -= 1\n            if indegree[dependent] == 0:\n                heapq.heappush(ready, dependent)\n\n    if len(order) != len(nodes):\n        raise ValueError(\"cycle detected\")\n\n    return order\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "run_shell",
+      "arguments": {
+        "command": "python3 -m unittest discover -s tests -v"
+      },
+      "disposition": "exited",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_chain (test_dependencies.OrderTests.test_chain) ... ok\ntest_cycle (test_dependencies.OrderTests.test_cycle) ... ok\ntest_dependency_only (test_dependencies.OrderTests.test_dependency_only) ... ok\ntest_duplicates (test_dependencies.OrderTests.test_duplicates) ... ok\ntest_empty (test_dependencies.OrderTests.test_empty) ... ok\ntest_no_mutation (test_dependencies.OrderTests.test_no_mutation) ... ok\ntest_ready_tie (test_dependencies.OrderTests.test_ready_tie) ... ok\ntest_self_cycle (test_dependencies.OrderTests.test_self_cycle) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.000s\n\nOK\n",
+      "details": {
+        "argv": [
+          "/usr/bin/bash",
+          "--noprofile",
+          "--norc",
+          "-c",
+          "python3 -m unittest discover -s tests -v"
+        ],
+        "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+        "command": "shell",
+        "cwd": "/home/dflanag3/spatial-artifacts/branchwrite-SC19-dependency-repair-dev18-20261019-v1/state/world/workspace",
+        "execution_host": {
+          "euid": 1000,
+          "gid": 1000,
+          "hostname": "r4090",
+          "uid": 1000
+        },
+        "inputs": [
+          {
+            "bytes": 923,
+            "mode": "0664",
+            "path": "dependencies.py",
+            "sha256": "a77f2b3de67a6d82ba3ee9ecbcf432017c51d4006c0e74ee6bbdba3146001d4b"
+          },
+          {
+            "bytes": 851,
+            "mode": "0664",
+            "path": "tests/test_dependencies.py",
+            "sha256": "5caa34f71d4e5841b35948e157c3463bd0751f73e7cec902854465db65db5e02"
+          }
+        ],
+        "isolation": {
+          "kind": "bubblewrap-terminal-v1",
+          "launcher_pid": 2302132,
+          "mount_ns": "mnt:[4026532775]",
+          "namespace_members_after": [],
+          "net_ns": "net:[4026532781]",
+          "pid_ns": "pid:[4026532778]",
+          "worker_exited": true
+        },
+        "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+        "scope": "model-written Bash; read-only captured readable files; no network or host home",
+        "workspace_after_sha256": "500fcdaba980169026d53244fee972be27227282cf68ae817a81dd641b49fdb9"
+      }
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "answer": "Repaired `dependencies.py` so `build_order(graph)` performs a deterministic Kahn topological sort: it includes dependency-only names, counts duplicate dependencies once, selects the lexicographically smallest currently ready name, returns `[]` for empty input, raises `ValueError` for cycles including self-cycles, and does not mutate the input graph.\n\nRequired command observed:\n- Command: `python3 -m unittest discover -s tests -v`\n- Disposition: `exited`\n- Exit status: `0`\n- Stdout: empty\n- Stderr: all 8 tests passed, ending with `OK`."
+      },
+      "disposition": "completion_requested",
+      "exit_code": null,
+      "stdout": "Repaired `dependencies.py` so `build_order(graph)` performs a deterministic Kahn topological sort: it includes dependency-only names, counts duplicate dependencies once, selects the lexicographically smallest currently ready name, returns `[]` for empty input, raises `ValueError` for cycles including self-cycles, and does not mutate the input graph.\n\nRequired command observed:\n- Command: `python3 -m unittest discover -s tests -v`\n- Disposition: `exited`\n- Exit status: `0`\n- Stdout: empty\n- Stderr: all 8 tests passed, ending with `OK`.",
+      "stderr": "",
+      "details": {}
+    }
+  ],
+  "model_requests": [
+    {
+      "tokens": 882,
+      "grammar_state": "g65f21032680171a1fce5f94037487cf2cccfdaa05228f8bbda8eb349e6c8d61d_s0"
+    },
+    {
+      "tokens": 26,
+      "grammar_state": "g65f21032680171a1fce5f94037487cf2cccfdaa05228f8bbda8eb349e6c8d61d_s0"
+    },
+    {
+      "tokens": 1178,
+      "grammar_state": "g65f21032680171a1fce5f94037487cf2cccfdaa05228f8bbda8eb349e6c8d61d_s0"
+    },
+    {
+      "tokens": 50,
+      "grammar_state": "g65f21032680171a1fce5f94037487cf2cccfdaa05228f8bbda8eb349e6c8d61d_s0"
+    },
+    {
+      "tokens": 34,
+      "grammar_state": "g65f21032680171a1fce5f94037487cf2cccfdaa05228f8bbda8eb349e6c8d61d_s0"
+    },
+    {
+      "tokens": 203,
+      "grammar_state": "g65f21032680171a1fce5f94037487cf2cccfdaa05228f8bbda8eb349e6c8d61d_s0"
+    }
+  ],
+  "numerical_oracle": "NOT_RUN"
+}

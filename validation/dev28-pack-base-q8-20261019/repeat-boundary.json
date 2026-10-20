@@ -1,0 +1,10 @@
+{
+  "base_id": "4508b8b5008820fa677a060462abe1dc53c9daae7a8ebdaaf5c24114718a1ece",
+  "canonical_input_cells": 13068,
+  "catalog": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/base-state/base-catalog.json",
+  "context_operation": "bw-base-context-a14cefd2a21a9c231d9b7b8438919a5a2d11a8d8",
+  "operation_id": "dev28-reference-prepare",
+  "scope": "Prepared reference root; no generated answer or residency guarantee",
+  "snapshot": "2c51e8225b8acb7455f9f346788e04b3e2e7106de2c0dc3b15dc0ec5408a5c07",
+  "status": "PREPARED"
+}

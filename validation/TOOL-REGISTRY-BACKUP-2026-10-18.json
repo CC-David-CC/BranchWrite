@@ -1,0 +1,9 @@
+{
+  "status": "RECEIVER_VERIFIED",
+  "path": "/srv/data/git/private_context_cow.evidence/20261018-bw-tool-registry-v1/evidence.tar.gz",
+  "bytes": 63407,
+  "sha256": "c71acfe790c79e27349c37f38eed605d19b0a9f71b9c862ac2b5b6a9e8ad43b7",
+  "members": 87,
+  "manifest_sha256": "f3eb1c19224bba6f39c88bb7206abd229f783b8207b93a3ecf340d751435992a",
+  "extracted_files": 0
+}

@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "bash_blocks": 29,
+  "checks": [
+    {
+      "id": "01_SERVER_SETUP.md-bash-0",
+      "status": "PASS"
+    },
+    {
+      "id": "01_SERVER_SETUP.md-bash-1",
+      "status": "PASS"
+    },
+    {
+      "id": "01_SERVER_SETUP.md-bash-2",
+      "status": "PASS"
+    },
+    {
+      "id": "01_SERVER_SETUP.md-bash-3",
+      "status": "PASS"
+    },
+    {
+      "id": "01_SERVER_SETUP.md-bash-4",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-0",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-1",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-2",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-3",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-4",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-5",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-6",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-7",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-8",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-9",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-10",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-11",
+      "status": "PASS"
+    },
+    {
+      "id": "02_BRANCHWRITE_SETUP.md-bash-12",
+      "status": "PASS"
+    },
+    {
+      "id": "03_NATIVE_RUNTIME.md-bash-0",
+      "status": "PASS"
+    },
+    {
+      "id": "03_NATIVE_RUNTIME.md-bash-1",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-0",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-1",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-2",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-3",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-4",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-5",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-6",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-7",
+      "status": "PASS"
+    },
+    {
+      "id": "04_HTML_WORKFLOW.md-bash-8",
+      "status": "PASS"
+    }
+  ],
+  "relative_links": "PASS",
+  "installed_cli_flags": "PASS"
+}

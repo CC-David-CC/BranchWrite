@@ -1,0 +1,8 @@
+{
+  "status": "RECEIVER_VERIFIED_EVERY_MEMBER",
+  "archive": "/srv/data/git/private_context_cow.evidence/20261018-bw-autonomous-core-v1/evidence.tar.gz",
+  "bytes": 2543069,
+  "sha256": "a76353b163703a14d859106572c94ccb608c1374ffdab394855d8887e59ed7cd",
+  "manifest_sha256": "638e10e46927d5b41df9139cf196c394b47125b55a3636729aa3f9b5f63591a5",
+  "members": 956
+}

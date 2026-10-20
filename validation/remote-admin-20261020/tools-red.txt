@@ -1,0 +1,70 @@
+======================================================================
+ERROR: test_frozen_remote_plan_binds_registry_target_and_exact_command (tests.test_remote_tools.RemoteToolTests.test_frozen_remote_plan_binds_registry_target_and_exact_command)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 29, in test_frozen_remote_plan_binds_registry_target_and_exact_command
+    registry=self.registry();command="printf '%s\\n' '$HOME caf\u00e9'"
+             ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 15, in registry
+    def registry(self):return ToolRegistry(self.executor,Grant((),False,remote_targets=('admin01',)),remote_targets=(self.target,))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'remote_targets'
+
+======================================================================
+ERROR: test_missing_granted_target_fails_before_inference_or_execution (tests.test_remote_tools.RemoteToolTests.test_missing_granted_target_fails_before_inference_or_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 21, in test_missing_granted_target_fails_before_inference_or_execution
+    with self.assertRaises(ToolRejected):ToolRegistry(self.executor,Grant((),False,remote_targets=('admin01',)))
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'remote_targets'
+
+======================================================================
+ERROR: test_one_definition_table_exposes_target_alias_but_no_credentials (tests.test_remote_tools.RemoteToolTests.test_one_definition_table_exposes_target_alias_but_no_credentials)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 23, in test_one_definition_table_exposes_target_alias_but_no_credentials
+    registry=self.registry();schema=json.dumps(registry.model_schema());grammar=registry.model_gbnf()
+             ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 15, in registry
+    def registry(self):return ToolRegistry(self.executor,Grant((),False,remote_targets=('admin01',)),remote_targets=(self.target,))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'remote_targets'
+
+======================================================================
+ERROR: test_reconciliation_does_not_dispatch_an_unknown_effect (tests.test_remote_tools.RemoteToolTests.test_reconciliation_does_not_dispatch_an_unknown_effect)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 40, in test_reconciliation_does_not_dispatch_an_unknown_effect
+    registry=self.registry();plan=registry.freeze(json.dumps(dict(tool='remote_command',arguments=dict(target='admin01',command='true'))))
+             ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 15, in registry
+    def registry(self):return ToolRegistry(self.executor,Grant((),False,remote_targets=('admin01',)),remote_targets=(self.target,))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'remote_targets'
+
+======================================================================
+ERROR: test_remote_configuration_does_not_implicitly_grant_authority (tests.test_remote_tools.RemoteToolTests.test_remote_configuration_does_not_implicitly_grant_authority)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 17, in test_remote_configuration_does_not_implicitly_grant_authority
+    registry=ToolRegistry(self.executor,Grant((),False),remote_targets=(self.target,))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ToolRegistry.__init__() got an unexpected keyword argument 'remote_targets'
+
+======================================================================
+ERROR: test_ungranted_target_bad_type_and_oversize_command_are_rejected (tests.test_remote_tools.RemoteToolTests.test_ungranted_target_bad_type_and_oversize_command_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 35, in test_ungranted_target_bad_type_and_oversize_command_are_rejected
+    registry=self.registry()
+             ^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 15, in registry
+    def registry(self):return ToolRegistry(self.executor,Grant((),False,remote_targets=('admin01',)),remote_targets=(self.target,))
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'remote_targets'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+FAILED (errors=6)

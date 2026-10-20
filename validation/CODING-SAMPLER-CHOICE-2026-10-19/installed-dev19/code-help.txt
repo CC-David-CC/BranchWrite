@@ -1,0 +1,38 @@
+usage: branchwrite code [-h] --connection CONNECTION --state STATE
+                        (--task-file TASK_FILE | --task TASK) --branch BRANCH
+                        [--sampler {greedy,min-p,dry-min-p}] [--read READ]
+                        [--edit EDIT] [--create CREATE] [--read-dir READ_DIR]
+                        [--edit-dir EDIT_DIR] [--test-command TEST_COMMAND]
+                        [--from-branch FROM_BRANCH |
+                        --from-prefix FROM_PREFIX]
+                        [--from-snapshot FROM_SNAPSHOT]
+                        [--shell-timeout SHELL_TIMEOUT]
+                        [--max-steps MAX_STEPS]
+                        project
+
+positional arguments:
+  project
+
+options:
+  -h, --help            show this help message and exit
+  --connection CONNECTION
+  --state STATE
+  --task-file TASK_FILE
+  --task TASK           Inline task text; never executed.
+  --branch BRANCH
+  --sampler {greedy,min-p,dry-min-p}
+                        Sampler preset for a new run; resume keeps its saved
+                        settings.
+  --read READ
+  --edit EDIT
+  --create CREATE
+  --read-dir READ_DIR
+  --edit-dir EDIT_DIR
+  --test-command TEST_COMMAND
+  --from-branch FROM_BRANCH
+                        Fork a completed conversation tip.
+  --from-prefix FROM_PREFIX
+                        Ask from a retained idle context root.
+  --from-snapshot FROM_SNAPSHOT
+  --shell-timeout SHELL_TIMEOUT
+  --max-steps MAX_STEPS

@@ -1,0 +1,4 @@
+4c89145e958cf592a6f16552eadf112ef2c1c525e2435c2761e6a99fa88188b3  /mnt/bw-install/boot/efi/EFI/BOOT/BOOTX64.EFI
+724bcb973cc52e6359096d69d793a180bc7be41856c8e20a2e87f284b33f05a6  /mnt/bw-install/boot/efi/EFI/BOOT/BOOTX64.EFI
+Installing for x86_64-efi platform.
+Installation finished. No error reported.

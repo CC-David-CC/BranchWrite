@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "goal": "Model modifies a parameterized mechanical part using numerical and actual visual evidence, and exports geometry meeting fixed requirements",
+  "stages": [
+    {
+      "id": "CAD00",
+      "scope": "geometry/checker/render foundations",
+      "status": "IMPLEMENTED_BOUNDARIES_NOT_INTEGRATED"
+    },
+    {
+      "id": "CAD01",
+      "scope": "bounded candidate execution and independent checker/render workers",
+      "status": "BOUNDED_SEPARATE_WORKERS_PASS"
+    },
+    {
+      "id": "CAD02",
+      "scope": "typed tools, provenance, stale evidence rejection and ledger integration",
+      "status": "CLI_AND_LEDGER_IMPLEMENTED_FOCUSED_TESTS_PASS"
+    },
+    {
+      "id": "CAD03",
+      "scope": "actual view upload and image-aware model feedback through COW",
+      "status": "REAL_Q4_MODEL_AUTHORED_SELF_REPAIRED_PASS_THREE_BUILD_ATTEMPTS"
+    },
+    {
+      "id": "CAD04",
+      "scope": "Q4 authors plate Python and repairs against fixed requirements",
+      "status": "GEOMETRY_FIXTURE_PASS_MODEL_REVISION_NOT_RUN"
+    },
+    {
+      "id": "CAD05",
+      "scope": "110mm modification preserves mounting pattern and follows positive-X edge",
+      "status": "NOT_RUN_WITH_MODEL"
+    },
+    {
+      "id": "CAD06",
+      "scope": "90mm contradiction reported without silently changing requirements",
+      "status": "BOUNDED_WORKER_PATH_LINK_TIMEOUT_PROCESS_AND_STALE_CASES_PASS_BROADER_CAMPAIGN_NOT_RUN"
+    },
+    {
+      "id": "CAD07",
+      "scope": "kernel failures, worker timeouts, isolation, stale/mismatched exports and cancellation",
+      "status": "PARTIAL_CHECKER_CASES_ONLY"
+    },
+    {
+      "id": "CAD08",
+      "scope": "matched-budget single attempt, independent candidates and sequential repair comparisons",
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CAD09",
+      "scope": "simple directory CLI, static HTML evidence report, installation and end-to-end usage guide",
+      "status": "NOT_INTEGRATED"
+    }
+  ],
+  "boundaries": {
+    "history": "existing BW ledger and COW snapshots only",
+    "authoring": "ordinary model-written build123d Python and its inputs",
+    "geometry": "reopened STEP; no candidate constants or claimed pass flags",
+    "views": "actual same STEP SHA, explicit camera frame, CPU depth buffer",
+    "kernel_independence": "construction and checker share OpenCascade; not independent kernel verification",
+    "isolation": "candidate never receives protected checker or host home/credentials; bounded outputs and worker retirement required before model run",
+    "source_provenance": "bind source/input/environment/requirements/artifact/render hashes; reject stale evidence",
+    "scope": "nominal geometry, not manufactured fit"
+  },
+  "comparisons": {
+    "arms": [
+      "one checked attempt",
+      "independent alternatives",
+      "feedback-directed revision"
+    ],
+    "budget": "equal total inference budget for independent versus repair, including planning, vision criticism and selection",
+    "metrics": [
+      "all-requirement success",
+      "time and all inference to accepted artifact",
+      "repair effectiveness",
+      "regressions",
+      "false success",
+      "infeasibility handling",
+      "native prefix work reused"
+    ]
+  },
+  "future_domains": [
+    "CAD10: removable module carrier and base; fixed datums and nominal clearances; reopen both parts; revisions preserve interfaces",
+    "BL00: pin/install Blender and audit MCP, after plate build/check basics",
+    "BL01: ledger-bound scene build, independent reopen/inspection and controlled views",
+    "BL02: short animation; fixed cameras, sampled transforms/frame identities; actual frame rendering",
+    "BL03: model-directed scene revision with visual evidence and retained source provenance",
+    "sampled mechanism motion and interference",
+    "dynamics/contact/control",
+    "real reconstruction/robotics"
+  ],
+  "additional": [
+    {
+      "id": "CAD10",
+      "status": "FIVE_ACTUAL_GEOMETRY_TESTS_PASS_MODEL_NOT_RUN",
+      "scope": "removable carrier/base nominal interfaces; changed thickness, mirrored notch, shifted carrier"
+    },
+    {
+      "id": "BL00-BL02",
+      "status": "FIVE_REAL_BLENDER_MCP_TESTS_PASS_MODEL_AUTHORED_CLI_PILOT_NOT_RUN",
+      "scope": "fixed cameras, actual MP4 24 frames 2 seconds, namespace retirement and current-source acceptance"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "pattern": "test_connection_admission.py",
+    "exit_code": 1,
+    "tail": "or: 'Namespace' object has no attribute 'task'\n\n----------------------------------------------------------------------\nRan 3 tests in 0.003s\n\nFAILED (errors=1)\n"
+  },
+  {
+    "pattern": "test_prefix_admission.py",
+    "exit_code": 1,
+    "tail": "or: 'Namespace' object has no attribute 'task'\n\n----------------------------------------------------------------------\nRan 5 tests in 0.008s\n\nFAILED (errors=2)\n"
+  },
+  {
+    "pattern": "test_inline_task.py",
+    "exit_code": 0,
+    "tail": "TaskTests.test_missing_input_is_rejected_before_state) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.015s\n\nOK\n"
+  }
+]

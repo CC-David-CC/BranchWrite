@@ -1,0 +1,1 @@
+One generic worked example plus a warning for observed overbroad preservation claims. No protected workload answer included. Live mitigation pending. Build with branchwrite.context_pack and pin its manifest digest.

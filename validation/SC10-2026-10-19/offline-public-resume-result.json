@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "ledger_unchanged": true,
+  "identical_result": true,
+  "api_key_environment_absent": true
+}

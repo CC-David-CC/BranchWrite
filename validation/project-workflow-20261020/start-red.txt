@@ -1,0 +1,31 @@
+.EF
+======================================================================
+ERROR: test_project_launch_has_no_filename_or_check_list (tests.test_guided_project_start.GuidedProjectStartTests.test_project_launch_has_no_filename_or_check_list)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_guided_project_start.py", line 26, in test_project_launch_has_no_filename_or_check_list
+    launch=coding_cli.build_launch(td,'Make a page',CONNECTION,branch='new-project',project_files=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'project_files'
+
+======================================================================
+FAIL: test_task_alone_admits_whole_project_and_model_selected_checks (tests.test_guided_project_start.GuidedProjectStartTests.test_task_alone_admits_whole_project_and_model_selected_checks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_guided_project_start.py", line 19, in test_task_alone_admits_whole_project_and_model_selected_checks
+    code=guided_cli.run(cwd=project,home=home,environ={'BW_COW_API_KEY':'test'},input_fn=answer,output_fn=lambda _:None)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/guided_cli.py", line 186, in run
+    read_scope = _path_list("What may BranchWrite read? ", project=project, required=True, input_fn=input_fn)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/guided_cli.py", line 24, in _path_list
+    raw = input_fn(prompt if not paths else "  another path, or Enter to finish: ").strip()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_guided_project_start.py", line 17, in answer
+    raise AssertionError('Unnecessary setup question: '+prompt)
+AssertionError: Unnecessary setup question: What may BranchWrite read? 
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=1, errors=1)

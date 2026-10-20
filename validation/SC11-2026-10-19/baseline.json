@@ -1,0 +1,41 @@
+{
+  "files": {
+    "README.md": "e44f3b70ed36618aa2353514e97c36f0a5223785531e3af34de391db57e1d0ca",
+    "command_summary.py": "b0066008c576c410df2fba793acb7502a06f41e5a7604ded9223d70c765d2178",
+    ".git/index": "678d5b13ecff717f6fb32939bdcf4cdf8cffd0b217db84142a3260b815ca09c0",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/COMMIT_EDITMSG": "a0a8e9fa369027d33c08c0fe3d5d06b49d838ce3ae81c5baa836b9f9f63ac0d5",
+    ".git/config": "cfe7ba1238c9a78be7535d7c63bcaf5a4d5011d46b07c9b45d3bbf7d6c312dfe",
+    ".git/HEAD": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+    "tests/test_command_summary.py": "4d151c918b7ca295fc930a9d47b2b706d1191abddc775032370995cb0b0e07f5",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/logs/HEAD": "6f5c864efab7454a0d3dfedf0ddffd85bf4780f03438a743ced2d13ce4aa5ae1",
+    ".git/logs/refs/heads/master": "6f5c864efab7454a0d3dfedf0ddffd85bf4780f03438a743ced2d13ce4aa5ae1",
+    ".git/refs/heads/master": "a0d8f7b91398ab479c768facf691b767ad1aed32a7af97c1c0e188e310cfe753",
+    ".git/objects/ae/2a654c750f3db12a41ab4eeaa30643d1ea1e62": "75ae959bf31bb11df143685bad83e3664193679a84c6665ef1fe4d9d8ba085e0",
+    ".git/objects/58/46082a2da1d695193060c8e49d0a792539f0df": "43a9b1f44d5aeda4aec2799f65fce1490a33d0585bb9ae9ae15326d0823661a4",
+    ".git/objects/fa/1c7aa2c670819bd4097aab0c48061c1d2fca4a": "7b97de49941d1e718fd004de4232af301d69a2bb0057d233b67736f0e0107c9b",
+    ".git/objects/3f/8a15c21c93655074e6e3a8170c0f8d41675ec4": "6459e267d85fcca95e4ae304115980379bced297e6f2236c3745e7e01943755e",
+    ".git/objects/b8/820e2eee983f670edefb54535d67ba755e45c3": "2dc8ce01b7d23e09c05bde9208ee3761c490a3581817ca7710b12b60d131c46f",
+    ".git/objects/22/d9b2f2d98f861eaf2d7d85c65e7e269fd21a4a": "9cadc1b388f7504ff6401c3a2ae10e92ff6dcdab82a9a65f93f8cfb97dd9a70d"
+  },
+  "model_authors_only": [
+    "command_summary.py"
+  ],
+  "independent_generated_seed": 11319,
+  "generated_cases": 200
+}

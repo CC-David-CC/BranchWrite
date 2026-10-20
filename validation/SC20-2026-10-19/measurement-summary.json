@@ -1,0 +1,21 @@
+{
+  "scope": "SC19 frozen task under dev19 Min-P; not new unfamiliar task or numerical qualification",
+  "forward_tokens": 5445,
+  "prefill_tokens": 3316,
+  "output_tokens": 2129,
+  "restored_prefix_tokens": 15537,
+  "native_timed_generation_tps": 51.31527035095496,
+  "captures": 6,
+  "restores": 9,
+  "loaded_file_bytes": 523907260,
+  "written_file_bytes": 3058192956,
+  "integrity_mismatches": 0,
+  "profile_sha256": "4d52d646626baedaf6442b7d7bab42a7f4eaca88c01a45ca770e39e4da60a20b",
+  "shutdown": {
+    "native_pid": 711544,
+    "native_exit_code": 0,
+    "close_succeeded": true,
+    "trace_sha256": "4d6073540e95c94da2d7270876e9c5102dfc8558e7c1abd9376433da2c2374f6",
+    "event_count": 23
+  }
+}

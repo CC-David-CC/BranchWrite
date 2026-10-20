@@ -1,0 +1,11 @@
+{
+  "status": "BOUNDED_NATIVE_RESTART_CLI_RECONCILIATION_PASS",
+  "operation": "bwnative-8baa0ff2f92f3c369d22525ed6ffefbce5b9bc41a10faacc",
+  "output_tokens": 16,
+  "answer_exact": true,
+  "receipt_exact": true,
+  "workflow_ledger_unchanged": true,
+  "reconcile_exit": 0,
+  "client_pid": 2323899,
+  "scope": "Lost reply injected before client journal completion; actual server/native restart; real remote installed CLI; counters verified separately"
+}

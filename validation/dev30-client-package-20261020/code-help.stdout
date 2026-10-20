@@ -1,0 +1,72 @@
+usage: branchwrite code [-h] --connection CONNECTION --state STATE
+                        (--task-file TASK_FILE | --task TASK) --branch BRANCH
+                        [--sampler {greedy,min-p,dry-min-p}] [--read READ]
+                        [--edit EDIT] [--create CREATE] [--read-dir READ_DIR]
+                        [--edit-dir EDIT_DIR] [--test-command TEST_COMMAND]
+                        [--from-branch FROM_BRANCH |
+                        --from-prefix FROM_PREFIX |
+                        --project-bases PROJECT_BASES |
+                        --context-pack CONTEXT_PACK]
+                        [--context-pack-id CONTEXT_PACK_ID]
+                        [--refresh-context-pack] [--build-project-context]
+                        [--context-source-branch CONTEXT_SOURCE_BRANCH]
+                        [--auto-base] [--base-choice BASE_CHOICE]
+                        [--base-revision BASE_REVISION]
+                        [--base-reserve-tokens BASE_RESERVE_TOKENS]
+                        [--from-snapshot FROM_SNAPSHOT]
+                        [--shell-timeout SHELL_TIMEOUT]
+                        [--max-steps MAX_STEPS]
+                        project
+
+positional arguments:
+  project
+
+options:
+  -h, --help            show this help message and exit
+  --connection CONNECTION
+  --state STATE
+  --task-file TASK_FILE
+  --task TASK           Inline task text; never executed.
+  --branch BRANCH
+  --sampler {greedy,min-p,dry-min-p}
+                        Sampler preset for a new run; resume keeps its saved
+                        settings.
+  --read READ
+  --edit EDIT
+  --create CREATE
+  --read-dir READ_DIR
+  --edit-dir EDIT_DIR
+  --test-command TEST_COMMAND
+  --from-branch FROM_BRANCH
+                        Fork a completed conversation tip.
+  --from-prefix FROM_PREFIX
+                        Ask from a retained idle context root.
+  --project-bases PROJECT_BASES
+                        Host catalog for a proposed Project Base choice.
+  --context-pack CONTEXT_PACK
+                        Verified reference pack for a new coding root.
+  --context-pack-id CONTEXT_PACK_ID
+                        Exact reference-pack identity; paired with --context-
+                        pack.
+  --refresh-context-pack
+                        For a new run, rebuild changed sources into a new
+                        immutable pack before admission; resume never
+                        refreshes.
+  --build-project-context
+                        Build a frozen context from the files already granted
+                        by --read/--read-dir and optional saved COW branches.
+  --context-source-branch CONTEXT_SOURCE_BRANCH
+                        Include a completed saved COW branch as unverified
+                        reference examples.
+  --auto-base           Choose the longest compatible fitting prefix from the
+                        host catalog; pin it for this run.
+  --base-choice BASE_CHOICE
+                        Untrusted JSON proposal to validate, not execute.
+  --base-revision BASE_REVISION
+                        Host-required source revision for the selected base.
+  --base-reserve-tokens BASE_RESERVE_TOKENS
+                        Host-required token headroom; COW still checks actual
+                        capacity.
+  --from-snapshot FROM_SNAPSHOT
+  --shell-timeout SHELL_TIMEOUT
+  --max-steps MAX_STEPS

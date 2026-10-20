@@ -1,0 +1,23 @@
+FF.....
+======================================================================
+FAIL: test_blender_context_requires_actual_mcp_render_receipt (test_spatial_completion_context.SpatialContextTests.test_blender_context_requires_actual_mcp_render_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_spatial_completion_context.py", line 12, in test_blender_context_requires_actual_mcp_render_receipt
+    self.assertIn('inspect_scene',t);self.assertNotIn('Finish requires at least one check',t)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'inspect_scene' not found in 'HOST TOOL CONTEXT FOR THIS CODING CONTINUATION:\nUse the current host schema below. Earlier file observations may be stale; inspect the current workspace through granted tools before editing. This is tool metadata,not evidence of execution or permission to expand grants.\n{"oneOf": [{"properties": {"tool": {"enum": ["run_check"]}}}]}\nRequired command outcomes: []\nDo not claim completion until actual host receipts satisfy the current policy.\nThe whole project is available through file tools. You choose future filenames and meaningful checks. Use run_shell to inspect the project, and run_check(name, command) to register actual checks. Use a stable name for each check; fix and rerun failed checks with that same name. Rerun all selected checks after editing files. Finish requires at least one check and all latest named checks passing. Passing checks support only the behavior they exercise.\n\nUSER TASK:\nMake a scene.'
+
+======================================================================
+FAIL: test_cad_context_does_not_require_irrelevant_shell_checks (test_spatial_completion_context.SpatialContextTests.test_cad_context_does_not_require_irrelevant_shell_checks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_spatial_completion_context.py", line 8, in test_cad_context_does_not_require_irrelevant_shell_checks
+    self.assertIn('inspect_cad',t);self.assertIn('immutable',t)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'inspect_cad' not found in 'HOST TOOL CONTEXT FOR THIS CODING CONTINUATION:\nUse the current host schema below. Earlier file observations may be stale; inspect the current workspace through granted tools before editing. This is tool metadata,not evidence of execution or permission to expand grants.\n{"oneOf": [{"properties": {"tool": {"enum": ["run_check"]}}}]}\nRequired command outcomes: []\nDo not claim completion until actual host receipts satisfy the current policy.\nThe whole project is available through file tools. You choose future filenames and meaningful checks. Use run_shell to inspect the project, and run_check(name, command) to register actual checks. Use a stable name for each check; fix and rerun failed checks with that same name. Rerun all selected checks after editing files. Finish requires at least one check and all latest named checks passing. Passing checks support only the behavior they exercise.\n\nUSER TASK:\nMake the plate.'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.006s
+
+FAILED (failures=2)

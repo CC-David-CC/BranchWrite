@@ -1,0 +1,129 @@
+test_cycles_rejected_even_when_another_component_is_ready (test_task_breakdown.TaskBreakdownTests.test_cycles_rejected_even_when_another_component_is_ready) ... ok
+test_duplicate_json_keys_and_invalid_schema_rejected (test_task_breakdown.TaskBreakdownTests.test_duplicate_json_keys_and_invalid_schema_rejected) ... ok
+test_empty_oversized_and_invalid_steps_rejected (test_task_breakdown.TaskBreakdownTests.test_empty_oversized_and_invalid_steps_rejected) ... ok
+test_forward_dependencies_and_fifo_ready_order (test_task_breakdown.TaskBreakdownTests.test_forward_dependencies_and_fifo_ready_order) ... ok
+test_independent_steps_follow_deterministic_fifo_order (test_task_breakdown.TaskBreakdownTests.test_independent_steps_follow_deterministic_fifo_order) ... ok
+test_missing_duplicate_and_self_dependencies_rejected (test_task_breakdown.TaskBreakdownTests.test_missing_duplicate_and_self_dependencies_rejected) ... ok
+test_model_cannot_add_tools_grants_templates_or_verification (test_task_breakdown.TaskBreakdownTests.test_model_cannot_add_tools_grants_templates_or_verification) ... ok
+test_source_text_and_size_limits_are_explicit (test_task_breakdown.TaskBreakdownTests.test_source_text_and_size_limits_are_explicit) ... ok
+test_unicode_and_literal_control_tags_remain_proposal_text (test_task_breakdown.TaskBreakdownTests.test_unicode_and_literal_control_tags_remain_proposal_text) ... ok
+test_model_breakdown_has_source_provenance_and_reopens_offline (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_breakdown_has_source_provenance_and_reopens_offline) ... ERROR
+test_model_cannot_turn_a_breakdown_into_grants_or_verified_success (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_cannot_turn_a_breakdown_into_grants_or_verified_success) ... ERROR
+test_changed_files_invalidate_prior_successful_tests (test_interpreter.InterpreterTests.test_changed_files_invalidate_prior_successful_tests) ... ok
+test_feedback_names_world_and_file_hash_and_keeps_actual_source (test_interpreter.InterpreterTests.test_feedback_names_world_and_file_hash_and_keeps_actual_source) ... ok
+test_finish_request_without_host_tests_is_not_verified (test_interpreter.InterpreterTests.test_finish_request_without_host_tests_is_not_verified) ... ok
+test_malformed_proposal_becomes_feedback_not_an_effect (test_interpreter.InterpreterTests.test_malformed_proposal_becomes_feedback_not_an_effect) ... ok
+test_model_profiles_are_detached_after_freeze (test_interpreter.InterpreterTests.test_model_profiles_are_detached_after_freeze) ... ok
+test_passed_actual_tests_and_finish_are_verified (test_interpreter.InterpreterTests.test_passed_actual_tests_and_finish_are_verified) ... ok
+test_plan_act_does_not_re_freeze_and_stale_world_returns_rejection (test_interpreter.InterpreterTests.test_plan_act_does_not_re_freeze_and_stale_world_returns_rejection) ... ok
+test_registry_or_program_change_refused_on_reopen (test_interpreter.InterpreterTests.test_registry_or_program_change_refused_on_reopen) ... ok
+test_rejected_proposal_does_not_erase_a_previously_visible_read (test_interpreter.InterpreterTests.test_rejected_proposal_does_not_erase_a_previously_visible_read) ... ok
+test_repeat_exhaustion_and_step_budget_keep_distinct_statuses (test_interpreter.InterpreterTests.test_repeat_exhaustion_and_step_budget_keep_distinct_statuses) ... ok
+test_restart_after_tool_return_before_parent_resume_never_reexecutes (test_interpreter.InterpreterTests.test_restart_after_tool_return_before_parent_resume_never_reexecutes) ... ok
+test_text_value_plan_act_uses_actual_files_and_preserves_original (test_interpreter.InterpreterTests.test_text_value_plan_act_uses_actual_files_and_preserves_original) ... ok
+test_type_and_missing_binding_reject_before_root_admission (test_interpreter.InterpreterTests.test_type_and_missing_binding_reject_before_root_admission) ... ok
+test_unknown_post_effect_does_not_retry_after_reopen (test_interpreter.InterpreterTests.test_unknown_post_effect_does_not_retry_after_reopen) ... ok
+test_whole_program_rejects_late_unsupported_operation_before_any_dispatch (test_interpreter.InterpreterTests.test_whole_program_rejects_late_unsupported_operation_before_any_dispatch) ... ok
+test_zero_tests_cannot_verify (test_interpreter.InterpreterTests.test_zero_tests_cannot_verify) ... ok
+test_model_chosen_read_edit_test_finish_with_feedback_and_restart (test_interpreter.ModelInterpreterTests.test_model_chosen_read_edit_test_finish_with_feedback_and_restart) ... ok
+test_admitted_retry_survives_log_reopen_without_new_fork_intent (test_thinking_selector.ThinkingSelectorAdmissionTests.test_admitted_retry_survives_log_reopen_without_new_fork_intent) ... ok
+test_duplicate_verification_of_one_finish_does_not_spend_two_rungs (test_thinking_selector.ThinkingSelectorAdmissionTests.test_duplicate_verification_of_one_finish_does_not_spend_two_rungs) ... ok
+test_failed_finish_forks_prior_ask_and_advances_to_8k (test_thinking_selector.ThinkingSelectorAdmissionTests.test_failed_finish_forks_prior_ask_and_advances_to_8k) ... ok
+test_foreign_root_model_result_cannot_start_an_unrelated_ladder (test_thinking_selector.ThinkingSelectorAdmissionTests.test_foreign_root_model_result_cannot_start_an_unrelated_ladder) ... ok
+test_initial_admission_uses_4k_with_original_frame_pointer (test_thinking_selector.ThinkingSelectorAdmissionTests.test_initial_admission_uses_4k_with_original_frame_pointer) ... ok
+test_new_default_selects_standard_ladder_and_invalid_start_is_rejected (test_thinking_selector.ThinkingSelectorAdmissionTests.test_new_default_selects_standard_ladder_and_invalid_start_is_rejected) ... ok
+test_ordinary_tool_progress_stays_on_same_rung_without_fork (test_thinking_selector.ThinkingSelectorAdmissionTests.test_ordinary_tool_progress_stays_on_same_rung_without_fork) ... ok
+test_successful_task_does_not_create_retry (test_thinking_selector.ThinkingSelectorAdmissionTests.test_successful_task_does_not_create_retry) ... ok
+test_cli_cannot_reconcile_a_tool_effect (test_coding_reconciliation.CodingReconciliationTests.test_cli_cannot_reconcile_a_tool_effect) ... ok
+test_cli_refuses_live_workflow_writer (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_live_workflow_writer) ... ok
+test_cli_refuses_operation_not_owned_by_pending_model_frame (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_operation_not_owned_by_pending_model_frame) ... ok
+test_cli_restores_output_then_existing_step_resumes_without_new_work (test_coding_reconciliation.CodingReconciliationTests.test_cli_restores_output_then_existing_step_resumes_without_new_work) ... ok
+test_failed_uncommitted_model_operation_stays_unresolved (test_coding_reconciliation.CodingReconciliationTests.test_failed_uncommitted_model_operation_stays_unresolved) ... ok
+test_self_consistent_changed_launch_rejected_before_network (test_coding_reconciliation.CodingReconciliationTests.test_self_consistent_changed_launch_rejected_before_network) ... ok
+
+======================================================================
+ERROR: test_model_breakdown_has_source_provenance_and_reopens_offline (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_breakdown_has_source_provenance_and_reopens_offline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown_flow.py", line 38, in test_model_breakdown_has_source_provenance_and_reopens_offline
+    result=self.execute_plan(text);value=result['bindings']['breakdown'][1]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown_flow.py", line 33, in execute_plan
+    with patch.object(self.registry,'execute',side_effect=AssertionError('planning must not execute tools')):result=runtime.run(max_steps=128)
+                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 561, in run
+    report=self.step()
+           ^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 556, in step
+    return self._scope('program')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 482, in _scope
+    if frame['state']=='Waiting':return self._wait(frame)
+                                        ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 535, in _wait
+    else:report=step_model(self.kernel,self.adapter,child['id'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/model_dispatch.py", line 283, in step_model
+    result=adapter.execute(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/model_dispatch.py", line 170, in execute
+    return method(*args,**options)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1068, in ask
+    return self._generation_mutation(operation_id, "/cow/text/ask", body, branch=branch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1232, in _generation_mutation
+    response = self.transport.request("POST", path, intent.body, stream=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 512, in request
+    return self._request(method, path, body, stream=stream)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 539, in _request
+    raise RequestRejected(f"COW HTTP {exc.code}: {detail}") from None
+branchwrite.cow_client.RequestRejected: COW HTTP 400: First question requires a renderer-matched closed context root
+
+======================================================================
+ERROR: test_model_cannot_turn_a_breakdown_into_grants_or_verified_success (test_task_breakdown_flow.TaskBreakdownFlowTests.test_model_cannot_turn_a_breakdown_into_grants_or_verified_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown_flow.py", line 46, in test_model_cannot_turn_a_breakdown_into_grants_or_verified_success
+    result=self.execute_plan(text);value=result['bindings']['breakdown'][1];self.assertFalse(value['valid']);self.assertIsNone(value['plan']);self.assertTrue(value['reason']);self.assertFalse(self.registry._grant.allow_shell)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_task_breakdown_flow.py", line 33, in execute_plan
+    with patch.object(self.registry,'execute',side_effect=AssertionError('planning must not execute tools')):result=runtime.run(max_steps=128)
+                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 561, in run
+    report=self.step()
+           ^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 556, in step
+    return self._scope('program')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 482, in _scope
+    if frame['state']=='Waiting':return self._wait(frame)
+                                        ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/interpreter.py", line 535, in _wait
+    else:report=step_model(self.kernel,self.adapter,child['id'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/model_dispatch.py", line 283, in step_model
+    result=adapter.execute(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/model_dispatch.py", line 170, in execute
+    return method(*args,**options)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1068, in ask
+    return self._generation_mutation(operation_id, "/cow/text/ask", body, branch=branch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1232, in _generation_mutation
+    response = self.transport.request("POST", path, intent.body, stream=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 512, in request
+    return self._request(method, path, body, stream=stream)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 539, in _request
+    raise RequestRejected(f"COW HTTP {exc.code}: {detail}") from None
+branchwrite.cow_client.RequestRejected: COW HTTP 400: First question requires a renderer-matched closed context root
+
+----------------------------------------------------------------------
+Ran 42 tests in 7.314s
+
+FAILED (errors=2)

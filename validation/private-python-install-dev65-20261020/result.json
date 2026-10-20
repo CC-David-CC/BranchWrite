@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "phase": "COMPLETE",
+  "started": 1792532951.768129,
+  "source_copy": {
+    "source_base": "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu",
+    "private_base": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/owned-source-python",
+    "source_manifest_sha256": "b699e55c8855e11ee0ab0dc59c5ae69cf0aa738cb57a70e7b2c170d7fd8d0eaa",
+    "files": 4984,
+    "bytes": 104239719,
+    "probe": {
+      "prefix": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/owned-source-python",
+      "base": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/owned-source-python",
+      "executable": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/owned-source-python/bin/python3.12",
+      "base_executable": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/owned-source-python/bin/python3.12",
+      "version": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]"
+    }
+  },
+  "source_base_changed": true,
+  "source_before_sha256": "63456624eba6fff99bfd889d775c383bb8b7e098811a1a8595b6770d8276dd38",
+  "source_after_sha256": "855141a90da2f5abf98ede4749d7f46eb2c11a2191a6f457d42b33800f9dda5f",
+  "installed_probe": {
+    "status": "PASS",
+    "python": "3.12.15",
+    "module_path": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/venv/lib/python3.12/site-packages/branchwrite/__init__.py",
+    "workflow_sha256": "cdfac36f6fe9d1b7571ee5437e39c2ced28bfed330f2487e4a0feeb3b55c9238",
+    "prefix_sha256": "0ce4bcad61d23a4bca406cd91fb7fb2ac4fb7f5845c10c02638a72468b589604",
+    "created": "created",
+    "shell": "exited",
+    "isolation": {
+      "kind": "bubblewrap-terminal-v1",
+      "pid_ns": "pid:[4026532779]",
+      "net_ns": "net:[4026532781]",
+      "mount_ns": "mnt:[4026532776]",
+      "worker_exited": true,
+      "launcher_pid": 2501518,
+      "namespace_members_after": []
+    },
+    "pdf": {
+      "pages": 1,
+      "bytes": 1366,
+      "sha256": "bc5d0220675d85b74377abe5d3048bd98dff8218dba9dd93fc7c0d6d07f89473",
+      "actual_png_bytes": 14133
+    },
+    "parallel_help_runtime_unchanged": true
+  },
+  "installation": {
+    "status": "INSTALLED_PRIVATE_RUNTIME",
+    "started": 1792532952.8430634,
+    "wheel_sha256": "856308e203fcbb0cd73fb21c0144e8fc56f2a41c947fbd2a7a7854d607077bcf",
+    "uv_sha256": "5b2a2df4ef04c5d778d50702d6e1d1ff22909fc883086b4ef406a4f115e3c4fb",
+    "python_copy": {
+      "source_base": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/owned-source-python",
+      "private_base": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python",
+      "source_manifest_sha256": "b699e55c8855e11ee0ab0dc59c5ae69cf0aa738cb57a70e7b2c170d7fd8d0eaa",
+      "files": 4984,
+      "bytes": 104239719,
+      "probe": {
+        "prefix": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python",
+        "base": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python",
+        "executable": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python/bin/python3.12",
+        "base_executable": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python/bin/python3.12",
+        "version": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]"
+      }
+    },
+    "client": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/venv/bin/branchwrite",
+    "runtime": {
+      "prefix": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/venv",
+      "base": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python",
+      "executable": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/venv/bin/python",
+      "base_executable": "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python/bin/python3.12",
+      "version": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]"
+    },
+    "scope": "new initial installation; full Python/cache/package hashes remain enforced, no existing saved workflow migrated"
+  },
+  "scope": "new wheel, default dependencies, isolated real shell/file/PDF build and page render; full runtime guard survives an actual cache addition in its disposable original Python; no GPU inference",
+  "finished": 1792532955.9475229
+}

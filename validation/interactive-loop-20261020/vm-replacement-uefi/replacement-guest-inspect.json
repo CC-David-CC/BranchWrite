@@ -1,0 +1,7 @@
+{
+  "iso_sha256": "a432129ef6d19441454b62b0e88a36c7488e9ad148a204b03ce80164d0c2753c",
+  "time": 1792492652.8400002,
+  "exit_code": 0,
+  "stdout": "codiserver-vm\nuid=1000(maint) gid=1000(maint) groups=1000(maint),27(sudo)\n7.0.14-codiserver-base\nPython 3.14.4\nfirmware=UEFI\n/usr/sbin/mkfs.fat\n/usr/sbin/fsck.fat\n/cow overlay /\nNAME    SIZE TYPE FSTYPE   MOUNTPOINTS\nloop0   1.9G loop squashfs /rofs\nloop1  44.7M loop squashfs /snap/snapd/28254\nloop2    66M loop squashfs /snap/core24/x1\nloop3  60.6M loop squashfs /snap/core26/646\nloop4     4K loop squashfs /snap/bare/5\nloop5 185.5M loop squashfs /snap/chromium/3559\nloop6  49.3M loop squashfs /snap/cups/1266\nloop7   402M loop squashfs /snap/mesa-2404/1839\nloop8  91.7M loop squashfs /snap/gtk-common-themes/1535\nloop9 615.3M loop squashfs /snap/gnome-46-2404/168\nsr0     1.9G rom  iso9660  /cdrom\nsr1    1024M rom           \nvda      32G disk          \ntotal 1\n-rwxr-xr-x 1 root root 159 Oct 20 10:12 codiserver-display-always-on\n-rwxr-xr-x 1 root root 188 Oct 20 10:12 codiserver-display-default\n-rwxr-xr-x 1 root root 848 Oct 20 10:12 codiserver-screen-share\n",
+  "stderr": ""
+}

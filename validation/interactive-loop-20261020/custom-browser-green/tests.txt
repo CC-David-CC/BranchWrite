@@ -1,0 +1,25 @@
+test_italic_alone_does_not_pass_bold_name_requirement (tests.test_browser_host_inspection.HostInspectionTests.test_italic_alone_does_not_pass_bold_name_requirement) ... ok
+test_missing_underline_is_a_failed_inspection (tests.test_browser_host_inspection.HostInspectionTests.test_missing_underline_is_a_failed_inspection) ... ok
+test_real_computed_style_and_interaction_are_checked_in_the_sandbox (tests.test_browser_host_inspection.HostInspectionTests.test_real_computed_style_and_interaction_are_checked_in_the_sandbox) ... ERROR
+
+======================================================================
+ERROR: test_real_computed_style_and_interaction_are_checked_in_the_sandbox (tests.test_browser_host_inspection.HostInspectionTests.test_real_computed_style_and_interaction_are_checked_in_the_sandbox)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_host_inspection.py", line 34, in test_real_computed_style_and_interaction_are_checked_in_the_sandbox
+    result=self.inspect(PAGE)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_browser_host_inspection.py", line 32, in inspect
+    return render_snapshot(payload,config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/browser_capture.py", line 173, in render_snapshot
+    return render_isolated(payload, config, assets=assets, document_path=document_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/branchwrite/browser_isolation.py", line 151, in render_isolated
+    raise ValueError('page inspection result does not match the host request')
+ValueError: page inspection result does not match the host request
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.372s
+
+FAILED (errors=1)

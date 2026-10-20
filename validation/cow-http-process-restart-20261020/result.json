@@ -1,0 +1,55 @@
+{
+  "milestone": "BranchWrite client recovery after Context COW HTTP process restart",
+  "status": "PASS_BOUNDED_CPU_FIXTURE",
+  "executed_at": "2026-10-20",
+  "host": "dflanag3-B650-GAMING-X-AX",
+  "python": "3.12.3",
+  "branchwrite_commit": "12d88b26db7db6d3a291b9cc602938c7e166c210",
+  "context_cow_commit": "831b4d8dc7684c5fce14c17d2113fcadfc5e1b8a",
+  "test_runs": [
+    {
+      "id": "test_lost_answer_ack_recovers_after_cow_process_restart_without_forward_work",
+      "runs": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "id": "tests.test_cow_client",
+      "runs": 1,
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "id": "tests.test_chat_cli_http",
+      "runs": 1,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "totals": {
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0
+  },
+  "asserted": [
+    "Client exits after COW commits but before local receipt",
+    "COW HTTP process is SIGKILLed and restarted against same durable Store",
+    "same operation ID recovers committed answer and completes local journal",
+    "replay performs zero additional model forward work",
+    "later append performs suffix plus selected-output forward work",
+    "same branch and snapshot identities survive restart"
+  ],
+  "limitations": [
+    "Deterministic synthetic CPU model, not real GPU inference.",
+    "No native KV checkpoint restoration or power-loss durability qualification.",
+    "Bounded process-restart/client-reconciliation result only."
+  ],
+  "test_log_sha256": "0f2b8bfac43d118987785d70d01653b82de1d0c73fcdbe2ea4c5d09391f97792",
+  "test_sources": {
+    "tests/test_cow_http_process_restart.py": "a7ff7f6970da1a498c49db7fa17843f78b506d49b42ddc22ef1ff4280fc968af",
+    "tests/cow_process_restart_server.py": "71f37b8949bb4ecab98fcf4dc99bea23fafa0281d744a3c9083250a7970bc57b"
+  }
+}

@@ -1,0 +1,441 @@
+format = "bw.tickets.v3"
+
+[[ticket]]
+id = "R01"
+title = "Source and repository audit"
+depends_on = []
+gate = "B0"
+case_ids = ["BW-G6-001"]
+deliverable = "Source and repository audit through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R02"
+title = "Canonical types and non-JSON syntax"
+depends_on = ["R01"]
+gate = "B1"
+case_ids = ["BW-G0-001", "BW-G0-004", "BW-G0-005", "BW-G0-006", "BW-G0-016", "BW-G0-019", "BW-G0-034", "BW-G0-039", "BW3-LANG-001", "BW3-LANG-002", "BW3-LANG-003", "BW3-LANG-004", "BW3-LANG-005", "BW3-LANG-006", "BW3-LANG-007", "BW3-LANG-008", "BW3-LANG-009", "BW3-LANG-010", "BW3-LANG-011", "BW3-LANG-012"]
+deliverable = "Canonical types and non-JSON syntax through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R03"
+title = "One ledger and canonical storage boundaries"
+depends_on = ["R02"]
+gate = "B1"
+case_ids = ["BW3-TYPE-001", "BW3-TYPE-002", "BW3-TYPE-003", "BW3-TYPE-004", "BW3-TYPE-005", "BW3-TYPE-006", "BW3-TYPE-007", "BW3-TYPE-008", "BW3-TYPE-009", "BW3-TYPE-010", "BW3-TYPE-011", "BW3-TYPE-012"]
+deliverable = "One ledger and canonical storage boundaries through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R04"
+title = "Actual native control and receipt discovery"
+depends_on = ["R01"]
+gate = "B0"
+case_ids = []
+deliverable = "Actual native control and receipt discovery through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R05"
+title = "Typed frames, waits and return reducer"
+depends_on = ["R02", "R03"]
+gate = "B1"
+case_ids = ["BW-G0-018", "BW-G0-021", "BW-G0-023", "BW-G0-024", "BW-G0-025", "BW-G0-027", "BW-G0-028", "BW-G0-029", "BW-G0-030", "BW-G3-014", "BW-G3-015", "BW-G6-033", "BW-G4-016", "BW-G4-017", "BW-G5-018", "BW-G6-035", "BW-G6-038", "BW-G6-041"]
+deliverable = "Typed frames, waits and return reducer through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R06"
+title = "Type-derived and state-specialized grammars"
+depends_on = ["R02", "R04"]
+gate = "B2"
+case_ids = []
+deliverable = "Type-derived and state-specialized grammars through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R07"
+title = "Native decoder-state transaction contract"
+depends_on = ["R02", "R04"]
+gate = "B2"
+case_ids = []
+deliverable = "Native decoder-state transaction contract through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R08"
+title = "Exact relevant-state freeze and grant checks"
+depends_on = ["R02", "R03"]
+gate = "B1"
+case_ids = ["BW-G0-002", "BW-G0-007", "BW-G0-008", "BW-G0-009", "BW-G0-010", "BW-G0-011", "BW-G0-012", "BW-G0-013", "BW-G0-014", "BW-G0-015", "BW-G0-017", "BW-G0-020", "BW-G0-022", "BW-G0-026", "BW-G0-031", "BW-G0-032", "BW3-PLAN-001", "BW3-PLAN-002", "BW3-PLAN-003", "BW3-PLAN-004", "BW3-PLAN-005", "BW3-PLAN-006", "BW3-PLAN-007", "BW3-PLAN-008", "BW3-PLAN-009", "BW3-PLAN-010", "BW3-PLAN-011", "BW3-PLAN-012"]
+deliverable = "Exact relevant-state freeze and grant checks through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R09"
+title = "Enforced world and effect boundary"
+depends_on = ["R01", "R08"]
+gate = "B3"
+case_ids = ["BW-G2-001", "BW-G2-002", "BW-G2-003", "BW-G2-004", "BW-G2-005", "BW-G2-006", "BW-G2-007", "BW-G2-008", "BW-G2-009", "BW-G2-010", "BW-G2-011", "BW-G2-012", "BW-G2-013", "BW-G2-014", "BW-G2-015", "BW-G2-017", "BW-G2-018", "BW-G2-019", "BW-G2-022", "BW-G2-023", "BW-G2-024", "BW-G2-025", "BW-G2-026", "BW-G2-027", "BW-G2-028", "BW-G2-029"]
+deliverable = "Enforced world and effect boundary through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R10"
+title = "Native grammar-first greedy generation"
+depends_on = ["R05", "R06", "R07"]
+gate = "B2"
+case_ids = ["BW-G1-001", "BW-G1-002", "BW-G1-004", "BW-G1-005", "BW-G1-006", "BW-G1-007", "BW-G1-008", "BW-G1-009", "BW-G1-012", "BW-G1-013", "BW-G1-014", "BW-G1-016", "BW-G1-017", "BW-G1-018", "BW-G1-019", "BW-G1-020", "BW-G1-021", "BW-G1-022", "BW-G1-023", "BW-G1-024", "BW-G1-025", "BW-G1-026", "BW-G1-030", "BW-G1-031", "BW-G1-032", "BW-G1-033", "BW-G1-034", "BW-G1-035", "BW-G1-036", "BW-G1-037", "BW-G1-038", "BW-G1-039", "BW-G1-040", "BW-G1-041", "BW-G1-042", "BW-G1-043", "BW-G1-044", "BW-G1-045", "BW-G1-046"]
+deliverable = "Native grammar-first greedy generation through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R11"
+title = "Qualify existing DRY and Min-P baseline"
+depends_on = ["R07", "R10"]
+gate = "B2"
+case_ids = []
+deliverable = "Qualify existing DRY and Min-P baseline through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R12"
+title = "Typed model/tool request and return"
+depends_on = ["R05", "R08", "R09", "R10"]
+gate = "B3"
+case_ids = []
+deliverable = "Typed model/tool request and return through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R13"
+title = "Headline, status, summary and final invocations"
+depends_on = ["R05", "R10"]
+gate = "B3"
+case_ids = ["BW-G0-035", "BW-G0-036", "BW-G0-037", "BW-G0-038", "BW-G1-027", "BW-G1-028", "BW-G1-029", "BW-G6-027", "BW-G6-032", "BW-G6-034", "BW-G6-040", "BW3-FEATURE-001", "BW3-FEATURE-002", "BW3-FEATURE-003", "BW3-FEATURE-004", "BW3-FEATURE-005", "BW3-FEATURE-006", "BW3-FEATURE-007", "BW3-FEATURE-008"]
+deliverable = "Headline, status, summary and final invocations through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R14"
+title = "First real nested session and return-boundary restart"
+depends_on = ["R03", "R11", "R12", "R13", "R35"]
+gate = "B4"
+case_ids = ["BW-G6-004", "BW-G6-026", "BW-G6-036"]
+deliverable = "First real nested session and return-boundary restart through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R15"
+title = "Independent native matcher fork and partial continuation"
+depends_on = ["R07", "R10"]
+gate = "B2"
+case_ids = ["BW3-GRAM-001", "BW3-GRAM-002", "BW3-GRAM-003", "BW3-GRAM-004", "BW3-GRAM-005", "BW3-GRAM-006", "BW3-GRAM-007", "BW3-GRAM-008", "BW3-GRAM-009", "BW3-GRAM-010", "BW3-GRAM-011", "BW3-GRAM-012", "BW3-GRAM-013", "BW3-GRAM-014"]
+deliverable = "Independent native matcher fork and partial continuation through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R16"
+title = "Versioned RNG and feedback checkpoint lifecycle"
+depends_on = ["R07", "R15"]
+gate = "B2"
+case_ids = ["BW3-SAMPLE-001", "BW3-SAMPLE-002", "BW3-SAMPLE-003", "BW3-SAMPLE-004", "BW3-SAMPLE-005", "BW3-SAMPLE-006", "BW3-SAMPLE-007", "BW3-SAMPLE-008", "BW3-SAMPLE-009", "BW3-SAMPLE-010", "BW3-SAMPLE-011", "BW3-SAMPLE-012", "BW3-SAMPLE-013", "BW3-SAMPLE-014", "BW3-SAMPLE-015", "BW3-SAMPLE-016", "BW3-SAMPLE-017", "BW3-SAMPLE-018"]
+deliverable = "Versioned RNG and feedback checkpoint lifecycle through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R17"
+title = "DynaTemp native law and edge cases"
+depends_on = ["R10", "R16"]
+gate = "B5"
+case_ids = []
+deliverable = "DynaTemp native law and edge cases through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R18"
+title = "Locally Typical native law and edge cases"
+depends_on = ["R10", "R16"]
+gate = "B5"
+case_ids = []
+deliverable = "Locally Typical native law and edge cases through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R19"
+title = "XTC stochastic exclusion and draw isolation"
+depends_on = ["R10", "R16"]
+gate = "B5"
+case_ids = []
+deliverable = "XTC stochastic exclusion and draw isolation through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R20"
+title = "Mirostat 2 selector law and state"
+depends_on = ["R10", "R16"]
+gate = "B5"
+case_ids = []
+deliverable = "Mirostat 2 selector law and state through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R21"
+title = "Adaptive-P selector law and state"
+depends_on = ["R10", "R16"]
+gate = "B5"
+case_ids = []
+deliverable = "Adaptive-P selector law and state through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R22"
+title = "Parallel model expansion and explicit seed splits"
+depends_on = ["R14", "R15", "R16", "R28"]
+gate = "B4"
+case_ids = []
+deliverable = "Parallel model expansion and explicit seed splits through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R23"
+title = "Actually overlapping isolated ACT computations"
+depends_on = ["R09", "R12", "R14", "R28"]
+gate = "B4"
+case_ids = ["BW-G4-001", "BW-G4-002", "BW-G4-003", "BW-G4-004", "BW-G4-005", "BW-G4-006", "BW-G4-009", "BW-G4-010", "BW-G4-011", "BW-G4-012", "BW-G4-013", "BW-G4-014", "BW-G4-018", "BW3-WORLD-001", "BW3-WORLD-002", "BW3-WORLD-003", "BW3-WORLD-004", "BW3-WORLD-005", "BW3-WORLD-006", "BW3-WORLD-007", "BW3-WORLD-008", "BW3-WORLD-009", "BW3-WORLD-010", "BW3-WORLD-011", "BW3-WORLD-012"]
+deliverable = "Actually overlapping isolated ACT computations through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R24"
+title = "Source-bound challenge, compare and selection"
+depends_on = ["R05", "R08", "R12"]
+gate = "B4"
+case_ids = ["BW3-OPS-001", "BW3-OPS-002", "BW3-OPS-003", "BW3-OPS-004", "BW3-OPS-005", "BW3-OPS-006", "BW3-OPS-007", "BW3-OPS-008", "BW3-OPS-009", "BW3-OPS-010", "BW3-OPS-011", "BW3-OPS-012"]
+deliverable = "Source-bound challenge, compare and selection through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R25"
+title = "Complement composition and fresh integration verification"
+depends_on = ["R23", "R24"]
+gate = "B6"
+case_ids = []
+deliverable = "Complement composition and fresh integration verification through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R26"
+title = "Guarded publication and outcome reconciliation"
+depends_on = ["R03", "R09", "R25"]
+gate = "B6"
+case_ids = ["BW-G3-001", "BW-G2-016", "BW-G5-001", "BW-G5-003", "BW-G5-004", "BW-G4-007", "BW-G4-008", "BW-G4-015", "BW-G3-009", "BW-G5-017", "BW-G6-008"]
+deliverable = "Guarded publication and outcome reconciliation through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R27"
+title = "Native/effect fault and recovery campaigns"
+depends_on = ["R14", "R16", "R23", "R26"]
+gate = "B6"
+case_ids = ["BW-G3-002", "BW-G3-003", "BW-G3-004", "BW-G5-002", "BW-G3-005", "BW-G3-006", "BW-G3-007", "BW-G3-008", "BW-G3-010", "BW-G3-011", "BW-G5-005", "BW-G5-006", "BW-G5-007", "BW-G5-011", "BW-G5-012", "BW-G5-013", "BW-G5-015", "BW-G5-016", "BW-G3-012", "BW-G3-013", "BW-G3-017", "BW-G5-019", "BW3-RESTORE-001", "BW3-RESTORE-002", "BW3-RESTORE-003", "BW3-RESTORE-004", "BW3-RESTORE-005", "BW3-RESTORE-006", "BW3-RESTORE-007", "BW3-RESTORE-008", "BW3-RESTORE-009", "BW3-RESTORE-010", "BW3-RESTORE-011", "BW3-RESTORE-012"]
+deliverable = "Native/effect fault and recovery campaigns through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R28"
+title = "Shared budgets, leases and dispatch accounting"
+depends_on = ["R05", "R08"]
+gate = "B3"
+case_ids = ["BW-G1-003", "BW-G0-003", "BW-G1-010", "BW-G1-011", "BW-G1-015", "BW-G5-008", "BW-G5-009", "BW-G5-010", "BW-G5-014", "BW-G0-033", "BW-G3-016", "BW-G6-030", "BW-G5-020"]
+deliverable = "Shared budgets, leases and dispatch accounting through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R29"
+title = "Read-only views and one bounded step/run kernel"
+depends_on = ["R05", "R13"]
+gate = "B4"
+case_ids = ["BW-G6-002", "BW-G6-003", "BW-G6-005", "BW-G6-006", "BW-G6-007", "BW-G6-009", "BW-G6-010", "BW-G6-011", "BW-G6-012", "BW-G6-013", "BW-G6-014", "BW-G6-015", "BW-G6-016", "BW-G6-017", "BW-G6-018", "BW-G6-022", "BW-G6-023", "BW-G6-024", "BW-G6-025", "BW-G6-028", "BW-G6-029", "BW-G6-031", "BW-G6-037", "BW-G6-039", "BW-G6-042"]
+deliverable = "Read-only views and one bounded step/run kernel through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R30"
+title = "Fair test-time-compute baseline campaign"
+depends_on = ["R11", "R22", "R23", "R24", "R28"]
+gate = "B7"
+case_ids = ["BW3-COMPUTE-001", "BW3-COMPUTE-002", "BW3-COMPUTE-003", "BW3-COMPUTE-004", "BW3-COMPUTE-005", "BW3-COMPUTE-006", "BW3-COMPUTE-007", "BW3-COMPUTE-008", "BW3-COMPUTE-009", "BW3-COMPUTE-010", "BW3-COMPUTE-011", "BW3-COMPUTE-012"]
+deliverable = "Fair test-time-compute baseline campaign through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R31"
+title = "One/two-service and platform qualification"
+depends_on = ["R09", "R27"]
+gate = "B7"
+case_ids = ["BW-G6-019", "BW-G6-020"]
+deliverable = "One/two-service and platform qualification through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R32"
+title = "Baseline end-to-end product release evidence"
+depends_on = ["R26", "R27", "R29", "R30", "R31"]
+gate = "B7"
+case_ids = []
+deliverable = "Baseline end-to-end product release evidence through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R33"
+title = "Advanced profile integration and accepted-control receipts"
+depends_on = ["R17", "R18", "R19", "R20", "R21", "R30"]
+gate = "B7"
+case_ids = []
+deliverable = "Advanced profile integration and accepted-control receipts through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R34"
+title = "Conditional constrained MTP qualification"
+depends_on = ["R16", "R33"]
+gate = "B8"
+case_ids = ["BW3-MTP-001", "BW3-MTP-002", "BW3-MTP-003", "BW3-MTP-004"]
+deliverable = "Conditional constrained MTP qualification through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = true
+
+[[ticket]]
+id = "R35"
+title = "Port fixture vectors and preserve distinguishing mutants"
+depends_on = ["R02"]
+gate = "B1"
+case_ids = ["BW-G2-020", "BW-G2-021", "BW-G6-021"]
+deliverable = "Port fixture vectors and preserve distinguishing mutants through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R36"
+title = "Grammar cost, cache reuse and decode telemetry"
+depends_on = ["R15", "R28"]
+gate = "B5"
+case_ids = []
+deliverable = "Grammar cost, cache reuse and decode telemetry through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R37"
+title = "Numerical, statistical and unreachable-target tests"
+depends_on = ["R17", "R18", "R19", "R20", "R21", "R36"]
+gate = "B7"
+case_ids = []
+deliverable = "Numerical, statistical and unreachable-target tests through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R38"
+title = "Adversarial scope and publication audit"
+depends_on = ["R09", "R12", "R26"]
+gate = "B7"
+case_ids = []
+deliverable = "Adversarial scope and publication audit through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R39"
+title = "Full inherited acceptance regression campaign"
+depends_on = ["R01", "R32"]
+gate = "B7"
+case_ids = []
+deliverable = "Full inherited acceptance regression campaign through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false
+
+[[ticket]]
+id = "R40"
+title = "Final enabled-capability report and reproducible release"
+depends_on = ["R32", "R33", "R37", "R38", "R39"]
+gate = "B8"
+case_ids = []
+deliverable = "Final enabled-capability report and reproducible release through the single production interpreter/native boundary, with distinguishing tests and retained evidence."
+completion_rule = "Implement and witness declared cases; empty primary-case ownership is integration work, not exemption from dependency/regression tests."
+status = "not_started"
+conditional_scope = false

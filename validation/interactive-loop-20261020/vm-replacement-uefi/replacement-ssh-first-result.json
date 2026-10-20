@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "iso_sha256": "a432129ef6d19441454b62b0e88a36c7488e9ad148a204b03ce80164d0c2753c",
+  "firmware": "UEFI",
+  "public_key_ssh": true,
+  "nonzero_exit": 23,
+  "scp_bytes": 16395,
+  "scp_sha256": "ff1904101c9114b12a4601108405e4fecd78a5482ef5b9bd974e58592262b572",
+  "filename": "spaces and caf?.bin",
+  "temporary_fixture_removed": true,
+  "installation": "NOT_RUN",
+  "time": 1792492719.4707787,
+  "unicode_scope": "NOT_EXERCISED: steering-shell stdin converted the literal accent to ?; binary transfer passed. Corrected using an ASCII Python escape in the next run."
+}

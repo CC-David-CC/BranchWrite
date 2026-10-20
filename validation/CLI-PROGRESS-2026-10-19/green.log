@@ -1,0 +1,10 @@
+test_broken_observer_does_not_abort_or_repeat_effect (test_progress.ProgressTests.test_broken_observer_does_not_abort_or_repeat_effect) ... ok
+test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen (test_progress.ProgressTests.test_cli_stderr_progress_preserves_json_stdout_and_offline_reopen) ... ok
+test_invalid_observer_rejected_before_admission (test_progress.ProgressTests.test_invalid_observer_rejected_before_admission) ... ok
+test_observer_not_in_identity_and_completed_reopen_is_quiet (test_progress.ProgressTests.test_observer_not_in_identity_and_completed_reopen_is_quiet) ... ok
+test_tool_progress_brackets_real_effect_without_payload (test_progress.ProgressTests.test_tool_progress_brackets_real_effect_without_payload) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.271s
+
+OK

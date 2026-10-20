@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "status": "BOUNDED_AUTONOMOUS_Q4_PASS_NOT_FULL_CATALOGUE_OR_G_VC_QUALIFICATION",
+  "goal": "push-button autonomous coding run via one .bw Interpreter",
+  "source_map": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-autonomous-gpu-source-v5.json",
+  "source_base": "84c4158aae6b69eb621e864fb9fcc6f64a9f223f",
+  "tests": {
+    "full_cpu": 512,
+    "G0": 51,
+    "failures": 0,
+    "skips": 0,
+    "raw_full_cpu": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-autonomous-full-cpu-run-v3",
+    "raw_g0": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-autonomous-g0-run-v1"
+  },
+  "real_gpu": {
+    "host": "llm-60",
+    "GPU": [
+      0
+    ],
+    "model": "Qwen3.8-Flash-Next UD-Q4_K_XL",
+    "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+    "prefix_consumed_tokens": 11113,
+    "worked_examples": 3,
+    "example_document_tokens": 10511,
+    "thinking_budget": 1024,
+    "sampler": {
+      "name": "minp-dry",
+      "settings": {
+        "dry_allowed_length": 2,
+        "dry_base": 1.75,
+        "dry_multiplier": 0.8,
+        "dry_penalty_last_n": 256,
+        "min_p": 0.05,
+        "temperature": 0.7,
+        "top_k": 60,
+        "top_p": 0.95
+      }
+    },
+    "cli_seconds": 47.009064969141036,
+    "cli_exit": 0,
+    "wrapper_exit": 0,
+    "actions": [
+      "read_file",
+      "replace",
+      "run_tests",
+      "finish"
+    ],
+    "consumed_output_tokens": [
+      64,
+      119,
+      25,
+      38
+    ],
+    "source_unchanged": true,
+    "independent_final_test_exit": 0,
+    "independent_final_test_stderr": "test_negative (tests.test_calc.Addition.test_negative) ... ok\ntest_ordinary (tests.test_calc.Addition.test_ordinary) ... ok\ntest_zero (tests.test_calc.Addition.test_zero) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+    "server_exit": 0,
+    "native_exit": 0,
+    "raw_result": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-autonomous-q4-smoke-v5/result.json",
+    "numerical_max_error": null,
+    "numerical_oracle": "NOT_RUN",
+    "performance_claim": "47s is a whole CLI task observation, not decode TPS",
+    "cache_storage": "tmpfs; no reboot durability test"
+  },
+  "failures_retained": [
+    "zero-shot wrong hash and driver read-witness loss, interrupted",
+    "three-example greedy repeated read despite replace thoughts, interrupted",
+    "mixed-schema token accounting error before model actions",
+    "task success followed by harness ProgressTracker.stop AttributeError, wrapper1; corrected repeat wrapper0"
+  ],
+  "lora_candidates_root": "/home/dflanag3/src/branchwrite-lora-examples/candidates",
+  "limitations": [
+    "one small code-repair task, not general autonomous coding qualification",
+    "sampler preset also changes temperature,Top-K and Top-P; no isolated per-filter attribution",
+    "unit-tests-and-finish policy does not protect against hostile candidate test-output forgery",
+    "advanced workflow verbs/images/client bootstrapping still incomplete",
+    "original cross-arrangement numerical scope accepted limitation; G1-G5 unqualified",
+    "no new Q8 or performance matrix; chat remains OFF"
+  ]
+}

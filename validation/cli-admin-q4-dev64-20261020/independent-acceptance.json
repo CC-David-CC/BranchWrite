@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "cli_exit": 0,
+  "prompt_sha256": "49cf271d6a3017cfd929b3c1f7e222ade7b393f9204cb7d01815a7981aa65da0",
+  "source_sha256": "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5",
+  "source_bytes": 1269,
+  "independent_acceptance": {
+    "published_path": "/var/www/html/dogs/index.html",
+    "url": "http://127.0.0.1/dogs/",
+    "status": 200,
+    "local_service_sha256": "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5",
+    "http_sha256": "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5",
+    "upload_sha256": "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5",
+    "original_home_sha256": "7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662",
+    "unrelated_sha256": "7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662"
+  },
+  "checks_passed": true,
+  "operator_candidate_edits": 0,
+  "elapsed_client_seconds": 490.44975190004334,
+  "profile": {
+    "branch": "bw-session-b1f610d61d8c3bf90b4ccf08f6432f92820f93e6",
+    "execution_profile_id": "5f488c1cc91d67422402a59ddf56efdd757593f3cd4300971380c15ba33876b7",
+    "mode": "append_user",
+    "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+    "revision": 15,
+    "root": "39cf9ac41b3d3db6f909767259ed4fea72c00737d461bd503579fa4b0d1be88c",
+    "tip": "0fb0d6ea13d7f521a384b2321911fea2f328ad9d7b76f75f98c21b918d399fde"
+  },
+  "scope": "actual installed dev64 CLI -> Q4 server -> pinned owned SSH VM -> exact upload/publication/HTTP; only guest-local URL reachability proven",
+  "original_audit": "retained NEEDS_INSPECTION: incorrectly assumed root homepage would be overwritten; this independent audit checks the actual permitted /dogs/ deployment and both preserved original files"
+}

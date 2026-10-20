@@ -1,0 +1,22 @@
+{
+  "status": "BOUNDED_CPU_CLI_HTTP_RECONCILIATION_PASS",
+  "tests": 9,
+  "added_tests": 3,
+  "failures": 0,
+  "skips": 0,
+  "server_commit": "d0610d46",
+  "scope": "Real BranchWrite CLI subprocess and HTTP; coordinator/server reconstruction with synthetic CPU model, not native process restart",
+  "assertions": [
+    "Original operation ID reconciled after reconstruction",
+    "Same behavior after all optional numerical checkpoint files removed",
+    "No model forward work, branch move or workflow-ledger change during reconciliation",
+    "Existing model step consumes recovered output locally",
+    "Unknown/uncommitted work stays unresolved"
+  ],
+  "baseline": "Original COW fails both new committed-recovery cases with CLI exit4; fixed COW passes all9",
+  "limitations": [
+    "Legacy publications without durable checkpoint metadata retain checkpoint-dependent replay; separate compatibility work",
+    "No real-GPU restart claimed",
+    "Durable aborted-operation settlement and automatic project-base freshness remain unfinished"
+  ]
+}

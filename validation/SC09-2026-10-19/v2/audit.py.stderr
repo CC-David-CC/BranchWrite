@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v2/audit.py", line 25, in <module>
+    assert p.returncode==0,p.stderr
+           ^^^^^^^^^^^^^^^
+AssertionError: test_each_duplicate_identity_is_rejected_before_effects (test_connection_admission.ConnectionAdmissionTests.test_each_duplicate_identity_is_rejected_before_effects) ... ok
+test_expression_is_not_executed (test_connection_admission.ConnectionAdmissionTests.test_expression_is_not_executed) ... ok
+test_valid_connection_still_prepares_exact_launch (test_connection_admission.ConnectionAdmissionTests.test_valid_connection_still_prepares_exact_launch) ... ERROR
+
+======================================================================
+ERROR: test_valid_connection_still_prepares_exact_launch (test_connection_admission.ConnectionAdmissionTests.test_valid_connection_still_prepares_exact_launch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v2/state/world/workspace/tests/test_connection_admission.py", line 26, in test_valid_connection_still_prepares_exact_launch
+    self.assertEqual(start(self.args),{'ok':True});run.assert_called_once()
+                     ~~~~~^^^^^^^^^^^
+  File "/home/dflanag3/spatial-artifacts/branchwrite-inline-task-20261019-v2/state/world/workspace/branchwrite/coding_cli.py", line 139, in start
+    task=args.task if args.task is not None else _source(args.task_file)
+                      ^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'task'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+FAILED (errors=1)
+

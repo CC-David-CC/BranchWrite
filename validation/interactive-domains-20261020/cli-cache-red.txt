@@ -1,0 +1,15 @@
+test_help_after_initial_import_keeps_actual_package_bytes_and_metadata (test_cli_runtime_immutability.CliRuntimeImmutabilityTests.test_help_after_initial_import_keeps_actual_package_bytes_and_metadata) ... FAIL
+
+======================================================================
+FAIL: test_help_after_initial_import_keeps_actual_package_bytes_and_metadata (test_cli_runtime_immutability.CliRuntimeImmutabilityTests.test_help_after_initial_import_keeps_actual_package_bytes_and_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_cli_runtime_immutability.py", line 20, in test_help_after_initial_import_keeps_actual_package_bytes_and_metadata
+    self.assertEqual(before,after,'parallel help changed the admitted runtime')
+AssertionError: {'/tm[368 chars]156, 60, 1792529465364438635, 1792529465364438[9926 chars]436)} != {'/tm[368 chars]156, 100, 1792529465388488709, 179252946538848[10201 chars]436)}
+Diff is 35802 characters long. Set self.maxDiff to None to see it. : parallel help changed the admitted runtime
+
+----------------------------------------------------------------------
+Ran 1 test in 0.057s
+
+FAILED (failures=1)

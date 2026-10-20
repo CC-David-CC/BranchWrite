@@ -1,0 +1,11 @@
+test_evidence_is_not_valid_for_unrelated_transform_contracts (test_tool_verification_feedback.VerificationFeedbackTests.test_evidence_is_not_valid_for_unrelated_transform_contracts) ... ok
+test_failed_finish_receives_real_verifier_reason_and_identity (test_tool_verification_feedback.VerificationFeedbackTests.test_failed_finish_receives_real_verifier_reason_and_identity) ... ok
+test_feedback_allowlist_does_not_export_protected_details (test_tool_verification_feedback.VerificationFeedbackTests.test_feedback_allowlist_does_not_export_protected_details) ... ok
+test_other_tool_outcome_cannot_borrow_an_earlier_verdict (test_tool_verification_feedback.VerificationFeedbackTests.test_other_tool_outcome_cannot_borrow_an_earlier_verdict) ... ok
+test_preflight_requires_an_already_bound_verification (test_tool_verification_feedback.VerificationFeedbackTests.test_preflight_requires_an_already_bound_verification) ... ok
+test_restart_reuses_recorded_verdict_without_running_verifier_again (test_tool_verification_feedback.VerificationFeedbackTests.test_restart_reuses_recorded_verdict_without_running_verifier_again) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.134s
+
+OK

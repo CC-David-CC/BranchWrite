@@ -1,0 +1,56 @@
+{
+  "total_samples": 1047,
+  "execution_worker_samples": 939,
+  "full_binding_hash_samples": 6,
+  "top_frames": [
+    [
+      "raw_decode (json/decoder.py:353)",
+      294
+    ],
+    [
+      "<genexpr> (context_time_travel/store.py:119)",
+      158
+    ],
+    [
+      "input_binding (context_time_travel/vision_execution.py:44)",
+      99
+    ],
+    [
+      "iterencode (json/encoder.py:258)",
+      83
+    ],
+    [
+      "compute_bitmask (context_time_travel/thinking_grammar.py:48)",
+      35
+    ],
+    [
+      "_compute_digest (context_time_travel/digest_attestation.py:21)",
+      25
+    ],
+    [
+      "_tokens (context_time_travel/store.py:119)",
+      23
+    ],
+    [
+      "native_tokens (context_time_travel/input_spans.py:109)",
+      20
+    ],
+    [
+      "<genexpr> (context_time_travel/input_spans.py:109)",
+      18
+    ],
+    [
+      "input_binding (context_time_travel/vision_execution.py:34)",
+      17
+    ],
+    [
+      "_prepared_checkpoint (context_time_travel/real.py:1146)",
+      15
+    ],
+    [
+      "input_binding (context_time_travel/vision_execution.py:43)",
+      14
+    ]
+  ],
+  "scope": "30s py-spy sample of live combined server, no locals; not controlled before/after latency"
+}

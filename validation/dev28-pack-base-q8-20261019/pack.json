@@ -1,0 +1,15 @@
+{
+  "status": "built",
+  "pack_id": "2501c30e442ef51d6a12b9d1c9051b2958342bf1ce0aa6b7126065993346c461",
+  "pack_path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev28-pack-base-q8-v1/packs/2501c30e442ef51d6a12b9d1c9051b2958342bf1ce0aa6b7126065993346c461",
+  "captured_at": "2026-10-20T01:15:12.937709Z",
+  "as_of": "2026-10-19T00:00:00Z",
+  "source_files": 3,
+  "source_bytes": 40848,
+  "prefix_bytes": 41779,
+  "limits": {
+    "max_files": 512,
+    "max_file_bytes": 8388608,
+    "max_total_bytes": 33554432
+  }
+}

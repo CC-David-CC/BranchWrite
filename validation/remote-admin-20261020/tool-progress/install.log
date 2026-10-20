@@ -1,0 +1,10 @@
+Processing ./spatial-artifacts/branchwrite-dev55-tool-progress-20261020/branchwrite-0.1.0.dev55-py3-none-any.whl
+Collecting prompt_toolkit==3.0.52 (from branchwrite==0.1.0.dev55)
+  Using cached prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting wcwidth (from prompt_toolkit==3.0.52->branchwrite==0.1.0.dev55)
+  Using cached wcwidth-0.9.3-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (23 kB)
+Using cached prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+Using cached wcwidth-0.9.3-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (770 kB)
+Installing collected packages: wcwidth, prompt_toolkit, branchwrite
+
+Successfully installed branchwrite-0.1.0.dev55 prompt_toolkit-3.0.52 wcwidth-0.9.3

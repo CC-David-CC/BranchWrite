@@ -1,0 +1,598 @@
+{
+  "schema": 1,
+  "status": "BOUNDED_AUTONOMOUS_H04_Q4_PASS_PREVIOUS_FAILURES_RETAINED",
+  "executed_client_commit": "c660854fb564ec6cac7bb22a5db218db02c7c407",
+  "client": "llm-49",
+  "inference": "llm-60 Q4 RTX PRO 6000 Blackwell GPU0",
+  "sampler": "unchanged DRY+Min-P default",
+  "thinking_budget": 1024,
+  "autonomous_catalog": {
+    "passed": [
+      "H00",
+      "H01",
+      "H02",
+      "H03",
+      "H04"
+    ],
+    "not_passed": [],
+    "unrun": [
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ]
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "FAIL",
+      "whole_cli_seconds": 340.81056574510876,
+      "cli_exit": 4,
+      "model_output_counts": [
+        60,
+        1197,
+        68,
+        1149
+      ],
+      "reason": "Bad model edit, then a nonmatching repair incorrectly admitted into the external-effect boundary"
+    },
+    {
+      "attempt": 2,
+      "status": "TIMEOUT",
+      "limit_seconds": 900,
+      "completed_model_outputs": 6,
+      "completed_output_tokens": 3715,
+      "actual_tools": [
+        "read_file",
+        "read_file",
+        "read_file"
+      ],
+      "rejected_edit_proposals": 3,
+      "source_unchanged": true,
+      "pending_original_intents": 1,
+      "reason": "Three incorrect copied source digests; no accepted edit before timeout",
+      "raw_result": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h04-driver-v2/result.json"
+    },
+    {
+      "attempt": 3,
+      "status": "PASS",
+      "whole_cli_seconds": 104.17745167692192,
+      "profile": "092f4c044df5365834addf220feb7464e13703239658c754513af9f557a0ce77",
+      "source_commit": "9fae1e2e749f77004343a5e230180407d788d372",
+      "output_token_counts": [
+        376,
+        824,
+        307,
+        51,
+        698
+      ],
+      "model_rejections": 0,
+      "summary_path": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h04-driver-v3/result-summary.json"
+    }
+  ],
+  "host_fix": {
+    "unit_regressions": 176,
+    "separate_unchanged_server_grammar_cpu_case": 1,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "actual_failed_repair_reproducer": "h04-original-reproducer-v1/result.json",
+    "post_write_uncertainty_preserved": true
+  },
+  "numerical_max_error": "NOT_MEASURED; this is not a fresh full-logit oracle campaign",
+  "limits": [
+    "Earlier failed attempts are retained; one fresh success does not establish that digest-copy errors cannot recur",
+    "Response phase timers overlap; do not add them or use failed-task versus passed-task duration as a controlled speed ratio",
+    "The old-profile lost-ack receipt and payload were verified; its CLI intent reconciliation/GPU restoration remain untested",
+    "H04 is a semantic workflow check without its own fresh full-vector oracle; separate new-profile tiny numerical/restart audit passed",
+    "Current source-bound profiles differ; no old checkpoint was silently imported into the new profile",
+    "Full G/VC/Q8 qualification and the rest of the autonomous catalog remain outstanding"
+  ],
+  "next_actions": [
+    "Back up passing run alongside original failures",
+    "Run autonomous H05 image-first layout repair",
+    "Keep digest-copy class and full G/VC/Q8 qualification open"
+  ],
+  "github_touched": false,
+  "latest_success": {
+    "schema": 1,
+    "status": "BOUNDED_AUTONOMOUS_H04_Q4_PASS",
+    "attempt": 3,
+    "executed_client_commit": "c660854fb564ec6cac7bb22a5db218db02c7c407",
+    "cow_source_commit": "9fae1e2e749f77004343a5e230180407d788d372",
+    "execution_profile_id": "092f4c044df5365834addf220feb7464e13703239658c754513af9f557a0ce77",
+    "profile_sha256": "79550b1143656babc7db523db34b71b160ff289cdca3bf6f33bb57d75b788272",
+    "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+    "model_weights_sha256": "32759e8867f3e52a7fa559761d003950dd4449e7e970a6de1550bc11c02b8827",
+    "client_host": "llm-49",
+    "inference_host": "llm-60",
+    "sampler": "unchanged DRY+Min-P default",
+    "thinking_budget": 1024,
+    "whole_cli_seconds": 104.17745167692192,
+    "offline_reopen_seconds": 0.40081304300110787,
+    "source_sha256": "3e0c9838343a6aed779ee5ab5f76e8d6b908b83103ff4f5bceb32263d55c71a5",
+    "source_bytes": 751,
+    "original_source_unchanged": true,
+    "semantic_diff": "One added style rule targets square a; all other source bytes retained",
+    "actual_tool_actions": [
+      {
+        "tool": "read_file",
+        "disposition": "read"
+      },
+      {
+        "tool": "replace",
+        "disposition": "applied"
+      },
+      {
+        "tool": "capture_page",
+        "disposition": "captured"
+      },
+      {
+        "tool": "read_file",
+        "disposition": "read"
+      },
+      {
+        "tool": "finish",
+        "disposition": "completion_requested"
+      }
+    ],
+    "output_token_counts": [
+      376,
+      824,
+      307,
+      51,
+      698
+    ],
+    "model_protocol_rejections": 0,
+    "source_code_changed_during_run": false,
+    "image": {
+      "schema": 1,
+      "status": "PASS",
+      "branch": "cross-host-page",
+      "snapshot": "c8d58a7325ea850cfd38d662cff0e64e2e6c26c26712aeb759864cd057b3f072",
+      "branch_receipt_match": true,
+      "namespace_id": "9faec888f314db1a08d602b597b92ddf",
+      "ordered_images": [
+        {
+          "embedding_bytes": 3072020,
+          "embedding_sha256": "21fa1b8d776905efa0de8bd76a058aaf44de2514ebe09c05f921bd1f31ee6e47",
+          "encoder_profile_id": "d0bbcd9621c23988113cc44246b79918f883037cdfa9b1934ec12a0eed5e2d3f",
+          "grid_height": 15,
+          "grid_width": 20,
+          "kind": "image",
+          "normalized_sha256": "9bf856b68aaedfa04898294719412c08fdee2b172a916d7a8bbada788713f8a7",
+          "original_sha256": "9bf856b68aaedfa04898294719412c08fdee2b172a916d7a8bbada788713f8a7",
+          "pad_token_id": 248056,
+          "rows": 300,
+          "width": 2560
+        }
+      ],
+      "native_vision": {
+        "status": "ok",
+        "vision_protocol": "explicit-image-rows-mrope-v3",
+        "enabled": true,
+        "consumed": 15700,
+        "rotary_cursor": 15420,
+        "position_sha256": "d085f0fd90c510fa5fb0a28e40f8a2757203c625b83840172019199a85419fb6",
+        "native_input_sha256": "03d2d200900a71fdb4552fd8e24f9ff9de9fe188245ae1ee2c787d0cb7d38d50",
+        "hot_image_snapshots": true,
+        "cold_image_snapshots": true,
+        "images": 1,
+        "image_rows": 300,
+        "vision_dry_protocol": "mixed-text-runs-dry-u53-v1",
+        "vision_dry_sampling_protocol": "mixed-text-runs-sampling-u53-v2",
+        "vision_sampling_protocols": [
+          "full-vocab-typical-dyna-min-p-u53-v4"
+        ],
+        "validated_embedding_bytes": 3072020,
+        "position_uploaded_bytes": 15335424
+      },
+      "native_command_counts": {
+        "stats": 4615,
+        "vision_info": 2286,
+        "reset": 1,
+        "feed": 5,
+        "capture": 6,
+        "pages": 6,
+        "logits": 6,
+        "": 2263,
+        "restore": 11,
+        "write": 6,
+        "ram_clear": 6,
+        "sample_mask_image_dry_v1": 2256,
+        "decode": 2256,
+        "feed_image": 1,
+        "quit": 1
+      },
+      "scope": "Canonical image and branch identities and actual native image rows; no fresh full-logit comparison"
+    },
+    "native_work": {
+      "schema": 1,
+      "source": "actual native close counters",
+      "trace_rows": 13725,
+      "final_counters": {
+        "consumed_tokens": 15700,
+        "checkpoint_export_bytes": 3496147212,
+        "checkpoint_import_bytes": 1298694672,
+        "contexts_created": 1,
+        "contexts_freed": 1,
+        "lease_acquires": 12,
+        "lease_releases": 12,
+        "frontier_read_bytes": 5959680,
+        "model_bytes_hashed_this_process": 0,
+        "model_file_hash_receipts_reused": 15,
+        "consumed": 15700,
+        "forward_tokens": 15700,
+        "prefill_tokens": 13444,
+        "prefill_chunks": 30,
+        "grammar_selection_calls": 0,
+        "grammar_selection_logit_bytes": 0,
+        "grammar_selection_mask_bytes": 0,
+        "sampling_calls": 2256,
+        "sampling_logit_bytes": 2240839680,
+        "sampling_mask_bytes": 70026240,
+        "sampling_ns": 2226196455,
+        "sampling_v2_calls": 0,
+        "sampling_v2_logit_bytes": 0,
+        "sampling_v2_mask_bytes": 0,
+        "sampling_v2_ns": 0,
+        "sampling_v3_calls": 0,
+        "sampling_v3_logit_bytes": 0,
+        "sampling_v3_mask_bytes": 0,
+        "sampling_v3_ns": 0,
+        "sampling_mixed_dry_calls": 2256,
+        "sampling_mixed_dry_ns": 2226196455,
+        "sampling_mixed_dry_logit_bytes": 2240839680,
+        "sampling_mixed_dry_mask_bytes": 70026240,
+        "sampling_v4_calls": 0,
+        "sampling_v4_logit_bytes": 0,
+        "sampling_v4_mask_bytes": 0,
+        "sampling_v4_ns": 0,
+        "sampling_image_dry_combination_calls": 0,
+        "sampling_v5_calls": 0,
+        "sampling_v5_logit_bytes": 0,
+        "sampling_v5_mask_bytes": 0,
+        "sampling_v5_ns": 0,
+        "sampling_mirostat2_calls": 0,
+        "sampling_mirostat2_logit_bytes": 0,
+        "sampling_mirostat2_mask_bytes": 0,
+        "sampling_mirostat2_ns": 0,
+        "sampling_adaptive_p_calls": 0,
+        "sampling_adaptive_p_logit_bytes": 0,
+        "sampling_adaptive_p_mask_bytes": 0,
+        "sampling_adaptive_p_ns": 0,
+        "sampling_v5_activation_draws": 0,
+        "sampling_v5_activated_calls": 0,
+        "sampling_v5_removed_candidates": 0,
+        "typical_filter_calls_v5": 0,
+        "dynatemp_filter_calls_v5": 0,
+        "dry_penalized_candidates_v5": 0,
+        "typical_filter_calls": 0,
+        "dynatemp_filter_calls": 0,
+        "dry_penalized_candidates_v4": 0,
+        "dry_penalized_candidates": 953,
+        "decode_prepare_ns": 1703620096,
+        "decode_compute_ns": 17652566821,
+        "decode_finish_ns": 148819774,
+        "decode_timed_tokens": 2256,
+        "windows": 2256,
+        "resident_expert_entries": 0,
+        "cpu_expert_entries": 0,
+        "pcie_expert_groups": 0,
+        "allocations": 384,
+        "releases": 0,
+        "live_bytes": 805306368,
+        "cow_pages": 180,
+        "copied_bytes": 377487360,
+        "mappings": 4476,
+        "unmappings": 4272,
+        "address_reservations": 252,
+        "address_releases": 180,
+        "vmm_driver_failures": 0,
+        "vmm_out_of_memory_failures": 0,
+        "vmm_last_driver_error": 0,
+        "vmm_last_failed_operation": "",
+        "audit_read_bytes": 0,
+        "integrity_checked_pages": 316344,
+        "integrity_mismatches": 0,
+        "integrity_last_mismatch_tile": 18446744073709551615,
+        "integrity_seal_allocations": 384,
+        "integrity_seal_releases": 0,
+        "integrity_seal_live_bytes": 6291456,
+        "integrity_seal_upload_bytes": 6291456,
+        "integrity_device_hashed_bytes": 664226758656,
+        "integrity_digest_copy_bytes": 49741824,
+        "integrity_plan_copy_bytes": 2509536,
+        "integrity_expected_seal_plan_copy_bytes": 2509536,
+        "integrity_compare_flag_init_bytes": 18088,
+        "integrity_compare_result_copy_bytes": 18088,
+        "integrity_plan_upload_ns": 39957452,
+        "integrity_page_hash_ns": 0,
+        "integrity_page_digest_download_ns": 0,
+        "integrity_seal_compare_ns": 1535057727,
+        "integrity_seal_result_download_ns": 25706092,
+        "integrity_compare_workspace_live_bytes": 9896,
+        "integrity_host_workspace_allocations": 1,
+        "integrity_host_workspace_live_bytes": 20250624,
+        "integrity_kernel_calls": 4721,
+        "integrity_workspace_allocations": 40,
+        "integrity_workspace_releases": 0,
+        "integrity_workspace_live_bytes": 29707592,
+        "binding_copy_bytes": 0,
+        "saved_running_bytes": 708378912,
+        "restored_running_bytes": 1298694672,
+        "written_file_bytes": 2787768300,
+        "loaded_file_bytes": 0,
+        "cold_restore_copy_bytes": 0,
+        "cold_restore_copy_calls": 0,
+        "captures": 6,
+        "restores": 11,
+        "handle_allocations": 6,
+        "handle_releases": 0,
+        "handle_live_entries": 6,
+        "handle_live_bytes": 240,
+        "handle_peak_bytes": 240,
+        "handle_issued": 6,
+        "handle_lookup_steps": 11,
+        "snapshot_allocations": 6,
+        "snapshot_releases": 0,
+        "snapshot_live_images": 6,
+        "snapshot_payload_capacity_bytes": 714657342,
+        "snapshot_peak_payload_capacity_bytes": 714657342,
+        "host_heap_allocated_bytes": 3958949584
+      }
+    },
+    "timing": {
+      "rows": [
+        {
+          "tool": "read_file",
+          "tokens": 376,
+          "request_seconds": 10.036673387978226,
+          "generation_seconds": 9.479622551938519,
+          "capture_seconds": 0.7167773630935699,
+          "native_decode_compute_seconds": 2.967864002
+        },
+        {
+          "tool": "replace",
+          "tokens": 824,
+          "request_seconds": 22.93511704192497,
+          "generation_seconds": 21.895846748026088,
+          "capture_seconds": 0.9373216480016708,
+          "native_decode_compute_seconds": 6.44317908
+        },
+        {
+          "tool": "capture_page",
+          "tokens": 307,
+          "request_seconds": 9.640651553869247,
+          "generation_seconds": 8.546245458070189,
+          "capture_seconds": 1.7216196851804852,
+          "native_decode_compute_seconds": 2.402836381
+        },
+        {
+          "tool": "read_file",
+          "tokens": 51,
+          "request_seconds": 3.117656569927931,
+          "generation_seconds": 1.4755839810241014,
+          "capture_seconds": 1.1008288550656289,
+          "native_decode_compute_seconds": 0.39844731
+        },
+        {
+          "tool": "finish",
+          "tokens": 698,
+          "request_seconds": 23.684601624961942,
+          "generation_seconds": 22.202239455888048,
+          "capture_seconds": 2.1411892531905323,
+          "native_decode_compute_seconds": 5.440240048
+        }
+      ],
+      "scope": "Actual response timing fields, nested/overlapping phases; do not add them or infer a controlled whole-workflow speed ratio from earlier failed runs"
+    },
+    "protected_inspections_passed": true,
+    "client_cleanup": {
+      "schema": 1,
+      "tunnel_absent": true,
+      "positive_pid_absent": true,
+      "offline_pid_absent": true,
+      "temporary_credentials_and_keys_removed": true
+    },
+    "server_cleanup": {
+      "schema": 1,
+      "server_exit": 0,
+      "native_exit": 0,
+      "owned_processes_absent": true,
+      "api_credentials_removed": true,
+      "temporary_authorized_key_removed": true,
+      "prior_authorized_keys_hash_restored": true,
+      "chat_server_restarted": false
+    },
+    "numerical_max_error": "NOT_MEASURED in H04; separate new-profile tiny102-vector GPU audit passed at zero error",
+    "scope": "One autonomous default-sampler page edit through real CLI/HTTP/native image path. No added examples or sampler/thinking change. Not full G/VC/Q8 certification",
+    "previous_failures_retained": [
+      "h04-driver-v1/failure-audit.json",
+      "h04-driver-v2/failure-audit.json"
+    ],
+    "limits": [
+      "Successful fresh attempt does not prove the earlier digest-copy model error is fixed",
+      "Task work and generated tokens differ from failed attempts; timing ratio is not a controlled speed comparison",
+      "No H04 fresh numerical oracle or GPU restart performed; separate tiny campaign has those bounded proofs"
+    ]
+  },
+  "attempt2_copy_errors": [
+    {
+      "proposal_sha256": "6addccf7efd0906ec42bfb5a1f692ab11cbdf2cd286d7a3cfe8a9cc79acbb2d7",
+      "source_digest_matches_observed": false
+    },
+    {
+      "proposal_sha256": "4a22be82130170f76be3ef9bcb149c0b844ea76528b41a43fb4289b5ef336b95",
+      "source_digest_matches_observed": false
+    },
+    {
+      "proposal_sha256": "7030e475df7fcab9b340615839d1435da151494a1951dfb69627f74eabe6e9ef",
+      "source_digest_matches_observed": false
+    }
+  ],
+  "attempt2_timing": {
+    "schema": 1,
+    "scope": "Completed response timing fields from the actual COW API; overlapping/nested phases are not added together; pending request excluded",
+    "rows": [
+      {
+        "tool": "read_file",
+        "tokens": 191,
+        "request_seconds": 6.544709264067933,
+        "generation_seconds": 4.780439283000305,
+        "capture_seconds": 3.0882556459400803,
+        "native_decode_compute_seconds": 1.517563335,
+        "prefill_tokens": 54,
+        "thinking_shape": "dict",
+        "thinking_keys": [
+          "complete",
+          "final_text",
+          "progress",
+          "reasoning_text",
+          "schema",
+          "snapshot"
+        ]
+      },
+      {
+        "tool": "replace",
+        "tokens": 898,
+        "request_seconds": 36.259915730915964,
+        "generation_seconds": 23.889517707983032,
+        "capture_seconds": 16.112200340023264,
+        "native_decode_compute_seconds": 7.033695862,
+        "prefill_tokens": 528,
+        "thinking_shape": "dict",
+        "thinking_keys": [
+          "complete",
+          "final_text",
+          "progress",
+          "reasoning_text",
+          "schema",
+          "snapshot"
+        ]
+      },
+      {
+        "tool": "read_file",
+        "tokens": 85,
+        "request_seconds": 34.318835698999465,
+        "generation_seconds": 2.3290726910345256,
+        "capture_seconds": 17.534626081818715,
+        "native_decode_compute_seconds": 0.670258621,
+        "prefill_tokens": 123,
+        "thinking_shape": "dict",
+        "thinking_keys": [
+          "complete",
+          "final_text",
+          "progress",
+          "reasoning_text",
+          "schema",
+          "snapshot"
+        ]
+      },
+      {
+        "tool": "replace",
+        "tokens": 1228,
+        "request_seconds": 80.52802308113314,
+        "generation_seconds": 35.62797773699276,
+        "capture_seconds": 38.323141671018675,
+        "native_decode_compute_seconds": 9.592104583,
+        "prefill_tokens": 529,
+        "thinking_shape": "dict",
+        "thinking_keys": [
+          "complete",
+          "final_text",
+          "progress",
+          "reasoning_text",
+          "schema",
+          "snapshot"
+        ]
+      },
+      {
+        "tool": "read_file",
+        "tokens": 667,
+        "request_seconds": 102.5342369149439,
+        "generation_seconds": 20.303698817966506,
+        "capture_seconds": 50.88170167710632,
+        "native_decode_compute_seconds": 5.236914594,
+        "prefill_tokens": 127,
+        "thinking_shape": "dict",
+        "thinking_keys": [
+          "complete",
+          "final_text",
+          "progress",
+          "reasoning_text",
+          "schema",
+          "snapshot"
+        ]
+      },
+      {
+        "tool": "replace",
+        "tokens": 646,
+        "request_seconds": 127.51283951103687,
+        "generation_seconds": 20.68433417705819,
+        "capture_seconds": 63.50478013791144,
+        "native_decode_compute_seconds": 5.017575761,
+        "prefill_tokens": 530,
+        "thinking_shape": "dict",
+        "thinking_keys": [
+          "complete",
+          "final_text",
+          "progress",
+          "reasoning_text",
+          "schema",
+          "snapshot"
+        ]
+      }
+    ],
+    "completed_response_tokens": 3715,
+    "summed_completed_request_seconds": 387.6985602010973,
+    "summed_completed_generation_seconds": 107.61504041403532,
+    "summed_native_decode_compute_seconds": 29.068112755999998,
+    "latency_attribution": "Incomplete; substantial time outside native decode computation and generation; no causal timing claim yet"
+  },
+  "attempt2_server_native_work": {
+    "total_generated_tokens": 4021,
+    "integrity_mismatches": 0,
+    "scope": "Includes last response not acknowledged by client"
+  },
+  "attempt2_lost_ack": {
+    "schema": 1,
+    "status": "SERVER_COMMITTED_RECEIPT_FOUND_CLIENT_ACK_MISSING",
+    "operation_id": "bwnative-403768f2f2958aa4b29535f2252a55acaecbc3cfe7ff9dac",
+    "presentation_digest": "eb9d1b002dd39e53214c03817a8f5d5ad036a8c420e28b6e6e849f7aca887ce2",
+    "checkpoint_receipt": {
+      "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "payload_sha256": "735ac3c8f297d1f69a7660323dbecbcf14911da06dd6af1f8d04d0a4882040c4",
+      "schema": 1,
+      "snapshot": "7a17b23bf6e54175e8cc4d7d429759238b5774e710695623c8037ee22fe0aa49"
+    },
+    "branch_result": {
+      "name": "cross-host-page",
+      "revision": 8,
+      "root": "66b146d190e50ca6563dec1f1e1bb62a376fff7d62a3e5e5aa827f44d995b434",
+      "tip": "7a17b23bf6e54175e8cc4d7d429759238b5774e710695623c8037ee22fe0aa49"
+    },
+    "payload_bytes": 569924532,
+    "payload_sha256_verified": "735ac3c8f297d1f69a7660323dbecbcf14911da06dd6af1f8d04d0a4882040c4",
+    "read_seconds": 0.42981289606541395,
+    "scope": "Read public hash-checked canonical receipts and actual saved bytes after server shutdown; no GPU restore or client-intent reconciliation attempted",
+    "no_generation_or_resend": true,
+    "storage": "Existing tmpfs store; not power-loss durable",
+    "profile": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-crosshost-h04-server-v2/receipt-read-profile.pstats"
+  },
+  "attempt2_cleanup": {
+    "schema": 1,
+    "server_exit": 0,
+    "native_exit": 0,
+    "owned_processes_absent": true,
+    "api_credentials_removed": true,
+    "temporary_authorized_key_removed": true,
+    "prior_authorized_keys_hash_restored": true,
+    "chat_server_restarted": false
+  }
+}

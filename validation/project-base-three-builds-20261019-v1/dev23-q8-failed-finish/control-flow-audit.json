@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "scope": "Forced early-finish control drill, not natural model failure or numerical qualification",
+  "frames": 52,
+  "all_frames_closed": true,
+  "initial_verdict": {
+    "commands": [
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "command_frame": null,
+        "disposition": "exited",
+        "exit_code": 0
+      }
+    ],
+    "outcome_operation_id": "bwtool-fa3c344446565b45ca68cddb55fd8bf2858f2aebe21596bc",
+    "planning_model_frame": "call-a58c3aea0d8928715d05f6ea0c3d9e6ed21d891b86ad4d12",
+    "policy": "command-evidence-and-finish",
+    "policy_identity": "f884279ec5f274dd5ef4a1cba7215ca4e7eb49bcbbec81233aaf9da1d89fac3a",
+    "reason": "required current command evidence missing",
+    "status": "fail",
+    "task_verdict": "verified_failure"
+  },
+  "final_verdict": {
+    "commands": [
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "command_frame": "call-8a71604bd069fb22941bcffa681f1a1d562d46e439667668",
+        "disposition": "exited",
+        "exit_code": 0
+      }
+    ],
+    "outcome_operation_id": "bwtool-28ac2ae8b9874f917ccc191508ed8e51620b79ef729299df",
+    "planning_model_frame": "call-df29f3d3c2896f2d6f9e40c7634d260c80be102661c6791e",
+    "policy": "command-evidence-and-finish",
+    "policy_identity": "f884279ec5f274dd5ef4a1cba7215ca4e7eb49bcbbec81233aaf9da1d89fac3a",
+    "reason": "current command evidence and retired namespaces matched",
+    "status": "pass",
+    "task_verdict": "verified_pass"
+  },
+  "thinking_rungs": [
+    0,
+    1
+  ],
+  "same_sampler": true,
+  "actions": [
+    "finish",
+    "read_file",
+    "read_file",
+    "replace",
+    "run_shell",
+    "finish"
+  ],
+  "fork": {
+    "branch": {
+      "name": "bw-plan-b4a6a9ecf0c36628d86bedf77b723564d04bd38c",
+      "revision": 0,
+      "root": "033f2dae6d008f4f168a5bee7f50bd44f506b82c279b4bfa1296334f3ee97a8d",
+      "tip": "033f2dae6d008f4f168a5bee7f50bd44f506b82c279b4bfa1296334f3ee97a8d"
+    },
+    "frame_key": {
+      "attempt_id": "attempt-d85a02d36e3f375ac14c2a3960ca252e16a79fb9eed27b2b-fork",
+      "branch": "bw-plan-b4a6a9ecf0c36628d86bedf77b723564d04bd38c",
+      "child_id": "call-d85a02d36e3f375ac14c2a3960ca252e16a79fb9eed27b2b-fork",
+      "epoch": 1,
+      "invocation_id": "call-d85a02d36e3f375ac14c2a3960ca252e16a79fb9eed27b2b-fork",
+      "operation_id": "bwfork-6296f904b7176263e01133a3dfa570329a8f572f67fe9e90",
+      "parent_id": "call-d85a02d36e3f375ac14c2a3960ca252e16a79fb9eed27b2b",
+      "result_slot_id": "fork",
+      "run_id": "dev23-failed-finish"
+    },
+    "operation_id": "bwfork-6296f904b7176263e01133a3dfa570329a8f572f67fe9e90",
+    "plan_sha256": "924f4986cbc0310450f6d9a64d4ee570aaa44cfa9df58aa7a8eeea328cb2781b",
+    "schema": 1,
+    "source_binding": {
+      "branch": "bw-plan-b4a6a9ecf0c36628d86bedf77b723564d04bd38c",
+      "endpoint_pin": "ssh-pinned-owned-llm60-api",
+      "operation_id": "bwfork-6296f904b7176263e01133a3dfa570329a8f572f67fe9e90",
+      "revision": 2,
+      "snapshot": "033f2dae6d008f4f168a5bee7f50bd44f506b82c279b4bfa1296334f3ee97a8d",
+      "source_branch": "dev23-failed-finish"
+    }
+  },
+  "failed_tip": "3da44a2aae4242e2694e83fd0adeea1bb65dd99c4d2e4b1efab227ee6261acc8",
+  "root": "033f2dae6d008f4f168a5bee7f50bd44f506b82c279b4bfa1296334f3ee97a8d",
+  "new_final_tip": "bbd2d35cd3bf868e74b5f7787dca29ddd4a568be0ce5c1732f7da325e08cc8e9"
+}

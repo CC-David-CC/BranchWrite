@@ -1,0 +1,10 @@
+test_code_can_prepare_git_checkout_without_copying_git_metadata (test_project_admission.ProjectAdmissionTests.test_code_can_prepare_git_checkout_without_copying_git_metadata) ... ok
+test_low_level_executor_still_rejects_git_administration (test_project_admission.ProjectAdmissionTests.test_low_level_executor_still_rejects_git_administration) ... ok
+test_project_copy_omits_nested_git_without_following_links (test_project_admission.ProjectAdmissionTests.test_project_copy_omits_nested_git_without_following_links) ... ok
+test_project_copy_still_rejects_other_links_and_bad_policy_types (test_project_admission.ProjectAdmissionTests.test_project_copy_still_rejects_other_links_and_bad_policy_types) ... ok
+test_project_launch_cannot_grant_git_administration (test_project_admission.ProjectAdmissionTests.test_project_launch_cannot_grant_git_administration) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.407s
+
+OK

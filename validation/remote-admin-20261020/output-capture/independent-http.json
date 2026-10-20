@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "http_status": 200,
+  "body_sha256": "fb47468a2cd3953c7131431991afcc6a2703f14640520102eea0a685a7e8d6de",
+  "nginx_welcome": true
+}

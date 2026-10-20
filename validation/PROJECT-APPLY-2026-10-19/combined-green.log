@@ -1,0 +1,22 @@
+test_destination_created_at_publication_is_preserved (test_project_apply.ProjectApplyTests.test_destination_created_at_publication_is_preserved) ... ok
+test_exact_copy_applied_without_touching_original (test_project_apply.ProjectApplyTests.test_exact_copy_applied_without_touching_original) ... ok
+test_existing_empty_destination_is_not_replaced (test_project_apply.ProjectApplyTests.test_existing_empty_destination_is_not_replaced) ... ok
+test_flush_failure_before_publication_leaves_no_output (test_project_apply.ProjectApplyTests.test_flush_failure_before_publication_leaves_no_output) ... ok
+test_overlapping_destination_is_rejected (test_project_apply.ProjectApplyTests.test_overlapping_destination_is_rejected) ... ok
+test_source_drift_is_rejected (test_project_apply.ProjectApplyTests.test_source_drift_is_rejected) ... ok
+test_wrong_archive_hash_is_rejected_before_output (test_project_apply.ProjectApplyTests.test_wrong_archive_hash_is_rejected_before_output) ... ok
+test_actual_cli_exports_without_changing_the_ledger (test_project_export.ProjectExportTests.test_actual_cli_exports_without_changing_the_ledger) ... ok
+test_complete_export_contains_exact_binary_and_text_bytes (test_project_export.ProjectExportTests.test_complete_export_contains_exact_binary_and_text_bytes) ... ok
+test_existing_destination_is_preserved (test_project_export.ProjectExportTests.test_existing_destination_is_preserved) ... ok
+test_export_cannot_write_into_original_project_or_run_state (test_project_export.ProjectExportTests.test_export_cannot_write_into_original_project_or_run_state) ... ok
+test_failed_review_creates_no_export (test_project_export.ProjectExportTests.test_failed_review_creates_no_export) ... ok
+test_binary_creation_and_exact_newline_flags (test_full_project_review.FullProjectReviewTests.test_binary_creation_and_exact_newline_flags) ... ok
+test_file_deletion_has_no_implicit_permission (test_full_project_review.FullProjectReviewTests.test_file_deletion_has_no_implicit_permission) ... ok
+test_mode_change_requires_mode_grant (test_full_project_review.FullProjectReviewTests.test_mode_change_requires_mode_grant) ... ok
+test_shell_written_edit_is_in_complete_review (test_full_project_review.FullProjectReviewTests.test_shell_written_edit_is_in_complete_review) ... ok
+test_ungranted_shell_write_is_rejected (test_full_project_review.FullProjectReviewTests.test_ungranted_shell_write_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.274s
+
+OK

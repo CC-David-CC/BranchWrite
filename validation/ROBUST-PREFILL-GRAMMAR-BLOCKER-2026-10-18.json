@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "status": "DIAGNOSTIC_COMPARISON_STOPPED_JSON_GRAMMAR_POLICY_DEFECT",
+  "branchwrite_source_executed": "fa7da85eeb14709ef4d2257311ce6c1a0ec64579",
+  "latest_cpu_tests": 148,
+  "cpu_failures": 0,
+  "cpu_errors": 0,
+  "cpu_skips": 0,
+  "standalone_transport_cases": 110,
+  "standalone_transport_commands": 205,
+  "old_root": {
+    "tokens_before_template": 12426,
+    "completed_cases": 10,
+    "exact_reports": 2,
+    "seconds": 530.2215032577515
+  },
+  "expanded_root": {
+    "tokens_before_template": 65290,
+    "completed_cases": 0,
+    "status": "OPERATOR_INTERRUPTED_NO_VERDICT"
+  },
+  "cause": "CPU matcher rejects valid standard Unicode escapes under old compiler policy; not valid evidence of intrinsic Q4 failure or examples ineffectiveness.",
+  "cow_fix_private_commit": "0c50aeb42c490740c90064e746edebd25d1f1f5b",
+  "cow_fix_scope": "CPU grammar/regressions/G0 only; fresh GPU retest outstanding",
+  "autonomous_L02": "NOT_RUN",
+  "raw_private_evidence": "box-git:/srv/data/git/private_context_cow.evidence/20261018-bw-robust-components-unicode-v1",
+  "files": {
+    "client_archive_sha256": "1a9ae1e3596ccbe3a34560a3793872e8bf1af98b3cf5b3a9048fea7817859df0",
+    "server_archive_sha256": "7e22dc5c13ef9df3725c6cd8d8ce1b4b37e0be180bf4d34e50dc0446ca85ccef"
+  },
+  "native_checkpoint_payloads": "OMITTED_EXPLICITLY_DERIVED_REPLAYABLE_NOT_NUMERICALLY_QUALIFIED",
+  "cleanup": "Native/server exit0; scoped SSH keys removed; credentials/private client key removed; chatOFF",
+  "source_pack": "55 teaching cases, five per11sections; heldout records remain separate.100K+requiresdifferent nativecapacity qualification.",
+  "limitations": [
+    "No model thought-length benefit established.",
+    "No training dataset approved from grammar-induced errors.",
+    "Original G/VC qualification incomplete."
+  ]
+}

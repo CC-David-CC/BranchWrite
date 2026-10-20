@@ -1,0 +1,22 @@
+usage: branchwrite [-h]
+                   {check,canonicalize,run,step,code,resume,apply,export,review,status,reconcile} ...
+
+Inspect .bw syntax or execute a host-authorized workflow.
+
+positional arguments:
+  {check,canonicalize,run,step,code,resume,apply,export,review,status,reconcile}
+    code                Start coding in an owned copy with explicit file
+                        grants.
+    resume              Resume a saved coding setup without changing its task
+                        or source.
+    apply               Apply a pinned export into a new owned project copy.
+    export              Export complete reviewed changes into a new archive.
+    review              Inspect recorded file-tool changes without
+                        publication.
+    status              Read recorded run status without execution or
+                        inference.
+    reconcile           Recover proven durable output for one pending model
+                        operation; does not advance the workflow.
+
+options:
+  -h, --help            show this help message and exit

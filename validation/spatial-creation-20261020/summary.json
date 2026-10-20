@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "cad_cpu": {
+    "tests": 52,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "blender_mcp_cpu": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "real_gpu_plate": {
+    "status": "PASS",
+    "build_attempts": 3,
+    "operator_candidate_edits": 0,
+    "client": "llm-49",
+    "gpu_server": "llm-60",
+    "numerical_oracle": "not part of this CAD workflow test"
+  },
+  "existing_regressions": {
+    "tests": 471,
+    "status": "PASS_ON_59b43055",
+    "latest_source_rerun": "PENDING"
+  },
+  "carrier_model": "NOT_RUN",
+  "blender_model": "NOT_RUN",
+  "certification": "G1-G5 not qualified"
+}

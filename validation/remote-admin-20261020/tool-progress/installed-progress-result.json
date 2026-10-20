@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "installed dev55 CLI, actual local file/shell check and offline idempotent reopen; no model or GPU",
+  "cli_exit": 0,
+  "check_verified": true,
+  "reopen_quiet": true,
+  "wheel_sha256": "76150e91d62328c6549ad63304d261b229e38feed2ef080a8eb3930863d0dcd0"
+}

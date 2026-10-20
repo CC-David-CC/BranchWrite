@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "scope": "Administrative HTTP preparation of three native Project Bases; not a BranchWrite coding comparison",
+  "bases": [
+    {
+      "label": "B-compact-selected",
+      "seconds": 74.35340564092621,
+      "receipt": {
+        "operation_id": "prepare-b-compact-selected-v4",
+        "branch": {
+          "name": "project-base-b-compact-selected",
+          "revision": 1,
+          "tip": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6",
+          "root": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6"
+        },
+        "snapshot": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6",
+        "raw": {
+          "branch": {
+            "name": "project-base-b-compact-selected",
+            "revision": 1,
+            "tip": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6",
+            "root": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6"
+          },
+          "snapshot": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6",
+          "payload_sha256": "3c1f1e7ced2798fd759b1de14b957ed54a529a74be2a349c239168c178e85526",
+          "model_contract_id": "3fcd9cfc2e977dbf56522e710cb3903e03ab00ca2ed5d0daa3d9f840edf5a833",
+          "execution_profile_id": "9b41fafe211adeb51b6c347190b1a13c17c9ee767069711dbd3dfd309d7f6e16"
+        }
+      },
+      "operation_id": "prepare-b-compact-selected-v4"
+    },
+    {
+      "label": "C-compact-examples",
+      "seconds": 120.19206350110471,
+      "receipt": {
+        "operation_id": "prepare-c-compact-examples-v4",
+        "branch": {
+          "name": "project-base-c-compact-examples",
+          "revision": 1,
+          "tip": "af0bce7f4682ff08128d5c81e4b28cf52decfe73220bf905cd5e3a9566ccf1da",
+          "root": "af0bce7f4682ff08128d5c81e4b28cf52decfe73220bf905cd5e3a9566ccf1da"
+        },
+        "snapshot": "af0bce7f4682ff08128d5c81e4b28cf52decfe73220bf905cd5e3a9566ccf1da",
+        "raw": {
+          "branch": {
+            "name": "project-base-c-compact-examples",
+            "revision": 1,
+            "tip": "af0bce7f4682ff08128d5c81e4b28cf52decfe73220bf905cd5e3a9566ccf1da",
+            "root": "af0bce7f4682ff08128d5c81e4b28cf52decfe73220bf905cd5e3a9566ccf1da"
+          },
+          "snapshot": "af0bce7f4682ff08128d5c81e4b28cf52decfe73220bf905cd5e3a9566ccf1da",
+          "payload_sha256": "2a4877e632e0077cf5b6f821b2a98cb3026dd76a62a16301bfd8e9d1ce4f9f42",
+          "model_contract_id": "3fcd9cfc2e977dbf56522e710cb3903e03ab00ca2ed5d0daa3d9f840edf5a833",
+          "execution_profile_id": "9b41fafe211adeb51b6c347190b1a13c17c9ee767069711dbd3dfd309d7f6e16"
+        }
+      },
+      "operation_id": "prepare-c-compact-examples-v4"
+    },
+    {
+      "label": "A-all-product-source",
+      "seconds": 401.49781691492535,
+      "receipt": {
+        "operation_id": "prepare-a-all-product-source-v4",
+        "branch": {
+          "name": "project-base-a-all-product-source",
+          "revision": 1,
+          "tip": "2c059bba47c94a3342618b2edcab9351e5ab188e359dc5df0e2fce8973b5208a",
+          "root": "2c059bba47c94a3342618b2edcab9351e5ab188e359dc5df0e2fce8973b5208a"
+        },
+        "snapshot": "2c059bba47c94a3342618b2edcab9351e5ab188e359dc5df0e2fce8973b5208a",
+        "raw": {
+          "branch": {
+            "name": "project-base-a-all-product-source",
+            "revision": 1,
+            "tip": "2c059bba47c94a3342618b2edcab9351e5ab188e359dc5df0e2fce8973b5208a",
+            "root": "2c059bba47c94a3342618b2edcab9351e5ab188e359dc5df0e2fce8973b5208a"
+          },
+          "snapshot": "2c059bba47c94a3342618b2edcab9351e5ab188e359dc5df0e2fce8973b5208a",
+          "payload_sha256": "12254c50d8ce7ac260dacec856f3e334a57bcd055a22f5dae0e4ab2572946a2b",
+          "model_contract_id": "3fcd9cfc2e977dbf56522e710cb3903e03ab00ca2ed5d0daa3d9f840edf5a833",
+          "execution_profile_id": "9b41fafe211adeb51b6c347190b1a13c17c9ee767069711dbd3dfd309d7f6e16"
+        }
+      },
+      "operation_id": "prepare-a-all-product-source-v4"
+    }
+  ],
+  "service_supervisor_pid": 719161,
+  "phase": "prefill-A-all-product-source",
+  "namespace_id": "9b9c325f1dfcbf75a1498bcdd64af701",
+  "service_exit": 0,
+  "elapsed_seconds": 676.6640988611616
+}

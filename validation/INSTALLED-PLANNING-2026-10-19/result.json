@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "installed_version": "0.1.0.dev18",
+  "admission_verdict_tests": 22,
+  "http_retry_tests": 9,
+  "provenance_tests": 8,
+  "total": 39,
+  "scope": "scripted ledger and real local HTTP with CPU fixture; no GPU failed-attempt qualification",
+  "initial_error": "test helper imported on client without server fixture; retained log, correct placement rerun"
+}

@@ -1,0 +1,25 @@
+test_cad_pass_cannot_hide_unrendered_pdf_page (test_domain_pdf_completion.DomainPdfCompletionTests.test_cad_pass_cannot_hide_unrendered_pdf_page) ... FAIL
+test_current_cad_cannot_hide_a_stale_pdf_build (test_domain_pdf_completion.DomainPdfCompletionTests.test_current_cad_cannot_hide_a_stale_pdf_build) ... FAIL
+
+======================================================================
+FAIL: test_cad_pass_cannot_hide_unrendered_pdf_page (test_domain_pdf_completion.DomainPdfCompletionTests.test_cad_pass_cannot_hide_unrendered_pdf_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_domain_pdf_completion.py", line 59, in test_cad_pass_cannot_hide_unrendered_pdf_page
+    def test_cad_pass_cannot_hide_unrendered_pdf_page(self):self.assertFalse(self.execute('cad',False))
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_current_cad_cannot_hide_a_stale_pdf_build (test_domain_pdf_completion.DomainPdfCompletionTests.test_current_cad_cannot_hide_a_stale_pdf_build)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_domain_pdf_completion.py", line 63, in test_current_cad_cannot_hide_a_stale_pdf_build
+    def test_current_cad_cannot_hide_a_stale_pdf_build(self):self.assertFalse(self.execute('cad',True,True))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 2 tests in 20.439s
+
+FAILED (failures=2)

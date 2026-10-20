@@ -1,0 +1,17 @@
+test_help_after_initial_import_keeps_actual_package_bytes_and_metadata (test_cli_runtime_immutability.CliRuntimeImmutabilityTests.test_help_after_initial_import_keeps_actual_package_bytes_and_metadata) ... ok
+test_precompiled_setup_allows_B_client_then_ordinary_help (test_cli_runtime_immutability.CliRuntimeImmutabilityTests.test_precompiled_setup_allows_B_client_then_ordinary_help) ... ok
+test_admitted_venv_module_mutation_is_still_rejected (test_python_runtime.SystemPythonRuntimeTests.test_admitted_venv_module_mutation_is_still_rejected) ... ok
+test_distro_venv_admits_and_executes_in_retired_isolation (test_python_runtime.SystemPythonRuntimeTests.test_distro_venv_admits_and_executes_in_retired_isolation) ... ok
+test_venv_link_to_unrelated_private_file_remains_rejected (test_python_runtime.SystemPythonRuntimeTests.test_venv_link_to_unrelated_private_file_remains_rejected) ... ok
+test_blender_work_uses_same_worker_and_plan_has_no_domain_execution (test_interactive_domains.InteractiveDomainTests.test_blender_work_uses_same_worker_and_plan_has_no_domain_execution) ... ok
+test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them (test_interactive_domains.InteractiveDomainTests.test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them) ... ok
+test_cli_session_exposes_operator_domain_configuration (test_interactive_domains.InteractiveDomainTests.test_cli_session_exposes_operator_domain_configuration) ... ok
+test_conflicting_domains_reject_before_session_state_creation (test_interactive_domains.InteractiveDomainTests.test_conflicting_domains_reject_before_session_state_creation) ... ok
+test_recovery_uses_original_domain_launch_without_regranting_new_work (test_interactive_domains.InteractiveDomainTests.test_recovery_uses_original_domain_launch_without_regranting_new_work) ... ok
+test_reopen_with_new_domain_preserves_files_tip_and_previous_launch (test_interactive_domains.InteractiveDomainTests.test_reopen_with_new_domain_preserves_files_tip_and_previous_launch) ... ok
+test_saved_exports_are_visible_and_survive_session_reopen (test_interactive_domains.InteractiveDomainTests.test_saved_exports_are_visible_and_survive_session_reopen) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.961s
+
+OK

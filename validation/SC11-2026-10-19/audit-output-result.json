@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "changed": [
+    "command_summary.py"
+  ],
+  "independent_generated_cases": 200,
+  "seed": 11319,
+  "original_source_and_git_unchanged": true,
+  "protected_tests_unchanged": true,
+  "isolated_executor": true
+}

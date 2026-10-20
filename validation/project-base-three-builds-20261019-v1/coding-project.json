@@ -1,0 +1,10 @@
+{
+  "worktree": "/home/dflanag3/src/branchwrite-q8-base-choice-candidate-20261019",
+  "project": "/home/dflanag3/src/branchwrite-q8-base-choice-candidate-20261019/candidate_project",
+  "source_revision": "8270a0ffd67178cbd53d2711a85e1a5ba8cb1891",
+  "branch": "candidate/q8-project-base-choice-20261019",
+  "create_path": "branchwrite/base_choice.py",
+  "test_command": "python3 -m unittest discover -s tests -v",
+  "attempt_limit": 4,
+  "scope": "prepared only; no Q8 attempt yet"
+}

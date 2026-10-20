@@ -1,0 +1,28 @@
+.EF
+======================================================================
+ERROR: test_model_chosen_names_and_nested_directories_reach_review_export (tests.test_project_scope_review.ProjectScopeReviewTests.test_model_chosen_names_and_nested_directories_reach_review_export)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_scope_review.py", line 38, in test_model_chosen_names_and_nested_directories_reach_review_export
+    self.complete(edit);review=inspect_changes(self.state)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/coding_review.py", line 56, in inspect_changes
+    raise ValueError('workspace differs from the last successful command inventory')
+ValueError: workspace differs from the last successful command inventory
+
+======================================================================
+FAIL: test_project_file_scope_does_not_silently_grant_deletion (tests.test_project_scope_review.ProjectScopeReviewTests.test_project_file_scope_does_not_silently_grant_deletion)
+----------------------------------------------------------------------
+ValueError: workspace differs from the last successful command inventory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_scope_review.py", line 48, in test_project_file_scope_does_not_silently_grant_deletion
+    with self.assertRaisesRegex(ValueError,'deletion'):inspect_changes(self.state)
+AssertionError: "deletion" does not match "workspace differs from the last successful command inventory"
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.048s
+
+FAILED (failures=1, errors=1)

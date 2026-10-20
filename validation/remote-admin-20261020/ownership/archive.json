@@ -1,0 +1,9 @@
+{
+  "archive": "/home/dflanag3/spatial-artifacts/branchwrite-dev46-ownership-20261020.tar.gz",
+  "bytes": 538261,
+  "sha256": "a398816b6edff6c6f1af9a9be146d771814a4a6c266cc1e67a60e072e88ba07d",
+  "excludes": [
+    "venv",
+    "*.pyc"
+  ]
+}

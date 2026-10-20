@@ -1,0 +1,79 @@
+{
+  "scanner": "gitleaks8.30.1",
+  "raw_scanner_exit": 1,
+  "raw_findings": 10,
+  "unresolved": 0,
+  "reviewed_findings": [
+    {
+      "file": "provenance/LINE-FILE-TOOLS-CPU-2026-10-18.json",
+      "line": 10,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "explicit artifact/source/token fingerprint"
+    },
+    {
+      "file": "docs/STANDALONE_CODING_STATUS.md",
+      "line": 42,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "elapsed numerical measurement"
+    },
+    {
+      "file": "validation/IMAGE_LOST_ACK_Q4_2026-10-17.json",
+      "line": 76,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "explicit artifact/source/token fingerprint"
+    },
+    {
+      "file": "validation/PROJECT-BASE-THREE-BUILDS-2026-10-19/profile-196608.json",
+      "line": 181,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "explicit artifact/source/token fingerprint"
+    },
+    {
+      "file": "validation/PROJECT-BASE-THREE-BUILDS-2026-10-19/profile-196608.json",
+      "line": 412,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "explicit artifact/source/token fingerprint"
+    },
+    {
+      "file": "validation/SC15-2026-10-19/STATUS.md",
+      "line": 7,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "elapsed numerical measurement"
+    },
+    {
+      "file": "validation/SC20-2026-10-19/STATUS.md",
+      "line": 5,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "elapsed numerical measurement"
+    },
+    {
+      "file": "validation/SC08-2026-10-19/initial-prefix-checkpoint-manifest.json",
+      "line": 1,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "explicit artifact/source/token fingerprint"
+    },
+    {
+      "file": "validation/project-base-three-builds-20261019-v1/profile-262144.json",
+      "line": 181,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "explicit artifact/source/token fingerprint"
+    },
+    {
+      "file": "validation/project-base-three-builds-20261019-v1/profile-262144.json",
+      "line": 412,
+      "rule": "generic-api-key",
+      "disposition": "reviewed noncredential",
+      "reason": "explicit artifact/source/token fingerprint"
+    }
+  ],
+  "scope": "pattern scan plus contextual triage, not proof of absence of every possible secret"
+}

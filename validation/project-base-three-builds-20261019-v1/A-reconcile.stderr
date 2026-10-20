@@ -1,0 +1,2 @@
+branchwrite: unresolved original operation 'bwnative-5dc87067b1f64c311061891faa538b21276077415da6de36'; reconcile before continuing
+Use branchwrite reconcile STATE --operation-id ORIGINAL_ID, then branchwrite resume STATE. Unknown work remains unresolved.

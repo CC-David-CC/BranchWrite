@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "methods": 51,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "scope": "Actual CLI subprocesses and authenticated local COW HTTP, CPU inference fixture; real filesystem publication checks",
+  "server_source": "895251441266dda1dd4d6437d98fda7251027b68",
+  "checked": [
+    "Frozen setup rejects changed task arguments",
+    "Same original operation from separate state reuses server result",
+    "Catalog reconstruction and identical retries add zero model work",
+    "Changed existing catalog not overwritten",
+    "Private immutable publication and alias rejection"
+  ],
+  "not_qualified": [
+    "Actual lost namespace/context acknowledgment or process-kill recovery campaign for this new command",
+    "Real-Q8 prepare-base campaign",
+    "Installed package including this command",
+    "Automatic refresh/adoption and full standalone-agent completion"
+  ]
+}

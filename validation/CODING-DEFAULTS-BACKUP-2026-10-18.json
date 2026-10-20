@@ -1,0 +1,8 @@
+{
+  "status": "RECEIVER_VERIFIED_EVERY_MEMBER",
+  "archive": "/srv/data/git/private_context_cow.evidence/20261018-bw-coding-defaults-v1/evidence.tar.gz",
+  "bytes": 276461,
+  "sha256": "8a81ea1a48180f29657ffa9b6bd5af683e7ab5ec8b81dd0c4d5d2bd93b29df3b",
+  "manifest_sha256": "b1ac744a88bf09150e850275f7c637cbf01c2804d876b45671954fd82eb49b7f",
+  "members": 180
+}

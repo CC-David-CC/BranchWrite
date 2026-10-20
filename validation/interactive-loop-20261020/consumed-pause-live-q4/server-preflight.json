@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "source": {
+    "status": "verified",
+    "files": 58,
+    "files_sha256": "6640a96f81ea8a89da9ca11c26494671f8db8fe3f9208c2ec2d3b1f669a8404d",
+    "declared_source_commit": "780e824a"
+  },
+  "model": {
+    "model_bytes_hashed_this_process": 0,
+    "model_file_hash_receipts_reused": 15
+  },
+  "execution_profile_id": "3020f9c9c2e9602074a4c2ee32923a07471e29682b0a28f349963d96ed02e227"
+}

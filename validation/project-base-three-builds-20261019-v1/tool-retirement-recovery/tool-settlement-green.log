@@ -1,0 +1,12 @@
+test_altered_retirement_proof_is_rejected (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_altered_retirement_proof_is_rejected) ... ok
+test_changed_registry_cannot_settle_prior_effect (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_changed_registry_cannot_settle_prior_effect) ... ok
+test_completed_replay_has_no_new_event (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_completed_replay_has_no_new_event) ... ok
+test_effect_without_durable_return_is_not_recovered_by_file_contents (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_effect_without_durable_return_is_not_recovered_by_file_contents) ... ok
+test_known_preflight_rejection_also_has_explicit_settlement (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_known_preflight_rejection_also_has_explicit_settlement) ... ok
+test_recorded_retired_result_resumes_without_reexecution (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_recorded_retired_result_resumes_without_reexecution) ... ok
+test_unproven_settling_result_stays_unresolved (test_tool_settlement_recovery.ToolSettlementRecoveryTests.test_unproven_settling_result_stays_unresolved) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.116s
+
+OK

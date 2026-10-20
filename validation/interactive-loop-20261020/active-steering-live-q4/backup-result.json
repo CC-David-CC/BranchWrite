@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "archive": "/home/dflanag3/spatial-artifacts/branchwrite-interactive-evidence-20261020/dev40-active-steering-browser.tar.gz",
+  "bytes": 559244,
+  "sha256": "7c800e7e30eadb329348c893eced7c1358bfc67f4aa8d7f6f0b3c044d9af8692",
+  "private_backup": "box-git:/srv/data/git/private_context_cow.evidence/branchwrite-interactive-20261020/dev40-active-steering-browser.tar.gz",
+  "remote_sha256": "7c800e7e30eadb329348c893eced7c1358bfc67f4aa8d7f6f0b3c044d9af8692",
+  "includes_credentials": false
+}

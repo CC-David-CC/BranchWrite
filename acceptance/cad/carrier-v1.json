@@ -1,0 +1,29 @@
+{
+  "schema": "bw.module-carrier.v1",
+  "units": "mm",
+  "frame": "assembled; centered XY; base bottom Z=0; carrier bottom at pocket floor",
+  "parts": [
+    "base",
+    "carrier"
+  ],
+  "key": "positive-X centered-Y",
+  "additional_features": false,
+  "dimensions": {
+    "base_x": 120,
+    "base_y": 80,
+    "base_z": 6,
+    "carrier_x": 80,
+    "carrier_y": 50,
+    "carrier_z": 4,
+    "seat_depth": 2,
+    "clearance": 0.3,
+    "key_depth": 3,
+    "key_width": 8,
+    "module_hole_x": 60,
+    "module_hole_y": 30,
+    "module_hole_d": 4,
+    "base_hole_x": 100,
+    "base_hole_y": 60,
+    "base_hole_d": 6
+  }
+}

@@ -1,0 +1,13 @@
+test_failed_finish_binds_original_proposal_not_latest_unrelated_model (test_thinking_plan_context.FinishPlanningProvenanceTests.test_failed_finish_binds_original_proposal_not_latest_unrelated_model) ... ok
+test_manual_finish_does_not_borrow_a_model_planning_origin (test_thinking_plan_context.FinishPlanningProvenanceTests.test_manual_finish_does_not_borrow_a_model_planning_origin) ... ok
+test_context_changes_frozen_plan_and_rejects_wrong_named_grammar (test_thinking_plan_context.ModelThinkingPlanContextTests.test_context_changes_frozen_plan_and_rejects_wrong_named_grammar) ... ok
+test_existing_plan_without_context_roundtrips_without_added_field (test_thinking_plan_context.ModelThinkingPlanContextTests.test_existing_plan_without_context_roundtrips_without_added_field) ... ok
+test_invalid_rung_duplicate_failures_or_foreign_mode_are_rejected (test_thinking_plan_context.ThinkingPlanContextTests.test_invalid_rung_duplicate_failures_or_foreign_mode_are_rejected) ... ok
+test_lite_context_uses_its_own_rungs_without_changing_standard (test_thinking_plan_context.ThinkingPlanContextTests.test_lite_context_uses_its_own_rungs_without_changing_standard) ... ok
+test_missing_or_extra_context_fields_are_rejected (test_thinking_plan_context.ThinkingPlanContextTests.test_missing_or_extra_context_fields_are_rejected) ... ok
+test_valid_context_is_detached_with_exact_rung_and_failure_count (test_thinking_plan_context.ThinkingPlanContextTests.test_valid_context_is_detached_with_exact_rung_and_failure_count) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.289s
+
+OK

@@ -1,0 +1,18 @@
+{
+  "source": "ab41320789d6f2e769629c79d71a72761c7dc605",
+  "cow": "6647ae4637cf43ea356cfb1bc799722238212434",
+  "pythonpath": "/home/dflanag3/spatial-artifacts/branchwrite-auto-base-http-20261019-v1/source:/home/dflanag3/src/context-cow-persistent-operation-status-20261019:/home/dflanag3/src/context-cow-persistent-operation-status-20261019/tools:/home/dflanag3/src/context-cow-persistent-operation-status-20261019/experimental/branching_context/src:/home/dflanag3/src/context-cow-persistent-operation-status-20261019/experimental/branching_context/tests/implementation:/home/dflanag3/spatial-artifacts/grammar-first-20261016-v1/deps",
+  "modules": [
+    "test_auto_base_choice",
+    "test_base_choice",
+    "test_base_choice_launch",
+    "test_base_choice_http",
+    "test_context_pack_refresh_http",
+    "test_project_base_pack",
+    "test_project_base_questions",
+    "test_tool_settlement_recovery",
+    "test_tool_settlement_cli",
+    "test_client_doctor"
+  ],
+  "exit": 0
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "ledger_unchanged": true,
+  "result": {
+    "events": 239,
+    "frame_operations": {
+      "ACT": 4,
+      "EXPAND": 9,
+      "FLOW": 56,
+      "OBSERVE": 4,
+      "TRANSFORM": 1
+    },
+    "frame_states": {
+      "Closed": 74
+    },
+    "pending_operations": [],
+    "program_sha256": "fbbf4f7fd660b18eae217012adc009a98236adc75dcfe1d251d89ee3822b034f",
+    "recorded_verified": true,
+    "schema": 1,
+    "state": "Closed",
+    "workspace_rechecked": false
+  }
+}

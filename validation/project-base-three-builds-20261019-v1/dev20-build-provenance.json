@@ -1,0 +1,11 @@
+{
+  "source_revision": "9b85f63f3fb82ed3fd5ebd5e0934cc1fd4c93d27",
+  "wheel": "branchwrite-0.1.0.dev20-py3-none-any.whl",
+  "wheel_sha256": "4ebd9ad724b66230af7777489c8bd9e7d5814ef8ec23ca6c053f9179bbefb815",
+  "build_tools": {
+    "setuptools": "78.1.1",
+    "wheel": "0.46.3"
+  },
+  "initial_build": "old client venv lacks setuptools; retained build.log",
+  "status": "BUILT_INSTALLED_NOT_GPU_QUALIFIED"
+}

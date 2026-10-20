@@ -1,0 +1,21 @@
+test_changed_source_excludes_stale_base_and_selects_fresh_alternative (test_base_pack_freshness.BasePackFreshnessTests.test_changed_source_excludes_stale_base_and_selects_fresh_alternative) ... ok
+test_explicit_choice_cannot_bypass_source_freshness (test_base_pack_freshness.BasePackFreshnessTests.test_explicit_choice_cannot_bypass_source_freshness) ... ok
+test_fresh_pack_bound_base_is_selected_and_binding_preserved (test_base_pack_freshness.BasePackFreshnessTests.test_fresh_pack_bound_base_is_selected_and_binding_preserved) ... ok
+test_incompatible_pack_is_not_opened (test_base_pack_freshness.BasePackFreshnessTests.test_incompatible_pack_is_not_opened) ... ok
+test_pack_catalog_does_not_fall_back_to_unverified_legacy_entry (test_base_pack_freshness.BasePackFreshnessTests.test_pack_catalog_does_not_fall_back_to_unverified_legacy_entry) ... FAIL
+test_partial_binding_and_relative_pack_path_rejected (test_base_pack_freshness.BasePackFreshnessTests.test_partial_binding_and_relative_pack_path_rejected) ... ok
+test_wrong_pack_identity_fails_without_fallback (test_base_pack_freshness.BasePackFreshnessTests.test_wrong_pack_identity_fails_without_fallback) ... ok
+
+======================================================================
+FAIL: test_pack_catalog_does_not_fall_back_to_unverified_legacy_entry (test_base_pack_freshness.BasePackFreshnessTests.test_pack_catalog_does_not_fall_back_to_unverified_legacy_entry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_pack_freshness.py", line 31, in test_pack_catalog_does_not_fall_back_to_unverified_legacy_entry
+    with self.assertRaisesRegex(ValueError,'no compatible'):self.choose([self.row,base('2')])
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.009s
+
+FAILED (failures=1)

@@ -1,0 +1,10 @@
+{
+  "status": "BOUNDED_CPU_HTTP_PASS",
+  "combined_tests": 11,
+  "worktree_tests": 3,
+  "shared_history_test": 1,
+  "counts_overlap": true,
+  "scope": "real Git worktrees, real OS tool worlds and local HTTP/CPU COW Store; no GPU sharing/autonomous decomposition qualification",
+  "source_semantic_changes": "none required for existing worktree isolation",
+  "remaining": "host role-prefix binding and ready-step admission through existing FrameKernel"
+}

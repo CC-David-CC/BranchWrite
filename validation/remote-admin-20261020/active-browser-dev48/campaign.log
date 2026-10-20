@@ -1,0 +1,11 @@
+{"phase": "active-steering", "elapsed": 30.03511897404678, "steered": true, "pause_ack": false, "safe_boundary": false, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 60.07238893804606, "steered": true, "pause_ack": false, "safe_boundary": false, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 90.17250207206234, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 120.20650370197836, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 150.27938291698229, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 180.3125274280319, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 210.34584952704608, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 240.44110558996908, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 270.4756083219545, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 300.4896795100067, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}
+{"phase": "active-steering", "elapsed": 330.53219494002406, "steered": true, "pause_ack": false, "safe_boundary": true, "pid": 2431628}

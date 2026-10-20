@@ -1,0 +1,239 @@
+{
+  "status": "TEXT_ARTIFACTS_BUILT",
+  "source_revision": "8270a0ffd67178cbd53d2711a85e1a5ba8cb1891",
+  "source_files": 43,
+  "source_bytes": 550887,
+  "source_closure": {
+    "branchwrite/__init__.py": {
+      "bytes": 42,
+      "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+    },
+    "branchwrite/__main__.py": {
+      "bytes": 7409,
+      "sha256": "526c3bac71a1fcce50cee5909ba768736c4b396412c762f65ef47d98c6ce5211"
+    },
+    "branchwrite/browser_assets.py": {
+      "bytes": 2711,
+      "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+    },
+    "branchwrite/browser_capture.py": {
+      "bytes": 19255,
+      "sha256": "fe2cf850c0fda370fd286e5e9907aaeaa8607d3bb1bb21c88b5efb03160dfdec"
+    },
+    "branchwrite/browser_isolation.py": {
+      "bytes": 9288,
+      "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+    },
+    "branchwrite/browser_worker.py": {
+      "bytes": 4088,
+      "sha256": "d37e44545734c614c053a37c2dc77a57f90c9dbc26b8789d26022c8cad6b1fe1"
+    },
+    "branchwrite/coding_cli.py": {
+      "bytes": 11314,
+      "sha256": "72a41cbd5cf251affd3254adc6737890fc876513150d6a65b1efc328d01a1e4c"
+    },
+    "branchwrite/coding_contract.py": {
+      "bytes": 4716,
+      "sha256": "4c0f0435523dbc8d8f4e45553ac5068dd09bd2f549e99d6b1732ca747f952eac"
+    },
+    "branchwrite/coding_defaults.py": {
+      "bytes": 12697,
+      "sha256": "6e3663b17ae9dbd8b26f8491a01c5453926fa6b3ecc8cbffb9530a00f2e0fe8e"
+    },
+    "branchwrite/coding_reconciliation.py": {
+      "bytes": 4089,
+      "sha256": "d87dc474ae8e58c7d62ab39311198c98a72df5930ae151debb5630f8860ee0c4"
+    },
+    "branchwrite/coding_review.py": {
+      "bytes": 9985,
+      "sha256": "38201f5dd50dbc2d4bde1c5318efb9adc6adda2bbcd9380e90ff31f5c7864d1b"
+    },
+    "branchwrite/coding_status.py": {
+      "bytes": 5308,
+      "sha256": "ec5fb53d721d5029e939c0fb892282dc399bb51a0a854b45bd28ffde463cb43c"
+    },
+    "branchwrite/command_outputs.py": {
+      "bytes": 11868,
+      "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+    },
+    "branchwrite/component_model.py": {
+      "bytes": 8369,
+      "sha256": "cdfa18438cff524f9a37a3e44dac0351eda736fb6222c93a7fb37f36c4901b5b"
+    },
+    "branchwrite/context_pack.py": {
+      "bytes": 22832,
+      "sha256": "eef9e480df1cc1561bafbd1c25a5b3b4e2f3cf31c8a724defab671afdc3b2c75"
+    },
+    "branchwrite/control_contract.py": {
+      "bytes": 2125,
+      "sha256": "69982583752013c32270932b7e5cf1cb5e03d0afb9691d7c3dc88948bb9270e6"
+    },
+    "branchwrite/cow_actions.py": {
+      "bytes": 3351,
+      "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+    },
+    "branchwrite/cow_client.py": {
+      "bytes": 80486,
+      "sha256": "4ae860ed042d5039747a081d8ca2a7ca7161d299c26ca1d1dcea12c6f46a0ced"
+    },
+    "branchwrite/cow_fork.py": {
+      "bytes": 6080,
+      "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+    },
+    "branchwrite/execution.py": {
+      "bytes": 50014,
+      "sha256": "3420e5685b4f71baf687b584b802cdaa1f958199b88f39f1912bca370a9d4836"
+    },
+    "branchwrite/golden_path.py": {
+      "bytes": 11017,
+      "sha256": "5c109e256bb3bf398884450f9f9b8f03838dec602be56f9da82159030ea301c7"
+    },
+    "branchwrite/image_feedback.py": {
+      "bytes": 5412,
+      "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+    },
+    "branchwrite/interpreter.py": {
+      "bytes": 39205,
+      "sha256": "9331163d1e5f52a82f6cfa4083a0616834807835c6efe17be9e90bcf5cde513b"
+    },
+    "branchwrite/kernel.py": {
+      "bytes": 16495,
+      "sha256": "106a3a564e0ee5bb190e7a6c3c246336e4c4b91a93df906110e930c02b6a8521"
+    },
+    "branchwrite/language.py": {
+      "bytes": 9266,
+      "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+    },
+    "branchwrite/model_dispatch.py": {
+      "bytes": 21138,
+      "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+    },
+    "branchwrite/model_inputs.py": {
+      "bytes": 1730,
+      "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+    },
+    "branchwrite/planning_retry.py": {
+      "bytes": 7728,
+      "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+    },
+    "branchwrite/project_apply.py": {
+      "bytes": 10338,
+      "sha256": "a081f1dd0a8a1632b09c63e1456823d0c42bc0e7deef655cf1bf61a91d94cda8"
+    },
+    "branchwrite/project_baseline.py": {
+      "bytes": 4341,
+      "sha256": "72da8ff7ace695a809a0cf341f8b86d85e2166e8acb9dc08a5bf153ae44c4621"
+    },
+    "branchwrite/project_export.py": {
+      "bytes": 3415,
+      "sha256": "93eb7d71362984038f95801094cc49e82ea599371459b7529bb024207d0fad9e"
+    },
+    "branchwrite/project_scope.py": {
+      "bytes": 3116,
+      "sha256": "8977522dd1d76e73721b47a48688abc7517e4998338068613b554c2062e9c64a"
+    },
+    "branchwrite/records.py": {
+      "bytes": 13828,
+      "sha256": "600d0093a8c1768be967e627627a40c244233c118d39fcd24979a76e55b2f677"
+    },
+    "branchwrite/run_cli.py": {
+      "bytes": 21343,
+      "sha256": "19c26289a922d0c01eef46b866a4ef5dd31575df785e65fa388d06117a8d8b12"
+    },
+    "branchwrite/task_breakdown.py": {
+      "bytes": 3083,
+      "sha256": "0abd71f9c2077413ddc4ee0bfbf594399264eff23631d4b51bbc5d51817ea6f3"
+    },
+    "branchwrite/terminal.py": {
+      "bytes": 14731,
+      "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+    },
+    "branchwrite/terminal_components.py": {
+      "bytes": 12786,
+      "sha256": "e583db55b25ae9171581ba3234e984d574b6aeaa3733de43211735fb1225e5e8"
+    },
+    "branchwrite/terminal_worker.py": {
+      "bytes": 2388,
+      "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+    },
+    "branchwrite/text_file_codec.py": {
+      "bytes": 1800,
+      "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+    },
+    "branchwrite/thinking_ladder.py": {
+      "bytes": 5119,
+      "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+    },
+    "branchwrite/tool_dispatch.py": {
+      "bytes": 4205,
+      "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+    },
+    "branchwrite/tool_registry.py": {
+      "bytes": 32148,
+      "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+    },
+    "branchwrite/verification.py": {
+      "bytes": 30228,
+      "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+    }
+  },
+  "candidates": [
+    {
+      "status": "built",
+      "pack_id": "79adce6e75242de89b74073eb76053edfa8d3d1eb231a4431aae1504dff7f53e",
+      "pack_path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/packs/79adce6e75242de89b74073eb76053edfa8d3d1eb231a4431aae1504dff7f53e",
+      "captured_at": "2026-10-19T18:47:23.793258Z",
+      "as_of": "2026-10-19T18:47:23.784862Z",
+      "source_files": 44,
+      "source_bytes": 551544,
+      "prefix_bytes": 560347,
+      "limits": {
+        "max_files": 512,
+        "max_file_bytes": 8388608,
+        "max_total_bytes": 33554432
+      },
+      "candidate": "A-all-product-source",
+      "build_seconds": 0.024286748957820237,
+      "status_scope": "immutable text pack built; native prefill not yet executed"
+    },
+    {
+      "status": "built",
+      "pack_id": "6fe378507df1035663cc2a05dccea3ab2dd005213611dc60cf969b76be9842bd",
+      "pack_path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/packs/6fe378507df1035663cc2a05dccea3ab2dd005213611dc60cf969b76be9842bd",
+      "captured_at": "2026-10-19T18:47:23.810295Z",
+      "as_of": "2026-10-19T18:47:23.784862Z",
+      "source_files": 6,
+      "source_bytes": 55263,
+      "prefix_bytes": 56841,
+      "limits": {
+        "max_files": 512,
+        "max_file_bytes": 8388608,
+        "max_total_bytes": 33554432
+      },
+      "candidate": "B-compact-selected",
+      "build_seconds": 0.015743719064630568,
+      "status_scope": "immutable text pack built; native prefill not yet executed"
+    },
+    {
+      "status": "built",
+      "pack_id": "699da3a82bc654fb32d44bfc1c1e26e95707629c621b164824df9f9196ca4143",
+      "pack_path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/packs/699da3a82bc654fb32d44bfc1c1e26e95707629c621b164824df9f9196ca4143",
+      "captured_at": "2026-10-19T18:47:23.826815Z",
+      "as_of": "2026-10-19T18:47:23.784862Z",
+      "source_files": 9,
+      "source_bytes": 102197,
+      "prefix_bytes": 104296,
+      "limits": {
+        "max_files": 512,
+        "max_file_bytes": 8388608,
+        "max_total_bytes": 33554432
+      },
+      "candidate": "C-compact-examples",
+      "build_seconds": 0.016845392994582653,
+      "status_scope": "immutable text pack built; native prefill not yet executed"
+    }
+  ],
+  "comparison": "NOT_RUN",
+  "native_prefills": "NOT_RUN",
+  "feedback_policy": "up to four full BranchWrite attempts per failing piece, followed by frozen independent rerun"
+}

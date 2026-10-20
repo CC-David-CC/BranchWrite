@@ -1,0 +1,7 @@
+{
+  "status": "VERIFIED",
+  "remote": "box-git:/srv/data/git/private_context_cow.evidence/branchwrite-interactive-20261020/bw-fast-integration-20261020.tar.gz",
+  "sha256": "37ab81f2cb655e9cca42874a46e4be36485486e138979ed557ff535049e060f7",
+  "bytes": 32293672,
+  "excluded": "API key and binary .state checkpoint payloads"
+}

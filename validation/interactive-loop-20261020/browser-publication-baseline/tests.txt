@@ -1,0 +1,36 @@
+test_failed_canonical_publication_keeps_original_intent_unresolved (tests.test_browser_errors.BrowserErrorTests.test_failed_canonical_publication_keeps_original_intent_unresolved) ... ERROR
+
+======================================================================
+ERROR: test_failed_canonical_publication_keeps_original_intent_unresolved (tests.test_browser_errors.BrowserErrorTests.test_failed_canonical_publication_keeps_original_intent_unresolved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-browser-baseline-20261020/branchwrite/tool_dispatch.py", line 108, in dispatch_tool
+    value,provenance=outcome.publish(kernel.log)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-browser-baseline-20261020/branchwrite/tool_registry.py", line 90, in publish
+    stdout=log.put_artifact(self.stdout);stderr=log.put_artifact(self.stderr);refs=[stdout,stderr]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+OSError: injected canonical publication failure
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-browser-baseline-20261020/tests/test_browser_errors.py", line 98, in test_failed_canonical_publication_keeps_original_intent_unresolved
+    with self.assertRaises(OSError):dispatch_tool(k,r,'click')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-browser-baseline-20261020/branchwrite/tool_dispatch.py", line 120, in dispatch_tool
+    raise EffectIndeterminate(operation_id,plan.sha256) from exc
+branchwrite.tool_registry.EffectIndeterminate: tool outcome is unresolved; reconcile the original operation instead of resending
+
+----------------------------------------------------------------------
+Ran 1 test in 0.993s
+
+FAILED (errors=1)

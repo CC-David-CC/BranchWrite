@@ -1,0 +1,20 @@
+{
+  "scope": "Native cumulative counters through settled B, before C positive; native timing excludes Python/HTTP/tools and startup",
+  "trace_bytes": 57769732,
+  "trace_sha256": "412f17084c7882b72b203d49fbd96b0b8095a3ce2bb38e7aec2c9158f64ee456",
+  "counters": {
+    "forward_tokens": 13765,
+    "prefill_tokens": 7686,
+    "decode_timed_tokens": 6079,
+    "decode_prepare_ns": 12402734250,
+    "decode_compute_ns": 124172579732,
+    "decode_finish_ns": 720560286,
+    "loaded_file_bytes": 884203600,
+    "written_file_bytes": 9820327220,
+    "captures": 10,
+    "restores": 17,
+    "integrity_mismatches": 0,
+    "integrity_device_hashed_bytes": 5512825405440
+  },
+  "native_decode_tps": 44.27664001129313
+}

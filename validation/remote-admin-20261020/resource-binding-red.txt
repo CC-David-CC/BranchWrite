@@ -1,0 +1,13 @@
+======================================================================
+ERROR: test_resource_identity_is_shared_across_aliases_users_and_timeout (tests.test_remote_execution.RemoteTargetTests.test_resource_identity_is_shared_across_aliases_users_and_timeout)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_execution.py", line 61, in test_resource_identity_is_shared_across_aliases_users_and_timeout
+    self.assertEqual(target.resource_identity,changed.resource_identity)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RemoteTarget' object has no attribute 'resource_identity'
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.058s
+
+FAILED (errors=1)

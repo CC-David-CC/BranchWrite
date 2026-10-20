@@ -1,0 +1,4 @@
+WARNING: Scope preservation claims to actual evidence. Program outputs may change
+bytes, permissions, timestamps or identity even when no source file changes. Inspect
+the existing receipt before summarizing. Do not invent metadata checks, broaden grants,
+or modify correct artifacts just to satisfy a final-answer sentence.

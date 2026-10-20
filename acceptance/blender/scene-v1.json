@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "render_profile": "bw.blender-cpu-views-motion.v1",
+  "scope": "actual scene creation/reopen/render; not independent artistic or geometric design acceptance",
+  "blender": "4.5.3 LTS",
+  "mcp_sdk": "1.26.0",
+  "transport": "stdio",
+  "frames": {
+    "start": 1,
+    "end": 24,
+    "fps": 12
+  },
+  "views": [
+    "top",
+    "front",
+    "side",
+    "isometric"
+  ],
+  "render": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "samples": 8,
+    "resolution": [
+      320,
+      240
+    ]
+  },
+  "limits": {
+    "objects": 64,
+    "address_space_gib": 8,
+    "seconds_per_worker": 120
+  },
+  "external_assets": false,
+  "model_authored_pilot": "NOT_YET_RUN"
+}

@@ -1,0 +1,2 @@
+# Preserve exact PTY control characters and CRLF evidence bytes.
+admin-terminal.txt -text -diff

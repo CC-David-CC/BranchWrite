@@ -1,0 +1,6 @@
+test_code_prepares_real_context_and_resume_keeps_pinned_setup (test_coding_launcher_http.CodingLauncherHttpTests.test_code_prepares_real_context_and_resume_keeps_pinned_setup) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.963s
+
+OK

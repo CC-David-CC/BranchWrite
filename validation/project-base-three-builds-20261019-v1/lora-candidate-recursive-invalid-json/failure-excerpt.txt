@@ -1,0 +1,46 @@
+='b'*64,reserve_tokens=8192)
+                                                                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/branchwrite/base_choice.py", line 79, in resolve_base_proposal
+    _finite(proposal)
+    ~~~~~~~^^^^^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  [Previous line repeated 982 more times]
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_nested_invalid_json_is_rejected_as_value_error (test_nested_invalid_input.NestedInvalidInputs.test_nested_invalid_json_is_rejected_as_value_error) (depth=1100)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tests/test_nested_invalid_input.py", line 8, in test_nested_invalid_json_is_rejected_as_value_error
+    with self.subTest(depth=depth),self.assertRaises(ValueError):resolve_base_proposal(text,[row],required_revision='a'*40,required_profile='b'*64,reserve_tokens=8192)
+                                                                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/branchwrite/base_choice.py", line 79, in resolve_base_proposal
+    _finite(proposal)
+    ~~~~~~~^^^^^^^^^^
+  File "/work/branchwrite/base_choice.py", line 29, in _finite
+    for item in value.values():_finite(item)
+                               ~~~~~~~^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  File "/work/branchwrite/base_choice.py", line 31, in _finite
+    for item in value:_finite(item)
+                      ~~~~~~~^^^^^^
+  [Previous line repeated 981 more times]
+RecursionError: maximum recursion depth exceeded
+
+----------------------------------------------------------------------
+Ran 12 tests in 6.453s
+
+FAILED (errors=233)

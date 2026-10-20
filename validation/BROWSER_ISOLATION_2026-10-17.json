@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "status": "BOUNDED_BROWSER_NAMESPACE_AND_H01_REGRESSION_PASS",
+  "host": "llm-60",
+  "GPU": "NOT_USED",
+  "base": "a112e7e91a24248f20d9fd1d9fa801306a472067",
+  "sources": {
+    "branchwrite/browser_capture.py": "ef682a46aa09aa3c59ba18512d009895e955950f070e791611bd533350736c53",
+    "branchwrite/browser_isolation.py": "b677092d8ca4f8eb3a6eb94d0c30bb1698cba962250f10aab5ceac703c02e547",
+    "branchwrite/browser_worker.py": "edef499eed1687cdd3c37289bc5622131ff4f95699c9c255760e4bfec9216ce4",
+    "branchwrite/execution.py": "5a09c29b793ae81e5868a40d266677743959999df91547f09961c8a35229e7ae",
+    "tools/capture_page.py": "9446fba4395755ebd58535551e1097c361fbe64d6b753227883b4a75d8a34c6a",
+    "tests/test_browser_isolation.py": "5d2ffdaf20efe4ff549e9222b7b0614499745181c4eee0894a2379797c69373d"
+  },
+  "runs": [
+    {
+      "run": "branchwrite-h03-browser-red-run-v1",
+      "exits": {
+        "command.exit": 1,
+        "wrapper.exit": 1
+      },
+      "summary": [
+        "Ran 2 tests in 1.035s",
+        "FAILED (errors=2)"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-browser-green-run-v1",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summary": [
+        "Ran 2 tests in 2.351s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-browser-green-run-v2",
+      "exits": {
+        "command.exit": 1,
+        "wrapper.exit": 1
+      },
+      "summary": [
+        "Ran 12 tests in 5.419s",
+        "FAILED (failures=2)"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-browser-green-run-v3",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summary": [
+        "Ran 12 tests in 5.111s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-browser-full-run-v1",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summary": [
+        "Ran 341 tests in 30.704s",
+        "OK"
+      ]
+    },
+    {
+      "run": "branchwrite-h03-browser-h01-regression-run-v1",
+      "exits": {
+        "command.exit": 0,
+        "wrapper.exit": 0
+      },
+      "summary": []
+    }
+  ],
+  "h01": {
+    "argv": [
+      "/home/dflanag3/spatial-artifacts/branchwrite-client-env-20261017-v1/bin/python",
+      "-B",
+      "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-h03-browser-green-source-v3/tools/capture_page.py",
+      "--source",
+      "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/basic-loop-pack-v1/fixtures/starter/H01",
+      "--entry",
+      "index.html",
+      "--expected-sha256",
+      "525d33e50c57dbd1b72f657662db497a89cf12733329c274a92044e07aba93df",
+      "--browser",
+      "/snap/chromium/3554/usr/lib/chromium-browser/chrome",
+      "--output",
+      "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-h03-browser-h01-regression-v1/capture"
+    ],
+    "capture_exit_code": 0,
+    "capture_receipt": {
+      "browser_executable": "/snap/chromium/3554/usr/lib/chromium-browser/chrome",
+      "browser_version": "155.0.8059.39",
+      "chromium_sandbox": true,
+      "elapsed_seconds": 0.8058202168904245,
+      "height": 480,
+      "http_status": 200,
+      "image_artifact": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-h03-browser-h01-regression-v1/capture/artifacts/dbcb90f4f8b84097891f63667316063f.bin",
+      "image_bytes": 1984,
+      "image_sha256": "414bcbf649fc99734f5c7481cc33c84ce3031fc35443f4bdae470397efa532b8",
+      "isolation_kind": "bubblewrap-browser-v1",
+      "isolation_launcher_pid": 93643,
+      "isolation_mount_namespace": "mnt:[4026532956]",
+      "isolation_namespace_empty": true,
+      "isolation_net_namespace": "net:[4026532970]",
+      "isolation_pid_namespace": "pid:[4026532960]",
+      "isolation_worker_exited": true,
+      "operation_id": "capture",
+      "scope": "isolated single-document capture; no assets/interactions or model-vision claim",
+      "served_sha256": "525d33e50c57dbd1b72f657662db497a89cf12733329c274a92044e07aba93df",
+      "source_artifact": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-h03-browser-h01-regression-v1/capture/artifacts/91b7af48500f48b58ce85171886d90c1.bin",
+      "source_bytes": 264,
+      "source_path": "index.html",
+      "source_sha256": "525d33e50c57dbd1b72f657662db497a89cf12733329c274a92044e07aba93df",
+      "url": "http://127.0.0.1:46155/index.html",
+      "width": 640
+    },
+    "image": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/branchwrite-h03-browser-h01-regression-v1/capture/capture.png",
+    "image_sha256": "414bcbf649fc99734f5c7481cc33c84ce3031fc35443f4bdae470397efa532b8",
+    "model_interpretation": "NOT_RUN",
+    "native_image_delivery": "NOT_RUN",
+    "pack_manifest_sha256": "12a60740aeb1eee5f6cc23071bb54583f94f5cb633f574e355d6f39e0c0631a3",
+    "protected_pixel_check": "PASS",
+    "scope": "actual trusted fixture browser capture; no model/VC/G certification",
+    "source_revision": "92f64bf7c3e92027e0e98dc8daa4237b13db62dd8928e4d06bad043a8be49e76",
+    "source_sha256": "525d33e50c57dbd1b72f657662db497a89cf12733329c274a92044e07aba93df",
+    "source_unchanged": true,
+    "status": "H01_CAPTURE_PASS",
+    "target": "H01"
+  },
+  "numerical_max_error": null,
+  "full_suite": 341,
+  "focused": 12,
+  "skips": 0,
+  "failures": 0,
+  "limitations": [
+    "H03 generated-page/model loop NOT_RUN.",
+    "Single-document capture only; assets/interactions unsupported.",
+    "OS canary and owned-descendant timeout checks are bounded; not full adversarial/escape/security certification.",
+    "Read-only system runtime/venv/browser mounts remain visible in child; not a claim of an empty filesystem.",
+    "No aggregate process-tree RAM/CPU quota; per-process CPU/file limits and bounded outer timeout/output apply."
+  ],
+  "chat_restarted": false,
+  "private_only": true,
+  "binaries": {
+    "/usr/bin/bwrap": "e318903862396f96de3df57264e0158682b952fd3fb53ac23d876413e7b30f71",
+    "/usr/bin/prlimit": "17064f67e650d6152a6902b013aab496b54c87587c8eea6f5023aafee6154069",
+    "/snap/chromium/3554/usr/lib/chromium-browser/chrome": "e40090b8a8b434d68155a3f54973d0ebe890795ad6849a5f3ada1d32c55f6bc3"
+  },
+  "archive": {
+    "host": "box-git",
+    "path": "/srv/data/git/private_context_cow.evidence/20261017-bw-browser-isolation-v1/evidence.tar.gz",
+    "sha256": "8c24daa322ce0e5be96c18a2114eda135e238cdfa640dd74a8a1f6871b40e05e",
+    "bytes": 93866,
+    "members": 88,
+    "receiver_verified": true
+  }
+}

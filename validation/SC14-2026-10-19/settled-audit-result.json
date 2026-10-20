@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "pid": 2280735,
+  "audits": [
+    {
+      "script": "audit-output-with-supplemental.py",
+      "exit_code": 0
+    },
+    {
+      "script": "audit-ledger.py",
+      "exit_code": 0
+    }
+  ],
+  "elapsed_seconds": 465.8879217309877,
+  "producer_exit": 0,
+  "producer_pid": 2279853,
+  "producer_absent": true
+}

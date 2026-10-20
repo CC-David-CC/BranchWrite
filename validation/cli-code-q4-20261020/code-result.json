@@ -1,0 +1,38 @@
+{
+  "status": "CLIENT_VERIFIED_PENDING_BROWSER",
+  "controller_pid": 2477016,
+  "client_host": "r4090",
+  "argv": [
+    "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev62-20261020/venv/bin/branchwrite",
+    "code",
+    "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev61-20261020/writing-run/world/workspace",
+    "--project-files",
+    "--task-file",
+    "/home/dflanag3/src/branchwrite-documents-20261020/examples/prompts/code.txt",
+    "--connection",
+    "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev62-20261020/connection.json",
+    "--state",
+    "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev62-20261020/code-run",
+    "--branch",
+    "bw-code-dev62-20261020",
+    "--from-branch",
+    "bw-writing-dev61-20261020",
+    "--sampler",
+    "greedy",
+    "--max-steps",
+    "2048"
+  ],
+  "prompt_sha256": "c51b9a98277b3713c694c3553831b3da9dc5b78ac246cecd16a9ee54a426ea62",
+  "operator_candidate_edits": 0,
+  "preserved": {
+    "START_HERE.txt": "7c3892e6337965f4f17fa564e625c49d277617191b5d21f05c26bcb760fb1c3c",
+    "report.pdf": "6a4091fd136a8e202280edb0f2fef9d2795a151b565fe8a882451948992f9e43"
+  },
+  "scope": "installed dev62 CLI new coding branch reuses completed writing/PDF model context and preserves prior files",
+  "elapsed_seconds": 631.8226444369648,
+  "updated_unix": 1792527378.6888096,
+  "client_pid": 2477018,
+  "exit_code": 0,
+  "html_sha256": "073078f69493316f72cc4a1e9c7ed605768141c2868d38523cf9cbf711721715",
+  "workspace": "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev62-20261020/code-run/world/workspace"
+}

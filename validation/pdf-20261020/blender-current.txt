@@ -1,0 +1,198 @@
+test_actual_scene_reopen_controlled_views_and_animation (test_blender_execution.BlenderExecutionTests.test_actual_scene_reopen_controlled_views_and_animation) ... ERROR
+test_missing_fresh_scene_export_fails (test_blender_execution.BlenderExecutionTests.test_missing_fresh_scene_export_fails) ... ERROR
+test_stdio_tool_executes_actual_build_reopen_views_and_movie (test_blender_mcp.BlenderMcpTests.test_stdio_tool_executes_actual_build_reopen_views_and_movie) ... /home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:51: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(  # noqa: B028  (called from many sources at differing depths, so no stacklevel is correct)
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+ERROR
+test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection (test_blender_tools.BlenderToolTests.test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection) ... ERROR
+test_no_host_capability_no_blender_tool (test_blender_tools.BlenderToolTests.test_no_host_capability_no_blender_tool) ... ok
+test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views) ... ERROR
+test_valid_scene_without_world_gets_derived_studio_world (test_blender_framing.BlenderFramingTests.test_valid_scene_without_world_gets_derived_studio_world) ... ERROR
+
+======================================================================
+ERROR: test_actual_scene_reopen_controlled_views_and_animation (test_blender_execution.BlenderExecutionTests.test_actual_scene_reopen_controlled_views_and_animation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_blender_execution.py", line 18, in test_actual_scene_reopen_controlled_views_and_animation
+    result=build_scene((('scene.py',SOURCE),),'scene.py',self.runtime)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_execution.py", line 63, in build_scene
+    built=_job(runtime,rows,'build',entry);assets=built['assets'];result=built
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_execution.py", line 43, in _job
+    out,err,timed,limited,code,isolation=_isolated_call(runtime,worker,root,[],extra_mounts=((policy,'/policy'),),command=cmd)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 149, in _isolated_call
+    for path in dict.fromkeys((runtime.prefix,runtime.base_prefix,*runtime.support_paths)):
+                                                                   ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlenderRuntime' object has no attribute 'support_paths'
+
+======================================================================
+ERROR: test_missing_fresh_scene_export_fails (test_blender_execution.BlenderExecutionTests.test_missing_fresh_scene_export_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_blender_execution.py", line 28, in test_missing_fresh_scene_export_fails
+    result=build_scene((('scene.py',b'pass'),('scene.blend',b'old')),'scene.py',self.runtime)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_execution.py", line 63, in build_scene
+    built=_job(runtime,rows,'build',entry);assets=built['assets'];result=built
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_execution.py", line 43, in _job
+    out,err,timed,limited,code,isolation=_isolated_call(runtime,worker,root,[],extra_mounts=((policy,'/policy'),),command=cmd)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 149, in _isolated_call
+    for path in dict.fromkeys((runtime.prefix,runtime.base_prefix,*runtime.support_paths)):
+                                                                   ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlenderRuntime' object has no attribute 'support_paths'
+
+======================================================================
+ERROR: test_stdio_tool_executes_actual_build_reopen_views_and_movie (test_blender_mcp.BlenderMcpTests.test_stdio_tool_executes_actual_build_reopen_views_and_movie)
+----------------------------------------------------------------------
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_blender_mcp.py", line 8, in test_stdio_tool_executes_actual_build_reopen_views_and_movie
+  |     result=render_through_mcp(Path('/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/bin/python'),ROOT,(('scene.py',SOURCE),),'scene.py',timeout=120)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_mcp.py", line 30, in render_through_mcp
+  |     return asyncio.run(call())
+  |            ^^^^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 195, in run
+  |     return runner.run(main)
+  |            ^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+  |     return future.result()
+  |            ^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_mcp.py", line 16, in call
+  |     async with stdio_client(params) as (read,write):
+  |                ^^^^^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/mcp/client/stdio/__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/mcp/client/stdio/__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_mcp.py", line 17, in call
+    |     async with ClientSession(read,write,read_timeout_seconds=timedelta(seconds=2*timeout+60)) as session:
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/mcp/shared/session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+    |     raise BaseExceptionGroup(
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_mcp.py", line 21, in call
+      |     if reply.isError:raise ValueError('Blender MCP tool failed: '+str(reply.content)[:4096])
+      |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      | ValueError: Blender MCP tool failed: [TextContent(type='text', text="Error executing tool render_scene: 'BlenderRuntime' object has no attribute 'support_paths'", annotations=None, meta=None)]
+      +------------------------------------
+
+======================================================================
+ERROR: test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection (test_blender_tools.BlenderToolTests.test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 542, in execute
+    return execute_blender(self,plan,operation_id,args,inventory)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_tools.py", line 40, in execute_blender
+    if timed or limited or child.returncode:raise ValueError('Blender MCP transport failed: '+err[-3000:].decode('utf8','replace'))
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Blender MCP transport failed: _until_complete(task)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+  |     return future.result()
+  |            ^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_mcp.py", line 16, in call
+  |     async with stdio_client(params) as (read,write):
+  |                ^^^^^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(value)
+  |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/mcp/client/stdio/__init__.py", line 183, in stdio_client
+  |     anyio.create_task_group() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/mcp/client/stdio/__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_mcp.py", line 17, in call
+    |     async with ClientSession(read,write,read_timeout_seconds=timedelta(seconds=2*timeout+60)) as session:
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/mcp/shared/session.py", line 238, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/dflanag3/spatial-artifacts/bw-blender-20261020/mcpvenv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+    |     raise BaseExceptionGroup(
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_mcp.py", line 21, in call
+      |     if reply.isError:raise ValueError('Blender MCP tool failed: '+str(reply.content)[:4096])
+      |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      | ValueError: Blender MCP tool failed: [TextContent(type='text', text="Error executing tool render_scene: 'BlenderRuntime' object has no attribute 'support_paths'", annotations=None, meta=None)]
+      +------------------------------------
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_blender_tools.py", line 19, in test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection
+    out=self.registry.execute(plan,'blender-op');value,_=out.publish(self.log)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 601, in execute
+    except Exception as exc:raise EffectIndeterminate(operation_id,plan.sha256) from exc
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.tool_registry.EffectIndeterminate: tool outcome is unresolved; reconcile the original operation instead of resending
+
+======================================================================
+ERROR: test_fast_moving_mesh_stays_in_all_controlled_views (test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_blender_framing.py", line 12, in test_fast_moving_mesh_stays_in_all_controlled_views
+    result=build_scene((("scene.py",source),),"scene.py",self.runtime)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_execution.py", line 63, in build_scene
+    built=_job(runtime,rows,'build',entry);assets=built['assets'];result=built
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_execution.py", line 43, in _job
+    out,err,timed,limited,code,isolation=_isolated_call(runtime,worker,root,[],extra_mounts=((policy,'/policy'),),command=cmd)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 149, in _isolated_call
+    for path in dict.fromkeys((runtime.prefix,runtime.base_prefix,*runtime.support_paths)):
+                                                                   ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlenderRuntime' object has no attribute 'support_paths'
+
+======================================================================
+ERROR: test_valid_scene_without_world_gets_derived_studio_world (test_blender_framing.BlenderFramingTests.test_valid_scene_without_world_gets_derived_studio_world)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_blender_framing.py", line 32, in test_valid_scene_without_world_gets_derived_studio_world
+    result=build_scene((("scene.py",source),),"scene.py",self.runtime)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_execution.py", line 63, in build_scene
+    built=_job(runtime,rows,'build',entry);assets=built['assets'];result=built
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/blender_execution.py", line 43, in _job
+    out,err,timed,limited,code,isolation=_isolated_call(runtime,worker,root,[],extra_mounts=((policy,'/policy'),),command=cmd)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 149, in _isolated_call
+    for path in dict.fromkeys((runtime.prefix,runtime.base_prefix,*runtime.support_paths)):
+                                                                   ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BlenderRuntime' object has no attribute 'support_paths'
+
+----------------------------------------------------------------------
+Ran 7 tests in 6.880s
+
+FAILED (errors=6)

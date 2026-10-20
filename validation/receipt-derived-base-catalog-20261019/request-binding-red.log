@@ -1,0 +1,17 @@
+test_automatic_host_selection_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_automatic_host_selection_uses_existing_fork_and_ask_api) ... FAIL
+test_proposed_base_source_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_proposed_base_source_uses_existing_fork_and_ask_api) ... ok
+
+======================================================================
+FAIL: test_automatic_host_selection_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_automatic_host_selection_uses_existing_fork_and_ask_api)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-pack-catalog-20261019-v1/source/tests/test_base_choice_http.py", line 7, in test_automatic_host_selection_uses_existing_fork_and_ask_api
+    self.exercise(True)
+  File "/home/dflanag3/spatial-artifacts/branchwrite-pack-catalog-20261019-v1/source/tests/test_base_choice_http.py", line 72, in exercise
+    with self.assertRaises(ValueError):project_base.catalog_entry(version,**options)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.662s
+
+FAILED (failures=1)

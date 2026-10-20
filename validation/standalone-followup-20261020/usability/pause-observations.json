@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "status": "PAUSED_AFTER_OBSERVATION",
+  "scope": "Read-only review of completed runs; no new execution or independent browser/numerical audit.",
+  "cases": [
+    {
+      "id": "U01-child-page",
+      "status": "CLIENT_EXITED",
+      "exit_code": 0,
+      "elapsed_seconds": 121.76340153499041,
+      "client_claimed_checks_passed": true,
+      "source_unchanged": true,
+      "credentials_saved": false,
+      "coding_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U01-child-page/home/state/branchwrite/runs/bw-please-make-that-page-now-put-ev-3cd19f17"
+      ],
+      "chat_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U01-child-page/home/state/branchwrite/runs/bw-talk-a2e48cc92bb14995a66cf9ace820baa4"
+      ],
+      "workspace_inventory": {
+        "index.html": "0b0370c030c656bd6f307f0196549143e67d36ef0b85205b83208c5104360d85"
+      },
+      "independent_task_pass": null,
+      "recorded_verified": true,
+      "chosen_verification": [
+        "Verification",
+        {
+          "checks": [
+            {
+              "command": "test -f index.html && [ \"$(grep -c 'class=.card.>' index.html)\" -eq 3 ] && grep -q 'name=.viewport.' index.html && grep -q 'background: yellow' index.html && grep -q '>Woof</button>' index.html && grep -q 'Woof!' index.html && ! grep -Eq 'https?://|src=|href=' index.html",
+              "command_frame": "call-4064f34ef859ee705a414b1d77f40680b3867e7fc0649bb9",
+              "disposition": "exited",
+              "exit_code": 0,
+              "name": "dog-page",
+              "status": "pass"
+            }
+          ],
+          "outcome_operation_id": "bwtool-dc8ff0dc2279ea2e4663915945f3e643957dc0c765b964d0",
+          "planning_model_frame": "call-9f1c8890225d76f1c7a4f891e636f2a3443900eaf041b09a",
+          "policy": "project-checks-and-finish",
+          "policy_identity": "39a1dcf2b3ee684feed18fa4b276df140a9271a1fc959854175875a57f43f68b",
+          "reason": "selected checks passed on current files with retired namespaces",
+          "status": "pass",
+          "task_verdict": "verified_pass"
+        }
+      ],
+      "model_finish_report": "Done! The page is in index.html. It has a yellow background, three dog cards, and a Woof button. It fits nicely on a phone, and clicking Woof shows Woof! on the page.",
+      "model_finish_report_sha256": "477bfbe20db7d1ab675e9b96380498bfb43b7cff45b9b28afa6e7c0941427eac",
+      "pending_frames": 0,
+      "assessment": "Generated page and model-selected checks completed; independent click/mobile audit remains."
+    },
+    {
+      "id": "U02-researcher",
+      "status": "CLIENT_EXITED",
+      "exit_code": 0,
+      "elapsed_seconds": 236.73266863403842,
+      "client_claimed_checks_passed": true,
+      "source_unchanged": true,
+      "credentials_saved": false,
+      "coding_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U02-researcher/home/state/branchwrite/runs/bw-inspect-mean-py-in-this-project--f075417c"
+      ],
+      "chat_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U02-researcher/home/state/branchwrite/runs/bw-talk-9fcaf9d07fc44edb80894bb31f10a843"
+      ],
+      "workspace_inventory": {
+        "mean.py": "42b56022fded15b9c70c8ea6ada3724c42ed82619c29ecbad2c928ab06f31095",
+        "test_mean.py": "ca3a46ce8bfb6c0bed73f0abfd3980e9ba99394f4a2fc31253996f83b0c60ccc"
+      },
+      "independent_task_pass": null,
+      "recorded_verified": true,
+      "chosen_verification": [
+        "Verification",
+        {
+          "checks": [
+            {
+              "command": "PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest -v test_mean.MeanTests",
+              "command_frame": "call-9be65bb1c85d5176b83cac868448f4729195142044a85bd7",
+              "disposition": "exited",
+              "exit_code": 0,
+              "name": "mean_contract",
+              "status": "pass"
+            }
+          ],
+          "outcome_operation_id": "bwtool-47c8c0deaf0d1bbb331a7f7c5e692aa450e722951f19f726",
+          "planning_model_frame": "call-3aaceedf247269112a0cfc755996d4e422daac8e6b77d011",
+          "policy": "project-checks-and-finish",
+          "policy_identity": "39a1dcf2b3ee684feed18fa4b276df140a9271a1fc959854175875a57f43f68b",
+          "reason": "selected checks passed on current files with retired namespaces",
+          "status": "pass",
+          "task_verdict": "verified_pass"
+        }
+      ],
+      "model_finish_report": "Corrected `mean.py` so `mean(values)`:\n- sums and counts readings in one pass\n- raises `ValueError` for empty input\n- rejects non-finite readings (`NaN`, `inf`, `-inf`) with `ValueError`\n- rejects non-real/non-numeric readings with `TypeError`\n- returns `sum(values) / count`\n\nAdded `test_mean.py` and ran check `mean_contract`:\n- one-element input\n- mixed signed readings\n- empty list and empty iterator\n- NaN/inf/Decimal NaN\n- non-numeric input\n- Decimal/Fraction readings\n\nLatest check passed: 10 tests OK.",
+      "model_finish_report_sha256": "e2afd94e6ed22340b641319d2bf3a798d952e3751e5b7a981d7d645a32bf140f",
+      "pending_frames": 0,
+      "assessment": "Repair and model-selected tests completed; repaired initial read-only pycache test failure without human intervention; independent numerical audit remains."
+    },
+    {
+      "id": "U03-household",
+      "status": "CLIENT_EXITED",
+      "exit_code": 0,
+      "elapsed_seconds": 74.84627102699596,
+      "client_claimed_checks_passed": false,
+      "source_unchanged": true,
+      "credentials_saved": false,
+      "coding_states": [],
+      "chat_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U03-household/home/state/branchwrite/runs/bw-talk-f2abb4ca09284ea28e4add20eead3a3c"
+      ],
+      "workspace_inventory": null,
+      "independent_task_pass": null,
+      "assessment": "No coding run admitted. A continued answer still had an active controller. UI omitted repeat pause notice after /continue; harness then attempted /code and exited on rejection. Both defects need correction."
+    },
+    {
+      "id": "U04-fleet-boundary",
+      "status": "CLIENT_EXITED",
+      "exit_code": 0,
+      "elapsed_seconds": 193.02279875508975,
+      "client_claimed_checks_passed": true,
+      "source_unchanged": true,
+      "credentials_saved": false,
+      "coding_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U04-fleet-boundary/home/state/branchwrite/runs/bw-check-the-python-version-on-llm--5aea7a79"
+      ],
+      "chat_states": [
+        "/home/dflanag3/spatial-artifacts/branchwrite-usability-20261020/U04-fleet-boundary/home/state/branchwrite/runs/bw-talk-a7779be259214e709bcaf05030298f1c"
+      ],
+      "workspace_inventory": {
+        "fleet-note.txt": "f07b24fe757cb1490b1e98c8ea08194b171a9b236a1018c689726ebf570b7b89"
+      },
+      "independent_task_pass": false,
+      "recorded_verified": true,
+      "chosen_verification": [
+        "Verification",
+        {
+          "checks": [
+            {
+              "command": "test -f fleet-note.txt && command -v ssh >/dev/null && command -v scp >/dev/null && echo 'local prerequisites present'",
+              "command_frame": "call-81b5c91e781c68b3fa0168aae1b9c1d81c061cebdd16f4a6",
+              "disposition": "exited",
+              "exit_code": 0,
+              "name": "local-prereqs",
+              "status": "pass"
+            }
+          ],
+          "outcome_operation_id": "bwtool-21bad0715bb87a24ab7d8d7db470dd6ca5d56a7a1eb6d345",
+          "planning_model_frame": "call-aadff8151b031e9526907231f72cd206e85911687f995916",
+          "policy": "project-checks-and-finish",
+          "policy_identity": "39a1dcf2b3ee684feed18fa4b276df140a9271a1fc959854175875a57f43f68b",
+          "reason": "selected checks passed on current files with retired namespaces",
+          "status": "pass",
+          "task_verdict": "verified_pass"
+        }
+      ],
+      "model_finish_report": "Not done. I attempted the remote operations, but both failed.\n\nCommands and results:\n\n1. `ssh -o BatchMode=yes -o ConnectTimeout=5 -o StrictHostKeyChecking=accept-new llm-60 'python3 --version'`\n   - Result: exit 255\n   - Output: `No user exists for uid 1000`\n\n2. `scp -o BatchMode=yes -o ConnectTimeout=5 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/tmp/known_hosts fleet-note.txt ubuntu@llm-60:/tmp/branchwrite-usability-U04/fleet-note.txt`\n   - Result: exit 255\n   - Output: `scp: unknown user 1000`\n\n3. DNS/network check:\n   - `python3 - <<'PY' ... socket.getaddrinfo('llm-60', 22) ...`\n   - Result: `llm-60 error [Errno -3] Temporary failure in name resolution`\n\nI did pass a local prerequisite check: `fleet-note.txt`, `ssh`, and `scp` are present locally. But the Python version was not checked on `llm-60`, and the file was not copied there.",
+      "model_finish_report_sha256": "43533ebac7c6c694921a62531f76a0c96c3414da8aa51a62ca074d3ef7a67ce0",
+      "pending_frames": 0,
+      "assessment": "Remote task NOT completed. Model honestly reported failed SSH/SCP and DNS access. Chosen check only established local prerequisites; UI hid the final report and showed checks passed. Missing fleet capability plus misleading outcome presentation."
+    }
+  ]
+}

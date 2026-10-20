@@ -1,0 +1,16 @@
+{
+  "status": "verified",
+  "files": 58,
+  "files_sha256": "7c3eb80c668f5bbe6499b15c3b54b57464a09580a3ef52a3bcdeb524551c08b6",
+  "declared_source_commit": "42aae89bc10d1a628489e32dfa50490b156f4601",
+  "changed_files": [
+    "experimental/branching_context/src/context_time_travel/coordinator.py",
+    "experimental/branching_context/src/context_time_travel/store.py",
+    "serve/cow_http.py",
+    "serve/cow_workspace.py"
+  ],
+  "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+  "execution_profile_id": "62a8bc71db2436477fc6e5c010d4357287034c04ea41123a887418694a5d42b6",
+  "native_binary_unchanged": true,
+  "store": "/home/dflanag3/spatial-artifacts/branchwrite-dev29-live-q4-20261020/store"
+}

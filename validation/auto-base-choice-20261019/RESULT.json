@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "new_methods": 5,
+  "combined_methods": 36,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "scope": "Pure catalog validation and real CLI admission; downstream execution patched only in admission test. No new HTTP/GPU qualification.",
+  "policy": "host-longest-fitting-v1",
+  "limits": [
+    "Host offers task-appropriate current bases",
+    "Git revision alone does not verify working tree",
+    "No residency or latency guarantee",
+    "No automatic summary adoption, refresh or compaction"
+  ]
+}

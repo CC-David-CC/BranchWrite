@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "new_methods": 8,
+  "combined_methods": 80,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "scope": "Source catalog freshness and real CLI admission; no new HTTP/GPU or installed-package qualification",
+  "limits": [
+    "Legacy catalogs retain host-asserted revision-only scope",
+    "Pack to checkpoint association is supplied by trusted host catalog, not independent server attestation",
+    "Pack verifies selected sources at admission, not a continuing lock",
+    "No automatic rebuild/adoption yet"
+  ]
+}

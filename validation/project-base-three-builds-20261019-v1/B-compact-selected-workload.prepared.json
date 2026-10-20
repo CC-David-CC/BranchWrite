@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "target": "B-compact-selected",
+  "run_id": "base-choice-b-compact-selected-attempt1",
+  "branch": "base-choice-b-compact-selected-attempt1",
+  "source": "/home/dflanag3/src/branchwrite-q8-base-choice-candidate-20261019/candidate_project",
+  "task_file": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-task.txt",
+  "workflow": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/standalone-sc03-q8-restored-v1/coding.bw",
+  "grammar_registration": "inline",
+  "grant": {
+    "edit_paths": [],
+    "create_paths": [
+      "branchwrite/base_choice.py"
+    ],
+    "read_paths": [
+      "tests/test_base_choice.py"
+    ],
+    "allow_tests": false,
+    "allow_shell": true
+  },
+  "verification": {
+    "schema": 1,
+    "commands": [
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "disposition": "exited",
+        "exit_code": 0
+      }
+    ]
+  },
+  "shell": {
+    "timeout": 30,
+    "expected_hostname": "r4090"
+  },
+  "thinking_tokens": 4096,
+  "read_dirs": [
+    "branchwrite",
+    "tests"
+  ],
+  "edit_dirs": [],
+  "base_branch": "project-base-b-compact-selected",
+  "base_snapshot": null
+}

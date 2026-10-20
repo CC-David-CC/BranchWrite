@@ -1,0 +1,40 @@
+test_code_can_prepare_git_checkout_without_copying_git_metadata (test_project_admission.ProjectAdmissionTests.test_code_can_prepare_git_checkout_without_copying_git_metadata) ... ok
+test_low_level_executor_still_rejects_git_administration (test_project_admission.ProjectAdmissionTests.test_low_level_executor_still_rejects_git_administration) ... ok
+test_project_copy_omits_nested_git_without_following_links (test_project_admission.ProjectAdmissionTests.test_project_copy_omits_nested_git_without_following_links) ... ok
+test_project_copy_still_rejects_other_links_and_bad_policy_types (test_project_admission.ProjectAdmissionTests.test_project_copy_still_rejects_other_links_and_bad_policy_types) ... ok
+test_project_launch_cannot_grant_git_administration (test_project_admission.ProjectAdmissionTests.test_project_launch_cannot_grant_git_administration) ... 
+  test_project_launch_cannot_grant_git_administration (test_project_admission.ProjectAdmissionTests.test_project_launch_cannot_grant_git_administration) (path='.git/config') ... FAIL
+  test_project_launch_cannot_grant_git_administration (test_project_admission.ProjectAdmissionTests.test_project_launch_cannot_grant_git_administration) (path='src/.git/HEAD') ... FAIL
+  test_project_launch_cannot_grant_git_administration (test_project_admission.ProjectAdmissionTests.test_project_launch_cannot_grant_git_administration) (path='.git') ... FAIL
+
+======================================================================
+FAIL: test_project_launch_cannot_grant_git_administration (test_project_admission.ProjectAdmissionTests.test_project_launch_cannot_grant_git_administration) (path='.git/config')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-admission-20261019/tests/test_project_admission.py", line 57, in test_project_launch_cannot_grant_git_administration
+    with self.subTest(path=path),self.assertRaises(ValueError):
+                                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_project_launch_cannot_grant_git_administration (test_project_admission.ProjectAdmissionTests.test_project_launch_cannot_grant_git_administration) (path='src/.git/HEAD')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-admission-20261019/tests/test_project_admission.py", line 57, in test_project_launch_cannot_grant_git_administration
+    with self.subTest(path=path),self.assertRaises(ValueError):
+                                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_project_launch_cannot_grant_git_administration (test_project_admission.ProjectAdmissionTests.test_project_launch_cannot_grant_git_administration) (path='.git')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-admission-20261019/tests/test_project_admission.py", line 57, in test_project_launch_cannot_grant_git_administration
+    with self.subTest(path=path),self.assertRaises(ValueError):
+                                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.408s
+
+FAILED (failures=3)

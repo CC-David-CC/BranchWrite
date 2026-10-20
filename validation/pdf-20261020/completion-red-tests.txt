@@ -1,0 +1,269 @@
+test_canonical_receipt_and_page_artifact_cannot_be_forged (test_pdf_completion.PdfCompletionTests.test_canonical_receipt_and_page_artifact_cannot_be_forged) ... FAIL
+test_cli_export_contains_pdf_and_actual_page_images (test_pdf_completion.PdfCompletionTests.test_cli_export_contains_pdf_and_actual_page_images) ... ERROR
+test_edit_after_build_invalidates_document_even_with_new_file_check (test_pdf_completion.PdfCompletionTests.test_edit_after_build_invalidates_document_even_with_new_file_check) ... ERROR
+test_every_current_page_and_a_current_named_check_can_pass (test_pdf_completion.PdfCompletionTests.test_every_current_page_and_a_current_named_check_can_pass) ... ERROR
+test_invalid_selected_page_is_an_explicit_tool_failure (test_pdf_completion.PdfCompletionTests.test_invalid_selected_page_is_an_explicit_tool_failure) ... ERROR
+test_latest_failed_build_cannot_accept_previous_preserved_pdf (test_pdf_completion.PdfCompletionTests.test_latest_failed_build_cannot_accept_previous_preserved_pdf) ... ERROR
+test_passing_file_check_cannot_hide_an_unrendered_page (test_pdf_completion.PdfCompletionTests.test_passing_file_check_cannot_hide_an_unrendered_page) ... ERROR
+test_readonly_policy_rejects_pdf_execution_capability (test_pdf_completion.PdfCompletionTests.test_readonly_policy_rejects_pdf_execution_capability) ... ok
+test_rebuild_cannot_reuse_page_receipts_from_old_pdf (test_pdf_completion.PdfCompletionTests.test_rebuild_cannot_reuse_page_receipts_from_old_pdf) ... ERROR
+test_reopened_ledger_revalidates_same_actual_page_evidence (test_pdf_completion.PdfCompletionTests.test_reopened_ledger_revalidates_same_actual_page_evidence) ... ERROR
+
+======================================================================
+ERROR: test_cli_export_contains_pdf_and_actual_page_images (test_pdf_completion.PdfCompletionTests.test_cli_export_contains_pdf_and_actual_page_images)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 83, in test_cli_export_contains_pdf_and_actual_page_images
+    from branchwrite.run_cli import _artifact_exports
+ImportError: cannot import name '_artifact_exports' from 'branchwrite.run_cli' (/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/run_cli.py)
+
+======================================================================
+ERROR: test_edit_after_build_invalidates_document_even_with_new_file_check (test_pdf_completion.PdfCompletionTests.test_edit_after_build_invalidates_document_even_with_new_file_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 52, in test_edit_after_build_invalidates_document_even_with_new_file_check
+    self.assertFalse(self.execute([self.build(),self.page(2),self.check()],mutate_after=(1,SOURCE+b'\n# changed construction\n')))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 35, in execute
+    while kernel.frame('program')['pc']<number*2 or kernel.frame('program')['state']=='Waiting':runtime.step()
+                                                                                                ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 617, in step
+    return self._scope('program')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 548, in _scope
+    try:call=self._admit(frame,node,env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 453, in _admit
+    plan=self.registry.freeze(text,observations=self._observations(frame))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 501, in freeze
+    self._world_check();preimages,inventory=self._dependencies(tool,args)
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 196, in _world_check
+    if self._pdf is not None:self._pdf.check()
+                             ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_tools.py", line 23, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_execution.py", line 36, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 62, in check
+    if _stat_key(path.lstat() if path.is_symlink() else path.stat())!=key:raise ValueError('admitted CAD runtime changed')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: admitted CAD runtime changed
+
+======================================================================
+ERROR: test_every_current_page_and_a_current_named_check_can_pass (test_pdf_completion.PdfCompletionTests.test_every_current_page_and_a_current_named_check_can_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 49, in test_every_current_page_and_a_current_named_check_can_pass
+    self.assertTrue(self.execute([self.build(),self.page(2),self.check()]))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 37, in execute
+    result=runtime.run();self.outcomes=tuple(runtime._visible_tool_outcomes(kernel.frame('program')))
+           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 626, in run
+    report=self.step()
+           ^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 617, in step
+    return self._scope('program')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 548, in _scope
+    try:call=self._admit(frame,node,env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 453, in _admit
+    plan=self.registry.freeze(text,observations=self._observations(frame))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 501, in freeze
+    self._world_check();preimages,inventory=self._dependencies(tool,args)
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 196, in _world_check
+    if self._pdf is not None:self._pdf.check()
+                             ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_tools.py", line 23, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_execution.py", line 36, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 62, in check
+    if _stat_key(path.lstat() if path.is_symlink() else path.stat())!=key:raise ValueError('admitted CAD runtime changed')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: admitted CAD runtime changed
+
+======================================================================
+ERROR: test_invalid_selected_page_is_an_explicit_tool_failure (test_pdf_completion.PdfCompletionTests.test_invalid_selected_page_is_an_explicit_tool_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 76, in test_invalid_selected_page_is_an_explicit_tool_failure
+    plan=self.registry.freeze(json.dumps(dict(tool='build_pdf',arguments=dict(path='report.py',output='report.pdf'))))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 501, in freeze
+    self._world_check();preimages,inventory=self._dependencies(tool,args)
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 196, in _world_check
+    if self._pdf is not None:self._pdf.check()
+                             ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_tools.py", line 23, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_execution.py", line 36, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 62, in check
+    if _stat_key(path.lstat() if path.is_symlink() else path.stat())!=key:raise ValueError('admitted CAD runtime changed')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: admitted CAD runtime changed
+
+======================================================================
+ERROR: test_latest_failed_build_cannot_accept_previous_preserved_pdf (test_pdf_completion.PdfCompletionTests.test_latest_failed_build_cannot_accept_previous_preserved_pdf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 70, in test_latest_failed_build_cannot_accept_previous_preserved_pdf
+    self.assertFalse(self.execute([self.build(),self.page(2),self.build(),self.check()],mutate_after=(2,b'raise RuntimeError("broken revision")')))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 35, in execute
+    while kernel.frame('program')['pc']<number*2 or kernel.frame('program')['state']=='Waiting':runtime.step()
+                                                                                                ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 617, in step
+    return self._scope('program')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 548, in _scope
+    try:call=self._admit(frame,node,env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 453, in _admit
+    plan=self.registry.freeze(text,observations=self._observations(frame))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 501, in freeze
+    self._world_check();preimages,inventory=self._dependencies(tool,args)
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 196, in _world_check
+    if self._pdf is not None:self._pdf.check()
+                             ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_tools.py", line 23, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_execution.py", line 36, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 62, in check
+    if _stat_key(path.lstat() if path.is_symlink() else path.stat())!=key:raise ValueError('admitted CAD runtime changed')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: admitted CAD runtime changed
+
+======================================================================
+ERROR: test_passing_file_check_cannot_hide_an_unrendered_page (test_pdf_completion.PdfCompletionTests.test_passing_file_check_cannot_hide_an_unrendered_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 46, in test_passing_file_check_cannot_hide_an_unrendered_page
+    self.assertFalse(self.execute([self.build(),self.check()]))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 37, in execute
+    result=runtime.run();self.outcomes=tuple(runtime._visible_tool_outcomes(kernel.frame('program')))
+           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 626, in run
+    report=self.step()
+           ^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 617, in step
+    return self._scope('program')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 548, in _scope
+    try:call=self._admit(frame,node,env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 453, in _admit
+    plan=self.registry.freeze(text,observations=self._observations(frame))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 501, in freeze
+    self._world_check();preimages,inventory=self._dependencies(tool,args)
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 196, in _world_check
+    if self._pdf is not None:self._pdf.check()
+                             ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_tools.py", line 23, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_execution.py", line 36, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 62, in check
+    if _stat_key(path.lstat() if path.is_symlink() else path.stat())!=key:raise ValueError('admitted CAD runtime changed')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: admitted CAD runtime changed
+
+======================================================================
+ERROR: test_rebuild_cannot_reuse_page_receipts_from_old_pdf (test_pdf_completion.PdfCompletionTests.test_rebuild_cannot_reuse_page_receipts_from_old_pdf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 55, in test_rebuild_cannot_reuse_page_receipts_from_old_pdf
+    self.assertFalse(self.execute([self.build(),self.page(2),self.build(),self.check()],mutate_after=(2,new)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 35, in execute
+    while kernel.frame('program')['pc']<number*2 or kernel.frame('program')['state']=='Waiting':runtime.step()
+                                                                                                ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 617, in step
+    return self._scope('program')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 548, in _scope
+    try:call=self._admit(frame,node,env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 453, in _admit
+    plan=self.registry.freeze(text,observations=self._observations(frame))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 501, in freeze
+    self._world_check();preimages,inventory=self._dependencies(tool,args)
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 196, in _world_check
+    if self._pdf is not None:self._pdf.check()
+                             ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_tools.py", line 23, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_execution.py", line 36, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 62, in check
+    if _stat_key(path.lstat() if path.is_symlink() else path.stat())!=key:raise ValueError('admitted CAD runtime changed')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: admitted CAD runtime changed
+
+======================================================================
+ERROR: test_reopened_ledger_revalidates_same_actual_page_evidence (test_pdf_completion.PdfCompletionTests.test_reopened_ledger_revalidates_same_actual_page_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 64, in test_reopened_ledger_revalidates_same_actual_page_evidence
+    self.assertTrue(self.execute([self.build(),self.page(2),self.check()]))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 37, in execute
+    result=runtime.run();self.outcomes=tuple(runtime._visible_tool_outcomes(kernel.frame('program')))
+           ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 626, in run
+    report=self.step()
+           ^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 617, in step
+    return self._scope('program')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 548, in _scope
+    try:call=self._admit(frame,node,env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/interpreter.py", line 453, in _admit
+    plan=self.registry.freeze(text,observations=self._observations(frame))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 501, in freeze
+    self._world_check();preimages,inventory=self._dependencies(tool,args)
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/tool_registry.py", line 196, in _world_check
+    if self._pdf is not None:self._pdf.check()
+                             ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_tools.py", line 23, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/pdf_execution.py", line 36, in check
+    self.runtime.check()
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/cad_execution.py", line 62, in check
+    if _stat_key(path.lstat() if path.is_symlink() else path.stat())!=key:raise ValueError('admitted CAD runtime changed')
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: admitted CAD runtime changed
+
+======================================================================
+FAIL: test_canonical_receipt_and_page_artifact_cannot_be_forged (test_pdf_completion.PdfCompletionTests.test_canonical_receipt_and_page_artifact_cannot_be_forged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-documents-20261020/tests/test_pdf_completion.py", line 62, in test_canonical_receipt_and_page_artifact_cannot_be_forged
+    self.assertEqual(self.verdict(forged)['status'],'fail')
+AssertionError: 'pass' != 'fail'
+- pass
++ fail
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.932s
+
+FAILED (failures=1, errors=8)

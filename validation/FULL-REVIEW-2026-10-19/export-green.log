@@ -1,0 +1,22 @@
+test_complete_export_contains_exact_binary_and_text_bytes (test_project_export.ProjectExportTests.test_complete_export_contains_exact_binary_and_text_bytes) ... ok
+test_existing_destination_is_preserved (test_project_export.ProjectExportTests.test_existing_destination_is_preserved) ... ok
+test_failed_review_creates_no_export (test_project_export.ProjectExportTests.test_failed_review_creates_no_export) ... ok
+test_binary_creation_and_exact_newline_flags (test_full_project_review.FullProjectReviewTests.test_binary_creation_and_exact_newline_flags) ... ok
+test_file_deletion_has_no_implicit_permission (test_full_project_review.FullProjectReviewTests.test_file_deletion_has_no_implicit_permission) ... ok
+test_mode_change_requires_mode_grant (test_full_project_review.FullProjectReviewTests.test_mode_change_requires_mode_grant) ... ok
+test_shell_written_edit_is_in_complete_review (test_full_project_review.FullProjectReviewTests.test_shell_written_edit_is_in_complete_review) ... ok
+test_ungranted_shell_write_is_rejected (test_full_project_review.FullProjectReviewTests.test_ungranted_shell_write_is_rejected) ... ok
+test_active_writer_excludes_review (test_coding_review.CodingReviewTests.test_active_writer_excludes_review) ... ok
+test_changed_launch_grants_are_rejected (test_coding_review.CodingReviewTests.test_changed_launch_grants_are_rejected) ... ok
+test_exact_saved_preimage_and_current_bytes_form_diff (test_coding_review.CodingReviewTests.test_exact_saved_preimage_and_current_bytes_form_diff) ... ok
+test_post_completion_workspace_change_is_rejected (test_coding_review.CodingReviewTests.test_post_completion_workspace_change_is_rejected) ... ok
+test_links_are_rejected_without_reading_target (test_project_baseline.ProjectBaselineTests.test_links_are_rejected_without_reading_target) ... ok
+test_manifest_is_chunked_beyond_codec_container_limit (test_project_baseline.ProjectBaselineTests.test_manifest_is_chunked_beyond_codec_container_limit) ... ok
+test_missing_payload_is_rejected (test_project_baseline.ProjectBaselineTests.test_missing_payload_is_rejected) ... ok
+test_real_cli_binds_manifest_and_reuses_it_after_a_restart (test_project_baseline.ProjectBaselineTests.test_real_cli_binds_manifest_and_reuses_it_after_a_restart) ... ok
+test_saved_bytes_do_not_follow_later_workspace_or_original_changes (test_project_baseline.ProjectBaselineTests.test_saved_bytes_do_not_follow_later_workspace_or_original_changes) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.077s
+
+OK

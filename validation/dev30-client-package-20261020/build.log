@@ -1,0 +1,9 @@
+Processing /home/dflanag3/src/branchwrite-model-reconciliation-20261019
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: branchwrite
+  Building wheel for branchwrite (pyproject.toml): started
+  Building wheel for branchwrite (pyproject.toml): finished with status 'done'
+  Created wheel for branchwrite: filename=branchwrite-0.1.0.dev30-py3-none-any.whl size=208296 sha256=9d71fb5ba0fa6b056145e416bb102f31b677f8f31ecd5ad2c5f6fe4a753ce19c
+  Stored in directory: /home/dflanag3/.cache/pip/wheels/76/35/e9/67f3e916beac27d3fc7e7132d7d2bfeaadc9444f64c01286dd
+Successfully built branchwrite

@@ -1,0 +1,170 @@
+{
+  "actions": [
+    "read_file",
+    "capture_page",
+    "finish"
+  ],
+  "autonomous_ladder": {
+    "next": "H02",
+    "passed": [
+      "H00",
+      "H01"
+    ],
+    "ubuntu_agent_baseline": "NOT_STARTED",
+    "unrun": [
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ]
+  },
+  "backend_fingerprints": {
+    "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+    "hardware_csv": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-2d2b1358-9abf-ef75-fc3b-892135ea6e58, 595.91.07, 97887 MiB",
+    "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+    "model_weights_sha256": "32759e8867f3e52a7fa559761d003950dd4449e7e970a6de1550bc11c02b8827",
+    "native_binary_sha256": "ae62045f75a8e11ba9d01b4da301d3bb87fe4ff342bab0ea7edc57276377824e",
+    "profile_sha256": "b4cc8d480cdd02a7ec08645fb2d1c68086db0eef0f26ba4ffc71bc02d9e1ec14"
+  },
+  "client_host": "llm-49",
+  "client_layout": "trusted-host-cli-with-audit-and-isolated-tools",
+  "client_seconds": 78.93503317504656,
+  "committed_harness_sha256": "f2287924b0f20164d25c43472df871b041e64854f2af906f5aa99c0b0a779476",
+  "consumed_output_tokens": [
+    159,
+    150,
+    281
+  ],
+  "controller_scope": "DRY+Min-P default with three existing examples, tool-first GBNF, thinking1024",
+  "deployment_files": "deployment/llm49-browser",
+  "executed_harness_sha256": "32418d884e6311df97e87be4d9ac0ec212727ddf4cd7b90c6df3471ba2065588",
+  "image": {
+    "bytes": 1984,
+    "media_type": "image/png",
+    "path": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h01-run-v1/ledger/artifacts/414bcbf649fc99734f5c7481cc33c84ce3031fc35443f4bdae470397efa532b8",
+    "sha256": "414bcbf649fc99734f5c7481cc33c84ce3031fc35443f4bdae470397efa532b8",
+    "source_path": "index.html",
+    "source_sha256": "525d33e50c57dbd1b72f657662db497a89cf12733329c274a92044e07aba93df",
+    "tool_frame": "call-b546dc73dcdb22c34647b8d75ef287975c3232a333784509"
+  },
+  "last_native_branch": {
+    "name": "cross-host-file",
+    "revision": 4,
+    "root": "0f3c3cf607858ad63a0de3efd67aa1353182008e202c41afcdcf8522f20d6524",
+    "tip": "f861c357473dde0e90914b2be14fe3bd22dc806581394a4a85a63deebfe6cf95"
+  },
+  "limitations": [
+    "Bounded capture only, not native image interpretation or all programming problems",
+    "Outer client filesystem-namespace browser path remains unsupported; its failing regression evidence is retained",
+    "Normal trusted CLI audit hooks supplement transport proof; they are not an adversarial OS security boundary",
+    "Browser/candidate execution retains existing Bubblewrap namespace plus Chromium renderer sandbox",
+    "Full COW gate/VC sampler/restart/resource qualification, Q8 and platform matrix remain separate"
+  ],
+  "native_forward_tokens": 12565,
+  "native_receipts": [
+    {
+      "branch": {
+        "name": "cross-host-file",
+        "revision": 2,
+        "root": "0f3c3cf607858ad63a0de3efd67aa1353182008e202c41afcdcf8522f20d6524",
+        "tip": "7ac71955a90cd8d01dae312c8cc9e57108cbb27f9ebdd223feb6949f00ae6866"
+      },
+      "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "payload_sha256": "ddddeda38e1638a645ade421b56e2a6765f2a10abc30419120fd3b757f70f80a",
+      "snapshot": "7ac71955a90cd8d01dae312c8cc9e57108cbb27f9ebdd223feb6949f00ae6866"
+    },
+    {
+      "branch": {
+        "name": "cross-host-file",
+        "revision": 3,
+        "root": "0f3c3cf607858ad63a0de3efd67aa1353182008e202c41afcdcf8522f20d6524",
+        "tip": "36570721b708f4c1ea24cafba157dfa1f00e3674407acae342568a527112ba85"
+      },
+      "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "payload_sha256": "769b39104b10145f188881047262ae498e68458e253a043674936559481fcaf1",
+      "snapshot": "36570721b708f4c1ea24cafba157dfa1f00e3674407acae342568a527112ba85"
+    },
+    {
+      "branch": {
+        "name": "cross-host-file",
+        "revision": 4,
+        "root": "0f3c3cf607858ad63a0de3efd67aa1353182008e202c41afcdcf8522f20d6524",
+        "tip": "f861c357473dde0e90914b2be14fe3bd22dc806581394a4a85a63deebfe6cf95"
+      },
+      "execution_profile_id": "92df1837bd97ec5f4e3ebcc9aedc0cad34a51b83a1f8a84d03dc239de2322633",
+      "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+      "payload_sha256": "f328358a985c527414216d3c4932b02465763d0ece7d8bb5c07ce9a09c4afe6e",
+      "snapshot": "f861c357473dde0e90914b2be14fe3bd22dc806581394a4a85a63deebfe6cf95"
+    }
+  ],
+  "negatives": [
+    "native import refused",
+    "GPU file open refused",
+    "unregistered process refused",
+    "HTTP401; native forward_tokens0 before authorized run",
+    "missing capture or stale source does not verify"
+  ],
+  "numerical_max_error": "NOT_MEASURED; no full-logit oracle in H01",
+  "policy_evidence": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/browser-nested-policy-v1",
+  "postrun_harness_change": "Module docstring audit-scope correction only; AST excluding docstring identical. Product source hashes match live run.",
+  "prefix_input_tokens": 11039,
+  "protected_checker_sha256": "59c93e1f003fe8e62abe606894ef34a478b5911a67178b017cf39c014223bf73",
+  "protected_pixels": "PASS original unchanged H01 pixels assertion on actual returned PNG; no candidate execution on host",
+  "raw_independent_audit": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h01-driver-v1/independent-capture-audit.json",
+  "raw_result": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h01-driver-v1/result.json",
+  "reopen_seconds": 0.4007651440333575,
+  "schema": 1,
+  "server_canonical_receipt_match": true,
+  "server_cleanup": {
+    "api_credentials_removed": true,
+    "chat_server_restarted": false,
+    "native_exit": 0,
+    "owned_processes_absent": true,
+    "prior_authorized_keys_hash_restored": true,
+    "server_exit": 0,
+    "temporary_authorized_key_removed": true
+  },
+  "server_host": "llm-60",
+  "source_pins": "/home/dflanag3/spatial-artifacts/branchwrite-cross-host-20261018-v1/h01-source-pins-v1.json",
+  "source_unchanged": true,
+  "status": "BOUNDED_AUTONOMOUS_H01_Q4_PASS",
+  "tests": {
+    "actual_browser_regressions": {
+      "failed": 0,
+      "passed": 9,
+      "skipped": 0
+    },
+    "client_regressions": {
+      "failed": 0,
+      "passed": 57,
+      "skipped": 0
+    },
+    "live_h01": {
+      "failed": 0,
+      "passed": 1,
+      "skipped": 0
+    },
+    "new_capture_cli": {
+      "failed": 0,
+      "passed": 8,
+      "skipped": 0
+    }
+  },
+  "unsupported_outer_client_browser_tests": {
+    "errors": 3,
+    "failures": 1,
+    "passed": 4,
+    "skipped": 0,
+    "status": "FAIL; retained outside supported normal host-CLI layout",
+    "total": 8
+  }
+}

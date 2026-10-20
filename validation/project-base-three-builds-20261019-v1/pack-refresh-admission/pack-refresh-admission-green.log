@@ -1,0 +1,12 @@
+test_changed_pack_gets_new_identity_and_frozen_provenance (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_changed_pack_gets_new_identity_and_frozen_provenance) ... ok
+test_cli_refresh_and_resume_preserve_admission (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_cli_refresh_and_resume_preserve_admission) ... ok
+test_missing_selected_source_does_not_shrink_pack (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_missing_selected_source_does_not_shrink_pack) ... ok
+test_refresh_api_binds_expected_old_identity (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_api_binds_expected_old_identity) ... ok
+test_refresh_requires_a_pack_and_new_root (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_refresh_requires_a_pack_and_new_root) ... ok
+test_unchanged_pack_retains_exact_identity (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_unchanged_pack_retains_exact_identity) ... ok
+test_wrong_original_identity_rejected_before_new_pack (test_coding_pack_refresh_admission.CodingPackRefreshAdmissionTests.test_wrong_original_identity_rejected_before_new_pack) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.071s
+
+OK

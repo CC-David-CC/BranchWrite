@@ -1,0 +1,19 @@
+{
+  "status": "FOCUSED_TEST_BOUNDARY_ADMISSION_PASS",
+  "tests": 35,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "red": {
+    "tests": 3,
+    "failures": 1,
+    "errors": 2
+  },
+  "live_rerun": "NOT_RUN",
+  "original_trial": "FAIL_TIMEOUT_INFRASTRUCTURE",
+  "broader_cli": {
+    "tests": 48,
+    "errors": 22,
+    "status": "ENVIRONMENT_NOT_CONFIGURED"
+  }
+}

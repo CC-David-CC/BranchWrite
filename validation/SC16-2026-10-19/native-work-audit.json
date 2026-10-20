@@ -1,0 +1,15 @@
+{
+  "status": "WORK_AND_CLEANUP_PASS_NOT_OVERALL_DIAGNOSTIC_PASS",
+  "initial_prefix_forward_tokens": 0,
+  "prefix_bytes_unchanged": true,
+  "prefill_tokens": 6960,
+  "generated_tokens": 288,
+  "forward_tokens": 7248,
+  "integrity_mismatches": 0,
+  "server_exit": 0,
+  "native_exit": 0,
+  "scoped_key_revoked": true,
+  "original_keys_byte_exact": true,
+  "atexit_hook_summary_present": false,
+  "numerical_oracle": "NOT_RUN"
+}

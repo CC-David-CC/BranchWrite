@@ -1,0 +1,21 @@
+test_eof_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_eof_retains_original_pending_identity) ... /usr/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 404: 'Not Found'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_error_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_error_retains_original_pending_identity) ... ok
+test_failure_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_failure_retains_original_pending_identity) ... ok
+test_first_cli_failure_reports_unresolved_original_operation (test_generation_stream_uncertainty.StreamUncertaintyTests.test_first_cli_failure_reports_unresolved_original_operation) ... ok
+test_rejected_http_response_is_closed (test_generation_stream_uncertainty.StreamUncertaintyTests.test_rejected_http_response_is_closed) ... FAIL
+
+======================================================================
+FAIL: test_rejected_http_response_is_closed (test_generation_stream_uncertainty.StreamUncertaintyTests.test_rejected_http_response_is_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_stream_uncertainty.py", line 46, in test_rejected_http_response_is_closed
+    self.assertTrue(body.closed)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.549s
+
+FAILED (failures=1)

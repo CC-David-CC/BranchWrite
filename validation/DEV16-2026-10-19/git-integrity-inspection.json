@@ -1,0 +1,137 @@
+{
+  "fsck_exit": 0,
+  "worktree_heads": [
+    {
+      "sha": "efa230bc4b59f8196a56b1505ddbca5740224aa7",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "f3001dba05531c5d69b9e4454351f61e736e2a52",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "dc778e0451cfd9da06b16f65d416dacdedb1a8ae",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "0e5e5bdfd90391281df70ce26cf8b6f74d70ef68",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "2d02fa09cfb9356d5abb36bb053e35757742b91e",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "d4024bc026f70fc56f34741a2c4f6716dd0b838b",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "a7aba0579dc78f504c82b023f7aea8e897b8a48a",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "2d6dfcaea12837011d0c5146c352134b212d7580",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "981fa5944ef4913982d148c33737f04396564f7d",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "2c8b8fb3c710e99b231d3e544d5f21ef76eef85a",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "9d7f85b308da1e2f91044bc8e9fdca7534c7cd71",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "3c8a7866264be7ef1e619018998e7f6ff3bf0acd",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "9fa76c4b59f1f54fcec17f70704228d58cfef19a",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "e8a1e06f3ad078611a567173282b82abb427d1c1",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "9be78e43b258f529da247bc05e050be2bb3a31bb",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "4239de7ad86aa7e940e04d8074fb9678d3bc9c0e",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "dc9ef4fc639e23954f36be4fd41ee553acab037a",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "8f45ab5f071775fe89d25d7532b775dd68bbea06",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "2cb155db2e64c9adaf8ad3be54ab75f615e28ff8",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "7ef483a175966013721433275c08522512d43599",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "568d5bbb03f9fac2b6826eb9624b294c5e8fe7ec",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "2f3c316bc06f6f67529ae001fbf7aa1c46f6e755",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "93cf05a40348823d1a0fee0d565aeb38a27338aa",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "648cb2e7c50b75ef951e403ec654f3c8c617cfa0",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "9fa9ca05d6af90b10903b3016c33068d221b6785",
+      "exit_code": 0,
+      "type": "commit"
+    },
+    {
+      "sha": "9624152fd27eb44c51b7ecff4c844ea049ef1dc9",
+      "exit_code": 0,
+      "type": "commit"
+    }
+  ],
+  "all_worktree_heads_readable": true,
+  "scope": "Read-only inspection; no metadata deleted or garbage collection forced"
+}

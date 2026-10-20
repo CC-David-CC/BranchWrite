@@ -1,0 +1,10 @@
+{
+  "bytes": 2074392576,
+  "copy_seconds": 20.300531978020445,
+  "MiB_per_second": 97.45039804951497,
+  "sha256": "205cbe604ffda46169dedd62436d3c21e0efa7fec6bb37f7740e0e29aae7665d",
+  "source": "a5500:10.0.7.87",
+  "destination": "llm-49",
+  "path": "/home/dflanag3/spatial-artifacts/branchwrite-vm-20261020/CodiServer-VM-light-verified.iso",
+  "transport": "direct LAN SSH; restricted read-only ISO key"
+}

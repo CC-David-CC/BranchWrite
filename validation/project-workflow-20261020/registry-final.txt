@@ -1,0 +1,14 @@
+........F........................
+======================================================================
+FAIL: test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass (tests.test_tool_registry.ToolRegistryTests.test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_tool_registry.py", line 102, in test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass
+    self.assertEqual(result.exit_code,1);self.assertIn(b'Start directory is not importable',result.stderr)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'Start directory is not importable' not found in b'\n----------------------------------------------------------------------\nRan 0 tests in 0.000s\n\nNO TESTS RAN\nNo test cases found; an empty suite is not a successful verification.\n'
+
+----------------------------------------------------------------------
+Ran 33 tests in 2.863s
+
+FAILED (failures=1)

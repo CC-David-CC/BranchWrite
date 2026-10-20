@@ -1,0 +1,68 @@
+{
+  "status": "INSTALLED",
+  "started": 1792517239.2744634,
+  "finished": 1792517246.475795,
+  "steps": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "venv",
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/bootstrap"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/bootstrap/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "uv==0.13.4"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/bootstrap/bin/uv",
+        "python",
+        "install",
+        "3.12"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/bootstrap/bin/uv",
+        "venv",
+        "--python",
+        "3.12",
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/cadvenv"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/bootstrap/bin/uv",
+        "pip",
+        "install",
+        "--python",
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/cadvenv/bin/python",
+        "build123d==0.13.0",
+        "matplotlib",
+        "Pillow"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/bootstrap/bin/uv",
+        "pip",
+        "freeze",
+        "--python",
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/cadvenv/bin/python"
+      ],
+      "exit": 0
+    }
+  ]
+}

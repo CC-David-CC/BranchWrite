@@ -1,0 +1,159 @@
+{
+  "status": "PASS",
+  "tests": 37,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 3.921537111978978,
+  "results": [
+    {
+      "id": "serve.test_cow_http_pause.PauseHTTPTests.test_auth_origin_id_and_unknown_request",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_http_pause.PauseHTTPTests.test_publication_failure_after_pause_never_emits_complete",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_http_pause.PauseHTTPTests.test_requested_pause_is_not_durable_acknowledgment",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_http_pause.PauseHTTPTests.test_unsupported_request_rejects_pause_without_setting_event",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_duplicate_relative_aliases_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_invalid_hash_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_missing_declaration_is_reported_as_unverified",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_missing_source_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_modified_source_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_normal_server_rejects_declared_mismatch_before_creating_store",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_parent_escape_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_relocated_declared_sources_match_by_exact_bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_symlink_is_not_a_pinned_source_file",
+      "status": "PASS"
+    },
+    {
+      "id": "serve.test_cow_runtime_source_identity.RuntimeSourceIdentityTests.test_windows_declared_paths_relocate_without_changing_bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause_coordinator.PauseCoordinatorTests.test_partial_pause_commits_and_resumes_same_random_sequence",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.ConsumedPauseTests.test_destructive_cancellation_remains_distinct_and_wins",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.ConsumedPauseTests.test_early_pause_consumes_one_token_and_resumes_exact_grammar",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.ConsumedPauseTests.test_eos_and_pause_at_same_boundary_keep_stopped_controller",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.ConsumedPauseTests.test_no_pause_preserves_normal_completion",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.ConsumedPauseTests.test_noncallable_pause_rejected_before_forward_work",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.ConsumedPauseTests.test_pause_after_second_consumed_token_retains_parser_progress",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.ConsumedPauseTests.test_pause_callback_failure_does_not_publish_or_change_parent",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.SampledPauseTests.test_grammar_pause_restores_nonzero_rng_and_parser_progress",
+      "status": "PASS"
+    },
+    {
+      "id": "test_consumed_pause.SampledPauseTests.test_plain_sampled_wrapper_preserves_draw_cursor",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_all_receipt_fields_rejected_even_with_warm_cache",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_bounded_lru_eviction_recomputes_without_retaining_history",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_cache_hit_cannot_allow_image_interior_or_image_end_boundary",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_changed_canonical_content_cannot_inherit_warm_binding",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_concurrent_lookup_and_eviction_preserve_independent_results",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_deliberately_wrong_hash_computation_is_detected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_extension_and_sibling_share_only_identical_prefix",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_false_declared_history_digest_rejected_before_cache_lookup",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_growing_schedule_hashes_new_boundary_but_reuses_prior_boundaries",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_independent_equations_match_cold_and_warm_for_mixed_inputs",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_invalid_cache_capacity_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingCacheTests.test_returned_dict_is_detached_from_cached_binding",
+      "status": "PASS"
+    },
+    {
+      "id": "test_schedule_binding_cache.BindingReuseTests.test_repeated_validation_hashes_each_immutable_prefix_body_once",
+      "status": "PASS"
+    }
+  ],
+  "scope": "CPU/source identity/coordinator/HTTP pause fixtures; no new model numerical claim"
+}

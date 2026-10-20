@@ -1,0 +1,86 @@
+test_checkpoint_preserves_user_git_index_head_and_dirty_files (tests.test_workspace_versions.WorkspaceVersionsTests.test_checkpoint_preserves_user_git_index_head_and_dirty_files) ... ERROR
+test_conflicting_preimage_fails_before_first_write (tests.test_workspace_versions.WorkspaceVersionsTests.test_conflicting_preimage_fails_before_first_write) ... ERROR
+test_crash_after_one_file_recovers_same_intent (tests.test_workspace_versions.WorkspaceVersionsTests.test_crash_after_one_file_recovers_same_intent) ... ERROR
+test_crash_recovery_does_not_overwrite_intervening_edit (tests.test_workspace_versions.WorkspaceVersionsTests.test_crash_recovery_does_not_overwrite_intervening_edit) ... ERROR
+test_guarded_publication_keeps_unrelated_user_edits_and_is_idempotent (tests.test_workspace_versions.WorkspaceVersionsTests.test_guarded_publication_keeps_unrelated_user_edits_and_is_idempotent) ... ERROR
+test_old_context_with_new_files_uses_isolated_worktree (tests.test_workspace_versions.WorkspaceVersionsTests.test_old_context_with_new_files_uses_isolated_worktree) ... ERROR
+test_restore_removes_only_files_owned_by_the_checkpoint_delta (tests.test_workspace_versions.WorkspaceVersionsTests.test_restore_removes_only_files_owned_by_the_checkpoint_delta) ... ERROR
+test_symlink_cannot_redirect_capture_or_publication (tests.test_workspace_versions.WorkspaceVersionsTests.test_symlink_cannot_redirect_capture_or_publication) ... ERROR
+test_version_names_cannot_escape_or_rebind_a_checkpoint (tests.test_workspace_versions.WorkspaceVersionsTests.test_version_names_cannot_escape_or_rebind_a_checkpoint) ... ERROR
+
+======================================================================
+ERROR: test_checkpoint_preserves_user_git_index_head_and_dirty_files (tests.test_workspace_versions.WorkspaceVersionsTests.test_checkpoint_preserves_user_git_index_head_and_dirty_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+======================================================================
+ERROR: test_conflicting_preimage_fails_before_first_write (tests.test_workspace_versions.WorkspaceVersionsTests.test_conflicting_preimage_fails_before_first_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+======================================================================
+ERROR: test_crash_after_one_file_recovers_same_intent (tests.test_workspace_versions.WorkspaceVersionsTests.test_crash_after_one_file_recovers_same_intent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+======================================================================
+ERROR: test_crash_recovery_does_not_overwrite_intervening_edit (tests.test_workspace_versions.WorkspaceVersionsTests.test_crash_recovery_does_not_overwrite_intervening_edit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+======================================================================
+ERROR: test_guarded_publication_keeps_unrelated_user_edits_and_is_idempotent (tests.test_workspace_versions.WorkspaceVersionsTests.test_guarded_publication_keeps_unrelated_user_edits_and_is_idempotent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+======================================================================
+ERROR: test_old_context_with_new_files_uses_isolated_worktree (tests.test_workspace_versions.WorkspaceVersionsTests.test_old_context_with_new_files_uses_isolated_worktree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+======================================================================
+ERROR: test_restore_removes_only_files_owned_by_the_checkpoint_delta (tests.test_workspace_versions.WorkspaceVersionsTests.test_restore_removes_only_files_owned_by_the_checkpoint_delta)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+======================================================================
+ERROR: test_symlink_cannot_redirect_capture_or_publication (tests.test_workspace_versions.WorkspaceVersionsTests.test_symlink_cannot_redirect_capture_or_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+======================================================================
+ERROR: test_version_names_cannot_escape_or_rebind_a_checkpoint (tests.test_workspace_versions.WorkspaceVersionsTests.test_version_names_cannot_escape_or_rebind_a_checkpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_workspace_versions.py", line 16, in setUp
+    from branchwrite.workspace_versions import WorkspaceVersions
+ModuleNotFoundError: No module named 'branchwrite.workspace_versions'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.003s
+
+FAILED (errors=9)

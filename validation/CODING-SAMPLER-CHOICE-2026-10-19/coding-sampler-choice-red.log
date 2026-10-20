@@ -1,0 +1,108 @@
+test_cli_passes_explicit_choice_to_normal_admission (test_coding_sampler_choice.CodingSamplerChoiceTests.test_cli_passes_explicit_choice_to_normal_admission) ... usage: branchwrite [-h]
+                   {check,canonicalize,run,step,code,resume,apply,export,review,status,reconcile} ...
+branchwrite: error: unrecognized arguments: --sampler min-p
+ERROR
+test_default_keeps_existing_greedy_launch_bytes (test_coding_sampler_choice.CodingSamplerChoiceTests.test_default_keeps_existing_greedy_launch_bytes) ... ERROR
+test_new_admissions_select_exact_existing_presets (test_coding_sampler_choice.CodingSamplerChoiceTests.test_new_admissions_select_exact_existing_presets) ... 
+  test_new_admissions_select_exact_existing_presets (test_coding_sampler_choice.CodingSamplerChoiceTests.test_new_admissions_select_exact_existing_presets) (sampler='greedy') ... ERROR
+  test_new_admissions_select_exact_existing_presets (test_coding_sampler_choice.CodingSamplerChoiceTests.test_new_admissions_select_exact_existing_presets) (sampler='min-p') ... ERROR
+  test_new_admissions_select_exact_existing_presets (test_coding_sampler_choice.CodingSamplerChoiceTests.test_new_admissions_select_exact_existing_presets) (sampler='dry-min-p') ... ERROR
+test_saved_sampler_cannot_be_replaced_on_same_run (test_coding_sampler_choice.CodingSamplerChoiceTests.test_saved_sampler_cannot_be_replaced_on_same_run) ... ERROR
+test_unknown_preset_fails_before_state_or_network (test_coding_sampler_choice.CodingSamplerChoiceTests.test_unknown_preset_fails_before_state_or_network) ... ERROR
+
+======================================================================
+ERROR: test_cli_passes_explicit_choice_to_normal_admission (test_coding_sampler_choice.CodingSamplerChoiceTests.test_cli_passes_explicit_choice_to_normal_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 29, in test_cli_passes_explicit_choice_to_normal_admission
+    self.assertEqual(main(args),0)
+                     ~~~~^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/__main__.py", line 79, in main
+    args=parser.parse_args(argv)
+  File "/usr/lib/python3.14/argparse.py", line 2020, in parse_args
+    self.error(msg)
+    ~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2797, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/argparse.py", line 2784, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
+
+======================================================================
+ERROR: test_default_keeps_existing_greedy_launch_bytes (test_coding_sampler_choice.CodingSamplerChoiceTests.test_default_keeps_existing_greedy_launch_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 18, in test_default_keeps_existing_greedy_launch_bytes
+    self.assertEqual(self.build(),self.build(sampler='greedy'))
+                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 13, in build
+    def build(self,**kw):return build_launch(self.project,'Repair.',self.connection,branch='candidate',test_commands=['python3 -m unittest'],**kw)
+                                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'sampler'
+
+======================================================================
+ERROR: test_new_admissions_select_exact_existing_presets (test_coding_sampler_choice.CodingSamplerChoiceTests.test_new_admissions_select_exact_existing_presets) (sampler='greedy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 16, in test_new_admissions_select_exact_existing_presets
+    with self.subTest(sampler=sampler):self.assertEqual(self.build(sampler=sampler)['config']['profiles']['control'],generation_profile(sampler))
+                                                        ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 13, in build
+    def build(self,**kw):return build_launch(self.project,'Repair.',self.connection,branch='candidate',test_commands=['python3 -m unittest'],**kw)
+                                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'sampler'
+
+======================================================================
+ERROR: test_new_admissions_select_exact_existing_presets (test_coding_sampler_choice.CodingSamplerChoiceTests.test_new_admissions_select_exact_existing_presets) (sampler='min-p')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 16, in test_new_admissions_select_exact_existing_presets
+    with self.subTest(sampler=sampler):self.assertEqual(self.build(sampler=sampler)['config']['profiles']['control'],generation_profile(sampler))
+                                                        ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 13, in build
+    def build(self,**kw):return build_launch(self.project,'Repair.',self.connection,branch='candidate',test_commands=['python3 -m unittest'],**kw)
+                                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'sampler'
+
+======================================================================
+ERROR: test_new_admissions_select_exact_existing_presets (test_coding_sampler_choice.CodingSamplerChoiceTests.test_new_admissions_select_exact_existing_presets) (sampler='dry-min-p')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 16, in test_new_admissions_select_exact_existing_presets
+    with self.subTest(sampler=sampler):self.assertEqual(self.build(sampler=sampler)['config']['profiles']['control'],generation_profile(sampler))
+                                                        ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 13, in build
+    def build(self,**kw):return build_launch(self.project,'Repair.',self.connection,branch='candidate',test_commands=['python3 -m unittest'],**kw)
+                                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'sampler'
+
+======================================================================
+ERROR: test_saved_sampler_cannot_be_replaced_on_same_run (test_coding_sampler_choice.CodingSamplerChoiceTests.test_saved_sampler_cannot_be_replaced_on_same_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 23, in test_saved_sampler_cannot_be_replaced_on_same_run
+    state=self.root/'state';original=self.build(sampler='min-p');save_launch(state,original)
+                                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 13, in build
+    def build(self,**kw):return build_launch(self.project,'Repair.',self.connection,branch='candidate',test_commands=['python3 -m unittest'],**kw)
+                                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'sampler'
+
+======================================================================
+ERROR: test_unknown_preset_fails_before_state_or_network (test_coding_sampler_choice.CodingSamplerChoiceTests.test_unknown_preset_fails_before_state_or_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 20, in test_unknown_preset_fails_before_state_or_network
+    with self.assertRaises(ValueError):self.build(sampler='invented')
+                                       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_sampler_choice.py", line 13, in build
+    def build(self,**kw):return build_launch(self.project,'Repair.',self.connection,branch='candidate',test_commands=['python3 -m unittest'],**kw)
+                                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'sampler'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.011s
+
+FAILED (errors=7)

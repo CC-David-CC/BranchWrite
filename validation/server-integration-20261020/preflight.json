@@ -1,0 +1,23 @@
+{
+  "status": "PREFLIGHT_PASS_NO_GPU_STARTED",
+  "source_root": "/home/dflanag3/src/context-cow-consumed-pause-20261020",
+  "source_commit": "780e824a33a35d2a857643b43a56858ce14ec8b6",
+  "profile_id": "5f488c1cc91d67422402a59ddf56efdd757593f3cd4300971380c15ba33876b7",
+  "prior_profile_id": "62a8bc71db2436477fc6e5c010d4357287034c04ea41123a887418694a5d42b6",
+  "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+  "source_closure": {
+    "status": "verified",
+    "files": 586,
+    "files_sha256": "2b9a0f9301013be2964e6340b35ffc8d575db52b6dfb75e943890d96354dc4b1",
+    "declared_source_commit": "780e824a33a35d2a857643b43a56858ce14ec8b6"
+  },
+  "model_validation": {
+    "model_bytes_hashed_this_process": 0,
+    "model_file_hash_receipts_reused": 15
+  },
+  "native_executable_sha256": "ae62045f75a8e11ba9d01b4da301d3bb87fe4ff342bab0ea7edc57276377824e",
+  "native_options_unchanged": true,
+  "vision_config_sha256": "221200d2356d20bf5019be2876701e893460ea8c3af7268df4dd12f2080e0737",
+  "store_exists": false,
+  "timestamp": 1792527868.84175
+}

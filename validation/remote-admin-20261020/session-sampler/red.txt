@@ -1,0 +1,53 @@
+test_branch_controls_wait_for_settled_work (test_interactive_session.InteractiveSessionTests.test_branch_controls_wait_for_settled_work) ... ok
+test_continue_while_working_does_not_queue_duplicate_resume (test_interactive_session.InteractiveSessionTests.test_continue_while_working_does_not_queue_duplicate_resume) ... ok
+test_continue_without_a_paused_turn_is_rejected_before_admission (test_interactive_session.InteractiveSessionTests.test_continue_without_a_paused_turn_is_rejected_before_admission) ... ok
+test_edit_first_request_reuses_the_recorded_prepared_model_prefix (test_interactive_session.InteractiveSessionTests.test_edit_first_request_reuses_the_recorded_prepared_model_prefix) ... ok
+test_edit_first_request_uses_its_preceding_files_and_context (test_interactive_session.InteractiveSessionTests.test_edit_first_request_uses_its_preceding_files_and_context) ... ok
+test_explicit_continue_unpauses_a_stopped_worker (test_interactive_session.InteractiveSessionTests.test_explicit_continue_unpauses_a_stopped_worker) ... ok
+test_explore_old_context_with_current_files_and_switch_back_without_inference (test_interactive_session.InteractiveSessionTests.test_explore_old_context_with_current_files_and_switch_back_without_inference) ... ok
+test_failed_worker_open_requires_reopening_not_an_unhandled_queue (test_interactive_session.InteractiveSessionTests.test_failed_worker_open_requires_reopening_not_an_unhandled_queue) ... ok
+test_input_worktree_preserves_private_file_modes (test_interactive_session.InteractiveSessionTests.test_input_worktree_preserves_private_file_modes) ... ok
+test_invalid_control_target_rejects_before_admission (test_interactive_session.InteractiveSessionTests.test_invalid_control_target_rejects_before_admission) ... ok
+test_lost_alternative_publication_reply_recovers_without_model_rerun (test_interactive_session.InteractiveSessionTests.test_lost_alternative_publication_reply_recovers_without_model_rerun) ... ok
+test_new_sampler_does_not_rewrite_an_unresolved_saved_launch (test_interactive_session.InteractiveSessionTests.test_new_sampler_does_not_rewrite_an_unresolved_saved_launch) ... ERROR
+test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context (test_interactive_session.InteractiveSessionTests.test_plan_and_aside_do_not_publish_and_aside_does_not_move_current_context) ... ok
+test_queued_followups_combine_without_stopping_active_work (test_interactive_session.InteractiveSessionTests.test_queued_followups_combine_without_stopping_active_work) ... ok
+test_selected_sampler_applies_only_to_new_admissions (test_interactive_session.InteractiveSessionTests.test_selected_sampler_applies_only_to_new_admissions) ... ERROR
+test_steering_interrupts_at_safe_boundary_then_uses_new_request (test_interactive_session.InteractiveSessionTests.test_steering_interrupts_at_safe_boundary_then_uses_new_request) ... ok
+test_switch_conflict_preserves_user_edit_and_original_control_id (test_interactive_session.InteractiveSessionTests.test_switch_conflict_preserves_user_edit_and_original_control_id) ... ok
+test_switch_restores_matching_files_then_followup_uses_that_exact_tip (test_interactive_session.InteractiveSessionTests.test_switch_restores_matching_files_then_followup_uses_that_exact_tip) ... ok
+test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch (test_interactive_session.InteractiveSessionTests.test_unknown_operation_remains_pending_and_recovery_uses_same_saved_launch) ... ok
+test_unknown_sampler_fails_before_opening_workflow (test_interactive_session.InteractiveSessionTests.test_unknown_sampler_fails_before_opening_workflow) ... ERROR
+test_work_publishes_in_current_directory_and_followup_forks_saved_context (test_interactive_session.InteractiveSessionTests.test_work_publishes_in_current_directory_and_followup_forks_saved_context) ... ok
+
+======================================================================
+ERROR: test_new_sampler_does_not_rewrite_an_unresolved_saved_launch (test_interactive_session.InteractiveSessionTests.test_new_sampler_does_not_rewrite_an_unresolved_saved_launch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_interactive_session.py", line 276, in test_new_sampler_does_not_rewrite_an_unresolved_saved_launch
+    self.service=self.Service(self.project,self.state,self.connection,runner=self.driver,sampler='min-p')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SessionService.__init__() got an unexpected keyword argument 'sampler'
+
+======================================================================
+ERROR: test_selected_sampler_applies_only_to_new_admissions (test_interactive_session.InteractiveSessionTests.test_selected_sampler_applies_only_to_new_admissions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_interactive_session.py", line 267, in test_selected_sampler_applies_only_to_new_admissions
+    self.service=self.Service(self.project,self.state,self.connection,runner=self.driver,sampler='min-p')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SessionService.__init__() got an unexpected keyword argument 'sampler'
+
+======================================================================
+ERROR: test_unknown_sampler_fails_before_opening_workflow (test_interactive_session.InteractiveSessionTests.test_unknown_sampler_fails_before_opening_workflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_interactive_session.py", line 288, in test_unknown_sampler_fails_before_opening_workflow
+    with self.assertRaises(ValueError):self.Service(self.project,self.state,self.connection,sampler='invented')
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SessionService.__init__() got an unexpected keyword argument 'sampler'
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.347s
+
+FAILED (errors=3)

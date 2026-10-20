@@ -1,0 +1,8 @@
+{
+  "scope": "New larger-pool experiment with unchanged task/source/prefix; first request remains pending",
+  "original_operation": "bwnative-5dc87067b1f64c311061891faa538b21276077415da6de36",
+  "original_state": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source/state",
+  "ram_gib": 24,
+  "disk_gib": 64,
+  "source_hashes_unchanged": true
+}

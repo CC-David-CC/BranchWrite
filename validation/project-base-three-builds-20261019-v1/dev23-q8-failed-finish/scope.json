@@ -1,0 +1,10 @@
+{
+  "kind": "REAL_GPU_CONTROL_FLOW_DRILL",
+  "initial_action": "finish forced by initial grammar definition",
+  "host_verifier": "unchanged command-evidence-and-finish; real failure due absent test receipt",
+  "subsequent_generation": "Unchanged8192+ grammar states, greedy settings, ordinary tool grants",
+  "not_model_quality_evidence": true,
+  "not_training_candidate": true,
+  "goal": "Prove actual host failure -> retained failed tip -> canonical planning fork -> useful work",
+  "status": "PREPARED_NOT_RUN"
+}

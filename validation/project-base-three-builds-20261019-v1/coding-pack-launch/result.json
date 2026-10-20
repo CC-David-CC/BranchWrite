@@ -1,0 +1,25 @@
+{
+  "status": "BOUNDED_SOURCE_CLI_HTTP_PASS",
+  "new_methods": 6,
+  "combined_tests": 35,
+  "failures": 0,
+  "skips": 0,
+  "scope": "Actual CLI subprocess and authenticated HTTP/Store with CPU grammar backend; parser-only test separately labelled",
+  "behavior": [
+    "Paired explicit reference-pack path/id for a new bootstrap",
+    "Current source verification before new admission",
+    "Existing launch and ledger retain pin",
+    "Admitted resume keeps old COW root after source edits",
+    "Existing-source and reference-pack selection are exclusive"
+  ],
+  "remaining": [
+    "New installed wheel",
+    "Real GPU qualification for new flags",
+    "Automatic freshness/adoption policy",
+    "Root publication before workflow admission interruption boundary"
+  ],
+  "logs_sha256": {
+    "coding-pack-launch-after.log": "44351ba2e0368c8807c15ad5e377b077fdbe68ae6d8e7ad26ad45975d1ac22d9",
+    "coding-pack-launch-before.log": "d47f955710aea4599275f62cd8d630144a1c3a9af551f05f2540380094cdb37b"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "ORIGINAL_ASSERTION_FAIL_RETAINED",
+  "canonical_difference_paths": [
+    "controller.stream_key"
+  ],
+  "all_other_canonical_fields_equal": true,
+  "next_draw_baseline": 0,
+  "next_draw_profile": 0,
+  "source_evidence": "real.py start decoder scope sets sha256(stream) and next_draw=0; distinct generation streams intentionally differ",
+  "scope": "This does not certify full controller equality or logits",
+  "snapshot_ids": [
+    "2f218c29ca97755beacb026f8b85704208ee5ed467fd6d1caa0c7cc745de0ff9",
+    "a876eb8cf5d6c58bb658ec387ed3cf64e89bf77d11b844fce18af2321e68b257"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "milestone": "BranchWrite local FIFO recovery after client process death",
+  "status": "PASS_BOUNDED_CPU_FIXTURE",
+  "executed_at": "2026-10-20",
+  "host": "dflanag3-B650-GAMING-X-AX",
+  "python": "3.12.3",
+  "branchwrite_base_commit": "fd794fe1bda53e6d280fa149ec6f3c11f1788556",
+  "context_cow_commit": "831b4d8dc7684c5fce14c17d2113fcadfc5e1b8a",
+  "executions": [
+    {
+      "id": "test_local_queue_survives_client_death_and_drains_after_reconcile",
+      "runs": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "id": "tests.test_chat_cli_http",
+      "runs": 1,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "id": "tests.test_cow_http_process_restart",
+      "runs": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "id": "tests.test_cow_client",
+      "runs": 1,
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "totals": {
+    "executed": 28,
+    "distinct_methods": 25,
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0
+  },
+  "verified": [
+    "A new user message is atomically stored in the private local queue while a previous COW request is active.",
+    "The client OS process is killed after COW accepts its operation.",
+    "COW finishes the earlier answer after the client has died.",
+    "The queued process cannot send while the chat state still has an unresolved operation.",
+    "A new BranchWrite process reconciles the original operation ID, then drains the queued message.",
+    "COW history contains both user messages in FIFO order and both original operation IDs exactly once."
+  ],
+  "limitations": [
+    "Uses real BranchWrite subprocesses and COW coordinator/Store/HTTP handler with deterministic synthetic CPU FlowModel.",
+    "The queue-specific test leaves the COW service process alive; separate process restart coverage is in validation/cow-http-process-restart-20261020/.",
+    "No real GPU inference, native KV restore, disk-full or power-loss test."
+  ],
+  "test_log_sha256": "0db093ee5f68c9126a63cf1600866ea7749e158ab647d4c4e838b089e92ef388",
+  "test_source_sha256": "83ffa71ebd9f46907d8c1cddbf6ccd9168b240b600ba89f88bbad5d3bf759ef1"
+}

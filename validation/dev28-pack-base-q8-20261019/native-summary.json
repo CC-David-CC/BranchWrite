@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "metrics": {
+    "forward_tokens": 17654,
+    "prefill_tokens": 16444,
+    "decode_timed_tokens": 1210,
+    "decode_prepare_ns": 1157512965,
+    "decode_compute_ns": 22526840877,
+    "decode_finish_ns": 129924543,
+    "captures": 6,
+    "restores": 11,
+    "loaded_file_bytes": 0,
+    "written_file_bytes": 3129764964,
+    "copied_bytes": 377487360,
+    "integrity_mismatches": 0,
+    "native_generation_tps": 50.80985367006324
+  },
+  "code_phase_root_reuse": [
+    {
+      "command": "restore",
+      "consumed": 13068,
+      "forward_delta": 0,
+      "prefill_delta": 0
+    }
+  ],
+  "server_startup_seconds": 73.5378041609656,
+  "stop_exit": 0,
+  "native_exit": 0,
+  "numerical_oracle": "NOT_RUN",
+  "numerical_max_abs_error": null,
+  "memory_scope": "No peak measurement claim"
+}

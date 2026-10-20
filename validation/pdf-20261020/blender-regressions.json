@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 69.39880941901356,
+  "results": [
+    {
+      "id": "test_blender_execution.BlenderExecutionTests.test_actual_scene_reopen_controlled_views_and_animation",
+      "status": "PASS",
+      "seconds": 13.236263387021609
+    },
+    {
+      "id": "test_blender_execution.BlenderExecutionTests.test_missing_fresh_scene_export_fails",
+      "status": "PASS",
+      "seconds": 0.30316217395011336
+    },
+    {
+      "id": "test_blender_mcp.BlenderMcpTests.test_stdio_tool_executes_actual_build_reopen_views_and_movie",
+      "status": "PASS",
+      "seconds": 14.965108497068286
+    },
+    {
+      "id": "test_blender_tools.BlenderToolTests.test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection",
+      "status": "PASS",
+      "seconds": 15.478069090982899
+    },
+    {
+      "id": "test_blender_tools.BlenderToolTests.test_no_host_capability_no_blender_tool",
+      "status": "PASS",
+      "seconds": 0.0008799779461696744
+    },
+    {
+      "id": "test_blender_framing.BlenderFramingTests.test_fast_moving_mesh_stays_in_all_controlled_views",
+      "status": "PASS",
+      "seconds": 10.744831813964993
+    },
+    {
+      "id": "test_blender_framing.BlenderFramingTests.test_valid_scene_without_world_gets_derived_studio_world",
+      "status": "PASS",
+      "seconds": 11.942490820889361
+    }
+  ]
+}

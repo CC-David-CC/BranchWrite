@@ -1,0 +1,11 @@
+test_cli_accepts_full_128_byte_branch_and_operation_names (test_chat_cli_http.ChatCliHttpTests.test_cli_accepts_full_128_byte_branch_and_operation_names) ... ok
+test_cli_keeps_user_conversation_tip_current_and_work_fork_independent (test_chat_cli_http.ChatCliHttpTests.test_cli_keeps_user_conversation_tip_current_and_work_fork_independent) ... ok
+test_fifo_message_is_durable_while_answer_runs_and_sends_afterward (test_chat_cli_http.ChatCliHttpTests.test_fifo_message_is_durable_while_answer_runs_and_sends_afterward) ... ok
+test_lost_cli_ack_reconciles_the_same_saved_user_turn (test_chat_cli_http.ChatCliHttpTests.test_lost_cli_ack_reconciles_the_same_saved_user_turn) ... ok
+test_stop_add_before_first_answer_preserves_old_attempt_as_a_sibling (test_chat_cli_http.ChatCliHttpTests.test_stop_add_before_first_answer_preserves_old_attempt_as_a_sibling) ... ok
+test_stop_add_cancels_before_output_and_retries_with_both_user_inputs (test_chat_cli_http.ChatCliHttpTests.test_stop_add_cancels_before_output_and_retries_with_both_user_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.523s
+
+OK

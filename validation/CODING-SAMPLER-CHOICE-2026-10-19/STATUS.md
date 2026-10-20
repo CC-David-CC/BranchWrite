@@ -1,0 +1,5 @@
+# Coding sampler choice, 2026-10-19
+
+New code admissions expose the three existing presets via --sampler; default greedy remains unchanged. Exact saved launches cannot be overwritten with new settings. Resume uses the saved profile. No new sampler/native state implementation. Other sampler configurations remain available through existing explicit run configs, not this small preset menu.
+
+Test-first missing API/CLI red retained. A new CLI spy initially returned the wrong result shape; that fixture failure is retained separately. Source focused35 pass; actual CLI/HTTP setup and recovery13 pass (counts overlap). Installed isolated dev19 passed35 methods, including real process-kill boundaries; no source checkout on import path and42 package modules byte-match the wheel. See installed-dev19. No live Q8 sampled coding-quality run for this change. Dev18 unchanged; no default installation replaced. The prior92-method broader run still has its one unchanged historical diagnostic assertion failure.

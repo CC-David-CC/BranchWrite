@@ -1,0 +1,12 @@
+{
+  "first_renderer": "REJECTED: painter-sorted triangles produced misleading shading and cluttered axes",
+  "replacement": "VTK9.5.2 explicit OSMesa depth-buffer renderer",
+  "replacement_backend": "Mesa25.1.7 llvmpipe LLVM20.1.8 CPU",
+  "replacement_review": "actual top/bottom/side/isometric contact sheet visually reviewed; holes, notch side and camera labels visible",
+  "gpu_used": false,
+  "physical_fit_tested": false,
+  "model_used": false,
+  "initial_egl_probe_exit": -11,
+  "initial_osmesa_probe": "missing libOSMesa; process exit-11",
+  "resolution": "task-local extracted libosmesa6 and libllvm20; no global package or GPU service changes"
+}

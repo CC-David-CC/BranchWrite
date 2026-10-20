@@ -1,0 +1,9 @@
+test_links_are_rejected_without_reading_target (test_project_baseline.ProjectBaselineTests.test_links_are_rejected_without_reading_target) ... ok
+test_manifest_is_chunked_beyond_codec_container_limit (test_project_baseline.ProjectBaselineTests.test_manifest_is_chunked_beyond_codec_container_limit) ... ok
+test_missing_payload_is_rejected (test_project_baseline.ProjectBaselineTests.test_missing_payload_is_rejected) ... ok
+test_saved_bytes_do_not_follow_later_workspace_or_original_changes (test_project_baseline.ProjectBaselineTests.test_saved_bytes_do_not_follow_later_workspace_or_original_changes) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.790s
+
+OK

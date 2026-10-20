@@ -1,0 +1,27 @@
+test_coding_failure_exits_through_coding_recovery_instead_of_chatting_again (tests.test_guided_conversation.GuidedConversationTests.test_coding_failure_exits_through_coding_recovery_instead_of_chatting_again) ... ERROR
+
+======================================================================
+ERROR: test_coding_failure_exits_through_coding_recovery_instead_of_chatting_again (tests.test_guided_conversation.GuidedConversationTests.test_coding_failure_exits_through_coding_recovery_instead_of_chatting_again)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 109, in test_coding_failure_exits_through_coding_recovery_instead_of_chatting_again
+    code,out,coding=self.run_chat(['/code Make a page.'],mode='chat',coding_error=RuntimeError('coding admission failed'))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 37, in run_chat
+    code=guided_cli.run(cwd=self.project,home=self.home,environ=self.env,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/branchwrite/guided_cli.py", line 159, in run
+    return _conversation(connection, chat_state, project, home, env,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/branchwrite/guided_cli.py", line 209, in _conversation
+    message = first_message or input_fn("You> ").strip()
+                               ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-standalone-followup-20261020/tests/test_guided_conversation.py", line 34, in answer
+    self.prompts.append(prompt);return next(answers)
+                                       ^^^^^^^^^^^^^
+StopIteration
+
+----------------------------------------------------------------------
+Ran 1 test in 0.597s
+
+FAILED (errors=1)

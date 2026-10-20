@@ -1,0 +1,124 @@
+{
+  "status": "MEASURED_PROFILE_LEAD_NOT_CAUSAL_ATTRIBUTION",
+  "native_counters": {
+    "decode_timed_tokens": 9998,
+    "decode_prepare_ns": 19411877223,
+    "decode_compute_ns": 158149378824,
+    "decode_finish_ns": 1180105862,
+    "integrity_plan_upload_ns": 243750124,
+    "integrity_page_hash_ns": 0,
+    "integrity_page_digest_download_ns": 0,
+    "integrity_seal_compare_ns": 17326868885,
+    "integrity_seal_result_download_ns": 186304289,
+    "captures": 14,
+    "restores": 25,
+    "integrity_device_hashed_bytes": 8632229953536,
+    "copied_bytes": 981467136,
+    "written_file_bytes": 12931063712,
+    "loaded_file_bytes": 523907260
+  },
+  "trace_gaps": {
+    "scope": "Wall-clock gaps ending in a native trace response, including intervening Python/client/tool work; NOT isolated command timings",
+    "trace_span_seconds": 893.4790668487549,
+    "family_gap_seconds": {
+      "stats": 158.42191076278687,
+      "vision_info": 61.97096109390259,
+      "capture": 1.1894307136535645,
+      "pages": 0.04691886901855469,
+      "feed": 41.97767663002014,
+      "sample_mask_v2": 413.4292743206024,
+      "(unlabelled)": 8.307426452636719,
+      "decode": 180.81525015830994,
+      "logits": 0.0077512264251708984,
+      "restore": 4.02649998664856,
+      "write": 5.614172458648682,
+      "ram_clear": 17.671667098999023,
+      "quit": 0.0001270771026611328
+    },
+    "counts": {
+      "stats": 20212,
+      "vision_info": 10061,
+      "capture": 14,
+      "pages": 14,
+      "feed": 10,
+      "sample_mask_v2": 9998,
+      "(unlabelled)": 10012,
+      "decode": 9998,
+      "logits": 13,
+      "restore": 25,
+      "write": 13,
+      "ram_clear": 13,
+      "quit": 1
+    },
+    "largest_gaps": [
+      {
+        "seconds": 16.043116807937622,
+        "ending_family": "feed",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 9.684838056564331,
+        "ending_family": "stats",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 7.483391523361206,
+        "ending_family": "stats",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 7.161526203155518,
+        "ending_family": "feed",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 7.022995233535767,
+        "ending_family": "(unlabelled)",
+        "previous_family": "quit"
+      },
+      {
+        "seconds": 6.684072732925415,
+        "ending_family": "stats",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 6.36959981918335,
+        "ending_family": "stats",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 4.791330099105835,
+        "ending_family": "stats",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 4.716172933578491,
+        "ending_family": "stats",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 4.6657023429870605,
+        "ending_family": "stats",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 3.555072069168091,
+        "ending_family": "stats",
+        "previous_family": "stats"
+      },
+      {
+        "seconds": 3.4683003425598145,
+        "ending_family": "feed",
+        "previous_family": "stats"
+      }
+    ]
+  },
+  "whole_cli_seconds": 929.8590472940123,
+  "native_decode_phase_seconds": 178.741361909,
+  "native_timed_decode_tps": 55.93557021843739,
+  "limitations": [
+    "Native phase counters and trace wall gaps have different scopes; do not add overlapping categories.",
+    "Inter-response gaps include host/client/tool work, not pure RPC or GPU time.",
+    "No performance optimization or new numerical claim is made."
+  ]
+}

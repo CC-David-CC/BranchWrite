@@ -1,0 +1,59 @@
+EEEEEE
+======================================================================
+ERROR: test_existing_files_need_actual_read_and_current_hash (tests.test_project_file_scope.ProjectFileScopeTests.test_existing_files_need_actual_read_and_current_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_file_scope.py", line 14, in setUp
+    self.grant=Grant((),False,allow_shell=True,project_files=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'project_files'
+
+======================================================================
+ERROR: test_fixed_grants_do_not_gain_project_access (tests.test_project_file_scope.ProjectFileScopeTests.test_fixed_grants_do_not_gain_project_access)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_file_scope.py", line 14, in setUp
+    self.grant=Grant((),False,allow_shell=True,project_files=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'project_files'
+
+======================================================================
+ERROR: test_new_names_can_be_created_read_and_refined_after_admission (tests.test_project_file_scope.ProjectFileScopeTests.test_new_names_can_be_created_read_and_refined_after_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_file_scope.py", line 14, in setUp
+    self.grant=Grant((),False,allow_shell=True,project_files=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'project_files'
+
+======================================================================
+ERROR: test_project_scope_rejects_escape_git_and_symlink_routes (tests.test_project_file_scope.ProjectFileScopeTests.test_project_scope_rejects_escape_git_and_symlink_routes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_file_scope.py", line 14, in setUp
+    self.grant=Grant((),False,allow_shell=True,project_files=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'project_files'
+
+======================================================================
+ERROR: test_project_shell_sees_files_created_after_admission (tests.test_project_file_scope.ProjectFileScopeTests.test_project_shell_sees_files_created_after_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_file_scope.py", line 14, in setUp
+    self.grant=Grant((),False,allow_shell=True,project_files=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'project_files'
+
+======================================================================
+ERROR: test_schema_and_grammar_accept_future_paths_but_host_validates_them (tests.test_project_file_scope.ProjectFileScopeTests.test_schema_and_grammar_accept_future_paths_but_host_validates_them)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_file_scope.py", line 14, in setUp
+    self.grant=Grant((),False,allow_shell=True,project_files=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Grant.__init__() got an unexpected keyword argument 'project_files'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.011s
+
+FAILED (errors=6)

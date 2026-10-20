@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "id": "RMO-L01-two-process-no-overlap",
+      "status": "PASS",
+      "holder_pid": 2429719,
+      "other_alias": "another-alias",
+      "no_second_intent": true
+    },
+    {
+      "id": "RMO-L02-client-crash-after-ACK-recovers-known-receipt",
+      "status": "PASS",
+      "client_exit": 73,
+      "no_command_reexecution": true,
+      "original_operation_id": "crash-1c5731245afc",
+      "original_receipt_sha256": "ecf3fe4f16f1a9aa6d2d7953d8089d47e0366404c456941a3088e1c3cdd1490d"
+    }
+  ],
+  "scope": "real installed transport, two host client processes and SSH to owned persistent VM; not cross-host locking or unknown-ACK recovery",
+  "nonce": "1c5731245afc",
+  "resource_identity": "a980dee69110404922921c3bf55f927c1128fa67006121538f093958e08c310d"
+}

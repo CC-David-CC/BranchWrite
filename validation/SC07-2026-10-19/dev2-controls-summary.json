@@ -1,0 +1,9 @@
+{
+  "status": "CPU_AND_INSTALLED_CONTROLS_PASS",
+  "source_commit": "7ef483a175966013721433275c08522512d43599",
+  "distinct_unittest_methods": 134,
+  "skips": 0,
+  "wheel_sha256": "c77b8d0afa0c77023ad5c4541a2cb5177e19fe2b8dc8bcb8e6c63c65334d4003",
+  "new_gpu_workflow": "NOT_YET_RUN",
+  "failed_sc07_not_reclassified": true
+}

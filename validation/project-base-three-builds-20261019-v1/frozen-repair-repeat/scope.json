@@ -1,0 +1,12 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "scope": "Frozen full repair repeat into fresh inference process; original broken A input restored",
+  "task_bytes_identical": true,
+  "source_hashes_identical": true,
+  "catalog_and_proposal_identical": true,
+  "parent_interventions_after_start": 0,
+  "source_contains": "Original broken module, not first repaired module",
+  "resource_profile": "24GiB RAM/64GiB disk; same native profile",
+  "filesystem_page_cache": "warm permitted; reported",
+  "sampling": "greedy; unchanged initial4K thinking allowance"
+}

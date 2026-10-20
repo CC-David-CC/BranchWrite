@@ -1,0 +1,12 @@
+{
+  "result": {
+    "artifacts": [],
+    "frame": "program",
+    "result_artifact": "b3b933093be5fae0608b91ce879e8edb8cdcecda3e7ab49a744a72789d55be5d",
+    "state": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev24-q8-reference-refresh-v1/state-A",
+    "status": "complete",
+    "verified": true
+  },
+  "seconds": 151.8659733029781,
+  "parent_interventions_after_start": 0
+}

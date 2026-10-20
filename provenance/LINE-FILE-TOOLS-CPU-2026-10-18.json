@@ -1,0 +1,14 @@
+{
+  "status": "CPU_PASS_GPU_UNRUN",
+  "distinct_cpu_methods": 120,
+  "new_methods": 23,
+  "q4_tokenizer_mask_checks": 45,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "source_overlay_sha256": "73da552b0be7aea8ebcb2a5aa8583bc4a9d0f5bf0ca454380b67796e80d1d769",
+  "tokenizer_sha256": "4c991dd52567f203838d6dc3c2cf5950fa219b3d2efbc9e99f50ba753ec14abd",
+  "mask_result_sha256": "ccbb5f4c52dcb44f3071407c49265927e4ae8df8a7a268628e6963ae393f9760",
+  "original_workloads_changed": false,
+  "global_sampler_changed": false
+}

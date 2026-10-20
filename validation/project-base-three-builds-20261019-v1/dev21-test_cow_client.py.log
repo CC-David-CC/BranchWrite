@@ -1,0 +1,21 @@
+test_cli_machine_envelope_preserves_exact_answer_text (test_cow_client.CliMachineResultTests.test_cli_machine_envelope_preserves_exact_answer_text) ... ok
+test_cli_machine_envelope_preserves_prepare_answer_without_text (test_cow_client.CliMachineResultTests.test_cli_machine_envelope_preserves_prepare_answer_without_text) ... ok
+test_cli_machine_envelope_rejects_nonstring_optional_text (test_cow_client.CliMachineResultTests.test_cli_machine_envelope_rejects_nonstring_optional_text) ... ok
+test_frame_identity_rejects_wrong_operation_or_target_branch (test_cow_client.CliMachineResultTests.test_frame_identity_rejects_wrong_operation_or_target_branch) ... ok
+test_generation_commands_pass_the_original_revision_to_cli (test_cow_client.CliRevisionMappingTests.test_generation_commands_pass_the_original_revision_to_cli) ... ok
+test_stale_expected_revision_is_rejected_before_cli_mutation (test_cow_client.CliRevisionMappingTests.test_stale_expected_revision_is_rejected_before_cli_mutation) ... ok
+test_completed_operation_replay_uses_original_receipt_without_head_read (test_cow_client.CowClientTests.test_completed_operation_replay_uses_original_receipt_without_head_read) ... ok
+test_eof_leaves_exact_intent_pending_and_never_resends_automatically (test_cow_client.CowClientTests.test_eof_leaves_exact_intent_pending_and_never_resends_automatically) ... ok
+test_generation_completion_without_exact_text_is_rejected_and_intent_retained (test_cow_client.CowClientTests.test_generation_completion_without_exact_text_is_rejected_and_intent_retained) ... ok
+test_intent_is_durable_before_stream_send_and_receipt_is_bound (test_cow_client.CowClientTests.test_intent_is_durable_before_stream_send_and_receipt_is_bound) ... ok
+test_operation_id_cannot_be_reused_for_changed_bytes (test_cow_client.CowClientTests.test_operation_id_cannot_be_reused_for_changed_bytes) ... ok
+test_read_routes_return_typed_observations (test_cow_client.CowClientTests.test_read_routes_return_typed_observations) ... ok
+test_receipt_for_wrong_branch_is_rejected_and_intent_retained (test_cow_client.CowClientTests.test_receipt_for_wrong_branch_is_rejected_and_intent_retained) ... ok
+test_unknown_process_local_operation_is_indeterminate (test_cow_client.CowClientTests.test_unknown_process_local_operation_is_indeterminate) ... ok
+test_reverse_delivery_duplicate_old_result_and_restart_identity (test_cow_client.FrameSlotTests.test_reverse_delivery_duplicate_old_result_and_restart_identity) ... ok
+test_slot_rejects_digest_mismatch_and_detaches_return_value (test_cow_client.FrameSlotTests.test_slot_rejects_digest_mismatch_and_detaches_return_value) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 4.097s
+
+OK

@@ -1,0 +1,16 @@
+{
+  "client-SC16-original-identity-assertion-fail-profile-data-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/client-SC16-original-identity-assertion-fail-profile-data-20261019/evidence.tar.gz",
+    "sha256": "adb4a78baa07570f6dc97f98856c17b13f6cd8265bf302d1de68219d08ae9610",
+    "bytes": 34104,
+    "files": 23
+  },
+  "service-SC16-instrumented-profile-original-assertion-fail-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/service-SC16-instrumented-profile-original-assertion-fail-20261019/evidence.tar.gz",
+    "sha256": "4e41227c29d21a1d5773b9d4f572a6c7934661644b54e6900162b9928e5fd33e",
+    "bytes": 1258944,
+    "files": 46
+  }
+}

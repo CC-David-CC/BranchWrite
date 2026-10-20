@@ -1,0 +1,27 @@
+test_code_can_prepare_git_checkout_without_copying_git_metadata (test_project_admission.ProjectAdmissionTests.test_code_can_prepare_git_checkout_without_copying_git_metadata) ... 
+  test_code_can_prepare_git_checkout_without_copying_git_metadata (test_project_admission.ProjectAdmissionTests.test_code_can_prepare_git_checkout_without_copying_git_metadata) (kind='directory') ... FAIL
+  test_code_can_prepare_git_checkout_without_copying_git_metadata (test_project_admission.ProjectAdmissionTests.test_code_can_prepare_git_checkout_without_copying_git_metadata) (kind='worktree-file') ... FAIL
+test_low_level_executor_still_rejects_git_administration (test_project_admission.ProjectAdmissionTests.test_low_level_executor_still_rejects_git_administration) ... ok
+
+======================================================================
+FAIL: test_code_can_prepare_git_checkout_without_copying_git_metadata (test_project_admission.ProjectAdmissionTests.test_code_can_prepare_git_checkout_without_copying_git_metadata) (kind='directory')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-admission-20261019/tests/test_project_admission.py", line 29, in test_code_can_prepare_git_checkout_without_copying_git_metadata
+    self.assertEqual(r.returncode,2,r.stderr);self.assertIn('COW HTTP 401',r.stderr)
+                                              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'COW HTTP 401' not found in "branchwrite: 'source may not include Git administration data'\n"
+
+======================================================================
+FAIL: test_code_can_prepare_git_checkout_without_copying_git_metadata (test_project_admission.ProjectAdmissionTests.test_code_can_prepare_git_checkout_without_copying_git_metadata) (kind='worktree-file')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-project-admission-20261019/tests/test_project_admission.py", line 29, in test_code_can_prepare_git_checkout_without_copying_git_metadata
+    self.assertEqual(r.returncode,2,r.stderr);self.assertIn('COW HTTP 401',r.stderr)
+                                              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'COW HTTP 401' not found in "branchwrite: 'source may not include Git administration data'\n"
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.009s
+
+FAILED (failures=2)

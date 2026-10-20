@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "pid": 2283642,
+  "clients": {
+    "A": {
+      "producer_exit": 0,
+      "producer_pid": 2283789,
+      "audits": [
+        {
+          "script": "audit-output.py",
+          "exit_code": 0
+        },
+        {
+          "script": "audit-ledger.py",
+          "exit_code": 0
+        },
+        {
+          "script": "audit-policy.py",
+          "exit_code": 0
+        },
+        {
+          "script": "audit-public-flow.py",
+          "exit_code": 0
+        }
+      ]
+    },
+    "B": {
+      "producer_exit": 0,
+      "producer_pid": 2283788,
+      "audits": [
+        {
+          "script": "audit-output.py",
+          "exit_code": 0
+        },
+        {
+          "script": "audit-ledger.py",
+          "exit_code": 0
+        },
+        {
+          "script": "audit-policy.py",
+          "exit_code": 0
+        },
+        {
+          "script": "audit-public-flow.py",
+          "exit_code": 0
+        }
+      ]
+    }
+  },
+  "elapsed_seconds": 657.3284999369644
+}

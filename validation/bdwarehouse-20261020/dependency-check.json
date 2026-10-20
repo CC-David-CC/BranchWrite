@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/bootstrap/bin/uv",
+    "pip",
+    "check",
+    "--python",
+    "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/cadvenv/bin/python"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "Using Python 3.12.15 environment at: spatial-artifacts/bw-build123d-20261020/cadvenv\nChecked 66 packages in 0.84ms\nAll installed packages are compatible\n"
+}

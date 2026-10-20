@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "methods": 46,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "scope": "CPU fixtures and actual local CLI/HTTP; no native GPU or fresh numerical oracle",
+  "server_source": "895251441266dda1dd4d6437d98fda7251027b68",
+  "limits": [
+    "API method only; CLI prepare/catalog publication coordinator not implemented",
+    "Host revision/capacity remain explicit configuration",
+    "Pinned deployed Q8 runtime unchanged"
+  ],
+  "initial_setup_failure": "History projection omitted in new HTTP fixture; enabled existing workspace"
+}

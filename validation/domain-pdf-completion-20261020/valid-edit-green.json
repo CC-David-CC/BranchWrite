@@ -1,0 +1,260 @@
+{
+  "status": "PASS",
+  "tests_run": 40,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "source_unchanged": true,
+  "source_sha256": {
+    "project_context.py": "e3337d3a7b112ad9f6e6232193219503f28dc600e754642ad1d9fca42726a842",
+    "image_feedback.py": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe",
+    "remote_execution.py": "96fe31ff875d24d4cec4db0594b5fde6932201c2a33503d954dd973b5ee1b0a2",
+    "coding_defaults.py": "04205a3cc1ec579e79bfe8ca97056cba09ebe397ce74ebe6f100cfabc119777d",
+    "tool_progress.py": "f13d6a4a830a4bc130d76e2cfb292fa3e8be92efaac2570f6da4ee91ed59df21",
+    "pdf_tools.py": "7d979414f2de6bc3f4c404e60e00245d9538c399a176493bdb782b181b198cc0",
+    "pdf_inspect_worker.py": "cef1a0fd3710438d4ec16e47885e901df4c7115a2041d2568eddd01afe296956",
+    "guided_cli.py": "bbfba0dc429c2d959e1df8fec60c6fe167ec1bdbe7fb425fd51eecf07157251c",
+    "cad_config.py": "1d19cc49853abb3e5a7efe7659fc67a8806cc53064c4b6719778fd5b3f38884a",
+    "project_scope.py": "8977522dd1d76e73721b47a48688abc7517e4998338068613b554c2062e9c64a",
+    "cad_requirements.py": "12265cc8a0cf7b6bfd621f3a550d22671eb6acfb3c9396205aabc17f2c4e06b6",
+    "cad_render.py": "c1e23146a1fe7d577c1aff03dff4fd20fee6595aaddd73d9204215d2eef7350a",
+    "cad_execution.py": "4923eb093859e22f4a2704aaa929745e0729d2828b347443e5152b3beb5835c4",
+    "coding_reconciliation.py": "d2899865f669e8a5ada1c4fa7648ec101dec3fdfa8df0118a33d22390e4b8fb1",
+    "run_report.py": "a14d1706bb88ebad2574cdaba73527a48436de57b237b69e9a5c80e9798db39d",
+    "planning_retry.py": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946",
+    "cad_inspect.py": "aabc27a3613bbd44d5eb18dfafe97b8138cd3fe06cd49cc88003d2395fbd18f9",
+    "coding_review.py": "3e6946a90f0f7c6485f370ca820b4b8f42dd2c0dd0bf0e196a1fe7f67b18ea55",
+    "http_request.py": "31841bf628dd3c76073ab576288e0712667a89c7ead195a7cd233c29c74cc9b6",
+    "control_contract.py": "69982583752013c32270932b7e5cf1cb5e03d0afb9691d7c3dc88948bb9270e6",
+    "blender_mcp_server.py": "53564004fbff0b588576044dd0bb1fd5a128fe2e3d6c9068bce38ad194e9a2d6",
+    "remote_ownership.py": "991a468b6b9bd4d11797e23d4ab2c5de6391f83daa17c5baebf7df1b9df5f263",
+    "tool_dispatch.py": "93053f4d9313086db70cd1ca9a838655eee85c2d988e178533464b794b207b00",
+    "model_dispatch.py": "d59cfaebffd852f92c3ee79fae9e1219bdfa39c6e61243bbff1cf88661811e94",
+    "coding_contract.py": "4c0f0435523dbc8d8f4e45553ac5068dd09bd2f549e99d6b1732ca747f952eac",
+    "remote_upload.py": "1328d0817a9047d5dd8b7925d8175e8f5a4cdadb2490477896ed9e43ff0a4236",
+    "cad_build_worker.py": "6c270806030b8c56de10ce3e4bcee49d6e687d9f712db4c8f0617f3e13506b0d",
+    "base_cli.py": "3345a8a3d44e39480d0857f1fa6c7a1e44d372b1f8974b9417e4a7b10652d266",
+    "coding_cli.py": "4759902a9cae87e9f9085f1987cc13d651752d717cbd521ab3c7d91f6dc73c1b",
+    "terminal_worker.py": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996",
+    "session_controls.py": "19a2020ca9d88bf0c53238d84adfa024d614405797d96dcc01a0190aafaa24d3",
+    "interactive_cli.py": "eb63b7ca977fad8a0b2d1f147cb0abd85f17e683378165b6955bae259b27b082",
+    "receipt_cli.py": "b94dd32e7368ea90283da5bc7b602ad9a803989321cd89d3bbb072cd6396f87b",
+    "golden_path.py": "63ce84648175fc86178c20b02fff4d7c9e7e98e38cb2e6195257ff586081e3fa",
+    "blender_mcp.py": "bc6e215d9ade1434a865e2b30de515a5ae8f5c44812fed8a79d29b4addfa59fe",
+    "pdf_build_worker.py": "8cc153e0e1e0f8ac60ce3301a193548aaf212daf7b729a4ab9e15e5f35edd2dc",
+    "workspace_versions.py": "cddb07e07c2ae80fcacf7ebce4f716f7f26b34eeb4579df6e5d4eb9c0f36f3ef",
+    "context_pack.py": "2b0b03edeaa8c12e0812b7278a0c4e07a1ce2feeb23a66f8c10f5a658794ae90",
+    "tool_registry.py": "7e0180333bfbd8c9355110e6517a53026944ca1e4b12c7f8b4e42f680d24af0f",
+    "browser_assets.py": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31",
+    "task_breakdown.py": "0abd71f9c2077413ddc4ee0bfbf594399264eff23631d4b51bbc5d51817ea6f3",
+    "browser_isolation.py": "67391b6c237afe4d03e042917592c284c492eac1a91f754e5959b92bea6523a4",
+    "execution.py": "88776921d6ab04daae258b3fd91a2fdba8e976dc1eadf59e6e4fe91fd017fe3b",
+    "run_cli.py": "3c39fa30e043dbe4c4f157750101a266292b4414b8d410871a354e8d1e4c6fe0",
+    "command_outputs.py": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9",
+    "component_model.py": "cdfa18438cff524f9a37a3e44dac0351eda736fb6222c93a7fb37f36c4901b5b",
+    "client_doctor.py": "0f45b433effb5d2b3cb871386f35d264e881cd6b56050c34eafd525d7b339e67",
+    "records.py": "600d0093a8c1768be967e627627a40c244233c118d39fcd24979a76e55b2f677",
+    "remote_guest.py": "d03b843d8b043f7e6c42bf23daf7942a43964a97f7e9bc1764b4fe91a9298906",
+    "remote_config.py": "3d9494a36ca6986b06dd84f7971b2258415c317eb4945947c8dd9797c40fe725",
+    "text_file_codec.py": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8",
+    "cow_fork.py": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0",
+    "browser_worker.py": "d37e44545734c614c053a37c2dc77a57f90c9dbc26b8789d26022c8cad6b1fe1",
+    "project_baseline.py": "72da8ff7ace695a809a0cf341f8b86d85e2166e8acb9dc08a5bf153ae44c4621",
+    "project_apply.py": "a081f1dd0a8a1632b09c63e1456823d0c42bc0e7deef655cf1bf61a91d94cda8",
+    "interactive_preview.py": "dad6dd1214653b16ba9052b8f8244cad8a9f617970860d8dc251957659ab7755",
+    "cad_evaluate_worker.py": "c572c036d4f134e244528dbb8e9d2a16e6a2d90343a9ddbfe6ea1a7e4d1d7775",
+    "blender_execution.py": "c62db9838c05cf7e28d591b0bcb6a10c3633a17242e65fa6de67af3bec94d868",
+    "project_export.py": "93eb7d71362984038f95801094cc49e82ea599371459b7529bb024207d0fad9e",
+    "thinking_ladder.py": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc",
+    "client_setup.py": "747c844ddfe74b33014b406bbab8d5223bf974d0e0cc3e36a257e96b907611b3",
+    "cow_client.py": "b0540c5a11586b3c28a6fea6ff4468425a3c553f7382eee7254d2da486ebee9b",
+    "verification.py": "c52af64040de7ce67aa124dbf4f46d84b977ceaf7d6bea986beb7cc42d67e17e",
+    "pdf_execution.py": "e600205940863d19056f1ac46e9e23e0d29a82b947b1ce22938ab70dca329fe2",
+    "interactive_session.py": "74cac5175faee5a77f72c0c2a81d9c83f51aec34605a1e90e8ccdeabdb6239da",
+    "interpreter.py": "a1109f05068fae8943fbc5a298e4901a08ce7c07bcdb2f40afd99019394b2cc8",
+    "blender_worker.py": "ed80648995415dacc109f451e32a60bca8f32c0622faf1c641195d98f8fd2795",
+    "interactive_terminal.py": "8466b04c7b400f4186f0b294e1e71bd55281e888a41b32c615af32a08b83d06b",
+    "base_choice.py": "e33521074261cc0aeebe449b202431fe69741d050975e003bd2dc6fb84de3956",
+    "chat_cli.py": "c7f3a1edd95d9ffeb9f73680ee7bf187c695090b0b58c7cf7f113c0767fb56f4",
+    "__init__.py": "ad71f130c06fc5a7630a2078df5ab07df426d3a754836d3099ee4a9835ef02f0",
+    "cad_tools.py": "69d5a08125b8081a586c7a7bafa8a548986712aab053e414ed18719e6f482eda",
+    "pdf_contract.py": "22b40203b7c8ec1f3bdd0f6b9e0e5f2150d009f66dfb852db2aacc95eb98cb33",
+    "terminal_components.py": "e583db55b25ae9171581ba3234e984d574b6aeaa3733de43211735fb1225e5e8",
+    "browser_capture.py": "d7698cc36a6bb9cb46c84d71b25711916c64b743de62a941dad37a044bcbccf4",
+    "__main__.py": "7160c7cdd8461ca54a18d03337a221194a8690695026bea0993c1137665c7636",
+    "cad_carrier.py": "97308c0f6b773b110a73c9aff2d1a442a2c46dbe326732e63d1d83f7c6f867d0",
+    "cow_actions.py": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4",
+    "language.py": "45845d7015d4eae2f04c14921d99ec9f6538dd021a2de9414af2bfaf3ca01404",
+    "session_ledger.py": "3483fda7ac9680e813df8e961223044e7e9ecf1f8b4ec8e14719839a18089feb",
+    "terminal.py": "d962c3626914d8aa99e8ac98fe799cb851935af0dbb8dde5cb9f5a6a0de22e72",
+    "kernel.py": "106a3a564e0ee5bb190e7a6c3c246336e4c4b91a93df906110e930c02b6a8521",
+    "model_pause.py": "f7a5fce30639f9985e6e9e8edbd80a60b1b8312665867c63bc51dfd5dbb5c1b3",
+    "model_inputs.py": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea",
+    "blender_tools.py": "ad29671cd0c00ec6e6761f51e1111c3c7a1af0f6d73d3224e5e2a92582d8b0ca",
+    "coding_status.py": "bd62f119d874a380d7273630996f996b72124cdbfd57ab93f76da6b1cb217d13"
+  },
+  "tests": [
+    {
+      "id": "test_domain_pdf_completion.DomainPdfCompletionTests.test_blender_accepts_rebuilt_and_rerendered_pdf_after_edit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_domain_pdf_completion.DomainPdfCompletionTests.test_blender_and_all_current_pdf_pages_can_pass",
+      "status": "PASS"
+    },
+    {
+      "id": "test_domain_pdf_completion.DomainPdfCompletionTests.test_blender_pass_cannot_hide_unrendered_pdf_page",
+      "status": "PASS"
+    },
+    {
+      "id": "test_domain_pdf_completion.DomainPdfCompletionTests.test_cad_accepts_rebuilt_and_rerendered_pdf_after_edit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_domain_pdf_completion.DomainPdfCompletionTests.test_cad_and_all_current_pdf_pages_can_pass",
+      "status": "PASS"
+    },
+    {
+      "id": "test_domain_pdf_completion.DomainPdfCompletionTests.test_cad_pass_cannot_hide_unrendered_pdf_page",
+      "status": "PASS"
+    },
+    {
+      "id": "test_domain_pdf_completion.DomainPdfCompletionTests.test_current_blender_cannot_hide_a_stale_pdf_build",
+      "status": "PASS"
+    },
+    {
+      "id": "test_domain_pdf_completion.DomainPdfCompletionTests.test_current_cad_cannot_hide_a_stale_pdf_build",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_canonical_receipt_and_page_artifact_cannot_be_forged",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_cli_export_contains_pdf_and_actual_page_images",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_edit_after_build_invalidates_document_even_with_new_file_check",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_every_current_page_and_a_current_named_check_can_pass",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_invalid_selected_page_is_an_explicit_tool_failure",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_latest_failed_build_cannot_accept_previous_preserved_pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_passing_file_check_cannot_hide_an_unrendered_page",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_readonly_policy_rejects_pdf_execution_capability",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_rebuild_cannot_reuse_page_receipts_from_old_pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_completion.PdfCompletionTests.test_reopened_ledger_revalidates_same_actual_page_evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_build_cannot_read_home_credentials_or_use_network",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_hung_script_is_retired_without_partial_pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_invalid_pdf_and_page_numbers_fail_explicitly",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_link_export_is_rejected_before_parsing",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_old_export_cannot_masquerade_as_fresh_build",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_execution.PdfExecutionTests.test_real_pdf_two_pages_and_actual_png_use_same_bytes",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_execution.PdfInitialInstallTests.test_dependencies_are_default_not_optional_task_configuration",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_execution.PdfLongDocumentTests.test_twenty_page_document_renders_selected_last_page",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_absent_capability_and_ungranted_destinations_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_actual_pdf_is_published_and_selected_page_is_rendered",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_changed_preimages_reject_frozen_build_before_execution",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_failed_new_build_preserves_previous_pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "test_pdf_tools.PdfToolTests.test_page_schema_and_host_reject_bool_zero_and_out_of_bounds",
+      "status": "PASS"
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_changed_source_after_plan_is_rejected_before_build",
+      "status": "PASS"
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_current_inventory_required_after_any_edit",
+      "status": "PASS"
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_later_failed_attempt_supersedes_old_pass",
+      "status": "PASS"
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_model_cannot_change_requirements",
+      "status": "PASS"
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_readonly_policy_rejects_enabled_cad_execution",
+      "status": "PASS"
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_tool_builds_checks_renders_and_roots_exact_export",
+      "status": "PASS"
+    },
+    {
+      "id": "test_cad_tools.CadToolTests.test_without_host_capability_cad_tool_is_absent",
+      "status": "PASS"
+    },
+    {
+      "id": "test_blender_tools.BlenderToolTests.test_complete_mcp_artifact_chain_current_acceptance_and_stale_rejection",
+      "status": "PASS"
+    },
+    {
+      "id": "test_blender_tools.BlenderToolTests.test_no_host_capability_no_blender_tool",
+      "status": "PASS"
+    }
+  ],
+  "elapsed_seconds": 196.96021370391827,
+  "scope": "actual local CAD STEP geometry, Blender/MCP/CPU rendering and isolated PDF build/reopen/page evidence; not model inference"
+}

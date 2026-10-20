@@ -1,0 +1,18 @@
+{
+  "status": "FAIL",
+  "task": "Build a parameterized mounting plate in model.py using build123d. Make it 100 by 60 by 4 mm, centered in X and Y with the bottom at Z=0. Put four 5 mm through-holes at centered spacings 76 mm in X and 36 mm in Y. Cut a locating notch 6 mm deep and 10 mm wide into the positive-X edge, centered in Y and through the thickness. Preserve at least 8 mm material from each hole wall to outer walls including the notch. One connected body, no extra features. Export part.step. Use inspect_cad to obtain actual geometry measurements and actual views, fix any failed checks, and finish only when accepted. Do not use run_shell to build it; inspect_cad has the configured CAD environment.",
+  "argv": [
+    "/home/dflanag3/spatial-artifacts/bw-cad-dev56-20261020/venv/bin/branchwrite",
+    "resume",
+    "/home/dflanag3/spatial-artifacts/bw-cad-dev56-20261020/plate-run",
+    "--max-steps",
+    "2048"
+  ],
+  "pid": 2451984,
+  "client_host": "r4090",
+  "scope": "actual installed BW CLI -> HTTP -> Q4 on llm-60; CAD execution/check/render on llm-49",
+  "guidance": "resume original recorded workflow after private-runtime inode isolation; no new task or COW operation IDs",
+  "elapsed_seconds": 1.965707627008669,
+  "client_pid": 2451986,
+  "exit_code": 2
+}

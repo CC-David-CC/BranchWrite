@@ -1,0 +1,6 @@
+{
+  "status": "FAIL_HARNESS_NOT_QUALIFIED",
+  "reason": "Generated audit hook syntax error; Python skipped sitecustomize and started CLI. Parent terminated owned process2329085.",
+  "server_outcome": "Metrics observed healthy/active0/queued0/pending_branches0/cancelled1 after termination",
+  "not_a_model_failure": true
+}

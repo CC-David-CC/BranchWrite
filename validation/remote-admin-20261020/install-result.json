@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "pid": 2427465,
+  "scope": "owned blank 32GiB QEMU guest disk only",
+  "started": 1792503928.2352648,
+  "ssh_pid": 2427467,
+  "elapsed_seconds": 15.000971600995399,
+  "exit_code": 0
+}

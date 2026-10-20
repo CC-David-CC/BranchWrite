@@ -1,0 +1,101 @@
+test_auto_admission_records_exact_choice_without_proposal (test_auto_base_choice.AutoBaseChoiceTests.test_auto_admission_records_exact_choice_without_proposal) ... ERROR
+test_longest_compatible_fitting_prefix_and_stable_tie (test_auto_base_choice.AutoBaseChoiceTests.test_longest_compatible_fitting_prefix_and_stable_tie) ... ERROR
+test_no_compatible_base_is_explicit_failure (test_auto_base_choice.AutoBaseChoiceTests.test_no_compatible_base_is_explicit_failure) ... ERROR
+test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) ... 
+  test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) (rows=[]) ... ERROR
+  test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) (rows=[{'base_id': '1111111111111111111111111111111111111111111111111111111111111111', 'branch': 'base-1', 'snapshot': '1111111111111111111111111111111111111111111111111111111111111111', 'source_revision': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'execution_profile_id': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'prefix_tokens': 100, 'capacity': 1000}, {'base_id': '1111111111111111111111111111111111111111111111111111111111111111', 'branch': 'base-1', 'snapshot': '1111111111111111111111111111111111111111111111111111111111111111', 'source_revision': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'execution_profile_id': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'prefix_tokens': 100, 'capacity': 1000}]) ... ERROR
+  test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) (rows=[{'base_id': '1111111111111111111111111111111111111111111111111111111111111111', 'branch': 'base-1', 'snapshot': '1111111111111111111111111111111111111111111111111111111111111111', 'source_revision': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'execution_profile_id': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'prefix_tokens': 100, 'capacity': True}]) ... ERROR
+test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) ... ERROR
+test_complete_host_selection_input_required (test_base_choice_launch.BaseChoiceLaunchTests.test_complete_host_selection_input_required) ... ok
+test_incompatible_selection_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_incompatible_selection_rejected) ... ok
+test_no_mixed_source_selection (test_base_choice_launch.BaseChoiceLaunchTests.test_no_mixed_source_selection) ... ok
+test_real_cli_parser_saves_choice_before_execution (test_base_choice_launch.BaseChoiceLaunchTests.test_real_cli_parser_saves_choice_before_execution) ... ok
+test_saved_choice_survives_reopen_and_changed_choice_is_rejected (test_base_choice_launch.BaseChoiceLaunchTests.test_saved_choice_survives_reopen_and_changed_choice_is_rejected) ... ok
+test_selected_snapshot_and_provenance_enter_existing_launch (test_base_choice_launch.BaseChoiceLaunchTests.test_selected_snapshot_and_provenance_enter_existing_launch) ... ok
+
+======================================================================
+ERROR: test_auto_admission_records_exact_choice_without_proposal (test_auto_base_choice.AutoBaseChoiceTests.test_auto_admission_records_exact_choice_without_proposal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 22, in test_auto_admission_records_exact_choice_without_proposal
+    launch=fixture.launch(base_proposal=None,auto_base=True)
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice_launch.py", line 13, in launch
+    return build_launch(self.project,'Repair this project.',self.connection,**kw)
+TypeError: build_launch() got an unexpected keyword argument 'auto_base'
+
+======================================================================
+ERROR: test_longest_compatible_fitting_prefix_and_stable_tie (test_auto_base_choice.AutoBaseChoiceTests.test_longest_compatible_fitting_prefix_and_stable_tie)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 12, in test_longest_compatible_fitting_prefix_and_stable_tie
+    for order in [rows,list(reversed(rows))]:self.assertEqual(self.choose(order)['base']['base_id'],'2'*64)
+                                                              ~~~~~~~~~~~^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 8, in choose
+    return base_choice.select_host_base(rows,required_revision=REV,required_profile=PROFILE,reserve_tokens=kw.get('reserve_tokens',200))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.base_choice' has no attribute 'select_host_base'
+
+======================================================================
+ERROR: test_no_compatible_base_is_explicit_failure (test_auto_base_choice.AutoBaseChoiceTests.test_no_compatible_base_is_explicit_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 15, in test_no_compatible_base_is_explicit_failure
+    with self.assertRaisesRegex(ValueError,'no compatible'):self.choose([base(source_revision='f'*40)])
+                                                            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 8, in choose
+    return base_choice.select_host_base(rows,required_revision=REV,required_profile=PROFILE,reserve_tokens=kw.get('reserve_tokens',200))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.base_choice' has no attribute 'select_host_base'
+
+======================================================================
+ERROR: test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) (rows=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 18, in test_validation_is_not_bypassed
+    with self.subTest(rows=rows),self.assertRaises(ValueError):self.choose(rows)
+                                                               ~~~~~~~~~~~^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 8, in choose
+    return base_choice.select_host_base(rows,required_revision=REV,required_profile=PROFILE,reserve_tokens=kw.get('reserve_tokens',200))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.base_choice' has no attribute 'select_host_base'
+
+======================================================================
+ERROR: test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) (rows=[{'base_id': '1111111111111111111111111111111111111111111111111111111111111111', 'branch': 'base-1', 'snapshot': '1111111111111111111111111111111111111111111111111111111111111111', 'source_revision': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'execution_profile_id': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'prefix_tokens': 100, 'capacity': 1000}, {'base_id': '1111111111111111111111111111111111111111111111111111111111111111', 'branch': 'base-1', 'snapshot': '1111111111111111111111111111111111111111111111111111111111111111', 'source_revision': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'execution_profile_id': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'prefix_tokens': 100, 'capacity': 1000}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 18, in test_validation_is_not_bypassed
+    with self.subTest(rows=rows),self.assertRaises(ValueError):self.choose(rows)
+                                                               ~~~~~~~~~~~^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 8, in choose
+    return base_choice.select_host_base(rows,required_revision=REV,required_profile=PROFILE,reserve_tokens=kw.get('reserve_tokens',200))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.base_choice' has no attribute 'select_host_base'
+
+======================================================================
+ERROR: test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed) (rows=[{'base_id': '1111111111111111111111111111111111111111111111111111111111111111', 'branch': 'base-1', 'snapshot': '1111111111111111111111111111111111111111111111111111111111111111', 'source_revision': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'execution_profile_id': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'prefix_tokens': 100, 'capacity': True}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 18, in test_validation_is_not_bypassed
+    with self.subTest(rows=rows),self.assertRaises(ValueError):self.choose(rows)
+                                                               ~~~~~~~~~~~^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 8, in choose
+    return base_choice.select_host_base(rows,required_revision=REV,required_profile=PROFILE,reserve_tokens=kw.get('reserve_tokens',200))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.base_choice' has no attribute 'select_host_base'
+
+======================================================================
+ERROR: test_validation_is_not_bypassed (test_auto_base_choice.AutoBaseChoiceTests.test_validation_is_not_bypassed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 19, in test_validation_is_not_bypassed
+    with self.assertRaises(ValueError):self.choose([base()],reserve_tokens=True)
+                                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_auto_base_choice.py", line 8, in choose
+    return base_choice.select_host_base(rows,required_revision=REV,required_profile=PROFILE,reserve_tokens=kw.get('reserve_tokens',200))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'branchwrite.base_choice' has no attribute 'select_host_base'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.019s
+
+FAILED (errors=7)

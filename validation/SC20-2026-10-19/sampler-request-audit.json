@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "settings": {
+    "temperature": 0.7,
+    "min_p": 0.05,
+    "top_k": 0,
+    "top_p": 1.0,
+    "dry_multiplier": 0.0,
+    "dry_base": 1.75,
+    "dry_allowed_length": 2,
+    "dry_penalty_last_n": 256
+  },
+  "requests": [
+    {
+      "operation_id": "bwnative-9b4312c64aca1694f9303ad43ad47878fafba38aedb92022",
+      "path": "/cow/text/append-user",
+      "body_sha256": "3da3f859bb78da256ef5632c9cdba4d9a823068432be8730257c03ebf5d8196e"
+    },
+    {
+      "operation_id": "bwnative-00121b1e1af7656049ba574b0293f0a33aca8278b4d55518",
+      "path": "/cow/text/append-user",
+      "body_sha256": "876a07d1d1f64ef23cd0e734ba3d657256ccf17d05fa72a79bc8afcc26c164f3"
+    },
+    {
+      "operation_id": "bwnative-6c2317c28f6e29a9faf6d74eb3a323aa4a7012b5b12d1999",
+      "path": "/cow/text/append-user",
+      "body_sha256": "efc5207bb53fea64bb98ba2be635ff17a4c366770bef2c3f26a538bc0500ff1e"
+    },
+    {
+      "operation_id": "bwnative-79d0aface6fc1183a44619ef01985780180e1b0b6a2dbc3c",
+      "path": "/cow/text/append-user",
+      "body_sha256": "7c3dbc45db8c0ec3c7c690af7534da993ab79a3fa2e63a08bbc853cefc97e3c4"
+    },
+    {
+      "operation_id": "bwnative-907634af1c709cfa5f0f5d3db0d9de9bf14724c9aae4e1ab",
+      "path": "/cow/text/ask",
+      "body_sha256": "ce0de90fa8862016628db29b5baf227690e36062e8d9eccaebb65f5ffca02090"
+    }
+  ]
+}

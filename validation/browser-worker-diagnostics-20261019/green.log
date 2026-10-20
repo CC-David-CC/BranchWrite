@@ -1,0 +1,9 @@
+test_blank_trailing_lines_do_not_hide_rejection (test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_blank_trailing_lines_do_not_hide_rejection) ... ok
+test_empty_stderr_reports_actual_exit (test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_empty_stderr_reports_actual_exit) ... ok
+test_long_error_keeps_start_and_is_bounded (test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_long_error_keeps_start_and_is_bounded) ... ok
+test_sandbox_failure_survives_playwright_cleanup_noise (test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_sandbox_failure_survives_playwright_cleanup_noise) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.046s
+
+OK

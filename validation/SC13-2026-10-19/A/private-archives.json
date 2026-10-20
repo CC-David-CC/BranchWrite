@@ -1,0 +1,16 @@
+{
+  "client-SC13A-dev15-generic-controller-pass-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/client-SC13A-dev15-generic-controller-pass-20261019/evidence.tar.gz",
+    "sha256": "1a48f4d251e380153654472a325ee56aa1b0898ab3933cf5f564085b69199498",
+    "bytes": 301230,
+    "files": 466
+  },
+  "service-SC13A-dev15-generic-controller-pass-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/service-SC13A-dev15-generic-controller-pass-20261019/evidence.tar.gz",
+    "sha256": "f6fc41082b13883d1ff208f70f477eff6789a30f12ab56768ece1dc1491cd9a5",
+    "bytes": 699423,
+    "files": 43
+  }
+}

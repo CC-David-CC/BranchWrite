@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "status": "THINKING_DEFAULT_AND_POLICY_FOCUSED_PASS_AUTOMATIC_LOOP_UNCONNECTED",
+  "tests": {
+    "executed_ids": [
+      "tests.test_thinking_defaults.ThinkingDefaultsTests.test_budget_definitions_are_detached_immutable_and_named",
+      "tests.test_thinking_defaults.ThinkingDefaultsTests.test_failed_natural_thinking_can_escalate_without_model_budget_choice",
+      "tests.test_thinking_defaults.ThinkingDefaultsTests.test_new_default_is_4096_without_1024_answer_target",
+      "tests.test_thinking_defaults.ThinkingDefaultsTests.test_only_verified_task_failure_advances_and_exhaustion_stops",
+      "tests.test_thinking_defaults.ThinkingDefaultsTests.test_recovery_guidance_is_task_level_and_contains_no_reference_answer",
+      "tests.test_thinking_defaults.ThinkingDefaultsTests.test_standard_and_lite_ladders_start_at_their_own_budget",
+      "tests.test_thinking_budget_grammar.ThinkingBudgetGrammarTests.test_4096_budget_forces_legal_closure_not_an_incomplete_action",
+      "tests.test_thinking_budget_grammar.ThinkingBudgetGrammarTests.test_natural_closure_can_finish_before_allowance",
+      "tests.test_thinking_budget_grammar.ThinkingBudgetGrammarTests.test_saved_1024_definition_is_not_silently_rebudgeted",
+      "tests.test_coding_grammar.CodingGrammarTests.test_forked_tool_choices_and_partial_final_restart_preserve_parent",
+      "tests.test_coding_grammar.CodingGrammarTests.test_prior_json_parser_snapshot_is_not_reinterpreted_as_gbnf",
+      "tests.test_coding_grammar.CodingGrammarTests.test_startup_payload_pins_tool_first_and_new_thinking_budget",
+      "test_thinking_grammar.ThinkingGrammarTests.test_budget_masks_reasoning_then_only_closing_then_final_schema",
+      "test_thinking_grammar.ThinkingGrammarTests.test_fork_resume_reconstructs_budget_and_preserves_parent_controller",
+      "test_thinking_grammar.ThinkingGrammarTests.test_json_final_constraints_and_invalid_definitions",
+      "test_thinking_grammar.ThinkingGrammarTests.test_min_p_policy_and_rng_do_not_reset_at_closing_boundary",
+      "test_thinking_grammar.ThinkingGrammarTests.test_min_p_thoughts_have_independent_draw_progress_and_exact_resume",
+      "test_thinking_grammar.ThinkingGrammarTests.test_natural_early_close_and_zero_budget",
+      "test_thinking_grammar.ThinkingGrammarTests.test_utf8_budget_cannot_strand_a_partial_codepoint",
+      "test_thinking_grammar.ThinkingGrammarTests.test_wrong_budget_identity_early_eos_and_unrelated_control_reject",
+      "tests.test_coding_defaults.CodingDefaultsTests.test_actual_cli_bootstrap_uses_examples_then_completes_and_reopens",
+      "tests.test_coding_defaults.CodingDefaultsTests.test_bad_workflow_types_reject_before_bootstrap_prefix_computation",
+      "tests.test_coding_defaults.CodingDefaultsTests.test_default_workflow_is_generic_and_parseable",
+      "tests.test_coding_defaults.CodingDefaultsTests.test_exact_dry_minp_preset_and_thinking_admission",
+      "tests.test_coding_defaults.CodingDefaultsTests.test_omitted_profiles_select_default_but_explicit_profile_is_preserved",
+      "tests.test_coding_defaults.CodingDefaultsTests.test_reusable_prefix_contains_three_examples_and_live_schema"
+    ],
+    "tests_run": 26,
+    "failures": [],
+    "errors": [],
+    "skips": [],
+    "seconds": 2.207467693835497
+  },
+  "thinking_default_tokens": 4096,
+  "final_answer_target_tokens": null,
+  "request_chunk_tokens": 2048,
+  "total_output_resource_budget": 65536,
+  "max_requests": 32,
+  "standard_tokens": [
+    4096,
+    8192,
+    16384,
+    32768
+  ],
+  "lite_tokens": [
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768
+  ],
+  "source_base": "2520c39ba362a1a15ca4744f9c18b76de7a8236a",
+  "scope": "Real CPU grammar/parser and model-free HTTP/bootstrap fixtures. No real GPU run for new4K default. No automatic fork/retry or time enforcement yet.",
+  "test_change": {
+    "path": "tests/test_coding_grammar.py",
+    "change": "One default-budget expectation1024 to4096 follows explicit owner instruction;old1K saved-controller fixture unchanged;no backend/reference/tolerance weakening."
+  },
+  "raw_evidence": {
+    "client": "/home/dflanag3/spatial-artifacts/branchwrite-ubuntu-baseline-20261018-v1/thinking-defaults-red-v1",
+    "server": "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1/bw-thinking-cpu-v1"
+  },
+  "limitations": [
+    "Automatic failed-task fork/retry not connected",
+    "Time allowances are definitions,not enforced yet",
+    "Lite live256-token retest deferred",
+    "No fresh numerical/GPU/restart qualification"
+  ]
+}

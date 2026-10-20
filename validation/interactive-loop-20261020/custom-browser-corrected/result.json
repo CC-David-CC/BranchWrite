@@ -1,0 +1,1 @@
+{"exit_code": 0, "scope": "Real sandboxed Chromium; computed styles/click, two negative style controls and malformed receipt rejection. First fixture used a dict where the existing inspection wire requires a pair of strings. Wire validation was preserved."}

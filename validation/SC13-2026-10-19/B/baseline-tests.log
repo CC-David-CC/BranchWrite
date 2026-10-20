@@ -1,0 +1,171 @@
+test_exit_codes (test_taskboard.ParserTests.test_exit_codes) ... FAIL
+test_invalid (test_taskboard.ParserTests.test_invalid) ... 
+  test_invalid (test_taskboard.ParserTests.test_invalid) (value=None) ... ERROR
+  test_invalid (test_taskboard.ParserTests.test_invalid) (value=4) ... ERROR
+  test_invalid (test_taskboard.ParserTests.test_invalid) (value='x\tlabel') ... FAIL
+  test_invalid (test_taskboard.ParserTests.test_invalid) (value=' 0\tlabel') ... FAIL
+  test_invalid (test_taskboard.ParserTests.test_invalid) (value='0\t') ... FAIL
+  test_invalid (test_taskboard.ParserTests.test_invalid) (value='0\tbad\ninside') ... FAIL
+  test_invalid (test_taskboard.ParserTests.test_invalid) (value='0\tbad\rinside') ... FAIL
+test_line_endings (test_taskboard.ParserTests.test_line_endings) ... FAIL
+test_preserves_labels (test_taskboard.ParserTests.test_preserves_labels) ... ERROR
+test_empty (test_taskboard.ReportTests.test_empty) ... ok
+test_invalid_propagates (test_taskboard.ReportTests.test_invalid_propagates) ... ok
+test_mixed (test_taskboard.ReportTests.test_mixed) ... FAIL
+test_unicode_order_and_no_mutation (test_taskboard.ReportTests.test_unicode_order_and_no_mutation) ... FAIL
+
+======================================================================
+ERROR: test_invalid (test_taskboard.ParserTests.test_invalid) (value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 15, in test_invalid
+    with self.subTest(value=value),self.assertRaises(ValueError):parse_line(value)
+                                                                 ~~~~~~~~~~^^^^^^^
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/taskboard/parser.py", line 2, in parse_line
+    code, label = line.split("\t")
+                  ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
+
+======================================================================
+ERROR: test_invalid (test_taskboard.ParserTests.test_invalid) (value=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 15, in test_invalid
+    with self.subTest(value=value),self.assertRaises(ValueError):parse_line(value)
+                                                                 ~~~~~~~~~~^^^^^^^
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/taskboard/parser.py", line 2, in parse_line
+    code, label = line.split("\t")
+                  ^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'split'
+
+======================================================================
+ERROR: test_preserves_labels (test_taskboard.ParserTests.test_preserves_labels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 9, in test_preserves_labels
+    self.assertEqual(parse_line('1\t  café:雪\tλ  '),(1,'  café:雪\tλ  '))
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/taskboard/parser.py", line 2, in parse_line
+    code, label = line.split("\t")
+    ^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2, got 3)
+
+======================================================================
+FAIL: test_exit_codes (test_taskboard.ParserTests.test_exit_codes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 6, in test_exit_codes
+    self.assertEqual(parse_line('-9\tbuild'),(-9,'build'))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (0, 'build') != (-9, 'build')
+
+First differing element 0:
+0
+-9
+
+- (0, 'build')
+?  ^
+
++ (-9, 'build')
+?  ^^
+
+
+======================================================================
+FAIL: test_invalid (test_taskboard.ParserTests.test_invalid) (value='x\tlabel')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 15, in test_invalid
+    with self.subTest(value=value),self.assertRaises(ValueError):parse_line(value)
+                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid (test_taskboard.ParserTests.test_invalid) (value=' 0\tlabel')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 15, in test_invalid
+    with self.subTest(value=value),self.assertRaises(ValueError):parse_line(value)
+                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid (test_taskboard.ParserTests.test_invalid) (value='0\t')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 15, in test_invalid
+    with self.subTest(value=value),self.assertRaises(ValueError):parse_line(value)
+                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid (test_taskboard.ParserTests.test_invalid) (value='0\tbad\ninside')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 15, in test_invalid
+    with self.subTest(value=value),self.assertRaises(ValueError):parse_line(value)
+                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid (test_taskboard.ParserTests.test_invalid) (value='0\tbad\rinside')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 15, in test_invalid
+    with self.subTest(value=value),self.assertRaises(ValueError):parse_line(value)
+                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_line_endings (test_taskboard.ParserTests.test_line_endings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 12, in test_line_endings
+    self.assertEqual(parse_line('2\ttest\n'),(2,'test'))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (0, 'test') != (2, 'test')
+
+First differing element 0:
+0
+2
+
+- (0, 'test')
+?  ^
+
++ (2, 'test')
+?  ^
+
+
+======================================================================
+FAIL: test_mixed (test_taskboard.ReportTests.test_mixed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 19, in test_mixed
+    self.assertEqual(summarize(['0\tbuild','2\ttest','-9\tlint']),dict(passed=1,failed=2,failed_labels=['test','lint']))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'passed': 3, 'failed': 0, 'failed_labels': []} != {'passed': 1, 'failed': 2, 'failed_labels': ['test', 'lint']}
+- {'failed': 0, 'failed_labels': [], 'passed': 3}
+?            ^                                 ^
+
++ {'failed': 2, 'failed_labels': ['test', 'lint'], 'passed': 1}
+?            ^                    ++++++++++++++             ^
+
+
+======================================================================
+FAIL: test_unicode_order_and_no_mutation (test_taskboard.ReportTests.test_unicode_order_and_no_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/source/tests/test_taskboard.py", line 22, in test_unicode_order_and_no_mutation
+    self.assertEqual(summarize(rows),dict(passed=1,failed=2,failed_labels=[' 雪 ','café']));self.assertEqual(rows,before)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'passed': 3, 'failed': 0, 'failed_labels': []} != {'passed': 1, 'failed': 2, 'failed_labels': [' 雪 ', 'café']}
+- {'failed': 0, 'failed_labels': [], 'passed': 3}
+?            ^                                 ^
+
++ {'failed': 2, 'failed_labels': [' 雪 ', 'café'], 'passed': 1}
+?            ^                    +++++++++++++             ^
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+FAILED (failures=9, errors=3)

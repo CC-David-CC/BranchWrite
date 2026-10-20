@@ -1,0 +1,8 @@
+test_escape_stops_work_without_erasing_the_draft (tests.test_interactive_terminal.InteractiveTerminalTests.test_escape_stops_work_without_erasing_the_draft) ... ok
+test_plan_aside_history_and_unknown_commands_are_not_work_requests (tests.test_interactive_terminal.InteractiveTerminalTests.test_plan_aside_history_and_unknown_commands_are_not_work_requests) ... ok
+test_typing_survives_progress_tab_queues_and_enter_steers (tests.test_interactive_terminal.InteractiveTerminalTests.test_typing_survives_progress_tab_queues_and_enter_steers) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.427s
+
+OK

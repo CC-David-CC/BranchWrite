@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "stdout": "PASS: 1000 seeded interval-union cases, arbitrary-size integer and reversed-bound probes\n",
+  "stderr": "",
+  "candidate_sha256": "d5352c2445c6bb5935e458fbf4e639f1197a99a4e3d26db9922bb42bba93dde3",
+  "isolation": {
+    "kind": "bubblewrap-terminal-v1",
+    "pid_ns": "pid:[4026532781]",
+    "net_ns": "net:[4026532783]",
+    "mount_ns": "mnt:[4026532777]",
+    "worker_exited": true,
+    "launcher_pid": 2351588,
+    "namespace_members_after": []
+  },
+  "seed": 47031,
+  "random_cases": 1000,
+  "additional_probes": 2,
+  "scope": "Independent discrete half-step interval occupancy oracle; no numerical model oracle"
+}

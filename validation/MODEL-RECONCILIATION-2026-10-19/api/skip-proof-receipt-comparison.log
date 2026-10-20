@@ -1,0 +1,21 @@
+test_complete_output_recovers_offline (test_generation_reconciliation.GenerationReconciliationTests.test_complete_output_recovers_offline) ... ok
+test_durable_lost_reply_recovers_original_bytes_without_forward_work (test_generation_reconciliation.GenerationReconciliationTests.test_durable_lost_reply_recovers_original_bytes_without_forward_work) ... ok
+test_known_failed_request_cannot_trigger_another_post (test_generation_reconciliation.GenerationReconciliationTests.test_known_failed_request_cannot_trigger_another_post) ... ok
+test_receipt_only_record_can_restore_exact_answer_without_regeneration (test_generation_reconciliation.GenerationReconciliationTests.test_receipt_only_record_can_restore_exact_answer_without_regeneration) ... ok
+test_replay_receipt_must_equal_the_prior_durable_proof (test_generation_reconciliation.GenerationReconciliationTests.test_replay_receipt_must_equal_the_prior_durable_proof) ... FAIL
+test_unknown_request_cannot_trigger_a_post (test_generation_reconciliation.GenerationReconciliationTests.test_unknown_request_cannot_trigger_a_post) ... ok
+test_wrong_endpoint_rejected_before_network (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_endpoint_rejected_before_network) ... ok
+test_wrong_observed_receipt_cannot_trigger_replay (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_observed_receipt_cannot_trigger_replay) ... ok
+
+======================================================================
+FAIL: test_replay_receipt_must_equal_the_prior_durable_proof (test_generation_reconciliation.GenerationReconciliationTests.test_replay_receipt_must_equal_the_prior_durable_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 96, in test_replay_receipt_must_equal_the_prior_durable_proof
+    with self.assertRaises(ReceiptError):self.client.reconcile_generation('recovery-answer')
+AssertionError: ReceiptError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.252s
+
+FAILED (failures=1)

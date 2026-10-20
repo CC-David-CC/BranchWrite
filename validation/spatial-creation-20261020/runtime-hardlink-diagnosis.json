@@ -1,0 +1,27 @@
+{
+  "root_cause": "uv package cache hard links share inode metadata across environments",
+  "reproducer": {
+    "bytes_unchanged": true,
+    "inode_unchanged": true,
+    "mtime_unchanged": true,
+    "ctime_changed": true,
+    "links_before": 1,
+    "links_after": 2
+  },
+  "inventory": [
+    {
+      "runtime": "cad",
+      "hardlinked_files": 15035,
+      "sample": [
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/cadvenv/share/man/man1/ttx.1",
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/cadvenv/share/man/man1/ipython.1",
+        "/home/dflanag3/spatial-artifacts/bw-build123d-20261020/cadvenv/share/man/man1/isympy.1"
+      ]
+    },
+    {
+      "runtime": "base",
+      "hardlinked_files": 0,
+      "sample": []
+    }
+  ]
+}

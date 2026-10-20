@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "version": "0.1.0.dev42",
+  "tests": 350,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "source_unchanged_during_tests": true,
+  "wheel_sha256": "2bd0822ea845092631f76d99c9eac2cbd21ffb68b9434cf6feed9da84fb7ec60",
+  "installed_smoke": {
+    "status": "PASS",
+    "scope": "Installed no-argument CLI, real PTY and authenticated LAN server; no inference requested",
+    "version": "0.1.0.dev42",
+    "client_host": "r4090",
+    "server": "llm-60",
+    "project": "/home/dflanag3/projects/branchwrite-default-dev42-smoke",
+    "exit_code": 0,
+    "key_in_output": false,
+    "key_saved": false,
+    "project_unchanged": true,
+    "completed_gpu_requests_before": 0,
+    "completed_gpu_requests_after": 0,
+    "controls": [
+      "help",
+      "plan",
+      "history",
+      "work",
+      "exit"
+    ],
+    "wheel_sha256": "2bd0822ea845092631f76d99c9eac2cbd21ffb68b9434cf6feed9da84fb7ec60"
+  },
+  "limits": [
+    "Full suite uses COW conversation candidate42aae89b; installed startup smoke uses restored live4b1f8fda server.",
+    "Installed no-argument smoke performed real authenticated HTTP startup and controls, not a new coding/model turn.",
+    "Previous installeddev40 source already has real-Q4 coding/steering/browser evidence; newdev42 changes launcher and custom observer, not model-call semantics.",
+    "Initial350suite had2old default-wizard assertions; updated to intentional interactive behavior with key privacy assertions retained. Explicit start still tests the old wizard.",
+    "This is not original G1-G5 qualification. Immediate GPU cancellation, live edit/explore and mixed coding/admin journeys remain outstanding."
+  ]
+}

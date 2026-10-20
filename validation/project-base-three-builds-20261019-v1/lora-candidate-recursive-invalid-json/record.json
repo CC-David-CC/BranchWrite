@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "status": "CANDIDATE_NOT_APPROVED",
+  "classification": "one observed model-generated implementation defect; not a quantization-wide claim",
+  "failure_class": "unbounded recursive validation before rejecting unsupported JSON shapes",
+  "invariant": "Invalid inputs must raise ValueError; raw RecursionError must not escape",
+  "original_run": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2",
+  "actual_task_sha256": "75f6640382fd6f4e88766c3cbc75986976bded5228bd7bee33085c22ae0a1711",
+  "actual_created_file_sha256": "ad8bcca637c0c5bd23e9c47374f56159f21d5e4d6087240dc1bc4ca2cc1afd65",
+  "actual_response_capture": "Exact tool-created file bytes; raw model responses retained by referenced closed journals, not reconstructed",
+  "exact_prompt_records": "Task bytes captured; system prefix and all delta messages remain available through original immutable pack/native store and the following journal references. No verifier/test-source dump is copied here.",
+  "request_evidence": [
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/23ea26b538e6595f5b5521123edb42a2e3ced5f326bdf86db872ff87ffc516fe.json",
+      "sha256": "f87f636a9f9235224a3f18b3ece5e10050fd286d5b71e1836c6775271c70f077",
+      "operation_id": "bwnative-0c7f212105bcd15740b5518544c0357cabfd5c1464bf1e0b",
+      "state": "complete"
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/43a317c8b868acb226e74b2713a4621abaf2e19b96dadbadae0350f2bd490c77.json",
+      "sha256": "77245a25d4de5587880f062d8c2c6d0f81e5c14f7a7ffee895c79193679914a8",
+      "operation_id": "bwnative-3878562c716a1043a4bcac438747794b40b272e4ca153705",
+      "state": "complete"
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/51cc8a016b6b2840bbe763909658690e76cdcd5792207ae14c37eee38a08528c.json",
+      "sha256": "9067ed3063c7e317fc8c116c1ea3845eda68dce21a90927daf85995343a4eac7",
+      "operation_id": "bwnative-f666cfb0111902f2f8133e7ea286d096f84f31eec6610a86",
+      "state": "complete"
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/5cff29b2ce0a2613f4a33f802d57a7c0b150b5c1f2ac7ace700521f3af5ce153.json",
+      "sha256": "621a151a2e133ffd3a4d61e56cb89d42fb6f4e759c835cf3fa406bb7733bd406",
+      "operation_id": "bwnative-460278ab79cdb238ca836d3d9f39fea09955b9be410257c1",
+      "state": "complete"
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/64fe46436b23c010e9d4c7efc40785ea1b8b7782a201445c890591a2992e393a.json",
+      "sha256": "bc84ca341963c0a98b5bf8c1ee1e98798820ad7be7f1fe98bc4790dbb63b87ac",
+      "operation_id": "bwnative-5cbdcd0a2f104d4ae39d786ad3b26ae03fba5fcd26c5de6d",
+      "state": "complete"
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/955b026d86b0b57585d9742832e3b5e114d2e4ac6b95b8a4abcc71b85bc5e5c8.json",
+      "sha256": "15346bfa0049f8c6aa5588fe5b41350838e318a985c703a6b98ccb8271b2c7a6",
+      "operation_id": "bwnative-615a94fd634cfae693d97e09a092b5691c34f7032da9bde3",
+      "state": "complete"
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/cc102a1bcce181d51d02ff46407e505440d2fb680a310f8568287484ce1a6e5c.json",
+      "sha256": "3d4e8046f0efd17de073cfb61ee94103344556666a3dd18036722d034864afd2",
+      "operation_id": "bwnative-122dd7630627cc3364ca89b3aef7bd1fad12f841f61b4cc0",
+      "state": "complete"
+    },
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/e2f64f2c1594b988c7b2c3fb23487ec5ea7a00c4aa4120f16d473b0b8dd1acb1.json",
+      "sha256": "13fdaef2ab7615aadbd803e0fb0a459943704ddd8ea6d8f51db18d745b4e757a",
+      "operation_id": "bwnative-e7e036adbebbf0c1a9bcc4917b8ff4de1e9d5bb60de9868b",
+      "state": "complete"
+    }
+  ],
+  "model": "3fcd9cfc2e977dbf56522e710cb3903e03ab00ca2ed5d0daa3d9f840edf5a833",
+  "execution_profile": "9b41fafe211adeb51b6c347190b1a13c17c9ee767069711dbd3dfd309d7f6e16",
+  "controller": {
+    "grammar_state": "BW_TOOLS",
+    "max_output_tokens": 65536,
+    "max_requests": 32,
+    "output_format": "thinking",
+    "request_tokens": 2048,
+    "settings": {
+      "dry_allowed_length": 2,
+      "dry_base": 1.75,
+      "dry_multiplier": 0.0,
+      "dry_penalty_last_n": 256,
+      "min_p": 0.0,
+      "temperature": 0.0,
+      "top_k": 0,
+      "top_p": 1.0
+    },
+    "thinking_ladder": "standard"
+  },
+  "source_revision": "8270a0ffd67178cbd53d2711a85e1a5ba8cb1891",
+  "installed_client": "dev19",
+  "observed_checks": {
+    "visible": 11,
+    "initial_independent": 22,
+    "extended_invalid_variants": 2200,
+    "failing_subcases": 233
+  },
+  "mitigation": {
+    "status": "ONE_EXECUTED_SUCCESS_REVIEWED",
+    "workflow": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-base-choice-dev21-repair-A-v1",
+    "method": "Full BranchWrite attempt with installeddev21 and compact B reference; parent supplied error evidence, no code patch",
+    "corrected_file_sha256": "8f008e6ef162075dd23c0c0343d48675786adc5d9f899c7a3855a6b31c0b4af3",
+    "whole_cli_seconds": 411.3367718550144,
+    "validation": {
+      "status": "BOUNDED_REPAIR_PASS",
+      "whole_cli_seconds": 411.3367718550144,
+      "parent_code_changes": 0,
+      "feedback_prompts": 1,
+      "visible_methods": 12,
+      "independent_sandbox_methods": 15,
+      "independent_original_assertions": 22,
+      "fresh_mixed_invalid_cases": 14,
+      "valid_unicode_boundary_case": true,
+      "original_nested_variants_rerun": 2200,
+      "candidate_sha256": "8f008e6ef162075dd23c0c0343d48675786adc5d9f899c7a3855a6b31c0b4af3",
+      "review": "Read complete original and diff: recursive finite walk replaced with explicit list stack, bounded by parsed input size; strict schema/UTF8/identity/capacity checks retained; no IO, source/test mutation or permissions introduced.",
+      "installed_client": "dev21",
+      "model": "Q8 greedy",
+      "selected_reference": "compact B",
+      "automatic_model_selection": false,
+      "scope": "One autonomous repair with pre-run failure feedback; frozen independent repeat still pending"
+    },
+    "warning": "Not approved training data; one successful repair does not prove broad generalization"
+  },
+  "contrast": "Independent B/C proposals from the same Q8 configuration passed the extended review",
+  "export_eligibility": "NO; human review, private-source review and family split required; no training/public upload authorized",
+  "policy_reference": "Windows curated branchwrite-lora-examples/README.md and COLLECTION-RULE.md; this is a Linux working capture because Windows is steering only",
+  "initial_thinking_allowance_tokens": 4096,
+  "grammar_evidence": [
+    {
+      "path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/coding-A-all-product-source-attempt2/state/cow-operations/6039eecf41e5893cec6161ca1e87db7a519954e0bc01ea7b12ad0882daadd60f.json",
+      "sha256": "e2782eb4507f379f72782def80048258d1e1fe430d120afb473d10220bb5cfb1"
+    }
+  ],
+  "actual_returned_output_tokens": 6008
+}

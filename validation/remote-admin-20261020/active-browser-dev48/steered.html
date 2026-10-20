@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Dogs</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(160deg, #fff7ed, #e0f2fe, #ecfeff);
+      color: #1f2937;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
+    main {
+      width: min(100%, 720px);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+      padding: clamp(1.25rem, 4vw, 2.5rem);
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+    .paws {
+      font-size: clamp(2rem, 10vw, 4rem);
+    }
+    .intro {
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      line-height: 1.7;
+      margin: 1.25rem 0 2rem;
+    }
+    .dog-card {
+      display: grid;
+      gap: 0.75rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #fff1f2, #fef3c7);
+      border: 1px solid rgba(244, 114, 182, 0.25);
+    }
+    .dog-card p {
+      margin: 0;
+      font-size: clamp(1.25rem, 5vw, 1.8rem);
+    }
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.95rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(135deg, #fb7185, #f97316);
+      box-shadow: 0 10px 24px rgba(249, 115, 22, 0.28);
+      cursor: pointer;
+      min-height: 48px;
+      min-width: 160px;
+    }
+    button:focus-visible {
+      outline: 3px solid #0ea5e9;
+      outline-offset: 3px;
+    }
+    #helloMessage {
+      min-height: 1.5rem;
+      margin-top: 1rem;
+      font-size: clamp(1.1rem, 4vw, 1.4rem);
+      font-weight: 700;
+      color: #0f766e;
+    }
+    @media (max-width: 420px) {
+      main {
+        border-radius: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="paws" aria-hidden="true">🐶 🐾 🦴</div>
+    <h1>Happy Dogs</h1>
+    <p class="intro">A tiny phone-friendly page about two playful dogs.</p>
+    <section class="dog-card" aria-label="Dog sentences">
+      <p><strong>Milo</strong> <em><u>plays</u></em>. <strong>Luna</strong> <em><u>runs</u></em>.</p>
+    </section>
+    <button type="button" id="helloButton">Say hello</button>
+    <p id="helloMessage" aria-live="polite"></p>
+  </main>
+  <script>
+    document.getElementById('helloButton').addEventListener('click', function () {
+      document.getElementById('helloMessage').textContent = 'Hello, David!';
+    });
+  </script>
+</body>
+</html>

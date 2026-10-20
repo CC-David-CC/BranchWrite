@@ -1,0 +1,12 @@
+{
+  "seed": 7419,
+  "generated_literal_cases": 64,
+  "source_branch": "standalone-sc09-q8-inline-task-20261019-v2",
+  "source_snapshot": "d0625132837bd499df858853a5decc6ececa01116ff7630e06751fdd0ef8301b",
+  "audit_sha256": "10efd399982e92faf6e10a75d1dd5738e5eb624d2907dd63967dc0c04fd3f96f",
+  "purpose": "Model repairs its own independently observed compatibility regression; no repair code supplied",
+  "model": "Q8_0",
+  "kv": "FP16",
+  "sampler": "greedy",
+  "thinking_tokens": 4096
+}

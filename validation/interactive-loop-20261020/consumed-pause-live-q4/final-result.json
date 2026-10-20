@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "one installed CLI first-thought active-steering journey; independent desktop/mobile Chromium acceptance",
+  "client_source_commit": "61d47c903ee228f5717db78e72f40a18d0d19a1b",
+  "server_source_commit": "780e824a33a35d2a857643b43a56858ce14ec8b6",
+  "execution_profile_id": "3020f9c9c2e9602074a4c2ee32923a07471e29682b0a28f349963d96ed02e227",
+  "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+  "wheel_sha256": "8076a1ca4808e6fa1abcbc3304a9deec6170fa919dbc9da1ad568a1e4783a7ae",
+  "pause_ack_after_steer_seconds": 0.5801713690161705,
+  "durable_boundary_after_steer_seconds": 3.8597291560145095,
+  "whole_journey_seconds": 240.5234057980124,
+  "browser_checks": 2,
+  "original_server_restored": true,
+  "limitations": [
+    "one greedy Q4 journey, not general reliability qualification",
+    "no new full-logit oracle or G1-G5 qualification",
+    "Stop/reopen/continue, multiple steering updates and adverse control-network races not GPU-qualified by this journey",
+    "fast consumed-boundary pause requires the tested new server; restored original service retains older whole-step behavior",
+    "tool cancellation remains settled-effect handling, not arbitrary command interruption"
+  ]
+}

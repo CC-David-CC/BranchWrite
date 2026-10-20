@@ -1,0 +1,8 @@
+test_automatic_host_selection_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_automatic_host_selection_uses_existing_fork_and_ask_api) ... ok
+test_prepare_base_cli_publishes_catalog_and_retries_without_prefill (test_base_choice_http.BaseChoiceHttpTests.test_prepare_base_cli_publishes_catalog_and_retries_without_prefill) ... ok
+test_proposed_base_source_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_proposed_base_source_uses_existing_fork_and_ask_api) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.576s
+
+OK

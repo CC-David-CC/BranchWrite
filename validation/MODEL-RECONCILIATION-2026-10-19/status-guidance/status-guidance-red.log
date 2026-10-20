@@ -1,0 +1,42 @@
+test_active_writer_is_reported_without_ledger_read (test_coding_status.CodingStatusTests.test_active_writer_is_reported_without_ledger_read) ... ok
+test_closed_result_is_recorded_not_claimed_reverified (test_coding_status.CodingStatusTests.test_closed_result_is_recorded_not_claimed_reverified) ... ok
+test_corrupt_log_is_not_repaired (test_coding_status.CodingStatusTests.test_corrupt_log_is_not_repaired) ... ok
+test_human_output_labels_verification_scope (test_coding_status.CodingStatusTests.test_human_output_labels_verification_scope) ... ok
+test_incomplete_run_does_not_claim_success (test_coding_status.CodingStatusTests.test_incomplete_run_does_not_claim_success) ... ok
+test_missing_state_is_not_created (test_coding_status.CodingStatusTests.test_missing_state_is_not_created) ... ok
+test_model_guidance_explains_durable_only_recovery_and_resume (test_coding_status.CodingStatusTests.test_model_guidance_explains_durable_only_recovery_and_resume) ... FAIL
+test_pending_model_status_supplies_exact_recovery_argv_without_execution (test_coding_status.CodingStatusTests.test_pending_model_status_supplies_exact_recovery_argv_without_execution) ... ERROR
+test_pending_tool_is_not_presented_as_model_output_recovery (test_coding_status.CodingStatusTests.test_pending_tool_is_not_presented_as_model_output_recovery) ... ERROR
+test_unsettled_operation_is_visible (test_coding_status.CodingStatusTests.test_unsettled_operation_is_visible) ... ok
+
+======================================================================
+ERROR: test_pending_model_status_supplies_exact_recovery_argv_without_execution (test_coding_status.CodingStatusTests.test_pending_model_status_supplies_exact_recovery_argv_without_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_status.py", line 67, in test_pending_model_status_supplies_exact_recovery_argv_without_execution
+    rows=json.loads(out)['pending_model_recovery'];self.assertEqual(len(rows),1)
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'pending_model_recovery'
+
+======================================================================
+ERROR: test_pending_tool_is_not_presented_as_model_output_recovery (test_coding_status.CodingStatusTests.test_pending_tool_is_not_presented_as_model_output_recovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_status.py", line 78, in test_pending_tool_is_not_presented_as_model_output_recovery
+    self.assertEqual(json.loads(out)['pending_model_recovery'],[]);self.assertEqual(self.snapshot(),before)
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'pending_model_recovery'
+
+======================================================================
+FAIL: test_model_guidance_explains_durable_only_recovery_and_resume (test_coding_status.CodingStatusTests.test_model_guidance_explains_durable_only_recovery_and_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_status.py", line 81, in test_model_guidance_explains_durable_only_recovery_and_resume
+    self.assertIn('reconcile',out);self.assertIn('resume',out);self.assertIn('durable',out.lower())
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'reconcile' not found in 'Run: Waiting\nVerification recorded at completion: not completed; current workspace not rechecked.\nFrames: Waiting=3\nPending external operations: 1\n  owned-model-op (Waiting)\n'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.064s
+
+FAILED (failures=1, errors=2)

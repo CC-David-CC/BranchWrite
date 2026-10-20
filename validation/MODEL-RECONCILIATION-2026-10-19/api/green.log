@@ -1,0 +1,89 @@
+test_complete_output_recovers_offline (test_generation_reconciliation.GenerationReconciliationTests.test_complete_output_recovers_offline) ... ERROR
+test_durable_lost_reply_recovers_original_bytes_without_forward_work (test_generation_reconciliation.GenerationReconciliationTests.test_durable_lost_reply_recovers_original_bytes_without_forward_work) ... ERROR
+test_receipt_only_record_can_restore_exact_answer_without_regeneration (test_generation_reconciliation.GenerationReconciliationTests.test_receipt_only_record_can_restore_exact_answer_without_regeneration) ... ERROR
+test_unknown_request_cannot_trigger_a_post (test_generation_reconciliation.GenerationReconciliationTests.test_unknown_request_cannot_trigger_a_post) ... ok
+test_wrong_endpoint_rejected_before_network (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_endpoint_rejected_before_network) ... ok
+test_wrong_observed_receipt_cannot_trigger_replay (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_observed_receipt_cannot_trigger_replay) ... ERROR
+
+======================================================================
+ERROR: test_complete_output_recovers_offline (test_generation_reconciliation.GenerationReconciliationTests.test_complete_output_recovers_offline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 56, in test_complete_output_recovers_offline
+    original=self.answer()
+             ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 15, in answer
+    return self.client.answer('recovery-main',self.root.receipt.branch.revision,'recovery-answer',1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1060, in answer
+    return self._generation_mutation(operation_id, "/cow/text/answer", body, branch=branch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1237, in _generation_mutation
+    return self._accept_stream(response, record, intent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1372, in _accept_stream
+    raise RequestRejected("COW stream error: " + str(event.get("error", "unknown error")))
+branchwrite.cow_client.RequestRejected: COW stream error: "'recovery-answer'"
+
+======================================================================
+ERROR: test_durable_lost_reply_recovers_original_bytes_without_forward_work (test_generation_reconciliation.GenerationReconciliationTests.test_durable_lost_reply_recovers_original_bytes_without_forward_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 32, in test_durable_lost_reply_recovers_original_bytes_without_forward_work
+    recovered=self.client.reconcile_generation('recovery-answer')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1269, in reconcile_generation
+    raise OperationIndeterminate("original generation has no proven durable result")
+branchwrite.cow_client.OperationIndeterminate: original generation has no proven durable result
+
+======================================================================
+ERROR: test_receipt_only_record_can_restore_exact_answer_without_regeneration (test_generation_reconciliation.GenerationReconciliationTests.test_receipt_only_record_can_restore_exact_answer_without_regeneration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 51, in test_receipt_only_record_can_restore_exact_answer_without_regeneration
+    original=self.answer();record=self.client.journal.read('recovery-answer');record.pop('answer');record['record_sha256']=_record_digest(record)
+             ^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 15, in answer
+    return self.client.answer('recovery-main',self.root.receipt.branch.revision,'recovery-answer',1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1060, in answer
+    return self._generation_mutation(operation_id, "/cow/text/answer", body, branch=branch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1237, in _generation_mutation
+    return self._accept_stream(response, record, intent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1372, in _accept_stream
+    raise RequestRejected("COW stream error: " + str(event.get("error", "unknown error")))
+branchwrite.cow_client.RequestRejected: COW stream error: "'recovery-answer'"
+
+======================================================================
+ERROR: test_wrong_observed_receipt_cannot_trigger_replay (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_observed_receipt_cannot_trigger_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 71, in test_wrong_observed_receipt_cannot_trigger_replay
+    with self.assertRaises(ReceiptError):self.client.reconcile_generation('recovery-answer')
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1267, in reconcile_generation
+    observation = self.operation(operation_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 937, in operation
+    response = self.transport.request("GET", "/cow/operation?" + urlencode({"operation": operation_id}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1199, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 68, in corrupt
+    value=json.loads(json.dumps(response.json_value));value['receipt']['operation_id']='wrong-operation'
+                                                      ~~~~~^^^^^^^^^^^
+KeyError: 'receipt'
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.239s
+
+FAILED (errors=4)

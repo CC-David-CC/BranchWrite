@@ -1,0 +1,15 @@
+test_generated (tests.test_generated.GeneratedTests.test_generated) ... ok
+test_invalid_boundary_classes (tests.test_generated.GeneratedTests.test_invalid_boundary_classes) ... ok
+test_exit_codes (tests.test_taskboard.ParserTests.test_exit_codes) ... ok
+test_invalid (tests.test_taskboard.ParserTests.test_invalid) ... ok
+test_line_endings (tests.test_taskboard.ParserTests.test_line_endings) ... ok
+test_preserves_labels (tests.test_taskboard.ParserTests.test_preserves_labels) ... ok
+test_empty (tests.test_taskboard.ReportTests.test_empty) ... ok
+test_invalid_propagates (tests.test_taskboard.ReportTests.test_invalid_propagates) ... ok
+test_mixed (tests.test_taskboard.ReportTests.test_mixed) ... ok
+test_unicode_order_and_no_mutation (tests.test_taskboard.ReportTests.test_unicode_order_and_no_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.006s
+
+OK

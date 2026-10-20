@@ -1,0 +1,16 @@
+{
+  "service-SC19-dev18-autonomous-task-pass-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/service-SC19-dev18-autonomous-task-pass-20261019/evidence.tar.gz",
+    "sha256": "6e3f75ba2c0e4d5933815326166c466f6eccf75c3e8c606d1ad455ec7643d8f7",
+    "bytes": 956702,
+    "files": 36
+  },
+  "client-SC19-dev18-autonomous-task-pass-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/client-SC19-dev18-autonomous-task-pass-20261019/evidence.tar.gz",
+    "sha256": "a68929dc507cf93db65c3a7fcf07d51129f9c86f77aba20958041f1135e8808f",
+    "bytes": 250907,
+    "files": 369
+  }
+}

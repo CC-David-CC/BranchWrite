@@ -1,0 +1,11 @@
+test_seeded (tests.test_independent.Independent.test_seeded) ... ok
+test_empty (tests.test_reports.Reports.test_empty) ... ok
+test_invalid (tests.test_reports.Reports.test_invalid) ... ok
+test_mixed (tests.test_reports.Reports.test_mixed) ... ok
+test_no_mutation (tests.test_reports.Reports.test_no_mutation) ... ok
+test_render (tests.test_reports.Reports.test_render) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.013s
+
+OK

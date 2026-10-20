@@ -1,0 +1,18 @@
+[
+  {
+    "task": "A",
+    "status": "PASS",
+    "state_unchanged": true,
+    "original_result_identical": true,
+    "no_tunnel": true,
+    "no_api_key_supplied": true
+  },
+  {
+    "task": "B",
+    "status": "PASS",
+    "state_unchanged": true,
+    "original_result_identical": true,
+    "no_tunnel": true,
+    "no_api_key_supplied": true
+  }
+]

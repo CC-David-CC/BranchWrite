@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "modules": {
+    "branchwrite": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c",
+    "branchwrite.execution": "6a595a6a38dee451042f31303ea9f8b7398ab6a0b8f721999d9f2d27637ecb5b",
+    "branchwrite.records": "600d0093a8c1768be967e627627a40c244233c118d39fcd24979a76e55b2f677",
+    "branchwrite.text_file_codec": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8",
+    "branchwrite.tool_registry": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568",
+    "branchwrite.project_apply": "a7e351c3489f5334c714755e93b3fd98dc0e33e2cfb1e1a6cbdaf2889fc3864a",
+    "branchwrite.kernel": "106a3a564e0ee5bb190e7a6c3c246336e4c4b91a93df906110e930c02b6a8521",
+    "branchwrite.language": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985",
+    "branchwrite.tool_dispatch": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6",
+    "branchwrite.cow_client": "a08bd70de75399583cfc19229dc6e0a6ff5447286d5b8856b5322e5eda2f86d7",
+    "branchwrite.cow_actions": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4",
+    "branchwrite.model_inputs": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea",
+    "branchwrite.thinking_ladder": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc",
+    "branchwrite.model_dispatch": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007",
+    "branchwrite.cow_fork": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0",
+    "branchwrite.planning_retry": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946",
+    "branchwrite.verification": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0",
+    "branchwrite.image_feedback": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe",
+    "branchwrite.interpreter": "a5c3342f271ddf7d41d6b0ab26f42c50e52bff1216ad534528b230ec0970400a",
+    "branchwrite.coding_defaults": "e11f62a6b8c49c644afeeb154908137c5a415de55b67529cd39c0e0a97a0c34c",
+    "branchwrite.run_cli": "d5293732512a34defd4591ff63dd989fdf56a12a517e79a8f245aa98f9e438db",
+    "branchwrite.coding_cli": "da0ae315be0dcab398d03e2c3e8457c70bec12c3bb5d3e6264e8a7def37008c7",
+    "branchwrite.coding_review": "38201f5dd50dbc2d4bde1c5318efb9adc6adda2bbcd9380e90ff31f5c7864d1b",
+    "branchwrite.project_export": "93eb7d71362984038f95801094cc49e82ea599371459b7529bb024207d0fad9e",
+    "branchwrite.__main__": "cecbe9a972b0bd3502aebec33f62cc4fa4fddbb579935338feb9229d5613b236"
+  }
+}

@@ -1,0 +1,1 @@
+{"status": "FAIL", "tests_run": 29, "failures": 0, "errors": 1, "skips": 0, "seconds": 39.17293242900632, "scope": "Real sandboxed Chromium and host-owned inspection regressions; protected catalog assertions unchanged. No model/GPU."}

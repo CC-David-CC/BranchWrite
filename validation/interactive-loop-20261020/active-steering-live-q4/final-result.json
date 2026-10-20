@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "scope": "Bounded real-Q4 installed CLI active-steering and Chromium acceptance. No numerical G1-G5 claim.",
+  "client_host": "llm-49",
+  "inference_host": "llm-60",
+  "client_source_commit": "4d7b0414aa89f2b7d06f03dffea396e8564ab79f",
+  "observer_source_commit": "9b5722f9",
+  "wheel_sha256": "39773a6e553fbc7e24d910aec67f75e22add610d6cbd87a0f5b510b1dfff0c51",
+  "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+  "execution_profile_id": "62a8bc71db2436477fc6e5c010d4357287034c04ea41123a887418694a5d42b6",
+  "initial_request": "Add a small section called Meet our dogs to this page: Rex runs. Luna jumps. Milo plays. Keep everything else, including the greeting button, working.",
+  "steering_message": "Also, make the dog names bold. Make runs, jumps and plays italic and underlined.",
+  "steering_sent_at": 1792494010.8666556,
+  "initial_turn": "turn-5-0361a60119386187",
+  "steered_turn": "turn-6-79b3aebdaa01505e",
+  "initial_interrupted_before_tool": true,
+  "steering_kind": "steer",
+  "exact_saved_boundary_reused": true,
+  "page_sha256": "ad0a00073d406faac7c658a1a1418ac30b0dd07f208e6deb0ef74649cc23abad",
+  "browser_viewports": [
+    [
+      1280,
+      800
+    ],
+    [
+      375,
+      812
+    ]
+  ],
+  "computed_styles": [
+    [
+      "computed:Rex",
+      "[{\"weight\":\"800\",\"style\":\"normal\",\"underline\":false}]"
+    ],
+    [
+      "computed:Luna",
+      "[{\"weight\":\"800\",\"style\":\"normal\",\"underline\":false}]"
+    ],
+    [
+      "computed:Milo",
+      "[{\"weight\":\"800\",\"style\":\"normal\",\"underline\":false}]"
+    ],
+    [
+      "computed:runs",
+      "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+    ],
+    [
+      "computed:jumps",
+      "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+    ],
+    [
+      "computed:plays",
+      "[{\"weight\":\"400\",\"style\":\"italic\",\"underline\":true}]"
+    ]
+  ],
+  "greeting_click": true,
+  "mobile_overflow": false,
+  "javascript_errors": [],
+  "client_exit_code": 0,
+  "selected_versions_restored": true,
+  "selection_return_seconds": 0.1622059210203588,
+  "failures_and_limits": [
+    "Initial selection evidence logger hit a Path+str TypeError after the first selection had settled. The second selection continued afterward; first-selection latency is unmeasured.",
+    "Stop occurs at a settled native/model step, not immediate GPU cancellation.",
+    "This is functional evidence; request latency still has substantial controller/receipt-validation overhead.",
+    "Edit and isolated exploration have CPU integration evidence; live model execution of those new controls remains outstanding."
+  ],
+  "measured_logit_error": null,
+  "created_at": 1792495244.271275
+}

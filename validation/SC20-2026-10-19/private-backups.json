@@ -1,0 +1,16 @@
+{
+  "service-SC20-dev19-minp-coding-pass-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/service-SC20-dev19-minp-coding-pass-20261019/evidence.tar.gz",
+    "sha256": "ed2e5449ce0f30ea87f38c33982558afc12f486b4d4ff1bbb3a2d1c68d9e8351",
+    "bytes": 907543,
+    "files": 36
+  },
+  "client-SC20-dev19-minp-coding-pass-20261019": {
+    "status": "PRIVATE_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-vc-rerun-v1/client-SC20-dev19-minp-coding-pass-20261019/evidence.tar.gz",
+    "sha256": "3ee543e2e58b9c90249ae0e0a167311b514b3fb0a5c39a7c15f1ed7ebd079451",
+    "bytes": 225197,
+    "files": 340
+  }
+}

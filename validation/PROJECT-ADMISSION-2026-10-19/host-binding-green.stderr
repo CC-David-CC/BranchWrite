@@ -1,0 +1,11 @@
+test_actual_expected_host_is_immutable_and_in_execution_identity (test_executor_binding.ExecutorBindingTests.test_actual_expected_host_is_immutable_and_in_execution_identity) ... ok
+test_cli_configuration_preserves_explicit_binding_and_legacy_omission (test_executor_binding.ExecutorBindingTests.test_cli_configuration_preserves_explicit_binding_and_legacy_omission) ... ok
+test_frozen_plan_rechecks_host_before_any_effect (test_executor_binding.ExecutorBindingTests.test_frozen_plan_rechecks_host_before_any_effect) ... ok
+test_hostname_admission_rejects_malformed_or_nontext_bindings (test_executor_binding.ExecutorBindingTests.test_hostname_admission_rejects_malformed_or_nontext_bindings) ... ok
+test_real_cli_wrong_host_stops_before_http_or_state_creation (test_executor_binding.ExecutorBindingTests.test_real_cli_wrong_host_stops_before_http_or_state_creation) ... ok
+test_wrong_host_rejects_before_process_or_workspace_creation (test_executor_binding.ExecutorBindingTests.test_wrong_host_rejects_before_process_or_workspace_creation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.556s
+
+OK

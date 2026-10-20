@@ -1,0 +1,10 @@
+test_changed_source_excludes_stale_base_and_selects_fresh_alternative (test_base_pack_freshness.BasePackFreshnessTests.test_changed_source_excludes_stale_base_and_selects_fresh_alternative) ... ok
+test_explicit_choice_cannot_bypass_source_freshness (test_base_pack_freshness.BasePackFreshnessTests.test_explicit_choice_cannot_bypass_source_freshness) ... ok
+test_fresh_pack_bound_base_is_selected_and_binding_preserved (test_base_pack_freshness.BasePackFreshnessTests.test_fresh_pack_bound_base_is_selected_and_binding_preserved) ... ok
+test_partial_binding_and_relative_pack_path_rejected (test_base_pack_freshness.BasePackFreshnessTests.test_partial_binding_and_relative_pack_path_rejected) ... ok
+test_wrong_pack_identity_fails_without_fallback (test_base_pack_freshness.BasePackFreshnessTests.test_wrong_pack_identity_fails_without_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK

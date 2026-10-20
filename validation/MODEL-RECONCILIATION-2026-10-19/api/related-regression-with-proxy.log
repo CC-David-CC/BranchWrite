@@ -1,0 +1,117 @@
+test_complete_output_recovers_offline (test_generation_reconciliation.GenerationReconciliationTests.test_complete_output_recovers_offline) ... ok
+test_durable_lost_reply_recovers_original_bytes_without_forward_work (test_generation_reconciliation.GenerationReconciliationTests.test_durable_lost_reply_recovers_original_bytes_without_forward_work) ... ok
+test_known_failed_request_cannot_trigger_another_post (test_generation_reconciliation.GenerationReconciliationTests.test_known_failed_request_cannot_trigger_another_post) ... ok
+test_receipt_only_record_can_restore_exact_answer_without_regeneration (test_generation_reconciliation.GenerationReconciliationTests.test_receipt_only_record_can_restore_exact_answer_without_regeneration) ... ok
+test_replay_receipt_must_equal_the_prior_durable_proof (test_generation_reconciliation.GenerationReconciliationTests.test_replay_receipt_must_equal_the_prior_durable_proof) ... ok
+test_unknown_request_cannot_trigger_a_post (test_generation_reconciliation.GenerationReconciliationTests.test_unknown_request_cannot_trigger_a_post) ... ok
+test_wrong_endpoint_rejected_before_network (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_endpoint_rejected_before_network) ... ok
+test_wrong_observed_receipt_cannot_trigger_replay (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_observed_receipt_cannot_trigger_replay) ... ok
+test_adapter_profile_change_cannot_reinterpret_existing_flow (test_model_dispatch.ModelFlowTests.test_adapter_profile_change_cannot_reinterpret_existing_flow) ... ok
+test_budget_exhaustion_retains_partial_without_typed_parent_return (test_model_dispatch.ModelFlowTests.test_budget_exhaustion_retains_partial_without_typed_parent_return) ... ok
+test_committed_client_reply_recovers_before_kernel_return_without_network (test_model_dispatch.ModelFlowTests.test_committed_client_reply_recovers_before_kernel_return_without_network) ... ok
+test_constrained_and_thinking_formats_require_explicit_named_grammar (test_model_dispatch.ModelFlowTests.test_constrained_and_thinking_formats_require_explicit_named_grammar) ... ok
+test_controller_frame_inventory_is_detached (test_model_dispatch.ModelFlowTests.test_controller_frame_inventory_is_detached) ... ok
+test_five_thousand_output_tokens_use_opaque_native_receipts_not_typed_lists (test_model_dispatch.ModelFlowTests.test_five_thousand_output_tokens_use_opaque_native_receipts_not_typed_lists) ... ok
+test_independent_branches_return_in_reverse_order_without_sibling_visibility (test_model_dispatch.ModelFlowTests.test_independent_branches_return_in_reverse_order_without_sibling_visibility) ... ok
+test_missing_reply_never_resends_and_explicit_original_replay_recovers (test_model_dispatch.ModelFlowTests.test_missing_reply_never_resends_and_explicit_original_replay_recovers) ... ok
+test_other_unresolved_operation_owns_the_branch (test_model_dispatch.ModelFlowTests.test_other_unresolved_operation_owns_the_branch) ... ok
+test_partial_model_flow_keeps_branch_owner_between_native_requests (test_model_dispatch.ModelFlowTests.test_partial_model_flow_keeps_branch_owner_between_native_requests) ... ok
+test_partial_text_byte_budget_stops_before_another_request (test_model_dispatch.ModelFlowTests.test_partial_text_byte_budget_stops_before_another_request) ... ok
+test_partial_then_restart_continue_returns_once_at_consumed_eos (test_model_dispatch.ModelFlowTests.test_partial_then_restart_continue_returns_once_at_consumed_eos) ... ok
+test_rejected_stopped_metadata_cannot_trigger_hidden_continuation (test_model_dispatch.ModelFlowTests.test_rejected_stopped_metadata_cannot_trigger_hidden_continuation) ... ok
+test_saved_native_return_recovers_before_parent_resume_without_new_call (test_model_dispatch.ModelFlowTests.test_saved_native_return_recovers_before_parent_resume_without_new_call) ... ok
+test_stale_source_never_dispatches_inference (test_model_dispatch.ModelFlowTests.test_stale_source_never_dispatches_inference) ... ok
+test_actual_cli_completed_answer_is_retained_too (test_cow_durable_answer.DurableAnswerTests.test_actual_cli_completed_answer_is_retained_too) ... ok
+test_client_process_exit_after_saved_reply_recovers_in_another_process (test_cow_durable_answer.DurableAnswerTests.test_client_process_exit_after_saved_reply_recovers_in_another_process) ... ok
+test_completed_output_cannot_be_overwritten_by_a_conflicting_completion (test_cow_durable_answer.DurableAnswerTests.test_completed_output_cannot_be_overwritten_by_a_conflicting_completion) ... ok
+test_completed_read_rejects_other_endpoint_binding (test_cow_durable_answer.DurableAnswerTests.test_completed_read_rejects_other_endpoint_binding) ... ok
+test_live_partial_stays_partial_after_recovery (test_cow_durable_answer.DurableAnswerTests.test_live_partial_stays_partial_after_recovery) ... ok
+test_output_write_failure_leaves_pending_not_empty_completed_success (test_cow_durable_answer.DurableAnswerTests.test_output_write_failure_leaves_pending_not_empty_completed_success) ... ok
+test_receipt_only_legacy_record_is_not_an_exact_answer (test_cow_durable_answer.DurableAnswerTests.test_receipt_only_legacy_record_is_not_an_exact_answer) ... ok
+test_reopened_journal_preserves_exact_answer_without_head_read_or_network (test_cow_durable_answer.DurableAnswerTests.test_reopened_journal_preserves_exact_answer_without_head_read_or_network) ... ok
+test_saved_answer_wrong_snapshot_is_rejected_even_with_valid_record_digest (test_cow_durable_answer.DurableAnswerTests.test_saved_answer_wrong_snapshot_is_rejected_even_with_valid_record_digest) ... ok
+test_saved_source_owner_cannot_change_with_a_recomputed_record_digest (test_cow_durable_answer.DurableAnswerTests.test_saved_source_owner_cannot_change_with_a_recomputed_record_digest) ... ok
+test_committed_image_answer_lost_reply_is_indeterminate_then_recovers_without_work (test_cow_image_lost_ack.ImageLostAckTests.test_committed_image_answer_lost_reply_is_indeterminate_then_recovers_without_work) ... ERROR
+test_explicit_http_rejection_still_has_a_successful_protocol_control (test_cow_image_lost_ack.ImageLostAckTests.test_explicit_http_rejection_still_has_a_successful_protocol_control) ... ERROR
+test_malformed_or_other_operation_error_frames_remain_indeterminate (test_cow_image_lost_ack.ImageLostAckTests.test_malformed_or_other_operation_error_frames_remain_indeterminate) ... ERROR
+test_unknown_legacy_cli_exit_two_cannot_prove_rejection (test_cow_image_lost_ack.ImageLostAckTests.test_unknown_legacy_cli_exit_two_cannot_prove_rejection) ... ERROR
+test_wrong_legal_image_answer_stays_a_quality_failure_even_when_recovery_can_be_checked (test_cow_image_lost_ack.ImageLostAckTests.test_wrong_legal_image_answer_stays_a_quality_failure_even_when_recovery_can_be_checked) ... ERROR
+test_completed_fork_is_read_locally_without_transport_or_forward_work (test_cow_fork_receipts.ForkReceiptTests.test_completed_fork_is_read_locally_without_transport_or_forward_work) ... ok
+test_lost_fork_ack_recovers_by_read_only_status_then_local_receipt (test_cow_fork_receipts.ForkReceiptTests.test_lost_fork_ack_recovers_by_read_only_status_then_local_receipt) ... ok
+test_missing_pending_and_generation_records_cannot_be_fork_receipts (test_cow_fork_receipts.ForkReceiptTests.test_missing_pending_and_generation_records_cannot_be_fork_receipts) ... ok
+test_recovery_refuses_self_consistent_receipt_for_wrong_snapshot (test_cow_fork_receipts.ForkReceiptTests.test_recovery_refuses_self_consistent_receipt_for_wrong_snapshot) ... ok
+
+======================================================================
+ERROR: test_committed_image_answer_lost_reply_is_indeterminate_then_recovers_without_work (test_cow_image_lost_ack.ImageLostAckTests.test_committed_image_answer_lost_reply_is_indeterminate_then_recovers_without_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_image_lost_ack.py", line 13, in setUp
+    from serve.test_cow_vision_http import CowVisionHTTPTests
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_http.py", line 12, in <module>
+    import serve.test_cow_vision_text_flow as fixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_text_flow.py", line 22, in <module>
+    from serve.test_cow_vision_preparer import EncoderFixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_preparer.py", line 25, in <module>
+    from test_vision_coordinator import ServingMixedCPUBackend
+ModuleNotFoundError: No module named 'test_vision_coordinator'
+
+======================================================================
+ERROR: test_explicit_http_rejection_still_has_a_successful_protocol_control (test_cow_image_lost_ack.ImageLostAckTests.test_explicit_http_rejection_still_has_a_successful_protocol_control)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_image_lost_ack.py", line 13, in setUp
+    from serve.test_cow_vision_http import CowVisionHTTPTests
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_http.py", line 12, in <module>
+    import serve.test_cow_vision_text_flow as fixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_text_flow.py", line 22, in <module>
+    from serve.test_cow_vision_preparer import EncoderFixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_preparer.py", line 25, in <module>
+    from test_vision_coordinator import ServingMixedCPUBackend
+ModuleNotFoundError: No module named 'test_vision_coordinator'
+
+======================================================================
+ERROR: test_malformed_or_other_operation_error_frames_remain_indeterminate (test_cow_image_lost_ack.ImageLostAckTests.test_malformed_or_other_operation_error_frames_remain_indeterminate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_image_lost_ack.py", line 13, in setUp
+    from serve.test_cow_vision_http import CowVisionHTTPTests
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_http.py", line 12, in <module>
+    import serve.test_cow_vision_text_flow as fixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_text_flow.py", line 22, in <module>
+    from serve.test_cow_vision_preparer import EncoderFixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_preparer.py", line 25, in <module>
+    from test_vision_coordinator import ServingMixedCPUBackend
+ModuleNotFoundError: No module named 'test_vision_coordinator'
+
+======================================================================
+ERROR: test_unknown_legacy_cli_exit_two_cannot_prove_rejection (test_cow_image_lost_ack.ImageLostAckTests.test_unknown_legacy_cli_exit_two_cannot_prove_rejection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_image_lost_ack.py", line 13, in setUp
+    from serve.test_cow_vision_http import CowVisionHTTPTests
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_http.py", line 12, in <module>
+    import serve.test_cow_vision_text_flow as fixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_text_flow.py", line 22, in <module>
+    from serve.test_cow_vision_preparer import EncoderFixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_preparer.py", line 25, in <module>
+    from test_vision_coordinator import ServingMixedCPUBackend
+ModuleNotFoundError: No module named 'test_vision_coordinator'
+
+======================================================================
+ERROR: test_wrong_legal_image_answer_stays_a_quality_failure_even_when_recovery_can_be_checked (test_cow_image_lost_ack.ImageLostAckTests.test_wrong_legal_image_answer_stays_a_quality_failure_even_when_recovery_can_be_checked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_cow_image_lost_ack.py", line 13, in setUp
+    from serve.test_cow_vision_http import CowVisionHTTPTests
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_http.py", line 12, in <module>
+    import serve.test_cow_vision_text_flow as fixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_text_flow.py", line 22, in <module>
+    from serve.test_cow_vision_preparer import EncoderFixture
+  File "/home/dflanag3/src/context-cow-binding-cache-20261019/serve/test_cow_vision_preparer.py", line 25, in <module>
+    from test_vision_coordinator import ServingMixedCPUBackend
+ModuleNotFoundError: No module named 'test_vision_coordinator'
+
+----------------------------------------------------------------------
+Ran 42 tests in 20.235s
+
+FAILED (errors=5)

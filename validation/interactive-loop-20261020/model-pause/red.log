@@ -1,0 +1,118 @@
+test_control_uses_original_id_short_separate_transport_and_no_journal_mutation (tests.test_model_pause.PauseClientTests.test_control_uses_original_id_short_separate_transport_and_no_journal_mutation) ... ERROR
+test_mismatched_or_impossible_pause_ack_is_rejected (tests.test_model_pause.PauseClientTests.test_mismatched_or_impossible_pause_ack_is_rejected) ... 
+  test_mismatched_or_impossible_pause_ack_is_rejected (tests.test_model_pause.PauseClientTests.test_mismatched_or_impossible_pause_ack_is_rejected) (value={'operation_id': 'wrong', 'active': True, 'pause_requested': True}) ... ERROR
+  test_mismatched_or_impossible_pause_ack_is_rejected (tests.test_model_pause.PauseClientTests.test_mismatched_or_impossible_pause_ack_is_rejected) (value={'operation_id': 'original-op', 'active': False, 'pause_requested': True}) ... ERROR
+  test_mismatched_or_impossible_pause_ack_is_rejected (tests.test_model_pause.PauseClientTests.test_mismatched_or_impossible_pause_ack_is_rejected) (value={'operation_id': 'original-op', 'active': 1, 'pause_requested': True}) ... ERROR
+test_generation_exception_is_preserved_and_watcher_is_joined (tests.test_model_pause.PauseWatcherTests.test_generation_exception_is_preserved_and_watcher_is_joined) ... ERROR
+test_lost_control_reply_retries_only_same_id (tests.test_model_pause.PauseWatcherTests.test_lost_control_reply_retries_only_same_id) ... ERROR
+test_no_control_request_until_host_signal_and_ack_does_not_finish_generation (tests.test_model_pause.PauseWatcherTests.test_no_control_request_until_host_signal_and_ack_does_not_finish_generation) ... ERROR
+test_observer_failure_is_visible_without_claiming_pause_or_durability (tests.test_model_pause.PauseWatcherTests.test_observer_failure_is_visible_without_claiming_pause_or_durability) ... ERROR
+test_old_server_rejection_falls_back_once_without_aborting_model (tests.test_model_pause.PauseWatcherTests.test_old_server_rejection_falls_back_once_without_aborting_model) ... ERROR
+test_pending_registration_can_be_polled_without_resubmitting_generation (tests.test_model_pause.PauseWatcherTests.test_pending_registration_can_be_polled_without_resubmitting_generation) ... ERROR
+
+======================================================================
+ERROR: test_control_uses_original_id_short_separate_transport_and_no_journal_mutation (tests.test_model_pause.PauseClientTests.test_control_uses_original_id_short_separate_transport_and_no_journal_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 16, in test_control_uses_original_id_short_separate_transport_and_no_journal_mutation
+    with patch.object(HTTPTransport,'request',request):result=self.client.pause_generation('original-op')
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'pause_generation'. Did you mean: 'cancel_generation'?
+
+======================================================================
+ERROR: test_mismatched_or_impossible_pause_ack_is_rejected (tests.test_model_pause.PauseClientTests.test_mismatched_or_impossible_pause_ack_is_rejected) (value={'operation_id': 'wrong', 'active': True, 'pause_requested': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 25, in test_mismatched_or_impossible_pause_ack_is_rejected
+    with self.assertRaises(CowClientError):self.client.pause_generation('original-op')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'pause_generation'. Did you mean: 'cancel_generation'?
+
+======================================================================
+ERROR: test_mismatched_or_impossible_pause_ack_is_rejected (tests.test_model_pause.PauseClientTests.test_mismatched_or_impossible_pause_ack_is_rejected) (value={'operation_id': 'original-op', 'active': False, 'pause_requested': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 25, in test_mismatched_or_impossible_pause_ack_is_rejected
+    with self.assertRaises(CowClientError):self.client.pause_generation('original-op')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'pause_generation'. Did you mean: 'cancel_generation'?
+
+======================================================================
+ERROR: test_mismatched_or_impossible_pause_ack_is_rejected (tests.test_model_pause.PauseClientTests.test_mismatched_or_impossible_pause_ack_is_rejected) (value={'operation_id': 'original-op', 'active': 1, 'pause_requested': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 25, in test_mismatched_or_impossible_pause_ack_is_rejected
+    with self.assertRaises(CowClientError):self.client.pause_generation('original-op')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'pause_generation'. Did you mean: 'cancel_generation'?
+
+======================================================================
+ERROR: test_generation_exception_is_preserved_and_watcher_is_joined (tests.test_model_pause.PauseWatcherTests.test_generation_exception_is_preserved_and_watcher_is_joined)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 62, in test_generation_exception_is_preserved_and_watcher_is_joined
+    watcher=self.watcher(lambda:False,lambda _:None,[])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 29, in watcher
+    from branchwrite.model_pause import PauseWatcher
+ModuleNotFoundError: No module named 'branchwrite.model_pause'
+
+======================================================================
+ERROR: test_lost_control_reply_retries_only_same_id (tests.test_model_pause.PauseWatcherTests.test_lost_control_reply_retries_only_same_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 54, in test_lost_control_reply_retries_only_same_id
+    with self.watcher(lambda:True,pause,[]):self.assertTrue(done.wait(1))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 29, in watcher
+    from branchwrite.model_pause import PauseWatcher
+ModuleNotFoundError: No module named 'branchwrite.model_pause'
+
+======================================================================
+ERROR: test_no_control_request_until_host_signal_and_ack_does_not_finish_generation (tests.test_model_pause.PauseWatcherTests.test_no_control_request_until_host_signal_and_ack_does_not_finish_generation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 34, in test_no_control_request_until_host_signal_and_ack_does_not_finish_generation
+    with self.watcher(signal.is_set,pause,notices) as watcher:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 29, in watcher
+    from branchwrite.model_pause import PauseWatcher
+ModuleNotFoundError: No module named 'branchwrite.model_pause'
+
+======================================================================
+ERROR: test_observer_failure_is_visible_without_claiming_pause_or_durability (tests.test_model_pause.PauseWatcherTests.test_observer_failure_is_visible_without_claiming_pause_or_durability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 69, in test_observer_failure_is_visible_without_claiming_pause_or_durability
+    with self.watcher(control,lambda _:self.fail('must not send'),notices) as watcher:self.assertTrue(called.wait(1))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 29, in watcher
+    from branchwrite.model_pause import PauseWatcher
+ModuleNotFoundError: No module named 'branchwrite.model_pause'
+
+======================================================================
+ERROR: test_old_server_rejection_falls_back_once_without_aborting_model (tests.test_model_pause.PauseWatcherTests.test_old_server_rejection_falls_back_once_without_aborting_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 59, in test_old_server_rejection_falls_back_once_without_aborting_model
+    with self.watcher(lambda:True,pause,notices) as watcher:self.assertTrue(called.wait(1))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 29, in watcher
+    from branchwrite.model_pause import PauseWatcher
+ModuleNotFoundError: No module named 'branchwrite.model_pause'
+
+======================================================================
+ERROR: test_pending_registration_can_be_polled_without_resubmitting_generation (tests.test_model_pause.PauseWatcherTests.test_pending_registration_can_be_polled_without_resubmitting_generation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 46, in test_pending_registration_can_be_polled_without_resubmitting_generation
+    with self.watcher(lambda:True,pause,[]) as watcher:self.assertTrue(done.wait(1))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_model_pause.py", line 29, in watcher
+    from branchwrite.model_pause import PauseWatcher
+ModuleNotFoundError: No module named 'branchwrite.model_pause'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+FAILED (errors=10)

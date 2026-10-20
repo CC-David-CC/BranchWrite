@@ -1,0 +1,29 @@
+======================================================================
+ERROR: test_coding_launch_grants_remotes_only_in_work_mode_and_pins_them (tests.test_remote_config.RemoteConfigTests.test_coding_launch_grants_remotes_only_in_work_mode_and_pins_them)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_config.py", line 24, in test_coding_launch_grants_remotes_only_in_work_mode_and_pins_them
+    work=build_launch(project,'Prepare the test web machine.',connection,branch='work',project_files=True,remotes=self.spec)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: build_launch() got an unexpected keyword argument 'remotes'
+
+======================================================================
+ERROR: test_operator_file_is_private_and_wrong_client_cannot_load_capability (tests.test_remote_config.RemoteConfigTests.test_operator_file_is_private_and_wrong_client_cannot_load_capability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_config.py", line 15, in test_operator_file_is_private_and_wrong_client_cannot_load_capability
+    from branchwrite.remote_config import load_file,load_targets
+ModuleNotFoundError: No module named 'branchwrite.remote_config'
+
+======================================================================
+ERROR: test_validation_is_data_only_and_rejects_unknown_fields_and_bad_types (tests.test_remote_config.RemoteConfigTests.test_validation_is_data_only_and_rejects_unknown_fields_and_bad_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_config.py", line 9, in test_validation_is_data_only_and_rejects_unknown_fields_and_bad_types
+    from branchwrite.remote_config import validate_targets
+ModuleNotFoundError: No module named 'branchwrite.remote_config'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.067s
+
+FAILED (errors=3)

@@ -1,0 +1,19 @@
+Using Python 3.12.15 environment at: spatial-artifacts/bw-cli-workflows-dev64-20261020/venv
+Resolved 8 packages in 266ms
+Downloading pypdfium2 (3.6MiB)
+Downloading reportlab (1.9MiB)
+Downloading pillow (6.8MiB)
+ Downloaded reportlab
+ Downloaded pypdfium2
+ Downloaded pillow
+Prepared 8 packages in 247ms
+Installed 8 packages in 16ms
+Bytecode compiled 651 files in 174ms
+ + branchwrite==0.1.0.dev64 (from file:///home/dflanag3/spatial-artifacts/bw-cli-workflows-dev64-20261020/wheels/branchwrite-0.1.0.dev64-py3-none-any.whl)
+ + charset-normalizer==3.5.2
+ + pillow==13.0.0
+ + prompt-toolkit==3.0.52
+ + pypdf==6.21.1
+ + pypdfium2==5.14.0
+ + reportlab==5.0.1
+ + wcwidth==0.9.3

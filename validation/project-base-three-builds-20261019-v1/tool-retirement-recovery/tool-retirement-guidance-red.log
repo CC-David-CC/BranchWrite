@@ -1,0 +1,15 @@
+test_death_before_durable_return_stays_unknown_without_repeating_effect (test_tool_settlement_cli.ToolSettlementCLITests.test_death_before_durable_return_stays_unknown_without_repeating_effect) ... FAIL
+
+======================================================================
+FAIL: test_death_before_durable_return_stays_unknown_without_repeating_effect (test_tool_settlement_cli.ToolSettlementCLITests.test_death_before_durable_return_stays_unknown_without_repeating_effect)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_settlement_cli.py", line 39, in test_death_before_durable_return_stays_unknown_without_repeating_effect
+    resumed=self.command();self.assertEqual(resumed.returncode,4,resumed.stderr);self.assertIn('unresolved original operation',resumed.stderr);self.assertIn('branchwrite status',resumed.stderr);self.assertIn('durable retirement proof',resumed.stderr);self.assertNotIn('branchwrite reconcile',resumed.stderr)
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'branchwrite status' not found in "[BranchWrite] Running a tool.\nbranchwrite: unresolved original operation 'bwtool-aff9ae6c8eb37f656a43bb72ac29373067f89e7d18f4ce93'; reconcile before continuing\n"
+
+----------------------------------------------------------------------
+Ran 1 test in 0.311s
+
+FAILED (failures=1)

@@ -1,0 +1,16 @@
+# Worked example: bounded command evidence across fresh sandboxes
+A host runs each terminal command in a new PID namespace. A compilation command
+starts child PID 9 in namespace A and reaches its timeout. Its actual receipt:
+disposition=timeout, exit_code=143, worker_exited=true, namespace_members_after=[].
+A later terminal call uses namespace B. There, /proc/9 is absent.
+Correct reasoning: namespace B's /proc is a different process table. Its integer
+PID observations cannot establish whether namespace A's child survived.
+Correct report: "The command timed out; it did not succeed. The host receipt
+confirms that the original sandbox worker exited and its namespace has no
+remaining members. A later sandbox's PID scan cannot prove original cleanup."
+No extra kill command is needed. Never kill host processes by an integer PID
+copied from a sandbox, by a process name, or through broad cleanup.
+A nested program launcher may itself report permission denied and return126;
+that differs from a host tool spawn_error (no child exit status). Preserve
+both the outer receipt and the nested diagnostic rather than conflating them.
+These example receipts are fictional teaching data, never current evidence.

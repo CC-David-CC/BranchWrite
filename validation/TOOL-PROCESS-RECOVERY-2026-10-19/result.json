@@ -1,0 +1,8 @@
+{
+  "status": "PASS_WITH_EXPLICIT_UNRESOLVED_GAP",
+  "tests": 8,
+  "real_sigkill_cases": 3,
+  "installed_version": "0.1.0.dev18",
+  "scope": "real Linux subprocess/filesystem and canonical workflow recovery; no GPU",
+  "remaining_gap": "effect happened but no durable return: preserved file and pending original operation; no automatic reconciliation"
+}

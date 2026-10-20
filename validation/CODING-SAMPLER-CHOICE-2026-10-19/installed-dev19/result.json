@@ -1,0 +1,9 @@
+{
+  "source": "51474ffed20bf7b19b30dd0e943ef4c2e7f2aa89",
+  "wheel_sha256": "538f9d1e847a9abb01cd7f4e1b6555417b7566d480cb6012976c596ce37447c8",
+  "installed_controls_exit": 0,
+  "tests": 35,
+  "source_import_root_absent": true,
+  "gpu_quality": "NOT_RUN",
+  "scope": "isolated installed dev19 candidate; not default fleet promotion"
+}

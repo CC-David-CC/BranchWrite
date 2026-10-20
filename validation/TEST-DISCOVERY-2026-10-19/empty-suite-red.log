@@ -1,0 +1,15 @@
+test_empty_suite_is_a_clear_nonzero_result (test_test_discovery_layouts.DiscoveryLayoutTests.test_empty_suite_is_a_clear_nonzero_result) ... FAIL
+
+======================================================================
+FAIL: test_empty_suite_is_a_clear_nonzero_result (test_test_discovery_layouts.DiscoveryLayoutTests.test_empty_suite_is_a_clear_nonzero_result)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_test_discovery_layouts.py", line 37, in test_empty_suite_is_a_clear_nonzero_result
+    r=e.run_tests('empty-suite',Grant((),True));self.assertEqual(r.exit_code,1)
+                                                ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: 5 != 1
+
+----------------------------------------------------------------------
+Ran 1 test in 0.045s
+
+FAILED (failures=1)

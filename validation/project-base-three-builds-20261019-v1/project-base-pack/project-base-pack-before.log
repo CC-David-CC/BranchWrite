@@ -1,0 +1,96 @@
+test_foreign_parent_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_foreign_parent_rejected_before_context_mutation) ... ERROR
+test_initial_pack_version_binds_exact_identity (test_project_base_pack.ProjectBasePackTests.test_initial_pack_version_binds_exact_identity) ... ERROR
+test_observation_refresh_after_rebuild_uses_closed_root_boundary (test_project_base_pack.ProjectBasePackTests.test_observation_refresh_after_rebuild_uses_closed_root_boundary) ... ERROR
+test_rebuilt_root_keeps_lineage_without_moving_old_worker (test_project_base_pack.ProjectBasePackTests.test_rebuilt_root_keeps_lineage_without_moving_old_worker) ... ERROR
+test_same_operation_is_idempotent_without_reprefill (test_project_base_pack.ProjectBasePackTests.test_same_operation_is_idempotent_without_reprefill) ... ERROR
+test_stale_source_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_stale_source_rejected_before_context_mutation) ... ERROR
+test_wrong_pack_id_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_wrong_pack_id_rejected_before_context_mutation) ... ERROR
+
+======================================================================
+ERROR: test_foreign_parent_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_foreign_parent_rejected_before_context_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 58, in test_foreign_parent_rejected_before_context_mutation
+    old=self.prepare()
+        ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 24, in prepare
+    args.update(kw);return self.base.prepare_pack(**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GoldenPath' object has no attribute 'prepare_pack'
+
+======================================================================
+ERROR: test_initial_pack_version_binds_exact_identity (test_project_base_pack.ProjectBasePackTests.test_initial_pack_version_binds_exact_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 29, in test_initial_pack_version_binds_exact_identity
+    version=self.prepare()
+            ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 24, in prepare
+    args.update(kw);return self.base.prepare_pack(**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GoldenPath' object has no attribute 'prepare_pack'
+
+======================================================================
+ERROR: test_observation_refresh_after_rebuild_uses_closed_root_boundary (test_project_base_pack.ProjectBasePackTests.test_observation_refresh_after_rebuild_uses_closed_root_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 42, in test_observation_refresh_after_rebuild_uses_closed_root_boundary
+    old=self.prepare();new=self.prepare(self.changed_pack(),branch='base-v1',operation_id='base-v1-op',source=old)
+        ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 24, in prepare
+    args.update(kw);return self.base.prepare_pack(**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GoldenPath' object has no attribute 'prepare_pack'
+
+======================================================================
+ERROR: test_rebuilt_root_keeps_lineage_without_moving_old_worker (test_project_base_pack.ProjectBasePackTests.test_rebuilt_root_keeps_lineage_without_moving_old_worker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 34, in test_rebuilt_root_keeps_lineage_without_moving_old_worker
+    old=self.prepare();worker=self.base.fork_worker(old,'old-worker','old-worker-fork');before=self.client.head(old.branch)
+        ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 24, in prepare
+    args.update(kw);return self.base.prepare_pack(**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GoldenPath' object has no attribute 'prepare_pack'
+
+======================================================================
+ERROR: test_same_operation_is_idempotent_without_reprefill (test_project_base_pack.ProjectBasePackTests.test_same_operation_is_idempotent_without_reprefill)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 48, in test_same_operation_is_idempotent_without_reprefill
+    first=self.prepare();trace=list(self.case.trace);second=self.prepare()
+          ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 24, in prepare
+    args.update(kw);return self.base.prepare_pack(**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GoldenPath' object has no attribute 'prepare_pack'
+
+======================================================================
+ERROR: test_stale_source_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_stale_source_rejected_before_context_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 52, in test_stale_source_rejected_before_context_mutation
+    with self.assertRaises(StalePackError):self.prepare()
+                                           ^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 24, in prepare
+    args.update(kw);return self.base.prepare_pack(**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GoldenPath' object has no attribute 'prepare_pack'
+
+======================================================================
+ERROR: test_wrong_pack_id_rejected_before_context_mutation (test_project_base_pack.ProjectBasePackTests.test_wrong_pack_id_rejected_before_context_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 55, in test_wrong_pack_id_rejected_before_context_mutation
+    with self.assertRaises(PackError):self.prepare(expected_pack_id='0'*64)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_project_base_pack.py", line 24, in prepare
+    args.update(kw);return self.base.prepare_pack(**args)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GoldenPath' object has no attribute 'prepare_pack'
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.686s
+
+FAILED (errors=7)

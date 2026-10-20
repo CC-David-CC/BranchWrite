@@ -1,0 +1,15 @@
+FLOW revise
+REPEAT revisions max=3 until=verified exhausted=abandon
+EXPAND correction from=current-context task=revision-task profile=explore -> proposed
+PLAN freeze from=proposed against=current-world -> frozen
+ACT execute plan=frozen -> executed
+VERIFY checked input=executed contract=protected-tests -> check-result
+END
+ON stale-plan signal=STALE_PLAN
+OBSERVE refresh target=current-world -> fresh-evidence
+TRANSFORM explain input=fresh-evidence contract=replan-note -> replan-input
+END
+ON declined signal=DENIED
+ABANDON reject target=current-attempt reason=denied
+END
+END

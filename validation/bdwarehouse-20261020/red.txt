@@ -1,0 +1,100 @@
+test_catalogue_queries_and_positioned_component (test_cad_warehouse.WarehouseEnvironmentTests.test_catalogue_queries_and_positioned_component) ... FAIL
+test_initial_environment_has_pinned_companion (test_cad_warehouse.WarehouseEnvironmentTests.test_initial_environment_has_pinned_companion) ... ERROR
+test_matching_clearance_hole_changes_actual_solid (test_cad_warehouse.WarehouseEnvironmentTests.test_matching_clearance_hole_changes_actual_solid) ... FAIL
+test_user_m4_socket_head_example_exports_reopenable_solid (test_cad_warehouse.WarehouseEnvironmentTests.test_user_m4_socket_head_example_exports_reopenable_solid) ... FAIL
+
+======================================================================
+ERROR: test_initial_environment_has_pinned_companion (test_cad_warehouse.WarehouseEnvironmentTests.test_initial_environment_has_pinned_companion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py", line 397, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_warehouse.py", line 21, in test_initial_environment_has_pinned_companion
+    self.assertEqual(importlib.metadata.version("bd-warehouse"),"0.4.0")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py", line 889, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py", line 862, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py", line 399, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for bd-warehouse
+
+======================================================================
+FAIL: test_catalogue_queries_and_positioned_component (test_cad_warehouse.WarehouseEnvironmentTests.test_catalogue_queries_and_positioned_component)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_warehouse.py", line 35, in test_catalogue_queries_and_positioned_component
+    result,shape=self.build("""import json
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_warehouse.py", line 12, in build
+    self.assertEqual(result["disposition"],"built",result["stderr"].decode("utf8","replace"))
+AssertionError: 'exited' != 'built'
+- exited
++ built
+ : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/model.py", line 3, in <module>
+    from bd_warehouse.fastener import SocketHeadCapScrew
+ModuleNotFoundError: No module named 'bd_warehouse'
+
+
+======================================================================
+FAIL: test_matching_clearance_hole_changes_actual_solid (test_cad_warehouse.WarehouseEnvironmentTests.test_matching_clearance_hole_changes_actual_solid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_warehouse.py", line 50, in test_matching_clearance_hole_changes_actual_solid
+    _,shape=self.build("""from build123d import *
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_warehouse.py", line 12, in build
+    self.assertEqual(result["disposition"],"built",result["stderr"].decode("utf8","replace"))
+AssertionError: 'exited' != 'built'
+- exited
++ built
+ : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/model.py", line 2, in <module>
+    from bd_warehouse.fastener import SocketHeadCapScrew,ClearanceHole
+ModuleNotFoundError: No module named 'bd_warehouse'
+
+
+======================================================================
+FAIL: test_user_m4_socket_head_example_exports_reopenable_solid (test_cad_warehouse.WarehouseEnvironmentTests.test_user_m4_socket_head_example_exports_reopenable_solid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_warehouse.py", line 24, in test_user_m4_socket_head_example_exports_reopenable_solid
+    _,shape=self.build("""from build123d import export_step
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_warehouse.py", line 12, in build
+    self.assertEqual(result["disposition"],"built",result["stderr"].decode("utf8","replace"))
+AssertionError: 'exited' != 'built'
+- exited
++ built
+ : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/model.py", line 2, in <module>
+    from bd_warehouse.fastener import SocketHeadCapScrew
+ModuleNotFoundError: No module named 'bd_warehouse'
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.241s
+
+FAILED (failures=3, errors=1)

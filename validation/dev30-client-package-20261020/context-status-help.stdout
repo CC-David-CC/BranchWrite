@@ -1,0 +1,8 @@
+usage: branchwrite context-status [-h] [--json] state
+
+positional arguments:
+  state
+
+options:
+  -h, --help  show this help message and exit
+  --json

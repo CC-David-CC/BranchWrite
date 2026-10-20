@@ -1,0 +1,17 @@
+{
+  "status": "BASELINE_TESTS_PASS_PARENT_REVIEW_FAIL",
+  "model_attempts": 1,
+  "resource_attempts": 2,
+  "parent_code_changes": 0,
+  "visible_tests": 11,
+  "initial_independent_checks": 22,
+  "whole_cli_seconds": 1529.1877465440193,
+  "candidate_sha256": "ad8bcca637c0c5bd23e9c47374f56159f21d5e4d6087240dc1bc4ca2cc1afd65",
+  "failure_class": "recursive scan before closed-schema rejection",
+  "extended_review": {
+    "input_variants": 2200,
+    "errors": 233,
+    "error": "RecursionError outside parse guard instead of ValueError"
+  },
+  "scope": "A24 full-source run completed; implementation rejected by extended contract review. A12 capacity failure remains separate."
+}

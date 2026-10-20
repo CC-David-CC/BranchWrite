@@ -1,0 +1,5 @@
+Using Python 3.12.15 environment at: spatial-artifacts/bw-build123d-20261020/cadvenv
+Resolved 59 packages in 308ms
+Prepared 1 package in 59ms
+Installed 1 package in 6ms
+ + bd-warehouse==0.4.0

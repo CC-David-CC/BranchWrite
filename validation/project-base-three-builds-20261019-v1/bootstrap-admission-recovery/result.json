@@ -1,0 +1,26 @@
+{
+  "status": "BOUNDED_CPU_PROCESS_EXIT_HTTP_PASS",
+  "tests": 32,
+  "failures": 0,
+  "skips": 0,
+  "fault": "Actual CLI os._exit(91) after acknowledged COW root, before Interpreter.start/workflow frames",
+  "scope": "Actual CLI process exit and authenticated CPU COW HTTP; not GPU/process-kill or power-loss qualification",
+  "assertions": [
+    "No workflow frames before crash",
+    "Original root operation is complete",
+    "Changed reference sources do not cause re-render on resume",
+    "Root journal bytes unchanged and one root operation only",
+    "Pending/unrelated intent not resent or rebuilt"
+  ],
+  "baseline": "First test setup compared empty tuple to list; corrected emptiness assertion. Distinguishing red run then failed on stale pack as intended.",
+  "remaining": [
+    "Explicit reconciliation of pending pre-workflow bootstrap intent",
+    "Broader crash points and real-GPU campaign"
+  ],
+  "logs_sha256": {
+    "bootstrap-crash-final.log": "4803841d487ade353380d07069e97aaab89309680ad70a714eb2f43b0f1259cd",
+    "bootstrap-crash-red.log": "df57ae6f587436a93e4d13fc7eebec626a6ed2ba5e51ec364cb01416844fefa2",
+    "bootstrap-crash-before.log": "71ca0c9b045f94c67eff5cc587b74972c4cfee6e93e5f587616bac8dcb910061",
+    "bootstrap-crash-after.log": "80d62d661754b89bd46291139054f295ff77d21b158923c0aac60158dcf1d1a2"
+  }
+}

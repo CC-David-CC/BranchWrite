@@ -1,0 +1,8 @@
+{
+  "guest_build_sha256": "a432129ef6d19441454b62b0e88a36c7488e9ad148a204b03ce80164d0c2753c",
+  "qemu_pid": 2419152,
+  "host_key_fingerprint": "256 SHA256:9Ftdi+fmgyTiksJbw9GFPpWG3CjsnV/RXPYDchJhOFM [127.0.0.1]:22220 (ED25519)",
+  "known_hosts_file": "/home/dflanag3/.local/share/bw-vm/admin01/known_hosts-a432129ef6d1",
+  "verification": "First-use discovery on private loopback forward after exact QEMU listener ownership check; strict checking for subsequent connections. Not console verified.",
+  "time": 1792492602.0396838
+}

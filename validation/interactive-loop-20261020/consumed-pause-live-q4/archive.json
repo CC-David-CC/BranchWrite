@@ -1,0 +1,8 @@
+{
+  "archive": "/home/dflanag3/spatial-artifacts/bw-model-pause-client-20261020.tar.gz",
+  "bytes": 220270,
+  "sha256": "b9c049b98d5784621093c344eb1b42a566de709c713e43060b1408c3adc61c03",
+  "excluded": [
+    "operator-test-key.txt"
+  ]
+}

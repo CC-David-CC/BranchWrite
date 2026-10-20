@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "examples": [
+    {
+      "prompt": "code.txt",
+      "sha256": "c51b9a98277b3713c694c3553831b3da9dc5b78ac246cecd16a9ee54a426ea62",
+      "status": "EXACT_PROMPT_PASSED_INSTALLED_DEV62",
+      "scope": "real Q4 CLI, independent desktop/phone Chromium click/color/overflow/resource checks, screenshot review, preserved PDF/text; 631.823s",
+      "evidence": "../../validation/cli-code-q4-20261020/README.md"
+    },
+    {
+      "prompt": "writing.txt",
+      "sha256": "21b8a2e800d330b4ca642b900eed60a5ebe51e9cf09cfabae2749b3caa3c7536",
+      "status": "EXACT_PROMPT_PASSED_INSTALLED_DEV61",
+      "scope": "real Q4 CLI; 165 words, requested title/example, actual read/check and preserved PDF; 274.522s; content reviewed",
+      "evidence": "../../validation/cli-writing-q4-20261020/README.md"
+    },
+    {
+      "prompt": "pdf.txt",
+      "sha256": "a849ff6a55f9de2f076da52ef1031a664f7d4b542ef465f2a91dc8303dae92e8",
+      "status": "EXACT_PROMPT_PASSED_INSTALLED_DEV59",
+      "scope": "real Q4 CLI authorship; actual two-page images in settled native requests; 493.635s; visual and canonical audit passed; source revision 726bb365",
+      "evidence": "../../validation/pdf-live-q4-20261020/pdf-ledger-audit.json"
+    },
+    {
+      "prompt": "build123d.txt",
+      "sha256": "e5b1e0c674443ea5de958b904612d5a9f5d340b5ab99d3e367d62a6e62f1163a",
+      "status": "EXACT_PROMPT_PASSED_INSTALLED_DEV63_INTERACTIVE",
+      "scope": "actual Q4; two builds with model self-repair, actual independent geometry and views, saved export paths, 241.368386s",
+      "evidence": "../../validation/cli-cad-session-q4-20261020/README.md"
+    },
+    {
+      "prompt": "blender.txt",
+      "sha256": "7c96b380c0eb2cc508878a83629ad51f9b5a4ffe77bfdfb911a551e69a05ab74",
+      "status": "EXACT_PROMPT_PASSED_INSTALLED_DEV63_INTERACTIVE_WITH_RECOVERY",
+      "scope": "real Q4; CAD session reopened with Blender, preserved prior files/history; one build, actual views, independently45-degree arm and24-frame video; original request recovered after operator cache mutation",
+      "evidence": "../../validation/cli-blender-session-q4-20261020/README.md"
+    },
+    {
+      "prompt": "admin-deploy.txt",
+      "sha256": "49cf271d6a3017cfd929b3c1f7e222ade7b393f9204cb7d01815a7981aa65da0",
+      "status": "EXACT_PROMPT_PASSED_INSTALLED_DEV64_INTERACTIVE",
+      "scope": "real Q4 and pinned owned SSH VM; exact local/upload/published/HTTP bytes, preserved original pages, model repaired missing-awk check;490.450s; guest-local reachability only",
+      "evidence": "../../validation/cli-admin-q4-dev64-20261020/README.md"
+    },
+    {
+      "prompt": "followup.txt",
+      "sha256": "f22003822c8704bba1ff53119129f4e8efbfcb1968c2cff8bbd2e7a9ba62f897",
+      "status": "EXACT_PROMPT_PASSED_INSTALLED_DEV64_WITH_RECOVERY",
+      "scope": "real Q4 installed dev64 follow-up; independent desktop/phone Chromium and screenshot review; explicit expired-checkpoint reconstruction",
+      "evidence": "../../validation/cli-followup-q4-dev64-20261020/acceptance.json"
+    }
+  ],
+  "limits": "A single successful prompt is bounded evidence, not guaranteed model behavior. No known-working label for unexecuted examples."
+}

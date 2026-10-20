@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "A_branch_and_history_unchanged": true,
+  "A_head": {
+    "name": "dev24-reports-A",
+    "revision": 8,
+    "tip": "6aeba26b65b1d9a7b130978616e852c45f5cb25602258d6d219b67ab9f009d94",
+    "root": "358273bd0cb1cfa2762a872d40db2cebdd73a727682b40f05118f860a291b56a"
+  },
+  "B_head": {
+    "name": "dev24-reports-B",
+    "revision": 13,
+    "tip": "2d12fd20c07350edb6801b0d8dc28c9494834de94aa8d9c4aaa280369a2c118c",
+    "root": "a65837c92fd6d25ccdd52184f9f549cbaf0cbb29027bdf196e94fdbdfd32260d"
+  },
+  "workspace_regular_files_single_link": true
+}

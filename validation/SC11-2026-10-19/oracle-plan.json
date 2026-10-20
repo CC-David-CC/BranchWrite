@@ -1,0 +1,11 @@
+{
+  "scope": "Installed dev10 standalone coding plus status/review/export; not numerical qualification",
+  "wheel_sha256": "24ac6440cbb8464f62d00bfd8b54bac954fbaf17426e4af5a2f261d188a63368",
+  "independent_audit_sha256": "9150d66e8063ceb93b59501dedc39966447ec615b818360362bc25c4d7d80766",
+  "generated_tests_sha256": "40cedf6097fd80c9205f354d53c390e6cf8839e553fd405d8709393004eba0d9",
+  "prefix_snapshot": "6fd3acbb21f430a0477e9af66682d2ee95cabde9cf754a4f400297b5965cc360",
+  "prefix_consumed": 16442,
+  "model": "pinned Q8 FP16 KV",
+  "thinking": 4096,
+  "sampler": "greedy"
+}

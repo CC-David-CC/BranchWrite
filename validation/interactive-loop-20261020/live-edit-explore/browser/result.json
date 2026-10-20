@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "label": "work",
+      "color": "blue",
+      "viewport": [
+        1280,
+        800
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "652b70cee1c90d8e504ab6f6b49ee64ca2f0872be9a0581da5c2cd437b7e4478",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "bird button -> feathers fact"
+          ],
+          [
+            "heading-color",
+            "rgb(0, 0, 255)"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532975]",
+        "pid_ns": "pid:[4026532973]",
+        "mount_ns": "mnt:[4026532970]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 977973,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004522888921201229
+      },
+      "runtime_errors": [],
+      "source_sha256": "d6b40efe068916c6c170767b4904e1e7ccda25e7ef147c6b21a74e846d7b3c44",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-fast-integration-20261020/browser/work-1280.png"
+    },
+    {
+      "label": "work",
+      "color": "blue",
+      "viewport": [
+        375,
+        812
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "652b70cee1c90d8e504ab6f6b49ee64ca2f0872be9a0581da5c2cd437b7e4478",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "bird button -> feathers fact"
+          ],
+          [
+            "heading-color",
+            "rgb(0, 0, 255)"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026533170]",
+        "pid_ns": "pid:[4026533167]",
+        "mount_ns": "mnt:[4026532971]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 978136,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004185916855931282
+      },
+      "runtime_errors": [],
+      "source_sha256": "d6b40efe068916c6c170767b4904e1e7ccda25e7ef147c6b21a74e846d7b3c44",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-fast-integration-20261020/browser/work-375.png"
+    },
+    {
+      "label": "edit",
+      "color": "purple",
+      "viewport": [
+        1280,
+        800
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "38be8b5e866910fd4bd83c1ceec3bb09130b95743709dce15443ba56209f0241",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "bird button -> feathers fact"
+          ],
+          [
+            "heading-color",
+            "rgb(128, 0, 128)"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026532978]",
+        "pid_ns": "pid:[4026532974]",
+        "mount_ns": "mnt:[4026532971]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 978300,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.004153084941208363
+      },
+      "runtime_errors": [],
+      "source_sha256": "83f0ab132a448c5d65e35fc838decaa73b33527926b8f64bdb5977fe342664a8",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-fast-integration-20261020/browser/edit-1280.png"
+    },
+    {
+      "label": "edit",
+      "color": "purple",
+      "viewport": [
+        375,
+        812
+      ],
+      "inspection": {
+        "schema": 1,
+        "target": "custom",
+        "inspector_sha256": "38be8b5e866910fd4bd83c1ceec3bb09130b95743709dce15443ba56209f0241",
+        "status": "PASS",
+        "error": null,
+        "actions": [
+          [
+            "click",
+            "bird button -> feathers fact"
+          ],
+          [
+            "heading-color",
+            "rgb(128, 0, 128)"
+          ]
+        ]
+      },
+      "isolation": {
+        "schema": 1,
+        "kind": "bubblewrap-browser-v1",
+        "chromium_sandbox": true,
+        "net_ns": "net:[4026533167]",
+        "pid_ns": "pid:[4026532976]",
+        "mount_ns": "mnt:[4026532971]",
+        "uid": 1000,
+        "worker_exited": true,
+        "launcher_pid": 978460,
+        "namespace_members_after": [],
+        "retirement_wait_seconds": 0.0042419040109962225
+      },
+      "runtime_errors": [],
+      "source_sha256": "83f0ab132a448c5d65e35fc838decaa73b33527926b8f64bdb5977fe342664a8",
+      "screenshot": "/home/dflanag3/spatial-artifacts/bw-fast-integration-20261020/browser/edit-375.png"
+    }
+  ]
+}

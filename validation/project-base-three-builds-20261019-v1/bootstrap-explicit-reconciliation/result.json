@@ -1,0 +1,31 @@
+{
+  "status": "BOUNDED_CPU_CLI_HTTP_PROCESS_EXIT_PASS",
+  "combined_tests": 34,
+  "failures": 0,
+  "skips": 0,
+  "new_client_methods": 2,
+  "server_source": "2367f344",
+  "scope": "Actual CLI subprocess exits92 after server root completion but before client acknowledgment; explicit original-ID reconcile then resume",
+  "assertions": [
+    "Unowned bootstrap ID refused",
+    "Original request body preserved",
+    "Workflow ledger unchanged by reconciliation",
+    "Changed source pack does not replace acknowledged root",
+    "Uncommitted original request returns exit4 and stays pending without model work"
+  ],
+  "failures_retained": [
+    "Original CLI could not reconcile before program frame existed",
+    "Helper extraction briefly omitted exception import; existing pending-intent test caught it"
+  ],
+  "remaining": [
+    "New installed package and real Q8 combined run",
+    "Broader crash-stage and pending root recovery matrix",
+    "Automatic base scheduling/adoption"
+  ],
+  "logs_sha256": {
+    "bootstrap-lost-ack-final.log": "81ad16c673deac3233aa1eb9f346dc51494e34b064c5b81ac3401efeb7102595",
+    "bootstrap-lost-ack-qualified.log": "3e6427678b02bb51a589fb95a6f19596caee94d32264fb5f3ba3db8e368f098e",
+    "bootstrap-lost-ack-after.log": "937e6bcd4f09748105d451d710d72ca8eac68533d2be197a57de581d50204d5f",
+    "bootstrap-lost-ack-before.log": "2bfc3abbc817f8ccc0c45089c6ec8ed7cdc3f1a59ca8a16876651deb6ff00919"
+  }
+}

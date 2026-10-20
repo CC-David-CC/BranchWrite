@@ -1,0 +1,30 @@
+{
+  "status": "FAIL",
+  "tests": 5,
+  "failures": 0,
+  "errors": 5,
+  "skips": 0,
+  "seconds": 0.16627811908256263,
+  "results": [
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_blender_work_uses_same_worker_and_plan_has_no_domain_execution",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_cad_work_keeps_fixed_requirements_and_caller_cannot_mutate_them",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_cli_session_exposes_operator_domain_configuration",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_conflicting_domains_reject_before_session_state_creation",
+      "status": "ERROR"
+    },
+    {
+      "id": "test_interactive_domains.InteractiveDomainTests.test_saved_exports_are_visible_and_survive_session_reopen",
+      "status": "ERROR"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+test_aside_completion_cannot_move_current_tip_files_or_mode (tests.test_session_ledger.SessionLedgerTests.test_aside_completion_cannot_move_current_tip_files_or_mode) ... ok
+test_connection_change_refused_on_resume (tests.test_session_ledger.SessionLedgerTests.test_connection_change_refused_on_resume) ... ok
+test_modes_do_not_blend_or_reorder_queue (tests.test_session_ledger.SessionLedgerTests.test_modes_do_not_blend_or_reorder_queue) ... ok
+test_pending_receipt_replays_without_duplicate_completion (tests.test_session_ledger.SessionLedgerTests.test_pending_receipt_replays_without_duplicate_completion) ... ok
+test_queue_is_durable_and_combines_followups_in_order (tests.test_session_ledger.SessionLedgerTests.test_queue_is_durable_and_combines_followups_in_order) ... ok
+test_same_id_never_means_different_work (tests.test_session_ledger.SessionLedgerTests.test_same_id_never_means_different_work) ... ok
+test_search_is_read_only_and_never_dispatches (tests.test_session_ledger.SessionLedgerTests.test_search_is_read_only_and_never_dispatches) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.104s
+
+OK

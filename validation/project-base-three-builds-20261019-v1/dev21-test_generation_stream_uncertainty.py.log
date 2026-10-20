@@ -1,0 +1,10 @@
+test_eof_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_eof_retains_original_pending_identity) ... ok
+test_error_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_error_retains_original_pending_identity) ... ok
+test_failure_retains_original_pending_identity (test_generation_stream_uncertainty.StreamUncertaintyTests.test_failure_retains_original_pending_identity) ... ok
+test_first_cli_failure_reports_unresolved_original_operation (test_generation_stream_uncertainty.StreamUncertaintyTests.test_first_cli_failure_reports_unresolved_original_operation) ... ok
+test_rejected_http_response_is_closed (test_generation_stream_uncertainty.StreamUncertaintyTests.test_rejected_http_response_is_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.530s
+
+OK

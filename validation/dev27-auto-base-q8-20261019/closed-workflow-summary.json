@@ -1,0 +1,87 @@
+{
+  "first": {
+    "frames": 60,
+    "all_closed": true,
+    "model_calls": 7,
+    "model_requests": 9,
+    "output_tokens": 7095,
+    "tools": [
+      {
+        "tool": "read_file",
+        "disposition": "read",
+        "exit_code": 0
+      },
+      {
+        "tool": "create_text_file",
+        "disposition": "created",
+        "exit_code": 0
+      },
+      {
+        "tool": "create_text_file",
+        "disposition": "created",
+        "exit_code": 0
+      },
+      {
+        "tool": "run_shell",
+        "disposition": "exited",
+        "exit_code": 0
+      },
+      {
+        "tool": "finish",
+        "disposition": "completion_requested",
+        "exit_code": null
+      }
+    ],
+    "seconds": 549.1668431949802
+  },
+  "second": {
+    "frames": 66,
+    "all_closed": true,
+    "model_calls": 8,
+    "model_requests": 8,
+    "output_tokens": 1119,
+    "tools": [
+      {
+        "tool": "read_file",
+        "disposition": "read",
+        "exit_code": 0
+      },
+      {
+        "tool": "read_file",
+        "disposition": "read",
+        "exit_code": 0
+      },
+      {
+        "tool": "read_file",
+        "disposition": "read",
+        "exit_code": 0
+      },
+      {
+        "tool": "replace",
+        "disposition": "applied",
+        "exit_code": 0
+      },
+      {
+        "tool": "replace",
+        "disposition": "applied",
+        "exit_code": 0
+      },
+      {
+        "tool": "replace",
+        "disposition": "applied",
+        "exit_code": 0
+      },
+      {
+        "tool": "run_shell",
+        "disposition": "exited",
+        "exit_code": 0
+      },
+      {
+        "tool": "finish",
+        "disposition": "completion_requested",
+        "exit_code": null
+      }
+    ],
+    "seconds": 111.9887413510587
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "C native counter deltas between settled B and settled C; excludes startup/HTTP/Python/tools",
+  "counters": {
+    "forward_tokens": 13908,
+    "prefill_tokens": 7717,
+    "decode_timed_tokens": 6191,
+    "decode_prepare_ns": 18219708696,
+    "decode_compute_ns": 119835011508,
+    "decode_finish_ns": 839369172,
+    "loaded_file_bytes": 1284829192,
+    "written_file_bytes": 13430953348,
+    "captures": 10,
+    "restores": 17,
+    "integrity_mismatches": 0,
+    "integrity_device_hashed_bytes": 8101080072192
+  },
+  "native_decode_tps": 44.57353101067067,
+  "trace_end_bytes": 117210517,
+  "trace_end_sha256": "684950f97655bdadb621a3a3c18b1e0d457c9e4eb5a955f8b00c6dc18efc81fa"
+}

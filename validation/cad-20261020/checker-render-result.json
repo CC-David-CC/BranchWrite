@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "tests_run": 18,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "scope": "real OpenCascade STEP inspection and VTK/OSMesa CPU renders; no model inference or BW tool integration yet",
+  "source_sha256": {
+    "branchwrite/cad_requirements.py": "61b23951b3c3f994433031bfcbcb93b4d4697c5e5464d1182831715a76fd459d",
+    "branchwrite/cad_render.py": "c1e23146a1fe7d577c1aff03dff4fd20fee6595aaddd73d9204215d2eef7350a",
+    "branchwrite/cad_inspect.py": "fe41e4f55581f29f302564e175a8c4740d3ac0a216a3aecf30c45e87075a5b63"
+  }
+}

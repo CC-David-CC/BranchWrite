@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "client_exit": 0,
+  "commands": [
+    "/switch 1",
+    "/switch 2",
+    "/exit"
+  ],
+  "saved_turns": 4,
+  "new_model_requests": 0,
+  "all_existing_operation_journals_unchanged": true,
+  "prior_history_unchanged": true,
+  "file_versions_restored": true,
+  "matching_context_and_exports_restored": true,
+  "elapsed_seconds": 3.354519158951007
+}

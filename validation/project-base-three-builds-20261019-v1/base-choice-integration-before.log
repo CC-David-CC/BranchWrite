@@ -1,0 +1,21 @@
+test_base_choice (unittest.loader._FailedTest.test_base_choice) ... ERROR
+
+======================================================================
+ERROR: test_base_choice (unittest.loader._FailedTest.test_base_choice)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_base_choice
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_base_choice.py", line 2, in <module>
+    from branchwrite.base_choice import resolve_base_proposal
+ModuleNotFoundError: No module named 'branchwrite.base_choice'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

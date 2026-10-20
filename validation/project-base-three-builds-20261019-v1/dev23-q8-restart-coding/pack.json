@@ -1,0 +1,15 @@
+{
+  "status": "built",
+  "pack_id": "539287b609c6412158a980765accc0efe2c9b79b4665f7246ef6d967c0773f6a",
+  "pack_path": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-bootstrap-coding-v3/packs/539287b609c6412158a980765accc0efe2c9b79b4665f7246ef6d967c0773f6a",
+  "captured_at": "2026-10-19T22:13:45.563589Z",
+  "as_of": "2026-10-19T22:00:00Z",
+  "source_files": 1,
+  "source_bytes": 190,
+  "prefix_bytes": 816,
+  "limits": {
+    "max_files": 512,
+    "max_file_bytes": 8388608,
+    "max_total_bytes": 33554432
+  }
+}

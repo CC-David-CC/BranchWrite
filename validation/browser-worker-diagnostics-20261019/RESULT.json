@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "diagnostic_tests": 4,
+  "recovery_regressions": 12,
+  "red_failures": 4,
+  "scope": "Real failed worker subprocess diagnostics; Chromium rendering environment not repaired or qualified",
+  "production_change": "Unreleased source only; installed dev25 remains unchanged",
+  "gpu_jobs_started": 0
+}

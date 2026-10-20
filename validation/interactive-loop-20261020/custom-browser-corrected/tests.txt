@@ -1,0 +1,9 @@
+test_custom_checks_cannot_publish_an_invalid_action_receipt (tests.test_browser_host_inspection.HostInspectionTests.test_custom_checks_cannot_publish_an_invalid_action_receipt) ... ok
+test_italic_alone_does_not_pass_bold_name_requirement (tests.test_browser_host_inspection.HostInspectionTests.test_italic_alone_does_not_pass_bold_name_requirement) ... ok
+test_missing_underline_is_a_failed_inspection (tests.test_browser_host_inspection.HostInspectionTests.test_missing_underline_is_a_failed_inspection) ... ok
+test_real_computed_style_and_interaction_are_checked_in_the_sandbox (tests.test_browser_host_inspection.HostInspectionTests.test_real_computed_style_and_interaction_are_checked_in_the_sandbox) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.179s
+
+OK

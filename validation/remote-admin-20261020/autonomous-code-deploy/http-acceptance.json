@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "http_status": 200,
+  "bytes": 4609,
+  "sha256": "2aa55f1f3565506ac3ddc8759f51ecaec365a65c9b1a6a5532174e4b6ad91174",
+  "local_source_equal": true,
+  "client_flow": "still running; not final client acceptance",
+  "url": "http://127.0.0.1:18080/ on llm-49"
+}

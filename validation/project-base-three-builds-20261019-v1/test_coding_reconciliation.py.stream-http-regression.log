@@ -1,0 +1,37 @@
+test_cli_cannot_reconcile_a_tool_effect (test_coding_reconciliation.CodingReconciliationTests.test_cli_cannot_reconcile_a_tool_effect) ... ok
+test_cli_refuses_live_workflow_writer (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_live_workflow_writer) ... ok
+test_cli_refuses_operation_not_owned_by_pending_model_frame (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_operation_not_owned_by_pending_model_frame) ... ok
+test_cli_restores_output_then_existing_step_resumes_without_new_work (test_coding_reconciliation.CodingReconciliationTests.test_cli_restores_output_then_existing_step_resumes_without_new_work) ... ok
+test_failed_uncommitted_model_operation_stays_unresolved (test_coding_reconciliation.CodingReconciliationTests.test_failed_uncommitted_model_operation_stays_unresolved) ... ERROR
+test_self_consistent_changed_launch_rejected_before_network (test_coding_reconciliation.CodingReconciliationTests.test_self_consistent_changed_launch_rejected_before_network) ... ok
+
+======================================================================
+ERROR: test_failed_uncommitted_model_operation_stays_unresolved (test_coding_reconciliation.CodingReconciliationTests.test_failed_uncommitted_model_operation_stays_unresolved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 81, in test_failed_uncommitted_model_operation_stays_unresolved
+    op=self.pending(failed=True);before=self.hashes();trace=list(self.case.trace);r=self.invoke(op)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_coding_reconciliation.py", line 40, in pending
+    with self.assertRaises(RequestRejected):step_model(k,self.adapter,'model-flow')
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/model_dispatch.py", line 283, in step_model
+    result=adapter.execute(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/model_dispatch.py", line 170, in execute
+    return method(*args,**options)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1073, in answer
+    return self._generation_mutation(operation_id, "/cow/text/answer", body, branch=branch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1250, in _generation_mutation
+    return self._accept_stream(response, record, intent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/branchwrite/cow_client.py", line 1385, in _accept_stream
+    raise GenerationIndeterminate(intent.operation_id, "COW stream error without completion proof: " + str(event.get("error", "unknown error")))
+branchwrite.cow_client.GenerationIndeterminate: COW stream error without completion proof: "'bwnative-9db8f6803a57739d5c66ffa96f02b5e05910741f50cd5263'"
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.402s
+
+FAILED (errors=1)

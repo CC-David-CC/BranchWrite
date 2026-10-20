@@ -1,0 +1,17 @@
+{"status": "PREPARED"}
+{"status": "PREPARED"}
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Client setup, real PTY, CLI subprocess, CPU COW HTTP/admission/recovery. No language model, GPU or G1-G5 qualification.",
+  "tests_run": 347,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "elapsed_seconds": 89.09473601100035,
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "executable": "/home/dflanag3/src/Strata/.venv/bin/python",
+  "source_unchanged_during_tests": true,
+  "branchwrite_base": "0d94f87e1fc2c0a08a068d48ab78d6fbdfc328e3",
+  "cow_base": "42aae89bc10d1a628489e32dfa50490b156f4601"
+}

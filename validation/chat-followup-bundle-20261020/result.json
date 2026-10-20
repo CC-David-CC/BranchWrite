@@ -1,0 +1,40 @@
+{
+  "base_commit": "fbdefbcfff091e1c80eb98363b5c6d91b7e795d2",
+  "branch": "feat/explicit-model-reconciliation-20261019",
+  "command": "COW_CLI_SCRIPT=/home/dflanag3/src/context-cow-history-counts-20261019/tools/cow_cli.py PYTHONPATH=tests:/home/dflanag3/src/context-cow-history-counts-20261019/experimental/branching_context/src:/home/dflanag3/src/context-cow-history-counts-20261019 python3 -m unittest test_chat_cli_http test_cow_client_flow -v",
+  "date": "2026-10-20",
+  "failed": 0,
+  "host": "llm-60",
+  "limitations": [
+    "No GPU or real model inference ran",
+    "This validates the human chat queue boundary, not autonomous coding quality",
+    "No browser or HTML project preview was exercised"
+  ],
+  "passed": 12,
+  "python": "3.12.3",
+  "result": "PASS",
+  "schema_version": 1,
+  "scope": "CPU-only FlowModel fixture; real COW Store, ContextCoordinator, text adapter, HTTP handler, CLI subprocess and operation journal",
+  "skipped": 0,
+  "source_sha256": {
+    "branchwrite/__main__.py": "2c0a27e5ca7e78b0ec2d8c96ac49acdb35d1f7b0b0a30954df66e4012c5c0848",
+    "branchwrite/chat_cli.py": "74d043f81411d3e914815a7586e62326f491e0e6f48d4cb3434a64097f2f3ed2",
+    "docs/manual/07_USER_CHAT.md": "a5457ece2b76d5cb82bc1c4b3ca7e5250e185947c2618e33c43cf8dc45255232",
+    "tests/test_chat_cli_http.py": "c4cf4242595730635b7fb6cb4a330eb6463d8e6ae682474c7c364908c96199a5"
+  },
+  "test_ids": [
+    "ChatCliHttpTests.test_cli_accepts_full_128_byte_branch_and_operation_names",
+    "ChatCliHttpTests.test_cli_keeps_user_conversation_tip_current_and_work_fork_independent",
+    "ChatCliHttpTests.test_local_followups_are_durable_and_sent_as_one_combined_turn",
+    "ChatCliHttpTests.test_local_queue_survives_client_death_and_drains_after_reconcile",
+    "ChatCliHttpTests.test_lost_cli_ack_reconciles_the_same_saved_user_turn",
+    "ChatCliHttpTests.test_stop_add_before_first_answer_preserves_old_attempt_as_a_sibling",
+    "ChatCliHttpTests.test_stop_add_cancels_before_output_and_retries_with_both_user_inputs",
+    "CowClientFlowTests.test_actual_cli_subprocess_conforms_to_http_client_flow",
+    "CowClientFlowTests.test_http_client_prepare_fork_continue_history_tool_observation",
+    "CowClientFlowTests.test_http_stale_revision_reaches_server_and_is_rejected_before_inference",
+    "CowClientFlowTests.test_real_http_accepts_128_byte_branch_and_operation_names",
+    "CowClientFlowTests.test_user_conversation_tip_stays_current_and_work_fork_is_independent"
+  ],
+  "test_log_sha256": "ddbad771c1a31cd93395a950b9105725054bf8933e4999f817398392a1dc86cc"
+}

@@ -1,0 +1,1 @@
+Repair command_summary.summarize so zero exit codes count as passed and all nonzero integer codes count as failed. Preserve failed labels in input order, including Unicode. Reject invalid rows, non-string labels and non-integer or boolean exit codes with ValueError. Do not mutate inputs. Change only command_summary.py, preserve tests, run the unit tests, and finish.

@@ -1,0 +1,188 @@
+EEEEEEEE
+======================================================================
+ERROR: test_actual_check_of_current_files_can_pass (tests.test_project_checks.ProjectChecksTests.test_actual_check_of_current_files_can_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 85, in __init__
+    self._file_policy=None if verification is None else policy.admit(verification,registry)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/verification.py", line 20, in admit
+    raise ValueError('closed file verification schema required')
+ValueError: closed file verification schema required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 35, in test_actual_check_of_current_files_can_pass
+    self.assertTrue(self.run_checks([('content',"test $(cat marker) = good")]))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 19, in run_checks
+    runtime=Interpreter(kernel,registry,verification=dict(schema=1,selected_checks=True))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 86, in __init__
+    except (ValueError,ToolRejected) as exc:raise AdmissionError('invalid host file verification policy: '+str(exc)) from exc
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: invalid host file verification policy: closed file verification schema required
+
+======================================================================
+ERROR: test_changes_require_checks_to_run_again (tests.test_project_checks.ProjectChecksTests.test_changes_require_checks_to_run_again)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 85, in __init__
+    self._file_policy=None if verification is None else policy.admit(verification,registry)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/verification.py", line 20, in admit
+    raise ValueError('closed file verification schema required')
+ValueError: closed file verification schema required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 44, in test_changes_require_checks_to_run_again
+    self.assertFalse(self.run_checks([('content','test -f marker')],mutate=True))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 19, in run_checks
+    runtime=Interpreter(kernel,registry,verification=dict(schema=1,selected_checks=True))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 86, in __init__
+    except (ValueError,ToolRejected) as exc:raise AdmissionError('invalid host file verification policy: '+str(exc)) from exc
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: invalid host file verification policy: closed file verification schema required
+
+======================================================================
+ERROR: test_different_check_cannot_hide_a_failed_named_check (tests.test_project_checks.ProjectChecksTests.test_different_check_cannot_hide_a_failed_named_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 85, in __init__
+    self._file_policy=None if verification is None else policy.admit(verification,registry)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/verification.py", line 20, in admit
+    raise ValueError('closed file verification schema required')
+ValueError: closed file verification schema required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 42, in test_different_check_cannot_hide_a_failed_named_check
+    self.assertFalse(self.run_checks([('first','exit 4'),('second','test -f marker')]))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 19, in run_checks
+    runtime=Interpreter(kernel,registry,verification=dict(schema=1,selected_checks=True))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 86, in __init__
+    except (ValueError,ToolRejected) as exc:raise AdmissionError('invalid host file verification policy: '+str(exc)) from exc
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: invalid host file verification policy: closed file verification schema required
+
+======================================================================
+ERROR: test_finish_without_a_check_is_not_verified (tests.test_project_checks.ProjectChecksTests.test_finish_without_a_check_is_not_verified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 85, in __init__
+    self._file_policy=None if verification is None else policy.admit(verification,registry)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/verification.py", line 20, in admit
+    raise ValueError('closed file verification schema required')
+ValueError: closed file verification schema required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 33, in test_finish_without_a_check_is_not_verified
+    def test_finish_without_a_check_is_not_verified(self):self.assertFalse(self.run_checks([]))
+                                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 19, in run_checks
+    runtime=Interpreter(kernel,registry,verification=dict(schema=1,selected_checks=True))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 86, in __init__
+    except (ValueError,ToolRejected) as exc:raise AdmissionError('invalid host file verification policy: '+str(exc)) from exc
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: invalid host file verification policy: closed file verification schema required
+
+======================================================================
+ERROR: test_latest_failure_overrides_an_earlier_pass (tests.test_project_checks.ProjectChecksTests.test_latest_failure_overrides_an_earlier_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 85, in __init__
+    self._file_policy=None if verification is None else policy.admit(verification,registry)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/verification.py", line 20, in admit
+    raise ValueError('closed file verification schema required')
+ValueError: closed file verification schema required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 38, in test_latest_failure_overrides_an_earlier_pass
+    self.assertFalse(self.run_checks([('content','test -f marker'),('content','exit 4')]))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 19, in run_checks
+    runtime=Interpreter(kernel,registry,verification=dict(schema=1,selected_checks=True))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 86, in __init__
+    except (ValueError,ToolRejected) as exc:raise AdmissionError('invalid host file verification policy: '+str(exc)) from exc
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: invalid host file verification policy: closed file verification schema required
+
+======================================================================
+ERROR: test_nonzero_check_is_not_verified (tests.test_project_checks.ProjectChecksTests.test_nonzero_check_is_not_verified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 85, in __init__
+    self._file_policy=None if verification is None else policy.admit(verification,registry)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/verification.py", line 20, in admit
+    raise ValueError('closed file verification schema required')
+ValueError: closed file verification schema required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 36, in test_nonzero_check_is_not_verified
+    def test_nonzero_check_is_not_verified(self):self.assertFalse(self.run_checks([('content','exit 4')]))
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 19, in run_checks
+    runtime=Interpreter(kernel,registry,verification=dict(schema=1,selected_checks=True))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 86, in __init__
+    except (ValueError,ToolRejected) as exc:raise AdmissionError('invalid host file verification policy: '+str(exc)) from exc
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: invalid host file verification policy: closed file verification schema required
+
+======================================================================
+ERROR: test_plain_shell_observation_is_not_a_project_check (tests.test_project_checks.ProjectChecksTests.test_plain_shell_observation_is_not_a_project_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 46, in test_plain_shell_observation_is_not_a_project_check
+    from branchwrite.verification import ProjectChecksPolicy
+ImportError: cannot import name 'ProjectChecksPolicy' from 'branchwrite.verification' (/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/verification.py)
+
+======================================================================
+ERROR: test_repaired_named_check_can_replace_a_broken_command (tests.test_project_checks.ProjectChecksTests.test_repaired_named_check_can_replace_a_broken_command)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 85, in __init__
+    self._file_policy=None if verification is None else policy.admit(verification,registry)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/verification.py", line 20, in admit
+    raise ValueError('closed file verification schema required')
+ValueError: closed file verification schema required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 40, in test_repaired_named_check_can_replace_a_broken_command
+    self.assertTrue(self.run_checks([('content','exit 4'),('content','test -f marker')]))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/tests/test_project_checks.py", line 19, in run_checks
+    runtime=Interpreter(kernel,registry,verification=dict(schema=1,selected_checks=True))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-beginner-flow-20261020/branchwrite/interpreter.py", line 86, in __init__
+    except (ValueError,ToolRejected) as exc:raise AdmissionError('invalid host file verification policy: '+str(exc)) from exc
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+branchwrite.interpreter.AdmissionError: invalid host file verification policy: closed file verification schema required
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.021s
+
+FAILED (errors=8)

@@ -1,0 +1,33 @@
+test_current_card_changes_without_rewriting_shared_examples (test_controller_prefix.ControllerPrefixTests.test_current_card_changes_without_rewriting_shared_examples) ... ok
+test_different_tool_families_do_not_claim_identical_prefixes (test_controller_prefix.ControllerPrefixTests.test_different_tool_families_do_not_claim_identical_prefixes) ... ERROR
+test_root_points_to_current_task_policy_instead_of_an_embedded_schema (test_controller_prefix.ControllerPrefixTests.test_root_points_to_current_task_policy_instead_of_an_embedded_schema) ... ERROR
+test_same_family_different_projects_have_identical_prefix_bytes (test_controller_prefix.ControllerPrefixTests.test_same_family_different_projects_have_identical_prefix_bytes) ... ERROR
+
+======================================================================
+ERROR: test_different_tool_families_do_not_claim_identical_prefixes (test_controller_prefix.ControllerPrefixTests.test_different_tool_families_do_not_claim_identical_prefixes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-controller-prefix-20261019/tests/test_controller_prefix.py", line 25, in test_different_tool_families_do_not_claim_identical_prefixes
+    from branchwrite.coding_defaults import controller_prefix
+ImportError: cannot import name 'controller_prefix' from 'branchwrite.coding_defaults' (/home/dflanag3/src/branchwrite-controller-prefix-20261019/branchwrite/coding_defaults.py)
+
+======================================================================
+ERROR: test_root_points_to_current_task_policy_instead_of_an_embedded_schema (test_controller_prefix.ControllerPrefixTests.test_root_points_to_current_task_policy_instead_of_an_embedded_schema)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-controller-prefix-20261019/tests/test_controller_prefix.py", line 14, in test_root_points_to_current_task_policy_instead_of_an_embedded_schema
+    from branchwrite.coding_defaults import controller_prefix
+ImportError: cannot import name 'controller_prefix' from 'branchwrite.coding_defaults' (/home/dflanag3/src/branchwrite-controller-prefix-20261019/branchwrite/coding_defaults.py)
+
+======================================================================
+ERROR: test_same_family_different_projects_have_identical_prefix_bytes (test_controller_prefix.ControllerPrefixTests.test_same_family_different_projects_have_identical_prefix_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-controller-prefix-20261019/tests/test_controller_prefix.py", line 8, in test_same_family_different_projects_have_identical_prefix_bytes
+    from branchwrite.coding_defaults import controller_prefix
+ImportError: cannot import name 'controller_prefix' from 'branchwrite.coding_defaults' (/home/dflanag3/src/branchwrite-controller-prefix-20261019/branchwrite/coding_defaults.py)
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (errors=3)

@@ -1,0 +1,15 @@
+======================================================================
+ERROR: test_pending_kernel_remote_call_settles_original_receipt_without_execute (tests.test_remote_tools.RemoteToolTests.test_pending_kernel_remote_call_settles_original_receipt_without_execute)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 80, in test_pending_kernel_remote_call_settles_original_receipt_without_execute
+    value=dispatch_tool(kernel,registry,'remote-call')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/branchwrite/tool_dispatch.py", line 86, in dispatch_tool
+    raise ReconciliationRequired(frame['dispatch'][0],frame['inputs'][0])
+branchwrite.tool_dispatch.ReconciliationRequired: original tool operation is unresolved; no automatic resend
+
+----------------------------------------------------------------------
+Ran 1 test in 0.023s
+
+FAILED (errors=1)

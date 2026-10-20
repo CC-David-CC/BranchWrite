@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "installed": "0.1.0.dev15",
+  "nested_modes_preserved": {
+    "mode-0o755": 493,
+    "mode-0o750": 488,
+    "mode-0o700": 448,
+    "mode-0o755/run.sh": 488,
+    "mode-0o750/run.sh": 488,
+    "mode-0o700/run.sh": 488
+  },
+  "owned_run_and_workspace_mode": "0700",
+  "scope": "Ordinary permission bits; ACL/xattr preservation not asserted"
+}

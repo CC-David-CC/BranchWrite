@@ -1,0 +1,9 @@
+test_missing_read_path_without_create_grant_still_fails (test_shell_admission.ShellAdmissionTests.test_missing_read_path_without_create_grant_still_fails) ... ok
+test_real_probe_settles_without_changing_workspace (test_shell_admission.ShellAdmissionTests.test_real_probe_settles_without_changing_workspace) ... ok
+test_shell_can_test_before_and_after_granted_file_creation (test_shell_admission.ShellAdmissionTests.test_shell_can_test_before_and_after_granted_file_creation) ... ok
+test_shell_rejection_precedes_any_cow_admission (test_shell_admission.ShellAdmissionTests.test_shell_rejection_precedes_any_cow_admission) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.208s
+
+OK

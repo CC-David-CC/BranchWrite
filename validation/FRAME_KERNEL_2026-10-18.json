@@ -1,0 +1,141 @@
+{
+  "base": "c002d7de37deb05fd9c618f00ac5cd1f1ded25d7",
+  "branch": "work/branchwrite-frame-kernel-20261018",
+  "checkout": "/home/dflanag3/src/branchwrite-runtime-active-20261018",
+  "executed_frame_tests": [
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_another_facade_cannot_dispatch_from_a_stale_projection",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_artifact_sync_failure_prevents_call_admission_without_poisoning_the_log",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_call_and_named_wait_are_one_durable_event",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_changed_spawn_duplicate_child_and_duplicate_slot_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_duplicate_return_is_idempotent_but_conflicting_value_is_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_duplicate_slots_and_children_are_rejected_while_parent_is_actually_ready",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_flow_finishes_only_after_waits_resume_and_keeps_its_return_on_restart",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_nested_flow_returns_to_its_parent_but_an_undispatched_tool_cannot_finish",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_operation_id_cannot_be_shared_by_different_children",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_pending_dispatch_reopen_requires_reconciliation_instead_of_resend",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_pending_resource_result_does_not_deliver_or_resume",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_projection_views_are_detached",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_real_effect_return_then_process_exit_resumes_without_repeating_effect",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_restart_after_return_before_parent_resume_preserves_exact_value",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_result_contract_preserves_exact_bool_int_and_bytes_text_types",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_return_for_old_group_cannot_overwrite_a_new_wait",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_reverse_returns_bind_named_slots_not_arrival_order",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_semantically_invalid_but_checksummed_record_is_rejected_on_reopen",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_uncertain_append_blocks_the_facade_until_reopen",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_frame_kernel.FrameKernelTests.test_undispatched_wrong_operation_and_wrong_type_cannot_return",
+      "status": "PASS"
+    }
+  ],
+  "filesystem": "/dev/nvme0n1p2 ext4   /",
+  "final_errors": 0,
+  "final_failures": 0,
+  "final_skips": 0,
+  "focused_including_storage": 41,
+  "frame_test_count": 20,
+  "full_current_suite": 406,
+  "host": "llm-60",
+  "limits": [
+    "No general step/run CLI or model-driven autonomous workload in this increment",
+    "Real COW/Executor/grant/relevant-state/budget adapters remain unwired; no full client/effect exactly-once claim",
+    "Trusted host APIs, not model authority; top-level result contracts only, not arbitrary nested schemas",
+    "Logical reverse-return ordering is tested, not parallel model/tool execution",
+    "No GPU/native restart, power-loss, actual disk-full, pressure, sanitizer, Q8 or Windows qualification",
+    "No original VC/G gate upgraded; full end-to-end collection and natural-thinking research deferred"
+  ],
+  "native_jobs_launched": 0,
+  "numerical_max_error": null,
+  "numerical_oracle": "NOT_RUN",
+  "old_successes": "512-token evidence and persisted controllers unchanged",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "real_effect_witness": "Cooperative subprocess incremented an owned file once; return persisted, producer exited47 without cleanup; reopened controller returned False for duplicate dispatch and resumed parent once; counter asserted1",
+  "registered_tickets": "R05 supporting component, not all R05 cases qualified",
+  "retained_initial_outcomes": {
+    "first_combined_failure_cause": "Fault fixture intercepted artifact flush before ledger write; corrected to target actual ledger descriptor. Separate artifact-flush rejection test added; no guard weakened.",
+    "first_combined_failures": 1,
+    "first_combined_focused": 35,
+    "missing_flow_finish_errors": 2,
+    "missing_kernel_module_errors": 1
+  },
+  "schema": 1,
+  "source_sha256": {
+    "branchwrite/kernel.py": "0761bd464e23c51febb48c48a8d867a98a3650343699962bbd379c1d9443e6a0",
+    "branchwrite/records.py": "cbc34ddb6b510217a2a1995e2c31ea092f1b0c211b2daa1039dca18a2093d09b",
+    "docs/FRAME_KERNEL.md": "e0f96091f9e8704c4932dedb1d089b7f06e4e79a38aaf47856b8dfc7e0c87ab8",
+    "docs/RUNTIME_RECORDS.md": "5a5c14e8dc92a6d0f688c55f9a82ed5c891d1fd49e1fa5454f109098b1fe3254",
+    "tests/test_frame_kernel.py": "addd4b13496cd8b946cd4ad7136091c9850255e85db884acc6367cd90d38b636",
+    "validation/CURRENT-CATALOG-STATUS.md": "1fce1a4e4c0bbf8e160b2972b3bd95a93d77a218f2d34d7541b5c13c4bf4350d"
+  },
+  "spec_sha256": "3136b4d76a4e885c7ce222eeaf6efe1bff09ce156500087963ff1bebdfc38e3d",
+  "status": "BOUNDED_PRODUCTION_FRAME_RETURN_COMPONENT_PASS",
+  "thinking_default": 1024,
+  "private_backup": {
+    "status": "PRIVATE_RECEIVER_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-bw-frame-kernel-v1/evidence.tar.gz",
+    "sha256": "e9d8f2c31bfa03b7122bc61a52f22ce27ad5ed350dd0f5250c30892957ead2cf",
+    "size_bytes": 66732,
+    "member_count": 70
+  },
+  "source_hash_scope": "Executed/audited source snapshot retained in the private archive; later status-only documentation edit listed separately",
+  "post_audit_documentation_sha256": {
+    "validation/CURRENT-CATALOG-STATUS.md": "8c4a17d458777776790e4cb21f8037cf7e231f74e04604791e892fb65d3477bf"
+  }
+}

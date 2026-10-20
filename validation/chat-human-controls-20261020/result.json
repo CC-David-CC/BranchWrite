@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "status": "PASS_BOUNDED",
+  "date": "2026-10-20",
+  "scope": "BranchWrite client-local human conversation queue and stop-and-amend CLI flow",
+  "source": {
+    "branchwrite_commit": "9c275495866ed8ab281c49deec5bea6c3ff85cea",
+    "cow_commit": "831b4d8d"
+  },
+  "tests": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 5.523
+  },
+  "environment": {
+    "test_host": "llm-60",
+    "client_source": "private BranchWrite commit cloned from box-git",
+    "server": "actual Context COW Store, coordinator and HTTP handler",
+    "backend": "synthetic CPU FlowModel",
+    "gpu_inference": false,
+    "python": "3.14.4"
+  },
+  "limitations": [
+    "No GPU/native cancellation qualification.",
+    "No multi-machine shared queue; each BranchWrite chat state directory owns its local FIFO by design.",
+    "No installed-wheel validation for the chat flow."
+  ]
+}

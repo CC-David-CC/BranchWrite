@@ -1,0 +1,11 @@
+{
+  "operation_id": "bw-root-612ae7f346f223036c630845c86b431237a0612b",
+  "output_tokens": 0,
+  "scope": "bootstrap",
+  "snapshot": "033f2dae6d008f4f168a5bee7f50bd44f506b82c279b4bfa1296334f3ee97a8d",
+  "status": "BOOTSTRAP_RECONCILIATION_PASS",
+  "workflow_advanced": false,
+  "seconds": 0.4009539349935949,
+  "original_request_and_receipt_exact": true,
+  "workflow_ledger_unchanged": true
+}

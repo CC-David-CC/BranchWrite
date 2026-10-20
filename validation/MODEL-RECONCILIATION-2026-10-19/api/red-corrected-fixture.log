@@ -1,0 +1,65 @@
+test_complete_output_recovers_offline (test_generation_reconciliation.GenerationReconciliationTests.test_complete_output_recovers_offline) ... ERROR
+test_durable_lost_reply_recovers_original_bytes_without_forward_work (test_generation_reconciliation.GenerationReconciliationTests.test_durable_lost_reply_recovers_original_bytes_without_forward_work) ... ERROR
+test_receipt_only_record_can_restore_exact_answer_without_regeneration (test_generation_reconciliation.GenerationReconciliationTests.test_receipt_only_record_can_restore_exact_answer_without_regeneration) ... ERROR
+test_unknown_request_cannot_trigger_a_post (test_generation_reconciliation.GenerationReconciliationTests.test_unknown_request_cannot_trigger_a_post) ... ERROR
+test_wrong_endpoint_rejected_before_network (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_endpoint_rejected_before_network) ... ERROR
+test_wrong_observed_receipt_cannot_trigger_replay (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_observed_receipt_cannot_trigger_replay) ... ERROR
+
+======================================================================
+ERROR: test_complete_output_recovers_offline (test_generation_reconciliation.GenerationReconciliationTests.test_complete_output_recovers_offline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 60, in test_complete_output_recovers_offline
+    result=self.client.reconcile_generation('recovery-answer')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'reconcile_generation'
+
+======================================================================
+ERROR: test_durable_lost_reply_recovers_original_bytes_without_forward_work (test_generation_reconciliation.GenerationReconciliationTests.test_durable_lost_reply_recovers_original_bytes_without_forward_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 34, in test_durable_lost_reply_recovers_original_bytes_without_forward_work
+    recovered=self.client.reconcile_generation('recovery-answer')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'reconcile_generation'
+
+======================================================================
+ERROR: test_receipt_only_record_can_restore_exact_answer_without_regeneration (test_generation_reconciliation.GenerationReconciliationTests.test_receipt_only_record_can_restore_exact_answer_without_regeneration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 55, in test_receipt_only_record_can_restore_exact_answer_without_regeneration
+    before=list(self.case.trace);recovered=self.client.reconcile_generation('recovery-answer')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'reconcile_generation'
+
+======================================================================
+ERROR: test_unknown_request_cannot_trigger_a_post (test_generation_reconciliation.GenerationReconciliationTests.test_unknown_request_cannot_trigger_a_post)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 50, in test_unknown_request_cannot_trigger_a_post
+    with self.assertRaises((RequestRejected,OperationIndeterminate)):self.client.reconcile_generation('recovery-answer')
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'reconcile_generation'
+
+======================================================================
+ERROR: test_wrong_endpoint_rejected_before_network (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_endpoint_rejected_before_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 65, in test_wrong_endpoint_rejected_before_network
+    with self.assertRaises(OperationReuseError):other.reconcile_generation('recovery-answer')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'reconcile_generation'
+
+======================================================================
+ERROR: test_wrong_observed_receipt_cannot_trigger_replay (test_generation_reconciliation.GenerationReconciliationTests.test_wrong_observed_receipt_cannot_trigger_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_generation_reconciliation.py", line 73, in test_wrong_observed_receipt_cannot_trigger_replay
+    with self.assertRaises(ReceiptError):self.client.reconcile_generation('recovery-answer')
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CowClient' object has no attribute 'reconcile_generation'
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.258s
+
+FAILED (errors=6)

@@ -1,0 +1,8 @@
+test_bad_parameters_still_rejected_before_execution (test_shell_configuration.ShellConfigurationTests.test_bad_parameters_still_rejected_before_execution) ... ok
+test_build_launch_does_not_admit_a_host_executable (test_shell_configuration.ShellConfigurationTests.test_build_launch_does_not_admit_a_host_executable) ... ok
+test_real_namespace_can_parse_but_cannot_admit_unmapped_host_ownership (test_shell_configuration.ShellConfigurationTests.test_real_namespace_can_parse_but_cannot_admit_unmapped_host_ownership) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.173s
+
+OK

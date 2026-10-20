@@ -1,0 +1,1 @@
+Make a simple website about dogs in index.html. Give it a blue heading, a welcome paragraph and three dog names. Add a Say hello button that displays Hello, David! when clicked. Make it work on a phone. Use no downloads or external dependencies. Check the result and report exactly what you checked.

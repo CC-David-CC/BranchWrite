@@ -1,0 +1,11 @@
+{
+  "status": "BOUNDED_CODING_PASS",
+  "model_attempts": 1,
+  "parent_code_changes": 0,
+  "visible_tests": 11,
+  "independent_checks": 22,
+  "candidate_sha256": "01999b589543546beb71eb61a396f7534b427c59422e241596e8324a0e9c157c",
+  "whole_cli_seconds": 673.0021303190151,
+  "review": "Read complete module: closed JSON, exact types, all catalog records validated, immutable host identities/headroom, UTF8 byte limits, detached record, no IO or authority. Existing B implementation remains selected; C retained independently.",
+  "scope": "Same fixed task, greedy Q8 from C; not general quality comparison"
+}

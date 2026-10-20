@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "restored_prefix_tokens": 16442,
+  "prefix_forward_tokens": 0,
+  "first_suffix_tokens": 907,
+  "first_suffix_end": 17349,
+  "forward_tokens": 12406,
+  "prefill_tokens": 5724,
+  "generated_consumed_tokens": 6682,
+  "native_timing": {
+    "decode_prepare_ns": 8982370805,
+    "decode_compute_ns": 119416215214,
+    "decode_finish_ns": 731087110
+  },
+  "shutdown": {
+    "owned_key_revoked": true,
+    "original_keys_byte_exact": true
+  },
+  "numerical_oracle": "NOT_RUN",
+  "saved_prefix_bytes_unchanged": true,
+  "gpu_compute_processes_after": ""
+}

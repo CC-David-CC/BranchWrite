@@ -1,0 +1,12 @@
+{
+  "archive": "/home/dflanag3/spatial-artifacts/bw-admin-integration-20261020.tar.gz",
+  "bytes": 58468,
+  "sha256": "10f216024bb2d85f7e00b063d186ae1e28e73bb6df3b74728a3f379fd49c1f58",
+  "excludes": [
+    "VM disk, ISO and SSH private keys are outside artifact directory",
+    "*.pyc"
+  ],
+  "source_host": "llm-49",
+  "destination": "box-git:/srv/data/git/private_context_cow.evidence/branchwrite-admin-20261020/bw-admin-integration-20261020.tar.gz",
+  "remote_verified": true
+}

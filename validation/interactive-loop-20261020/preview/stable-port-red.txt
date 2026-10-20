@@ -1,0 +1,14 @@
+test_refresh_retires_previous_url_and_close_releases_port (tests.test_interactive_preview.PreviewTests.test_refresh_retires_previous_url_and_close_releases_port) ... FAIL
+
+======================================================================
+FAIL: test_refresh_retires_previous_url_and_close_releases_port (tests.test_interactive_preview.PreviewTests.test_refresh_retires_previous_url_and_close_releases_port)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-interactive-loop-20261020/tests/test_interactive_preview.py", line 38, in test_refresh_retires_previous_url_and_close_releases_port
+    self.assertEqual(preview.port,port,'refresh should keep an existing SSH tunnel usable')
+AssertionError: 39863 != 37971 : refresh should keep an existing SSH tunnel usable
+
+----------------------------------------------------------------------
+Ran 1 test in 0.130s
+
+FAILED (failures=1)

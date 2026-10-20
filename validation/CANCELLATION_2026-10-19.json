@@ -1,0 +1,8 @@
+{
+  "status": "CPU_BOUNDARY17_PASS_LIVE_L06_PENDING",
+  "executed": 17,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "scope": "14 existing terminal methods plus 3 new actual-process contract checks; direct worker spawn-error check is supplemental, not namespace coverage."
+}

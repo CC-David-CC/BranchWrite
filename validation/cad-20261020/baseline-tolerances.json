@@ -1,0 +1,26 @@
+{
+  "scope": "independent pre-checker baseline STEP round trips, analytic dimensions/volume; no model",
+  "build123d": "0.13.0",
+  "rows": [
+    {
+      "width": 97,
+      "max_bbox_error_mm": 0.0,
+      "volume_error_mm3": 7.275957614183426e-11,
+      "step_sha256": "149ac56b3f3ab361c9ef9fbff8fe37b783e3e87f15300db1ec90a4b7dc2e6196"
+    },
+    {
+      "width": 100,
+      "max_bbox_error_mm": 0.0,
+      "volume_error_mm3": 8.731149137020111e-11,
+      "step_sha256": "2775e0338b5fbb1c29de7fa417dc767bd9727d63ebd123cdc18b0c39d067beb2"
+    },
+    {
+      "width": 110,
+      "max_bbox_error_mm": 0.0,
+      "volume_error_mm3": 8.003553375601768e-11,
+      "step_sha256": "b4af7f33ebcebd35813bc5c1ef2304569d6dc2fbf45f9938b2e9a4b8369c2cfd"
+    }
+  ],
+  "frozen_length_tolerance_mm": 1e-06,
+  "frozen_volume_tolerance_mm3": 1e-05
+}

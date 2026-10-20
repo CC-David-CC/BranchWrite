@@ -1,0 +1,28 @@
+{
+  "status": "BOUNDED_CPU_CLI_HTTP_PASS",
+  "new_pack_methods": 8,
+  "new_http_methods": 1,
+  "pack_regressions": 38,
+  "integration_tests": 69,
+  "failures": 0,
+  "skips": 0,
+  "before": "8 new pack tests failed:7 missing-operation errors and1 missing CLI subcommand failure",
+  "scope": "Real filesystem capture/publication and CLI subprocess; real COW HTTP/Store with synthetic CPU model",
+  "preserved": [
+    "Original pack bytes and identity",
+    "Original COW root and worker fork",
+    "Existing manifest format and source limits",
+    "Host authorization and point-in-time semantics"
+  ],
+  "remaining": [
+    "Automatic refresh scheduling and role/base selection",
+    "COW admission/adoption coordination and version retention in normal coding workflow",
+    "Verified delta summaries and compaction policy",
+    "New installed wheel and real GPU validation for this pack-refresh code"
+  ],
+  "logs_sha256": {
+    "context-pack-refresh-after.log": "1efc0a194ec2aaa7dbbd781138746de009e24f397782d6d865d4bcdeddb7415f",
+    "context-pack-refresh-before.log": "d29a32e75ce8fb6aae16647400282021027595d5a3de8e5ba2379385e4171b73",
+    "context-pack-refresh-integration.log": "16bc196554f3570e01720940e6a59390ba3691f14f67ed1c944dda67c3034277"
+  }
+}

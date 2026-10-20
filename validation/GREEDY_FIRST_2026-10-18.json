@@ -1,0 +1,25 @@
+{
+  "status": "GREEDY_DEFAULT_FOCUSED_PASS",
+  "new_tests": 4,
+  "focused_tests": 20,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "red": {
+    "failures": 2,
+    "errors": 2
+  },
+  "reason": "Owner requested greedy first,Min-P then DRY only as later fallbacks",
+  "modified_existing_test": "Preserved previous DRY settings assertions;made old default call explicitly request dry-min-p under new default policy",
+  "proof_scope": "CPU policy/ownership tests only,new default live rerun not yet run",
+  "prior_live_source": "c08869c99742f00e1fc72df9ade3f6adef343840",
+  "prior_live": {
+    "L00": "FAIL_REPORT_COPY",
+    "L01": "BOUNDED_PASS",
+    "L02": "BOUNDED_GREEDY_PASS"
+  },
+  "logs": {
+    "greedy-default-red.stderr": "f5af4abd0fe59df96b2179882868b89d70a48a96e858e3bdf45c9de09e1e2af1",
+    "greedy-default-focused.stderr": "44f57e2e0967fb3ecadad44de7dfb036467da24d949b45210d692f0adf2dfaa2"
+  }
+}

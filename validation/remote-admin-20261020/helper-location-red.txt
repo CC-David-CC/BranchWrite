@@ -1,0 +1,15 @@
+======================================================================
+FAIL: test_identical_helper_bytes_in_another_install_location_keep_definition_identity (tests.test_remote_tools.RemoteToolTests.test_identical_helper_bytes_in_another_install_location_keep_definition_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-remote-admin-20261020/tests/test_remote_tools.py", line 62, in test_identical_helper_bytes_in_another_install_location_keep_definition_identity
+    self.assertEqual(first.identity,second.identity)
+AssertionError: '32913d423ec814f12c98c34bdc3c8a6d6347b6c0becf0082bee7b47f1bc9e530' != '231a3718ecf0a358605b4c6236621eca4aaa2c5f3abde6bf3a2e10d93d841de9'
+- 32913d423ec814f12c98c34bdc3c8a6d6347b6c0becf0082bee7b47f1bc9e530
++ 231a3718ecf0a358605b4c6236621eca4aaa2c5f3abde6bf3a2e10d93d841de9
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.017s
+
+FAILED (failures=1)

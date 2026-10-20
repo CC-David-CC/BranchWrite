@@ -1,0 +1,15 @@
+{
+  "consumed": 15638,
+  "native_receipt": {
+    "time": 1792456474.8724685,
+    "pid": 764482,
+    "command": "capture",
+    "response": {
+      "status": "ok",
+      "handle": 0,
+      "consumed": 15638
+    }
+  },
+  "scope": "First native capture following initial context prefill in fresh server; not a catalog estimate",
+  "trace": "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev27-auto-base-q8-v1/server-3/native.jsonl"
+}

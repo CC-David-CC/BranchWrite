@@ -1,0 +1,38 @@
+test_extra_non_solid_geometry_is_rejected (test_cad_geometry.CadGeometryTests.test_extra_non_solid_geometry_is_rejected) ... 
+  test_extra_non_solid_geometry_is_rejected (test_cad_geometry.CadGeometryTests.test_extra_non_solid_geometry_is_rejected) (kind='Face') ... FAIL
+  test_extra_non_solid_geometry_is_rejected (test_cad_geometry.CadGeometryTests.test_extra_non_solid_geometry_is_rejected) (kind='Edge') ... FAIL
+
+======================================================================
+FAIL: test_extra_non_solid_geometry_is_rejected (test_cad_geometry.CadGeometryTests.test_extra_non_solid_geometry_is_rejected) (kind='Face')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_geometry.py", line 56, in test_extra_non_solid_geometry_is_rejected
+    with self.subTest(kind=type(extra).__name__):self.assert_failure(self.inspect(b.Compound([fixture(),extra])),'single_solid')
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_geometry.py", line 22, in assert_failure
+    self.assertEqual(report['status'],'FAIL');self.assertFalse(report['checks'][check]['pass'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PASS' != 'FAIL'
+- PASS
++ FAIL
+
+
+======================================================================
+FAIL: test_extra_non_solid_geometry_is_rejected (test_cad_geometry.CadGeometryTests.test_extra_non_solid_geometry_is_rejected) (kind='Edge')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_geometry.py", line 56, in test_extra_non_solid_geometry_is_rejected
+    with self.subTest(kind=type(extra).__name__):self.assert_failure(self.inspect(b.Compound([fixture(),extra])),'single_solid')
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_cad_geometry.py", line 22, in assert_failure
+    self.assertEqual(report['status'],'FAIL');self.assertFalse(report['checks'][check]['pass'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PASS' != 'FAIL'
+- PASS
++ FAIL
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.115s
+
+FAILED (failures=2)

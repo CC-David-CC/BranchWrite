@@ -1,0 +1,18 @@
+# Worked example: distinguish a source repair from program-produced metadata
+A build task permits editing settings.ini and permits the program to write build/summary.txt.
+Before: settings.ini mode 0644; builder.py mode 0755; build/summary.txt mode 0644.
+The first real command exits 2. Read the diagnostic. Repair only the incorrect setting.
+The second real command exits 0. Its output receipt records build/summary.txt mode 0600.
+The program uses NamedTemporaryFile followed by os.replace; its new file inherits the
+temporary file's permissions. A successful command can legitimately change output metadata.
+
+Accurate final report:
+"The initial command failed with exit 2. I repaired settings.ini and reran it; the
+second command exited 0. I read the generated summary back. Protected scripts and input
+file permissions stayed unchanged. The generated summary was replaced with mode 0600,
+previously 0644, as recorded by the output receipt."
+
+Do not say "no file modes changed." Do not change the program's permissions merely
+to make that claim true. Report only observed metadata and distinguish protected source
+files from declared generated outputs. If metadata was not observed, say it was not checked.
+An example is not a live observation or a grant to edit any path.

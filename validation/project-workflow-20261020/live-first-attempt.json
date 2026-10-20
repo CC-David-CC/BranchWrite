@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "pid": 2409570,
+  "client_host": "r4090",
+  "server": "http://10.0.7.68:8099",
+  "started": 1792481800.5427568,
+  "program": "/home/dflanag3/spatial-artifacts/branchwrite-dev32-project-20261020/installed-check/venv/bin/branchwrite",
+  "task_sent": true,
+  "elapsed_seconds": 158.4220724189654,
+  "exit_code": 0
+}

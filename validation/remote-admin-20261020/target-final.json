@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 0.051141710951924324,
+  "scope": "CPU host-target/transport-receipt admission only; no GPU or model-facing workflow",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "source_sha256": {
+    "remote_execution.py": "4763e0f079b065f2a433501084bc73a55407b1b2a3efacd82b2afa2e02396953",
+    "remote_guest.py": "447251b932e1d0dbeb2b7e6aa1c4c74a81fb88d31c6c63a74435ff075a3034c9"
+  }
+}

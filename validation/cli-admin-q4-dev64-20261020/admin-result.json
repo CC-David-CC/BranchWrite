@@ -1,0 +1,28 @@
+{
+  "status": "NEEDS_INSPECTION",
+  "controller_pid": 2487684,
+  "client_host": "r4090",
+  "prompt_sha256": "49cf271d6a3017cfd929b3c1f7e222ade7b393f9204cb7d01815a7981aa65da0",
+  "task": "Make a small static website about dogs, keep a copy in this project and put it on my authorized test machine admin01. Check the exact uploaded and served file bytes and that the page responds over HTTP. Preserve any existing unrelated files and report the actual checked address and its reachability limits. Use only the configured target and do not invent credentials or hosts.",
+  "operator_candidate_edits": 0,
+  "scope": "installed dev64 interactive session -> candidate780e824a HTTP/Q4; configured owned admin01, exact source/upload/service hashes and HTTP; no operator task revisions",
+  "elapsed_seconds": 490.7546676020138,
+  "client_pid": 2487686,
+  "submitted_seconds": 0.12605730502400547,
+  "completed_seconds": 490.44975190004334,
+  "client_exit_code": 0,
+  "workflow": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/admin/session/turns/turn-1-bdbc1be7524ef327",
+  "file_commit": "b74ca28ea8841981dfda5ba88a90cad02808aab4",
+  "context": {
+    "branch": "bw-session-b1f610d61d8c3bf90b4ccf08f6432f92820f93e6",
+    "execution_profile_id": "5f488c1cc91d67422402a59ddf56efdd757593f3cd4300971380c15ba33876b7",
+    "mode": "append_user",
+    "model_contract_id": "387bbc46f184b148ff455b50a9037132da32d6fed83abba7eb63e57b33f12b53",
+    "revision": 15,
+    "root": "39cf9ac41b3d3db6f909767259ed4fea72c00737d461bd503579fa4b0d1be88c",
+    "tip": "0fb0d6ea13d7f521a384b2321911fea2f328ad9d7b76f75f98c21b918d399fde"
+  },
+  "exports": [],
+  "error": "AssertionError({'file_sha256': '7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662', 'http_sha256': '7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662', 'unrelated_sha256': '7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662', 'bytes': 4675})",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/admin/admin_session_campaign.py\", line 56, in <module>\n    assert proof['file_sha256']==hashlib.sha256(raw).hexdigest()==proof['http_sha256'],proof\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'file_sha256': '7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662', 'http_sha256': '7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662', 'unrelated_sha256': '7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662', 'bytes': 4675}\n"
+}

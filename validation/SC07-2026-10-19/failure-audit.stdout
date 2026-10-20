@@ -1,0 +1,2 @@
+tools [('read_file', 0), ('read_file', 0), ('read_file', 0), ('read_file', 0), ('read_file', 0), ('read_file', 0), ('read_file', 0), ('replace', 0), ('replace', 0), ('read_file', 0), ('run_shell', 1), ('run_shell', 1), ('read_file', 0), ('run_shell', 0)]
+{"status": "SETTLED_FAILURE_FORENSICS", "ledger_unchanged": true, "model_calls": 14, "output_tokens": 5179, "whole_cli_seconds": 1114.4121310920455, "wheel_sha256": "516a3629bdcb63f2d2f78ea27bc0a1c2cb759912dc2aa220257f7543f7f37e2a", "numerical_oracle": "NOT_RUN"}

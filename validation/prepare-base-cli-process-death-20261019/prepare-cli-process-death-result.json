@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "methods": 54,
+  "new_process_death_methods": 3,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "scope": "Actual CLI os._exit and independent process restart through authenticated local HTTP, with CPU inference backend",
+  "cases": {
+    "namespace_ack_loss": "No extra namespace; exactly one initial prefix computation",
+    "context_ack_loss": "Durable original context recovered; zero extra forward work",
+    "before_context_send": "Unknown context remains unresolved, no branch or catalog and zero extra forward work"
+  },
+  "fixture_correction": "Initial new namespace-loss assertion incorrectly expected zero work before any prefix was computed. Corrected to exactly one canonical prefix; initial failure retained. Registered backend equations/tests/tolerances unchanged.",
+  "not_qualified": [
+    "Native process crash",
+    "Power loss",
+    "New command real-Q8 or installed-wheel validation",
+    "Full G1-G5"
+  ]
+}

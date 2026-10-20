@@ -1,0 +1,11 @@
+{
+  "head": {
+    "name": "dev24-reports-A",
+    "revision": 8,
+    "tip": "6aeba26b65b1d9a7b130978616e852c45f5cb25602258d6d219b67ab9f009d94",
+    "root": "358273bd0cb1cfa2762a872d40db2cebdd73a727682b40f05118f860a291b56a"
+  },
+  "history_sha256": "05b97e07ec2ffac1f1301ee30cc09ab5246cb35472f703629acc203ea08f2bc5",
+  "history_bytes": 301392,
+  "scope": "Completed A branch observed while independent B runs; readonly HTTP."
+}

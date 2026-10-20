@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev62-20261020/audit_code.py", line 12, in <module>
+    result=render_snapshot(raw,BrowserConfig(chrome,width,height,30,inspection=inspection))
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/browser_capture.py", line 173, in render_snapshot
+    return render_isolated(payload, config, assets=assets, document_path=document_path)
+  File "/home/dflanag3/src/branchwrite-documents-20261020/branchwrite/browser_isolation.py", line 151, in render_isolated
+    raise ValueError('page inspection result does not match the host request')
+ValueError: page inspection result does not match the host request

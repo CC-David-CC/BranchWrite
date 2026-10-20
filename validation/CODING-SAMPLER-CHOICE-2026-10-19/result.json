@@ -1,0 +1,13 @@
+{
+  "status": "SOURCE_CPU_HTTP_PASS",
+  "focused_tests": 35,
+  "http_admission_and_recovery_tests": 13,
+  "counts_overlap": true,
+  "new_tests": [
+    "test_coding_sampler_choice",
+    "test_coding_sampler_http"
+  ],
+  "initial_fixture_error": "new CLI spy returned dict instead of (exit,result); corrected fixture, retained log",
+  "gpu_quality": "NOT_RUN",
+  "installed": "NOT_YET"
+}

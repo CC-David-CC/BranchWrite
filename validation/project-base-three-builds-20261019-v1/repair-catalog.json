@@ -1,0 +1,29 @@
+[
+  {
+    "base_id": "6fe378507df1035663cc2a05dccea3ab2dd005213611dc60cf969b76be9842bd",
+    "branch": "project-base-b-compact-selected",
+    "snapshot": "5d63a44e97ac3bbb7dc058cd0a5fdb84b3171574cf8718b5b19fb6b6869a1cd6",
+    "source_revision": "8270a0ffd67178cbd53d2711a85e1a5ba8cb1891",
+    "execution_profile_id": "9b41fafe211adeb51b6c347190b1a13c17c9ee767069711dbd3dfd309d7f6e16",
+    "prefix_tokens": 29334,
+    "capacity": 262144
+  },
+  {
+    "base_id": "699da3a82bc654fb32d44bfc1c1e26e95707629c621b164824df9f9196ca4143",
+    "branch": "project-base-c-compact-examples",
+    "snapshot": "af0bce7f4682ff08128d5c81e4b28cf52decfe73220bf905cd5e3a9566ccf1da",
+    "source_revision": "8270a0ffd67178cbd53d2711a85e1a5ba8cb1891",
+    "execution_profile_id": "9b41fafe211adeb51b6c347190b1a13c17c9ee767069711dbd3dfd309d7f6e16",
+    "prefix_tokens": 44676,
+    "capacity": 262144
+  },
+  {
+    "base_id": "79adce6e75242de89b74073eb76053edfa8d3d1eb231a4431aae1504dff7f53e",
+    "branch": "project-base-a-all-product-source",
+    "snapshot": "2c059bba47c94a3342618b2edcab9351e5ab188e359dc5df0e2fce8973b5208a",
+    "source_revision": "8270a0ffd67178cbd53d2711a85e1a5ba8cb1891",
+    "execution_profile_id": "9b41fafe211adeb51b6c347190b1a13c17c9ee767069711dbd3dfd309d7f6e16",
+    "prefix_tokens": 147997,
+    "capacity": 262144
+  }
+]

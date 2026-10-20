@@ -1,0 +1,148 @@
+{
+  "base": "efa230bc4b59f8196a56b1505ddbca5740224aa7",
+  "branch": "work/branchwrite-runtime-records-20261018",
+  "checkout": "/home/dflanag3/src/branchwrite-runtime-active-20261018",
+  "current_source_sha256": {
+    "AGENTS.md": "29765c085702c5f3210ab9cccf62f7b2850f97c4311d6aa9641f901c415a410a",
+    "branchwrite/cow_actions.py": "4693adb596e24f7b1c859df8ca2a26fc4241010db75e39de67affabaca179638",
+    "branchwrite/records.py": "f1ee0e586bcea78dade5242e91aba142312c71406b2595c6791d39739691aa3a",
+    "docs/COW_THINKING_ACTIONS.md": "dd2c5caff2d7eb8f388e78d2aae879847f0d42e42311a2eb48a4eb27e7dbe2c5",
+    "docs/RUNTIME_RECORDS.md": "aada188ee3c9ba0cdd8c180278aec00a690feb28566a194c24732c165310d1c8",
+    "docs/WORKLOAD_PROGRESSION.md": "de7f2d3deb462c934481c7fb2564ef442e83e0f7431075dc348ae2714e80b82f",
+    "tests/test_runtime_records.py": "c94a0496bdb5150cf7443867e573af4fa2d958b2d7e6e3c820a1156a3aae28df",
+    "validation/CURRENT-CATALOG-STATUS.md": "e269fa5b851eea52ce99af51b6c03322d6e01d9561cfbb93fcd2aab6243be1f0",
+    "validation/run_basic_loop_edit.py": "88c1ea858cea93d98fa81e3d07cf7a298e4cb0466e0ff23035cafe3a938e81b0"
+  },
+  "default_scope": "new admission only; prior512 successes/frozen controllers unchanged",
+  "errors": 0,
+  "executed_storage_tests": [
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_artifact_precedes_event_and_exact_values_survive_reopen",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_caller_mutation_cannot_rewrite_durable_history",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_committed_frame_corruption_is_not_a_torn_tail",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_corrupt_committed_length_is_not_mislabelled_as_a_torn_write",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_exact_types_and_opaque_control_text_roundtrip",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_failed_artifact_publication_is_flushed_before_any_later_reference",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_failed_fsync_poisoning_requires_reopen_and_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_fifo_artifact_fails_instead_of_waiting_for_a_writer",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_fifo_ledger_fails_instead_of_blocking_recovery",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_foreign_thread_cannot_append_read_or_close_owner",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_frame_reordering_and_missing_artifacts_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_independent_process_cannot_take_the_writer_lock",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_mapping_order_is_canonical_and_corruption_is_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_missing_artifact_cannot_be_referenced",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_new_process_replays_real_record_without_reexecuting_an_action",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_nonfinite_unknown_types_depth_and_size_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_partial_payload_is_preserved_and_explicitly_unresolved",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_producer_exit_without_cleanup_releases_lock_and_retains_acknowledged_event",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_reordered_complete_frames_are_rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_same_artifact_deduplicates_bytes_not_invocations",
+      "status": "PASS"
+    },
+    {
+      "id": "tests.test_runtime_records.RuntimeRecordTests.test_torn_tail_is_reported_without_automatic_truncation",
+      "status": "PASS"
+    }
+  ],
+  "failures": 0,
+  "filesystems": {
+    "/home/dflanag3/spatial-artifacts/cow-vision-20261016-v1": "/dev/nvme0n1p2 ext4   /",
+    "/tmp": "/dev/nvme0n1p2 ext4   /"
+  },
+  "fixture_tolerances_changed": false,
+  "focused_current_default_and_actions": 30,
+  "focused_storage": 21,
+  "full_current_suite": 386,
+  "limits": [
+    "Storage primitives only; R02/R03 registered obligations not wholly qualified",
+    "No general production interpreter/CLI decision loop, tool dispatch or end-to-end effect deduplication yet",
+    "Process exit without cleanup tested; no power-loss, Windows, actual disk-full or GPU qualification in this increment",
+    "Fsync faults injected; not evidence of physical drive failure",
+    "Torn tails are reported and preserved; explicit repair policy and large-log pressure remain open",
+    "Original VC00-VC09 and G1-G5 scope remains separate; no gate upgraded",
+    "Natural thinking cutoff and wider end-to-end data collection deferred by owner"
+  ],
+  "native_gpu_jobs_started": 0,
+  "numerical_max_error": null,
+  "numerical_oracle": "NOT_RUN",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "preserved_red": {
+    "artifact_flush_order_failure": 1,
+    "fifo_timeouts": 2,
+    "header_length_classification_failure": 1,
+    "missing_module": 1,
+    "nondistinguishing_first_header_fixture": "initial XOR shortened length; prior implementation correctly rejected it, corrected fixture increases length"
+  },
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "python_executable": "/home/dflanag3/src/Strata/.venv/bin/python",
+  "reference_equations_changed": false,
+  "schema": 1,
+  "skips": 0,
+  "source_host": "llm-60",
+  "status": "BOUNDED_LINUX_RUNTIME_RECORD_COMPONENT_PASS",
+  "thinking_default": 1024,
+  "private_backup": {
+    "status": "PRIVATE_RECEIVER_ALL_MEMBERS_VERIFIED",
+    "archive": "/srv/data/git/private_context_cow.evidence/20261018-bw-runtime-records-v1/evidence.tar.gz",
+    "sha256": "62edac4fb7ef69e968cec0b634ba6386cca732bcdd255c65f372512d4484f27e",
+    "size_bytes": 59594,
+    "member_count": 96
+  }
+}

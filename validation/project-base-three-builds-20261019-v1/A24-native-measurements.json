@@ -1,0 +1,20 @@
+{
+  "scope": "Settled A24 native counters before any dev21 GPU request; no startup/Python/HTTP/tools timing",
+  "counters": {
+    "forward_tokens": 11972,
+    "prefill_tokens": 5964,
+    "decode_timed_tokens": 6008,
+    "decode_prepare_ns": 48591028795,
+    "decode_compute_ns": 118656268842,
+    "decode_finish_ns": 975603988,
+    "loaded_file_bytes": 3983232620,
+    "written_file_bytes": 33377989688,
+    "captures": 9,
+    "restores": 15,
+    "integrity_mismatches": 0,
+    "integrity_device_hashed_bytes": 24114244878336
+  },
+  "native_decode_tps": 35.71451890297877,
+  "trace_bytes": 57857285,
+  "trace_sha256": "89543e46d0dfff1527ef81177e6a37c16d5d220063286d3a72a54f08cf01a64d"
+}

@@ -1,0 +1,10 @@
+{
+  "collected_at": 1792494747.411705,
+  "base_commit": "4d7b0414aa89f2b7d06f03dffea396e8564ab79f",
+  "files": {
+    "branchwrite/browser_capture.py": "d7698cc36a6bb9cb46c84d71b25711916c64b743de62a941dad37a044bcbccf4",
+    "tests/test_browser_host_inspection.py": "b425520aae1e67e91b4f3dc7e81ddc40f49ceb3f409a789068d2c7998d147683",
+    "tests/test_browser_errors.py": "014d6369d17dbca0b2d7f4d91c9954d2cd7f005421cb1033a8dd8dd61520287d"
+  },
+  "note": "Fingerprints collected after execution; no before/after-stability claim in this profile."
+}

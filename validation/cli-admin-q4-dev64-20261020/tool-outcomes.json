@@ -1,0 +1,454 @@
+[
+  {
+    "details": {
+      "argv": [
+        "/usr/bin/bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "pwd && ls -la"
+      ],
+      "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+      "command": "shell",
+      "cwd": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/admin/session/turns/turn-1-bdbc1be7524ef327/world/workspace",
+      "execution_host": {
+        "euid": 1000,
+        "gid": 1000,
+        "hostname": "r4090",
+        "uid": 1000
+      },
+      "inputs": [],
+      "isolation": {
+        "kind": "bubblewrap-terminal-v1",
+        "launcher_pid": 2487764,
+        "mount_ns": "mnt:[4026532775]",
+        "namespace_members_after": [],
+        "net_ns": "net:[4026532781]",
+        "pid_ns": "pid:[4026532778]",
+        "worker_exited": true
+      },
+      "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+      "scope": "model-written Bash; read-only captured readable files; no network or host home",
+      "workspace_after_sha256": "ed700332d7b7401e0bfdb4d261a3d85544797e58d5710ba1249d6106ccee1d83"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.05253603507298976,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-9382003c5c1160bda54077c378c366c59b926529163191c1",
+    "plan_sha256": "3793df8ee70fd5373fe229ee2c249e07e7f1301066379061af3b2d95b390bef3",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "32097948a14cea95b39efc5fea1a78d792f82a4e14af89f0bddcc849ebbc35bd",
+      220
+    ],
+    "tool": "run_shell"
+  },
+  {
+    "details": {},
+    "disposition": "created",
+    "elapsed_seconds": 0.005596064031124115,
+    "exit_code": 0,
+    "image": null,
+    "observation": [
+      "2c1816f6b7ed7f29a37a7858c3ec88566dd28279d28ba9cedb50009d3f5c092c",
+      "index.html",
+      "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5"
+    ],
+    "operation_id": "bwtool-15c20a7fc9f57868acc14dce2901d3a8f22f63d885880c83",
+    "plan_sha256": "35685637bbf11961a288a03a76ffa7ae22939ef00e5ccb0663228fb00225a3d0",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "44f53a2a49f45bb1275855802f44c208ea78a2b437c27b775e1253a0c671fc25",
+      13
+    ],
+    "tool": "create_file"
+  },
+  {
+    "details": {},
+    "disposition": "read",
+    "elapsed_seconds": 2.2449996322393417e-05,
+    "exit_code": 0,
+    "image": null,
+    "observation": [
+      "2c1816f6b7ed7f29a37a7858c3ec88566dd28279d28ba9cedb50009d3f5c092c",
+      "index.html",
+      "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5"
+    ],
+    "operation_id": "bwtool-5c8b91f9c023c7802a724f8ea87529bb5655786f2ef936a1",
+    "plan_sha256": "abb69f79b4c5199a7ae32964e9bcf087cc2a8c74300182d4b839449a5ba0ae7f",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5",
+      1269
+    ],
+    "tool": "read_file"
+  },
+  {
+    "details": {
+      "command": "/usr/bin/python3 -c '\"\"\"Exact bytes into an owned, content-addressed remote staging area.\n\nThis is a file receiver, not a workflow runtime. Publication into a live service\nis a separate explicitly granted action. No root access or credential is needed.\n\"\"\"\nimport hashlib,json,os,pwd,re,stat,sys,uuid\nfrom pathlib import Path\nMAX_UPLOAD=4*1024*1024\n\ndef store(home,name,digest,body):\n if (type(name) is not str or name in ('\"'\"''\"'\"','\"'\"'.'\"'\"','\"'\"'..'\"'\"') or '\"'\"'/'\"'\"' in name or '\"'\"'\\0'\"'\"' in name\n     or len(name.encode('\"'\"'utf8'\"'\"'))>255 or type(digest) is not str\n     or re.fullmatch('\"'\"'[0-9a-f]{64}'\"'\"',digest) is None or type(body) is not bytes\n     or len(body)>MAX_UPLOAD or hashlib.sha256(body).hexdigest()!=digest):raise ValueError('\"'\"'invalid upload name, size or content hash'\"'\"')\n home=Path(home)\n if not home.is_absolute():raise ValueError('\"'\"'absolute target home required'\"'\"')\n flags=os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW\n fd=os.open('\"'\"'/'\"'\"',flags)\n try:\n  for part in home.parts[1:]:\n   other=os.open(part,flags,dir_fd=fd);os.close(fd);fd=other\n  def owned():\n   i=os.fstat(fd)\n   if i.st_uid!=os.getuid() or i.st_mode&0o022:raise ValueError('\"'\"'owned non-writable staging parent required'\"'\"')\n  owned()\n  for part in ('\"'\"'.branchwrite-uploads'\"'\"',digest):\n   try:os.mkdir(part,0o700,dir_fd=fd)\n   except FileExistsError:pass\n   os.fsync(fd);other=os.open(part,flags,dir_fd=fd);os.close(fd);fd=other;owned()\n  def verify():\n   f=os.open(name,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK,dir_fd=fd)\n   try:\n    i=os.fstat(f)\n    if (not stat.S_ISREG(i.st_mode) or i.st_uid!=os.getuid() or i.st_nlink!=1\n        or stat.S_IMODE(i.st_mode)!=0o400 or i.st_size!=len(body)):raise ValueError('\"'\"'existing upload is not the sealed original'\"'\"')\n    actual=bytearray()\n    while len(actual)<=MAX_UPLOAD:\n     chunk=os.read(f,min(65536,MAX_UPLOAD+1-len(actual)))\n     if not chunk:break\n     actual.extend(chunk)\n    if bytes(actual)!=body:raise ValueError('\"'\"'existing upload bytes differ'\"'\"')\n    after=os.fstat(f)\n    if (i.st_size,i.st_mtime_ns,i.st_ctime_ns)!=(after.st_size,after.st_mtime_ns,after.st_ctime_ns):raise ValueError('\"'\"'existing upload changed while checking'\"'\"')\n    os.fsync(f)\n   finally:os.close(f)\n  try:verify()\n  except FileNotFoundError:\n   temp='\"'\"'.upload-'\"'\"'+uuid.uuid4().hex\n   file=os.open(temp,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o400,dir_fd=fd)\n   try:\n    with os.fdopen(file,'\"'\"'wb'\"'\"') as stream:stream.write(body);stream.flush();os.fsync(stream.fileno())\n    try:os.link(temp,name,src_dir_fd=fd,dst_dir_fd=fd,follow_symlinks=False)\n    except FileExistsError:pass\n    os.unlink(temp,dir_fd=fd)\n    verify()\n   finally:\n    try:os.unlink(temp,dir_fd=fd)\n    except FileNotFoundError:pass\n  os.fsync(fd)\n finally:os.close(fd)\n return dict(schema=1,remote_path=str(home/'\"'\"'.branchwrite-uploads'\"'\"'/digest/name),sha256=digest,bytes=len(body))\n\ndef main():\n if len(sys.argv)!=3:raise ValueError('\"'\"'filename and SHA256 required'\"'\"')\n body=sys.stdin.buffer.read(MAX_UPLOAD+1)\n value=store(Path(pwd.getpwuid(os.getuid()).pw_dir),sys.argv[1],sys.argv[2],body)\n sys.stdout.write(json.dumps(value,ensure_ascii=True,sort_keys=True));sys.stdout.flush()\nif __name__=='\"'\"'__main__'\"'\"':main()\n' index.html c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5",
+      "remote_intent_sha256": "48f7ce40d03ff91b4476de15bd99f20f955df051907decd96d10605ba94252ec",
+      "remote_path": "/home/maint/.branchwrite-uploads/c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5/index.html",
+      "remote_receipt_sha256": "6284b3c6fae5e8f6500eb8f0cf7671f4415e355400ef38d1c83456aa0bb52575",
+      "resource_identity": "a980dee69110404922921c3bf55f927c1128fa67006121538f093958e08c310d",
+      "schema": 1,
+      "scope": "remote command outcome; administrative services may persist",
+      "source_bytes": 1269,
+      "source_path": "index.html",
+      "source_sha256": "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5",
+      "target": "admin01",
+      "target_identity": "52630b81ca25c992f55cdf083a99ef981d9ce682d95091ff015a7bef80a39aa7"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.042011262998130405,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-55bbfcfd07e1caa3f97384385da73e8e1e5e5d2eb60e2b77",
+    "plan_sha256": "806f19ec2a2300d278e90197f96d3f229fad6d5a90252e58eea848973dc0ae0d",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "125b5321dfd95592c189ea1794988d7df7c4ec7f4ebd04697ecb1c293e6f6f6f",
+      233
+    ],
+    "tool": "upload_file"
+  },
+  {
+    "details": {
+      "command": "set -u; whoami; pwd; echo '--- common web roots ---'; for d in /var/www/html /var/www /srv/www /usr/share/nginx/html /srv/http; do if [ -d \"$d\" ]; then echo \"DIR $d\"; ls -la \"$d\"; fi; done; echo '--- listeners ---'; (ss -ltnp 2>/dev/null || netstat -ltnp 2>/dev/null || true); echo '--- tools ---'; for c in curl wget python3 nginx apache2 httpd systemctl; do command -v \"$c\" || true; done",
+      "remote_intent_sha256": "a427410fa9d06fee6c4c41f4f994ceda07aee3d4354fd224113c08015ecab7da",
+      "remote_receipt_sha256": "63b1d97046c5dcfbf5bb973dea95155565cbb9dc919775604a574993dfe32542",
+      "resource_identity": "a980dee69110404922921c3bf55f927c1128fa67006121538f093958e08c310d",
+      "schema": 1,
+      "scope": "remote command outcome; administrative services may persist",
+      "target": "admin01",
+      "target_identity": "52630b81ca25c992f55cdf083a99ef981d9ce682d95091ff015a7bef80a39aa7"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.017549189000419574,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-b13c29d2a71de7496daabe8da0378bb9d3b493b0c41751ae",
+    "plan_sha256": "61ce4b25f7ee846e340d94889875d1035543d0ed44993dd193e7e71d92146c9f",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "418ca6749944142341da602bfb3a41952007c61652fc12bde92c5b02996e36e5",
+      1353
+    ],
+    "tool": "remote_command"
+  },
+  {
+    "details": {
+      "command": "set -u; echo '--- sudo ---'; sudo -n true && echo 'sudo-n-ok' || echo 'sudo-n-failed'; echo '--- nginx sites ---'; ls -la /etc/nginx/sites-enabled 2>/dev/null || true; for f in /etc/nginx/sites-enabled/*; do echo \"FILE $f\"; sed -n '1,220p' \"$f\"; done 2>/dev/null || true; echo '--- nginx conf grep root ---'; grep -R -n -E 'root|server_name|listen' /etc/nginx/nginx.conf /etc/nginx/sites-enabled /etc/nginx/conf.d 2>/dev/null || true; echo '--- writable? ---'; for d in /var/www/html /var/www/welcome; do if [ -w \"$d\" ]; then echo \"WRITABLE $d\"; else echo \"NOT-WRITABLE $d\"; fi; done",
+      "remote_intent_sha256": "02c7b514053168026926cd94549a8707576c195a48840dac6604d27d565605fd",
+      "remote_receipt_sha256": "b28647e9809d1182c4d594c44e42ac74272ffca51f16efdb9db4224b25404373",
+      "resource_identity": "a980dee69110404922921c3bf55f927c1128fa67006121538f093958e08c310d",
+      "schema": 1,
+      "scope": "remote command outcome; administrative services may persist",
+      "target": "admin01",
+      "target_identity": "52630b81ca25c992f55cdf083a99ef981d9ce682d95091ff015a7bef80a39aa7"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.010486766001122305,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-faade4350cc17899eaf31b6e82c12f1e7f31bf6a27895c7c",
+    "plan_sha256": "28715092a8a4a304423bc41f814bb77937686f01a3f41b98146bfa43d0dd1dc8",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "1a528eaf5c0680bb431f1a63cc6faaf62d9634d7072a7b5e4ee1ca1085030061",
+      3719
+    ],
+    "tool": "remote_command"
+  },
+  {
+    "details": {
+      "command": "set -eu\nSRC='/home/maint/.branchwrite-uploads/c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5/index.html'\nEXPECTED='c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5'\nPUB_DIR='/var/www/html/dogs'\nPUB=\"$PUB_DIR/index.html\"\ntest -f \"$SRC\"\nactual=$(sha256sum \"$SRC\" | awk '{print $1}')\n[ \"$actual\" = \"$EXPECTED\" ]\nif [ -e \"$PUB_DIR\" ] && [ ! -d \"$PUB_DIR\" ]; then echo \"conflict: $PUB_DIR exists and is not a directory\" >&2; exit 1; fi\nbefore_index=$(sha256sum /var/www/html/index.html | awk '{print $1}')\nbefore_debian=$(sha256sum /var/www/html/index.nginx-debian.html | awk '{print $1}')\nsudo install -d -m 0755 \"$PUB_DIR\"\nsudo install -m 0644 \"$SRC\" \"$PUB\"\npub_actual=$(sha256sum \"$PUB\" | awk '{print $1}')\n[ \"$pub_actual\" = \"$EXPECTED\" ]\nafter_index=$(sha256sum /var/www/html/index.html | awk '{print $1}')\nafter_debian=$(sha256sum /var/www/html/index.nginx-debian.html | awk '{print $1}')\n[ \"$before_index\" = \"$after_index\" ]\n[ \"$before_debian\" = \"$after_debian\" ]\nls -la /var/www/html \"$PUB_DIR\"\nbody=$(mktemp)\nstatus=$(curl -sS -o \"$body\" -w '%{http_code}' http://127.0.0.1/dogs/)\n[ \"$status\" = 200 ]\nbody_actual=$(sha256sum \"$body\" | awk '{print $1}')\n[ \"$body_actual\" = \"$EXPECTED\" ]\nrm -f \"$body\"\necho 'published and served bytes match'",
+      "remote_intent_sha256": "6ca70c20231b8eb40179ed0ad98464bb308ab73a6d1b1ff7c3a67912648a8328",
+      "remote_receipt_sha256": "21f82c2af1d382983f5210cf3165ee5c3fec2af9ae43c4f8347e5c2d727ce9e9",
+      "resource_identity": "a980dee69110404922921c3bf55f927c1128fa67006121538f093958e08c310d",
+      "schema": 1,
+      "scope": "remote command outcome; administrative services may persist",
+      "target": "admin01",
+      "target_identity": "52630b81ca25c992f55cdf083a99ef981d9ce682d95091ff015a7bef80a39aa7"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.03700734599988209,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-2b703ea5f9cc6706091935f639d1f352ff6b2eef808b7607",
+    "plan_sha256": "c0febfcbe0c34cc7f460da0b125af1b3ab0ba5f0c28ef06e9627a72d1f6bcd5f",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "26c0fcb586c1893d77a257bec4d92764efc0ad0443069e5b8d80410b4ea297ef",
+      476
+    ],
+    "tool": "remote_command"
+  },
+  {
+    "details": {
+      "command": "set -eu\nsha256sum /var/www/html/index.html /var/www/html/index.nginx-debian.html\nstat -c '%n %s %y' /var/www/html/index.html /var/www/html/index.nginx-debian.html\nhostname\nhostname -I 2>/dev/null || true\ngetent hosts localhost || true",
+      "remote_intent_sha256": "13e302d4896f7ea83d65e530e2d982d6d2d7b0bf1f0655a715ddf5c840b68900",
+      "remote_receipt_sha256": "7e010c82b6768159ce608d9d7d341d67d4026611e21a3cd4ff609b7b65c9ddca",
+      "resource_identity": "a980dee69110404922921c3bf55f927c1128fa67006121538f093958e08c310d",
+      "schema": 1,
+      "scope": "remote command outcome; administrative services may persist",
+      "target": "admin01",
+      "target_identity": "52630b81ca25c992f55cdf083a99ef981d9ce682d95091ff015a7bef80a39aa7"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.007848422003007727,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-acda1e36d685cfcdfc9271add19b6147175fec19e4835a45",
+    "plan_sha256": "0f79ea0ed2a81306ca4b7fa2e3fde4ee1181c32ca31d2ab883be68c8adb67bbb",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "58ea5195d6161fc8fd6b707d12d772d0bcf5ce22b542df205f3a9647a291ded6",
+      476
+    ],
+    "tool": "remote_command"
+  },
+  {
+    "details": {
+      "command": "set -eu\nfor url in http://127.0.0.1/dogs/ http://localhost/dogs/ http://10.0.2.15/dogs/; do\n  body=$(mktemp)\n  status=$(curl -sS -o \"$body\" -w '%{http_code}' \"$url\")\n  sha=$(sha256sum \"$body\" | awk '{print $1}')\n  rm -f \"$body\"\n  printf '%s status=%s sha=%s\\n' \"$url\" \"$status\" \"$sha\"\ndone",
+      "remote_intent_sha256": "05d87872ae7482794165b5e79c88431daea5b227e9b00309acc57263ccec1f8e",
+      "remote_receipt_sha256": "25fcc3947eb5c46f4e3d35c3b0b1da58d098e7a65a9b84abb3abec3805889ffc",
+      "resource_identity": "a980dee69110404922921c3bf55f927c1128fa67006121538f093958e08c310d",
+      "schema": 1,
+      "scope": "remote command outcome; administrative services may persist",
+      "target": "admin01",
+      "target_identity": "52630b81ca25c992f55cdf083a99ef981d9ce682d95091ff015a7bef80a39aa7"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.027544193999347044,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-e6bcfbf33cb553f71e3353f770381a0c69ea958b42d12a76",
+    "plan_sha256": "31493382d9a685b9f471a1cced0d07da6f40fd111bd93991c263d8d2a6707aec",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "e04198bf543e611e8bb6fd5915e6fcdc5222e263ffefcff0c43ac8650badd279",
+      309
+    ],
+    "tool": "remote_command"
+  },
+  {
+    "details": {
+      "command": "set -eu\nEXPECTED='c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5'\nUPLOAD='/home/maint/.branchwrite-uploads/c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5/index.html'\nPUB='/var/www/html/dogs/index.html'\nPRESERVE1='/var/www/html/index.html'\nPRESERVE2='/var/www/html/index.nginx-debian.html'\nPRESERVE_SHA='7682b434a69962f7fea2212f684ed8b99d4119297339caf4e2447edf8e7b5662'\ntest -f \"$UPLOAD\"\n[ \"$(sha256sum \"$UPLOAD\" | awk '{print $1}')\" = \"$EXPECTED\" ]\ntest -f \"$PUB\"\n[ \"$(sha256sum \"$PUB\" | awk '{print $1}')\" = \"$EXPECTED\" ]\n[ \"$(sha256sum \"$PRESERVE1\" | awk '{print $1}')\" = \"$PRESERVE_SHA\" ]\n[ \"$(sha256sum \"$PRESERVE2\" | awk '{print $1}')\" = \"$PRESERVE_SHA\" ]\nfor url in http://127.0.0.1/dogs/ http://localhost/dogs/ http://10.0.2.15/dogs/; do\n  body=$(mktemp)\n  status=$(curl -sS -o \"$body\" -w '%{http_code}' \"$url\")\n  [ \"$status\" = 200 ]\n  [ \"$(sha256sum \"$body\" | awk '{print $1}')\" = \"$EXPECTED\" ]\n  rm -f \"$body\"\ndone\necho 'remote final check passed'",
+      "remote_intent_sha256": "96527f7b99493dc68314d32bb29b6ded433fd9e5c6c3873068fb7ab04eebc6a6",
+      "remote_receipt_sha256": "40b6b2c9f7e3e7dac1d8d4d92aac3cedfff0cd62433198c1459aea7fa3873de4",
+      "resource_identity": "a980dee69110404922921c3bf55f927c1128fa67006121538f093958e08c310d",
+      "schema": 1,
+      "scope": "remote command outcome; administrative services may persist",
+      "target": "admin01",
+      "target_identity": "52630b81ca25c992f55cdf083a99ef981d9ce682d95091ff015a7bef80a39aa7"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.03519476899964502,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-e29fbb786d8ef871dcbe99fb9e60b51316ff93d026d25cbd",
+    "plan_sha256": "5915e274003c2a28a4f7273519c0853b378cd9a2b0dd56f80033662f9bf24a0a",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "25f231ccea0b34f4d619236bf4931b2ae09e0364ac7305fad6832f310bb9ba41",
+      26
+    ],
+    "tool": "check_remote"
+  },
+  {
+    "details": {
+      "argv": [
+        "/usr/bin/bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "set -eu\nEXPECTED='c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5'\ntest -f index.html\n[ \"$(sha256sum index.html | awk '{print $1}')\" = \"$EXPECTED\" ]\ngrep -q '<title>Dogs: Friendly Companions</title>' index.html\ngrep -q 'Static demo page about dogs.' index.html\necho 'local project copy matches expected bytes'"
+      ],
+      "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+      "command": "shell",
+      "cwd": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/admin/session/turns/turn-1-bdbc1be7524ef327/world/workspace",
+      "execution_host": {
+        "euid": 1000,
+        "gid": 1000,
+        "hostname": "r4090",
+        "uid": 1000
+      },
+      "inputs": [
+        {
+          "bytes": 1269,
+          "mode": "0600",
+          "path": "index.html",
+          "sha256": "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5"
+        }
+      ],
+      "isolation": {
+        "kind": "bubblewrap-terminal-v1",
+        "launcher_pid": 2488885,
+        "mount_ns": "mnt:[4026532775]",
+        "namespace_members_after": [],
+        "net_ns": "net:[4026532781]",
+        "pid_ns": "pid:[4026532778]",
+        "worker_exited": true
+      },
+      "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+      "scope": "model-written Bash; read-only captured readable files; no network or host home",
+      "workspace_after_sha256": "ec6f26da55283f2c2546c8acb4c7feba0165b92100b43057c03291f4e3df9ec8"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.05269895296078175,
+    "exit_code": 1,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-e8a320f83f7f3a4261d3c641ed1c989dbb688062861b4e4a",
+    "plan_sha256": "6019287f29fd6954774e80c646a6cae8fa1ba9fe7828da60274f8f7e68cf0d74",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "915966b8d498109a4c6476949ebc1368104ad7f47cd103b41a43f859c702b30f",
+      46
+    ],
+    "stdout": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "tool": "run_check"
+  },
+  {
+    "details": {
+      "argv": [
+        "/usr/bin/bash",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "set -eu\nEXPECTED='c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5'\ntest -f index.html\nsha256sum index.html | grep -q \"^$EXPECTED\"\ngrep -q '<title>Dogs: Friendly Companions</title>' index.html\ngrep -q 'Static demo page about dogs.' index.html\necho 'local project copy matches expected bytes'"
+      ],
+      "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+      "command": "shell",
+      "cwd": "/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/admin/session/turns/turn-1-bdbc1be7524ef327/world/workspace",
+      "execution_host": {
+        "euid": 1000,
+        "gid": 1000,
+        "hostname": "r4090",
+        "uid": 1000
+      },
+      "inputs": [
+        {
+          "bytes": 1269,
+          "mode": "0600",
+          "path": "index.html",
+          "sha256": "c71ddee3e4df9c74f937895eb273b77043a866eec5d220714895e4a0c13c59a5"
+        }
+      ],
+      "isolation": {
+        "kind": "bubblewrap-terminal-v1",
+        "launcher_pid": 2488939,
+        "mount_ns": "mnt:[4026532775]",
+        "namespace_members_after": [],
+        "net_ns": "net:[4026532781]",
+        "pid_ns": "pid:[4026532778]",
+        "worker_exited": true
+      },
+      "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+      "scope": "model-written Bash; read-only captured readable files; no network or host home",
+      "workspace_after_sha256": "ec6f26da55283f2c2546c8acb4c7feba0165b92100b43057c03291f4e3df9ec8"
+    },
+    "disposition": "exited",
+    "elapsed_seconds": 0.05468914611265063,
+    "exit_code": 0,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-00283074544b7236f0fec07162457fb239076301c2f999d9",
+    "plan_sha256": "ac73bb86e0c7ffc4b5d3987754a9abd3f165d15fcef32adfb8a4819ad8ade1ca",
+    "requested_finish": false,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "bc55405f065d0afa686dd66aa0e194848f943de07e8b3cc22be3bce6e8b8cd2a",
+      42
+    ],
+    "tool": "run_check"
+  },
+  {
+    "details": {},
+    "disposition": "completion_requested",
+    "elapsed_seconds": 0.0,
+    "exit_code": null,
+    "image": null,
+    "observation": null,
+    "operation_id": "bwtool-c29fe490ad3293bcf55f7ddec930e8b0783ff46ce4db0e48",
+    "plan_sha256": "3d22497f7a416ec909dcd7d505b0ba350ddf0b3aa4d9962b6ae2dd82bdd7f40c",
+    "requested_finish": true,
+    "schema": 1,
+    "stderr": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      0
+    ],
+    "stdout": [
+      "9d9a39e64a558c5e72ec9e2fda5e126ab6da53d6a5407132d9fe53ddcf36a361",
+      1643
+    ],
+    "tool": "finish"
+  }
+]

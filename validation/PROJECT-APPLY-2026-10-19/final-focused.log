@@ -1,0 +1,13 @@
+test_destination_created_at_publication_is_preserved (test_project_apply.ProjectApplyTests.test_destination_created_at_publication_is_preserved) ... ok
+test_exact_copy_applied_without_touching_original (test_project_apply.ProjectApplyTests.test_exact_copy_applied_without_touching_original) ... ok
+test_existing_empty_destination_is_not_replaced (test_project_apply.ProjectApplyTests.test_existing_empty_destination_is_not_replaced) ... ok
+test_flush_failure_before_publication_leaves_no_output (test_project_apply.ProjectApplyTests.test_flush_failure_before_publication_leaves_no_output) ... ok
+test_hash_pinned_but_malformed_manifest_is_rejected (test_project_apply.ProjectApplyTests.test_hash_pinned_but_malformed_manifest_is_rejected) ... ok
+test_overlapping_destination_is_rejected (test_project_apply.ProjectApplyTests.test_overlapping_destination_is_rejected) ... ok
+test_source_drift_is_rejected (test_project_apply.ProjectApplyTests.test_source_drift_is_rejected) ... ok
+test_wrong_archive_hash_is_rejected_before_output (test_project_apply.ProjectApplyTests.test_wrong_archive_hash_is_rejected_before_output) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.083s
+
+OK

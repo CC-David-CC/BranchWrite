@@ -1,0 +1,11 @@
+{
+  "status": "BOUNDED_Q8_TWO_TASK_REFRESH_PASS",
+  "sampler": "greedy",
+  "thinking_default": 4096,
+  "parent_interventions_during_model_loops": 0,
+  "old_pack": "44d9bceab89f80614b56a3ad341ca9bf89e9eb29ae12f0130b11e303976c96cd",
+  "A_pack": "90ca61cbc68aeb9418baea3c58fb4b5ffe5edbf48733ba74c2b38a45d2ea48d3",
+  "B_pack": "c16df7b2331925c25c11ff152150e3014d0397f01822a264349afe3f025a105c",
+  "numerical_oracle": "NOT_RUN",
+  "limits": "Two bounded library tasks; not broad coding or full gate qualification."
+}

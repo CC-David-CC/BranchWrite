@@ -1,0 +1,17 @@
+# Worked example: the host already owns bounded execution
+Task: Run the supplied slow_probe.sh through the actual bounded terminal tool.
+Host facts: run_shell launches one fresh sandbox per call and applies its own
+deadline. Host retirement checks run before the tool returns.
+First inspect the script through read_file. If it has no execute permission,
+use its interpreter. Submit the simple action:
+{"tool":"run_shell","arguments":{"command":"bash ./slow_probe.sh"}}
+Do not add GNU timeout, setsid, manual group killing, or a process-scanning
+harness just to reproduce facilities the host already supplies.
+Suppose the actual tool returns disposition timeout, exit_code143,
+worker_exited true, namespace_members_after[].
+Correct next action: finish with an accurate report that the probe timed out,
+not succeeded, and the HOST receipt establishes retirement of that sandbox.
+Do not run another sandbox's ps to prove this one's cleanup.
+If the host instead returns a different outcome, report that actual outcome;
+do not copy this fictional example's status. If retirement is unproven, do not
+claim cleanup. These are teaching examples, not live results or new permissions.

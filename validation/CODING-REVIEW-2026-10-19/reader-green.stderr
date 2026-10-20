@@ -1,0 +1,11 @@
+test_active_writer_excludes_reader (test_readonly_log.ReadOnlyLogTests.test_active_writer_excludes_reader) ... ok
+test_empty_existing_events_are_not_initialized (test_readonly_log.ReadOnlyLogTests.test_empty_existing_events_are_not_initialized) ... ok
+test_existing_log_and_artifacts_are_read_without_changes (test_readonly_log.ReadOnlyLogTests.test_existing_log_and_artifacts_are_read_without_changes) ... ok
+test_missing_log_is_not_created (test_readonly_log.ReadOnlyLogTests.test_missing_log_is_not_created) ... ok
+test_reader_cannot_publish_artifact_or_event (test_readonly_log.ReadOnlyLogTests.test_reader_cannot_publish_artifact_or_event) ... ok
+test_readers_share_lock_and_exclude_writer (test_readonly_log.ReadOnlyLogTests.test_readers_share_lock_and_exclude_writer) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+OK

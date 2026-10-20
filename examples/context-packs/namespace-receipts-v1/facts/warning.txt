@@ -1,0 +1,1 @@
+WARNING: Each terminal call starts a fresh namespace. Prefer actual host retirement receipts for cleanup. Do not infer previous process identity from reused numeric PIDs. Inspect a script and use an interpreter if execute permission is absent; do not change permissions unless granted.

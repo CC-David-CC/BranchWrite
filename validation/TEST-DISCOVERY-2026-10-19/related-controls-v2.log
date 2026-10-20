@@ -1,0 +1,106 @@
+test_empty_suite_is_a_clear_nonzero_result (test_test_discovery_layouts.DiscoveryLayoutTests.test_empty_suite_is_a_clear_nonzero_result) ... ok
+test_package_free_assertion_failure_is_executed_not_import_failure (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_assertion_failure_is_executed_not_import_failure) ... ok
+test_package_free_tests_import_project_and_preserve_all_bytes (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_tests_import_project_and_preserve_all_bytes) ... ok
+test_package_free_tests_keep_readonly_and_host_boundaries (test_test_discovery_layouts.DiscoveryLayoutTests.test_package_free_tests_keep_readonly_and_host_boundaries) ... ok
+test_packaged_relative_imports_still_work (test_test_discovery_layouts.DiscoveryLayoutTests.test_packaged_relative_imports_still_work) ... ok
+test_absolute_deadline_stops_owned_process (test_execution.ExecutionTests.test_absolute_deadline_stops_owned_process) ... ok
+test_denied_edit_and_stale_preimage_do_not_change_file (test_execution.ExecutionTests.test_denied_edit_and_stale_preimage_do_not_change_file) ... ok
+test_missing_test_grant_rejects_before_process_creation (test_execution.ExecutionTests.test_missing_test_grant_rejects_before_process_creation) ... ok
+test_process_cannot_modify_protected_tests_or_read_host_sentinel (test_execution.ExecutionTests.test_process_cannot_modify_protected_tests_or_read_host_sentinel) ... ok
+test_real_test_edit_test_loop_preserves_input_and_protected_tests (test_execution.ExecutionTests.test_real_test_edit_test_loop_preserves_input_and_protected_tests) ... ok
+test_run_directory_collision_is_never_cleaned_up_as_owned (test_execution.ExecutionTests.test_run_directory_collision_is_never_cleaned_up_as_owned) ... ok
+test_symlink_input_is_rejected (test_execution.ExecutionTests.test_symlink_input_is_rejected) ... ok
+test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict (test_tool_registry.ToolRegistryTests.test_actual_capture_publishes_pixels_and_isolation_without_protected_verdict) ... ok
+test_actual_isolated_registered_tests_return_stdout_stderr_and_exit (test_tool_registry.ToolRegistryTests.test_actual_isolated_registered_tests_return_stdout_stderr_and_exit) ... ok
+test_create_is_no_overwrite_and_returns_verified_content_identity (test_tool_registry.ToolRegistryTests.test_create_is_no_overwrite_and_returns_verified_content_identity) ... ok
+test_duplicate_extra_fields_unknown_tool_and_traversal_are_rejected (test_tool_registry.ToolRegistryTests.test_duplicate_extra_fields_unknown_tool_and_traversal_are_rejected) ... ok
+test_edit_requires_a_visible_observation_and_exact_preimage (test_tool_registry.ToolRegistryTests.test_edit_requires_a_visible_observation_and_exact_preimage) ... ok
+test_failure_after_creation_is_indeterminate_and_never_an_automatic_retry (test_tool_registry.ToolRegistryTests.test_failure_after_creation_is_indeterminate_and_never_an_automatic_retry) ... ok
+test_file_mode_is_a_relevant_dependency (test_tool_registry.ToolRegistryTests.test_file_mode_is_a_relevant_dependency) ... ok
+test_inventory_handles_more_than_the_value_codec_container_limit (test_tool_registry.ToolRegistryTests.test_inventory_handles_more_than_the_value_codec_container_limit) ... ok
+test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass (test_tool_registry.ToolRegistryTests.test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass) ... FAIL
+test_model_finish_requests_no_verdict_and_no_file_effect (test_tool_registry.ToolRegistryTests.test_model_finish_requests_no_verdict_and_no_file_effect) ... ok
+test_protected_inspector_cannot_be_exposed_as_a_model_capture_tool (test_tool_registry.ToolRegistryTests.test_protected_inspector_cannot_be_exposed_as_a_model_capture_tool) ... ok
+test_real_read_returns_source_observation_and_exact_bytes (test_tool_registry.ToolRegistryTests.test_real_read_returns_source_observation_and_exact_bytes) ... ok
+test_relevant_change_after_freeze_blocks_dispatch (test_tool_registry.ToolRegistryTests.test_relevant_change_after_freeze_blocks_dispatch) ... ok
+test_schema_and_parser_use_the_same_registered_tools_and_granted_paths (test_tool_registry.ToolRegistryTests.test_schema_and_parser_use_the_same_registered_tools_and_granted_paths) ... ok
+test_schema_compiles_in_existing_cow_json_grammar_and_rejects_illegal_tool (test_tool_registry.ToolRegistryTests.test_schema_compiles_in_existing_cow_json_grammar_and_rejects_illegal_tool) ... ok
+test_schema_views_cannot_mutate_registered_permissions (test_tool_registry.ToolRegistryTests.test_schema_views_cannot_mutate_registered_permissions) ... ok
+test_sibling_observation_and_plan_cannot_cross_worlds (test_tool_registry.ToolRegistryTests.test_sibling_observation_and_plan_cannot_cross_worlds) ... ok
+test_test_plan_depends_on_all_workspace_inputs (test_tool_registry.ToolRegistryTests.test_test_plan_depends_on_all_workspace_inputs) ... ok
+test_tool_outputs_publish_as_durable_roots_for_the_same_frame_kernel (test_tool_registry.ToolRegistryTests.test_tool_outputs_publish_as_durable_roots_for_the_same_frame_kernel) ... ok
+test_unicode_byte_limits_are_not_only_schema_character_limits (test_tool_registry.ToolRegistryTests.test_unicode_byte_limits_are_not_only_schema_character_limits) ... ok
+test_unrelated_file_change_does_not_stale_a_one_file_plan (test_tool_registry.ToolRegistryTests.test_unrelated_file_change_does_not_stale_a_one_file_plan) ... ok
+test_actual_read_returns_to_the_exact_parent_slot (test_tool_dispatch.ToolDispatchTests.test_actual_read_returns_to_the_exact_parent_slot) ... ok
+test_after_effect_failure_leaves_waiting_and_never_resends (test_tool_dispatch.ToolDispatchTests.test_after_effect_failure_leaves_waiting_and_never_resends) ... ok
+test_finish_is_a_pure_request_not_an_acceptance_or_automatic_flow_close (test_tool_dispatch.ToolDispatchTests.test_finish_is_a_pure_request_not_an_acceptance_or_automatic_flow_close) ... ok
+test_finished_call_replays_saved_result_after_reopen_without_dispatch (test_tool_dispatch.ToolDispatchTests.test_finished_call_replays_saved_result_after_reopen_without_dispatch) ... ok
+test_relevant_change_becomes_a_durable_known_preflight_rejection (test_tool_dispatch.ToolDispatchTests.test_relevant_change_becomes_a_durable_known_preflight_rejection) ... ok
+test_changed_files_invalidate_prior_successful_tests (test_interpreter.InterpreterTests.test_changed_files_invalidate_prior_successful_tests) ... ok
+test_feedback_names_world_and_file_hash_and_keeps_actual_source (test_interpreter.InterpreterTests.test_feedback_names_world_and_file_hash_and_keeps_actual_source) ... ok
+test_finish_request_without_host_tests_is_not_verified (test_interpreter.InterpreterTests.test_finish_request_without_host_tests_is_not_verified) ... ok
+test_malformed_proposal_becomes_feedback_not_an_effect (test_interpreter.InterpreterTests.test_malformed_proposal_becomes_feedback_not_an_effect) ... ok
+test_model_profiles_are_detached_after_freeze (test_interpreter.InterpreterTests.test_model_profiles_are_detached_after_freeze) ... ok
+test_passed_actual_tests_and_finish_are_verified (test_interpreter.InterpreterTests.test_passed_actual_tests_and_finish_are_verified) ... ok
+test_plan_act_does_not_re_freeze_and_stale_world_returns_rejection (test_interpreter.InterpreterTests.test_plan_act_does_not_re_freeze_and_stale_world_returns_rejection) ... ok
+test_registry_or_program_change_refused_on_reopen (test_interpreter.InterpreterTests.test_registry_or_program_change_refused_on_reopen) ... ok
+test_rejected_proposal_does_not_erase_a_previously_visible_read (test_interpreter.InterpreterTests.test_rejected_proposal_does_not_erase_a_previously_visible_read) ... ok
+test_repeat_exhaustion_and_step_budget_keep_distinct_statuses (test_interpreter.InterpreterTests.test_repeat_exhaustion_and_step_budget_keep_distinct_statuses) ... ok
+test_restart_after_tool_return_before_parent_resume_never_reexecutes (test_interpreter.InterpreterTests.test_restart_after_tool_return_before_parent_resume_never_reexecutes) ... ok
+test_text_value_plan_act_uses_actual_files_and_preserves_original (test_interpreter.InterpreterTests.test_text_value_plan_act_uses_actual_files_and_preserves_original) ... ok
+test_type_and_missing_binding_reject_before_root_admission (test_interpreter.InterpreterTests.test_type_and_missing_binding_reject_before_root_admission) ... ok
+test_unknown_post_effect_does_not_retry_after_reopen (test_interpreter.InterpreterTests.test_unknown_post_effect_does_not_retry_after_reopen) ... ok
+test_whole_program_rejects_late_unsupported_operation_before_any_dispatch (test_interpreter.InterpreterTests.test_whole_program_rejects_late_unsupported_operation_before_any_dispatch) ... ok
+test_zero_tests_cannot_verify (test_interpreter.InterpreterTests.test_zero_tests_cannot_verify) ... ok
+test_model_chosen_read_edit_test_finish_with_feedback_and_restart (test_interpreter.ModelInterpreterTests.test_model_chosen_read_edit_test_finish_with_feedback_and_restart) ... ok
+test_actual_test_receipt_from_another_registry_cannot_verify (test_unit_verifier_scope.UnitVerifierScopeTests.test_actual_test_receipt_from_another_registry_cannot_verify) ... ok
+test_changed_current_files_invalidate_joined_success (test_unit_verifier_scope.UnitVerifierScopeTests.test_changed_current_files_invalidate_joined_success) ... ok
+test_joined_current_receipt_survives_real_log_reopen (test_unit_verifier_scope.UnitVerifierScopeTests.test_joined_current_receipt_survives_real_log_reopen) ... ok
+test_kernel_prevents_another_root_in_same_log (test_unit_verifier_scope.UnitVerifierScopeTests.test_kernel_prevents_another_root_in_same_log) ... ok
+test_unjoined_actual_test_receipt_cannot_verify_until_resume (test_unit_verifier_scope.UnitVerifierScopeTests.test_unjoined_actual_test_receipt_cannot_verify_until_resume) ... ok
+test_unjoined_sibling_cannot_supply_successful_tests (test_unit_verifier_scope.UnitVerifierScopeTests.test_unjoined_sibling_cannot_supply_successful_tests) ... ok
+test_file_only_prefix_does_not_demand_ungranted_tests (test_file_completion.FileCompletionCliTests.test_file_only_prefix_does_not_demand_ungranted_tests) ... ok
+test_real_cli_file_policy_and_separate_process_receipt_replay (test_file_completion.FileCompletionCliTests.test_real_cli_file_policy_and_separate_process_receipt_replay) ... ok
+test_closed_read_child_is_not_visible_until_parent_resumes (test_file_completion.FileCompletionTests.test_closed_read_child_is_not_visible_until_parent_resumes) ... ok
+test_create_observation_cannot_substitute_for_a_read (test_file_completion.FileCompletionTests.test_create_observation_cannot_substitute_for_a_read) ... ok
+test_create_read_finish_without_test_grant_passes_actual_bytes (test_file_completion.FileCompletionTests.test_create_read_finish_without_test_grant_passes_actual_bytes) ... ok
+test_file_changed_after_read_fails (test_file_completion.FileCompletionTests.test_file_changed_after_read_fails) ... ok
+test_finish_claim_with_correct_file_but_no_tool_read_fails (test_file_completion.FileCompletionTests.test_finish_claim_with_correct_file_but_no_tool_read_fails) ... ok
+test_host_policy_is_detached_and_changed_policy_cannot_resume (test_file_completion.FileCompletionTests.test_host_policy_is_detached_and_changed_policy_cannot_resume) ... ok
+test_invalid_or_ungranted_policy_is_rejected (test_file_completion.FileCompletionTests.test_invalid_or_ungranted_policy_is_rejected) ... ok
+test_missing_host_policy_rejected_at_program_preflight (test_file_completion.FileCompletionTests.test_missing_host_policy_rejected_at_program_preflight) ... ok
+test_read_in_another_run_cannot_verify (test_file_completion.FileCompletionTests.test_read_in_another_run_cannot_verify) ... ok
+test_scope_close_rechecks_bytes_after_verification (test_file_completion.FileCompletionTests.test_scope_close_rechecks_bytes_after_verification) ... ok
+test_successful_read_without_finish_is_not_completion (test_file_completion.FileCompletionTests.test_successful_read_without_finish_is_not_completion) ... ok
+test_wrong_expected_hash_fails (test_file_completion.FileCompletionTests.test_wrong_expected_hash_fails) ... ok
+test_closed_command_is_not_available_until_parent_resumes (test_command_visibility.VisibilityTests.test_closed_command_is_not_available_until_parent_resumes) ... ok
+test_active_writer_is_reported_without_ledger_read (test_coding_status.CodingStatusTests.test_active_writer_is_reported_without_ledger_read) ... ok
+test_closed_result_is_recorded_not_claimed_reverified (test_coding_status.CodingStatusTests.test_closed_result_is_recorded_not_claimed_reverified) ... ok
+test_corrupt_log_is_not_repaired (test_coding_status.CodingStatusTests.test_corrupt_log_is_not_repaired) ... ok
+test_human_output_labels_verification_scope (test_coding_status.CodingStatusTests.test_human_output_labels_verification_scope) ... ok
+test_incomplete_run_does_not_claim_success (test_coding_status.CodingStatusTests.test_incomplete_run_does_not_claim_success) ... ok
+test_missing_state_is_not_created (test_coding_status.CodingStatusTests.test_missing_state_is_not_created) ... ok
+test_model_guidance_explains_durable_only_recovery_and_resume (test_coding_status.CodingStatusTests.test_model_guidance_explains_durable_only_recovery_and_resume) ... ok
+test_pending_model_status_supplies_exact_recovery_argv_without_execution (test_coding_status.CodingStatusTests.test_pending_model_status_supplies_exact_recovery_argv_without_execution) ... ok
+test_pending_tool_is_not_presented_as_model_output_recovery (test_coding_status.CodingStatusTests.test_pending_tool_is_not_presented_as_model_output_recovery) ... ok
+test_unsettled_operation_is_visible (test_coding_status.CodingStatusTests.test_unsettled_operation_is_visible) ... ok
+test_cli_cannot_reconcile_a_tool_effect (test_coding_reconciliation.CodingReconciliationTests.test_cli_cannot_reconcile_a_tool_effect) ... ok
+test_cli_refuses_live_workflow_writer (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_live_workflow_writer) ... ok
+test_cli_refuses_operation_not_owned_by_pending_model_frame (test_coding_reconciliation.CodingReconciliationTests.test_cli_refuses_operation_not_owned_by_pending_model_frame) ... ok
+test_cli_restores_output_then_existing_step_resumes_without_new_work (test_coding_reconciliation.CodingReconciliationTests.test_cli_restores_output_then_existing_step_resumes_without_new_work) ... ok
+test_failed_uncommitted_model_operation_stays_unresolved (test_coding_reconciliation.CodingReconciliationTests.test_failed_uncommitted_model_operation_stays_unresolved) ... ok
+test_self_consistent_changed_launch_rejected_before_network (test_coding_reconciliation.CodingReconciliationTests.test_self_consistent_changed_launch_rejected_before_network) ... ok
+
+======================================================================
+FAIL: test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass (test_tool_registry.ToolRegistryTests.test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-model-reconciliation-20261019/tests/test_tool_registry.py", line 102, in test_missing_test_package_is_a_real_nonzero_tool_result_not_a_pass
+    self.assertEqual(result.exit_code,1);self.assertIn(b'Start directory is not importable',result.stderr)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'Start directory is not importable' not found in b'\n----------------------------------------------------------------------\nRan 0 tests in 0.000s\n\nNO TESTS RAN\nNo test cases found; an empty suite is not a successful verification.\n'
+
+----------------------------------------------------------------------
+Ran 92 tests in 9.097s
+
+FAILED (failures=1)

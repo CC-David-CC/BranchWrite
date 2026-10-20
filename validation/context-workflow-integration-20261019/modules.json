@@ -1,0 +1,15 @@
+[
+  "test_context_pack_refresh_http",
+  "test_context_pack",
+  "test_project_base_questions",
+  "test_base_choice_http",
+  "test_project_apply",
+  "test_coding_status",
+  "test_project_export",
+  "test_base_choice_launch",
+  "test_base_choice",
+  "test_project_base_pack",
+  "test_context_pack_refresh",
+  "test_coding_review",
+  "test_project_baseline"
+]

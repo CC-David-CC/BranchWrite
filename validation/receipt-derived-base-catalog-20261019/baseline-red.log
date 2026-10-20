@@ -1,0 +1,17 @@
+test_automatic_host_selection_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_automatic_host_selection_uses_existing_fork_and_ask_api) ... ERROR
+
+======================================================================
+ERROR: test_automatic_host_selection_uses_existing_fork_and_ask_api (test_base_choice_http.BaseChoiceHttpTests.test_automatic_host_selection_uses_existing_fork_and_ask_api)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/spatial-artifacts/branchwrite-pack-catalog-20261019-v1/source/tests/test_base_choice_http.py", line 7, in test_automatic_host_selection_uses_existing_fork_and_ask_api
+    self.exercise(True)
+  File "/home/dflanag3/spatial-artifacts/branchwrite-pack-catalog-20261019-v1/source/tests/test_base_choice_http.py", line 54, in exercise
+    offer=project_base.catalog_entry(version,pack_path=pack['pack_path'],source_revision='a'*40,execution_profile_id=profile['execution_profile_id'],capacity=131072)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GoldenPath' object has no attribute 'catalog_entry'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.739s
+
+FAILED (errors=1)

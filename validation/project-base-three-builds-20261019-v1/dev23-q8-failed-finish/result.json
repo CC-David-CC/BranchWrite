@@ -1,0 +1,98 @@
+{
+  "status": "CLIENT_FINISHED_SERVER_STOP_REQUESTED",
+  "server_host": "dflanag3-B650-GAMING-X-AX",
+  "client_host": "llm-49",
+  "profile_sha256": "f4f192294a8841bafebed151df5d5f2f433abb99441cfaa80586daf0a195c2b1",
+  "model_contract_id": "3fcd9cfc2e977dbf56522e710cb3903e03ab00ca2ed5d0daa3d9f840edf5a833",
+  "execution_profile_id": "2e0a61f08d0dca09751c7eee3dd0947b2431b5f73010e268b7608eefdae4ae47",
+  "model_weights_sha256": "5a72afc5bd2c4d28ff5875d40ab441e91c17e8823d7663e18c9ec78ab993a16f",
+  "eos_tokens": [
+    248044,
+    248046
+  ],
+  "grammar_sha256": "d2aa3638ced88b9b2a1cfefff3f3efeeb76434ae88d91119e1e22441c8afe773",
+  "service_argv_redacted": [
+    "/home/dflanag3/src/Strata/.venv/bin/python",
+    "-B",
+    "-m",
+    "serve.cow_http",
+    "--profile",
+    "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-failed-finish-v1/profile.json",
+    "--store",
+    "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-failed-finish-v1/store",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "0",
+    "--text",
+    "--grammar-store",
+    "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-failed-finish-v1/grammar-store",
+    "--api-key=<REDACTED>",
+    "--ram-gib",
+    "24",
+    "--disk-gib",
+    "64",
+    "--checkpoint-idle-seconds",
+    "1800",
+    "--pool-trace-output",
+    "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-failed-finish-v1/pool.json"
+  ],
+  "numerical_oracle": "NOT_RUN",
+  "server_pid": 748210,
+  "ready": {
+    "event": "ready",
+    "address": [
+      "127.0.0.1",
+      40683
+    ],
+    "execution_profile_id": "2e0a61f08d0dca09751c7eee3dd0947b2431b5f73010e268b7608eefdae4ae47",
+    "runtime_sources": {
+      "status": "verified",
+      "files": 56,
+      "files_sha256": "a3df1fa57e9eeb73476559afb0e80fee1ca15c0bfb097e462f84ed2ad56945d7",
+      "declared_source_commit": "6647ae4637cf43ea356cfb1bc799722238212434"
+    }
+  },
+  "startup_seconds": 77.11623434303328,
+  "ready_meminfo": "MemTotal:       130975976 kB\nMemFree:         4939468 kB\nMemAvailable:   46045576 kB\nBuffers:           26676 kB\nCached:         117858920 kB\nSwapCached:        11608 kB\nActive:         68655172 kB\nInactive:       53190868 kB\nActive(anon):   68062484 kB\nInactive(anon): 11651712 kB\nActive(file):     592688 kB\nInactive(file): 41539156 kB\nUnevictable:         132 kB\nMlocked:             132 kB\nSwapTotal:       4194300 kB\nSwapFree:             48 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:               380 kB\nWriteback:             0 kB\nAnonPages:       3950880 kB\nMapped:         85814672 kB\nShmem:          75753492 kB\nKReclaimable:     650024 kB\nSlab:            1178728 kB\nSReclaimable:     650024 kB\nSUnreclaim:       528704 kB\nKernelStack:       15088 kB\nPageTables:       258176 kB\nSecPageTables:     97756 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    69682288 kB\nCommitted_AS:   88548676 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      648260 kB\nVmallocChunk:          0 kB\nPercpu:            59520 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     43008 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:          622936 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    51922328 kB\nDirectMap2M:    72978432 kB\nDirectMap1G:     8388608 kB\n",
+  "requested_ram_gib": 24,
+  "stop": {
+    "exit_code": 0,
+    "graceful": true,
+    "pid": 748210,
+    "command": [
+      "/home/dflanag3/src/Strata/.venv/bin/python",
+      "-B",
+      "-m",
+      "serve.cow_http",
+      "--profile",
+      "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-failed-finish-v1/profile.json",
+      "--store",
+      "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-failed-finish-v1/store",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "0",
+      "--text",
+      "--grammar-store",
+      "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-failed-finish-v1/grammar-store",
+      "--api-key=<REDACTED>",
+      "--ram-gib",
+      "24",
+      "--disk-gib",
+      "64",
+      "--checkpoint-idle-seconds",
+      "1800",
+      "--pool-trace-output",
+      "/home/dflanag3/spatial-artifacts/project-base-three-builds-20261019-v1/dev23-q8-failed-finish-v1/pool.json"
+    ],
+    "forced_process_group_cleanup": false
+  },
+  "worker_shutdown": {
+    "native_pid": 748217,
+    "native_exit_code": 0,
+    "close_succeeded": true,
+    "trace_sha256": "174ada5ebafbdc9a1c41d4e0266e5c05ef5cceed0ee78179dc777afa4242557f",
+    "event_count": 25
+  }
+}

@@ -1,0 +1,7 @@
+test_real_sandbox_reports_retirement_and_preserves_literal_bytes (test_client_doctor.ClientDoctorTests.test_real_sandbox_reports_retirement_and_preserves_literal_bytes) ... ok
+test_sandbox_refusal_is_failure_without_unsafe_fallback (test_client_doctor.ClientDoctorTests.test_sandbox_refusal_is_failure_without_unsafe_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.061s
+
+OK

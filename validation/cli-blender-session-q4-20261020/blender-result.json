@@ -1,0 +1,14 @@
+{
+  "status": "NEEDS_RECOVERY",
+  "controller_pid": 2484012,
+  "client_host": "r4090",
+  "prompt_sha256": "7c96b380c0eb2cc508878a83629ad51f9b5a4ffe77bfdfb911a551e69a05ab74",
+  "task": "Build scene.py for Blender: a small blue robot on an orange rectangular platform, with two silver mechanical arms. Give it simple eyes so the front is clear. Animate one arm rotating through 45 degrees over frames 1 to 24. Keep the rest still. Use ordinary bpy Python and save scene.blend in /work. Use inspect_scene for the actual build, independent reopen, controlled views and 24-frame animation. Inspect the returned actual image and fix concrete errors. Once the current inspect_scene receipt passes, finish. The exports are immutable artifacts outside the source workspace; do not test their presence with run_shell. No downloads or external assets.",
+  "operator_candidate_edits": 0,
+  "scope": "installed dev63 interactive session -> candidate780e824a HTTP/Q4; reopen CAD session for Blender, prior context/files and actual image feedback; no operator task revisions",
+  "elapsed_seconds": 336.2793883450795,
+  "client_pid": 2484014,
+  "submitted_seconds": 0.3113968250108883,
+  "error": "RuntimeError('original session needs inspection; no automatic resend')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/dflanag3/spatial-artifacts/bw-candidate-cli-dev63-20261020/blender_session_campaign.py\", line 30, in <module>\n    if 'Needs recovery:' in text or 'Could not open session:' in text:record['status']='NEEDS_RECOVERY';raise RuntimeError('original session needs inspection; no automatic resend')\n                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: original session needs inspection; no automatic resend\n"
+}

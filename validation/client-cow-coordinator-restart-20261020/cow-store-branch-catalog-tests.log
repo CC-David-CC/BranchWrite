@@ -1,0 +1,15 @@
+test_branch_and_operation_ids_accept_128_ascii_bytes (test_store_branch_catalog.StoreBranchCatalogTests.test_branch_and_operation_ids_accept_128_ascii_bytes) ... ok
+test_catalog_does_not_change_branch_or_history_files (test_store_branch_catalog.StoreBranchCatalogTests.test_catalog_does_not_change_branch_or_history_files) ... ok
+test_catalog_scans_branch_records_not_unrelated_receipts (test_store_branch_catalog.StoreBranchCatalogTests.test_catalog_scans_branch_records_not_unrelated_receipts) ... ok
+test_catalog_snapshot_serializes_with_concurrent_move (test_store_branch_catalog.StoreBranchCatalogTests.test_catalog_snapshot_serializes_with_concurrent_move) ... ok
+test_corrupt_branch_record_fails_closed (test_store_branch_catalog.StoreBranchCatalogTests.test_corrupt_branch_record_fails_closed) ... ok
+test_empty_catalog (test_store_branch_catalog.StoreBranchCatalogTests.test_empty_catalog) ... ok
+test_forks_and_distinct_roots_are_sorted_exact_records (test_store_branch_catalog.StoreBranchCatalogTests.test_forks_and_distinct_roots_are_sorted_exact_records) ... ok
+test_rewind_catalog_reports_exact_committed_revision (test_store_branch_catalog.StoreBranchCatalogTests.test_rewind_catalog_reports_exact_committed_revision) ... ok
+test_shared_ancestry_is_hash_validated_once_per_catalog_query (test_store_branch_catalog.StoreBranchCatalogTests.test_shared_ancestry_is_hash_validated_once_per_catalog_query) ... ok
+test_unauthorized_root_and_branch_are_not_disclosed (test_store_branch_catalog.StoreBranchCatalogTests.test_unauthorized_root_and_branch_are_not_disclosed) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.119s
+
+OK

@@ -1,0 +1,51 @@
+{
+  "status": "INSTALLED_CLIENT_CONTROL_PASS",
+  "wheel_sha256": "c40a18e85aa76bbebda78d9eb1caca20febf19069c94435525251ec7b8f25738",
+  "checks": [
+    {
+      "id": "wheel-boundary",
+      "status": "PASS",
+      "assets": {
+        "branchwrite/_examples/coding.bw": "cdfac36f6fe9d1b7571ee5437e39c2ced28bfed330f2487e4a0feeb3b55c9238",
+        "branchwrite/_examples/line-file-worked-examples.txt": "ac811099e2d58f8f1a8ee0e88626048d24552ed2b927ac9b5398889a9a9d7776",
+        "branchwrite/_examples/literal-file-worked-examples.txt": "f8891dbb0980a5578ed7436c1ae5b212e853b280a57c41bffbb4588c61d95251",
+        "branchwrite/_examples/terminal-worked-examples.txt": "2a33b84781509f23d117c1502691a8cab1e767a8bf0bde3f0552bfca2ed9bfbe",
+        "branchwrite/_examples/tool-worked-examples.txt": "410e5092a535372d80e712acbe784aedfde28782a8f920dea9d6ad7936ee656c"
+      }
+    },
+    {
+      "id": "installed-console",
+      "status": "PASS"
+    },
+    {
+      "id": "installed-tools-and-assets",
+      "status": "PASS",
+      "observed": {
+        "status": "PASS",
+        "python": "3.14.4",
+        "module_path": "/home/dflanag3/spatial-artifacts/bw-cli-workflows-dev64-20261020/offline-check-314/venv/lib/python3.14/site-packages/branchwrite/__init__.py",
+        "workflow_sha256": "cdfac36f6fe9d1b7571ee5437e39c2ced28bfed330f2487e4a0feeb3b55c9238",
+        "prefix_sha256": "0ce4bcad61d23a4bca406cd91fb7fb2ac4fb7f5845c10c02638a72468b589604",
+        "created": "created",
+        "shell": "exited",
+        "isolation": {
+          "kind": "bubblewrap-terminal-v1",
+          "pid_ns": "pid:[4026532778]",
+          "net_ns": "net:[4026532781]",
+          "mount_ns": "mnt:[4026532775]",
+          "worker_exited": true,
+          "launcher_pid": 2488675,
+          "namespace_members_after": []
+        },
+        "pdf": {
+          "pages": 1,
+          "bytes": 1366,
+          "sha256": "bc5d0220675d85b74377abe5d3048bd98dff8218dba9dd93fc7c0d6d07f89473",
+          "actual_png_bytes": 14133
+        },
+        "parallel_help_runtime_unchanged": true
+      }
+    }
+  ],
+  "scope": "Real Linux file creation/read-only sandbox, packaged assets, initial PDF dependencies/build/reopen/render and parallel-help integrity; no inference, new installed-agent GPU run, adversarial security certification or release qualification."
+}

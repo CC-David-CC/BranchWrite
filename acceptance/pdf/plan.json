@@ -1,0 +1,65 @@
+{
+  "goal": "ordinary BW project conversation produces PDF, reviews actual page images through COW, revises and resumes with current evidence",
+  "priority": "before further CAD/Blender ladder",
+  "stages": [
+    {
+      "id": "DOC00",
+      "scope": "ReportLab, parser and renderer in default initial client installation",
+      "status": "INSTALLED_WHEEL_AND_CPU_PASS"
+    },
+    {
+      "id": "DOC01",
+      "scope": "isolated ReportLab build, independent PDF reopen/render and provenance",
+      "status": "BOUNDED_REAL_WORKER_PASS"
+    },
+    {
+      "id": "DOC02",
+      "scope": "normal project tools, binary publication and page-by-page image feedback",
+      "status": "LIVE_INSTALLED_Q4_PAGE_FEEDBACK_PASS"
+    },
+    {
+      "id": "DOC03",
+      "scope": "current-document checks, stale-page rejection and restart",
+      "status": "CANONICAL_CURRENT_PAGE_AND_LEDGER_REOPEN_TESTS_PASS"
+    },
+    {
+      "id": "DOC04",
+      "scope": "real Q4 document creation and visual revision without operator source edits",
+      "status": "LIVE_AUTHORING_AND_PAGE_REVIEW_PASS_VISUAL_REVISION_PENDING"
+    },
+    {
+      "id": "DOC05",
+      "scope": "clean install and beginner usage instructions",
+      "status": "DEFAULT_DEPS_INSTALLED_GUIDE_AND_ACTUAL_PAGE_IMAGES_PRESENT"
+    }
+  ],
+  "future_work": [
+    {
+      "scope": "durable interactive experiment notebook CRUD/filter/save/reload/export",
+      "status": "NOT_QUALIFIED"
+    },
+    {
+      "scope": "bounded dynamic-system controller with fixed settling/overshoot/effort checks",
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "scope": "logged choice between measurement, repair and another candidate with cost accounting",
+      "status": "NOT_IMPLEMENTED"
+    }
+  ],
+  "invariants": [
+    "one BW workflow ledger and COW model-history authority",
+    "actual PDF bytes supply rendered images; changing document makes old views stale",
+    "candidate code never runs on host or sees host credentials",
+    "PDF dependencies included at install; no user per-task runtime configuration",
+    "no claim that a valid PDF or render alone proves correct layout or content"
+  ],
+  "latest_focused_result": {
+    "tests": 34,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "scope": "actual PDF workers/canonical completion and existing project checks; no model authorship claim"
+  },
+  "model_evidence": "validation/pdf-live-q4-20261020/pdf-ledger-audit.json"
+}

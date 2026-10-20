@@ -1,0 +1,9 @@
+My First BranchWrite Project
+
+BranchWrite works in small, visible steps. To describe a change, say what you want, where it should appear, and how you will know it is done. Use plain English. For example: "Add a friendly dog website page with a heading, a short welcome, and three care tips."
+
+After BranchWrite responds, read the result carefully. Check whether the file exists, whether the wording is right, and whether anything important is missing. If something is wrong, ask for another change. Name the part to fix and say what should happen instead.
+
+To keep an alternative without losing the first version, ask BranchWrite to save the current version first, then create a second version with a different name. For example, ask for a simple dog page and a playful dog page. You can compare both and choose later.
+
+This keeps your work safe. You can try new ideas, return to an earlier version, and continue improving the project one clear step at a time.

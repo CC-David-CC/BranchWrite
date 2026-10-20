@@ -1,0 +1,10 @@
+test_completed_source_still_uses_append_user (test_prefix_admission.PrefixAdmissionTests.test_completed_source_still_uses_append_user) ... ok
+test_default_completed_source_still_pins_current_tip (test_prefix_admission.PrefixAdmissionTests.test_default_completed_source_still_pins_current_tip) ... ok
+test_default_prefix_root_is_pinned_and_never_reselected (test_prefix_admission.PrefixAdmissionTests.test_default_prefix_root_is_pinned_and_never_reselected) ... ok
+test_prefix_uses_ask_without_creating_another_root (test_prefix_admission.PrefixAdmissionTests.test_prefix_uses_ask_without_creating_another_root) ... ok
+test_source_forms_are_mutually_exclusive (test_prefix_admission.PrefixAdmissionTests.test_source_forms_are_mutually_exclusive) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.010s
+
+OK

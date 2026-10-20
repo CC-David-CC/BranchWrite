@@ -1,0 +1,23 @@
+EE.
+======================================================================
+ERROR: test_blender_context_requires_actual_mcp_render_receipt (test_spatial_completion_context.SpatialContextTests.test_blender_context_requires_actual_mcp_render_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_spatial_completion_context.py", line 11, in test_blender_context_requires_actual_mcp_render_receipt
+    t=continuation_input('Make a scene.',self.schema(),completion_policy='blender-scene-and-finish')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: continuation_input() got an unexpected keyword argument 'completion_policy'
+
+======================================================================
+ERROR: test_cad_context_does_not_require_irrelevant_shell_checks (test_spatial_completion_context.SpatialContextTests.test_cad_context_does_not_require_irrelevant_shell_checks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-cad-20261020/tests/test_spatial_completion_context.py", line 7, in test_cad_context_does_not_require_irrelevant_shell_checks
+    t=continuation_input('Make the plate.',self.schema(),completion_policy='cad-geometry-and-finish')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: continuation_input() got an unexpected keyword argument 'completion_policy'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=2)

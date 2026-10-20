@@ -1,0 +1,15 @@
+test_chain (test_dependencies.OrderTests.test_chain) ... ok
+test_cycle (test_dependencies.OrderTests.test_cycle) ... ok
+test_dependency_only (test_dependencies.OrderTests.test_dependency_only) ... ok
+test_duplicates (test_dependencies.OrderTests.test_duplicates) ... ok
+test_empty (test_dependencies.OrderTests.test_empty) ... ok
+test_no_mutation (test_dependencies.OrderTests.test_no_mutation) ... ok
+test_ready_tie (test_dependencies.OrderTests.test_ready_tie) ... ok
+test_self_cycle (test_dependencies.OrderTests.test_self_cycle) ... ok
+test_generated (test_independent.Independent.test_generated)
+Run only after CLI settlement; protected independent reference, not model input. ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.061s
+
+OK

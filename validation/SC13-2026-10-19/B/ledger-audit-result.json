@@ -1,0 +1,360 @@
+{
+  "status": "PASS",
+  "ledger_unchanged": true,
+  "model_calls": 8,
+  "output_tokens": 4956,
+  "whole_cli_seconds": 353.81295326608233,
+  "installed_modules": [
+    {
+      "name": "branchwrite",
+      "sha256": "fb7c95827f77766f0bf1aec234c000c9bb74990463dc8a135898e8ff24a7f11c"
+    },
+    {
+      "name": "branchwrite.language",
+      "sha256": "c0bb2454e6f999e5f94f8eb63544e7f6ab35fd5731894f866074137a9a5f9985"
+    },
+    {
+      "name": "branchwrite.records",
+      "sha256": "600d0093a8c1768be967e627627a40c244233c118d39fcd24979a76e55b2f677"
+    },
+    {
+      "name": "branchwrite.kernel",
+      "sha256": "106a3a564e0ee5bb190e7a6c3c246336e4c4b91a93df906110e930c02b6a8521"
+    },
+    {
+      "name": "branchwrite.execution",
+      "sha256": "6a595a6a38dee451042f31303ea9f8b7398ab6a0b8f721999d9f2d27637ecb5b"
+    },
+    {
+      "name": "branchwrite.text_file_codec",
+      "sha256": "e91be4c888837203dae028c31ab22f30b4f709e7d350c908cf5a4dd421c9cbb8"
+    },
+    {
+      "name": "branchwrite.tool_registry",
+      "sha256": "54c5b6625f5b975523b8830332f027186077e7a724dc22a4748f67b7da414568"
+    },
+    {
+      "name": "branchwrite.tool_dispatch",
+      "sha256": "92b386ce99805dccb063d840af35f9d1a9efcc773705a8563a6eec861b5a8bd6"
+    },
+    {
+      "name": "branchwrite.cow_client",
+      "sha256": "a08bd70de75399583cfc19229dc6e0a6ff5447286d5b8856b5322e5eda2f86d7"
+    },
+    {
+      "name": "branchwrite.cow_actions",
+      "sha256": "81d141bb5d898069cc53cc65312d6461974c14e6d5cb1a7a2fbdd059d1d8b4d4"
+    },
+    {
+      "name": "branchwrite.model_inputs",
+      "sha256": "5ed2c9721862582c4553720130ef09a27b6e3668304b31b19af24cdacdd0f5ea"
+    },
+    {
+      "name": "branchwrite.thinking_ladder",
+      "sha256": "fa7b12cab3736be03275c37c34f5d53eb6d7fdb274e003001ee4a8dfece075fc"
+    },
+    {
+      "name": "branchwrite.model_dispatch",
+      "sha256": "a0a8899ad9c4e400159e90c388b574866040dea420d6ff251fe2e5c1be2b9007"
+    },
+    {
+      "name": "branchwrite.cow_fork",
+      "sha256": "0c06476f31eaac5c83e216ba6b1003c4e0ed3533b662532f077a9a6124a29fe0"
+    },
+    {
+      "name": "branchwrite.planning_retry",
+      "sha256": "ef5609571126cc74bd186b3a59d0ad7f9d53aa8202647711d3ccdca445f44946"
+    },
+    {
+      "name": "branchwrite.verification",
+      "sha256": "f2ca101512c0501639012f39c411d353421677a63790ea185e406917e7fea7e0"
+    },
+    {
+      "name": "branchwrite.image_feedback",
+      "sha256": "b26e8c6c70260a2264a302fe7a6e55c483e6a7084579d8fb0762c7bdeef6bcfe"
+    },
+    {
+      "name": "branchwrite.interpreter",
+      "sha256": "a5c3342f271ddf7d41d6b0ab26f42c50e52bff1216ad534528b230ec0970400a"
+    },
+    {
+      "name": "branchwrite.coding_defaults",
+      "sha256": "6e3663b17ae9dbd8b26f8491a01c5453926fa6b3ecc8cbffb9530a00f2e0fe8e"
+    },
+    {
+      "name": "branchwrite.run_cli",
+      "sha256": "ddeed6be5faac60fb05af5342d03807a4c6f681fdb84755d90cdcda121df94a4"
+    },
+    {
+      "name": "branchwrite.coding_cli",
+      "sha256": "85e24915bf23c3bfbb59bb56c10f451d360d0024aa60ed1c3104564484a7bded"
+    },
+    {
+      "name": "branchwrite.__main__",
+      "sha256": "d1f18b35cf4830d001f79f0078fd3420b3d4b92a955b5d59a6c00c530516a0f9"
+    },
+    {
+      "name": "branchwrite.project_scope",
+      "sha256": "7f988e5a72fd6ed23bc31d50e66ea9446bddb0e82a7acdc0e6a54e7f68ee91fa"
+    },
+    {
+      "name": "branchwrite.terminal",
+      "sha256": "ff77e7cb928614c2a3b4ebe04210396828dbbb68698d800f19ecb522f94262ad"
+    },
+    {
+      "name": "branchwrite.browser_assets",
+      "sha256": "281be85bd17b275a3510560c11535e4dc8efbbe695098c498d633ca26f40ed31"
+    },
+    {
+      "name": "branchwrite.command_outputs",
+      "sha256": "3bbc00140bbd4da2dbf71b927d2c6261e3f58473bd4ae4202933ea1e4c8d54d9"
+    },
+    {
+      "name": "branchwrite.browser_isolation",
+      "sha256": "782fb456cc47fe0f8a4c92a9e0729814a9bf9676d76b28246d99b8751b5fad10"
+    },
+    {
+      "name": "branchwrite.terminal_worker",
+      "sha256": "6bf6cf80c667a5fff3fdbcc8644a09cc925abc9ee6cdd06b10cd3cb634bf7996"
+    },
+    {
+      "name": "branchwrite.project_baseline",
+      "sha256": "72da8ff7ace695a809a0cf341f8b86d85e2166e8acb9dc08a5bf153ae44c4621"
+    }
+  ],
+  "wheel_sha256": "fd3efe7623fb302cc27fcfb144d0de7d14e7429a2b4bcf95d59ff9d56c9c9b51",
+  "tools": [
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "README.md"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "# Taskboard command reports\nRows are signed ASCII decimal exit codes, a tab, and a nonempty label.\nA single terminal LF or CRLF is allowed; other embedded CR/LF is invalid.\nLabels retain all spaces, Unicode and additional tabs. No normalization.\nZero means passed. All nonzero codes mean failed. Preserve failed-label order.\nInvalid inputs raise ValueError. Input collections must not be modified.\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "taskboard/parser.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "def parse_line(line):\n    code, label = line.split(\"\\t\")\n    return 0, label.strip()\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "taskboard/report.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "from .parser import parse_line\n\ndef summarize(lines):\n    rows = [parse_line(line) for line in lines]\n    return {\"passed\": len(rows), \"failed\": 0, \"failed_labels\": []}\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "read_file",
+      "arguments": {
+        "path": "tests/test_taskboard.py"
+      },
+      "disposition": "read",
+      "exit_code": 0,
+      "stdout": "import unittest,copy\nfrom taskboard.parser import parse_line\nfrom taskboard.report import summarize\nclass ParserTests(unittest.TestCase):\n def test_exit_codes(self):\n  self.assertEqual(parse_line('-9\\tbuild'),(-9,'build'))\n  self.assertEqual(parse_line('+2\\ttest'),(2,'test'))\n def test_preserves_labels(self):\n  self.assertEqual(parse_line('1\\t  caf\u00e9:\u96ea\\t\u03bb  '),(1,'  caf\u00e9:\u96ea\\t\u03bb  '))\n def test_line_endings(self):\n  self.assertEqual(parse_line('0\\tbuild\\r\\n'),(0,'build'))\n  self.assertEqual(parse_line('2\\ttest\\n'),(2,'test'))\n def test_invalid(self):\n  for value in [None,4,'missing','x\\tlabel',' 0\\tlabel','0\\t','0\\tbad\\ninside','0\\tbad\\rinside']:\n   with self.subTest(value=value),self.assertRaises(ValueError):parse_line(value)\nclass ReportTests(unittest.TestCase):\n def test_empty(self):self.assertEqual(summarize([]),dict(passed=0,failed=0,failed_labels=[]))\n def test_mixed(self):\n  self.assertEqual(summarize(['0\\tbuild','2\\ttest','-9\\tlint']),dict(passed=1,failed=2,failed_labels=['test','lint']))\n def test_unicode_order_and_no_mutation(self):\n  rows=['1\\t \u96ea ','0\\tok','2\\tcaf\u00e9'];before=copy.deepcopy(rows)\n  self.assertEqual(summarize(rows),dict(passed=1,failed=2,failed_labels=[' \u96ea ','caf\u00e9']));self.assertEqual(rows,before)\n def test_invalid_propagates(self):\n  with self.assertRaises(ValueError):summarize(['0\\tok','invalid'])\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "replace_text_file",
+      "arguments": {
+        "final_newline": true,
+        "line_ending": "LF",
+        "lines": [
+          "def parse_line(line):",
+          "    if not isinstance(line, str):",
+          "        raise ValueError(\"line must be a string\")",
+          "",
+          "    if line.endswith(\"\\r\\n\"):",
+          "        body = line[:-2]",
+          "    elif line.endswith(\"\\n\"):",
+          "        body = line[:-1]",
+          "    else:",
+          "        body = line",
+          "",
+          "    if \"\\r\" in body or \"\\n\" in body:",
+          "        raise ValueError(\"embedded CR or LF is invalid\")",
+          "",
+          "    if \"\\t\" not in body:",
+          "        raise ValueError(\"missing tab separator\")",
+          "",
+          "    code, label = body.split(\"\\t\", 1)",
+          "    if not label:",
+          "        raise ValueError(\"label must be nonempty\")",
+          "",
+          "    digits = code[1:] if code[:1] in (\"+\", \"-\") else code",
+          "    if not digits or any(ch not in \"0123456789\" for ch in digits):",
+          "        raise ValueError(\"exit code must be signed ASCII decimal\")",
+          "",
+          "    return int(code), label",
+          ""
+        ],
+        "path": "taskboard/parser.py",
+        "source_sha256": "a7643501c583f9f108df082937aadbb2c6a4a687103663e04bedf5d1d614ed08"
+      },
+      "disposition": "applied",
+      "exit_code": 0,
+      "stdout": "replacement applied\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "replace_text_file",
+      "arguments": {
+        "final_newline": true,
+        "line_ending": "LF",
+        "lines": [
+          "from .parser import parse_line",
+          "",
+          "def summarize(lines):",
+          "    passed = 0",
+          "    failed = 0",
+          "    failed_labels = []",
+          "",
+          "    for line in lines:",
+          "        code, label = parse_line(line)",
+          "        if code == 0:",
+          "            passed += 1",
+          "        else:",
+          "            failed += 1",
+          "            failed_labels.append(label)",
+          "",
+          "    return {\"passed\": passed, \"failed\": failed, \"failed_labels\": failed_labels}",
+          ""
+        ],
+        "path": "taskboard/report.py",
+        "source_sha256": "685b498185c7bedbdab1159570f9cbadbf41b048776e7f8b6dcc72d3f0a528b1"
+      },
+      "disposition": "applied",
+      "exit_code": 0,
+      "stdout": "replacement applied\n",
+      "stderr": "",
+      "details": {}
+    },
+    {
+      "tool": "run_shell",
+      "arguments": {
+        "command": "python3 -m unittest discover -s tests -p test_taskboard.py -v"
+      },
+      "disposition": "exited",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_exit_codes (test_taskboard.ParserTests.test_exit_codes) ... ok\ntest_invalid (test_taskboard.ParserTests.test_invalid) ... ok\ntest_line_endings (test_taskboard.ParserTests.test_line_endings) ... ok\ntest_preserves_labels (test_taskboard.ParserTests.test_preserves_labels) ... ok\ntest_empty (test_taskboard.ReportTests.test_empty) ... ok\ntest_invalid_propagates (test_taskboard.ReportTests.test_invalid_propagates) ... ok\ntest_mixed (test_taskboard.ReportTests.test_mixed) ... ok\ntest_unicode_order_and_no_mutation (test_taskboard.ReportTests.test_unicode_order_and_no_mutation) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.000s\n\nOK\n",
+      "details": {
+        "argv": [
+          "/usr/bin/bash",
+          "--noprofile",
+          "--norc",
+          "-c",
+          "python3 -m unittest discover -s tests -p test_taskboard.py -v"
+        ],
+        "binary_sha256": "3efccc187bafa75ff1e37d246270ab3e7aa559f242c7a52bf3ec2a1b5450bdbd",
+        "command": "shell",
+        "cwd": "/home/dflanag3/spatial-artifacts/branchwrite-SC13B-cross-project-dev15-20261019-v1/state/world/workspace",
+        "execution_host": {
+          "euid": 1000,
+          "gid": 1000,
+          "hostname": "r4090",
+          "uid": 1000
+        },
+        "inputs": [
+          {
+            "bytes": 398,
+            "mode": "0664",
+            "path": "README.md",
+            "sha256": "3f95e407638fcdc0fac53bdda543f2b43c102460085b21b5e0041a947b1021e4"
+          },
+          {
+            "bytes": 749,
+            "mode": "0664",
+            "path": "taskboard/parser.py",
+            "sha256": "5858e42c1210ad33a453ea543eea2a1d33c59be770087c18161594fc7d32b9fe"
+          },
+          {
+            "bytes": 376,
+            "mode": "0664",
+            "path": "taskboard/report.py",
+            "sha256": "cf7a38a849ecbee47c483fdc7b7c4373ace2c62f69e775b9014c7823bd638592"
+          },
+          {
+            "bytes": 1353,
+            "mode": "0664",
+            "path": "tests/test_taskboard.py",
+            "sha256": "6ec82d88f727492e997f39c389d3c17d425cb813e9d63c03e157bb661dab06e3"
+          }
+        ],
+        "isolation": {
+          "kind": "bubblewrap-terminal-v1",
+          "launcher_pid": 2278057,
+          "mount_ns": "mnt:[4026532775]",
+          "namespace_members_after": [],
+          "net_ns": "net:[4026532781]",
+          "pid_ns": "pid:[4026532778]",
+          "worker_exited": true
+        },
+        "os_release_sha256": "cf72627ff81aef345d0a9f3807eb80f1035e0f80fe2932d12d94efc02fd68104",
+        "scope": "model-written Bash; read-only captured readable files; no network or host home",
+        "workspace_after_sha256": "a4f7414a486b0246e45e6c539a1fb5d8a7610d0517aab3b2575c234fe9864a9d"
+      }
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "answer": "Repaired `taskboard/parser.py` to validate string input, accept only a single terminal LF or CRLF, reject other embedded CR/LF, split only at the first tab, preserve the label exactly, require a nonempty label, and accept only signed ASCII decimal exit codes. Repaired `taskboard/report.py` to aggregate passed/failed counts and preserve failed labels in input order without modifying the input collection.\n\nRan the required command:\n`python3 -m unittest discover -s tests -p test_taskboard.py -v`\n\nObserved result: disposition `exited`, exit code `0`, stdout empty. Stderr reported all 8 tests passing and `OK`."
+      },
+      "disposition": "completion_requested",
+      "exit_code": null,
+      "stdout": "Repaired `taskboard/parser.py` to validate string input, accept only a single terminal LF or CRLF, reject other embedded CR/LF, split only at the first tab, preserve the label exactly, require a nonempty label, and accept only signed ASCII decimal exit codes. Repaired `taskboard/report.py` to aggregate passed/failed counts and preserve failed labels in input order without modifying the input collection.\n\nRan the required command:\n`python3 -m unittest discover -s tests -p test_taskboard.py -v`\n\nObserved result: disposition `exited`, exit code `0`, stdout empty. Stderr reported all 8 tests passing and `OK`.",
+      "stderr": "",
+      "details": {}
+    }
+  ],
+  "model_requests": [
+    {
+      "tokens": 63,
+      "grammar_state": "gcc7cf77046438f2c495c546b1a9336842faecb621f550693b61db008a0938c78_s0"
+    },
+    {
+      "tokens": 33,
+      "grammar_state": "gcc7cf77046438f2c495c546b1a9336842faecb621f550693b61db008a0938c78_s0"
+    },
+    {
+      "tokens": 25,
+      "grammar_state": "gcc7cf77046438f2c495c546b1a9336842faecb621f550693b61db008a0938c78_s0"
+    },
+    {
+      "tokens": 33,
+      "grammar_state": "gcc7cf77046438f2c495c546b1a9336842faecb621f550693b61db008a0938c78_s0"
+    },
+    {
+      "tokens": 4379,
+      "grammar_state": "gcc7cf77046438f2c495c546b1a9336842faecb621f550693b61db008a0938c78_s0"
+    },
+    {
+      "tokens": 156,
+      "grammar_state": "gcc7cf77046438f2c495c546b1a9336842faecb621f550693b61db008a0938c78_s0"
+    },
+    {
+      "tokens": 45,
+      "grammar_state": "gcc7cf77046438f2c495c546b1a9336842faecb621f550693b61db008a0938c78_s0"
+    },
+    {
+      "tokens": 222,
+      "grammar_state": "gcc7cf77046438f2c495c546b1a9336842faecb621f550693b61db008a0938c78_s0"
+    }
+  ],
+  "numerical_oracle": "NOT_RUN"
+}

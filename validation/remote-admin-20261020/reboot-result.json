@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "qemu_pid": 2428494,
+  "before_boot_id": "d7148a9a-4dfa-4583-92ac-625f8a101632",
+  "checks": [],
+  "last_ssh_exit": 255,
+  "after_boot_id": "1dfeedcb-9d1c-4af1-9ebd-c424d437a32c",
+  "seconds": 20.65800530591514,
+  "marker_sha256": "ad06e72726f6d8ff00228160453949c1ceb89571c99332e4815f9edce2acad07",
+  "disk_root": true,
+  "pinned_ssh_key_unchanged": true,
+  "scope": "clean guest reboot with ISO detached; not a power-loss test"
+}

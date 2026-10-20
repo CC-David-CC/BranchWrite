@@ -1,0 +1,10 @@
+test_finish_in_read_only_mode_requires_unchanged_inventory (tests.test_plan_mode.PlanModeTests.test_finish_in_read_only_mode_requires_unchanged_inventory) ... ok
+test_plan_launcher_has_no_file_write_or_execution_grants (tests.test_plan_mode.PlanModeTests.test_plan_launcher_has_no_file_write_or_execution_grants) ... ok
+test_read_only_policy_rejects_a_writable_host_grant (tests.test_plan_mode.PlanModeTests.test_read_only_policy_rejects_a_writable_host_grant) ... ok
+test_interrupt_before_tool_then_resume_executes_once (tests.test_interactive_control.InteractiveControlTests.test_interrupt_before_tool_then_resume_executes_once) ... ok
+test_pause_after_consumed_effect_keeps_real_receipt (tests.test_interactive_control.InteractiveControlTests.test_pause_after_consumed_effect_keeps_real_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.047s
+
+OK
