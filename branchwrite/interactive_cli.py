@@ -21,6 +21,15 @@ def run(*, project=None, state=None, save_api=False, sampler="greedy",cad_config
     project=Path.cwd() if project is None else Path(project)
     project=project.resolve(strict=True)
     if not project.is_dir():raise ValueError('Choose a project directory')
+    # A normal first terminal opens in HOME. Refuse before asking for a key or
+    # collecting files: default saved sessions must live outside the project.
+    proposed=(Path(state).absolute() if state is not None else
+        Path(os.environ.get('XDG_STATE_HOME',str(Path.home()/'.local/state')))/'branchwrite/sessions')
+    if proposed.resolve().is_relative_to(project):
+        print('Choose a project folder inside your home folder, then run BW there.')
+        print('For a new project, type: mkdir -p ~/my-project && cd ~/my-project')
+        print('Then type: ~/.local/bin/bw')
+        return 2
     print('BranchWrite')
     print('Client: '+socket.gethostname()+' | Project: '+str(project))
     print('Project files stay on this client. Model requests go to your configured COW server.')

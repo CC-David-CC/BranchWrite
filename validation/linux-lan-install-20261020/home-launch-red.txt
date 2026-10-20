@@ -1,0 +1,26 @@
+test_home_folder_explains_project_folder_before_connection (test_quickstart_launch.QuickstartLaunchTests.test_home_folder_explains_project_folder_before_connection) ... FAIL
+
+======================================================================
+FAIL: test_home_folder_explains_project_folder_before_connection (test_quickstart_launch.QuickstartLaunchTests.test_home_folder_explains_project_folder_before_connection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-lan-install-20261020/tests/test_quickstart_launch.py", line 17, in test_home_folder_explains_project_folder_before_connection
+    result=run(project=home)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-lan-install-20261020/branchwrite/interactive_cli.py", line 27, in run
+    saved=connection_path(Path.home(),os.environ);keys=[]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/spatial-artifacts/bw-private-install-dev65-20261020/release/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: connection must not start
+
+----------------------------------------------------------------------
+Ran 1 test in 0.179s
+
+FAILED (failures=1)

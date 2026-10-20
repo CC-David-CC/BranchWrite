@@ -1,0 +1,6 @@
+test_home_folder_explains_project_folder_before_connection (test_quickstart_launch.QuickstartLaunchTests.test_home_folder_explains_project_folder_before_connection) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.143s
+
+OK
