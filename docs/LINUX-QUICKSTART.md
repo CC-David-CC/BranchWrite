@@ -26,8 +26,14 @@ That is normal. Press Enter when you finish.
 
 ## Install BranchWrite
 
-The tested download command will be added after the fresh-VM campaign.
-Do not use a copied research environment as an installation.
+Copy this whole line into Terminal, then press Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/CC-David-CC/BranchWrite/lan-preview-2026-10-20/install.sh -o "$HOME/branchwrite-install.sh" && sh "$HOME/branchwrite-install.sh"
+```
+
+Wait for **BranchWrite is installed**. The first installation needs Internet
+access. It downloads the client and its Python packages, not the model.
 
 The installer downloads its own Python and packages. It does not replace the
 computer's Python. You do not need to activate a virtual environment.
@@ -66,14 +72,25 @@ Then ask:
 
 > Make the dog names bold. Keep the greeting button working.
 
-BranchWrite works in a separate copy. Review the result before publishing it
-back to your project. A successful command means its chosen checks passed;
-it does not prove every part of a website is correct.
+Work mode changes the project folder you opened. BranchWrite keeps saved file
+versions so you can go back or explore another idea. Use `/explore` when you want
+a separate copy. A successful command means its chosen checks passed; it does
+not prove every part of a website is correct.
 
 ## While it works
 
-You can add information, queue the next change, or stop the current turn.
-The fresh-install campaign will verify these controls and add the exact keys.
+- **Enter:** send a request, or add information to the active request.
+- **Tab:** queue text for the next turn. Follow-up text is combined.
+- **Esc:** ask it to stop at a safe boundary.
+- **Ctrl+R:** search what you typed before.
+- **/plan:** inspect and discuss without changing project files.
+- **/work:** return to making changes.
+- **/aside YOUR QUESTION:** ask a side question without changing the main context.
+- **/exit:** save and leave. Run BW from the same folder to reopen this session.
+
+The fresh-VM smoke exercised installation, connection, Work, exit, reopening and
+a follow-up change after both server processes restarted. The other controls
+have separate tests; this smoke did not rerun every control.
 A stopped run and an uncertain server reply must be resumed with their saved
 identity, rather than submitting the same operation as unrelated new work.
 
@@ -88,3 +105,28 @@ Only use a server you trust. Keep project secrets out of the selected folder.
 Installations use separate versioned runtime folders. Keep old runtime folders
 while you have saved work that uses them. Never delete an old runtime just to
 make an update appear successful.
+
+## What the tested result looked like
+
+The first request made this page. The independent browser check clicked its
+button and saw the greeting:
+
+![The first dog website on a phone](images/lan-install-20261020/website-first-phone.png)
+
+We closed BW and restarted the server. We opened BW in the same project folder
+and asked it to add Bella, Max and Luna with bold names. The button still worked:
+
+![The revised page on a phone](images/lan-install-20261020/website-followup-phone.png)
+
+The full request times were about 3 minutes 41 seconds, then 2 minutes 23 seconds
+on the tested Q4 server. These include model thinking, tools and saved-state
+work. They are not decode-speed measurements or promises for another machine.
+
+The client was a fresh BW install in an existing Ubuntu VM. Its real shell/file
+isolation check passed. The page checks used a separate sandboxed Chromium
+browser with a temporary host permission profile, which was then removed.
+BW's additional browser-worker isolation failed on that audit host; this preview
+does not install model-driven browser tools. You can review the HTML in your own
+browser. Full stress/security/numerical certification remains separate.
+
+For server setup, use [the Context COW server guide](https://github.com/CC-David-CC/Private_Context_COW/blob/main/docs/CONTEXT-COW-SERVER.md).

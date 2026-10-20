@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "source": "website-followup.html",
+  "sha256": "2356888f304b2fb6ab221f03cd781a60c122e6d1dd6bce32a5a9003541cf8d94",
+  "playwright": "1.64.0",
+  "rows": [
+    {
+      "viewport": "desktop",
+      "width": 1280,
+      "height": 800,
+      "button": true,
+      "blue_heading": true,
+      "no_overflow": true,
+      "no_page_errors": true,
+      "requests": [
+        "file:///home/dflanag3/spatial-artifacts/bw-lan-install-20261020/website-followup.html"
+      ],
+      "screenshot": "website-followup-desktop.png"
+    },
+    {
+      "viewport": "phone",
+      "width": 375,
+      "height": 812,
+      "button": true,
+      "blue_heading": true,
+      "no_overflow": true,
+      "no_page_errors": true,
+      "requests": [
+        "file:///home/dflanag3/spatial-artifacts/bw-lan-install-20261020/website-followup.html"
+      ],
+      "screenshot": "website-followup-phone.png"
+    }
+  ],
+  "scope": "Independent Chromium audit of byte-identical HTML copied directly from client VM; this is not model-driven browser inspection."
+}

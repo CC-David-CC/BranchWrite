@@ -1,0 +1,1 @@
+The initial audit incorrectly classified eos_tokens as a saved credential by matching 'token' in any field name. The corrected audit calls the installed client's saved_api_key reader. This was an audit predicate error, not a product credential leak.

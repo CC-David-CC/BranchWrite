@@ -1,5 +1,17 @@
 # BranchWrite
 
+## Install and start on Linux
+
+Your model runs on a Context COW server. This client needs no GPU or model files.
+First follow the [simple Linux setup guide](docs/LINUX-QUICKSTART.md). It includes
+the system tools, one download command, LAN address/key setup and a tested
+website example with pictures. Then open a terminal in your project folder and
+run `~/.local/bin/bw`.
+
+[Server setup](https://github.com/CC-David-CC/Private_Context_COW/blob/main/docs/CONTEXT-COW-SERVER.md)
+| [Executed LAN install and restart smoke](validation/linux-lan-install-20261020/README.md)
+
+
 Source preview, 2026-10-20. Server: [Context COW](https://github.com/CC-David-CC/Private_Context_COW). Original engine: [Strata](https://github.com/Niko1221/Strata). This preview predates the planned Strata 2.1 refresh. See [current release notes](PUBLIC_PREVIEW.md) and [example prompts](examples/prompts/README.md).
 
 BranchWrite is an experimental Linux command-line coding agent powered by Context COW. It keeps a durable record of tool work and uses server-owned model branches and saved prefill.

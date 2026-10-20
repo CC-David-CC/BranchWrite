@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "source": "website-first.html",
+  "sha256": "ea89336cd98092ac36dd3eb3cb8cf9281200583ccc7754ee67a8b5d3077abe98",
+  "playwright": "1.64.0",
+  "rows": [
+    {
+      "viewport": "desktop",
+      "width": 1280,
+      "height": 800,
+      "button": true,
+      "blue_heading": true,
+      "no_overflow": true,
+      "no_page_errors": true,
+      "requests": [
+        "file:///home/dflanag3/spatial-artifacts/bw-lan-install-20261020/website-first.html"
+      ],
+      "screenshot": "website-first-desktop.png"
+    },
+    {
+      "viewport": "phone",
+      "width": 375,
+      "height": 812,
+      "button": true,
+      "blue_heading": true,
+      "no_overflow": true,
+      "no_page_errors": true,
+      "requests": [
+        "file:///home/dflanag3/spatial-artifacts/bw-lan-install-20261020/website-first.html"
+      ],
+      "screenshot": "website-first-phone.png"
+    }
+  ],
+  "scope": "Independent Chromium audit of byte-identical HTML copied directly from client VM; this is not model-driven browser inspection.",
+  "sandbox_configuration": "chromium_sandbox=True; temporary exact-executable AppArmor userns profile; no --no-sandbox",
+  "extra_bw_browser_isolation": "FAILED in separate attempt; direct sandboxed browser audit used"
+}

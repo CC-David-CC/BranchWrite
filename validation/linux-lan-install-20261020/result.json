@@ -1,0 +1,33 @@
+{
+  "status": "BOUNDED_LAN_INSTALL_AND_REOPEN_PASS",
+  "client_source": "0a8d6fd7bcf59cf00b5089941e34cdb9b503d0ef",
+  "server_source": "8a4cdcebde655fb9aaaf303bce5ba5563d9fccc6",
+  "server": "llm-60",
+  "client": "owned Ubuntu VM on llm-49",
+  "client_download": "public GitHub only, standalone Python and PyPI packages; no model or server source on VM",
+  "first_task_seconds": 220.978285074234,
+  "followup_seconds": 142.92206192016602,
+  "model": "Qwen3.8-Flash-Next UD-Q4_K_XL",
+  "kv": "FP16",
+  "native_sha256": "319e5dac708c7f78523e22a9b33ae9dae3069331421a8f3cc0d7f55a7319b807",
+  "checks": [
+    "fresh client installation",
+    "real client doctor containment",
+    "LAN API",
+    "no key saved by default",
+    "initial website",
+    "Python and native process restart",
+    "reopened same session",
+    "follow-up edit",
+    "four real browser viewports"
+  ],
+  "limits": [
+    "No new numerical oracle, maximum logit error unmeasured in this installation campaign.",
+    "No zero-prefix-work claim from this restart smoke; native forward counters were not traced.",
+    "No new TPS benchmark or G1-G5 qualification.",
+    "Queue, Esc, Plan and Aside not exercised in this fresh-VM smoke; existing tests remain separate.",
+    "BW extra browser isolation failed on audit host. Direct sandboxed Chromium passed with a temporary exact-executable AppArmor profile; that profile was removed.",
+    "VM OS had prior admin tools; this was a fresh BW installation, not a factory-clean OS.",
+    "Q8 and Strata head updates remain deferred."
+  ]
+}

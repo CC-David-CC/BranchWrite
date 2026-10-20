@@ -1,0 +1,10 @@
+{
+  "status": "first_turn_completed",
+  "elapsed": 142.92206192016602,
+  "ssh_pid": 2505306,
+  "sent": [
+    "key",
+    "task"
+  ],
+  "ssh_return": null
+}

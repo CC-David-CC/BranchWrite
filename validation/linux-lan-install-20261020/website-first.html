@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dogs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: linear-gradient(135deg, #eaf4ff, #f8fbff);
+      color: #17202a;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    h1 {
+      color: blue;
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 7vw, 3.5rem);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #d8e8ff;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 16px 40px rgba(20, 60, 120, 0.12);
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    button {
+      background: blue;
+      color: white;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0033cc;
+    }
+
+    button:focus-visible {
+      outline: 3px solid #9ecbff;
+      outline-offset: 2px;
+    }
+
+    #message {
+      min-height: 1.5rem;
+      margin-top: 16px;
+      font-weight: 700;
+      color: #0033cc;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 16px;
+      }
+
+      .card {
+        padding: 18px;
+        border-radius: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card">
+      <h1>Dogs</h1>
+      <p>Dogs are friendly, loyal companions that come in many shapes, sizes, and personalities.</p>
+      <ul>
+        <li>They communicate with body language, barks, and tail wags.</li>
+        <li>Regular walks, play, and training keep them happy.</li>
+        <li>Every dog deserves kindness, fresh water, and a safe home.</li>
+      </ul>
+      <button type="button" id="helloButton">Say hello</button>
+      <p id="message" aria-live="polite"></p>
+    </section>
+  </main>
+  <script>
+    document.getElementById('helloButton').addEventListener('click', function () {
+      document.getElementById('message').textContent = 'Hello, David!';
+    });
+  </script>
+</body>
+</html>
