@@ -1,0 +1,1 @@
+In this separate version, show matching contacts in alphabetical order by name. Keep the case-insensitive Unicode search and ignoring spaces that are already in the current files. Keep the saved contacts in their original order.

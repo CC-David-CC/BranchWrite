@@ -40,3 +40,26 @@ checker, unavailable inside the model's project, passed eleven checks on the
 published files, including names, matching, order, saved bytes and final newline.
 This is a bounded coding workflow, not numerical model or full release certification.
 See `validation/real-project-loop-20261020`.
+
+## Try follow-ups and another version
+
+The combined trial also exercised these ordinary terminal actions:
+
+1. Type `/chat`, then send the text from `03-chat-summary.txt`.
+2. While the answer is running, type `/work`. Paste `04-queue-ignore-spaces.txt`
+   and press Tab. Paste `05-queue-whitespace-only.txt` and press Tab. Both
+   messages wait for one combined coding turn.
+3. Type `/history`. Find the number of the finished first repair.
+4. Type `/explore NUMBER ` followed by the contents of
+   `06-explore-alphabetical.txt`. Replace NUMBER with that history number.
+   BW uses the older conversation with your current files in a separate copy.
+5. Use `/history` and `/switch NUMBER` to select a saved version.
+
+The executed trial passed 13 independent checks on each follow-up/alternative
+version. Each also passed 261 seeded checks on new names the model had not seen.
+The original folder stayed unchanged during exploration, and switching selected
+the matching file version and COW context. After a server process restart, the
+CLI reopened the same session and correctly explained the selected alternative.
+The server loaded its 49,350-token computational history without forwarding
+those saved tokens again. Filesystem cache warmth was retained. This is not a
+claim of fresh-history logit equivalence or broad controller certification.

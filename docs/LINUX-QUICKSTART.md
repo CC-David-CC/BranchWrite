@@ -130,3 +130,5 @@ does not install model-driven browser tools. You can review the HTML in your own
 browser. Full stress/security/numerical certification remains separate.
 
 For server setup, use [the Context COW server guide](https://github.com/CC-David-CC/Private_Context_COW/blob/main/docs/CONTEXT-COW-SERVER.md).
+
+For a tested existing-code example, see [repair a contact directory](../examples/repair-contact-directory/README.md). It includes the exact requests and optional queued/alternative-version steps.

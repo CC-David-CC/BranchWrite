@@ -40,9 +40,11 @@ See validation/linux-lan-install-20261020 for source attribution and failures.
 
 No new numerical oracle, logit-error maximum, zero-prefix-work trace or cumulative
 G1-G5 qualification was obtained in that installation smoke. G0 passed 51/51.
-The standalone-agent goal remains active. Unfamiliar-project repair, combined
-interactive controls, model-directed browser observation, broader recovery and
-stress remain to exercise. Extra browser-worker isolation failed on the audit
+The standalone-agent goal remains active. Existing-project repair, active steering,
+queued coalescing, older-context/current-files exploration, paired selection and
+cold-process continuation now have bounded executed evidence under
+validation/real-project-loop-20261020. Broader unfamiliar projects/admin,
+model-directed browser observation, recovery and stress remain to exercise. Extra browser-worker isolation failed on the audit
 host; an independent sandboxed Chromium audit passed under a temporary scoped
 permission profile, which was removed. The default client file/shell sandbox passed.
 

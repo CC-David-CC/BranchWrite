@@ -28,6 +28,41 @@ workflow state. The installed client used the existing canonical RuntimeLog and
 COW references. No new numerical-logit or zero-prefix-work qualification is
 claimed; this instrumented run is not a throughput benchmark.
 
-Queued follow-ups and alternative file/context branches are the next combined
-checks. They are not claimed by the repair result. The standalone-agent goal
-and broader recovery, browser, stress and release work remain active.
+The repair result covers the first repair only. The combined checks below
+cover queued follow-ups, alternatives, selection and cold continuation. The
+standalone-agent goal and broader recovery, browser, stress and release work
+remain active.
+
+## Completed combined checks
+
+The queued Work turn contains exactly the two original messages, coalesced once.
+Chat left its five file manifests unchanged and the next Work turn used Chat's
+returned COW context. Thirteen independent checks passed after whitespace
+handling was added. A seeded held-out check passed 261 assertions on 64 new
+names, outside the model's project.
+
+Explore selected the first repair's older COW context with the current files
+from the whitespace revision. Its validated launch fork points at that exact
+older snapshot. All five original project files remained byte-identical. The
+separate sorted alternative passed thirteen independent checks and 261 seeded
+checks under the requested sorted-result contract. The original checker and
+registered gate tests/tolerances were unchanged. Two actual CLI Switch commands
+selected each exact context, file commit and work directory without creating a
+model workflow.
+
+Both Python and native server processes then exited. With the same profile, the
+new server started with an empty RAM checkpoint pool and retained disk files.
+The new native process loaded 1,406,941,456 logical file bytes, transferred
+1,288,679,424 bytes in its cold-copy counters, and reached the saved consumed
+position 49,350 with forward/prefill counters still zero. Input and position
+hashes matched the old process. Only then did it prefill 728 new tokens in
+512/216 chunks. Filesystem page cache was warm; physical disk reads were not
+measured. The reopened CLI answered correctly about the selected sorted version
+and preserved its files. No fresh full-history logit oracle was executed.
+
+The public JSON summaries are bounded evidence projections, not workflow state.
+Raw private observations and harness corrections remain on llm-49/llm-60.
+`engineering-observations.json` discloses invalid fixture and orchestration
+issues; these were not treated as model-training failures or hidden as passes.
+The standalone-agent goal remains active. Default model-driven browser feedback,
+broader projects/admin/recovery and full certification remain separate work.

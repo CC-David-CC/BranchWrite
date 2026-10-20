@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "scope": "bounded installed CLI combined controls, separate file/context alternatives and cold-process continuation; not G1-G5 certification",
+  "checks": {
+    "queued": {
+      "status": "PASS",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "oracle_sha256": "75c58051b596257e70a32c13339f3c897e3ecbffc0a7401cf9bbee5e50172e7c",
+      "candidate_sha256": "56643bef0f3f4fe39ad30d14aa150cd2027dae9cadf673cce6f2371500618b5e",
+      "seed": null
+    },
+    "alternative": {
+      "status": "PASS",
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "oracle_sha256": "75c58051b596257e70a32c13339f3c897e3ecbffc0a7401cf9bbee5e50172e7c",
+      "candidate_sha256": "af4f8f0a46cb7176e5f7d243b3f4a8075ea95eb2d965672f68fea6eafa394058",
+      "seed": null
+    },
+    "heldout_current": {
+      "status": "PASS",
+      "passed": 261,
+      "failed": 0,
+      "skipped": 0,
+      "oracle_sha256": "13f3cc870c4cc13a2af9c1c4378e319e452a58f4bb8b3e31017e53683a705954",
+      "candidate_sha256": "56643bef0f3f4fe39ad30d14aa150cd2027dae9cadf673cce6f2371500618b5e",
+      "seed": 7919
+    },
+    "heldout_alternative": {
+      "status": "PASS",
+      "passed": 261,
+      "failed": 0,
+      "skipped": 0,
+      "oracle_sha256": "2474bbb25ebeab761371844df1bd3dc8b7f2f37fa564a9c80105fbc4a0b6b3db",
+      "candidate_sha256": "af4f8f0a46cb7176e5f7d243b3f4a8075ea95eb2d965672f68fea6eafa394058",
+      "seed": 7919
+    }
+  },
+  "queue": {
+    "chat_files_identical": true,
+    "file_count": 5,
+    "queued_work_has_both_original_messages": true,
+    "queued_work_starts_from_chat_context": true,
+    "chat_starts_from_repaired_context": true
+  },
+  "alternative": {
+    "older_context_used": true,
+    "newer_files_used": true,
+    "contexts_really_differ": true,
+    "fork": {
+      "snapshot": "341a02ad7fbbac7d90835f7a9c5fb4e48548e33a6653b5d1e4a373bfc5319ed2",
+      "source_branch": "bw-session-6f7e721100417ce425305e0183da4bba8f0fdb51"
+    }
+  },
+  "original_files_unchanged": true,
+  "switch": {
+    "status": "PASS",
+    "selections": [
+      {
+        "selection": "turn-6-448e3c9e8f2f279d",
+        "selected": "turn-4-1c0574603463b13e",
+        "matched_context": true,
+        "matched_file_commit": true,
+        "matched_workdir": true,
+        "model_workflow_created": false
+      },
+      {
+        "selection": "turn-7-f49fe5de38145727",
+        "selected": "turn-5-108a9fb8f9a14da7",
+        "matched_context": true,
+        "matched_file_commit": true,
+        "matched_workdir": true,
+        "model_workflow_created": false
+      }
+    ],
+    "read_only_observer": true
+  },
+  "cold_client": {
+    "files_unchanged": true,
+    "files": 5,
+    "status": "PASS",
+    "saved_context_selected": true,
+    "all_session_turns_closed": true,
+    "answer": "The selected version is the sorted-search version. Search is case-insensitive and Unicode-normalized (`NFC` + `casefold`), ignores leading/trailing spaces in the query, and returns matching contacts sorted alphabetically by name. Saved contacts remain in their original order."
+  },
+  "controller_scope": "tested greedy profile; broad RNG, grammar-progress and adaptive-state recovery not requalified",
+  "numerical_max_error": null,
+  "fresh_full_history_oracle": "not executed",
+  "cross_arrangement_equivalence": "not established"
+}

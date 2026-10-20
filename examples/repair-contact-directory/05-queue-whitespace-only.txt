@@ -1,0 +1,1 @@
+A query made only of spaces should work like an empty query, without changing the saved names or result order.

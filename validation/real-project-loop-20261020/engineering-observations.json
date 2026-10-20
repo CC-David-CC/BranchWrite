@@ -1,0 +1,7 @@
+[
+  "Initial ASCII-damaged fixture was invalid for model/Unicode evaluation; retained separately.",
+  "One orchestration launch missed a Python import before subprocess creation; fixed before sending any client input.",
+  "First pairing observer parsed the launch envelope as the launch itself; corrected to use production read_launch integrity validation.",
+  "Original terminal probes retained phase=connect on normal EOF. They were qualified using zero SSH exit, absent process handles, canonical closed turns and independent acceptance, not that phase label. Future probes now record explicit client-exit and settlement observations; raw prior results remain unchanged.",
+  "Cold restart succeeded; an orchestration-only heartbeat then raised a duplicate elapsed keyword error. The raw traceback and lifecycle record were preserved. Fresh PID/API/empty-RAM checks verified startup; the future reporter collision case was corrected and executed successfully."
+]

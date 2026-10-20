@@ -1,0 +1,27 @@
+{
+  "scope": "monotonic native counter deltas returned inside completed model request intervals; background persistence excluded",
+  "note": "Before cold restart; monotonic counters only. Does not include background file writes, prove zero replay for every request, or constitute a TPS benchmark.",
+  "counter_bearing_operations": 29,
+  "execution_profiles": [
+    "2db7e7f267080ce6f6e9f6e30dd5e27b8372042251de8a35c2272a829bc8f0c5"
+  ],
+  "model_contracts": [
+    "c36d136357b6a0a0cb8605e085d430c3d6f5328d064757c8543a85bc82bca8eb"
+  ],
+  "totals": {
+    "forward_tokens": 47036,
+    "prefill_tokens": 31381,
+    "prefill_chunks": 75,
+    "decode_timed_tokens": 15655,
+    "captures": 28,
+    "restores": 28,
+    "loaded_file_bytes": 0,
+    "written_file_bytes": 0,
+    "copied_bytes": 2113929216,
+    "integrity_device_hashed_bytes": 13820768550912,
+    "integrity_mismatches": 0,
+    "decode_compute_ns": 123366033139,
+    "decode_prepare_ns": 29939263948,
+    "decode_finish_ns": 1357031730
+  }
+}

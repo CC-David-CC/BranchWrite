@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "scope": "new native process restored saved history before the first new suffix batch; not a numerical oracle",
+  "saved_consumed_tokens": 49350,
+  "old_native_pid": 1109994,
+  "new_native_pid": 1112150,
+  "old_process_exited": true,
+  "filesystem_page_cache": "warm; no physical-NVMe-read claim",
+  "before_load": {
+    "consumed": 0,
+    "forward_tokens": 0,
+    "prefill_tokens": 0,
+    "loaded_file_bytes": 0,
+    "cold_restore_copy_bytes": 0,
+    "cold_restore_copy_calls": 0,
+    "restored_running_bytes": 0,
+    "integrity_mismatches": 0
+  },
+  "after_load_before_new_tokens": {
+    "consumed": 49350,
+    "forward_tokens": 0,
+    "prefill_tokens": 0,
+    "loaded_file_bytes": 1406941456,
+    "cold_restore_copy_bytes": 1288679424,
+    "cold_restore_copy_calls": 108,
+    "restored_running_bytes": 0,
+    "integrity_mismatches": 0
+  },
+  "input_identity_matches": true,
+  "position_identity_matches": true,
+  "rotary_cursor_matches": true,
+  "native_input_sha256": "61a824e84c1344fea3dd09a2a8f77eed4d7b3fb7c972c915e65d8af84d7ff596",
+  "position_sha256": "e3f231c53a63de01dc3101443fd1388aac8e9d47743d540f68f8875cb4a71b1e",
+  "first_new_batch": {
+    "status": "ok",
+    "consumed": 50078,
+    "operator": "batched-prefill",
+    "position": 49350,
+    "count": 728,
+    "chunks": [
+      [
+        49350,
+        512
+      ],
+      [
+        49862,
+        216
+      ]
+    ]
+  },
+  "old_trace_sha256": "505676caa6e4a8842190d9ed0fc2e44e39869286080a46a95292b68d5115ab57",
+  "cold_trace_prefix_sha256": "e10b48fad23e05a227c5571a16c26e2310737b20008a6b9da221eb319f52fef1",
+  "numerical_max_error": null,
+  "fresh_full_history_oracle": "not executed in this test"
+}

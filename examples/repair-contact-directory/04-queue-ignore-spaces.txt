@@ -1,0 +1,1 @@
+Also ignore spaces before or after a search query.
