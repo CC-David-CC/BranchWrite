@@ -20,11 +20,16 @@ if [ "$(id -u)" = 0 ]; then
 fi
 BW_HOME=${BW_HOME:-"$HOME/.local/share/branchwrite"}
 BW_BIN=${BW_BIN:-"$HOME/.local/bin"}
-BW_REF=${BW_REF:-"lan-preview-2026-10-20"}
+BW_REF=${BW_REF:-"lan-preview-2026-10-20.1"}
 mkdir -p "$BW_HOME"
 exec 9>"$BW_HOME/install.lock"
 flock -n 9 || { echo "Another BranchWrite installation is running." >&2; exit 1; }
 stage=$(mktemp -d "$BW_HOME/setup.XXXXXXXX")
+# Do not let uv inspect a project .venv or an inaccessible caller directory.
+BW_HOME=$(cd "$BW_HOME" && pwd -P)
+stage=$(cd "$stage" && pwd -P)
+cd "$stage"
+unset VIRTUAL_ENV CONDA_PREFIX PYTHONHOME PYTHONPATH
 echo "Installing BranchWrite. Setup files: $stage"
 uv_url=https://github.com/astral-sh/uv/releases/download/0.13.4/uv-x86_64-unknown-linux-gnu.tar.gz
 curl --fail --location --retry 3 --connect-timeout 20 "$uv_url" -o "$stage/uv.tar.gz"

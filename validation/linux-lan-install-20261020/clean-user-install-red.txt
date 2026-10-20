@@ -1,0 +1,17 @@
+Installing BranchWrite. Setup files: /home/bw-newbie-20261020/.local/share/branchwrite/setup.nw9Peswi
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0                              0
+
+  0      0   0      0   0      0      0      0                              0
+100 15.88M 100 15.88M   0      0 49.50M      0                              0
+100 15.88M 100 15.88M   0      0 49.49M      0                              0
+100 15.88M 100 15.88M   0      0 49.48M      0                              0
+Downloading cpython-3.12.15-linux-x86_64-gnu (download) (32.7MiB)
+ Downloaded cpython-3.12.15-linux-x86_64-gnu (download)
+Installed Python 3.12.15 in 630ms
+ + cpython-3.12.15-linux-x86_64-gnu
+error: failed to query metadata of symlink `/home/maint/.venv`: Permission denied (os error 13)
