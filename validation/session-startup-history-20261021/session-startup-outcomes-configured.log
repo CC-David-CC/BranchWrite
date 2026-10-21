@@ -1,0 +1,11 @@
+test_continue_and_reconcile_repeat_the_current_paused_notice (test_interactive_outcomes.ControllerNoticeTests.test_continue_and_reconcile_repeat_the_current_paused_notice) ... ok
+test_eof_at_code_prompt_preserves_the_existing_conversation (test_interactive_outcomes.ControllerNoticeTests.test_eof_at_code_prompt_preserves_the_existing_conversation) ... ok
+test_checks_cannot_hide_the_actual_not_done_answer (test_interactive_outcomes.OutcomeTests.test_checks_cannot_hide_the_actual_not_done_answer) ... ok
+test_failed_checks_still_show_the_final_explanation (test_interactive_outcomes.OutcomeTests.test_failed_checks_still_show_the_final_explanation) ... ok
+test_initial_context_reads_the_saved_request_boundary_without_writes (test_interactive_outcomes.OutcomeTests.test_initial_context_reads_the_saved_request_boundary_without_writes) ... ok
+test_terminal_controls_from_model_are_rendered_as_text (test_interactive_outcomes.OutcomeTests.test_terminal_controls_from_model_are_rendered_as_text) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.197s
+
+OK

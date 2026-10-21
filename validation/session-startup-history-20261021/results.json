@@ -19,7 +19,13 @@
   "broader_attempt": {
     "tests": 64,
     "errors": 14,
-    "note": "12 missing BW_BASIC_LOOP_PACK fixture variable; 2 other test environment errors retained in raw log. Not a full-suite pass."
+    "note": "12 missing BW_BASIC_LOOP_PACK fixture variable; 2 missing COW Python paths. Six outcome tests passed after adding both actual COW source paths. Browser-policy fixture tests remain unexecuted in the configured environment."
   },
-  "live_cli_version": "0.1.0.dev72; this startup notice change not deployed in the ongoing model run"
+  "live_cli_version": "0.1.0.dev72; this startup notice change not deployed in the ongoing model run",
+  "additional_configured_outcomes": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  }
 }
