@@ -460,7 +460,8 @@ class OperationJournal:
         return record, True
 
     def complete(self, record: Mapping[str, Any], receipt: Mapping[str, Any], *,
-                 answer: Mapping[str, Any] | None = None) -> dict[str, Any]:
+                 answer: Mapping[str, Any] | None = None,
+                 replay_source: Mapping[str, Any] | None = None) -> dict[str, Any]:
         with self._lock:
             current = self.read(str(record["operation_id"]))
             if current is None or current.get("intent_sha256") != record.get("intent_sha256"):
@@ -477,6 +478,12 @@ class OperationJournal:
             complete = dict(current, state="complete", receipt=dict(receipt))
             if answer is not None:
                 complete["answer"] = json.loads(_canonical(dict(answer)))
+            if replay_source is not None:
+                proof = json.loads(_canonical(dict(replay_source)))
+                if (current.get("state") == "complete" and "replay_source" in current
+                        and current["replay_source"] != proof):
+                    raise ReceiptError("completed replay has a different original receipt")
+                complete["replay_source"] = proof
             complete["record_sha256"] = _record_digest(complete)
             self._atomic(self._path(str(record["operation_id"])), complete)
             return complete
@@ -1317,6 +1324,17 @@ class CowClient:
             FrameKey.from_json(record["frame_key"]) if record.get("frame_key") else None,
             record.get("endpoint_pin"),
             COWSourceBinding.from_json(record["source_binding"]) if record.get("source_binding") else None)
+        data = json.loads(body)
+        if (intent.path == "/cow/text/retry"
+                and set(data) == {"from_operation", "operation_id", "branch", "revision", "stream"}
+                and data["stream"] is True):
+            # This exact API form is a read of an already committed answer,
+            # not a generation admission. Recover only the recorded bytes/ID.
+            source = self.operation(data["from_operation"])
+            if not source.durable or source.receipt is None:
+                raise OperationIndeterminate("saved retry source has no durable result")
+            response = self.transport.request(intent.method, intent.path, intent.body, stream=True)
+            return self._accept_stream(response, record, intent)
         observation = self.operation(operation_id)
         if not observation.durable:
             raise OperationIndeterminate("original generation has no proven durable result")
@@ -1388,7 +1406,9 @@ class CowClient:
         if (record.get("endpoint_url") != self.endpoint_url
                 or record.get("endpoint_pin") != self.endpoint_pin):
             raise OperationReuseError("completed request belongs to another endpoint")
-        receipt = self._receipt(record.get("receipt"), operation_id=record["operation_id"])
+        replay = record.get("replay_source")
+        receipt_op = replay.get("operation_id") if isinstance(replay, dict) else record["operation_id"]
+        receipt = self._receipt(record.get("receipt"), operation_id=receipt_op)
         self._validate_receipt_against_record(receipt, record)
         binding = (COWSourceBinding.from_json(record["source_binding"])
                    if record.get("source_binding") else None)
@@ -1448,10 +1468,33 @@ class CowClient:
                            "/cow/text/append-user", "/cow/text/retry"} and not isinstance(
                                answer.get("text"), str):
             raise ReceiptError("generation completion lacks exact answer text")
-        expected_branch = intent.branch
-        receipt = self._receipt(complete.get("receipt"), operation_id=intent.operation_id,
-                                expected_branch=expected_branch,
-                                expected_revision=(None if intent.revision is None else intent.revision + 1))
+        replay_source = None
+        retry_body = json.loads(intent.body) if intent.path == "/cow/text/retry" else None
+        if retry_body is not None and complete.get("replayed") is True:
+            # A saved-answer read returns the original immutable receipt. It
+            # does not move the requested branch, even if it advanced since.
+            source_op = retry_body["from_operation"]
+            observation = self.operation(source_op)
+            if not observation.durable or observation.receipt is None:
+                raise ReceiptError("saved-answer replay lacks original durable proof")
+            original = observation.receipt
+            receipt = self._receipt(complete.get("receipt"), operation_id=source_op,
+                expected_branch=original.branch.name, expected_revision=original.branch.revision,
+                expected_snapshot=original.snapshot)
+            # Legacy canonical presentations can omit optional checkpoint
+            # metadata. Bind the whole branch and snapshot, and reject every
+            # conflicting identity field carried by both receipt forms.
+            if (receipt.branch != original.branch or receipt.snapshot != original.snapshot
+                    or any(receipt.raw[k] != original.raw[k]
+                           for k in receipt.raw.keys() & original.raw.keys())):
+                raise ReceiptError("replay differs from the original durable receipt")
+            replay_source = dict(operation_id=source_op, receipt=dict(original.raw))
+        else:
+            if retry_body is not None and "settings" not in retry_body:
+                raise ReceiptError("unchanged retry must return its original saved answer")
+            receipt = self._receipt(complete.get("receipt"), operation_id=intent.operation_id,
+                                    expected_branch=intent.branch,
+                                    expected_revision=(None if intent.revision is None else intent.revision + 1))
         if answer.get("snapshot") is not None and answer["snapshot"] != receipt.snapshot:
             raise ReceiptError("answer snapshot differs from durable receipt")
         if "text" in answer and isinstance(answer["text"], str):
@@ -1462,7 +1505,7 @@ class CowClient:
             if response.transport == "http" and response.provisional_text and streamed != answer["text"]:
                 raise ReceiptError("provisional stream text differs from committed answer text")
         self._check_answer_binding(intent.path, answer, receipt.snapshot)
-        self.journal.complete(record, receipt.raw, answer=answer)
+        self.journal.complete(record, receipt.raw, answer=answer, replay_source=replay_source)
         return GenerationResult(intent.operation_id, receipt,
                                 response.provisional_text, answer, response.transport,
                                 intent.source_binding)
@@ -1535,6 +1578,22 @@ class CowClient:
             raise ReceiptError("durable operation status lacks a receipt")
         branch = record.get("branch")
         revision = record.get("revision")
+        replay = record.get("replay_source")
+        if replay is not None:
+            body = json.loads(self.journal.decode_body(record))
+            if (record.get("path") != "/cow/text/retry" or type(replay) is not dict
+                    or set(replay) != {"operation_id", "receipt"}
+                    or replay["operation_id"] != body.get("from_operation")):
+                raise ReceiptError("saved-answer proof differs from original retry intent")
+            original = self._receipt(replay["receipt"], operation_id=replay["operation_id"])
+            self._receipt(receipt.raw, operation_id=replay["operation_id"],
+                expected_branch=original.branch.name, expected_revision=original.branch.revision,
+                expected_snapshot=original.snapshot)
+            if (receipt.branch != original.branch or receipt.snapshot != original.snapshot
+                    or any(receipt.raw[k] != original.raw[k]
+                           for k in receipt.raw.keys() & original.raw.keys())):
+                raise ReceiptError("retained replay differs from original durable receipt")
+            return
         if record.get("path") == "/cow/fork":
             body = json.loads(self.journal.decode_body(record))
             binding = COWSourceBinding.from_json(record.get("source_binding"))

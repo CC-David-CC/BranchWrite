@@ -1,0 +1,25 @@
+{
+  "status": "CPU_PASS_REAL_GPU_CLIENT_RETEST_PENDING",
+  "tests": {
+    "replay_http": 5,
+    "transport": 17,
+    "client_flow": 5
+  },
+  "scope": "Existing CowClient retry_saved and reconciliation API; full coding-workflow retry CLI remains separate",
+  "semantics": [
+    "Unchanged retry reads the original durable answer and does not advance or rewind a branch",
+    "Returned receipt identifies the original committed operation; GenerationResult still owns the retry request ID",
+    "Existing client journal atomically retains original receipt provenance with exact answer bytes",
+    "A lost acknowledgment for the strict unchanged-controls API form can be recovered from its original durable source",
+    "Unknown changed-settings operations remain indeterminate and are not resent"
+  ],
+  "compatibility": [
+    "Optional canonical replay_source metadata is added to the existing journal, not another conversation representation",
+    "Legacy canonical presentation receipts can omit optional checkpoint fields; full branch/snapshot and common identity fields must match",
+    "Old clients may reject new replay-aware receipts and should not be used for this explicit recovery path"
+  ],
+  "limitations": [
+    "No real-GPU retry result claimed yet",
+    "No new generic coding CLI retry command in this change"
+  ]
+}
