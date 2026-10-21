@@ -1,4 +1,8 @@
-# BranchWrite: start here
+# BranchWrite: client installation
+
+Setting up both computers yourself? Start with the
+[desktop-and-laptop guide](TWO-COMPUTER-SETUP.md).
+Use this shorter page when your server is already running.
 
 BranchWrite helps you make and change files by talking to a model.
 You use two computers:
@@ -125,9 +129,11 @@ work. They are not decode-speed measurements or promises for another machine.
 The client was a fresh BW install in an existing Ubuntu VM. Its real shell/file
 isolation check passed. The page checks used a separate sandboxed Chromium
 browser with a temporary host permission profile, which was then removed.
-BW's additional browser-worker isolation failed on that audit host; this preview
-does not install model-driven browser tools. You can review the HTML in your own
-browser. Full stress/security/numerical certification remains separate.
+That audit's browser-worker setup failure has since been corrected in the
+[separately tested Linux browser worker](https://github.com/CC-David-CC/BranchWrite/tree/feat/browser-client-linux/validation/browser-client-20261020).
+The standard client installer still does not enable model-driven browser tools.
+Use `/preview` to review the HTML in your own browser. Full stress/security/
+numerical certification remains separate.
 
 For server setup, use [the Context COW server guide](https://github.com/CC-David-CC/Private_Context_COW/blob/main/docs/CONTEXT-COW-SERVER.md).
 

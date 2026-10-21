@@ -1,15 +1,13 @@
 # Implementation discipline
 
-## Private work and publication
+## Publication
 
-Routine commits and backups may go to private LAN box-git at
-`git@box-git:/srv/data/git/BranchWrite.git`. Workers commit locally; the primary
-agent reviews and pushes explicit private refs. Do not infer a destination from
-`origin`. Any GitHub push, pull request, release or other publication requires
-the owner's explicit approval and applicable review/checks first. Existing
-public repositories or credentials do not authorize publication. Any proposed
-Strata upstream contribution also waits for Niko's approval, confirmed by the
-owner; do not contact Niko on the owner's behalf.
+This is a public project. Publish reviewed changes to the explicitly selected
+repository and branch when authorized by the owner. Preserve existing remotes
+and unpublished history. Keep credentials, protected diagnostic answers and
+machine-specific operational handoffs out of public commits. Contributions to
+other projects require separate authorization; do not contact maintainers on
+the owner's behalf.
 
 ## One system
 
@@ -78,18 +76,3 @@ second runtime. Production tests must use real filesystem/process/native boundar
 where the catalogue requires them. Test count does not establish product quality.
 Do not add a license on the owner's behalf. Keep private prompts, receipts and secrets
 out of public artifacts and commits.
-
-## Active execution placement (owner, 2026-10-17)
-
-Windows steers SSH only. Edit, test, build, collect evidence and package on the
-authorized Linux hosts. New model tasks use4096 thinking tokens (owner update2026-10-18).
-The owner's newer ladder instruction advances on a verified task failure,even if
-thinking closed naturally;budget exhaustion is recorded separately. Standard
-budgets are4K/8K/16K/32K. Lite mode starts256 and is opt-in;its live retests are
-deferred. Tool progress,infrastructure faults and unresolved effects do not
-trigger automatic task retries. No no-thinking comparisons without request.
-Keep the chat server OFF and Q8 deferred. Private LAN Git only.
-
-Keep recorded512-token successes and frozen inputs unchanged. The new default
-applies only at new generation admission, never to resumed controller state.
-Natural-cutoff and broader end-to-end data collection are deferred.

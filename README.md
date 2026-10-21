@@ -1,137 +1,99 @@
 # BranchWrite
 
-## Install and start on Linux
+Tell BranchWrite what you want to make or change. It works on the project folder
+where you start it, keeps saved versions, and lets you steer while it works.
 
-Your model runs on a Context COW server. This client needs no GPU or model files.
-First follow the [simple Linux setup guide](docs/LINUX-QUICKSTART.md). It includes
-the system tools, one download command, LAN address/key setup and a tested
-website example with pictures. Then open a terminal in your project folder and
-run `~/.local/bin/bw`.
+## New here? Start with two computers
 
-[Server setup](https://github.com/CC-David-CC/Private_Context_COW/blob/main/docs/CONTEXT-COW-SERVER.md)
-| [Executed LAN install and restart smoke](validation/linux-lan-install-20261020/README.md)
+**[Set up a desktop server and a laptop client](docs/TWO-COMPUTER-SETUP.md).**
 
+This plain-language Linux guide covers both machines, automatic Q4 model
+download, model preparation, the server address, the API key and your first
+website. It does not need an AI agent to explain missing file paths.
+Read the hardware and download size first: the current Q4 model is about 111 GB.
+This is not a promise that every gaming PC has enough memory to run it.
 
-Source preview, 2026-10-20. Server: [Context COW](https://github.com/CC-David-CC/Private_Context_COW). Original engine: [Strata](https://github.com/Niko1221/Strata). This preview predates the planned Strata 2.1 refresh. See [current release notes](PUBLIC_PREVIEW.md) and [example prompts](examples/prompts/README.md).
+**Already have a Context COW server?** Use the shorter
+[client-only installation guide](docs/LINUX-QUICKSTART.md).
+The laptop needs no GPU and does not download the model.
 
-BranchWrite is an experimental Linux command-line coding agent powered by Context COW. It keeps a durable record of tool work and uses server-owned model branches and saved prefill.
+## What goes on each computer?
 
-Start in your Linux project folder with `branchwrite`, then describe what you want in ordinary words. The responsive terminal stays open while BW works: Enter adds steering, Tab queues notes together for the next turn, and Esc stops at a safe boundary. Work mode updates files in this folder and keeps saved versions. Plan and Chat let you discuss the project; Aside leaves its main model tip unchanged. Use `/preview` to open the selected saved static website; remote SSH clients get a tunnel command. Read the [interactive guide](docs/manual/09_INTERACTIVE_SESSION.md) for keys, history, branch exploration and recovery.
+| Piece | Where it runs | What it does |
+|---|---|---|
+| Context COW server | Your NVIDIA/Linux desktop | Runs the model and keeps reusable model context in RAM/disk pools. |
+| BranchWrite client | Your Linux laptop or desktop | Talks with you, manages saved work and calls the server over HTTP. |
+| BranchWrite tools and workflow harness | The client | Reads and changes the project, runs bounded tools and records their results. |
 
-Your operator supplies the COW server address and API key. Keys stay in memory by default; `--save-api` explicitly opts into private storage. The original one-task wizard is still available as `branchwrite start` and works in an isolated copy for review.
+Your project stays on the client. Content needed for a request goes to the model
+server you choose. Your API key stays in memory unless you request `--save-api`.
 
-Private Linux client installation: [CLIENT_INSTALL.md](docs/CLIENT_INSTALL.md). Project/task launcher: [CODING_LAUNCHER.md](docs/CODING_LAUNCHER.md). Latest bounded Q8 results: [STANDALONE_CODING_STATUS.md](docs/STANDALONE_CODING_STATUS.md).
+## Start in a folder
 
-## Manual setup and use
-
-Start with [Context COW and BranchWrite manual guides](docs/manual/00_START_HERE.md) for server startup, client installation, connection, an HTML task and the current private handoff.
-
-New coding default: **greedy with worked examples**. Min-P and DRY+Min-P are
-explicit fallback profiles for verified task failures. Use
-`examples/coding.bw`, omit `profiles`, and select COW `bootstrap: coding` for a
-new example-backed context. See [the run guide](docs/AUTONOMOUS_RUN.md). Explicit
-profiles stay exact; existing saved controllers are not rewritten.
-
-Current Linux execution prototype: [run/step guide](docs/AUTONOMOUS_RUN.md).
-A .bw file is a workflow recipe; Context COW separately owns native computational
-checkpoints. Current delivery goal: one push-button autonomous coding run.
-Original certification and broad unfamiliar-workload validation remain open.
-
-# BranchWrite - private prototype
-
-**Private implementation of one durable controller for model and tool work.**
-
-The production [program reader](docs/PROGRAM_READER.md) supports read-only
-syntax checks and canonicalization. Linux run/step also execute the supported
-bounded model/tool loop through Context COW. Basic Agent Loop H00-H12 have
-bounded autonomous Q4 passes,including actual browser images and desktop/phone
-controls. Advanced workflow handlers and broad qualification remain incomplete;
-see the executed evidence before selecting a workload.
-The [model invocation adapter](docs/MODEL_FLOW.md), [registered tools](docs/TOOL_REGISTRY.md)
-and [latest evidence](validation/CURRENT-CATALOG-STATUS.md) distinguish working
-components from remaining integration and unqualified native/product cases.
-
-
-Current private repository: `box-git:/srv/data/git/BranchWrite.git`. Product and command are BranchWrite / `branchwrite`.
-GitHub/upstream publication requires separate owner approval. The retained v0.3.0
-handoff describes the broader target; it is not a completed-product claim.
-Active proposed contract: `spec/BW_FIRST_PRINCIPLES_v0.6.md`.
-
-The current [Context COW integration plan](docs/COW_INTEGRATION_PLAN.md) maps this
-contract to the inspected service, CLI/HTTP clients, sampler exploration and
-full-path recovery tests. It is a plan; no product acceptance is implied.
-
-Development now includes a native COW client, a bounded Linux edit/test executor,
-and a [first coding pilot](docs/CODING_PILOT.md). The pilot completed real Q4
-model/edit/test/feedback cases; [executed results and limits](validation/CODING_PILOT_Q4_2026-10-16.md)
-distinguish working components from the proposed full runtime. This remains
-private development, not a public release or complete product qualification.
-
-The initial [GOLDEN PATH helper](docs/GOLDEN_PATH.md) keeps a stable purpose and
-working examples in a COW prefix, then versions evidence-backed observations and
-derived summaries. Workers can fork a specific summary's saved computation.
-Automatic project harvesting/adoption and bounded thinking remain separate work.
-
-The unit is a **typed computation frozen against its relevant exact state**, executed by
-one durable interpreter. Independent continuations, native grammar progress, sampler
-state, physical scopes, evidence and return slots remain independently owned.
-
-## The change
-
-The former seven verbs are author-facing intent categories, not a second interpreter.
-The executable vocabulary is:
-
-`EXPAND CONTINUE PLAN ACT OBSERVE TRANSFORM SAVE VERIFY CHALLENGE COMPARE SELECT COMPOSE COMMIT ABANDON`
-
-Structural constructs remain `FLOW REPEAT BRANCH PARALLEL.PLAN PARALLEL.DO ON`.
-`PLAN` freezes a computation; `SAVE` pins an already durable result. A successful typed
-return closes a settled scope; `ABANDON` is not a euphemism for success or rollback.
-
-The canonical workflow uses typed `.bw` text. Explicit JSON/JSON Schema model
-output is also supported beside GBNF, including required fields, tool enums and
-argument types. The owner retired the blanket JSON bans on 2026-10-17. This does
-not introduce another workflow ledger or an automatic repair-to-JSON path.
-Active configuration/catalogue files use TOML; raw artifacts remain exact bytes.
-The unchanged original archive and historical specifications in `provenance/` still
-contain the old JSON material. They are evidence, not active implementation inputs.
-A pre-existing native service's internal transport encoding remains that service's
-contract; this bundle neither requires model JSON support nor invents a new COW wire API.
-
-## Start
-
-For an installed private client, open a terminal in the project folder and run `branchwrite` for the guided first-task flow. See [First task](docs/manual/06_FIRST_TASK.md).
-
-
-Read `START_HERE.md`, `CODEX_PROMPT.md`, the active specification, and `docs/MIGRATION.md`.
-For the current coding experiment, follow `docs/CODING_PILOT.md`. The executor
-runs on Linux with the documented bubblewrap/prlimit boundary and a separately
-configured COW service. The complete client integration tests also need the
-pinned COW source/dependency paths and `COW_CLI_SCRIPT`; they are not a standalone
-Windows inference setup.
-
-The following commands belong to the original offline handoff (Python 3.11+):
+After installation:
 
 ```sh
-python tools/verify_handoff.py
-python -m unittest discover -s tests -v
-python tools/show_example.py
+mkdir -p ~/my-first-website
+cd ~/my-first-website
+~/.local/bin/bw
 ```
 
-The final H02 source passes 323/323 offline tests after the explicit JSON-policy
-retirement. Actual H00 JSON output, H01 browser capture and H02 image-only Q4
-delivery/interpretation have separate bounded evidence under `validation/`.
-Do not interpret a handoff check or reference test count as product acceptance.
+Try:
 
-These are **offline handoff/reference checks**, not product acceptance. The `reference/`
-code is an executable semantic oracle for a limited language, finite grammar masks,
-probability arithmetic, frozen dependencies and typed returns. It is not a native COW
-adapter, general GBNF engine, sandbox, production scheduler, or GPU implementation.
-Do not import it as a competing production runtime.
+> Make a pretty website about dogs. Make it work on a phone. Add a button that
+> shows a friendly greeting. Keep everything in one file and do not download anything.
 
-All product acceptance cases begin `not_run`. Actual repository, service, GPU, model
-quality, native sampler parity, full grammar matching, OS isolation, power-loss recovery,
-and execution overlap must be established in the real checkout and qualified profiles.
+Then:
 
-The previous handoff's 211 product cases are carried forward with an explicit migration
-record. Its original 98 offline tests were rerun successfully in this preparation session.
-Counts and executed results for this bundle are recorded in `validation/TEST_REPORT.md`.
+> Make the dog names bold. Keep the greeting button working.
+
+Use `/preview` to open the saved static website. Work mode changes this project's
+files and keeps saved versions. You can ask another question after a task finishes.
+You do not need to start again.
+
+## Stay in the conversation
+
+- **Enter:** send a request or steer active work.
+- **Tab:** queue notes together for the next turn.
+- **Esc:** ask it to stop at a safe boundary.
+- **Ctrl+R:** search your earlier input.
+- **/plan:** discuss without editing files.
+- **/work:** make changes.
+- **/aside your question:** ask without changing the main model tip.
+- **/exit:** save and leave. Reopen BW in the same folder to return.
+
+The [interactive guide](docs/manual/09_INTERACTIVE_SESSION.md) explains saved
+history, switching versions, retry and exploring another direction.
+[Example prompts](examples/prompts/README.md) cover the separately configured tools.
+
+## Why saved branches matter
+
+Related tasks can start from shared model context and continue independently.
+You can explore a different repair without replacing the current files, return
+to an earlier saved point, and keep the model's reusable computation on the server.
+A `.bw` file is a workflow recipe, not a KV-cache file. COW owns the computational
+checkpoints; BW owns its durable workflow and references to them.
+
+## Current release scope
+
+This is a public research preview. Tested workflows include real CLI-to-server
+coding, follow-up edits, queued steering, isolated alternatives and process-restart
+continuation. See [executed project-loop evidence](validation/real-project-loop-20261020/README.md)
+and [fresh-client installation evidence](validation/linux-lan-install-20261020/README.md).
+Those results are bounded checks, not full G1–G5 certification or a guarantee on
+unfamiliar hardware. CAD, Blender, image encoding and remote administration need
+their own configured capabilities. The standard installer does not yet enable
+model-driven browser inspection.
+
+## For developers
+
+- [Current preview and provenance](PUBLIC_PREVIEW.md)
+- [Workflow language](spec/BW_FIRST_PRINCIPLES_v0.6.md)
+- [Run and step a workflow](docs/AUTONOMOUS_RUN.md)
+- [Registered tools](docs/TOOL_REGISTRY.md)
+- [COW model integration](docs/MODEL_FLOW.md)
+- [API integration plan](docs/COW_INTEGRATION_PLAN.md)
+- [Context COW server source](https://github.com/CC-David-CC/Private_Context_COW)
+
+The inference engine is based on [Strata](https://github.com/Niko1221/Strata).
+This release uses the documented pinned source; the planned Strata refresh is separate.
