@@ -508,6 +508,30 @@ class Interpreter:
                     feedback[field+'_truncated']=len(raw)>len(shown)
                     feedback[field+'_artifact']=dict(sha256=data[field][0],bytes=data[field][1])
                     feedback[field+'_display']=dict(encoding='utf-8',errors='replace',lossy=lossy,source_bytes=len(shown))
+                # Only project trusted, bounded stage names. Do not dump arbitrary
+                # details (runtime paths, environment or credentials) into prompts.
+                # These hints never replace raw output or host verification.
+                if data['exit_code'] not in (None,0) or data['disposition'] in ('rejected_before_admission','pdf_failed','cad_failed','scene_failed','timeout','output_limit'):
+                    stage=data['disposition']
+                    if data['tool'] in ('build_pdf','inspect_cad'):
+                        observed=data['details'].get('build_disposition' if data['tool']=='build_pdf' else 'disposition')
+                        if observed in ('missing_artifact','output_rejected','timeout','output_limit','worker_failed','background_processes','exited'):stage=observed
+                    action='Inspect stderr, stdout and the recorded status. Check existing effects before repeating a command; a nonzero exit does not undo its work.'
+                    if stage=='rejected_before_admission':
+                        action='Correct the request using the reported reason and existing tool schema/grant. Read current file bytes before retrying an edit; do not bypass a denied permission.'
+                    elif data['tool'] in ('build_pdf','inspect_cad'):
+                        expected='document.pdf' if data['tool']=='build_pdf' else 'part.step'
+                        if stage in ('missing_artifact','output_rejected'):
+                            action='Update the source to export a fresh regular nonempty '+expected+' in the isolated working directory. Then run the build tool again; the requested destination name is published by the host.'
+                        elif stage=='timeout':
+                            action='Inspect the source for hangs or excessive work. Simplify or fix it before rebuilding within the configured time budget; do not assume an output was published.'
+                        elif stage=='output_limit':
+                            action='Reduce excessive program output before rebuilding. Inspect the retained bounded diagnostics; no successful artifact is established.'
+                        else:
+                            action='Inspect the execution diagnostics and geometry/page checks, repair the source, then rebuild and inspect the current artifact before claiming success.'
+                    elif data['tool']=='inspect_scene':
+                        action='Inspect the scene error, measurements and available rendered views. Repair the source and rerun scene inspection; do not accept an earlier render as the current result.'
+                    feedback['problem']=dict(stage=stage,summary='Tool did not establish success; consult the observed diagnostics and verification.',next_action=action)
                 if data['image'] is not None:
                     feedback['image']=dict(sha256=data['image'][0],bytes=data['image'][1],media_type='image/png')
                     feedback['capture']=data['details']

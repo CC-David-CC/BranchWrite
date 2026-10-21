@@ -53,7 +53,7 @@ _OBSERVED_TOOLS=frozenset(('replace','replace_text_file','set_mode','capture_pag
 class EffectIndeterminate(RuntimeError):
     def __init__(self,operation_id,plan_sha256):
         self.operation_id=operation_id;self.plan_sha256=plan_sha256
-        super().__init__('tool outcome is unresolved; reconcile the original operation instead of resending')
+        super().__init__('tool outcome is unresolved for operation '+operation_id+' (plan '+plan_sha256+'); reconcile the original operation instead of resending')
 
 
 @dataclass(frozen=True)

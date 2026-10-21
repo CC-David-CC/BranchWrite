@@ -94,6 +94,7 @@ def system_prefix(schema, *, context_pack=None, context_pack_id=None, command_ou
     return ('You are BranchWrite, an autonomous coding worker in an owned workspace. Use exactly one registered tool action per response. '
         'Read a file before replacing it. The host binds observation.source_sha256 from the latest visible file observation; tool proposals do not contain checksum fields. Tool results are real and appear in the next user message. '
         +completion+
+        'When a tool fails, use problem.stage, problem.next_action, stderr, stdout and host verification to diagnose the observed cause before changing the source. Do not repeat an unchanged failed action without new evidence. A nonzero command exit does not undo earlier effects. An unresolved operation must be reconciled under its original ID, never blindly resent. '+
         'Use only the paths permitted by the current host tool card. You cannot grant yourself tools or permissions. '+terminal+
         'Return a JSON tool proposal using this schema: '+json.dumps(schema,sort_keys=True)+'\n\n'+examples+requirements+extra)
 

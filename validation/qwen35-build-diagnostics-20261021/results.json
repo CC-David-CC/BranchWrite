@@ -1,0 +1,62 @@
+{
+  "scope": "focused CPU regressions; not G1-G5 certification",
+  "executed_tests": 85,
+  "failures": 0,
+  "skips": 0,
+  "groups": [
+    {
+      "group": "pdf",
+      "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-diagnostics-test_pdfall.py.log",
+      "sha256": "91d5e0b4dd6eda53aa7a806ab3f0b30cbf750744c8f2c5d47b9196bcc2cf4d91",
+      "status": "PASS"
+    },
+    {
+      "group": "problem",
+      "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-model-problem-green-final.log",
+      "sha256": "8fceab7cd5ea161a8ff35d597661943c3d5b1d7afebb43c83d8ef01a25fcd49c",
+      "status": "PASS"
+    },
+    {
+      "group": "output_http",
+      "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-diagnostics-http-final.log",
+      "sha256": "aa9ace096541b5e2340bebe3a179e35c38dbf5af6b29565ae697fd0999462c87",
+      "status": "PASS"
+    },
+    {
+      "group": "edit_admission",
+      "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-diagnostics-test_replace_admission.py.log",
+      "sha256": "9102903e2ab48ce290f20e4502df481e72a7c7390294e408ff4dacec18afb224",
+      "status": "PASS"
+    },
+    {
+      "group": "terminal",
+      "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-diagnostics-test_terminal_components.py.log",
+      "sha256": "a2466e9c309340278aa8947e324b23114449110d41128748a1f008af3ef41b7c",
+      "status": "PASS"
+    },
+    {
+      "group": "cad",
+      "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-diagnostics-fixed-env-test_cad_execution.py.log",
+      "sha256": "8bccdc0679408ac7713684c61a0313378983063b3292b421420f61e7c78ff078",
+      "status": "PASS"
+    },
+    {
+      "group": "coding_defaults",
+      "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-diagnostics-defaults-final.log",
+      "sha256": "ce27fbd1a48309a03dc9d74435e306b7af654d3d16215d1dbb04f544cfec84b0",
+      "status": "PASS"
+    }
+  ],
+  "live_pdf": {
+    "status": "RUNNING",
+    "client": "owned VM",
+    "server": "llm-49:18109",
+    "trial": "/home/maint/cow-qwen35-trial/pdf-qwen9b-v5-diagnostics"
+  },
+  "prior_pdf": {
+    "status": "NOT_VERIFIED",
+    "seconds": 505.04576000400994,
+    "reason": "wrong internal PDF filename; incomplete model feedback"
+  },
+  "environment_failures_retained": true
+}

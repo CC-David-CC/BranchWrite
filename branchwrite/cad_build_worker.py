@@ -80,8 +80,14 @@ def run(*, output_name="part.step", output_limit=MAX_STEP, result_key="step"):
                 step=f.read(output_limit+1)
                 if not step or len(step)>output_limit:raise ValueError('STEP export size rejected')
             disposition='built'
-        except FileNotFoundError:disposition='missing_artifact'
-        except (OSError,ValueError):disposition='output_rejected';step=None
+        except FileNotFoundError:
+            disposition='missing_artifact'
+            streams[1].extend(('\n[BranchWrite build verification] The program exited successfully but did not create '
+                +output_name+'. Save this exact filename in the worker working directory; the host publishes it under the requested destination name.\n').encode('utf8'))
+        except (OSError,ValueError):
+            disposition='output_rejected';step=None
+            streams[1].extend(('\n[BranchWrite build verification] Rejected '+output_name+
+                ': a fresh regular nonempty file of at most '+str(output_limit)+' bytes is required.\n').encode('utf8'))
     result=dict(schema=1,disposition=disposition,exit_code=child.returncode,
         stdout=base64.b64encode(streams[0]).decode(),stderr=base64.b64encode(streams[1]).decode(),
         **{result_key:None if step is None else base64.b64encode(step).decode()})
