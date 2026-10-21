@@ -1,0 +1,17 @@
+test_generated_file_closes_after_payload_without_repeating_control_fields (test_text_file_metadata_order.TextFileMetadataOrderTests.test_generated_file_closes_after_payload_without_repeating_control_fields) ... ERROR
+
+======================================================================
+ERROR: test_generated_file_closes_after_payload_without_repeating_control_fields (test_text_file_metadata_order.TextFileMetadataOrderTests.test_generated_file_closes_after_payload_without_repeating_control_fields)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-qwen35-tools-20261021/tests/test_text_file_metadata_order.py", line 19, in test_generated_file_closes_after_payload_without_repeating_control_fields
+    session._consume_selected(t,tokenizer.token_bytes(t),t==tokenizer.EOS)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/context-cow-qwen35-native-selection-20261021/experimental/branching_context/src/context_time_travel/grammar_first.py", line 801, in _consume_selected
+    raise IntegrityError("Consumed token is not legal in the current grammar state")
+context_time_travel.store.IntegrityError: Consumed token is not legal in the current grammar state
+
+----------------------------------------------------------------------
+Ran 1 test in 0.068s
+
+FAILED (errors=1)

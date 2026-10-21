@@ -2,6 +2,7 @@
 
 These are hypothetical examples on different files. Every action and feedback was executed through actual granted file tools. They are demonstrations, not the current task or extra permissions.
 Prefer create_text_file for a new ordinary text file. Each lines element holds one line without a CR or LF. line_ending selects LF or CRLF; final_newline is the explicit true/false choice. Preserve all Unicode code points, spaces, quotes, dollar text and tabs exactly.
+For text writes, emit path, line_ending and final_newline before the lines array. After the final source line, close the array and both objects. Field labels are JSON keys outside lines; never append line_ending, final_newline, repair or utf8_hex as source lines unless the user explicitly requests that literal text. TASK records below describe examples; their repair and utf8_hex fields are checker metadata, not tool arguments or file content.
 Use replace_text_file only when replacing the full file is appropriate. Read its current bytes first; the host binds the observation. For a small scoped change in a larger file, retain the existing replace tool and preserve every other byte.
 Do not add indentation to copied lines. Do not trim content or normalize accents. An empty file uses lines=[] with final_newline=false; one blank terminated line uses lines=[""] with final_newline=true.
 For a blank line at the end,include an empty last element and set final_newline=true. A final empty element with final_newline=false is rejected.
@@ -11,7 +12,7 @@ Examples may contain tools or paths absent from your current grant. The live sch
 ## Line file example 1: literal Unicode and LF
 TASK: {"title": "literal Unicode and LF", "path": "notes/session/report.txt", "lines": ["alpha '$USER'", "next: \u03bb \u00e9 e\u0301"], "line_ending": "LF", "final_newline": true, "repair": false, "utf8_hex": "616c70686120272455534552270a6e6578743a20cebb20c3a92065cc810a"}
 
-ACTION: {"tool": "create_text_file", "arguments": {"path": "notes/session/report.txt", "lines": ["alpha '$USER'", "next: \u03bb \u00e9 e\u0301"], "line_ending": "LF", "final_newline": true}}
+ACTION: {"tool": "create_text_file", "arguments": {"path": "notes/session/report.txt", "line_ending": "LF", "final_newline": true, "lines": ["alpha '$USER'", "next: \u03bb \u00e9 e\u0301"]}}
 FEEDBACK: {"tool": "create_text_file", "disposition": "created", "exit_code": 0, "stdout": "file created\n", "stderr": "", "observation": {"world": "12b2c3f8aec14f00cfaeabd8ea2955fd41d966f75dce3aa2889c0807c3fa75d9", "path": "notes/session/report.txt", "source_sha256": "07ce7b760bbdd3667ad2f37e4ce4033f750b6c0eaff85680754d0df4bf04d57d"}}
 
 ACTION: {"tool": "read_file", "arguments": {"path": "notes/session/report.txt"}}
@@ -24,7 +25,7 @@ FEEDBACK: {"tool": "finish", "disposition": "completion_requested", "exit_code":
 ## Line file example 2: CRLF without a final terminator
 TASK: {"title": "CRLF without a final terminator", "path": "captures/output.txt", "lines": ["\u03b1", "beta\t$USER"], "line_ending": "CRLF", "final_newline": false, "repair": false, "utf8_hex": "ceb10d0a62657461092455534552"}
 
-ACTION: {"tool": "create_text_file", "arguments": {"path": "captures/output.txt", "lines": ["\u03b1", "beta\t$USER"], "line_ending": "CRLF", "final_newline": false}}
+ACTION: {"tool": "create_text_file", "arguments": {"path": "captures/output.txt", "line_ending": "CRLF", "final_newline": false, "lines": ["\u03b1", "beta\t$USER"]}}
 FEEDBACK: {"tool": "create_text_file", "disposition": "created", "exit_code": 0, "stdout": "file created\n", "stderr": "", "observation": {"world": "43c52af85b72fcbc420c3f65287e239153b7d7c2602872735b7371246eebda6d", "path": "captures/output.txt", "source_sha256": "387af3e18557152603005add12758f3a73efb5bf45c9a8855097712cca7528e6"}}
 
 ACTION: {"tool": "read_file", "arguments": {"path": "captures/output.txt"}}
@@ -37,14 +38,14 @@ FEEDBACK: {"tool": "finish", "disposition": "completion_requested", "exit_code":
 ## Line file example 3: read then repair the full file
 TASK: {"title": "read then repair the full file", "path": "drafts/result.txt", "lines": ["first row", "second row: \u03a9"], "line_ending": "LF", "final_newline": true, "repair": true, "utf8_hex": "666972737420726f770a7365636f6e6420726f773a20cea90a"}
 
-ACTION: {"tool": "create_text_file", "arguments": {"path": "drafts/result.txt", "lines": ["first row", " second row: \u03a9"], "line_ending": "LF", "final_newline": false}}
+ACTION: {"tool": "create_text_file", "arguments": {"path": "drafts/result.txt", "line_ending": "LF", "final_newline": false, "lines": ["first row", " second row: \u03a9"]}}
 FEEDBACK: {"tool": "create_text_file", "disposition": "created", "exit_code": 0, "stdout": "file created\n", "stderr": "", "observation": {"world": "dddfc9759f27525a4beba4f86752992238ede09238a7ccdbb6c87c76c62af990", "path": "drafts/result.txt", "source_sha256": "7af8ea13362efb055ac9bb538ea482afa20693fa62692c25f930e528f8dcb239"}}
 
 ACTION: {"tool": "read_file", "arguments": {"path": "drafts/result.txt"}}
 FEEDBACK: {"tool": "read_file", "disposition": "read", "exit_code": 0, "stdout": "first row\n second row: \u03a9", "stderr": "", "observation": {"world": "dddfc9759f27525a4beba4f86752992238ede09238a7ccdbb6c87c76c62af990", "path": "drafts/result.txt", "source_sha256": "7af8ea13362efb055ac9bb538ea482afa20693fa62692c25f930e528f8dcb239"}}
 
 Readback comparison: wrong indentation and missing final terminator. Use the granted full-file replacement with the correct lines and final_newline=true; do not claim finish.
-ACTION: {"tool": "replace_text_file", "arguments": {"path": "drafts/result.txt", "lines": ["first row", "second row: \u03a9"], "line_ending": "LF", "final_newline": true}}
+ACTION: {"tool": "replace_text_file", "arguments": {"path": "drafts/result.txt", "line_ending": "LF", "final_newline": true, "lines": ["first row", "second row: \u03a9"]}}
 FEEDBACK: {"tool": "replace_text_file", "disposition": "applied", "exit_code": 0, "stdout": "replacement applied\n", "stderr": "", "observation": {"world": "dddfc9759f27525a4beba4f86752992238ede09238a7ccdbb6c87c76c62af990", "path": "drafts/result.txt", "source_sha256": "b6ea9a7f51f423cf473e8e0624e779b3600ec165e943a1abea90249aab1751a2"}}
 
 ACTION: {"tool": "read_file", "arguments": {"path": "drafts/result.txt"}}

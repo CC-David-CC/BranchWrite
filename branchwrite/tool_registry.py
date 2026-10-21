@@ -25,8 +25,10 @@ _HEX=re.compile(r'[0-9a-f]{64}\Z')
 _TOOLS={
  'read_file':('observe','read_paths',{'path':'path'}),
  'create_file':('change','create_paths',{'path':'path','content':'text'}),
- 'create_text_file':('change','create_paths',{'path':'path','lines':'lines','line_ending':'line_ending','final_newline':'boolean'}),
- 'replace_text_file':('change','edit_paths',{'path':'path','lines':'lines','line_ending':'line_ending','final_newline':'boolean'}),
+ # Emit small control fields before the potentially long payload. New grammar
+ # identities carry this ordering; previously saved grammar definitions stay immutable.
+ 'create_text_file':('change','create_paths',{'path':'path','line_ending':'line_ending','final_newline':'boolean','lines':'lines'}),
+ 'replace_text_file':('change','edit_paths',{'path':'path','line_ending':'line_ending','final_newline':'boolean','lines':'lines'}),
  'replace':('change','edit_paths',{'path':'path','before':'nonempty','after':'text'}),
  'set_mode':('change','mode_paths',{'path':'path','mode':'mode'}),
  'run_tests':('execute',None,{'suite':'unit'}),
