@@ -1,0 +1,37 @@
+test_history_does_not_claim_no_saved_turns_before_ledger_is_open (test_session_startup_history.StartupHistoryTests.test_history_does_not_claim_no_saved_turns_before_ledger_is_open) ... FAIL
+test_saved_version_controls_wait_for_authoritative_session_snapshot (test_session_startup_history.StartupHistoryTests.test_saved_version_controls_wait_for_authoritative_session_snapshot) ... FAIL
+
+======================================================================
+FAIL: test_history_does_not_claim_no_saved_turns_before_ledger_is_open (test_session_startup_history.StartupHistoryTests.test_history_does_not_claim_no_saved_turns_before_ledger_is_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-startup-history-20261021/tests/test_session_startup_history.py", line 21, in test_history_does_not_claim_no_saved_turns_before_ledger_is_open
+    self.assertEqual(messages,['Opening your saved session. Try this command again in a moment.'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['No saved turns yet.'] != ['Opening your saved session. Try this command again in a moment.']
+
+First differing element 0:
+'No saved turns yet.'
+'Opening your saved session. Try this command again in a moment.'
+
+- ['No saved turns yet.']
++ ['Opening your saved session. Try this command again in a moment.']
+
+======================================================================
+FAIL: test_saved_version_controls_wait_for_authoritative_session_snapshot (test_session_startup_history.StartupHistoryTests.test_saved_version_controls_wait_for_authoritative_session_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dflanag3/src/branchwrite-startup-history-20261021/tests/test_session_startup_history.py", line 27, in test_saved_version_controls_wait_for_authoritative_session_snapshot
+    self.assertTrue(terminal.command(command))
+                    ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-startup-history-20261021/branchwrite/interactive_terminal.py", line 88, in command
+    self.service.submit(rest or command[1:],mode=mode,kind='queue')
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dflanag3/src/branchwrite-startup-history-20261021/tests/test_session_startup_history.py", line 13, in submit
+    raise AssertionError('Opening-state control must not be submitted')
+AssertionError: Opening-state control must not be submitted
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.008s
+
+FAILED (failures=2)

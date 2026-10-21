@@ -1,0 +1,7 @@
+test_history_does_not_claim_no_saved_turns_before_ledger_is_open (test_session_startup_history.StartupHistoryTests.test_history_does_not_claim_no_saved_turns_before_ledger_is_open) ... ok
+test_saved_version_controls_wait_for_authoritative_session_snapshot (test_session_startup_history.StartupHistoryTests.test_saved_version_controls_wait_for_authoritative_session_snapshot) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.006s
+
+OK

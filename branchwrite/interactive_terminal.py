@@ -48,6 +48,10 @@ class Terminal:
         return identity
     def command(self,text):
         command,_,rest=text.partition(' ');rest=rest.strip()
+        # The worker has not read the durable ledger yet. Empty placeholders
+        # must not be presented as authoritative history or branch selection.
+        if command in ('/history','/preview','/edit','/explore','/switch','/continue') and self.service.snapshot.get('status')=='starting':
+            self.notify('Opening your saved session. Try this command again in a moment.');return True
         if command in ('/exit','/quit'):return False
         if command in ('/work','/plan','/chat'):
             self.mode=command[1:]
