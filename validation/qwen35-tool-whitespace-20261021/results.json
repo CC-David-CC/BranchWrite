@@ -1,0 +1,25 @@
+{
+  "status": "FOCUSED_CPU_PASS_LIVE_PENDING",
+  "scope": "Tool proposal GBNF only; bound each separator gap to optional one whitespace character, preserve literal JSON string contents and general JSON mode",
+  "executed": {
+    "grammar_matcher_tests": 13,
+    "line_file_tools": 18,
+    "line_file_examples": 5,
+    "coding_defaults": 6
+  },
+  "known_suite_failures": {
+    "test_tool_registry": {
+      "tests": 21,
+      "failures": 1,
+      "errors": 1,
+      "reproduced_on_baseline": true,
+      "reasons": [
+        "Browser executable environment variable is not configured in host runner",
+        "Existing missing-test-package assertion expects a different diagnostic string"
+      ]
+    }
+  },
+  "wheel_sha256": "48a685423e0d28810e28965a315d9d91f98da96823d07179b935ecdb8eef2210",
+  "live_model_status": "New separate-client greedy PDF trial running; no success claim yet",
+  "compatibility": "New registrations have new grammar definition hashes. Previously saved definitions and parser progress are not rewritten."
+}

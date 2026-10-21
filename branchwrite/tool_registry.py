@@ -265,6 +265,9 @@ class ToolRegistry:
         canonical property sorting otherwise puts arguments first. This is a
         distinct pinned grammar arrangement, never an in-place controller edit.
         Host admission still enforces byte limits and live file preconditions.
+        Separator whitespace is bounded so a legal-token greedy model cannot
+        loop on spaces outside JSON strings. Literal file contents are unchanged.
+        Existing registered grammar definitions retain their original identity.
         """
         def literal(text):return json.dumps(text,ensure_ascii=True)
         def atom(value):return literal(json.dumps(value,ensure_ascii=True))
@@ -306,7 +309,7 @@ class ToolRegistry:
                 pieces.extend([value,'ws'])
             pieces.extend([literal('}'),'ws',literal('}'),'ws'])
             rules.append(name+' ::= '+' '.join(pieces))
-        rules[:0]=['root ::= '+' | '.join(names),r'ws ::= [ \t\n\r]*',
+        rules[:0]=['root ::= '+' | '.join(names),r'ws ::= [ \t\n\r]?',
             r'string ::= "\"" char{0,32768} "\""',
             r'nonempty ::= "\"" char{1,32768} "\""',
             r'shell-command ::= "\"" char{1,16384} "\""',
