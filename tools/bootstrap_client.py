@@ -54,7 +54,7 @@ def main():
     if len(found)!=1: raise ValueError("Expected exactly one BranchWrite wheel.")
     run([args.source_python,"-I","-B",source/"tools/install_private_client.py",
          "--source-python",args.source_python,"--uv",args.uv,
-         "--wheel",found[0],"--dest",release],env=env)
+         "--wheel",found[0],"--dest",release],env=env,stdout=subprocess.DEVNULL)
     run([release/"venv/bin/branchwrite","--help"],stdout=subprocess.DEVNULL,env=env)
     receipt=json.loads((release/"install-receipt.json").read_text())
     receipt.update(source_revision=revision,source_origin="https://github.com/CC-David-CC/BranchWrite",
