@@ -111,6 +111,8 @@ class OutputFeedbackHttpTests(unittest.TestCase):
    self.assertEqual(view[field+'_display'],dict(encoding='utf-8',errors='replace',lossy=True,source_bytes=len(body)))
   self.assertEqual(view['command'],command)
   self.assertRegex(view['plan_sha256'],'^[0-9a-f]{64}$')
+  self.assertEqual(view['problem']['stage'],'exited')
+  self.assertIn('effects',view['problem']['next_action'])
   self.assertEqual(view['exit_code'],7);self.assertEqual(len(case.trace),3)
   case._stop_server()
   again=subprocess.run(cmd,capture_output=True,env={**os.environ,'BW_COW_API_KEY':'cpu-flow-secret'},timeout=20)

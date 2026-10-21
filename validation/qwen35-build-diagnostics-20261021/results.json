@@ -19,7 +19,7 @@
     {
       "group": "output_http",
       "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-diagnostics-http-final.log",
-      "sha256": "aa9ace096541b5e2340bebe3a179e35c38dbf5af6b29565ae697fd0999462c87",
+      "sha256": "89140ea479cc3e08ca0951c26786d786acd4a7fb51029f2c00747d44b9133b98",
       "status": "PASS"
     },
     {
