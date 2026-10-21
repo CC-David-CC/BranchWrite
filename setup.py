@@ -2,7 +2,7 @@
 from pathlib import Path
 from setuptools import setup
 from setuptools.command.build_py import build_py
-EXAMPLES=("coding.bw","terminal-worked-examples.txt","tool-worked-examples.txt","line-file-worked-examples.txt","literal-file-worked-examples.txt")
+EXAMPLES=("coding.bw","terminal-worked-examples.txt","tool-worked-examples.txt","line-file-worked-examples.txt","literal-file-worked-examples.txt","pdf-worked-examples.txt")
 class ClientBuild(build_py):
  def run(self):
   super().run()

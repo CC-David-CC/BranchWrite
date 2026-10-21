@@ -1,0 +1,51 @@
+PDF WORKED EXAMPLE ? use only for a requested document task.
+This is an ordinary reusable example, not a task grant or a claim that your current document passed. Adapt its topic, content and layout to the actual request. Keep the authored Python in the project. The document worker has ReportLab; run_shell does not provide its document environment.
+
+A complete two-page ReportLab source follows. Write it through the granted text-file tool as project Python. The private worker output is always document.pdf; build_pdf's output argument chooses the user's published filename. Use flowable instances: story.append(PageBreak()), never story.append(PageBreak). Use paragraphs for long table cells so text wraps inside the column. Reserve space for page numbers. A class may be valid Python syntax but is not a ReportLab flowable instance.
+
+```python
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak
+
+styles = getSampleStyleSheet()
+doc = SimpleDocTemplate('document.pdf', pagesize=A4,
+    leftMargin=48, rightMargin=48, topMargin=54, bottomMargin=48)
+
+def page_number(canvas, document):
+    canvas.saveState()
+    canvas.setFont('Helvetica', 10)
+    canvas.drawRightString(A4[0] - 48, 28, 'Page ' + str(document.page))
+    canvas.restoreState()
+
+story = [Paragraph('Before the visit', styles['Heading1']),
+    Paragraph('Prepare for a visit to your local library.', styles['BodyText']),
+    Spacer(1, 12)]
+rows = [[Paragraph('Item', styles['BodyText']), Paragraph('Action', styles['BodyText'])],
+    [Paragraph('Library card', styles['BodyText']),
+     Paragraph('Bring your library card. Check the library opening hours before leaving home.', styles['BodyText'])],
+    [Paragraph('Book list', styles['BodyText']),
+     Paragraph('Write a short list of books to find, and ask a librarian for help if needed.', styles['BodyText'])]]
+table = Table(rows, colWidths=[110, 380])
+table.setStyle(TableStyle([
+    ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+    ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+    ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+    ('LEFTPADDING', (0, 0), (-1, -1), 8),
+    ('RIGHTPADDING', (0, 0), (-1, -1), 8),
+    ('TOPPADDING', (0, 0), (-1, -1), 8),
+    ('BOTTOMPADDING', (0, 0), (-1, -1), 8)]))
+story.append(table)
+story.append(PageBreak())
+story.append(Paragraph('After the visit', styles['Heading1']))
+story.append(Paragraph('Keep borrowed books in a safe place and record their return dates.', styles['BodyText']))
+doc.build(story, onFirstPage=page_number, onLaterPages=page_number)
+```
+
+Then request one registered action per response:
+1. build_pdf with path set to your Python source and output set to the requested published .pdf path. Do not use run_shell to execute the ReportLab source.
+2. Read the actual first-page image and diagnostics returned by build_pdf. A failed build is not a saved document. Diagnose the reported traceback and change the actual failing source expression; reread if uncertain. Importing PageBreak alone does not instantiate it: the story line must call PageBreak().
+3. render_pdf with the published path and page=2, then inspect the actual second-page image. Continue for each additional page of the current document. Text extraction cannot establish absence of clipping or overlap.
+4. Register a meaningful run_check against the published PDF, for example checking its actual page count and expected section headings through the installed pypdf reader. Report only what those checks establish.
+5. If you edit the Python, rebuild and inspect every current page again. Old images do not describe a new revision. Finish only after current host acceptance and meaningful checks pass. Do not invent a successful receipt or silently skip visual review.

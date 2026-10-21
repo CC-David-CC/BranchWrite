@@ -1,0 +1,17 @@
+{
+  "status": "CPU_PASS_LIVE_MITIGATION_PENDING",
+  "tests": {
+    "new_executable_example": 2,
+    "coding_defaults": 6,
+    "thinking_defaults": 6
+  },
+  "source_example_sha256": "4b56ac280f85356fb56a411d38b058b18f505902f5a21359cdc0128318f3bbf3",
+  "wheel_sha256": "0d112b02d565e6d95443b0c280910141cfd17a8bc46cd41c27443cea1aafb3b8",
+  "scope": "Executable two-page ReportLab example with independently reopened pages and page-number text; scoped prefill teaching only when build_pdf is a granted tool",
+  "limitations": [
+    "No claim of improved live model task success yet",
+    "Baseline had both model Flowable mistakes and a separate bounded 4 GiB RAM admission failure",
+    "Initial regression command lacked COW PYTHONPATH; configured rerun passed",
+    "Wheel build required isolated setuptools build dependencies"
+  ]
+}

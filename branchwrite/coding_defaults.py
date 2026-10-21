@@ -51,6 +51,8 @@ def system_prefix(schema, *, context_pack=None, context_pack_id=None, command_ou
         examples+='\n\n'+_example('line-file-worked-examples.txt')
     elif has_create:
         examples+='\n\n'+_example('literal-file-worked-examples.txt')
+    if any('build_pdf' in v.get('properties',{}).get('tool',{}).get('enum',[]) for v in schema.get('oneOf',[])):
+        examples+='\n\n'+_example('pdf-worked-examples.txt')
     has_tests=any('run_tests' in variant.get('properties',{}).get('tool',{}).get('enum',[]) for variant in schema.get('oneOf',[]))
     completion=('After editing, run_tests with suite unit. If tests fail, read, fix and test again. Only request finish after tests pass. '
         if has_tests else 'There is no run_tests grant in this task. Use the granted file tools, read back completed files and report their actual contents before requesting finish. Examples illustrate tool use, not extra grants. ')
