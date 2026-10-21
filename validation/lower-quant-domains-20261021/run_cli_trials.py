@@ -13,12 +13,19 @@ def write(path,value):
  temp=path.with_suffix('.tmp');temp.write_text(json.dumps(value,indent=2,allow_nan=False)+'\n');os.replace(temp,path)
 
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--root',type=Path,required=True);parser.add_argument('--source',type=Path,required=True);parser.add_argument('--variant',choices=['iq2','iq3'],required=True);parser.add_argument('--server',type=Path,required=True);parser.add_argument('--domains',nargs='+',default=['cad','pdf','blender','code']);args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument('--root',type=Path,required=True);parser.add_argument('--source',type=Path,required=True);parser.add_argument('--variant',choices=['iq2','iq3','q4','q8'],required=True);parser.add_argument('--server',type=Path,required=True);parser.add_argument('--domains',nargs='+',default=['cad','pdf','blender','code']);parser.add_argument('--endpoint',default='http://10.0.7.95:8099');parser.add_argument('--server-host');parser.add_argument('--ssh-identity',type=Path);parser.add_argument('--client',type=Path);parser.add_argument('--sampler',choices=['greedy','min-p','dry-min-p'],default='greedy');args=parser.parse_args()
  os.umask(0o077);out=args.root/args.variant;out.mkdir(mode=0o700,exist_ok=True)
- key=(args.server/'api-key.txt').read_text().strip();env=dict(os.environ,BW_COW_API_KEY=key,BW_COW_CONNECTION=str(out/'connection.json'),PYTHONDONTWRITEBYTECODE='1');env.pop('PYTHONPATH',None)
- exe=args.root/'client314/bin/branchwrite'
+ def read_server(name):
+  if not args.server_host:return (args.server/name).read_text()
+  cmd=['ssh','-o','BatchMode=yes']
+  if args.ssh_identity:cmd+=['-i',str(args.ssh_identity),'-o','IdentitiesOnly=yes']
+  cmd+=[args.server_host,'python3','-']
+  script='from pathlib import Path;print(Path('+repr(str(args.server/name))+').read_text(),end="")'
+  return subprocess.check_output(cmd,input=script,text=True,timeout=20)
+ key=read_server('api-key.txt').strip();env=dict(os.environ,BW_COW_API_KEY=key,BW_COW_CONNECTION=str(out/'connection.json'),PYTHONDONTWRITEBYTECODE='1');env.pop('PYTHONPATH',None)
+ exe=args.client or args.root/'client314/bin/branchwrite'
  def status():
-  req=urllib.request.Request('http://10.0.7.95:8099/cow/status',headers={'Authorization':'Bearer '+key})
+  req=urllib.request.Request(args.endpoint+'/cow/status',headers={'Authorization':'Bearer '+key})
   with urllib.request.urlopen(req,timeout=15) as response:return json.load(response)
  deadline=time.monotonic()+300
  while True:
@@ -26,17 +33,17 @@ def main():
   except OSError:
    if time.monotonic()>deadline:raise TimeoutError('server readiness')
    time.sleep(2)
- with (out/'connect.log').open('w') as f:subprocess.run([str(exe),'connect','http://10.0.7.95:8099'],env=env,check=True,stdout=f,stderr=subprocess.STDOUT)
- profile=json.loads((args.server/'profile.json').read_text());write(out/'profile-summary.json',{k:profile[k] for k in ['model_contract_id','execution_profile_id','model_path','hardware','native_build','model_files','execution']})
+ with (out/'connect.log').open('w') as f:subprocess.run([str(exe),'connect',args.endpoint],env=env,check=True,stdout=f,stderr=subprocess.STDOUT)
+ profile=json.loads(read_server('profile.json'));write(out/'profile-summary.json',{k:profile[k] for k in ['model_contract_id','execution_profile_id','model_path','hardware','native_build','model_files','execution']})
  for domain in args.domains:
   trial=out/domain
   if trial.exists():raise RuntimeError('Trial already exists; reconcile original, never silently resend: '+str(trial))
   trial.mkdir(mode=0o700);project=trial/'project';project.mkdir(mode=0o700);state=trial/'state'
   prompt=args.source/'examples/prompts'/({'cad':'build123d','blender':'blender','pdf':'pdf','code':'code'}[domain]+'.txt')
   (trial/'prompt.txt').write_bytes(prompt.read_bytes())
-  cmd=[str(exe),'code',str(project),'--project-files','--connection',str(out/'connection.json'),'--state',str(state),'--branch','bw-'+args.variant+'-'+domain+'-20261021','--sampler','greedy','--max-steps','2048','--task-file',str(prompt)]
+  cmd=[str(exe),'code',str(project),'--project-files','--connection',str(out/'connection.json'),'--state',str(state),'--branch','bw-'+args.variant+'-'+domain+'-'+hashlib.sha256(str(trial).encode()).hexdigest()[:12],'--sampler',args.sampler,'--max-steps','2048','--task-file',str(prompt)]
   if domain in ('cad','blender'):cmd+=['--'+domain+'-config',str(args.root/(domain+'-config.json'))]
-  record=dict(status='RUNNING',variant=args.variant,domain=domain,argv=cmd,prompt_sha256=hashlib.sha256(prompt.read_bytes()).hexdigest(),operator_candidate_edits=0,sampler='greedy',client_source=subprocess.check_output(['git','rev-parse','HEAD'],cwd=args.source,text=True).strip(),started_unix=time.time(),before=status(),notes='fresh project per domain; historical Q4 controls had different hardware/history; not a controlled speed comparison')
+  record=dict(status='RUNNING',variant=args.variant,domain=domain,argv=cmd,prompt_sha256=hashlib.sha256(prompt.read_bytes()).hexdigest(),operator_candidate_edits=0,sampler=args.sampler,client_source=subprocess.check_output(['git','rev-parse','HEAD'],cwd=args.source,text=True).strip(),started_unix=time.time(),before=status(),notes='fresh project per domain; historical Q4 controls had different hardware/history; not a controlled speed comparison')
   started=time.monotonic();last=0;write(trial/'result.json',record)
   with (trial/'stdout.json').open('w') as stdout,(trial/'stderr.log').open('w') as stderr:
    process=subprocess.Popen(cmd,cwd=project,env=env,stdin=subprocess.DEVNULL,stdout=stdout,stderr=stderr,start_new_session=True);record['client_pid']=process.pid
