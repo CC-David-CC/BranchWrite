@@ -1,0 +1,474 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "bounded browser worker and namespace regression selection",
+  "tests": {
+    "schema": 1,
+    "tests_run": 86,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "elapsed_seconds": 53.53154664999602,
+    "tests": [
+      {
+        "id": "test_browser_asset_completion.AssetCompletionTests.test_asset_changed_after_interaction_blocks_checker",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_completion.AssetCompletionTests.test_changed_asset_same_html_and_pixels_invalidates_capture",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_completion.AssetCompletionTests.test_forged_asset_receipt_is_not_accepted",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_completion.AssetCompletionTests.test_interaction_and_independent_checker_use_the_same_bundle",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_completion.AssetCompletionTests.test_missing_asset_invalidates_capture",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_completion.AssetCompletionTests.test_real_cli_assets_and_completed_reopen_without_browser_work",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_completion.AssetCompletionTests.test_static_completion_records_current_bundle",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_altered_media_type_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_corrupt_resource_rejected_before_browser",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_duplicate_paths_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_legacy_or_extra_fields_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_oversized_and_noninteger_lengths_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_round_trip_exact_source_resource_and_actions",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_trailing_bytes_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_truncated_document_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_protocol.AssetFrameTests.test_truncated_resource_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_actual_tool_receipt_roots_exact_asset_bytes_in_existing_ledger",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_allowlist_contributes_to_tool_identity",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_asset_allowlist_is_bounded_and_canonical",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_asset_change_after_plan_rejects_before_browser",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_asset_grant_requires_explicit_read_permission",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_asset_symlink_after_admission_rejects_before_browser",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_cli_admits_only_explicit_readable_asset_grants",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_direct_executor_requires_granted_resources",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_document_path_cannot_alias_asset",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_nested_document_preserves_relative_resource_url",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_plan_contains_actual_asset_preimage",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_asset_tools.AssetToolTests.test_read_permission_alone_does_not_serve_resources",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.AssetContractTests.test_duplicate_and_total_bundle_limits",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.AssetContractTests.test_manifest_binds_exact_bytes_and_derived_media_type",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.AssetContractTests.test_only_bounded_immutable_known_resource_types",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.AssetContractTests.test_paths_reject_traversal_urls_reserved_and_ambiguous_spelling",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.BrowserAssetTests.test_assets_are_captured_not_read_from_a_host_directory",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.BrowserAssetTests.test_empty_bundle_preserves_existing_document_capture",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.BrowserAssetTests.test_external_resource_still_fails",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.BrowserAssetTests.test_missing_local_resource_fails",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.BrowserAssetTests.test_navigation_to_an_asset_is_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.BrowserAssetTests.test_query_alias_is_not_a_second_resource_identity",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.BrowserAssetTests.test_real_png_css_and_js_load_from_exact_frozen_bundle",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_assets.BrowserAssetTests.test_unicode_and_spaces_have_one_encoded_request_identity",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_bad_configuration_does_not_disable_sandbox",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_cli_returns_the_actual_image_and_source_receipt",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_external_resource_is_blocked_and_not_silently_accepted",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_javascript_failure_is_not_a_capture_pass",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_missing_browser_fails_without_capture",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_read_or_edit_permission_is_not_capture_permission",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_real_page_pixels_and_bound_source",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_stale_revision_rejects_before_browser_launch",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_capture.BrowserCaptureTests.test_symlink_cannot_be_rendered",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_actual_registry_returns_error_exit_and_exact_resource_artifacts",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_direct_executor_raises_typed_error_with_complete_capture",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_error_count_and_each_message_are_bounded",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_failed_artifact_publication_stays_unresolved_and_cannot_resend",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_failed_canonical_publication_keeps_original_intent_unresolved",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_failed_capture_cannot_publish_through_foreign_executor_or_operation",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_initial_script_exception_is_also_a_bounded_observation",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_malformed_runtime_error_wire_records_are_rejected",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_real_click_exception_keeps_png_text_exact_actions_and_retirement",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_settled_error_dispatch_reopens_without_executing_again",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_typed_error_cannot_claim_unproven_cleanup",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_unproven_namespace_retirement_stays_unresolved",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_errors.BrowserErrorTests.test_worker_failure_never_becomes_a_settled_javascript_error",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_host_inspection.HostInspectionTests.test_custom_checks_cannot_publish_an_invalid_action_receipt",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_host_inspection.HostInspectionTests.test_italic_alone_does_not_pass_bold_name_requirement",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_host_inspection.HostInspectionTests.test_missing_underline_is_a_failed_inspection",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_host_inspection.HostInspectionTests.test_real_computed_style_and_interaction_are_checked_in_the_sandbox",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_isolation.BrowserIsolationTests.test_actual_chromium_capture_binds_isolation_and_exact_source",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_isolation.BrowserIsolationTests.test_actual_namespace_cannot_read_host_secret_or_connect_to_host_listener",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_isolation.BrowserIsolationTests.test_deadline_reaps_an_owned_namespace_with_a_spawned_child",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_launcher.BrowserLauncherTests.test_symlink_is_rejected_before_launch",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_launcher.BrowserLauncherTests.test_user_owned_copy_cannot_become_a_trusted_launcher",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_retirement.RetirementTests.test_delayed_kernel_retirement_is_observed_before_success",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_retirement.RetirementTests.test_immediate_absence_needs_no_sleep",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_retirement.RetirementTests.test_persistent_member_is_returned_as_failure_within_bound",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_viewports.BrowserViewportTests.test_menu_is_immutable_canonical_and_geometry_is_bounded",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_viewports.BrowserViewportTests.test_phone_error_cannot_be_relabelled_as_desktop",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_viewports.BrowserViewportTests.test_phone_error_stays_in_memory_until_exact_viewport_publication",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_viewports.BrowserViewportTests.test_real_phone_and_desktop_captures_bind_actual_png_geometry",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_viewports.BrowserViewportTests.test_real_phone_interaction_preserves_action_and_source_receipts",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_viewports.BrowserViewportTests.test_selection_does_not_mutate_default_or_grant_arbitrary_geometry",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_viewports.BrowserViewportTests.test_ungranted_viewport_rejects_before_browser_and_artifact_creation",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_blank_trailing_lines_do_not_hide_rejection",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_empty_stderr_reports_actual_exit",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_long_error_keeps_start_and_is_bounded",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_sandbox_failure_survives_playwright_cleanup_noise",
+        "status": "PASS"
+      },
+      {
+        "id": "test_browser_worker_diagnostics.BrowserWorkerDiagnosticTests.test_suid_helper_rejection_survives_playwright_cleanup_noise",
+        "status": "PASS"
+      }
+    ],
+    "scope": "browser regression selection; two catalog-dependent suites not selected; no model or GPU inference",
+    "excluded_modules": [
+      "test_browser_interactions",
+      "test_browser_repair"
+    ]
+  },
+  "limitations": [
+    "No GPU/model inference in this selection",
+    "test_browser_interactions and test_browser_repair require protected catalog fixtures and were not selected",
+    "Normal directory-session browser admission and model-vision integration remain outstanding",
+    "Not cumulative G1\u2013G5 certification"
+  ],
+  "runtime": {
+    "python": "3.12 application-managed distribution",
+    "playwright": "1.64.0",
+    "pillow": "13.0.0",
+    "chromium": "156.0.8078.4",
+    "chromium_revision": 1248,
+    "os": "Ubuntu 26.04 VM",
+    "fonts_noto_cjk": "1:20240730+repack1-1build1"
+  },
+  "base_commit": "9c8cd9a0cf08795fc2bcfe84a66c486f319eb9b6",
+  "changed_source_sha256": {
+    "branchwrite/browser_isolation.py": "121509a44ef21b803d8395382de79b9af305f4ac293bb306c1360d565343c8c4",
+    "tests/test_browser_worker_diagnostics.py": "0015395c8281d7161576b5c9ede5fff75bbba627562f88eeb9fe3f3f3246a7b1",
+    "tests/test_browser_launcher.py": "0c52be6234bff472e40d296a8c3c0796dfafe57030c45049eb24b0934eb32859",
+    "tests/test_browser_assets.py": "13f25acff789f589e4f5f2275f841fd3c80148fc99e4e0024633004db2547216"
+  },
+  "policy": {
+    "global_userns_restriction": "1",
+    "system_bwrap_policy_unchanged": true,
+    "dedicated_launcher_root_owned": true,
+    "helper_sha256": "523da3e7399044be5163aee6f57a77a6bef7454376e28f0a0627920bae1b76b6",
+    "profile_sha256": "eb181e0d887faf1ec46468db5ed81c47cc071d5e514934ca7e94e423450cd884",
+    "system_policy_sha256": "d61facde27707b9c47ffe47921b7273e788784484cb5530eb819e6daac1f1990",
+    "file_capabilities": null,
+    "helper_uid": 0,
+    "helper_mode": "0o755"
+  },
+  "runtime_fingerprints": {
+    "python": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]",
+    "packages": {
+      "playwright": "1.64.0",
+      "Pillow": "13.0.0",
+      "greenlet": "3.5.6",
+      "pyee": "14.0.0"
+    },
+    "chromium_executable_sha256": "377a9fc07b495c3b8d0ab8ec1fdfd153641759f9756fea34d8dfce4de82f5025",
+    "kernel": "7.0.14-codiserver-base",
+    "python_layout": "application-managed base distribution plus a separate virtual environment"
+  },
+  "interaction_smoke": {
+    "schema": 1,
+    "namespace": {
+      "uid": 1002,
+      "profile": "branchwrite-browser (unconfined)",
+      "status": {
+        "CapPrm": "0000000000000000",
+        "CapEff": "0000000000000000",
+        "CapBnd": "0000000000000000",
+        "NoNewPrivs": "1"
+      }
+    },
+    "captures": [
+      {
+        "viewport": "desktop",
+        "width": 640,
+        "height": 480,
+        "text": "BranchWrite browser check\nYour nameSay hello\nHello, Caf\u00e9 Stra\u00dfe \u30dc\u30d6!",
+        "source_sha256": "6a7089090a6e1dc4f12ed9c89724146da1e45abfc73dcc27b3c55c6233c86c7f",
+        "png_sha256": "0ef9de23036d1695487e3028e4b2238de05912a417806ac447fee2cbfb03d775",
+        "png_bytes": 20538,
+        "browser_version": "156.0.8078.4",
+        "isolation": {
+          "schema": 1,
+          "kind": "bubblewrap-browser-v1",
+          "chromium_sandbox": true,
+          "net_ns": "net:[4026532572]",
+          "pid_ns": "pid:[4026532354]",
+          "mount_ns": "mnt:[4026532351]",
+          "uid": 1002,
+          "worker_exited": true,
+          "launcher_pid": 32983,
+          "namespace_members_after": [],
+          "retirement_wait_seconds": 0.001275374997931067
+        }
+      },
+      {
+        "viewport": "phone",
+        "width": 360,
+        "height": 640,
+        "text": "BranchWrite browser check\nYour nameSay hello\nHello, Caf\u00e9 Stra\u00dfe \u30dc\u30d6!",
+        "source_sha256": "6a7089090a6e1dc4f12ed9c89724146da1e45abfc73dcc27b3c55c6233c86c7f",
+        "png_sha256": "f2b49ee242f5fb2b4f3edaa16c23f3cedb45a12c1d5608798575394b5a8ad404",
+        "png_bytes": 21324,
+        "browser_version": "156.0.8078.4",
+        "isolation": {
+          "schema": 1,
+          "kind": "bubblewrap-browser-v1",
+          "chromium_sandbox": true,
+          "net_ns": "net:[4026532356]",
+          "pid_ns": "pid:[4026532354]",
+          "mount_ns": "mnt:[4026532351]",
+          "uid": 1002,
+          "worker_exited": true,
+          "launcher_pid": 33122,
+          "namespace_members_after": [],
+          "retirement_wait_seconds": 0.0012481169978855178
+        }
+      }
+    ],
+    "source_sha256": "6a7089090a6e1dc4f12ed9c89724146da1e45abfc73dcc27b3c55c6233c86c7f",
+    "scope": "real browser interaction, not model inference"
+  },
+  "numerical_max_error": null,
+  "inference_executed": false
+}

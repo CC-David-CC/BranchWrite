@@ -1,0 +1,11 @@
+# Dedicated browser-worker policy. Tested in the owned Ubuntu 26.04 VM.
+# Dedicated root-owned, non-setuid copy of the packaged /usr/bin/bwrap.
+# Ubuntu's existing /usr/bin/bwrap policy remains unchanged.
+# No extra host Linux capability is granted by this profile.
+# Browser worker still uses unshare-all, cap-drop ALL, clearenv and read-only mounts.
+abi <abi/5.0>,
+include <tunables/global>
+profile branchwrite-browser /usr/local/libexec/branchwrite-browser-bwrap flags=(unconfined) {
+  userns,
+  @{exec_path} mr,
+}

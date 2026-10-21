@@ -1,6 +1,7 @@
 """Immutable asset bytes through the real sandboxed browser; no model fixtures."""
 import hashlib
 import io
+import os
 from pathlib import Path
 import unittest
 
@@ -46,7 +47,7 @@ class BrowserAssetTests(unittest.TestCase):
     def setUp(self):
         from branchwrite.browser_assets import BrowserAsset
         self.Asset=BrowserAsset
-        self.config=BrowserConfig(Path('/home/dflanag3/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome'))
+        self.config=BrowserConfig(Path(os.environ['BW_BROWSER_EXECUTABLE']))
 
     def png(self):
         from PIL import Image

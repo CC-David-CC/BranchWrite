@@ -10,24 +10,58 @@ import hashlib
 import os
 from pathlib import Path
 import subprocess
+import stat
 import sys
 import time
 
 
+def _validate_browser_launcher(path):
+    """A dedicated policy launcher must be an unmodified root-owned bwrap.
+
+    This is not a privileged helper: no setuid bit or host capability is added.
+    Its separate executable identity lets the operator grant nested namespaces
+    without weakening the distribution's policy for every bwrap consumer.
+    """
+    info=path.lstat()
+    if not stat.S_ISREG(info.st_mode):
+        raise ValueError('browser launcher must be a real file')
+    for item in (path,*path.parents):
+        metadata=item.lstat()
+        if (metadata.st_uid!=0 or metadata.st_mode&0o022
+                or item!=path and not stat.S_ISDIR(metadata.st_mode)):
+            raise ValueError('browser launcher and parents must be root-owned and not writable by other users')
+    if info.st_mode&0o6000 or not os.access(path,os.X_OK):
+        raise ValueError('browser launcher must be executable without setuid or setgid')
+    if hashlib.sha256(path.read_bytes()).digest()!=hashlib.sha256(Path('/usr/bin/bwrap').read_bytes()).digest():
+        raise ValueError('browser launcher differs from packaged bwrap; refresh the dedicated installation')
+    return path
+
+
+def _browser_launcher():
+    dedicated=Path('/usr/local/libexec/branchwrite-browser-bwrap')
+    if dedicated.exists() or dedicated.is_symlink():
+        return _validate_browser_launcher(dedicated)
+    return Path('/usr/bin/bwrap')
+
+
 def isolation_command(config, *, document_path="index.html"):
+    launcher = _browser_launcher()
     browser = config.executable.resolve(strict=True)
     python = Path(sys.executable)
     package = Path(__file__).resolve().parent
-    for executable in (Path('/usr/bin/bwrap'), Path('/usr/bin/prlimit'), python, browser):
+    for executable in (launcher, Path('/usr/bin/prlimit'), python, browser):
         if not executable.is_file() or not os.access(executable, os.X_OK):
             raise ValueError('browser isolation prerequisite unavailable: ' + str(executable))
     command = ['/usr/bin/prlimit', '--core=0', '--fsize=33554432',
-        '--cpu=' + str(math.ceil(config.timeout) + 2), '--', '/usr/bin/bwrap',
+        '--cpu=' + str(math.ceil(config.timeout) + 2), '--', str(launcher),
         '--die-with-parent', '--new-session', '--unshare-all', '--unshare-user',
         '--cap-drop', 'ALL', '--clearenv']
     # Runtime files are read-only. The configured venv contains the client-side
     # Playwright/Pillow dependencies; it is not a bind of the caller's home.
-    for path in (Path('/usr'), Path('/lib'), Path('/lib64'), Path(sys.prefix), browser.parent):
+    # Installer-owned Python keeps its standard library outside the venv.
+    # Both runtime roots must exist inside the namespace before Python starts.
+    for path in dict.fromkeys((Path('/usr'), Path('/lib'), Path('/lib64'),
+            Path(sys.base_prefix), Path(sys.prefix), browser.parent)):
         command.extend(('--ro-bind', str(path), str(path)))
     for path in (Path('/etc/fonts'), Path('/etc/ld.so.cache')):
         if path.exists():
@@ -112,6 +146,8 @@ def render_isolated(payload, config, *, assets=(), document_path="index.html"):
         # or guessing which host policy caused it.
         if any('No usable sandbox!' in line for line in lines):
             detail = 'Chromium sandbox unavailable; configure a supported sandboxed browser on this client'
+        elif any('SUID sandbox helper binary' in line for line in lines):
+            detail = 'Chromium sandbox helper unavailable in isolated worker; use a supported sandboxed browser installation'
         else:
             detail = lines[-1][:480] if lines else 'worker exit ' + str(process.returncode)
         reason = 'deadline expired' if timed_out else 'output limit' if limited else detail
