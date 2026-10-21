@@ -1,7 +1,7 @@
 PDF WORKED EXAMPLE ? use only for a requested document task.
 This is an ordinary reusable example, not a task grant or a claim that your current document passed. Adapt its topic, content and layout to the actual request. Keep the authored Python in the project. The document worker has ReportLab; run_shell does not provide its document environment.
 
-A complete two-page ReportLab source follows. Write it through the granted text-file tool as project Python. The private worker output is always document.pdf; build_pdf's output argument chooses the user's published filename. Use flowable instances: story.append(PageBreak()), never story.append(PageBreak). Use paragraphs for long table cells so text wraps inside the column. Reserve space for page numbers. A class may be valid Python syntax but is not a ReportLab flowable instance.
+A complete two-page ReportLab source follows. Write it through the granted text-file tool as project Python. The private worker output is always document.pdf; build_pdf's output argument chooses the user's published filename. Use flowable instances: story.append(PageBreak()), never story.append(PageBreak). Use paragraphs for long table cells so text wraps inside the column. Reserve space for page numbers. Fit every table inside doc.width (page width minus left and right margins); never guess widths from the screenshot. Use Paragraph(text, style) inside each cell so long text wraps; do not append a style object as a separate cell. layout.warnings reports measured text boxes outside the visible page, not a complete visual-quality verdict. A class may be valid Python syntax but is not a ReportLab flowable instance.
 
 ```python
 from reportlab.lib import colors
@@ -27,7 +27,7 @@ rows = [[Paragraph('Item', styles['BodyText']), Paragraph('Action', styles['Body
      Paragraph('Bring your library card. Check the library opening hours before leaving home.', styles['BodyText'])],
     [Paragraph('Book list', styles['BodyText']),
      Paragraph('Write a short list of books to find, and ask a librarian for help if needed.', styles['BodyText'])]]
-table = Table(rows, colWidths=[110, 380])
+table = Table(rows, colWidths=[110, doc.width - 110])
 table.setStyle(TableStyle([
     ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
     ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),

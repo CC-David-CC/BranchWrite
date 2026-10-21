@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "39 CPU PDF tests; no autonomous model success claimed",
+  "tests": 39,
+  "failures": 0,
+  "skips": 0,
+  "log": "/home/dflanag3/spatial-artifacts/cow-qwen35-9b-20261021/vision/bw-pdf-layout-regressions-final.log",
+  "measurement": "At most 8192 character boxes against actual crop/media intersection; first eight outside examples; warnings only. Does not check overlap, images or semantic requirements.",
+  "live_mitigation": "pending"
+}

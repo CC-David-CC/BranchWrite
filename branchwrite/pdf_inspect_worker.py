@@ -29,7 +29,28 @@ def run():
                 if not all(math.isfinite(v) and 0<v<=MAX_PAGE_POINTS for v in (width,height)):
                     raise ValueError('PDF page geometry is unsupported')
                 textpage=page.get_textpage()
-                try:text=textpage.get_text_range(errors='strict')[:8192]
+                try:
+                    text=textpage.get_text_range(errors='strict')[:8192]
+                    # Independent observations of the saved PDF, never source claims.
+                    # get_bbox and get_charbox both use PDF canvas coordinates.
+                    box=list(page.get_bbox());total=textpage.count_chars();checked=min(total,8192)
+                    outside=0;examples=[];invalid=0
+                    for index in range(checked):
+                        char=textpage.get_text_range(index,1,errors='strict')
+                        if not char.strip():continue
+                        bounds=list(textpage.get_charbox(index))
+                        if not all(math.isfinite(v) for v in bounds):invalid+=1;continue
+                        if bounds[0]<box[0] or bounds[1]<box[1] or bounds[2]>box[2] or bounds[3]>box[3]:
+                            outside+=1
+                            if len(examples)<8:examples.append(dict(character=char,box_points=bounds))
+                    warnings=[]
+                    if outside:warnings.append('Text boxes extend outside the visible page. Check page size, margins, table widths and text wrapping against the actual rendered image.')
+                    if checked<total:warnings.append('Text-box scan is bounded; remaining characters were not checked.')
+                    if invalid:warnings.append('Some text boxes have nonfinite coordinates and could not be checked.')
+                    layout=dict(page_box_points=box,text_characters=total,checked_characters=checked,
+                        truncated=checked<total,invalid_boxes=invalid,outside_page_characters=outside,
+                        outside_examples=examples,warnings=warnings,
+                        scope='text boxes only; images, overlap and design quality require visual inspection')
                 finally:textpage.close()
                 bitmap=page.render(scale=min(2,MAX_PAGE_PIXELS/max(width,height)))
                 try:
@@ -38,7 +59,7 @@ def run():
                     if len(png)>MAX_PDF_BYTES:raise ValueError('rendered PDF page exceeds artifact bound')
                 finally:bitmap.close()
             finally:page.close()
-        result.update(status='PASS',text=text,image=base64.b64encode(png).decode(),size_points=[width,height],
+        result.update(status='PASS',text=text,layout=layout,image=base64.b64encode(png).decode(),size_points=[width,height],
                       size_pixels=list(image.size),render_profile=RENDER_PROFILE,forms='not initialized; no JavaScript execution')
     except BaseException as error:result['error']=type(error).__name__+': '+str(error)[:3000]
     with os.fdopen(protocol,'w') as stream:stream.write(json.dumps(result,separators=(',',':'))+'\n')

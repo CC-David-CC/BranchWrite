@@ -63,7 +63,7 @@ def execute_pdf(registry,plan,operation_id,args,inventory,tool):
                  workspace_after_sha256=registry._inventory(),publication=publication)
     if build is not None:details.update(build_isolation=build['isolation'],source_id=build['source_id'],entry=args['path'])
     cap.check()
-    summary=dict(status='PASS',pdf_path=path,pdf_sha256=digest,page=page,page_count=view['page_count'],text=view['text'],
+    summary=dict(status='PASS',pdf_path=path,pdf_sha256=digest,page=page,page_count=view['page_count'],text=view['text'],layout=view['layout'],
                  meaning='actual PDF parse and page render; visual correctness still requires reviewing the image')
     return ToolOutcome('pdf_built' if tool=='build_pdf' else 'pdf_rendered',0,time.monotonic()-start,
         json.dumps(summary,ensure_ascii=False).encode('utf8'),b'',operation_id,plan.sha256,tool,details=encode(details),

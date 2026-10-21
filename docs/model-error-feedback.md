@@ -17,3 +17,9 @@ The 2026-10-21 diagnostic revision passed 85 focused CPU regression tests: 31 PD
 Initial regression commands used incomplete test environments (missing COW imports and CAD packages). Retained logs record those failures; final reruns used both COW import roots and the installed CAD interpreter. No assertions or reference equations were relaxed.
 
 A separate-VM Qwen3.5-9B Q8 PDF trial using the corrected installed client was started after these checks. Its model recovery and final-page inspection are pending; passing diagnostics tests do not establish autonomous PDF success.
+
+## PDF layout observations
+
+PDF build/render feedback includes the saved page's visible box, number of scanned text characters, out-of-page character count and up to eight examples with coordinates. At most 8,192 characters are scanned; remaining text is explicitly unassessed. Cropped and rotated page tests use the actual PDF canvas coordinates. Warnings supplement the current page image. Zero measured overflow does not prove absence of overlap, missing content, bad design or problems in embedded images. The executable teaching example derives table width from doc.width and wraps long cells with Paragraph instances.
+
+39 PDF regression tests pass for this additive observation, including real worker-to-model feedback and the two rendered teaching pages. The live model repair remains separately evaluated.
