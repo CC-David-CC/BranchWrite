@@ -33,7 +33,7 @@ That is normal. Press Enter when you finish.
 Copy this whole line into Terminal, then press Enter:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/CC-David-CC/BranchWrite/lan-preview-2026-10-20.1/install.sh -o "$HOME/branchwrite-install.sh" && sh "$HOME/branchwrite-install.sh"
+curl -fsSL https://raw.githubusercontent.com/CC-David-CC/BranchWrite/lan-preview-2026-10-21/install.sh -o "$HOME/branchwrite-install.sh" && sh "$HOME/branchwrite-install.sh"
 ```
 
 Wait for **BranchWrite is installed**. The first installation needs Internet

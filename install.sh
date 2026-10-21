@@ -20,7 +20,7 @@ if [ "$(id -u)" = 0 ]; then
 fi
 BW_HOME=${BW_HOME:-"$HOME/.local/share/branchwrite"}
 BW_BIN=${BW_BIN:-"$HOME/.local/bin"}
-BW_REF=${BW_REF:-"lan-preview-2026-10-20.1"}
+BW_REF=${BW_REF:-"lan-preview-2026-10-21"}
 mkdir -p "$BW_HOME"
 exec 9>"$BW_HOME/install.lock"
 flock -n 9 || { echo "Another BranchWrite installation is running." >&2; exit 1; }

@@ -91,7 +91,10 @@ class Terminal:
         return True
     async def run(self):
         self.loop=asyncio.get_running_loop()
-        with patch_stdout():
+        # TERM=unknown/dumb prints its prompt before prompt-toolkit enters
+        # raw mode. Arm input first so an immediate Ctrl+D is not swallowed
+        # by the terminal's cooked line discipline before the reader attaches.
+        with patch_stdout(), self.prompt.input.raw_mode():
             self.service.start(self.notify)
             self.notify('BranchWrite: keep talking while I work. /help shows the keys.\n'
                         'Work edits this project. /explore tries an idea in a separate copy.')

@@ -76,3 +76,9 @@ second runtime. Production tests must use real filesystem/process/native boundar
 where the catalogue requires them. Test count does not establish product quality.
 Do not add a license on the owner's behalf. Keep private prompts, receipts and secrets
 out of public artifacts and commits.
+
+## Git identity
+
+Use `David <David@code.contractors>` for both Git author and committer.
+Verify the effective identity before committing. Do not use placeholder Codex
+identities.
