@@ -20,6 +20,43 @@ READ_PROGRAM=PROGRAM.replace("command-evidence-and-finish","read-only-and-finish
 CAD_PROGRAM=PROGRAM.replace('command-evidence-and-finish','cad-geometry-and-finish').replace('evidence=verified -> task','evidence=verified profile=cad-views -> task')
 BLENDER_PROGRAM=CAD_PROGRAM.replace('cad-geometry-and-finish','blender-scene-and-finish')
 MAX_LAUNCH_BYTES=1024*1024
+
+def exploration_program(program,rule='verified-first'):
+    from .language import parse,render,Statement
+    body=parse(program)[0].body
+    repeat=body[0]
+    fields=tuple((key,'8' if key=='max' else value) for key,value in repeat.attributes)
+    repeat=Statement(repeat.opcode,repeat.label,fields,repeat.output,repeat.body)
+    arms=tuple(Statement('BRANCH',name,(('base','current'),('world',name)),body=(
+        Statement('VALUE','task',(('type','Text'),('ref','approach-'+name))),repeat))
+        for name in ('first','second'))
+    parallel=Statement('PARALLEL.DO','candidates',(('base','current'),('budget','explore')),body=arms)
+    selection=Statement('SELECT','choose',(('input','candidates'),('rule',rule)),output='selected')
+    return render((Statement('FLOW','exploration',body=(parallel,selection)),))
+
+
+def enable_exploration(launch,approaches=None,*,selection='verified-first'):
+    """Opt in before admission; existing saved launches are never rewritten."""
+    if approaches is None:
+        approaches=['Use a straightforward solution with a clear, small implementation.',
+                    'Try a meaningfully different decomposition or representation for the solution.']
+    if (type(approaches) is not list or len(approaches)!=2
+            or any(type(s) is not str or not s.strip() or len(s.encode())>8192 for s in approaches)
+            or selection not in ('verified-first','first','second')):
+        raise ValueError('Two bounded approach instructions and an explicit selection rule required')
+    config=launch['config']
+    if config.get('remotes'):raise ValueError('Exploration uses isolated local worlds, without shared remote mutations')
+    if config.get('verification')==dict(schema=1,read_only=True):
+        raise ValueError('Use a Work task with explicit checks for verified exploration')
+    profile=config['profiles']['control']
+    profile.update(request_tokens=512,max_requests=8,max_output_tokens=4096)
+    config['exploration']=dict(schema=1,approaches=dict(zip(('first','second'),approaches)),
+        selection=selection,budget=dict(max_parallel=2,max_requests=128,max_output_tokens=65536))
+    for name,direction in config['exploration']['approaches'].items():
+        config['bindings']['approach-'+name]=dict(type='Text',value=config['bindings']['task']['value']+
+            '\n\nApproach instruction: '+direction+'\nRun the required checks on your candidate before finishing.')
+    launch['program']=exploration_program(launch['program'],selection)
+    return launch
 def _bytes(value):
     return json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False).encode()
 def build_launch(project,task,connection,*,branch,project_files=False,read_paths=(),edit_paths=(),create_paths=(),test_commands=(),from_branch=None,from_prefix=None,from_snapshot=None,shell_timeout=120,sampler="greedy",base_catalog=None,base_proposal=None,base_revision=None,base_reserve_tokens=None,context_pack=None,context_pack_id=None,refresh_context_pack=False,auto_base=False,mode="work",remotes=None,cad=None,blender=None):
@@ -147,12 +184,14 @@ def _prefix_launch(launch):
     return (launch.get('fork') is not None and type(config) is dict
         and type(config.get('cow')) is dict and config['cow'].get('mode')=='ask')
 def _validate(launch):
-    if type(launch) is not dict or set(launch)!={'schema','program','config','fork'} or type(launch['schema']) is not int or launch['schema']!=1 or launch['program'] not in (PROGRAM,PROJECT_PROGRAM,READ_PROGRAM,CAD_PROGRAM,BLENDER_PROGRAM):
+    if type(launch) is not dict or set(launch)!={'schema','program','config','fork'} or type(launch['schema']) is not int or launch['schema']!=1:
         raise ValueError('unsupported coding launch')
     config=_config(_bytes(launch['config']).decode(),prepared_prefix=_prefix_launch(launch))
     project=config['grant'].get('project_files',False)
     readonly=config.get('verification')==dict(schema=1,read_only=True)
-    if launch['program']!=(BLENDER_PROGRAM if 'blender' in config else CAD_PROGRAM if 'cad' in config else READ_PROGRAM if readonly else PROJECT_PROGRAM if project else PROGRAM):raise ValueError('coding program and project grant differ')
+    expected=BLENDER_PROGRAM if 'blender' in config else CAD_PROGRAM if 'cad' in config else READ_PROGRAM if readonly else PROJECT_PROGRAM if project else PROGRAM
+    if 'exploration' in config:expected=exploration_program(expected,config['exploration']['selection'])
+    if launch['program']!=expected:raise ValueError('coding program and project grant differ')
     if project and 'blender' not in config and 'cad' not in config and config.get('verification')!=dict(schema=1,selected_checks=True):raise ValueError('project check policy required')
     fork=launch['fork']
     if fork is not None:
@@ -339,6 +378,9 @@ def start(args,*,control=None,progress=None,model_pause=None):
     if project_receipt_sha256 is not None:
         launch['config']['bindings']['project_context_receipt_sha256']=dict(
             type='Text',value=project_receipt_sha256)
+    if getattr(args,'explore',False):
+        enable_exploration(launch,getattr(args,'approach',None),selection=getattr(args,'select_candidate','verified-first'))
+    elif getattr(args,'approach',None):raise ValueError('--approach requires --explore')
     existing=Path(args.state)/'coding-launch.json'
     if launch['fork'] is not None and launch['fork']['snapshot'] is None:
         if existing.exists():

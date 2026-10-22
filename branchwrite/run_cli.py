@@ -10,6 +10,7 @@ from pathlib import Path
 from .client_setup import key_for_connection
 import stat
 import time
+from contextlib import ExitStack
 from .records import RuntimeLog,Artifact,decode
 from .kernel import FrameKernel
 from .execution import Executor,Grant
@@ -109,8 +110,17 @@ def _config(text,*,prepared_prefix=False):
     try:config=json.loads(text,object_pairs_hook=_pairs,parse_constant=lambda _: (_ for _ in ()).throw(AdmissionError('nonfinite host configuration value')))
     except (ValueError,TypeError) as exc:raise AdmissionError('invalid host configuration') from exc
     required={'schema','source','run_id','grant','bindings'}
-    if type(config) is not dict or (not required<=set(config) or set(config)-required-{'source_policy','cow','profiles','verification','browser','shell','context_pack','remotes','cad','blender'}) or type(config['schema']) is not int or config['schema']!=1:
+    if type(config) is not dict or (not required<=set(config) or set(config)-required-{'source_policy','cow','profiles','verification','browser','shell','context_pack','remotes','cad','blender','exploration'}) or type(config['schema']) is not int or config['schema']!=1:
         raise AdmissionError('unsupported host configuration fields/schema; credentials belong in BW_COW_API_KEY')
+    if 'exploration' in config:
+        from .exploration import budget
+        spec=config['exploration']
+        if (type(spec) is not dict or set(spec)!={'schema','approaches','selection','budget'} or spec['schema']!=1
+                or type(spec['approaches']) is not dict or set(spec['approaches'])!={'first','second'}
+                or any(type(s) is not str or not s.strip() or len(s.encode())>8192 for s in spec['approaches'].values())
+                or spec['selection'] not in ('verified-first','first','second') or config.get('remotes')):
+            raise AdmissionError('Closed isolated exploration configuration required')
+        budget(spec['budget'])
     if type(config['source']) is not str or not Path(config['source']).is_absolute():raise AdmissionError('absolute source path required')
     if type(config['run_id']) is not str or not config['run_id'] or len(config['run_id'])>128:raise AdmissionError('bounded run ID required')
     grant=config['grant']
@@ -232,6 +242,32 @@ def _coding_bootstrap(client, cow, config, seed, registry, *, task_bound, output
                                   [dict(role='system', content=prefix)], operation)
     return prepared.receipt.branch
 
+def _candidate_worlds(state,registry,kernel,verification):
+    """Owned copies with frozen grants; no shared mutation targets."""
+    root=state/'candidates'
+    if not root.exists():root.mkdir(mode=0o700)
+    info=root.lstat()
+    if not stat.S_ISDIR(info.st_mode) or info.st_mode&0o077 or info.st_uid!=os.getuid():
+        raise AdmissionError('Candidate container must be an owned private real directory')
+    worlds={}
+    for name in ('first','second'):
+        path=root/name
+        if not path.exists():
+            if kernel.frames():raise AdmissionError('Saved candidate world is missing; refusing to recreate it')
+            ex=Executor.create(registry.executor.workspace,path,browser=registry._browser,shell=registry._shell)
+        else:
+            info=path.lstat()
+            if not stat.S_ISDIR(info.st_mode) or info.st_mode&0o077 or info.st_uid!=os.getuid():
+                raise AdmissionError('Candidate world must be an owned private real directory')
+            ex=Executor(registry.executor.workspace,path,path/'workspace',browser=registry._browser,shell=registry._shell)
+        if registry._grant.allow_tests:ex.check_test_boundary()
+        if registry._grant.allow_shell:ex.check_shell_boundary()
+        child=ToolRegistry(ex,registry._grant,test_timeout=registry._test_timeout,
+            cad=registry._cad,blender=registry._blender,pdf=registry._pdf)
+        worlds[name]=dict(registry=child,verification=verification)
+    return worlds
+
+
 def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,control=None,progress=None,model_pause=None):
     if model_pause is not None and not callable(model_pause):raise AdmissionError('Read-only model pause callback required')
     pause_notice=lambda message:(progress or _progress_notice)('pause:'+message)
@@ -252,7 +288,7 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
         info=state.lstat()
         if not stat.S_ISDIR(info.st_mode) or stat.S_IMODE(info.st_mode)!=0o700:raise AdmissionError('state must be an owned real directory with mode0700')
     else:state.mkdir(mode=0o700,parents=False)
-    with RuntimeLog(state/'ledger') as log:
+    with RuntimeLog(state/'ledger') as log, ExitStack() as effects:
         kernel=FrameKernel(log)
         world=state/'world';source_dir=Path(config['source'])
         browser=None
@@ -282,6 +318,12 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
         from .pdf_tools import PdfCapability
         pdf=PdfCapability() if grant.project_files else None
         registry=ToolRegistry(executor,grant,remote_targets=remote_targets,cad=cad,blender=blender,pdf=pdf);adapter=None
+        parallel={}
+        if 'exploration' in config:
+            from .parallel_dispatch import DispatchPool
+            pool=effects.enter_context(DispatchPool(config['exploration']['budget']['max_parallel']))
+            worlds=_candidate_worlds(state,registry,kernel,config.get('verification'))
+            parallel=dict(worlds=worlds,parallel_budgets={'explore':config['exploration']['budget']},dispatcher=pool)
         bindings={k:Value(v['type'],v['value']) for k,v in config['bindings'].items()}
         # This digest prevents changed source/grants/endpoint/branch declarations
         # being treated as continuation of an already admitted run. No secret.
@@ -310,11 +352,16 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
                 for row in config.get('verification',{}).get('commands',[]))
             completion_policy=('cad-geometry-and-finish' if config.get('verification')==dict(schema=1,cad=True) else 'blender-scene-and-finish' if config.get('verification')==dict(schema=1,blender=True) else None)
             bindings['task']=Value(task.type,continuation_input(task.data,registry.model_schema(),command_requirements=requirements,**({} if completion_policy is None else dict(completion_policy=completion_policy))))
+            if 'exploration' in config:
+                for name in ('first','second'):
+                    value=bindings['approach-'+name]
+                    bindings['approach-'+name]=Value('Text',continuation_input(value.data,registry.model_schema(),
+                        command_requirements=requirements,**({} if completion_policy is None else dict(completion_policy=completion_policy))))
 
         if 'cow' in config:
             cow=config['cow'];client=CowClient.http(cow['endpoint_url'],journal=OperationJournal(state/'cow-operations'),api_key=key_for_connection(cow),endpoint_pin=cow['endpoint_pin'],notice_handler=_source_notice)
             adapter=ModelAdapter(client,run_id=config['run_id'],model_contract_id=cow['model_contract_id'],execution_profile_id=cow['execution_profile_id'],eos_tokens=tuple(cow['eos_tokens']),model_pause=model_pause,pause_notice=pause_notice)
-            runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice)
+            runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,**parallel)
             runtime.preflight(source,{**{name:value.type for name,value in bindings.items()},'world':'World','current':'COWSource'})
             if cow.get('grammar_registration')=='inline':
                 # Full pure preflight above must succeed before publishing metadata.
@@ -328,7 +375,7 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
                 adapter=ModelAdapter(client,run_id=config['run_id'],model_contract_id=cow['model_contract_id'],
                     execution_profile_id=cow['execution_profile_id'],eos_tokens=tuple(cow['eos_tokens']),model_pause=model_pause,pause_notice=pause_notice,
                     grammar_mapping=registered['states'])
-                runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice)
+                runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,**parallel)
                 runtime.preflight(source,{**{name:value.type for name,value in bindings.items()},'world':'World','current':'COWSource'})
             if kernel.frames():
                 root=kernel.frame('program');original=decode(log.read_artifact(Artifact(*root['inputs'])))
@@ -344,22 +391,33 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
                         command_requirements=getattr(runtime._file_policy,"commands",()))
                 else:head=client.head(cow['branch'])
                 bindings['current']=Value('COWSource',dict(head=dict(name=head.name,revision=head.revision,tip=head.tip,root=head.root),mode=cow['mode']))
-        if adapter is None:runtime=Interpreter(kernel,registry,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice)
+        if adapter is None:runtime=Interpreter(kernel,registry,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,**parallel)
         runtime.start(source,bindings)
         limit=1 if command=='step' else max_steps
         report=runtime.run(max_steps=limit,control=control)
         root=kernel.frame('program')
         result=dict(status=report.status,frame=report.frame,verified=bool(report.value and report.frame=='program' and report.value.get('verified')),state=str(state),result_artifact=None if root['result'] is None else root['result'][0])
+        evidence_runtime=runtime;evidence_scope=root
+        if report.frame=='program' and report.status=='complete' and 'exploration' in config:
+            choices=report.value['bindings']['candidates'][1]['candidates']
+            selected=report.value['bindings']['selected'][1]['selected']
+            result['candidates']=[dict(name=c['name'],verified=c['verified'],world=c['world'],
+                inventory=c['inventory'],result_sha256=c['result'][0]) for c in choices]
+            result['selection_rule']=config['exploration']['selection']
+            result['selected']=None if selected is None else selected['name']
+            if selected is not None:
+                evidence_runtime=runtime.worlds[selected['world']]
+                evidence_scope=kernel.frame(selected['scope'])
         # Return actual immutable capture artifacts from resumed canonical tool
         # results. They remain in the existing ledger, not an export/cache copy.
         artifacts=[]
-        for frame,value in runtime._visible_tool_outcomes(root):
+        for frame,value in evidence_runtime._visible_tool_outcomes(evidence_scope):
             if value['tool'] not in ('capture_page','interact_page','inspect_cad','inspect_scene') or value['image'] is None:continue
             ref=Artifact(*value['image']);log.read_artifact(ref)
             artifacts.append(dict(media_type='image/png',sha256=ref.sha256,bytes=ref.size_bytes,path=str(log.artifacts/ref.sha256),
                 source_path=value['observation'][1] if value['observation'] else 'CAD project',source_sha256=value['observation'][2] if value['observation'] else value['details']['source_id'],tool_frame=frame['id']))
         result['artifacts']=artifacts
-        exports=_artifact_exports(log,runtime._visible_tool_outcomes(root))
+        exports=_artifact_exports(log,evidence_runtime._visible_tool_outcomes(evidence_scope))
         if exports:result['exports']=exports
         code=0 if result['verified'] else (1 if report.frame=='program' and report.status=='complete' else 3)
         return code,result

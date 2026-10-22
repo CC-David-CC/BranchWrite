@@ -11,6 +11,24 @@ from .coding_cli import read_launch
 from .execution import Executor,Grant
 from .tool_registry import ToolRegistry
 
+def review_scope(log,kernel,root,state):
+    """Resolve only a canonical, joined selection to its existing owned copy."""
+    result=decode(log.read_artifact(Artifact(*root['result'])))[2]
+    choices=[v[1] for v in result.get('bindings',{}).values() if v[0]=='Selection']
+    if not choices:return Path(state)/'world',root
+    if len(choices)!=1 or choices[0].get('verified') is not True:
+        raise ValueError('One verified candidate selection required')
+    selected=choices[0]['selected']
+    if selected['world'] not in ('first','second'):raise ValueError('Unknown candidate world')
+    branch=kernel.frame(selected['frame'])
+    if branch['state']!='Closed' or branch['result']!=selected['result']:
+        raise ValueError('Selected candidate result changed')
+    original=decode(log.read_artifact(Artifact(*branch['result'])))[2]
+    if (original.get('verified') is not True or original['scope']!=selected['scope']
+            or original['world']!=selected['world'] or original['inventory']!=selected['inventory']):
+        raise ValueError('Selection does not bind the original verified candidate')
+    return Path(state)/'candidates'/selected['world'],kernel.frame(selected['scope'])
+
 def inspect_changes(state):
     state=Path(state);launch=read_launch(state);config=launch['config']
     with RuntimeLog(state/'ledger',read_only=True) as log:
@@ -25,10 +43,11 @@ def inspect_changes(state):
             raise ValueError('saved configuration differs from canonical run')
         # No executor creation, shell setup or tool execution. Only the existing
         # no-follow bounded file reader and shared inventory algorithm are used.
-        ex=Executor(Path(config['source']),state/'world',state/'world/workspace')
+        world,scope=review_scope(log,kernel,root,state)
+        ex=Executor(Path(config['source']),world,world/'workspace')
         registry=ToolRegistry(ex,Grant((),False))
         before_inventory=registry._inventory()
-        outcomes=kernel.visible_results(root,('ToolOutcome','record'))
+        outcomes=kernel.visible_results(scope,('ToolOutcome','record'))
         originals={};changes={};last_inventory=None
         permissions=Grant(**config['grant'])
         for frame,value in outcomes:
@@ -36,6 +55,7 @@ def inspect_changes(state):
             if type(plan) is not tuple or len(plan)!=8 or plan[0]!='bw.tool-plan.v2':
                 raise ValueError('unsupported recorded tool plan')
             _,_,_,tool,args,preimages,inventory,_=plan
+            if scope['id']!=root['id'] and plan[2]!=registry.world:continue
             if value.get('tool')!=tool:raise ValueError('recorded tool and plan disagree')
             if tool=='read_file' and value.get('disposition')=='read' and value.get('exit_code')==0:
                 ref=Artifact(*value['stdout'])

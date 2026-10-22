@@ -88,7 +88,7 @@ def _output(kernel,adapter,frame,value,fork,model):
         raise TransitionError('planning retry result changed model owner or source')
     return dict(result.value,planning_fork=fork_value)
 
-def step_retry_model(kernel,adapter,identifier):
+def step_retry_model(kernel,adapter,identifier,*,dispatcher=None):
     """One existing-kernel step; no outer agent loop or uncertain resend."""
     frame=kernel.frame(identifier);value,source=_input(kernel,adapter,frame)
     fork,model=_calls(kernel,adapter,frame,value,source)
@@ -105,7 +105,7 @@ def step_retry_model(kernel,adapter,identifier):
         if child['state']!='Closed':
             if call==fork:dispatch_fork(kernel,adapter,call.child_id)
             else:
-                report=step_model(kernel,adapter,call.child_id)
+                report=step_model(kernel,adapter,call.child_id,dispatcher=dispatcher)
                 if report.status!='complete':
                     return ModelStep(report.status,identifier,report.native_operation)
         kernel.resume(identifier,frame['epoch'])

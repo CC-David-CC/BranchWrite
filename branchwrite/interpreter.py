@@ -9,6 +9,7 @@ from hashlib import sha256
 from pathlib import Path
 import json
 import re
+from types import MappingProxyType
 from .records import Artifact,encode,decode
 from .kernel import CallSpec,ResultContract,TransitionError
 from .language import parse,render
@@ -27,6 +28,8 @@ from . import task_breakdown as breakdown_module
 from . import model_inputs as inputs_module
 from . import image_feedback as image_feedback_module
 from .image_feedback import image_feedback_call,step_image_feedback,feedback_definition
+from . import exploration as exploration_module
+from . import parallel_dispatch as parallel_module
 
 class AdmissionError(TransitionError):pass
 class ThinkingLadderExhausted(AdmissionError):pass
@@ -45,9 +48,10 @@ class Step:
     value: dict|None=None
 
 _TYPES={'Text':str,'ToolProposal':str,'ModelInput':(str,list),'COWSource':dict,'World':str,
-        'ModelOutput':dict,'TaskBreakdown':dict,'ToolPlan':dict,'ToolOutcome':dict,'Verification':dict,'RepeatResult':dict}
+        'ModelOutput':dict,'TaskBreakdown':dict,'ToolPlan':dict,'ToolOutcome':dict,'Verification':dict,'RepeatResult':dict,
+        'ParallelResult':dict,'Selection':dict}
 _INITIAL={'Text','ToolProposal','ModelInput','COWSource'}
-_SUPPORTED={'TEXT','VALUE','EXPAND','PLAN','ACT','TRANSFORM','VERIFY','REPEAT'}
+_SUPPORTED={'TEXT','VALUE','EXPAND','PLAN','ACT','TRANSFORM','VERIFY','REPEAT','PARALLEL.DO','BRANCH','SELECT'}
 _TRANSFORMS={'task-breakdown':('ModelOutput','TaskBreakdown'),'cow-source':('ModelOutput','COWSource'),'tool-feedback':('ToolOutcome','Text')}
 
 def _value(wire):
@@ -72,11 +76,23 @@ def _returned(kernel,frame):
     return decode(_reference(kernel.log,frame['result']))[2]
 
 class Interpreter:
-    def __init__(self,kernel,registry,*,adapter=None,profiles=None,verification=None,progress=None):
+    def __init__(self,kernel,registry,*,adapter=None,profiles=None,verification=None,progress=None,
+                 worlds=None,parallel_budgets=None,dispatcher=None):
         if not isinstance(registry,ToolRegistry):raise AdmissionError('actual host ToolRegistry required')
         if progress is not None and not callable(progress):raise AdmissionError('progress observer must be callable')
         self._progress=progress
         self.kernel=kernel;self.registry=registry;self.adapter=adapter
+        self.dispatcher=dispatcher
+        self._parallel_budget_data=encode({} if parallel_budgets is None else parallel_budgets)
+        for value in self.parallel_budgets.values():exploration_module.budget(value)
+        self.worlds={}
+        for name,spec in ({} if worlds is None else worlds).items():
+            if (type(name) is not str or not re.fullmatch(r'[A-Za-z][A-Za-z0-9_.-]*',name)
+                    or type(spec) is not dict or set(spec)-{'registry','verification'} or 'registry' not in spec):
+                raise AdmissionError('Named host candidate worlds required')
+            self.worlds[name]=Interpreter(kernel,spec['registry'],adapter=adapter,profiles=profiles,
+                verification=spec.get('verification'),progress=progress,dispatcher=dispatcher)
+        self.worlds=MappingProxyType(self.worlds)
         try:
             policy=FileReadbackPolicy
             if type(verification) is dict:
@@ -107,9 +123,13 @@ class Interpreter:
                 raise AdmissionError('thinking ladder requires its initial immutable budget grammar')
         from . import tool_progress as progress_module
         from . import kernel as kernel_module, language as language_module, records as records_module, tool_dispatch as tool_module, verification as verification_module
-        sources=tuple(sha256(Path(module).read_bytes()).hexdigest() for module in [__file__,kernel_module.__file__,language_module.__file__,records_module.__file__,tool_module.__file__,verification_module.__file__,inputs_module.__file__,image_feedback_module.__file__,ladder_module.__file__,retry_module.__file__,breakdown_module.__file__,progress_module.__file__])
+        sources=tuple(sha256(Path(module).read_bytes()).hexdigest() for module in [__file__,kernel_module.__file__,language_module.__file__,records_module.__file__,tool_module.__file__,verification_module.__file__,inputs_module.__file__,image_feedback_module.__file__,ladder_module.__file__,retry_module.__file__,breakdown_module.__file__,progress_module.__file__,exploration_module.__file__])
         self.identity=sha256(encode(('bw.interpreter.v1',registry.identity,None if adapter is None else adapter.identity,
             self.profiles,None if self._file_policy is None else self._file_policy.identity,sources))).hexdigest()
+        if self.worlds or self.parallel_budgets:
+            self.identity=sha256(encode(('bw.parallel-interpreter.v1',self.identity,
+                {name:context.identity for name,context in self.worlds.items()},self.parallel_budgets,
+                None if dispatcher is None else dispatcher.slots,sha256(Path(parallel_module.__file__).read_bytes()).hexdigest()))).hexdigest()
 
     def _emit_progress(self,event):
         """Cosmetic observation from the workflow owner, never a durable result.
@@ -121,6 +141,9 @@ class Interpreter:
         if self._progress is not None:
             try:self._progress(event)
             except Exception:self._progress=None
+
+    @property
+    def parallel_budgets(self):return decode(self._parallel_budget_data)
 
     @property
     def profiles(self):
@@ -179,6 +202,14 @@ class Interpreter:
                 elif op=='REPEAT':
                     if a['exhausted'] not in ('stop','abandon'):raise AdmissionError('unsupported exhausted disposition')
                     check(statement.body);require(a['until'],{'Verification'});typ='RepeatResult'
+                elif op=='PARALLEL.DO':
+                    require(a['base'],{'COWSource'})
+                    if self.adapter is None:raise AdmissionError('Parallel exploration requires a COW adapter')
+                    exploration_module.preflight(self,statement,env)
+                    typ='ParallelResult'
+                elif op=='SELECT':
+                    require(a['input'],{'ParallelResult'});typ='Selection'
+                else:raise AdmissionError('BRANCH is only admitted inside PARALLEL.DO')
                 env[_output(statement)]=typ
         check(program[0].body)
         return program[0]
@@ -229,7 +260,12 @@ class Interpreter:
         return self.kernel.visible_results(frame,contract)
 
     def _visible_tool_outcomes(self,frame):
-        return self._visible_results(frame,('ToolOutcome','record'))
+        result=[]
+        for child,value in self._visible_results(frame,('ToolOutcome','record')):
+            plan=decode(_reference(self.kernel.log,child['inputs']))
+            if type(plan) is tuple and len(plan)==8 and plan[:3]==('bw.tool-plan.v2',self.registry.identity,self.registry.world):
+                result.append((child,value))
+        return tuple(result)
 
     def _planning_model_for_tool(self,frame,operation_id):
         # Follow the actual ACT's lexical PLAN binding, not the last model
@@ -555,6 +591,10 @@ class Interpreter:
         elif op=='REPEAT':
             return CallSpec(identifier,'attempt-'+identifier[5:],'result','FLOW',self.kernel.log.put_artifact(render((statement,)).encode()),
                 self.kernel.log.put_artifact(encode(dict(schema=1,identity=self.identity,bindings={k:v.wire for k,v in env.items()}))),ResultContract('RepeatResult','record'))
+        elif op=='PARALLEL.DO':
+            return exploration_module.call(self,frame,statement,env,identifier)
+        elif op=='SELECT':
+            value,provenance=exploration_module.select(self,env[a['input']].data,a['rule'],frame)
         else:raise AdmissionError('unsupported execution operation: '+op)
         return self._pure(value,identifier,provenance)
 
@@ -571,6 +611,8 @@ class Interpreter:
                 finishes=[v.data for v in env.values() if v.type=='ToolOutcome' and v.data.get('requested_finish') is True]
                 verified=bool(finishes) and any(self._verification(finishes[-1],policy=v.data['policy'],frame=frame)['status']=='pass'
                     for v in env.values() if v.type=='Verification' and v.data.get('status')=='pass')
+            selections=[v.data for v in env.values() if v.type=='Selection']
+            if selections:verified=any(exploration_module.selection_current(self,v) for v in selections)
             value=dict(schema=1,bindings={k:v.wire for k,v in env.items()},verified=verified)
             self.kernel.finish(identifier,value);return Step('complete',identifier,value)
         try:call=self._admit(frame,node,env)
@@ -610,11 +652,12 @@ class Interpreter:
         contract=child['contract'][0]
         if contract=='ProgramResult':return self._scope(child['id'])
         if contract=='RepeatResult':return self._repeat(child['id'])
+        if contract=='ParallelResult':return exploration_module.step_parallel(self,child['id'])
         if contract=='ModelOutput':
             self._emit_progress('model_started')
             if _reference(self.kernel.log,child['definition'])==retry_module.retry_definition(self.adapter):
-                report=retry_module.step_retry_model(self.kernel,self.adapter,child['id'])
-            else:report=step_model(self.kernel,self.adapter,child['id'])
+                report=retry_module.step_retry_model(self.kernel,self.adapter,child['id'],dispatcher=self.dispatcher)
+            else:report=step_model(self.kernel,self.adapter,child['id'],dispatcher=self.dispatcher)
             self._emit_progress('model_step_returned')
             return Step('model_'+report.status,child['id'],report.value)
         if contract=='ToolOutcome':
@@ -626,7 +669,8 @@ class Interpreter:
                 detail=tool_start_event(_reference(self.kernel.log,child['inputs']),self.registry.identity,self.registry.world)
                 if detail is not None:self._emit_progress(detail)
             except Exception:pass
-            value=dispatch_tool(self.kernel,self.registry,child['id'])
+            value=dispatch_tool(self.kernel,self.registry,child['id'],dispatcher=self.dispatcher)
+            if value is None:return Step('tool_waiting',child['id'])
             self._emit_progress('tool_returned')
             return Step('tool_returned',child['id'],value)
         if contract=='BindingResult':
@@ -645,13 +689,30 @@ class Interpreter:
         return self._scope('program')
 
     def run(self,*,max_steps=1024,control=None):
+        if self.dispatcher is None:return self._run_steps(max_steps=max_steps,control=control)
+        self.dispatcher.admitting=True
+        try:
+            result=self._run_steps(max_steps=max_steps,control=control)
+        except BaseException as original:
+            try:self.dispatcher.drain()
+            except BaseException as error:original.add_note('Other parallel work also needs reconciliation: '+str(error))
+            raise
+        self.dispatcher.drain()
+        return result
+
+    def _run_steps(self,*,max_steps=1024,control=None):
         if type(max_steps) is not int or not 0<max_steps<=1000000:raise AdmissionError('finite positive step budget required')
         if control is not None and not callable(control):raise AdmissionError('host control callback required')
-        for _ in range(max_steps):
+        count=0
+        while count<max_steps:
             # The host may stop admission at a settled step boundary. It cannot
             # rewrite a frozen call, invent a result or repeat an uncertain effect.
             if control is not None and control():return Step('interrupted','program')
             report=self.step()
+            if self.dispatcher is not None and report.status in ('parallel_waiting','model_waiting','tool_waiting'):
+                self.dispatcher.wait(.05)
+                continue
+            count+=1
             if report.frame=='program' and report.status=='complete':return report
             if report.status in ('model_budget_exhausted','thinking_ladder_exhausted'):return report
         return Step('step_budget_exhausted','program')

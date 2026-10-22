@@ -46,6 +46,20 @@ class ModelFlowTests(unittest.TestCase):
   self.assertEqual(again.value,final.value);self.assertEqual(self.case.trace,before)
   self.assertEqual([x['operation'] for x in self.native_frames()],['EXPAND','CONTINUE'])
   self.assertEqual(self.case.trace[-1][3],'active')
+ def test_background_dispatch_returns_only_observations_until_owner_collects(self):
+  from branchwrite.parallel_dispatch import DispatchPool
+  self.admit()
+  with DispatchPool(2) as pool:
+   first=step_model(self.kernel,self.adapter,'model-flow',dispatcher=pool)
+   self.assertEqual(first.status,'waiting')
+   events=self.log.event_count
+   while not pool.ready(first.native_operation):pool.wait(.05)
+   self.assertEqual(self.log.event_count,events)
+   self.assertEqual(self.native_frames()[0]['state'],'Waiting')
+   collected=step_model(self.kernel,self.adapter,'model-flow',dispatcher=pool)
+   self.assertEqual(collected.status,'partial')
+   self.assertEqual(self.native_frames()[0]['state'],'Closed')
+   self.assertFalse(pool.pending)
  def test_committed_client_reply_recovers_before_kernel_return_without_network(self):
   self.admit()
   with patch.object(self.kernel,'record_result',side_effect=OSError('injected before workflow return')):

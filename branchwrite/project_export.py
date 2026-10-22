@@ -5,15 +5,16 @@ This is artifact export, not checkout application or a workflow COMMIT.
 import hashlib,io,json,os,tempfile,zipfile
 from pathlib import Path
 from .records import RuntimeLog
+from .kernel import FrameKernel
 from .coding_cli import read_launch
-from .coding_review import inspect_changes
+from .coding_review import inspect_changes,review_scope
 from .execution import Executor,Grant
 from .tool_registry import ToolRegistry
 
 def export_changes(state,destination):
     state=Path(state);destination=Path(destination).absolute()
     # A retained shared lock excludes execution throughout review and copying.
-    with RuntimeLog(state/'ledger',read_only=True):
+    with RuntimeLog(state/'ledger',read_only=True) as log:
         review=inspect_changes(state)
         if not review['complete_project_patch']:
             raise ValueError('complete immutable project baseline required for export')
@@ -22,7 +23,9 @@ def export_changes(state,destination):
         if resolved.is_relative_to(state.resolve()) or resolved.is_relative_to(Path(config['source']).resolve()):
             raise ValueError('export destination must be outside the project and run state')
         destination=resolved
-        ex=Executor(Path(config['source']),state/'world',state/'world/workspace')
+        kernel=FrameKernel(log)
+        world,_=review_scope(log,kernel,kernel.frame('program'),state)
+        ex=Executor(Path(config['source']),world,world/'workspace')
         registry=ToolRegistry(ex,Grant((),False));buffer=io.BytesIO()
         with zipfile.ZipFile(buffer,'w',compression=zipfile.ZIP_STORED) as archive:
             archive.writestr('manifest.json',json.dumps(dict(schema=1,format='bw.review-export.v1',review=review),sort_keys=True,ensure_ascii=True))

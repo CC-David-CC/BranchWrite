@@ -75,7 +75,7 @@ def _settle_return(kernel,registry,frame):
     return value
 
 
-def dispatch_tool(kernel,registry,identifier):
+def dispatch_tool(kernel,registry,identifier,*,dispatcher=None):
     frame=kernel.frame(identifier)
     if frame['contract']!=('ToolOutcome','record') or frame['operation'] not in ('ACT','OBSERVE','TRANSFORM'):
         raise TransitionError('frame is not a registered tool call')
@@ -83,7 +83,8 @@ def dispatch_tool(kernel,registry,identifier):
         payload=decode(kernel.log.read_artifact(Artifact(*frame['result'])))
         return _bound_value(frame,payload[2])
     pending=frame['dispatch'] is not None and frame['state']!='Settling'
-    if pending:
+    live=pending and dispatcher is not None and dispatcher.contains(frame['dispatch'][0])
+    if pending and not live:
         try:original=decode(kernel.log.read_artifact(Artifact(*frame['inputs'])))
         except Exception:raise ReconciliationRequired(frame['dispatch'][0],frame['inputs'][0]) from None
         if type(original) is not tuple or len(original)!=8 or original[3] not in ('remote_command','check_remote','upload_file'):
@@ -98,21 +99,31 @@ def dispatch_tool(kernel,registry,identifier):
         raise TransitionError('registered operation/definition changed')
     if frame['state']=='Settling':
         return _settle_return(kernel,registry,frame)
-    if pending:
+    if live:
+        operation_id=frame['dispatch'][0]
+        if not dispatcher.ready(operation_id):return None
+        outcome=dispatcher.take(operation_id)
+    elif pending:
         operation_id=frame['dispatch'][0]
         try:outcome=registry.reconcile(plan,operation_id)
         except EffectIndeterminate as error:raise ReconciliationRequired(operation_id,plan.sha256) from error
     else:
         operation_id='bwtool-'+sha256(encode(('bw.tool-operation.v1',frame['id'],frame['attempt'],frame['definition'],frame['inputs']))).hexdigest()[:48]
+        if dispatcher is not None and not dispatcher.available:return None
         if not kernel.dispatch(identifier,operation_id,Artifact(*frame['inputs'])):
             raise ReconciliationRequired(operation_id,plan.sha256)
-        try:outcome=registry.execute(plan,operation_id)
-        except ToolRejected as exc:
-            # Registry raises ToolRejected only before external execution starts.
-            # Exceptions after that boundary use EffectIndeterminate and propagate;
-            # the retained intent stays Waiting for explicit reconciliation.
-            outcome=ToolOutcome('rejected_before_execution',None,0.0,b'',str(exc).encode('utf8'),
-                                operation_id,plan.sha256,tool)
+        def execute():
+            try:return registry.execute(plan,operation_id)
+            except ToolRejected as exc:
+                # Only pre-effect rejects become observations. Unknown effects
+                # retain the original dispatch and require reconciliation.
+                return ToolOutcome('rejected_before_execution',None,0.0,b'',str(exc).encode('utf8'),
+                                    operation_id,plan.sha256,tool)
+        if dispatcher is None:outcome=execute()
+        else:
+            dispatcher.submit(operation_id,execute,
+                collect=lambda:dispatch_tool(kernel,registry,identifier,dispatcher=dispatcher))
+            return None
     try:
         value,provenance=outcome.publish(kernel.log)
         current=kernel.frame(identifier);_bound_value(current,value)

@@ -3,6 +3,10 @@ from pathlib import Path
 import json,os,subprocess,sys,tempfile,threading,unittest
 class CodingLauncherHttpTests(unittest.TestCase):
  def test_code_prepares_real_context_and_resume_keeps_pinned_setup(self):
+  self.launch_case(False)
+ def test_explore_cli_prepares_two_owned_worlds_and_resume_keeps_the_same_plan(self):
+  self.launch_case(True)
+ def launch_case(self,explore):
   from test_thinking_grammar import ThinkingTokenizer
   from serve.test_cow_grammar_canonical_flow import GrammarCPUBackend,_render,_encode,_initial_root_mode
   from context_time_travel.real import BranchingModel
@@ -41,11 +45,15 @@ class CodingLauncherHttpTests(unittest.TestCase):
   task=base/'task.txt';task.write_text('Inspect this project and run its test.')
   state=base/'run'
   argv=[sys.executable,'-B','-m','branchwrite','code',str(source),'--task-file',str(task),'--connection',str(connection),'--state',str(state),'--branch','public-code','--read','app.py','--test-command','python3 -m unittest','--max-steps','1']
+  if explore:argv.append('--explore')
   env=dict(os.environ,BW_COW_API_KEY='cli-key')
   first=subprocess.run(argv,capture_output=True,text=True,env=env,timeout=30)
   self.assertEqual(first.returncode,3,first.stderr)
   self.assertFalse(json.loads(first.stdout)['verified'])
   self.assertTrue((state/'ledger').is_dir())
+  if explore:
+   for name in ('first','second'):
+    self.assertEqual((state/'candidates'/name/'workspace/app.py').read_bytes(),(source/'app.py').read_bytes())
   before=(state/'coding-launch.json').read_bytes()
   self.assertEqual(coordinator.store.head('public-code').revision,1)
   records=[json.loads(p.read_text()) for p in (state/'cow-operations').glob('*.json')]

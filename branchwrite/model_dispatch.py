@@ -252,7 +252,7 @@ def _branch_free(kernel,adapter,branch,*,owner,exclude=None):
         if request['endpoint_url']==adapter.client.endpoint_url and request['source']['name']==branch:
             raise ModelBranchBusy('another unresolved model FLOW/request owns this branch')
 
-def step_model(kernel,adapter,identifier):
+def step_model(kernel,adapter,identifier,*,dispatcher=None):
     """Owner-thread step. Never poll/resend uncertain work or close a partial FLOW."""
     frame,plan=_flow(kernel,adapter,identifier)
     if frame['state']=='Closed':
@@ -284,8 +284,18 @@ def step_model(kernel,adapter,identifier):
         _branch_free(kernel,adapter,source['name'],owner=identifier,exclude=child_id);adapter.check_journal(request)
         if child['dispatch'] is None:
             if _head(adapter.client.head(source['name']))!=source:raise ModelSourceChanged('source changed before native send')
+            if dispatcher is not None and not dispatcher.available:
+                return ModelStep('waiting',identifier)
             kernel.dispatch(child_id,request['frame_key']['operation_id'],_ref(child['inputs']))
-            result=adapter.execute(request)
+            if dispatcher is None:result=adapter.execute(request)
+            else:
+                dispatcher.submit(request['frame_key']['operation_id'],lambda:adapter.execute(request),
+                    collect=lambda:step_model(kernel,adapter,identifier,dispatcher=dispatcher))
+                return ModelStep('waiting',identifier,request['frame_key']['operation_id'])
+        elif dispatcher is not None and dispatcher.contains(request['frame_key']['operation_id']):
+            if not dispatcher.ready(request['frame_key']['operation_id']):
+                return ModelStep('waiting',identifier,request['frame_key']['operation_id'])
+            result=dispatcher.take(request['frame_key']['operation_id'])
         else:
             try:result=adapter.client.read_completed_generation(request['frame_key']['operation_id'])
             except (OperationIndeterminate,ReceiptError) as exc:raise ModelReconciliationRequired(request['frame_key']['operation_id']) from exc

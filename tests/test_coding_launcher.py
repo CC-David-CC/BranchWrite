@@ -20,6 +20,16 @@ class CodingLauncherTests(unittest.TestCase):
   self.assertEqual(set(cfg['grant']['read_paths']),{'app.py','new.py','tests/test_app.py'})
   self.assertIn('command-evidence-and-finish',launch['program'])
   self.assertEqual(cfg['verification']['commands'][0]['exit_code'],0)
+ def test_exploration_is_opt_in_and_has_two_frozen_bounded_approaches(self):
+  from branchwrite.coding_cli import enable_exploration,save_launch,read_launch
+  original=self.build();self.assertNotIn('exploration',original['config'])
+  launch=enable_exploration(self.build(),['Direct solution.','Alternative design.'])
+  self.assertIn('PARALLEL.DO',launch['program'])
+  self.assertIn('SELECT choose input=candidates rule=verified-first',launch['program'])
+  self.assertEqual(launch['config']['exploration']['budget']['max_parallel'],2)
+  state=self.base/'explore';save_launch(state,launch)
+  self.assertEqual(read_launch(state),launch)
+  with self.assertRaises(ValueError):enable_exploration(self.build(),['Only one.'])
  def test_retained_launch_does_not_bootstrap_or_rebase(self):
   launch=self.build(from_branch='parent',from_snapshot='a'*64)
   self.assertNotIn('bootstrap',launch['config']['cow'])

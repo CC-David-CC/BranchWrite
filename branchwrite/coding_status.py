@@ -38,11 +38,18 @@ def inspect_run(state,*,recent_limit=12):
         if root['contract']!=('ProgramResult','record'):
             raise ValueError('status requires a coding program result contract')
         verified=None
+        exploration=None
         if root['state']=='Closed':
             payload=decode(log.read_artifact(Artifact(*root['result'])))[2]
             verified=payload.get('verified')
             if type(verified) is not bool:
                 raise CorruptLog('program result has no recorded verification boolean')
+            joined=[v[1] for v in payload.get('bindings',{}).values() if v[0]=='ParallelResult']
+            selected=[v[1] for v in payload.get('bindings',{}).values() if v[0]=='Selection']
+            if joined:
+                exploration=dict(candidates=[dict(name=c['name'],verified=c['verified'],world=c['world'])
+                    for c in joined[-1]['candidates']],selected=None if not selected or selected[-1]['selected'] is None
+                    else selected[-1]['selected']['name'])
         pending=[]
         for frame in frames:
             if frame['dispatch'] is not None and frame['state']!='Closed':
@@ -80,7 +87,8 @@ def inspect_run(state,*,recent_limit=12):
                     frame_operations=dict(sorted(Counter(f['operation'] for f in frames).items())),
                     pending_operations=sorted(pending,key=lambda x:x['frame']),
                     pending_model_recovery=sorted(model_recovery,key=lambda x:x['frame']),
-                    pending_tool_recovery=sorted(tool_recovery,key=lambda x:x['frame']))
+                    pending_tool_recovery=sorted(tool_recovery,key=lambda x:x['frame']),
+                    **({} if exploration is None else dict(exploration=exploration)))
 
 def command(state,*,as_json=False,tail=12):
     import json,sys
@@ -97,6 +105,10 @@ def command(state,*,as_json=False,tail=12):
         label={None:'not completed',True:'passed',False:'failed'}[result['recorded_verified']]
         print('Verification recorded at completion: '+label+'; current workspace not rechecked.')
         print('Frames: '+', '.join(k+'='+str(v) for k,v in result['frame_states'].items()))
+        if 'exploration' in result:
+            for candidate in result['exploration']['candidates']:
+                print('Candidate '+candidate['name']+': checks '+('passed' if candidate['verified'] else 'failed'))
+            print('Selected: '+str(result['exploration']['selected']))
         print('Recent activity (last '+str(len(result['recent_activity']))+' of '+str(result['events'])+' events):')
         for row in result['recent_activity']:
             detail=row['kind']
