@@ -1,5 +1,6 @@
 """Real thread overlap; workers never receive the workflow kernel."""
 import threading
+import time
 import unittest
 from branchwrite.parallel_dispatch import DispatchPool
 
@@ -21,7 +22,10 @@ class DispatchTests(unittest.TestCase):
         self.assertFalse(pool.submit('third', lambda: None))
         self.assertFalse(pool.ready('first'))
         release.set()
-        pool.wait(.1)
+        deadline=time.monotonic()+1
+        while not all(pool.ready(name) for name in ('first','second')) and time.monotonic()<deadline:
+            pool.wait(.01)
+        self.assertTrue(all(pool.ready(name) for name in ('first','second')))
         self.assertEqual(pool.take('first'), 0)
         self.assertEqual(pool.take('second'), 1)
         self.assertFalse(pool.pending)
