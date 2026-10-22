@@ -654,11 +654,11 @@ class Interpreter:
         if contract=='RepeatResult':return self._repeat(child['id'])
         if contract=='ParallelResult':return exploration_module.step_parallel(self,child['id'])
         if contract=='ModelOutput':
-            self._emit_progress('model_started')
+            if self.dispatcher is None or child['state']=='Ready':self._emit_progress('model_started')
             if _reference(self.kernel.log,child['definition'])==retry_module.retry_definition(self.adapter):
                 report=retry_module.step_retry_model(self.kernel,self.adapter,child['id'],dispatcher=self.dispatcher)
             else:report=step_model(self.kernel,self.adapter,child['id'],dispatcher=self.dispatcher)
-            self._emit_progress('model_step_returned')
+            if report.status!='waiting':self._emit_progress('model_step_returned')
             return Step('model_'+report.status,child['id'],report.value)
         if contract=='ToolOutcome':
             self._emit_progress('tool_started')

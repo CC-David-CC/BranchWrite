@@ -9,6 +9,27 @@ from branchwrite.kernel import FrameKernel
 from branchwrite.interpreter import Interpreter,Value
 from branchwrite.model_dispatch import ModelAdapter
 class ModelProgressTests(unittest.TestCase):
+ def test_async_wait_polls_do_not_repeat_model_progress_notices(self):
+  import sys
+  from unittest.mock import patch
+  from branchwrite.parallel_dispatch import DispatchPool
+  class GatedPool(DispatchPool):
+   polls=0
+   def ready(self,identifier):
+    self.polls+=1
+    return False if self.polls<=5 else super().ready(identifier)
+  events=[];original=Interpreter
+  with GatedPool(1) as pool:
+   def build(*args,**kwargs):
+    observe=kwargs['progress']
+    def progress(event):events.append(event);observe(event)
+    return original(*args,**dict(kwargs,dispatcher=pool,progress=progress))
+   with patch.object(sys.modules[__name__],'Interpreter',build):
+    self.test_model_progress_comes_from_existing_http_work_and_excludes_text()
+   self.assertGreaterEqual(pool.polls,6)
+   self.assertEqual(events.count('model_started'),1)
+   self.assertEqual(events.count('model_step_returned'),1)
+
  def test_model_progress_comes_from_existing_http_work_and_excludes_text(self):
   import test_cow_client_flow as fixture
   case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups);case.setUp()
