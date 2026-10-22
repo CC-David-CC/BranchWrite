@@ -93,6 +93,20 @@ class ExplorationTests(unittest.TestCase):
         self.assertIsNone(result.value['bindings']['selected'][1]['selected'])
         self.assertEqual([c['verified'] for c in result.value['bindings']['candidates'][1]['candidates']],[True,False])
 
+    def test_nested_repeat_completion_does_not_resume_an_unsettled_branch(self):
+        lines=[];inside=False
+        for line in self.program().splitlines():
+            if line=='END' and inside:
+                lines.append('END');inside=False
+            lines.append(line)
+            if line.startswith('BRANCH '):
+                lines.append('REPEAT attempts exhausted=stop max=2 until=verified');inside=True
+        self.runtime.start('\n'.join(lines)+'\n',self.bindings())
+        result=self.runtime.run(max_steps=512)
+        self.assertEqual(result.status,'complete')
+        self.assertTrue(result.value['verified'])
+        self.assertEqual([c['verified'] for c in result.value['bindings']['candidates'][1]['candidates']],[True,True])
+
     def test_changed_candidate_cannot_be_selected(self):
         self.runtime.start(self.program(),self.bindings())
         while self.kernel.frame('program')['pc']<1:self.runtime.step()

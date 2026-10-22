@@ -149,7 +149,10 @@ def step_branch(runtime, identifier):
         if frame['pc']==0:dispatch_fork(kernel,context.adapter,fork.child_id)
         else:
             report=context._scope(identifier+'-scope')
-            if report.status!='complete':return report
+            # A nested FLOW/REPEAT may report its own completion while the
+            # branch's direct scope still has work. Only its canonical return
+            # fills this branch's wait slot.
+            if kernel.frame(identifier+'-scope')['state']!='Closed':return report
         kernel.resume(identifier,frame['epoch'])
         return Step('branch_resumed',identifier)
     if frame['pc']==1:
