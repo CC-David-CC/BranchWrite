@@ -1,4 +1,8 @@
 # BranchWrite (BW)
+Development checkpoint: [foundations and workflow validation](validation/foundations-20261023/README.md). Live-model qualification remains pending.
+
+
+[Explore the skill graph and existing Blender/CAD/PDF/web/admin workflows](docs/SSS-EXPLORATION.md). The operator guide separates working reference machinery from model qualifications.
 
 **Describe what you want to make or change. BW works on the files, runs checks,
 and keeps saved versions so you can continue or try another direction.**

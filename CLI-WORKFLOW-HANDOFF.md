@@ -1,5 +1,7 @@
 # CLI workflow integration checkpoint
 
+> Historical operational checkpoint. Read [current S3 exploration](docs/SSS-EXPLORATION.md) and CURRENT_STATE.md. Old paths, PIDs and permissions below are not current authorization.
+
 Goal remains active: standalone coding/admin agent using Context COW and shared
 computational histories. No public push. All source/evidence is on Linux and
 private box-git. Windows steers SSH only.

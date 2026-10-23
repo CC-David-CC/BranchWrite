@@ -51,7 +51,11 @@ def main(argv=None):
             from sss.__main__ import main as skills_main
         except ModuleNotFoundError:
             print('Skills³ is an optional package; install skills-cubed from CC-David-CC/sss to browse its skill map.',file=sys.stderr);return 2
-        return skills_main(['tree',*argv[1:]])
+        tail=argv[1:]
+        if '--active' in tail:return skills_main(['tree',*tail])
+        if tail and tail[0]=='legacy':return skills_main(['tree',*tail[1:]])
+        commands={'graph','exercise','school-day','report','teaching-example','explore','workflows'}
+        return skills_main(tail if tail and tail[0] in commands else ['graph',*tail])
     if argv and argv[0]=='lesson':
         from .lesson_cli import main as lesson_main
         return lesson_main(argv[1:])

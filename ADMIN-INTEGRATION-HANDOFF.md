@@ -1,5 +1,7 @@
 # BranchWrite admin integration handoff
 
+> Historical operational checkpoint. Read [current S3 exploration](docs/SSS-EXPLORATION.md) and CURRENT_STATE.md. Old paths, PIDs and permissions below are not current authorization.
+
 Goal stays a usable standalone coding/admin agent, not completion of a catalogue.
 Stable current product: dev44, private branch work/interactive-loop-20261020 at
 10f1f2cb; installed llm-49:/home/dflanag3/spatial-artifacts/branchwrite-dev44-preview-20261020/venv/bin/branchwrite.
