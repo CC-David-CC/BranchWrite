@@ -69,6 +69,12 @@ Wen 1 / 1.1 trial on the same current tool tests. Those first model tests use
 isolated mock files, not actual Linux administration or the BW task runtime.
 BW keeps its own real tool execution and acceptance checks.
 
+The first paired A100 trial finished at **Wen 1: 5/9; Wen 1.1: 4/9**, with no
+backend errors. The extra 1.1 failure was correct read content without the
+required completion action; other shared failures need parser/model attribution.
+This small stack test does not establish broad model superiority or real BW
+administration competence. The linked S³ report gives each case and its limits.
+
 Checked corrections can become single lessons or explicit training batches
 through an owner-enabled PCC service. Optional S³ mixed replay checks the other
 active skills while a LoRA hat is made. The completed small mixed-practice pilot
