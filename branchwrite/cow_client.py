@@ -42,6 +42,10 @@ class CowClientError(RuntimeError):
 class RequestRejected(CowClientError):
     """The service explicitly rejected a request; no success is inferred."""
 
+    def __init__(self, message, *, status_code=None):
+        super().__init__(message)
+        self.status_code = status_code
+
 
 class OperationIndeterminate(CowClientError):
     """The request may have reached COW, but a durable result is unavailable."""
@@ -563,7 +567,7 @@ class HTTPTransport:
             except ValueError:
                 pass
             if exc.code < 500:
-                raise RequestRejected(f"COW HTTP {exc.code}: {detail}") from None
+                raise RequestRejected(f"COW HTTP {exc.code}: {detail}", status_code=exc.code) from None
             raise OperationIndeterminate(f"COW HTTP {exc.code}; inspect operation status: {detail}") from None
         except (URLError, http.client.HTTPException, TimeoutError, OSError) as exc:
             raise OperationIndeterminate(f"COW transport failed; inspect operation status: {exc}") from None
@@ -930,6 +934,11 @@ class CowClient:
         if not isinstance(value, dict):
             raise CowClientError("COW status response must be an object")
         return ServiceObservation(self.endpoint_pin, self.endpoint_url, value, False)
+
+    def require_capabilities(self, model_contract_id, execution_profile_id, *, required=('text','inline_grammars')):
+        from .capabilities import observe
+        return observe(self.transport, model_contract_id=model_contract_id,
+                       execution_profile_id=execution_profile_id, required=required)
 
     def head(self, branch: str) -> BranchHead:
         value = self.transport.request("GET", "/cow/head?" + urlencode({"branch": branch})).json_value

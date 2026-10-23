@@ -33,6 +33,7 @@ class ClientSetupTests(unittest.TestCase):
             def do_GET(self):
                 outer.requests.append((self.command, self.path, self.headers.get("Authorization")))
                 status = outer.response_code if self.headers.get("Authorization") == "Bearer example-secret" else 401
+                if status == 200 and self.path == '/cow/capabilities': status = 404
                 payload = json.dumps(outer.reply).encode()
                 self.send_response(status)
                 if status == 302: self.send_header("Location", "/stolen-key")
@@ -89,7 +90,8 @@ class ClientSetupTests(unittest.TestCase):
         self.assertEqual(connection["endpoint_url"], self.url)
         self.assertEqual(connection["execution_profile_id"], "b"*64)
         self.assertEqual(connection["eos_tokens"], [10, 20])
-        self.assertEqual(self.requests, [("GET", "/cow/info", "Bearer example-secret")])
+        self.assertEqual(self.requests, [("GET", "/cow/info", "Bearer example-secret"),
+                                        ("GET", "/cow/capabilities", "Bearer example-secret")])
         self.assertNotIn("example-secret", path.read_text())
         self.assertEqual(saved_api_key(path), "example-secret")
         self.assertEqual(stat.S_IMODE(path.parent.stat().st_mode), 0o700)

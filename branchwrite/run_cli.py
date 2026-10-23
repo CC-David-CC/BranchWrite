@@ -360,6 +360,8 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
 
         if 'cow' in config:
             cow=config['cow'];client=CowClient.http(cow['endpoint_url'],journal=OperationJournal(state/'cow-operations'),api_key=key_for_connection(cow),endpoint_pin=cow['endpoint_pin'],notice_handler=_source_notice)
+            client.require_capabilities(cow['model_contract_id'],cow['execution_profile_id'],
+                required=('text','inline_grammars') if cow.get('grammar_registration')=='inline' else ('text',))
             adapter=ModelAdapter(client,run_id=config['run_id'],model_contract_id=cow['model_contract_id'],execution_profile_id=cow['execution_profile_id'],eos_tokens=tuple(cow['eos_tokens']),model_pause=model_pause,pause_notice=pause_notice)
             runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,**parallel)
             runtime.preflight(source,{**{name:value.type for name,value in bindings.items()},'world':'World','current':'COWSource'})

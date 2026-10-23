@@ -1,6 +1,6 @@
 """Discover a COW connection and keep its key in private client settings.
 
-This performs one authenticated GET. It creates no model context or workflow.
+This performs authenticated discovery GETs. It creates no model context or workflow.
 Saved coding launches still pin their own connection and execution identities.
 """
 from __future__ import annotations
@@ -127,6 +127,14 @@ def discover(url, key):
     capabilities = value["capabilities"]
     if type(capabilities) is not dict or any(capabilities.get(k) is not True for k in ("text", "inline_grammars")):
         raise ValueError("BranchWrite needs COW text serving and authenticated inline grammars enabled")
+    from .capabilities import observe
+    from .cow_client import HTTPTransport, CowClientError
+    try:
+        observe(HTTPTransport(url,api_key=key,timeout=10),
+                model_contract_id=value['model_contract_id'],
+                execution_profile_id=value['execution_profile_id'],legacy_info=value)
+    except CowClientError as error:
+        raise ValueError('COW capability discovery failed: '+str(error)) from error
     return dict(endpoint_url=url, endpoint_pin="bw-origin-" + hashlib.sha256(url.encode()).hexdigest(),
                 model_contract_id=value["model_contract_id"], execution_profile_id=value["execution_profile_id"], eos_tokens=eos)
 
