@@ -1,5 +1,8 @@
 # BranchWrite: client installation
 
+For one-computer setup, hardware choices, forks and the newer server features,
+start with the [current PCC/BW guide](START-HERE.md).
+
 Setting up both computers yourself? Start with the
 [desktop-and-laptop guide](TWO-COMPUTER-SETUP.md).
 Use this shorter page when your server is already running.
@@ -33,7 +36,8 @@ That is normal. Press Enter when you finish.
 Copy this whole line into Terminal, then press Enter:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/CC-David-CC/BranchWrite/lan-preview-2026-10-21/install.sh -o "$HOME/branchwrite-install.sh" && sh "$HOME/branchwrite-install.sh"
+curl -fsSL https://raw.githubusercontent.com/CC-David-CC/BranchWrite/main/install.sh -o "$HOME/branchwrite-install.sh"
+BW_REF=main sh "$HOME/branchwrite-install.sh"
 ```
 
 Wait for **BranchWrite is installed**. The first installation needs Internet
