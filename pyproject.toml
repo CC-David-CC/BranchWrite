@@ -4,11 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "branchwrite"
-version = "0.1.0.dev74"
+version = "0.1.0.dev75"
 description = "Branch-aware coding client for Context COW"
 requires-python = ">=3.11"
 readme = "README.md"
 dependencies = ["prompt_toolkit==3.0.52", "Pillow==13.0.0", "reportlab==5.0.1", "pypdfium2==5.14.0", "pypdf==6.21.1"]
+
+[project.optional-dependencies]
+skills = ["skills-cubed @ git+https://github.com/CC-David-CC/sss.git@ab03d583efc43e7ececd87d35454e0276e3395bb"]
 
 [project.scripts]
 branchwrite = "branchwrite.__main__:main"

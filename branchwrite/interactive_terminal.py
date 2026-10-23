@@ -53,6 +53,12 @@ class Terminal:
         if command in ('/history','/preview','/edit','/explore','/switch','/continue') and self.service.snapshot.get('status')=='starting':
             self.notify('Opening your saved session. Try this command again in a moment.');return True
         if command in ('/exit','/quit'):return False
+        if command=='/skills':
+            try:
+                from sss.catalog import catalog,format_tree
+                self.notify(format_tree(catalog()))
+            except ModuleNotFoundError:self.notify('Install the optional Skills³ package to browse its skill map.')
+            return True
         if command in ('/lesson','/lessons','/train','/training'):
             import shlex
             from .lesson_cli import main as lessons
@@ -71,7 +77,7 @@ class Terminal:
                 'Enter steers current work; Tab queues one combined next turn; Esc stops.\n'
                 '/plan  /work  /chat  /aside QUESTION  /history WORDS\n'
                 '/edit [NUMBER] NEW REQUEST  /explore [NUMBER] NEW REQUEST  /switch NUMBER\n'
-                '/lesson create|submit ...  /lessons  /train IDS --operation-id NAME  /training NAME\n'
+                '/lesson create|submit ...  /lessons  /skills  /train IDS --operation-id NAME  /training NAME\n'
                 '/preview [PAGE.html|REPORT.pdf|FILE.txt]  /continue  /exit. Alt-Enter adds a line; Ctrl-R searches prompts.\n'
                 'Edit replaces an earlier Work request. Explore keeps these files and uses older context in a separate copy. Switch restores matching files and context.')
         elif command=='/history':

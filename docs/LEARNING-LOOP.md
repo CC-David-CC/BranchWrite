@@ -1,5 +1,18 @@
 # Teach a checked correction
 
+The tree, skill tests and repair curriculum are owned by the separate
+[Skills³ (S³)](https://github.com/CC-David-CC/sss) project. Install the optional
+`skills` extra or install the matching S³ checkout into BW's Python environment.
+BW owns lesson evidence from its real task ledger; S³ owns the test/practice
+policy, and PCC owns native updates, context/model identity and GPU resources.
+
+`/skills` displays the broad S³ map. `/lesson skills` displays the server's
+configured active curriculum. Model proficiency is not inferred from tool
+availability. For guarded training, add `--skill LEAF_ID` when writing a lesson
+and `--skill-guard --batch-size 8 --steps 16` when training. The explicit step
+budget bounds interleaved practice and repair rounds. Status includes per-skill
+results and qualification; no candidate is automatically promoted.
+
 An optional PCC server feature lets you turn a checked correction into a short
 lesson. You choose what to teach. PCC trains a separate candidate; it does not
 silently replace the model answering your existing conversations.
@@ -78,12 +91,13 @@ To reproduce the CPU wiring proof on Linux, build PCC's CPU native trainer, then
 run this from the matching BW checkout:
 
 ```sh
-python tests/lesson_native_cpu.py --pcc-root /path/to/PCC \
+python -m sss_integration.lesson_native_cpu --bw-root /path/to/BW --pcc-root /path/to/PCC \
   --native-executable /path/to/cpu-build/pcc-native-train \
   --workdir /private/new-cpu-proof
 ```
 
-The harness creates its own tiny byte-vocabulary model and real controlled BW
+Run that command from the S³ checkout with its package installed. The harness
+creates its own tiny byte-vocabulary model and real controlled BW
 tasks. It uses an authenticated training-only HTTP fixture, rather than starting
 a production inference server. It refuses an existing output directory, retains
 private evidence, and requires single/batch updates, continuation, reload,

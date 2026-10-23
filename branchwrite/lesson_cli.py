@@ -65,6 +65,17 @@ def _client(args,connection_override=None):
     return connection,CowClient.http(connection['endpoint_url'],api_key=key_for_connection(connection),
         endpoint_pin=connection['endpoint_pin'],journal=OperationJournal(state))
 
+def _submit_training(client,args,identity,ids,*,single=False,steps=None):
+    guarded=args.skill_guard
+    payload=dict(lesson_ids=ids,mode=args.mode,batch_size=args.batch_size if guarded or not single else 1,
+        steps=(args.steps if args.steps is not None else 16) if guarded else (1 if single else steps),
+        learning_rate=args.learning_rate,rank=args.rank,parent_job_id=args.parent_job_id)
+    if guarded:
+        record=client.journal.read(identity)
+        prior=json.loads(client.journal.decode_body(record)) if record is not None and record['path']=='/cow/training/jobs' else None
+        payload['skill_guard']=prior['skill_guard'] if prior is not None and 'skill_guard' in prior else dict(policy_id=client.training_read('skills')['policy_id'])
+    return client.training_submit('jobs',payload,identity)
+
 def main(argv=None,*,output=print,connection_override=None,session_history=None):
     parser=argparse.ArgumentParser(prog='branchwrite lesson',description='Write checked lessons, queue them, and request native training candidates.')
     parser.add_argument('--connection',type=Path);parser.add_argument('--state-dir',type=Path)
@@ -75,13 +86,16 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     prompt=p.add_mutually_exclusive_group(required=True);prompt.add_argument('--prompt-file',type=Path);prompt.add_argument('--prompt')
     completion=p.add_mutually_exclusive_group(required=True);completion.add_argument('--completion-file',type=Path);completion.add_argument('--completion')
     p.add_argument('--title',default='Checked correction');p.add_argument('--rationale',default='Host-selected correction after recorded failing and passing checks.')
-    p.add_argument('--output',type=Path);p.add_argument('--operation-id');p.add_argument('--queue',action='store_true');p.add_argument('--train-now',action='store_true');p.add_argument('--parent-job-id')
+    p.add_argument('--output',type=Path);p.add_argument('--operation-id');p.add_argument('--queue',action='store_true');p.add_argument('--train-now',action='store_true');p.add_argument('--parent-job-id');p.add_argument('--skill',dest='skill_id')
+    p.add_argument('--skill-guard',action='store_true');p.add_argument('--batch-size',type=int,default=8);p.add_argument('--steps',type=int,help='Guarded training step budget; default 16')
     p.add_argument('--learning-rate',type=float,default=.0001);p.add_argument('--rank',type=int,default=4);p.add_argument('--mode',choices=('lora','full'),default='lora')
     p=subs.add_parser('submit',help='Queue one authored lesson; --train-now also requests a single-example update.')
     p.add_argument('file',type=Path);p.add_argument('--operation-id',required=True);p.add_argument('--train-now',action='store_true')
     p.add_argument('--parent-job-id')
+    p.add_argument('--skill-guard',action='store_true');p.add_argument('--batch-size',type=int,default=8);p.add_argument('--steps',type=int,help='Guarded training step budget; default 16')
     p.add_argument('--learning-rate',type=float,default=.0001);p.add_argument('--rank',type=int,default=4);p.add_argument('--mode',choices=('lora','full'),default='lora')
     subs.add_parser('list')
+    subs.add_parser('skills')
     p=subs.add_parser('show');p.add_argument('lesson_id')
     p=subs.add_parser('status');p.add_argument('job_id')
     p=subs.add_parser('train',help='Train an explicit lesson selection now or a frozen selection of queued lessons.')
@@ -89,6 +103,7 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     p.add_argument('--operation-id',required=True);p.add_argument('--mode',choices=('lora','full'),default='lora')
     p.add_argument('--batch-size',type=int,default=4);p.add_argument('--steps',type=int,help='Default: enough mini-batches to cover the selected lessons once.')
     p.add_argument('--learning-rate',type=float,default=.0001);p.add_argument('--rank',type=int,default=4);p.add_argument('--parent-job-id')
+    p.add_argument('--skill-guard',action='store_true')
     args=parser.parse_args(argv)
     from .cow_client import CowClientError
     try:
@@ -110,6 +125,9 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
             failed=args.failed_state or (workflow(args.failed_turn) if args.failed_turn is not None else corrected)
             lesson=create_lesson(failed,corrected,args.prompt_file.read_text() if args.prompt_file else args.prompt,
                 args.completion_file.read_text() if args.completion_file else args.completion,args.title,args.rationale,connection['model_contract_id'])
+            if args.skill_id is not None:
+                if not re.fullmatch(r'[a-z][a-z0-9_.-]{0,95}',args.skill_id):raise ValueError('Invalid skill identifier')
+                lesson['skill_id']=args.skill_id
             if (args.queue or args.train_now) and not args.operation_id:raise ValueError('Use --operation-id NAME when queuing or training a lesson')
             identity=args.operation_id or 'draft-'+uuid.uuid4().hex
             if not re.fullmatch(r'[A-Za-z][A-Za-z0-9_-]{0,119}',identity):raise ValueError('Use a bounded operation name')
@@ -123,14 +141,14 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
             value=dict(lesson_file=str(args.output),submitted=False)
             if args.queue or args.train_now:
                 value['acceptance']=client.training_submit('lessons',dict(lesson=lesson),identity);value['submitted']=True
-                if args.train_now:value['training']=client.training_submit('jobs',dict(lesson_ids=[value['acceptance']['lesson_id']],mode=args.mode,batch_size=1,steps=1,learning_rate=args.learning_rate,rank=args.rank,parent_job_id=args.parent_job_id),identity+'-train')
+                if args.train_now:value['training']=_submit_training(client,args,identity+'-train',[value['acceptance']['lesson_id']],single=True)
         elif args.action=='submit':
             lesson=json.loads(args.file.read_bytes())
             if lesson.get('model_contract_id')!=connection['model_contract_id']:raise ValueError('Lesson does not match the selected connection')
             value=client.training_submit('lessons',dict(lesson=lesson),args.operation_id)
             if args.train_now:
-                value=dict(lesson=value,training=client.training_submit('jobs',dict(lesson_ids=[value['lesson_id']],mode=args.mode,batch_size=1,steps=1,
-                    learning_rate=args.learning_rate,rank=args.rank,parent_job_id=args.parent_job_id),args.operation_id+'-train'))
+                value=dict(lesson=value,training=_submit_training(client,args,args.operation_id+'-train',[value['lesson_id']],single=True))
+        elif args.action=='skills':value=client.training_read('skills')
         elif args.action in ('list','show','status'):
             value=client.training_read('jobs' if args.action=='status' else 'lessons',getattr(args,'job_id',getattr(args,'lesson_id',None)))
         else:
@@ -143,8 +161,7 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
             if not ids:raise ValueError('Select at least one queued lesson')
             if args.batch_size<=0:raise ValueError('Batch size must be positive')
             steps=args.steps if args.steps is not None else frozen['steps'] if frozen else (len(ids)+args.batch_size-1)//args.batch_size
-            value=client.training_submit('jobs',dict(lesson_ids=ids,mode=args.mode,batch_size=args.batch_size,steps=steps,
-                learning_rate=args.learning_rate,rank=args.rank,parent_job_id=args.parent_job_id),args.operation_id)
+            value=_submit_training(client,args,args.operation_id,ids,steps=steps)
         output(json.dumps(value,sort_keys=True));return 0
     except (ValueError,OSError,RuntimeError,CowClientError) as error:
         output('branchwrite lesson: '+ascii(str(error)));return 2

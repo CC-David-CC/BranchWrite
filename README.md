@@ -138,6 +138,14 @@ be submitted again as an unrelated new task after an uncertain reply.
 
 ## Teach a checked correction
 
+The skill tree, evaluation suites and regression-aware curriculum belong to
+**[Skills³ (S³): Skills, Scoring, Stability](https://github.com/CC-David-CC/sss)**.
+BW imports that optional package; its task ledger, tools and grants stay here.
+`branchwrite skills` or `/skills` displays the broad map with unmeasured abilities
+labelled explicitly. `branchwrite lesson skills` inspects a server's active
+training tree. Linux administration is a major branch of the map; the current
+native learning starter covers five arithmetic skills, not a qualified admin agent.
+
 With a PCC server that has opted in to native training, BW can write a short
 lesson after a failed check and verified correction. Train one example now or
 queue lessons for a later batch. Failures and repairs can be in the same task.
@@ -152,6 +160,12 @@ status. The standard `branchwrite lesson` commands also work outside a session.
 BW binds the lesson to existing check records; PCC performs native LoRA or direct
 full-weight training without PyTorch. The original model and live contexts keep
 their pinned identities; each update produces a separate candidate.
+
+With an owner-configured S³ guard, tag a lesson with `--skill SKILL_ID` and add
+`--skill-guard --batch-size 8 --steps 16` to request bounded mixed practice and
+whole-tree regression checks. This is explicit: ordinary single-example jobs do
+not silently acquire a repair-loop budget. S³'s independent tests and curriculum
+are documented in [its integration guide](https://github.com/CC-David-CC/sss/blob/main/docs/INTEGRATION.md).
 
 The CPU test proves this wiring with real updates on a tiny generated model.
 Useful learning, preservation and large-model/hardware qualification need their

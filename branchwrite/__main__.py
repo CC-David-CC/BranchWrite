@@ -46,6 +46,12 @@ def _run_result(action, *, on_result=None):
 
 def main(argv=None):
     if argv is None:argv=sys.argv[1:]
+    if argv and argv[0]=='skills':
+        try:
+            from sss.__main__ import main as skills_main
+        except ModuleNotFoundError:
+            print('Skills³ is an optional package; install skills-cubed from CC-David-CC/sss to browse its skill map.',file=sys.stderr);return 2
+        return skills_main(['tree',*argv[1:]])
     if argv and argv[0]=='lesson':
         from .lesson_cli import main as lesson_main
         return lesson_main(argv[1:])

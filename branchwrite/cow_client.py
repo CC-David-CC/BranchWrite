@@ -1556,7 +1556,7 @@ class CowClient:
             return receipt
 
     def training_read(self,resource,identity=None):
-        if resource not in ('lessons','jobs','operations'):raise ValueError('Unknown training resource')
+        if resource not in ('lessons','jobs','operations','skills'):raise ValueError('Unknown training resource')
         if identity is not None and (type(identity) is not str or not re.fullmatch(r'[A-Za-z0-9_-]{1,128}',identity)):
             raise ValueError('Invalid training resource identity')
         path='/cow/training/'+resource+('' if identity is None else '/'+identity)
