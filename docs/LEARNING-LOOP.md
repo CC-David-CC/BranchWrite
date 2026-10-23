@@ -81,6 +81,14 @@ blind cases improved only from 2/16 to 3/16. It failed the declared quality gate
 The candidate remains unpromoted. These controls support experimentation; a
 reliably improving everyday BW assistant has not been demonstrated.
 
+The independent [S³ project](https://github.com/CC-David-CC/sss) owns the skill
+tree, scoring and mixed replay. The completed five-skill A100 pilot preserved
+earlier correct answers but stayed at 14/40 held-out checks after four rounds,
+16 updates and 128 mixed example slots. No hat qualified. See
+[the full result and limitations](https://github.com/CC-David-CC/sss/blob/main/validation/README.md).
+The separate [paired Wen tool benchmark](https://github.com/CC-David-CC/sss/blob/main/docs/MODEL-COMPARISON.md)
+uses mock files; actual BW task quality still needs real execution evidence.
+
 After evaluation, the server owner can prepare a new PCC model/adapter
 configuration. New BW work can use that connection; saved work keeps its original
 identity. Training alone does not promote a candidate or prove an always

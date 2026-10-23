@@ -50,6 +50,32 @@ For the existing large-model installation steps, see the
 A smaller dense-model path has a separate setup; do not assume you must download
 the largest model to try every hardware route.
 
+### Which model can do the work?
+
+[PCC's model guide](https://github.com/CC-David-CC/Private_Context_COW/blob/main/docs/MODELS-AND-RESULTS.md)
+offers the 111.33 GB Flash Q4 download beside Wen 1.1 (16.24 GB) and original
+Wen 1 (15.94 GB), with their separate installation routes. Download size and
+tokens per second do not tell you whether a model can repair your project.
+
+**[Skills³ (S³): Skills, Scoring, Stability](https://github.com/CC-David-CC/sss)**
+is the independent skill tree and testing project BW imports. Its foundations
+are read, write, edit and verified completion, leading toward tool use, coding
+and Linux administration. [The full guide](https://github.com/CC-David-CC/sss/blob/main/docs/USER-GUIDE.md)
+explains what is implemented and what remains unmeasured.
+
+The [canonical model report](https://github.com/CC-David-CC/sss/blob/main/docs/MODEL-COMPARISON.md)
+keeps historical Flash Q4/Q8 serving measurements separate from the paired
+Wen 1 / 1.1 trial on the same current tool tests. Those first model tests use
+isolated mock files, not actual Linux administration or the BW task runtime.
+BW keeps its own real tool execution and acceptance checks.
+
+Checked corrections can become single lessons or explicit training batches
+through an owner-enabled PCC service. Optional S³ mixed replay checks the other
+active skills while a LoRA hat is made. The completed small mixed-practice pilot
+preserved earlier correct answers but did not improve its held-out score; no
+hat qualified or automatically replaced the running model. Useful learning and
+broad admin competence still need evidence.
+
 ### Install the current main client
 
 On 64-bit Intel/AMD Linux, install the required tools:
