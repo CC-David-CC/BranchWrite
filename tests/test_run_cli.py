@@ -45,22 +45,12 @@ class HttpRunCliTests(unittest.TestCase):
  def test_real_subprocess_model_http_edit_test_finish(self):
   import test_cow_client_flow as fixture
   from collections import defaultdict
-  from hashlib import sha256
   from serve.test_cow_presentation_flow import FlowModel
-  from context_time_travel.real import Checkpoint
   class DiscoveredFlowModel(FlowModel):
    """Same byte/controller fixture, with current discovery's explicit IDs."""
    def __init__(self,*args):
     super().__init__(*args)
     self.profile.update(model_contract_id='a'*64,execution_profile_id='b'*64)
-   def create(self,ids):
-    self.stats['forward_tokens']+=len(ids);self.stats['consumed_tokens']+=len(ids)
-    sid=self.store.create_root(self.profile['model_contract_id'],ids,{'status':'idle'})
-    self.image(sid);return sid
-   def image(self,sid):
-    blob=b'synthetic-native-state:'+sid.encode('ascii');frontier=(0.0,)*300
-    self.cache[sid]=Checkpoint(self.profile['model_contract_id'],self.profile['execution_profile_id'],
-     len(self.history(sid)),blob,frontier,Checkpoint.digest(blob,frontier),sid)
   case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups)
   case.model_factory=DiscoveredFlowModel
   case.connection_info=dict(model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299])
