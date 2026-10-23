@@ -206,7 +206,7 @@ class ClientSetupTests(unittest.TestCase):
         self.assertIn("Connected", completed.stdout)
         self.assertFalse((self.home / "config" / "branchwrite" / "credentials.json").exists())
         self.assertNotIn("example-secret", completed.stdout + completed.stderr)
-        self.assertEqual([r[:2] for r in self.requests], [("GET", "/cow/info")])
+        self.assertEqual([r[:2] for r in self.requests], [("GET", "/cow/info"), ("GET", "/cow/capabilities")])
 
     def test_real_terminal_first_start_connects_and_hides_the_key(self):
         import pty
@@ -243,7 +243,7 @@ class ClientSetupTests(unittest.TestCase):
             self.assertEqual(proc.returncode, 0)
             self.assertNotIn(b"example-secret", transcript)
             self.assertFalse((self.home / "config" / "branchwrite" / "credentials.json").exists())
-            self.assertEqual([r[:2] for r in self.requests], [("GET", "/cow/info")])
+            self.assertEqual([r[:2] for r in self.requests], [("GET", "/cow/info"), ("GET", "/cow/capabilities")])
         finally:
             if proc.poll() is None:
                 proc.terminate()
@@ -264,7 +264,7 @@ class ClientSetupTests(unittest.TestCase):
         start.assert_not_called()
         self.assertIn("Connected", output.getvalue())
         self.assertNotIn("No such file", output.getvalue())
-        self.assertEqual([r[:2] for r in self.requests], [("GET", "/cow/info")])
+        self.assertEqual([r[:2] for r in self.requests], [("GET", "/cow/info"), ("GET", "/cow/capabilities")])
 
 
 if __name__ == "__main__":
