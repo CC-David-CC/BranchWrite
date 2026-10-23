@@ -136,6 +136,28 @@ Wait for the stop/settlement message. Closing BW does not stop PCC.
 Reopening unfinished work uses its saved operation identity; it should not
 be submitted again as an unrelated new task after an uncertain reply.
 
+## Teach a checked correction
+
+With a PCC server that has opted in to native training, BW can write a short
+lesson after a failed check and verified correction. Train one example now or
+queue lessons for a later batch. Failures and repairs can be in the same task.
+
+```text
+/lesson create --prompt "Python double(n):" --completion " 2*n" --operation-id double-lesson --train-now
+```
+
+Use `--queue` for later, `/lessons` to inspect the queue, `/train --pending
+--operation-id batch-1 --batch-size 8` for a batch, and `/training batch-1` for
+status. The standard `branchwrite lesson` commands also work outside a session.
+BW binds the lesson to existing check records; PCC performs native LoRA or direct
+full-weight training without PyTorch. The original model and live contexts keep
+their pinned identities; each update produces a separate candidate.
+
+The CPU test proves this wiring with real updates on a tiny generated model.
+Useful learning, preservation and large-model/hardware qualification need their
+own measurements. Training is disabled on ordinary servers, and a candidate is
+not automatically promoted. [Read the workflow, settings and limits](docs/LEARNING-LOOP.md).
+
 ## Does BW benefit from the DeepInfra-inspired work?
 
 **Yes. The new inventory, placement and checkpoint-transfer features live in

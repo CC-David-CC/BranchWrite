@@ -1540,7 +1540,44 @@ class CowClient:
             raise ReceiptError("receipt snapshot differs from requested snapshot")
         return GenerationReceipt(operation_id, branch, snapshot, dict(value))
 
+    def training_submit(self,kind,payload,operation_id):
+        if kind not in ('lessons','jobs'):raise ValueError('Unknown training operation')
+        operation_id=self._operation_id(operation_id)
+        path='/cow/training/'+kind;body=dict(payload,operation_id=operation_id)
+        try:return self._mutate(operation_id,path,body,stream=False).json_value
+        except OperationIndeterminate:
+            # Reconcile by reading the original acceptance. Never send another
+            # training mutation to resolve a lost response.
+            try:value=self.transport.request('GET','/cow/training/operations/'+operation_id).json_value
+            except CowClientError:raise OperationIndeterminate('Training acceptance is unknown; reuse this operation ID for status reconciliation') from None
+            intent=self._intent(operation_id,'POST',path,body,None,None,None)
+            receipt=self._validate_nonstream(intent,value)
+            self.journal.complete(self.journal.read(operation_id),receipt)
+            return receipt
+
+    def training_read(self,resource,identity=None):
+        if resource not in ('lessons','jobs','operations'):raise ValueError('Unknown training resource')
+        if identity is not None and (type(identity) is not str or not re.fullmatch(r'[A-Za-z0-9_-]{1,128}',identity)):
+            raise ValueError('Invalid training resource identity')
+        path='/cow/training/'+resource+('' if identity is None else '/'+identity)
+        value=self.transport.request('GET',path).json_value
+        if type(value) is not dict or value.get('schema')!=1:raise ReceiptError('Invalid training resource')
+        if resource=='jobs' and (value.get('job_id')!=identity or value.get('promoted') is not False):
+            raise ReceiptError('Training job identity or promotion status is invalid')
+        return value
+
     def _validate_nonstream(self, intent: OperationIntent, value: Any) -> Mapping[str, Any]:
+        if intent.path in ('/cow/training/lessons','/cow/training/jobs'):
+            body=json.loads(intent.body)
+            field='lesson_id' if intent.path.endswith('/lessons') else 'job_id'
+            binding=hashlib.sha256(_canonical([intent.path,body])).hexdigest()
+            if (type(value) is not dict or set(value)!={'schema','operation_id','request_sha256',field}
+                    or type(value['schema']) is not int or value['schema']!=1
+                    or value['operation_id']!=intent.operation_id or value['request_sha256']!=binding):
+                raise ReceiptError('Training acceptance does not bind the original request')
+            expected=hashlib.sha256(_canonical(body['lesson'])).hexdigest() if field=='lesson_id' else intent.operation_id
+            if value[field]!=expected:raise ReceiptError('Training acceptance has a different identity')
+            return dict(value)
         if intent.path == "/cow/grammars":
             body=json.loads(intent.body)
             definitions={key:item for key,item in body.items() if key!="operation_id"}

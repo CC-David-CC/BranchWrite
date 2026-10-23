@@ -46,12 +46,16 @@ def _run_result(action, *, on_result=None):
 
 def main(argv=None):
     if argv is None:argv=sys.argv[1:]
+    if argv and argv[0]=='lesson':
+        from .lesson_cli import main as lesson_main
+        return lesson_main(argv[1:])
     if not argv:
         argv=['session']
     if argv[0] in ('--save-api','--sampler','--cad-config','--blender-config'):
         argv=['session',*argv]
     parser=argparse.ArgumentParser(prog='branchwrite',description='Inspect .bw syntax or execute a host-authorized workflow.')
     commands=parser.add_subparsers(dest='command',required=True)
+    commands.add_parser('lesson',help='Write verified lessons and request single or batched native training.')
     guided=commands.add_parser('start',help='Guide you through one coding task in the current project folder.')
     session=commands.add_parser('session',help='Keep talking while BranchWrite edits this project.')
     session.add_argument('project',type=Path,nargs='?',default=Path.cwd())
