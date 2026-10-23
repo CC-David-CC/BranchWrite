@@ -73,3 +73,27 @@ or two-approach execution. The corrected host grant includes the test files;
 an earlier omitted test-directory projection is retained as setup failure and
 excluded from model training. Temporary serving used 100 GiB RAM and disk limits,
 exited zero and left zero ephemeral sessions.
+
+## Full native two-approach follow-up, 2026-10-23
+
+BW `8b821b0` with COW runtime `10964d0` and Wen 1.1 on llm-60 completed both
+isolated approaches, ran each candidate's actual checks and selected the first
+under `verified-first`. Both candidates reported verified with different
+workspace inventories. The result passed with optional inventory/scheduling/
+fastokens disabled and enabled. Completed replay left COW heads unchanged;
+operation journals had no pending entries. Source files and frozen launch
+configuration remained unchanged. Each owned server exited zero, removed its
+ephemeral sessions and released GPU allocations.
+
+An initial setup retained enabled flags in its disabled control and failed
+before BW work. A second driver used only 128 interpreter steps and correctly
+paused as `step_budget_exhausted`. The successful fresh pair used 512 steps,
+below the CLI default of 1,024, without changing the frozen candidate, request
+or token budgets. These are operational fixture failures, not model-training
+examples or changes to the verification oracle. Full resume execution took
+53.69 and 56.22 seconds; these single observations are not a speed comparison.
+
+Answer-free native receipts are in COW's
+`experimental/branching_context/evidence/STACK-UNIFICATION-FINAL-20261023.json`.
+Cross-host inference federation, adversarial crash/restart campaigns and broad
+autonomous task quality remain separate work.

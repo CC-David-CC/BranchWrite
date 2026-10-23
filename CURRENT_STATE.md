@@ -1,6 +1,6 @@
 # Current BranchWrite state
 
-Updated 2026-10-20 after the Linux LAN preview. Earlier notes are preserved under
+Updated 2026-10-23 after bounded stack integration. Earlier notes are preserved under
 docs/history/CURRENT_STATE-before-lan-preview-20261020.md.
 
 ## Roles
@@ -13,10 +13,31 @@ docs/history/CURRENT_STATE-before-lan-preview-20261020.md.
 - Acceptance harness: launches the actual CLI and independently checks effects.
   Its fixtures are specimens, not the standalone-agent completion definition.
 
-## Current live setup and source
+## Current qualification and remaining product work
 
-The new COW API is http://10.0.7.68:18099 on llm-60. Its owned Python/native
-processes restarted successfully in the LAN smoke. The earlier 8099 service was
+See [STACK-INTEGRATION.md](docs/STACK-INTEGRATION.md) for authenticated COW
+capability admission, bounded Wen/Qwen tool/test/finish runs, pause/resume,
+completed replay and Wen's verified two-approach selection. The final focused
+BW regression selection passed 158 tests. It caught and fixed a completed-replay
+dependency on a live COW server. Optional inventory, scheduling, transfers, GPU
+roles and tokenization remain COW settings; BW keeps one workflow ledger.
+
+The wider standalone-agent workflow still needs current-version qualification
+on unfamiliar repositories and longer tasks, independent acceptance checks that
+cover the requested behavior, combined interruption/reconciliation tests, and
+the complete review/export/apply/retry path through a fresh installation. Many
+components have individual evidence below; a bounded successful coding run does
+not establish general task completion. Writing, browser, CAD and Blender work
+need their own task-level acceptance evidence. Model failures remain separate
+from infrastructure failures and protected test answers.
+
+## Historical LAN preview setup, 2026-10-20
+
+The following setup entries describe the earlier preview, not current running
+services. The 2026-10-23 integration uses separate owned test installations.
+
+The preview COW API was http://10.0.7.68:18099 on llm-60. Its owned Python/native
+processes restarted successfully in that LAN smoke. The earlier 8099 service was
 stopped cleanly; its store and configuration remain intact. Ordinary chat stays
 off. Q4 with FP16 KV is the current development model; Q8 remains deferred.
 
