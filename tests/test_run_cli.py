@@ -46,7 +46,25 @@ class HttpRunCliTests(unittest.TestCase):
   import test_cow_client_flow as fixture
   from collections import defaultdict
   from hashlib import sha256
-  case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups);case.setUp()
+  from serve.test_cow_presentation_flow import FlowModel
+  from context_time_travel.real import Checkpoint
+  class DiscoveredFlowModel(FlowModel):
+   """Same byte/controller fixture, with current discovery's explicit IDs."""
+   def __init__(self,*args):
+    super().__init__(*args)
+    self.profile.update(model_contract_id='a'*64,execution_profile_id='b'*64)
+   def create(self,ids):
+    self.stats['forward_tokens']+=len(ids);self.stats['consumed_tokens']+=len(ids)
+    sid=self.store.create_root(self.profile['model_contract_id'],ids,{'status':'idle'})
+    self.image(sid);return sid
+   def image(self,sid):
+    blob=b'synthetic-native-state:'+sid.encode('ascii');frontier=(0.0,)*300
+    self.cache[sid]=Checkpoint(self.profile['model_contract_id'],self.profile['execution_profile_id'],
+     len(self.history(sid)),blob,frontier,Checkpoint.digest(blob,frontier),sid)
+  case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups)
+  case.model_factory=DiscoveredFlowModel
+  case.connection_info=dict(model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299])
+  case.setUp()
   client=case._client('http','run-cli');namespace=client.create_namespace('CLI model','cli-model-ns')['namespace_id']
   client.load_context('cli-model',namespace,[dict(role='system',content='Choose registered tools.')],'cli-model-root')
   root=Path(case.temp.name);source=root/'source';source.mkdir();(source/'data.txt').write_bytes(b'original\n')
@@ -54,7 +72,7 @@ class HttpRunCliTests(unittest.TestCase):
   decisions=[dict(tool='read_file',arguments=dict(path='data.txt')),dict(tool='replace',arguments=dict(path='data.txt',before='original',after='correct')),dict(tool='run_tests',arguments=dict(suite='unit')),dict(tool='finish',arguments=dict(answer='done'))]
   stream=iter(tuple(json.dumps(x).encode())+(299,) for x in decisions);case.models[0].plans=defaultdict(lambda:next(stream))
   program=root/'work.bw';program.write_text('FLOW job\nTEXT task\n|Change data.txt to correct and run tests.\nEND\nREPEAT attempts max=8 until=verified exhausted=stop\nEXPAND decide from=current task=task profile=control -> proposed\nPLAN p from=proposed against=world -> plan\nACT a plan=plan -> outcome\nTRANSFORM source input=proposed contract=cow-source -> current\nTRANSFORM feedback input=outcome contract=tool-feedback -> task\nVERIFY check input=outcome contract=unit-tests-and-finish -> verified\nEND\nEND\n')
-  cfg=dict(schema=1,source=str(source),run_id='http-cli',grant=dict(edit_paths=['data.txt'],read_paths=['data.txt'],create_paths=[],allow_tests=True),bindings={},profiles=dict(control=dict(request_tokens=1024)),cow=dict(endpoint_url=case.base_url,endpoint_pin='flow-model-free',model_contract_id='flow-model',execution_profile_id='flow-profile',eos_tokens=[299],branch='cli-model',mode='ask'))
+  cfg=dict(schema=1,source=str(source),run_id='http-cli',grant=dict(edit_paths=['data.txt'],read_paths=['data.txt'],create_paths=[],allow_tests=True),bindings={},profiles=dict(control=dict(request_tokens=1024)),cow=dict(endpoint_url=case.base_url,endpoint_pin='flow-model-free',model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299],branch='cli-model',mode='ask'))
   config=root/'host.json';config.write_text(json.dumps(cfg));state=root/'run'
   command=[sys.executable,'-B','-m','branchwrite','run',str(program),'--config',str(config),'--state',str(state)]
   result=subprocess.run(command,capture_output=True,text=True,env={**os.environ,'BW_COW_API_KEY':'cpu-flow-secret'},timeout=20)

@@ -36,7 +36,7 @@ class CowClientFlowTests(unittest.TestCase):
                             disk_bytes=8 * 1024 * 1024, min_available_bytes=0)
 
         def factory(gpu):
-            model = FlowModel(self.temp.name, gpu, (0,), self.trace, gate)
+            model = getattr(self,'model_factory',FlowModel)(self.temp.name, gpu, (0,), self.trace, gate)
             self.models[gpu] = model
             return model
 
@@ -55,7 +55,8 @@ class CowClientFlowTests(unittest.TestCase):
             root_mode_resolver=self.text.root_mode_for_projection)
         self.server = make_server(
             cow_adapter, host="127.0.0.1", port=0, api_key="cpu-flow-secret",
-            text_adapter=self.text, workspace=workspace)
+            text_adapter=self.text, workspace=workspace,
+            connection_info=getattr(self,'connection_info',None))
         self.addCleanup(self.server.server_close)
         self.server_thread = threading.Thread(target=self.server.serve_forever, daemon=True)
         self.server_thread.start()
