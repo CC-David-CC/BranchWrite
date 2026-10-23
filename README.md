@@ -143,7 +143,7 @@ lesson after a failed check and verified correction. Train one example now or
 queue lessons for a later batch. Failures and repairs can be in the same task.
 
 ```text
-/lesson create --prompt "Python double(n):" --completion " 2*n" --operation-id double-lesson --train-now
+/lesson create --prompt "def double(n): return" --completion " 2*n" --operation-id double-lesson --train-now
 ```
 
 Use `--queue` for later, `/lessons` to inspect the queue, `/train --pending
@@ -157,6 +157,11 @@ The CPU test proves this wiring with real updates on a tiny generated model.
 Useful learning, preservation and large-model/hardware qualification need their
 own measurements. Training is disabled on ordinary servers, and a candidate is
 not automatically promoted. [Read the workflow, settings and limits](docs/LEARNING-LOOP.md).
+
+The first 1,000-variation Wen study learned its selection pattern (2/48 to
+48/48), but lost five of sixteen unrelated checks and reached only 3/16 on
+differently worded blind cases. No candidate qualified. This preview demonstrates
+the learning controls, without establishing a reliably improving everyday model.
 
 ## Does BW benefit from the DeepInfra-inspired work?
 

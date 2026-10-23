@@ -7,7 +7,7 @@ silently replace the model answering your existing conversations.
 After BW has failed a check, been corrected and passed verification, use:
 
 ```text
-/lesson create --prompt "Python double(n):" --completion " 2*n" --title "Use multiplication" --operation-id double-lesson --train-now
+/lesson create --prompt "def double(n): return" --completion " 2*n" --title "Use multiplication" --operation-id double-lesson --train-now
 ```
 
 This uses the latest Work task. It can include both the failed and passing checks
@@ -61,6 +61,12 @@ including batching, saved-candidate continuation, reload and duplicate-request
 handling. Its tiny generated model is not a language-quality result. The separate
 Wen study uses checked variations, unseen evaluations and unrelated preservation
 cases. Only those measurements can establish whether a candidate is useful.
+
+The completed 1,000-variation Wen study improved its selection cases from 2/48 to
+48/48, but unrelated controls dropped from 16/16 to 11/16 and differently worded
+blind cases improved only from 2/16 to 3/16. It failed the declared quality gate.
+The candidate remains unpromoted. These controls support experimentation; a
+reliably improving everyday BW assistant has not been demonstrated.
 
 After evaluation, the server owner can prepare a new PCC model/adapter
 configuration. New BW work can use that connection; saved work keeps its original
