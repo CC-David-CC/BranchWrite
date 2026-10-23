@@ -71,6 +71,7 @@ class HttpRunCliTests(unittest.TestCase):
   # Closing the HTTP listener proves a completed CLI restart reads locally.
   # No new head lookup/rebase or model call is allowed.
   case._stop_server()
+  case.server.server_close()
   again=subprocess.run(command,capture_output=True,text=True,env={**os.environ,'BW_COW_API_KEY':'cpu-flow-secret'},timeout=20)
   self.assertEqual(again.returncode,0,again.stderr);self.assertEqual(json.loads(again.stdout),json.loads(result.stdout));self.assertEqual(case.trace,before)
   self.assertNotIn(b'cpu-flow-secret',b''.join(q.read_bytes() for q in state.rglob('*') if q.is_file()))
