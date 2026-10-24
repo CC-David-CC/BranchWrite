@@ -3,7 +3,13 @@
 [Compare BW, OpenCode, Codex and pi](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/HARNESS-COMPARISON.md)
 with S³'s four-condition study contract. The offline comparison machinery is
 tested; live adapters and cross-harness results remain to be qualified. BW
-retains its own workflow and tool authority.
+retains its own workflow and tool authority. The
+[real-client CPU guide](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/REAL-HARNESS-SETUP.md)
+now verifies file/tool loops in pinned Codex/OpenCode/pi clients with mock replies.
+Actual Wen comparisons remain pending.
+[Joint learning and harness hill-climbing](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/JOINT-LEARNING-LOOP.md)
+keeps separate per-harness improvements and mixed-review training measurable;
+the full live coupled cycle remains to be established.
 Development checkpoint: [foundations and workflow validation](validation/foundations-20261023/README.md). Live-model qualification remains pending.
 
 
