@@ -1,5 +1,8 @@
 # BranchWrite (BW)
 
+[What we are discovering](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/FINDINGS.md): readable findings about context
+cost, tool differences, training, forgetting and practical next steps.
+
 [Compare BW, OpenCode, Codex and pi](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/HARNESS-COMPARISON.md)
 with S³'s four-condition study contract. The offline comparison machinery is
 tested; live adapters and cross-harness results remain to be qualified. BW
