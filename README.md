@@ -307,3 +307,8 @@ passed three Python tasks and failed two shell tasks. Same-weight peer successes
 make the shell workflows the next harness investigation. Evidence includes saved
 artifact checks and explicit budget differences; this is not a general ranking
 or a MiniCPM training result.
+
+[Why the shell tasks failed](docs/MINICPM-SHELL-INVESTIGATION.md): clearer tool
+contracts/feedback improved the five-objective screen to five correct saved
+artifacts and four completed tasks. One regressing prompt variant was rejected;
+verification/termination on the remaining task is unresolved. No weights changed.

@@ -79,13 +79,62 @@ class OutputFeedbackTests(unittest.TestCase):
   self.assertIn("\\xff",view['command'])
   self.assertEqual(view['exit_code'],23);self.assert_raw('stdout',body,view)
 
+class ShellContractRecoveryTests(unittest.TestCase):
+ def test_readonly_shell_error_with_zero_status_then_granted_edit_and_sh(self):
+  # Exercise the real namespace, file tools, ledger and model-feedback transform.
+  # No language-model answers or protected evaluation task are embedded here.
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);source=root/'source';source.mkdir()
+   original=b'#!/bin/sh\nexit 7\n';(source/'plain.sh').write_bytes(original)
+   (source/'plain.sh').chmod(0o644)
+   executor=Executor.create(source,root/'world',shell=ShellConfig(timeout=3,expected_hostname=os.uname().nodename))
+   registry=ToolRegistry(executor,Grant(('plain.sh',),False,read_paths=('plain.sh',),allow_shell=True))
+   proposals={
+    'read':dict(tool='read_file',arguments=dict(path='plain.sh')),
+    'bad':dict(tool='run_shell',arguments=dict(command="printf changed > plain.sh; echo last-command-succeeded")),
+    'edit':dict(tool='replace',arguments=dict(path='plain.sh',before='exit 7',after='exit 0')),
+    'check':dict(tool='run_shell',arguments=dict(command='sh plain.sh')),
+   }
+   lines=['FLOW recovery']
+   for name in proposals:
+    lines.extend(['PLAN p-'+name+' from='+name+' against=world -> plan-'+name,
+     'ACT a-'+name+' plan=plan-'+name+' -> outcome-'+name,
+     'TRANSFORM f-'+name+' contract=tool-feedback input=outcome-'+name+' -> view-'+name])
+   lines.append('END')
+   with RuntimeLog(root/'ledger') as log:
+    runtime=Interpreter(FrameKernel(log),registry)
+    runtime.start('\n'.join(lines)+'\n',{name:Value('ToolProposal',json.dumps(value)) for name,value in proposals.items()})
+    result=runtime.run();self.assertEqual(result.status,'complete')
+    values=result.value['bindings'];failed=json.loads(values['view-bad'][1]);passed=json.loads(values['view-check'][1])
+    self.assertEqual(failed['exit_code'],0) # The trailing echo really masks it.
+    self.assertIn('Read-only file system',failed['stderr'])
+    self.assertIn('diagnostic_guidance',failed);self.assertNotIn('problem',failed)
+    self.assertIn('not a task verdict',failed['diagnostic_guidance']['basis'])
+    self.assertEqual(passed['exit_code'],0);self.assertEqual(passed['stderr'],'')
+    self.assertNotIn('diagnostic_guidance',passed)
+    self.assertIn('project-relative',passed['shell_context']['working_directory'])
+    self.assertEqual((executor.workspace/'plain.sh').read_bytes(),b'#!/bin/sh\nexit 0\n')
+    self.assertEqual((source/'plain.sh').read_bytes(),original)
+    self.assertEqual((executor.workspace/'plain.sh').stat().st_mode&0o777,0o644)
+    # Preserve original error bytes, not a rewritten explanation of the status.
+    ref=Artifact(*values['outcome-bad'][1]['stderr'])
+    self.assertEqual(log.read_artifact(ref).decode(),failed['stderr'])
+
 class OutputFeedbackHttpTests(unittest.TestCase):
  def test_actual_remote_model_history_receives_safe_view_and_exact_raw_identities(self):
   # Actual CLI/HTTP/tools with explicitly scripted CPU model choices, not GPU.
   import test_cow_client_flow as fixture
   from collections import defaultdict
   from branchwrite.coding_defaults import workflow_source
-  case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups);case.setUp()
+  from serve.test_cow_presentation_flow import FlowModel
+  class DiscoveredFlowModel(FlowModel):
+   def __init__(self,*args):
+    super().__init__(*args)
+    self.profile.update(model_contract_id='a'*64,execution_profile_id='b'*64)
+  case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups)
+  case.model_factory=DiscoveredFlowModel
+  case.connection_info=dict(model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299])
+  case.setUp()
   root=Path(case.temp.name);source=root/'source';source.mkdir();(source/'keep.txt').write_bytes(b'unchanged\n')
   command=shlex.join(['/usr/bin/python3','-I','-B','-c',"import os;os.write(1,b'out\\xff');os.write(2,b'err\\xfe');raise SystemExit(7)"])
   actions=[dict(tool='run_shell',arguments=dict(command=command)),dict(tool='read_file',arguments=dict(path='keep.txt')),dict(tool='finish',arguments=dict(answer='actual nonzero probe observed'))]
@@ -94,7 +143,7 @@ class OutputFeedbackHttpTests(unittest.TestCase):
   cfg=dict(schema=1,source=str(source),run_id='binary-feedback',grant=dict(edit_paths=[],read_paths=['keep.txt'],create_paths=[],allow_tests=False,allow_shell=True),shell=dict(timeout=3,expected_hostname=os.uname().nodename),
    profiles=dict(control=dict(output_format='text',settings=dict(temperature=0),request_tokens=1024)),bindings=dict(task=dict(type='Text',value='Run the binary stream probe, read keep.txt and finish.')),
    verification=dict(schema=1,files=[dict(path='keep.txt',sha256=hashlib.sha256(b'unchanged\n').hexdigest())]),
-   cow=dict(endpoint_url=case.base_url,endpoint_pin='flow-model-free',model_contract_id='flow-model',execution_profile_id='flow-profile',eos_tokens=[299],branch='binary-feedback',mode='ask',bootstrap='coding'))
+   cow=dict(endpoint_url=case.base_url,endpoint_pin='flow-model-free',model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299],branch='binary-feedback',mode='ask',bootstrap='coding'))
   config=root/'host.json';config.write_text(json.dumps(cfg));program=root/'job.bw';program.write_text(workflow_source().replace('contract=unit-tests-and-finish','contract=file-readback-and-finish'))
   cmd=[sys.executable,'-B','-m','branchwrite','run',str(program),'--config',str(config),'--state',str(root/'run')]
   done=subprocess.run(cmd,capture_output=True,env={**os.environ,'BW_COW_API_KEY':'cpu-flow-secret'},timeout=20)

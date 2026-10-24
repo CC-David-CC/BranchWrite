@@ -527,6 +527,10 @@ class Interpreter:
                     # Keep it beside its status so the model need not reconstruct
                     # quoting from an earlier proposal. This grants no new work.
                     feedback['command']=data['details']['argv'][-1]
+                    feedback['shell_context']=dict(working_directory='prepared project root; use project-relative paths',
+                        source_writes='use granted file-edit tools; shell can publish only explicitly granted output paths',
+                        script_execution='use sh script.sh with its arguments for a readable script without execute permission')
+                    feedback['shell_context']['completion']=('Exploration only; run_shell does not register a completion check. Use run_check with a stable name and an actual assertion when granted.' if data['tool']=='run_shell' else 'Named completion check: return zero when the tested requirement holds, including assertions about expected nonzero subprocess statuses.')
                 if data['tool'] in ('remote_command','check_remote','upload_file'):
                     feedback['command']=data['details'].get('command')
                     feedback['target']=data['details'].get('target')
@@ -544,6 +548,18 @@ class Interpreter:
                     feedback[field+'_truncated']=len(raw)>len(shown)
                     feedback[field+'_artifact']=dict(sha256=data[field][0],bytes=data[field][1])
                     feedback[field+'_display']=dict(encoding='utf-8',errors='replace',lossy=lossy,source_bytes=len(shown))
+                if data['tool'] in ('run_shell','run_check'):
+                    # Observed stderr can explain a failed subcommand even when
+                    # a later echo makes Bash return zero. Keep the real status
+                    # and raw artifacts; this hint never certifies a failure.
+                    messages=[]
+                    if 'read-only file system' in feedback['stderr'].lower():
+                        messages.append('stderr mentions a read-only filesystem. If a source edit was attempted, use the granted file-edit tools; shell writes do not change protected source files.')
+                    if 'permission denied' in feedback['stderr'].lower():
+                        messages.append('stderr mentions permission denied. If a readable shell script lacks execute permission, test it with sh script.sh and its arguments; do not assume chmod is granted.')
+                    if messages:
+                        feedback['diagnostic_guidance']=dict(basis='observed stderr text; not a task verdict',messages=messages,
+                            verification='A later echo can hide a failed subcommand in exit_code. Use explicit assertions or preserve the failing status in a named check.')
                 # Only project trusted, bounded stage names. Do not dump arbitrary
                 # details (runtime paths, environment or credentials) into prompts.
                 # These hints never replace raw output or host verification.

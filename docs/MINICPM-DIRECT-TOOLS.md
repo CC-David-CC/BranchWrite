@@ -52,3 +52,11 @@ Investigate BW's tool contracts, errors, verification and stopping behavior befo
 labelling these model-training failures. The cause is not yet established. Any
 fix must preserve the successful Python workflows and independent task checks.
 No MiniCPM weight update or accepted learning candidate is part of this screen.
+
+## Shell investigation follow-up
+
+[Trace, changes and rejected variants](MINICPM-SHELL-INVESTIGATION.md) explain
+why the original shell runs failed. Narrower tool-card/feedback changes produce
+five correct saved artifacts and four completed passes out of five objectives,
+with unchanged weights. The failure-status workflow still does not finish.
+This development branch is not a broadly accepted repair.

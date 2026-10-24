@@ -245,6 +245,16 @@ class ToolRegistry:
                     rule=dict(type='array',minItems=1,maxItems=16,items=dict(oneOf=variants_actions))
                 else:rule=dict(type='string',minLength=1 if kind=='nonempty' else 0,maxLength=MAX_TEXT_BYTES)
                 if kind=='shell':
+                    if name=='run_shell':
+                        rule['description']+='; Exploration only: this does not register a completion check. Use run_check for final verification when granted.'
+                    elif name=='run_check':
+                        rule['description']+='; Registers a named completion check. Its command must return zero when the assertion is satisfied; assert expected negative-case statuses instead of returning them as check failures.'
+                    rule['description']+=(
+                        '; The working directory is already the prepared project root: use project-relative paths, not guessed /project or host paths.'
+                        ' Edit source through granted file tools, not sed -i, chmod or shell redirection.'
+                        ' To test a readable shell script without execute permission, invoke sh script.sh with its arguments.'
+                        ' Keep each command short and focused; wait for its result before choosing the next action.'
+                    )
                     rule['description']+=(
                         '; Host enforces '+format(self.executor._shell.timeout,'g')+' seconds deadline and retires the invocation before returning.'
                         ' Each call has a new PID namespace; later calls cannot inspect earlier sandbox PIDs.'

@@ -1,0 +1,594 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-24",
+  "kind": "same_weight_bw_shell_investigation",
+  "model_sha256": "0ffba3682a853295566b98bc38c0ab755d6b2d91b994bc031ed727a08cfcdf25",
+  "pcc_source_commit": "fee0c5c513518a80e811ce7bc757d1bf2e52aa70",
+  "variants": [
+    {
+      "variant": "A",
+      "bw_source_base": "faf90a07a98caa80f8c554663331bce2df8a4f55",
+      "source_patch_sha256": null,
+      "instructions": "compact-v2",
+      "results": [
+        {
+          "case_id": "python.sum_empty",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 6,
+          "pending_model_requests": 0,
+          "output_tokens": 264,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "7088e7b577b59a44711281688d44cd0a12f0ef11335a6e4806814c7c88e204c0",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "3251dbf18617cd67c47707cb9bd1611dbac212ff0ee9814a75b8ce1f34b85aad"
+          },
+          "ledger_sha256": "052414097584afe18777118a397850d2b0ffa241d65fa5ff9fd7039787e2f55e",
+          "tool_calls": {
+            "read_file": 2,
+            "run_shell": 1,
+            "replace": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "python.binary_search",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 6,
+          "pending_model_requests": 0,
+          "output_tokens": 484,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "e86f880a9cf27ef56692ece3bd34371c7d9850d6033b1c4ef0e3f0593b27af78",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "9060b376393f10d420c5cbe4f5c8cd48cddc440f61eabc393a1406e5c7d29d9b"
+          },
+          "ledger_sha256": "2cb739c2934591d98a03d726603757378bed93d48d3312d3b566bd7e59fc1874",
+          "tool_calls": {
+            "read_file": 2,
+            "replace": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "python.stable_unique",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 8,
+          "pending_model_requests": 0,
+          "output_tokens": 462,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "9d673a8b627f117d10574ae4c3c7261a26bef89df648897873cdba5549b19b37",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "4abb93e97afc7dd1399ee0c7cc56216aa37c20133854cf30714bf60636d18a3b"
+          },
+          "ledger_sha256": "cfcccc28b675f4befd338d7297c07a71099a73d3f39e2d3f4a7e08d2e71e9ac8",
+          "tool_calls": {
+            "read_file": 1,
+            "replace": 1,
+            "run_check": 5,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "shell.quoted_filename",
+          "artifact_passed": false,
+          "host_policy_verified": false,
+          "runtime_status": "supervisor_exit_124",
+          "model_requests": 12,
+          "pending_model_requests": 1,
+          "output_tokens": 5135,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "50d06cde8af1d222cd58bc0c903df2c7ba0e7254b56cc7385da282e0728b1fff",
+          "input_preserved": true,
+          "completed_independent_pass": false,
+          "saved_source_sha256": {
+            "copy.sh": "69250eaaf9fec97415cc6fd5e118292e0ffc111252d117ae59695545d63a5011"
+          },
+          "ledger_sha256": "95ab1469a4866b5059ab0bb51ee6a4a0ecbb4fe264d53970335b20584d4653eb",
+          "tool_calls": {
+            "read_file": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "shell.failure_status",
+          "artifact_passed": false,
+          "host_policy_verified": false,
+          "runtime_status": "step_budget_exhausted",
+          "model_requests": 13,
+          "pending_model_requests": 0,
+          "output_tokens": 1760,
+          "within_external_model_request_cap": false,
+          "checker_evidence_sha256": "7b13223aef68a93b47237be55654830b5c16cae6843539e73d4bbc4ab0f75951",
+          "input_preserved": true,
+          "completed_independent_pass": false,
+          "saved_source_sha256": {
+            "check.sh": "8baa0f87bc9a3efc315d08e3584e765bed808a77bd8055efa2488d961c9a1dfd"
+          },
+          "ledger_sha256": "7e78d5afac00d970e092f9894ba217c67b4c06ed2073582f9d041ea253b3c2a6",
+          "tool_calls": {
+            "read_file": 2,
+            "run_shell": 10
+          },
+          "readonly_stderr_calls": 4,
+          "permission_stderr_calls": 5,
+          "diagnostic_calls_with_final_exit_zero": 4
+        }
+      ],
+      "independent_artifact_passes": 3,
+      "completed_independent_passes": 3
+    },
+    {
+      "variant": "B",
+      "bw_source_base": "9e62414470b50a852cbaee5cce34dad1e843650f",
+      "source_patch_sha256": "a68b461a1a3e76259faf9d9ecf041b5e72185a0ce0f49bf8d87760769e7d041d",
+      "instructions": "compact-v3",
+      "results": [
+        {
+          "case_id": "python.sum_empty",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 6,
+          "pending_model_requests": 0,
+          "output_tokens": 312,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "b0c58031813c85dc977bd249a5dc8889847262a1143824c08949c55981782c54",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "3251dbf18617cd67c47707cb9bd1611dbac212ff0ee9814a75b8ce1f34b85aad"
+          },
+          "ledger_sha256": "66618a0cd12b423b7ac29186e262471c3a6bbc2773620a99a8a35fc15123e880",
+          "tool_calls": {
+            "read_file": 1,
+            "replace": 1,
+            "run_shell": 1,
+            "finish": 2,
+            "run_check": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "python.binary_search",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 7,
+          "pending_model_requests": 0,
+          "output_tokens": 531,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "6d0493a8ac76ecdef272831fb77960816b282eb0c46c022b6c7fcb03c90ae7fb",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "dacd02dbdfbdb71195e97e97cd9592bc02b21c444d455c544e86530a9dd64e8a"
+          },
+          "ledger_sha256": "ece20b5f92d0c32ce009488bb4e81c44c891ccf275b971035d782187628dc582",
+          "tool_calls": {
+            "read_file": 2,
+            "replace_text_file": 1,
+            "run_shell": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "python.stable_unique",
+          "artifact_passed": false,
+          "host_policy_verified": false,
+          "runtime_status": "step_budget_exhausted",
+          "model_requests": 13,
+          "pending_model_requests": 0,
+          "output_tokens": 578,
+          "within_external_model_request_cap": false,
+          "checker_evidence_sha256": "65b25466ec59bf75d403959f92c636d9ebc12fa613e6a577ad6b1dd09ee1fc82",
+          "input_preserved": true,
+          "completed_independent_pass": false,
+          "saved_source_sha256": {
+            "task.py": "3df43b4bfecee33ac8291f15368bc6ab4c576c45cf7697f812520fd325454930"
+          },
+          "ledger_sha256": "c98a0d004bb83bb133cc5bfdf09be9973b447fed62baf0cd14494d7527ab71f7",
+          "tool_calls": {
+            "read_file": 6,
+            "replace_text_file": 5
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "shell.quoted_filename",
+          "artifact_passed": false,
+          "host_policy_verified": false,
+          "runtime_status": "step_budget_exhausted",
+          "model_requests": 13,
+          "pending_model_requests": 0,
+          "output_tokens": 603,
+          "within_external_model_request_cap": false,
+          "checker_evidence_sha256": "27c4206efc1a088128c213a8aeb9a3061ed3b0adf170ffca60b3b79b9a4e2abc",
+          "input_preserved": true,
+          "completed_independent_pass": false,
+          "saved_source_sha256": {
+            "copy.sh": "69250eaaf9fec97415cc6fd5e118292e0ffc111252d117ae59695545d63a5011"
+          },
+          "ledger_sha256": "ddbaa3cceb7c2316bd8a8369bb7a2cf3a12513cf9b50c6dd4731a388642955c4",
+          "tool_calls": {
+            "read_file": 2,
+            "run_shell": 10
+          },
+          "readonly_stderr_calls": 7,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "shell.failure_status",
+          "artifact_passed": false,
+          "host_policy_verified": false,
+          "runtime_status": "step_budget_exhausted",
+          "model_requests": 13,
+          "pending_model_requests": 0,
+          "output_tokens": 412,
+          "within_external_model_request_cap": false,
+          "checker_evidence_sha256": "d6f75a9aecd46281e46b923591fb97104a4f6b6c12146e4842bb6054d027a695",
+          "input_preserved": true,
+          "completed_independent_pass": false,
+          "saved_source_sha256": {
+            "check.sh": "8baa0f87bc9a3efc315d08e3584e765bed808a77bd8055efa2488d961c9a1dfd"
+          },
+          "ledger_sha256": "c96284cf9749029fd90815ff6a7277184da1fca522ea970de47d0a59ab60eed3",
+          "tool_calls": {
+            "read_file": 2,
+            "run_shell": 10
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        }
+      ],
+      "independent_artifact_passes": 2,
+      "completed_independent_passes": 2
+    },
+    {
+      "variant": "C",
+      "bw_source_base": "9e62414470b50a852cbaee5cce34dad1e843650f",
+      "source_patch_sha256": "f956d60e7ee7091b3a73347a7f53dc95026a7306a70db028d43e9d5b2abfeb6c",
+      "instructions": "compact-v2 with explicit shell tool contract and observed-diagnostic guidance",
+      "results": [
+        {
+          "case_id": "python.sum_empty",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 5,
+          "pending_model_requests": 0,
+          "output_tokens": 255,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "8af720b3af21f28f473112d64c21ff31f7d6a0bbd42ea7935e7813af2ec9854a",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "3251dbf18617cd67c47707cb9bd1611dbac212ff0ee9814a75b8ce1f34b85aad"
+          },
+          "ledger_sha256": "9d319fd2d3a7b36dac0dfd38b49b58c1c193fd9da1d155c9d23b60dcaee002cb",
+          "tool_calls": {
+            "read_file": 2,
+            "replace": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "python.binary_search",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 7,
+          "pending_model_requests": 0,
+          "output_tokens": 544,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "998dededf7d8b5ba00984116dda5c346d196a81e45e07f8e8e069c456a0238ac",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "a40ea2dd68ee7739d4736ffae76c1dc6a852de498d59ce8f5f438f38423c0a29"
+          },
+          "ledger_sha256": "d658a8d127055d3d852fec11f4e3e807f0c702e9cd241afccf44e718ab22176c",
+          "tool_calls": {
+            "read_file": 2,
+            "replace": 1,
+            "run_shell": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "python.stable_unique",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 4,
+          "pending_model_requests": 0,
+          "output_tokens": 277,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "b14e7fff151748544604a2899ed86a412294ee361793db139c0be928931e30bc",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "4abb93e97afc7dd1399ee0c7cc56216aa37c20133854cf30714bf60636d18a3b"
+          },
+          "ledger_sha256": "84b87037d16a7f77e8149126cb218ebf4724fca3ea1b1bc5e7121231078ebee5",
+          "tool_calls": {
+            "read_file": 1,
+            "replace": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "shell.quoted_filename",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 10,
+          "pending_model_requests": 0,
+          "output_tokens": 455,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "6c9f860e835ca075c8e7565a7ca68b397343a762e2742efbdf371413168cf352",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "copy.sh": "85117b3730b305baa607dc885b8b4364f7ee3154c43fe16ce163ed5d4a6ca701"
+          },
+          "ledger_sha256": "a6ddcfaeb35fa34dd14ac72a04554e4ffb4181c70f4d9e4c3727f1b3b4a2c490",
+          "tool_calls": {
+            "read_file": 3,
+            "run_shell": 1,
+            "replace": 1,
+            "run_check": 4,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "shell.failure_status",
+          "artifact_passed": true,
+          "host_policy_verified": false,
+          "runtime_status": "step_budget_exhausted",
+          "model_requests": 13,
+          "pending_model_requests": 0,
+          "output_tokens": 445,
+          "within_external_model_request_cap": false,
+          "checker_evidence_sha256": "25714269a6632b37242c68319562b7d469237bc67833811e177e95e2a13ed22c",
+          "input_preserved": true,
+          "completed_independent_pass": false,
+          "saved_source_sha256": {
+            "check.sh": "2cf9e926231da150c8bc821fdd220857d7f7852488a59d27a5047bcff5e0d12d"
+          },
+          "ledger_sha256": "72e55efd0f6ff194056e8a6939e2c700f191d11c5e31cab5d2c13d26bd80019e",
+          "tool_calls": {
+            "read_file": 3,
+            "replace": 1,
+            "run_shell": 8
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        }
+      ],
+      "independent_artifact_passes": 5,
+      "completed_independent_passes": 4
+    },
+    {
+      "variant": "D",
+      "bw_source_base": "9e62414470b50a852cbaee5cce34dad1e843650f",
+      "source_patch_sha256": "f3bad04c7e446c05aa38d454d77e104f978974e91e4a45d3b52fbc2ffe13facb",
+      "instructions": "compact-v2 with explicit shell, completion-check and observed-diagnostic contracts",
+      "results": [
+        {
+          "case_id": "python.sum_empty",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 5,
+          "pending_model_requests": 0,
+          "output_tokens": 252,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "2199a56b239a05aefcd3ee2142d62a08c6bacdffb0c4f3ce1df4d6202075be87",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "3251dbf18617cd67c47707cb9bd1611dbac212ff0ee9814a75b8ce1f34b85aad"
+          },
+          "ledger_sha256": "2e06e64026b5c7dd255421023865ff8dfcb7401044ada83972e357640defd3d4",
+          "tool_calls": {
+            "read_file": 2,
+            "replace": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "python.binary_search",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 6,
+          "pending_model_requests": 0,
+          "output_tokens": 538,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "654e860253b66454aea2f18ff2d2e0306c1131bde5c33c973e159cf50a9e9c64",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "a40ea2dd68ee7739d4736ffae76c1dc6a852de498d59ce8f5f438f38423c0a29"
+          },
+          "ledger_sha256": "a4a1528e0e55e6e401faea80f0a9d4fcfea59339d6605ec43d728366832a060f",
+          "tool_calls": {
+            "read_file": 2,
+            "replace": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "python.stable_unique",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 4,
+          "pending_model_requests": 0,
+          "output_tokens": 374,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "a27df9fb0709d4e1518c34662108244ab61950d2acb00bf7b16c7024dc0052a4",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "task.py": "4abb93e97afc7dd1399ee0c7cc56216aa37c20133854cf30714bf60636d18a3b"
+          },
+          "ledger_sha256": "a7cecbe7d24c5204c474e63bcd58aa5d14c714d87540414391fc2adf846efd79",
+          "tool_calls": {
+            "read_file": 1,
+            "replace": 1,
+            "run_check": 1,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "shell.quoted_filename",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 10,
+          "pending_model_requests": 0,
+          "output_tokens": 455,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "7a5200e5a08dcc03cedc62077a330e025f9189886899f4c9c30e13d3f7907e27",
+          "input_preserved": true,
+          "completed_independent_pass": true,
+          "saved_source_sha256": {
+            "copy.sh": "85117b3730b305baa607dc885b8b4364f7ee3154c43fe16ce163ed5d4a6ca701"
+          },
+          "ledger_sha256": "0390b08637c827c1c23bad1a9234031056137cd1c68c7c66b035c0ec8a249608",
+          "tool_calls": {
+            "read_file": 3,
+            "run_shell": 1,
+            "replace": 1,
+            "run_check": 4,
+            "finish": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        },
+        {
+          "case_id": "shell.failure_status",
+          "artifact_passed": true,
+          "host_policy_verified": false,
+          "runtime_status": "supervisor_exit_124",
+          "model_requests": 19,
+          "pending_model_requests": 1,
+          "output_tokens": 3961,
+          "within_external_model_request_cap": false,
+          "checker_evidence_sha256": "c0e055b5a6118f6b23ca5297eb623c7d4b53014c0c2dfad944536e1d3bfbfc41",
+          "input_preserved": true,
+          "completed_independent_pass": false,
+          "saved_source_sha256": {
+            "check.sh": "2cf9e926231da150c8bc821fdd220857d7f7852488a59d27a5047bcff5e0d12d"
+          },
+          "ledger_sha256": "302d7570caaa33b8ac8a5c5bfcc8dcc2df450c25662be1f980d7b50e3646a898",
+          "tool_calls": {
+            "read_file": 3,
+            "run_shell": 7,
+            "replace": 1
+          },
+          "readonly_stderr_calls": 0,
+          "permission_stderr_calls": 0,
+          "diagnostic_calls_with_final_exit_zero": 0
+        }
+      ],
+      "independent_artifact_passes": 5,
+      "completed_independent_passes": 4
+    }
+  ],
+  "mechanics_tests": {
+    "unique_tests": 45,
+    "status": "PASS",
+    "stderr_sha256": "c74283458dfced89c97ac251189a4424783c6113d963d6a5115e599ef0932e53"
+  },
+  "bounds": {
+    "context": 65536,
+    "thinking": "off",
+    "output_tokens_per_request": 512,
+    "requests_per_model_action": 12,
+    "global_request_cap_enforced": false,
+    "interpreter_steps_per_task": 256,
+    "wall_seconds_per_task": 120
+  },
+  "final_trial_timeout_recovery": {
+    "original_record_sha256": "c913b5fc9b9a52e8dea4b7cedac6a4bdb77cb1509477fb63930dc05d97238fae",
+    "durable_proof_before_read": true,
+    "original_intent_output_recovered": true,
+    "fresh_generation_requested": false,
+    "workflow_resumed": false,
+    "recovered_record_sha256": "1b4343428a279b7398cfd3ea2ce1c346eaf1c7dc9b85f2ed44c74db09fbb461e"
+  },
+  "weights_updated": false,
+  "model_candidate_promoted": false,
+  "harness_broad_acceptance": false,
+  "limitations": [
+    "Five development objectives; no unseen generalization or population-rate claim.",
+    "Changed descriptions and feedback are combined interventions, not isolated causal ablations.",
+    "Per-action BW budgets differ from the external global twelve-request cap.",
+    "Original failures and regressing variants are retained; no protected prompts or solutions are published.",
+    "D preserved correct artifacts but failed completion on the last task; its original durable output was recovered separately without resuming the workflow."
+  ]
+}
