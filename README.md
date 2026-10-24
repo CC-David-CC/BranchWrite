@@ -1,4 +1,9 @@
 # BranchWrite (BW)
+
+[Compare BW, OpenCode, Codex and pi](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/HARNESS-COMPARISON.md)
+with S³'s four-condition study contract. The offline comparison machinery is
+tested; live adapters and cross-harness results remain to be qualified. BW
+retains its own workflow and tool authority.
 Development checkpoint: [foundations and workflow validation](validation/foundations-20261023/README.md). Live-model qualification remains pending.
 
 

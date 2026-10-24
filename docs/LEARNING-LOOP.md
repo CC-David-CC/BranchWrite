@@ -110,3 +110,21 @@ tasks. It uses an authenticated training-only HTTP fixture, rather than starting
 a production inference server. It refuses an existing output directory, retains
 private evidence, and requires single/batch updates, continuation, reload,
 unchanged base weights and duplicate prevention to pass.
+
+## Fixed-weight harness improvement is a separate experiment
+
+[S³'s harness comparison](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/HARNESS-COMPARISON.md) distinguishes
+baseline, a general improvement probe, a task-specific probe and a composed
+fourth execution. These are four task runs, plus proposer/composer model calls
+and independent transfer/retention runs. The design is strengthened by ideas
+incorporated from [Harness²](https://arxiv.org/abs/2610.14224).
+
+BW's existing two-approach exploration supplies isolated alternatives; it does
+not itself implement the entire four-condition study. S³'s offline auditor is
+implemented and tested. A qualified exporter and proposer/composer integration
+for real BW observations are still required. Do not substitute mock-tool
+fixtures for measured BW behavior or replace BW's workflow ledger.
+
+The separate [Wen full-update pilot](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/WEN-FULL-UPDATE-PILOT.md)
+scored 19/54 versus 17/54, with three gains and one lost success. The candidate
+was rejected, not installed as BW's model.
