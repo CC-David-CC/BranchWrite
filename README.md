@@ -299,3 +299,11 @@ The standard installer does not enable model-driven browser inspection;
 - [API integration plan](docs/COW_INTEGRATION_PLAN.md)
 
 MiniCPM native integration and optional direct tools: [guide](docs/MINICPM-DIRECT-TOOLS.md), [measured evidence](docs/MINICPM-INTEGRATION-EVIDENCE.json).
+
+## MiniCPM native development results
+
+[The five-objective BW screen](docs/MINICPM-DIRECT-TOOLS.md#five-objective-follow-up)
+passed three Python tasks and failed two shell tasks. Same-weight peer successes
+make the shell workflows the next harness investigation. Evidence includes saved
+artifact checks and explicit budget differences; this is not a general ranking
+or a MiniCPM training result.

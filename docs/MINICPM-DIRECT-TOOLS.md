@@ -31,3 +31,24 @@ A host `verified` report means the configured host policy passed. A model-select
 check can omit a requirement. S³ must independently check the task and retention
 before accepting a learning-loop improvement. No MiniCPM training or model release
 is established by this integration.
+
+## Five-objective follow-up
+
+The qualified native stack completed and independently passed three Python
+objectives: empty-input summation, binary search and stable uniqueness. Two shell
+objectives failed: quoting a filename timed out with an outstanding request;
+propagating a failing command's status exhausted the interpreter step budget.
+Input sentinels were preserved. [Evidence](MINICPM-FOUNDATIONS-EVIDENCE.json)
+records exact source/model identities and saved-artifact/checker hashes.
+
+These runs used a 64K context, thinking off, compact-v2 instructions, 512 output
+tokens per request, 256 interpreter steps and 120 seconds per task. The 12-request
+limit applied per model action, **not globally**; the failure-status run made 13
+requests. This is not a matched-budget ranking against the external clients.
+The original timed-out operation was reconciled as cancelled, not blindly replayed.
+
+At least two peer harnesses passed each shell objective with the same weights.
+Investigate BW's tool contracts, errors, verification and stopping behavior before
+labelling these model-training failures. The cause is not yet established. Any
+fix must preserve the successful Python workflows and independent task checks.
+No MiniCPM weight update or accepted learning candidate is part of this screen.

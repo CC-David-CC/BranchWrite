@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-24",
+  "kind": "native_bw_five_objective_screen",
+  "bw_source_commit": "faf90a07a98caa80f8c554663331bce2df8a4f55",
+  "pcc_source_commit": "fee0c5c513518a80e811ce7bc757d1bf2e52aa70",
+  "model_sha256": "0ffba3682a853295566b98bc38c0ab755d6b2d91b994bc031ed727a08cfcdf25",
+  "context": 65536,
+  "thinking": "off",
+  "instructions": "compact-v2",
+  "results": [
+    {
+      "case_id": "python.sum_empty",
+      "artifact_passed": true,
+      "host_policy_verified": true,
+      "runtime_status": "complete",
+      "model_requests": 6,
+      "pending_model_requests": 0,
+      "output_tokens": 264,
+      "within_external_model_request_cap": true,
+      "checker_evidence_sha256": "7088e7b577b59a44711281688d44cd0a12f0ef11335a6e4806814c7c88e204c0",
+      "input_preserved": true,
+      "completed_independent_pass": true,
+      "case_manifest_sha256": "17deb829688d3381a6ec3bb60badcb877afabcc3121f96fd8bf809e87fb18200",
+      "ledger_sha256": "052414097584afe18777118a397850d2b0ffa241d65fa5ff9fd7039787e2f55e",
+      "saved_source_sha256": {
+        "task.py": "3251dbf18617cd67c47707cb9bd1611dbac212ff0ee9814a75b8ce1f34b85aad"
+      }
+    },
+    {
+      "case_id": "python.binary_search",
+      "artifact_passed": true,
+      "host_policy_verified": true,
+      "runtime_status": "complete",
+      "model_requests": 6,
+      "pending_model_requests": 0,
+      "output_tokens": 484,
+      "within_external_model_request_cap": true,
+      "checker_evidence_sha256": "e86f880a9cf27ef56692ece3bd34371c7d9850d6033b1c4ef0e3f0593b27af78",
+      "input_preserved": true,
+      "completed_independent_pass": true,
+      "case_manifest_sha256": "69b12c43f4112100a5f9d765e070cc0ea16222329e95d8da798105a111663473",
+      "ledger_sha256": "2cb739c2934591d98a03d726603757378bed93d48d3312d3b566bd7e59fc1874",
+      "saved_source_sha256": {
+        "task.py": "9060b376393f10d420c5cbe4f5c8cd48cddc440f61eabc393a1406e5c7d29d9b"
+      }
+    },
+    {
+      "case_id": "python.stable_unique",
+      "artifact_passed": true,
+      "host_policy_verified": true,
+      "runtime_status": "complete",
+      "model_requests": 8,
+      "pending_model_requests": 0,
+      "output_tokens": 462,
+      "within_external_model_request_cap": true,
+      "checker_evidence_sha256": "9d673a8b627f117d10574ae4c3c7261a26bef89df648897873cdba5549b19b37",
+      "input_preserved": true,
+      "completed_independent_pass": true,
+      "case_manifest_sha256": "28885a43b84f6a3ccd9b66275cc5283f6578523f866ac06bf5b750b09423f5bc",
+      "ledger_sha256": "cfcccc28b675f4befd338d7297c07a71099a73d3f39e2d3f4a7e08d2e71e9ac8",
+      "saved_source_sha256": {
+        "task.py": "4abb93e97afc7dd1399ee0c7cc56216aa37c20133854cf30714bf60636d18a3b"
+      }
+    },
+    {
+      "case_id": "shell.quoted_filename",
+      "artifact_passed": false,
+      "host_policy_verified": false,
+      "runtime_status": "supervisor_exit_124",
+      "model_requests": 12,
+      "pending_model_requests": 1,
+      "output_tokens": 5135,
+      "within_external_model_request_cap": true,
+      "checker_evidence_sha256": "50d06cde8af1d222cd58bc0c903df2c7ba0e7254b56cc7385da282e0728b1fff",
+      "input_preserved": true,
+      "completed_independent_pass": false,
+      "case_manifest_sha256": "ede97ffcefe764678e54f096314687d8f1b2290bef464ae194d0167aed46e1d3",
+      "ledger_sha256": "95ab1469a4866b5059ab0bb51ee6a4a0ecbb4fe264d53970335b20584d4653eb",
+      "saved_source_sha256": {
+        "copy.sh": "69250eaaf9fec97415cc6fd5e118292e0ffc111252d117ae59695545d63a5011"
+      }
+    },
+    {
+      "case_id": "shell.failure_status",
+      "artifact_passed": false,
+      "host_policy_verified": false,
+      "runtime_status": "step_budget_exhausted",
+      "model_requests": 13,
+      "pending_model_requests": 0,
+      "output_tokens": 1760,
+      "within_external_model_request_cap": false,
+      "checker_evidence_sha256": "7b13223aef68a93b47237be55654830b5c16cae6843539e73d4bbc4ab0f75951",
+      "input_preserved": true,
+      "completed_independent_pass": false,
+      "case_manifest_sha256": "a7173e9c53efaa1fbf806171b085b2d28fde9acb047d5f26aec5b110553183c3",
+      "ledger_sha256": "7e78d5afac00d970e092f9894ba217c67b4c06ed2073582f9d041ea253b3c2a6",
+      "saved_source_sha256": {
+        "check.sh": "8baa0f87bc9a3efc315d08e3584e765bed808a77bd8055efa2488d961c9a1dfd"
+      }
+    }
+  ],
+  "completed_independent_passes": 3,
+  "objectives": 5,
+  "weights_updated": false,
+  "promoted": false,
+  "bounds": {
+    "interpreter_steps_per_task": 256,
+    "wall_seconds_per_task": 120,
+    "requests_per_model_action": 12,
+    "output_tokens_per_request": 512,
+    "global_model_request_limit_enforced": false
+  },
+  "original_cancelled_operation": {
+    "case_id": "shell.quoted_filename",
+    "state": "cancelled",
+    "durable": false,
+    "original_ids_preserved": true,
+    "automatically_retried": false
+  },
+  "limitations": [
+    "Five development objectives only; no population failure-rate estimate.",
+    "The failure-status trial used thirteen model requests; limits differ from the external twelve-request screen.",
+    "The quoted-filename trial timed out with an unacknowledged request whose original server status was cancelled.",
+    "Different host/runtime paths prevent a causal harness ranking. Independent saved-artifact checks are the task verdict."
+  ]
+}
