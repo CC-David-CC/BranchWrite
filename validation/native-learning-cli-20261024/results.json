@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Real tiny CPU native PCC execution through BW CLI, not full-model learning",
+  "cases": [
+    {
+      "optimizer": "adamw",
+      "status": "PASS",
+      "actual_native_cpu_jobs": 2,
+      "single_example_and_batched_selection": true,
+      "parent_weights_kept_with_fresh_moments": true,
+      "actual_consumption_exposed": true,
+      "duplicate_job_not_retrained": true,
+      "private_named_export_idempotent": true,
+      "no_model_upload": true
+    },
+    {
+      "optimizer": "muon",
+      "status": "PASS",
+      "actual_native_cpu_jobs": 2,
+      "single_example_and_batched_selection": true,
+      "parent_weights_kept_with_fresh_moments": true,
+      "actual_consumption_exposed": true,
+      "duplicate_job_not_retrained": true,
+      "private_named_export_idempotent": true,
+      "no_model_upload": true
+    }
+  ],
+  "cli_refusal_cases": 6,
+  "weights_published": false,
+  "promoted": false,
+  "lesson_client_regression_tests": 9,
+  "pcc_commit": "e6677d0e1cc5d7906b73a33463aa9d0f0cfddff2",
+  "native_executable_sha256": "790c1f324ee4ac2b08b3ca8b4cb4977d11e07cfd051b6382f095c17521ab1060",
+  "bw_source_sha256": {
+    "branchwrite/cow_client.py": "28bb5b4dfd24e6f4b4d97e9a81f472b32ce06860e7829ff6bdb1e38eb0982268",
+    "branchwrite/lesson_cli.py": "853a92205fb33a4b1ec5bab642b477bf2bec3a8523a57272c9129e1fe7674fb3",
+    "tests/native_learning_cli.py": "2daea54e58276b10c3f16ddbf2142971bc54d89de1eb52accd56ef8dd4294a4a",
+    "tests/test_lessons.py": "b98c19a228068f202476d0934203c8ce7eaa8df16ed71a9456bac79ba3938606"
+  },
+  "client_transport_regression_tests": 22,
+  "test_environment_notes": "Client-flow tests require PCC on PYTHONPATH and COW_CLI_SCRIPT. Initial missing-fixture-configuration failures were preserved privately; configured HTTP/CLI cases pass."
+}

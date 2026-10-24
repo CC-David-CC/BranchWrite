@@ -226,6 +226,14 @@ Useful learning, preservation and large-model/hardware qualification need their
 own measurements. Training is disabled on ordinary servers, and a candidate is
 not automatically promoted. [Read the workflow, settings and limits](docs/LEARNING-LOOP.md).
 
+The optional native learning path now lets BW select registered AdamW/Muon
+policies and preserve private named standalone GGUF checkpoints through PCC.
+Real tiny CPU jobs pass through BW's CLI. The separate MiniCPM development
+campaign has improved from 59 to 482 to 507 correct answers out of 864 while
+tracking regressions; that does not establish a fix to BW's shell tasks.
+[Commands and qualification limits](docs/LEARNING-LOOP.md#registered-native-optimizer-jobs-and-private-model-checkpoints).
+
+
 The first 1,000-variation Wen study learned its selection pattern (2/48 to
 48/48), but lost five of sixteen unrelated checks and reached only 3/16 on
 differently worded blind cases. No candidate qualified. This preview demonstrates

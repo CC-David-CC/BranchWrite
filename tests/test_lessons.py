@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from branchwrite.cow_client import CowClient,OperationJournal,OperationIndeterminate,ReceiptError,_Response
+from branchwrite.cow_client import CowClient,OperationJournal,OperationIndeterminate,OperationReuseError,ReceiptError,_Response
 from branchwrite.lesson_cli import create_lesson
 from tests.lesson_flow_harness import task
 
@@ -67,5 +67,42 @@ class Lessons(unittest.TestCase):
             def request(self,*args,**kwargs):return _Response(json_value=dict(schema=1,operation_id='op',request_sha256='0'*64,job_id='op'),transport='test')
         client=CowClient(Transport(),journal=OperationJournal(self.root/'journal'),endpoint_url='http://127.0.0.1:1')
         with self.assertRaises(ReceiptError):client.training_submit('jobs',{},'op')
+
+    def test_lost_model_preservation_acceptance_reconciles_without_second_post(self):
+        calls=[];saved={}
+        class Transport:
+            name='owned-export-lost-response'
+            def request(self,method,path,body=None,**kwargs):
+                calls.append(method)
+                if method=='POST':
+                    value=json.loads(body)
+                    from branchwrite.lesson_cli import digest
+                    saved.update(schema=1,operation_id=value['operation_id'],request_sha256=digest([path,value]),
+                        export_id='f'*64,name=value['name'],file=value['name']+'.gguf',
+                        model_sha256=value['expected_sha256'],weights_published=False)
+                    raise OperationIndeterminate('preserved, response lost')
+                return _Response(json_value=dict(saved),transport='test')
+        client=CowClient(Transport(),journal=OperationJournal(self.root/'journal'),endpoint_url='http://127.0.0.1:1')
+        payload=dict(job_id='owned-job',name='OwnedModel',expected_sha256='a'*64,notes='Owned experiment',report_sha256=None)
+        receipt=client.training_submit('exports',payload,'preserve')
+        self.assertEqual(calls,['POST','GET'])
+        self.assertEqual(client.training_submit('exports',payload,'preserve'),receipt)
+        self.assertEqual(calls,['POST','GET'])
+        with self.assertRaises(OperationReuseError):
+            client.training_submit('exports',dict(payload,name='DifferentModel'),'preserve')
+        self.assertEqual(calls,['POST','GET'])
+    def test_forged_model_preservation_cannot_hide_different_weights(self):
+        class Transport:
+            name='forged-export'
+            def request(self,method,path,body=None,**kwargs):
+                value=json.loads(body)
+                from branchwrite.lesson_cli import digest
+                return _Response(json_value=dict(schema=1,operation_id=value['operation_id'],
+                    request_sha256=digest([path,value]),export_id='e'*64,name=value['name'],
+                    file=value['name']+'.gguf',model_sha256='b'*64,weights_published=False),transport='test')
+        client=CowClient(Transport(),journal=OperationJournal(self.root/'journal'),endpoint_url='http://127.0.0.1:1')
+        with self.assertRaises(ReceiptError):
+            client.training_submit('exports',dict(job_id='owned-job',name='OwnedModel',
+                expected_sha256='a'*64,notes='',report_sha256=None),'preserve')
 
 if __name__=='__main__':unittest.main()

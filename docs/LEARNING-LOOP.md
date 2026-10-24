@@ -128,3 +128,66 @@ fixtures for measured BW behavior or replace BW's workflow ledger.
 The separate [Wen full-update pilot](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/WEN-FULL-UPDATE-PILOT.md)
 scored 19/54 versus 17/54, with three gains and one lost success. The candidate
 was rejected, not installed as BW's model.
+
+## Registered native optimizer jobs and private model checkpoints
+
+With the matching PCC native-learning-path version, BW can discover an owner's
+AdamW/Muon policies, request a single-example or batched full-weight update,
+continue a registered parent's weights, and preserve a named private GGUF.
+BW owns the client request journal; PCC still owns native math, resources,
+optimizer state and immutable candidates. No optimizer is implemented in BW.
+S3 owns checked practice, evaluation and next-block proposals.
+
+```sh
+branchwrite lesson optimizers
+branchwrite lesson submit checked-lesson.json --operation-id example-01 \
+  --train-now --mode full --steps 1000 --learning-rate 0.000001 \
+  --optimizer-profile-id PROFILE_SHA256
+branchwrite lesson train LESSON_ID_1 LESSON_ID_2 --operation-id block-02 \
+  --parent-job-id example-01-train --mode full --batch-size 2 --steps 1000 \
+  --learning-rate 0.000001 --optimizer-profile-id PROFILE_SHA256
+branchwrite lesson status block-02
+branchwrite lesson preserve block-02 --operation-id preserve-02 \
+  --name MiniCPM-Local-02-F32 --expected-sha256 CANDIDATE_SHA256 \
+  --notes-file model-notes.txt --report-sha256 S3_REPORT_SHA256
+branchwrite lesson exports
+```
+
+Use the connection already configured for BW and `BW_COW_API_KEY`. A profile ID
+binds the owner's exact rate, optimizer settings, fresh/resume state policy and
+optional training-phase time budget. Use the advertised rate explicitly. Fresh
+moments are appropriate for a changed block while retaining learned parent
+weights; resume continues the exact saved dataset order, moments and cursor.
+Clients supply registered IDs, never model/executable/state paths or GPU grants.
+Explicit profiles require full-weight mode and currently cannot be combined
+with the legacy `--skill-guard` multi-round wrapper. Jobs without a profile
+retain the previous path.
+
+A timed job can finish before visiting every selected lesson. Check actual
+completed updates, presentations and `consumed_lesson_ids_this_job` /
+`unconsumed_lesson_ids_this_job`. Queue selection is not proof of consumption.
+The tiny proof deliberately exercises this distinction. A lost response is
+reconciled using the original request bytes and operation ID; another ID would
+request another update. Preservation also reconciles its original operation.
+
+Preservation names a completed full-weight checkpoint privately using a bound
+manifest and hardlink in PCC's store. It performs no model upload, quantization,
+weight replacement or quality approval. Record a measured S3 report and the
+reasons to try the model. Keep development and sealed qualification distinct.
+The owner may retain a useful working checkpoint despite some regressions and
+practice their families in the next mixed block; preserve those measurements.
+
+[Real tiny CPU BW-to-PCC proof](../validation/native-learning-cli-20261024/results.json)
+passes four native jobs across AdamW/Muon, single and batched requests, parent
+weight continuation with fresh moments, actual coverage reporting, repeated
+operation reconciliation and private named preservation. Six CLI refusal cases
+and nine lesson tests plus 22 client transport tests pass, including lost export
+acknowledgments and
+forged different-weight receipts. This is mechanics qualification, not a BW
+shell-task repair or full-model GPU qualification of BW's client.
+
+[Owner configuration and PCC commands](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-learning-path-20261024/docs/NATIVE-LEARNING-JOBS.md).
+[Full-model learning measurements](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/MINICPM-NATIVE-LEARNING.md).
+The automatic durable multi-round coordinator and shared inference/training
+forward graph remain unfinished. This client adds supported pieces to the
+existing service rather than introducing another workflow runtime.

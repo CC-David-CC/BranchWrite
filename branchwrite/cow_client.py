@@ -1541,7 +1541,7 @@ class CowClient:
         return GenerationReceipt(operation_id, branch, snapshot, dict(value))
 
     def training_submit(self,kind,payload,operation_id):
-        if kind not in ('lessons','jobs'):raise ValueError('Unknown training operation')
+        if kind not in ('lessons','jobs','exports'):raise ValueError('Unknown training operation')
         operation_id=self._operation_id(operation_id)
         path='/cow/training/'+kind;body=dict(payload,operation_id=operation_id)
         try:return self._mutate(operation_id,path,body,stream=False).json_value
@@ -1556,7 +1556,7 @@ class CowClient:
             return receipt
 
     def training_read(self,resource,identity=None):
-        if resource not in ('lessons','jobs','operations','skills'):raise ValueError('Unknown training resource')
+        if resource not in ('lessons','jobs','operations','skills','optimizer-profiles','exports'):raise ValueError('Unknown training resource')
         if identity is not None and (type(identity) is not str or not re.fullmatch(r'[A-Za-z0-9_-]{1,128}',identity)):
             raise ValueError('Invalid training resource identity')
         path='/cow/training/'+resource+('' if identity is None else '/'+identity)
@@ -1567,6 +1567,17 @@ class CowClient:
         return value
 
     def _validate_nonstream(self, intent: OperationIntent, value: Any) -> Mapping[str, Any]:
+        if intent.path=='/cow/training/exports':
+            body=json.loads(intent.body)
+            fields={'schema','operation_id','request_sha256','export_id','name','model_sha256','file','weights_published'}
+            binding=hashlib.sha256(_canonical([intent.path,body])).hexdigest()
+            if (type(value) is not dict or set(value)!=fields or type(value['schema']) is not int or value['schema']!=1
+                    or value['operation_id']!=intent.operation_id or value['request_sha256']!=binding
+                    or type(value['export_id']) is not str or not _HEX64.fullmatch(value['export_id'])
+                    or value['name']!=body['name'] or value['file']!=body['name']+'.gguf'
+                    or value['model_sha256']!=body['expected_sha256'] or value['weights_published'] is not False):
+                raise ReceiptError('Model preservation acceptance does not bind the original request')
+            return dict(value)
         if intent.path in ('/cow/training/lessons','/cow/training/jobs'):
             body=json.loads(intent.body)
             field='lesson_id' if intent.path.endswith('/lessons') else 'job_id'
