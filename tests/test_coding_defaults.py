@@ -25,7 +25,15 @@ class CodingDefaultsTests(unittest.TestCase):
   import test_cow_client_flow as fixture
   from collections import defaultdict
   from hashlib import sha256
-  case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups);case.setUp()
+  from serve.test_cow_presentation_flow import FlowModel
+  class DiscoveredFlowModel(FlowModel):
+   def __init__(self,*args):
+    super().__init__(*args)
+    self.profile.update(model_contract_id='a'*64,execution_profile_id='b'*64)
+  case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups)
+  case.model_factory=DiscoveredFlowModel
+  case.connection_info=dict(model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299])
+  case.setUp()
   root=Path(case.temp.name);source=root/'source';source.mkdir();(source/'data.txt').write_bytes(b'original\n')
   (source/'tests').mkdir();(source/'tests/__init__.py').write_text('');(source/'tests/test_data.py').write_text('import unittest\nfrom pathlib import Path\nclass T(unittest.TestCase):\n def test_data(self): self.assertEqual(Path("data.txt").read_bytes(),b"correct\\n")\n')
   actions=[dict(tool='read_file',arguments=dict(path='data.txt')),dict(tool='replace',arguments=dict(path='data.txt',before='original',after='correct')),dict(tool='run_tests',arguments=dict(suite='unit')),dict(tool='finish',arguments=dict(answer='done'))]
@@ -34,7 +42,7 @@ class CodingDefaultsTests(unittest.TestCase):
    # The synthetic CPU fixture is greedy/text only. New default policy is
    # inspected above and tested on real Q4, never falsely simulated here.
    profiles=dict(control=dict(output_format='text',settings=dict(temperature=0),request_tokens=1024)),
-   cow=dict(endpoint_url=case.base_url,endpoint_pin='flow-model-free',model_contract_id='flow-model',execution_profile_id='flow-profile',eos_tokens=[299],branch='new-coding',mode='ask',bootstrap='coding'))
+   cow=dict(endpoint_url=case.base_url,endpoint_pin='flow-model-free',model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299],branch='new-coding',mode='ask',bootstrap='coding'))
   config=root/'host.json';config.write_text(json.dumps(cfg));program=root/'coding.bw';program.write_text(workflow_source());state=root/'run'
   cmd=[sys.executable,'-B','-m','branchwrite','run',str(program),'--config',str(config),'--state',str(state)]
   env={**os.environ,'BW_COW_API_KEY':'cpu-flow-secret'}

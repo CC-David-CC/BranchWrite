@@ -6,7 +6,11 @@ class CodingLauncherHttpTests(unittest.TestCase):
   self.launch_case(False)
  def test_explore_cli_prepares_two_owned_worlds_and_resume_keeps_the_same_plan(self):
   self.launch_case(True)
- def launch_case(self,explore):
+ def test_direct_mode_pins_registered_grammar_and_resume(self):
+  self.launch_case(False,thinking="off")
+ def test_compact_direct_cli_pins_a_distinct_root_and_resume(self):
+  self.launch_case(False,thinking='off',instructions='compact')
+ def launch_case(self,explore,thinking="standard",instructions='worked-examples'):
   from test_thinking_grammar import ThinkingTokenizer
   from serve.test_cow_grammar_canonical_flow import GrammarCPUBackend,_render,_encode,_initial_root_mode
   from context_time_travel.real import BranchingModel

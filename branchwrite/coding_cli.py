@@ -59,10 +59,12 @@ def enable_exploration(launch,approaches=None,*,selection='verified-first'):
     return launch
 def _bytes(value):
     return json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False).encode()
-def build_launch(project,task,connection,*,branch,project_files=False,read_paths=(),edit_paths=(),create_paths=(),test_commands=(),from_branch=None,from_prefix=None,from_snapshot=None,shell_timeout=120,sampler="greedy",base_catalog=None,base_proposal=None,base_revision=None,base_reserve_tokens=None,context_pack=None,context_pack_id=None,refresh_context_pack=False,auto_base=False,mode="work",remotes=None,cad=None,blender=None):
+def build_launch(project,task,connection,*,branch,project_files=False,read_paths=(),edit_paths=(),create_paths=(),test_commands=(),from_branch=None,from_prefix=None,from_snapshot=None,shell_timeout=120,sampler="greedy",thinking_mode="standard",instruction_style="worked-examples",base_catalog=None,base_proposal=None,base_revision=None,base_reserve_tokens=None,context_pack=None,context_pack_id=None,refresh_context_pack=False,auto_base=False,mode="work",remotes=None,cad=None,blender=None):
     if mode not in ('work','plan','chat','aside'):raise ValueError('unsupported coding mode')
     from .coding_defaults import generation_profile
-    profile=generation_profile(sampler)
+    profile=generation_profile(sampler,thinking_mode=thinking_mode)
+    if instruction_style not in ('worked-examples','compact'):
+        raise ValueError('unknown coding instruction style')
     if from_prefix is not None and from_branch is not None:
         raise ValueError('choose a prepared prefix or a completed branch, not both')
     if from_prefix is not None:from_branch=from_prefix
@@ -132,6 +134,10 @@ def build_launch(project,task,connection,*,branch,project_files=False,read_paths
     if from_branch is not None and (type(from_branch) is not str or not from_branch):raise ValueError('source branch required')
     if from_snapshot is not None and (type(from_snapshot) is not str or not re.fullmatch('[0-9a-f]{64}',from_snapshot)):raise ValueError('invalid source snapshot')
     cow=dict(connection,branch=branch,mode='ask',bootstrap='coding',grammar_registration='inline')
+    if instruction_style=='compact':
+        if from_branch is not None or from_snapshot is not None:
+            raise ValueError('compact instructions require a new root; retained prefixes are immutable')
+        cow['controller_prefix']='compact'
     fork=None
     if from_branch is not None:
         cow.pop('bootstrap');cow['mode']='ask' if from_prefix is not None else 'append_user'
@@ -345,7 +351,7 @@ def start(args,*,control=None,progress=None,model_pause=None):
         build_launch(args.project,task,connection,branch=args.branch,project_files=getattr(args,'project_files',False),
             read_paths=sorted(set(reads)),edit_paths=sorted(set(edits)),create_paths=args.create,
             test_commands=args.test_command,from_branch=None,from_prefix=None,from_snapshot=None,
-            shell_timeout=args.shell_timeout,sampler=getattr(args,"sampler","greedy"),
+            shell_timeout=args.shell_timeout,sampler=getattr(args,"sampler","greedy"),thinking_mode=getattr(args,"thinking","standard"),instruction_style=getattr(args,"instructions","worked-examples"),
             context_pack=None,context_pack_id=None,refresh_context_pack=False)
         from .project_context import append_event,capture_context_pack,read_stable_branch,resume_context_pack
         from .cow_client import CowClient,OperationJournal
@@ -374,7 +380,7 @@ def start(args,*,control=None,progress=None,model_pause=None):
     launch=build_launch(args.project,task,connection,branch=args.branch,project_files=getattr(args,'project_files',False),
         read_paths=sorted(set(reads)),edit_paths=sorted(set(edits)),create_paths=args.create,
         test_commands=args.test_command,from_branch=args.from_branch,
-        from_prefix=getattr(args,'from_prefix',None),from_snapshot=args.from_snapshot,shell_timeout=args.shell_timeout,sampler=getattr(args,"sampler","greedy"),base_catalog=catalog,base_proposal=proposal,base_revision=base_revision,base_reserve_tokens=reserve,context_pack=context_pack,context_pack_id=context_pack_id,refresh_context_pack=getattr(args,'refresh_context_pack',False),auto_base=auto_base,cad=None if getattr(args,'cad_config',None) is None else json.loads(Path(args.cad_config).read_text(),object_pairs_hook=_pairs),blender=None if getattr(args,'blender_config',None) is None else json.loads(Path(args.blender_config).read_text(),object_pairs_hook=_pairs))
+        from_prefix=getattr(args,'from_prefix',None),from_snapshot=args.from_snapshot,shell_timeout=args.shell_timeout,sampler=getattr(args,"sampler","greedy"),thinking_mode=getattr(args,"thinking","standard"),instruction_style=getattr(args,"instructions","worked-examples"),base_catalog=catalog,base_proposal=proposal,base_revision=base_revision,base_reserve_tokens=reserve,context_pack=context_pack,context_pack_id=context_pack_id,refresh_context_pack=getattr(args,'refresh_context_pack',False),auto_base=auto_base,cad=None if getattr(args,'cad_config',None) is None else json.loads(Path(args.cad_config).read_text(),object_pairs_hook=_pairs),blender=None if getattr(args,'blender_config',None) is None else json.loads(Path(args.blender_config).read_text(),object_pairs_hook=_pairs))
     if project_receipt_sha256 is not None:
         launch['config']['bindings']['project_context_receipt_sha256']=dict(
             type='Text',value=project_receipt_sha256)

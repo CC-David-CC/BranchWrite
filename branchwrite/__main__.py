@@ -153,6 +153,8 @@ def main(argv=None):
     task_input.add_argument('--task',help='Inline task text; never executed.')
     code.add_argument('--branch',help='Context COW branch name; generated when omitted.')
     code.add_argument('--sampler',choices=('greedy','min-p','dry-min-p'),default='greedy',help='Sampler preset for a new run; resume keeps its saved settings.')
+    code.add_argument('--thinking',choices=('standard','off'),default='standard',help='New-run thinking mode; off decodes directly into the registered tool grammar. Resume keeps its saved mode.')
+    code.add_argument('--instructions',choices=('worked-examples','compact'),default='worked-examples',help='Instructions for a new coding root; compact omits worked examples. Retained roots keep their original prefix.')
     for name in ('read','edit','create','read-dir','edit-dir','test-command'):
         code.add_argument('--'+name,action='append',default=[])
     origin=code.add_mutually_exclusive_group()

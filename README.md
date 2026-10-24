@@ -297,3 +297,5 @@ The standard installer does not enable model-driven browser inspection;
 - [Registered tools](docs/TOOL_REGISTRY.md)
 - [Model integration](docs/MODEL_FLOW.md)
 - [API integration plan](docs/COW_INTEGRATION_PLAN.md)
+
+MiniCPM native integration and optional direct tools: [guide](docs/MINICPM-DIRECT-TOOLS.md), [measured evidence](docs/MINICPM-INTEGRATION-EVIDENCE.json).
