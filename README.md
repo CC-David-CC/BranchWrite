@@ -62,7 +62,11 @@ Wen 1 (15.94 GB), with their separate installation routes. Download size and
 tokens per second do not tell you whether a model can repair your project.
 
 **[Skills³ (S³): Skills, Scoring, Stability](https://github.com/CC-David-CC/sss)**
-is the independent skill tree and testing project BW imports. Its foundations
+is the independent skill tree and testing project BW imports. Its reasoning
+curriculum is **strengthened by ideas incorporated from
+[LearnHarness](https://github.com/amosblomqvist/learnharness)**;
+[S³ owns the new exercises and proof checks](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/REASONING-CURRICULUM.md).
+BW uses them through its existing optional S³ import. Its foundations
 are read, write, edit and verified completion, leading toward tool use, coding
 and Linux administration. [The full guide](https://github.com/CC-David-CC/sss/blob/main/docs/USER-GUIDE.md)
 explains what is implemented and what remains unmeasured.

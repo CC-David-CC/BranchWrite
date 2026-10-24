@@ -31,3 +31,22 @@ Saved BW tasks retain their original runtime/configuration. Graph/recipe
 inspection does not migrate tasks, authorize tools, start a GPU or promote weights.
 
 CPU checkpoint: [dated validation](../validation/foundations-20261023/README.md).
+
+## Reasoning connections and delayed recall
+
+The S³ curriculum is **strengthened by ideas incorporated from
+[LearnHarness](https://github.com/amosblomqvist/learnharness)**. Its original bounded
+families check joint premises, withdrawn facts, smallest sufficient assumptions
+and choosing between similar arithmetic methods. BW consumes these through its
+existing import; its workflow ledger, tools and grants remain here.
+
+```sh
+python -m branchwrite skills exercise --skill logic.reverse_support --reference
+python -m branchwrite skills teaching-example --skill logic.joint_premises --delayed-revisit --output /new/owned/lesson
+```
+
+The second command saves a complete synthetic TXT conversation with arithmetic
+interleaving, a short compaction note and rereading the earlier logic problem.
+Both commands run without a model or GPU. Neither trains or promotes a model.
+[S³ explains the argument records, independent checkers and limits](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/REASONING-CURRICULUM.md).
+PCC's inference, context and native training responsibilities are unchanged.

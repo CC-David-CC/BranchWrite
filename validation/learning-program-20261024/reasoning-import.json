@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Actual BW CLI with optional S3 checkout",
+  "calls": {
+    "exercise_reference": 4,
+    "teaching_example_delayed_revisit": 1,
+    "graph_json": 1
+  },
+  "canonical_evidence": "https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/validation/learning-program-20261024/reasoning-connections.json",
+  "runtime_code_changed": false,
+  "duplicate_testing_runtime_added": false,
+  "model_inference": false,
+  "weights_updated": false,
+  "promoted": false
+}
