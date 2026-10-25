@@ -194,9 +194,10 @@ shell-task repair or full-model GPU qualification of BW's client.
 
 [Owner configuration and PCC commands](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-learning-path-20261024/docs/NATIVE-LEARNING-JOBS.md).
 [Full-model learning measurements](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/MINICPM-NATIVE-LEARNING.md).
-The automatic durable multi-round coordinator and shared inference/training
-forward graph remain unfinished. This client adds supported pieces to the
-existing service rather than introducing another workflow runtime.
+The opt-in durable multi-round coordinator now has a small actual-model COW
+qualification. Broader model/gradient coverage, autonomous acceptance and a
+fully shared inference/training forward graph remain incomplete. BW uses PCC's
+existing coordinator and service; it does not add another workflow runtime.
 
 The [per-update MiniCPM study](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/MINICPM-NATIVE-LEARNING.md)
 compares four full-update regimens and native AdamW LoRA at matched practice
@@ -216,3 +217,24 @@ optimizer-state files from two uninterrupted updates. Retries did not train
 again. This qualifies that integration recipe on one short verified practice
 example, not BW shell-task quality, generalization or automatic release.
 [Evidence and repeatable owner procedure](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/REGISTERED-LORA-MODEL-PROBE.md).
+
+## Actual-model multi-round COW qualification
+
+The owner can now install S3 learning policies using PCC's optional
+`learning_config` JSON setting. Both real BW and COW CLI clients completed a
+two-round MiniCPM5-2B test through authenticated PCC HTTP. Each round used one
+native rank-16 AdamW update over three checked practice demonstrations and
+continued the selected adapter with fresh optimizer state. Evaluations reused
+the existing shared-prefix COW path.
+
+On the small 15-case machinery panel, correct answers went **1 -> 5 -> 5** and
+naturally finished responses went **3 -> 9 -> 13**. No baseline-correct answer
+was lost. Repeated operation acknowledgements matched without creating extra
+native jobs. This proves the tested integration; broad skill improvement, BW
+shell-task quality, standalone merging and release acceptance remain separate.
+
+[Owner configuration and agent procedure](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/CONFIGURED-COW-LEARNING.md)
+explains model, runtime, source, case and resource bindings.
+[Audited measurements](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/validation/configured-cow-learning-20261025-bf/README.md)
+record the exact scope. S3 owns the checks and reports, PCC owns native work and
+durable run identity, and BW drives registered actions using its existing client.
