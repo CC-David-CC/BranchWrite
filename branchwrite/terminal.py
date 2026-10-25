@@ -129,6 +129,8 @@ def _execute_argv(executor,operation_id,grant,command,command_argv):
             '--die-with-parent','--new-session','--unshare-all','--unshare-user',
             '--disable-userns','--cap-drop','ALL','--clearenv']
         for path in ['/usr','/lib','/lib64']:argv+=['--ro-bind',path,path]
+        # Normal POSIX paths resolve to the same already read-only system tree.
+        argv+=['--symlink','usr/bin','/bin']
         argv+=['--proc','/proc','--dev','/dev','--size','67108864','--tmpfs','/tmp','--chmod','1777','/tmp',
             '--dir','/etc','--ro-bind',str(release_file),'/etc/os-release',
             '--ro-bind',str(package),'/app/branchwrite',

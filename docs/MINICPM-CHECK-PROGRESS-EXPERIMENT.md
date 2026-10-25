@@ -85,3 +85,7 @@ Output recovery was refused, and no fresh generation or tool replay was sent.
 contain no raw task responses or model files. The earlier
 [shell investigation](MINICPM-SHELL-INVESTIGATION.md) remains the reference for
 the accepted default's four completed workflows.
+
+A subsequent [namespace investigation and real check-sensitivity probe](POSIX-SHELL-NAMESPACE.md)
+repairs ordinary POSIX shell paths and demonstrates why the proposed quoting
+check was too weak. It does not qualify the remaining MiniCPM workflow.

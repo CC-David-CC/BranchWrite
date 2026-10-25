@@ -805,6 +805,7 @@ class Executor:
             "--disable-userns", "--cap-drop", "ALL", "--clearenv",
             "--ro-bind", "/usr", "/usr", "--ro-bind", "/lib", "/lib",
             "--ro-bind", "/lib64", "/lib64",
+            "--symlink", "usr/bin", "/bin",
             "--dir", "/work", "--ro-bind", str(workspace), "/work",
             "--proc", "/proc", "--dev", "/dev", "--size", "67108864", "--tmpfs", "/tmp",
             "--chmod", "1777", "/tmp", "--chdir", "/work", "--",

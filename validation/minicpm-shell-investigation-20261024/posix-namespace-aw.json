@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "status": "COMPLETE",
+  "scope": "Real Linux namespace compatibility and focused CPU regression; not model-skill acceptance",
+  "direct_red": {
+    "passed": 1,
+    "failed": 3,
+    "exit_code": 1,
+    "evidence_sha256": "cea4d76ca19a21eca30c6a3a280daf4e7295f726f69dd3a6bdc63d2205a44759"
+  },
+  "direct_green": {
+    "passed": 4,
+    "failed": 0,
+    "exit_code": 0,
+    "evidence_sha256": "a92c0a5ab2589cf4399fe0c4907ff815681886f9336f4067c94c25307b9882ba"
+  },
+  "regression": {
+    "passed": 107,
+    "failed": 0,
+    "exit_code": 0,
+    "wall_seconds": 19.68755041481927,
+    "evidence_sha256": "20747006eab62e16ac6cc29f7d47fafb8a08d892caa8901aaf108d484036c0b8",
+    "modules": [
+      "test_terminal_posix",
+      "test_terminal",
+      "test_execution",
+      "test_command_outputs",
+      "test_command_verification",
+      "test_shell_admission",
+      "test_output_feedback",
+      "test_shell_cli",
+      "test_project_checks",
+      "test_coding_reconciliation",
+      "test_run_cli"
+    ]
+  },
+  "initial_regression": {
+    "passed": 99,
+    "failed": 1,
+    "reason": "Scripted COW fixture missing connection discovery metadata",
+    "evidence_sha256": "954cb77e1bc508b306a05ba781c3fda119b2aaff3bf8bda230eec9108bcca67d"
+  },
+  "sources": {
+    "branchwrite/terminal.py": "9021c9b7d4098916bf6f1e753094aa11b27308d9af007b15aaa77daa67d77ffb",
+    "branchwrite/execution.py": "f4bc7506aab1f1223eabbe589e396372f89a8f41da6c10723761738aad33c4be",
+    "tests/test_terminal_posix.py": "d7a9e28e1d94a76deeb6694b91ea03c6cb9f6796f2b40fdb9925df91dee9670e",
+    "tests/test_shell_cli.py": "cdb9f3b6a9c22aa4998c5544e7c4f881064d637b7c81a4d07335740f8a073206"
+  },
+  "canonical_shell_check": {
+    "status": "DETECTS_DECLARED_MUTANTS",
+    "evidence_sha256": "2e65fc472ec0edaa7f4b66c14fdd801065822ebfc171416637b40c27ffeab5d3"
+  },
+  "gpu_used": false,
+  "model_inference": false,
+  "model_workflow_qualified": false
+}

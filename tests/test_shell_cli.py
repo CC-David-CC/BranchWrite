@@ -141,7 +141,16 @@ class ShellCowIntegrationTests(unittest.TestCase):
   import test_cow_client_flow as fixture
   from collections import defaultdict
   from branchwrite.coding_defaults import workflow_source
-  case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups);case.setUp()
+  from serve.test_cow_presentation_flow import FlowModel
+  class DiscoveredFlowModel(FlowModel):
+   # The scripted CPU fixture advertises the same identities as discovery.
+   def __init__(self,*args):
+    super().__init__(*args)
+    self.profile.update(model_contract_id='a'*64,execution_profile_id='b'*64)
+  case=fixture.CowClientFlowTests();self.addCleanup(case.doCleanups)
+  case.model_factory=DiscoveredFlowModel
+  case.connection_info=dict(model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299])
+  case.setUp()
   root=Path(case.temp.name);source=root/'source';source.mkdir();(source/'marker.txt').write_bytes(b'unchanged\n')
   actions=[dict(tool='run_shell',arguments=dict(command="printf 'literal $HOME\\n'; printf 'real-error\\n' >&2; exit 7")),
    dict(tool='read_file',arguments=dict(path='marker.txt')),dict(tool='finish',arguments=dict(answer='actual status was seven; marker unchanged'))]
@@ -151,7 +160,7 @@ class ShellCowIntegrationTests(unittest.TestCase):
    shell=dict(timeout=2),bindings=dict(task=dict(type='Text',value='Run a shell probe and read marker.txt.')),
    verification=dict(schema=1,files=[dict(path='marker.txt',sha256=hashlib.sha256(b'unchanged\n').hexdigest())]),
    profiles=dict(control=dict(output_format='text',settings=dict(temperature=0),request_tokens=1024)),
-   cow=dict(endpoint_url=case.base_url,endpoint_pin='flow-model-free',model_contract_id='flow-model',execution_profile_id='flow-profile',eos_tokens=[299],branch='shell-cpu',mode='ask',bootstrap='coding'))
+   cow=dict(endpoint_url=case.base_url,endpoint_pin='flow-model-free',model_contract_id='a'*64,execution_profile_id='b'*64,eos_tokens=[299],branch='shell-cpu',mode='ask',bootstrap='coding'))
   config=root/'config.json';config.write_text(json.dumps(cfg))
   program=root/'coding.bw';program.write_text(workflow_source().replace('contract=unit-tests-and-finish','contract=file-readback-and-finish'))
   command=[sys.executable,'-B','-m','branchwrite','run',str(program),'--config',str(config),'--state',str(root/'run')]

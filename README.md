@@ -1,5 +1,9 @@
 # BranchWrite (BW)
 
+[Shell compatibility and check-quality findings](docs/POSIX-SHELL-NAMESPACE.md):
+ordinary `/bin/sh` paths now work inside the restricted namespace. This fixes
+an environment defect; MiniCPM’s remaining workflow failure is still open.
+
 S3 can now evaluate through the [same COW request code BW uses](docs/SHARED-EVALUATION.md).
 PCC reports the [4.8x small forward-work probe result](https://github.com/CC-David-CC/Private_Context_COW/tree/feat/native-learning-curves-20261024#48x-faster-on-small-forward-work-probes),
 with shared-A100 timing limits. S3 records the detailed test method and outcomes.
