@@ -493,19 +493,23 @@ class ProjectChecksPolicy:
     Latest named results supersede older results without deleting their audit.
     """
     remote: bool = False
+    progress_feedback: bool = False
 
     @classmethod
     def admit(cls,spec,registry):
-        if (type(spec) is not dict or set(spec)!={'schema','selected_checks'}
+        if (type(spec) is not dict or set(spec) not in ({'schema','selected_checks'},{'schema','selected_checks','progress_feedback'})
                 or type(spec['schema']) is not int or spec['schema']!=1
-                or spec['selected_checks'] is not True):
+                or spec['selected_checks'] is not True
+                or type(spec.get('progress_feedback',False)) is not bool):
             raise ValueError('closed project check policy required')
         if not registry._grant.project_files or not registry._grant.allow_shell or registry.executor._shell is None:
             raise ValueError('project files and actual shell grant required')
-        return cls(bool(registry._grant.remote_targets))
+        return cls(bool(registry._grant.remote_targets),spec.get('progress_feedback',False))
 
     @property
-    def identity(self):return sha256(encode(('bw.project-checks-with-remote.v1',) if self.remote else ('bw.project-checks-policy.v1',))).hexdigest()
+    def identity(self):
+        base=sha256(encode(('bw.project-checks-with-remote.v1',) if self.remote else ('bw.project-checks-policy.v1',))).hexdigest()
+        return sha256(encode(('bw.project-check-progress.v1',base))).hexdigest() if self.progress_feedback else base
 
     def verify(self,registry,log,outcomes):
         outcomes=tuple(outcomes);latest={};invalid=False

@@ -198,7 +198,11 @@ def _validate(launch):
     expected=BLENDER_PROGRAM if 'blender' in config else CAD_PROGRAM if 'cad' in config else READ_PROGRAM if readonly else PROJECT_PROGRAM if project else PROGRAM
     if 'exploration' in config:expected=exploration_program(expected,config['exploration']['selection'])
     if launch['program']!=expected:raise ValueError('coding program and project grant differ')
-    if project and 'blender' not in config and 'cad' not in config and config.get('verification')!=dict(schema=1,selected_checks=True):raise ValueError('project check policy required')
+    if project and 'blender' not in config and 'cad' not in config:
+        selected=config.get('verification')
+        if selected not in (dict(schema=1,selected_checks=True),dict(schema=1,selected_checks=True,progress_feedback=True),dict(schema=1,selected_checks=True,progress_feedback=False)):
+            raise ValueError('project check policy required')
+        if 'progress_feedback' in selected and type(selected['progress_feedback']) is not bool:raise ValueError('progress feedback must be boolean')
     fork=launch['fork']
     if fork is not None:
         if (type(fork) is not dict or set(fork)!={'source_branch','snapshot'}

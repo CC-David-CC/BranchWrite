@@ -42,6 +42,10 @@ class ProjectChecksTests(unittest.TestCase):
         self.assertFalse(self.run_checks([('first','exit 4'),('second','test -f marker')]))
     def test_changes_require_checks_to_run_again(self):
         self.assertFalse(self.run_checks([('content','test -f marker')],mutate=True))
+    def test_asserted_expected_failure_can_be_a_passing_behavior_check(self):
+        command = "python3 -c \"import subprocess; r=subprocess.run(['sh','-c','exit 7'],capture_output=True); assert r.returncode==7, r.returncode\""
+        self.assertTrue(self.run_checks([('expected_failure', command)]))
+
     def test_plain_shell_observation_is_not_a_project_check(self):
         from branchwrite.verification import ProjectChecksPolicy
         with tempfile.TemporaryDirectory() as td:

@@ -324,6 +324,11 @@ class Interpreter:
         # Only user-selected checks expose their own names/statuses. Protected
         # inspections and expected-value policies have no detail export here.
         if verdict.get('policy')=='project-checks-and-finish':
+            if 'check_status' in verdict or 'finish_required' in verdict:
+                if verdict.get('check_status') not in ('pass','fail') or type(verdict.get('finish_required')) is not bool:
+                    raise AdmissionError('invalid selected-check progress')
+                public['check_status']=verdict['check_status']
+                public['finish_required']=verdict['finish_required']
             for key in ('checks','remote_checks'):
                 checks=verdict.get(key,())
                 if not isinstance(checks,(tuple,list)) or len(checks)>128:raise AdmissionError('bounded selected checks required')
@@ -347,6 +352,14 @@ class Interpreter:
         if policy in ('blender-scene-and-finish','cad-geometry-and-finish','read-only-and-finish','project-checks-and-finish','command-evidence-and-finish','file-readback-and-finish','page-capture-and-finish','page-inspection-and-finish','interactive-page-inspection-and-finish'):
             if self._file_policy is None or frame is None:raise AdmissionError('host file verification policy and visible scope required')
             if outcome.get('requested_finish') is not True:
+                if policy=='project-checks-and-finish' and self._file_policy.progress_feedback:
+                    # Evaluate existing visible receipts, not a model assertion or
+                    # another tool call. Check readiness and task completion are
+                    # different facts: the explicit finish gate stays closed.
+                    checked=self._file_policy.verify(self.registry,self.kernel.log,self._visible_tool_outcomes(frame))
+                    return dict(checked,status='fail',check_status=checked['status'],finish_required=True,
+                        reason=('selected checks passed on current files; request finish after confirming they cover the task'
+                            if checked['status']=='pass' else checked['reason']))
                 return dict(status='fail',policy=policy,reason='explicit finish request required')
             return self._file_policy.verify(self.registry,self.kernel.log,self._visible_tool_outcomes(frame))
         if policy!='unit-tests-and-finish':raise AdmissionError('unsupported verifier contract')

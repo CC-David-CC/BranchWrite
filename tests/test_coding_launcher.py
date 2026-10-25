@@ -20,6 +20,17 @@ class CodingLauncherTests(unittest.TestCase):
   self.assertEqual(set(cfg['grant']['read_paths']),{'app.py','new.py','tests/test_app.py'})
   self.assertIn('command-evidence-and-finish',launch['program'])
   self.assertEqual(cfg['verification']['commands'][0]['exit_code'],0)
+ def test_experimental_check_progress_is_an_explicit_persisted_host_choice(self):
+  from branchwrite.coding_cli import build_launch,save_launch,read_launch
+  launch=build_launch(self.project,'Repair app.',self.connection,branch='progress',project_files=True)
+  self.assertNotIn('progress_feedback',launch['config']['verification'])
+  launch['config']['verification']['progress_feedback']=True
+  state=self.base/'progress';save_launch(state,launch)
+  self.assertEqual(read_launch(state),launch)
+  bad=build_launch(self.project,'Repair app.',self.connection,branch='bad-progress',project_files=True)
+  bad['config']['verification']['progress_feedback']=1
+  with self.assertRaises(ValueError):save_launch(self.base/'bad-progress',bad)
+
  def test_exploration_is_opt_in_and_has_two_frozen_bounded_approaches(self):
   from branchwrite.coding_cli import enable_exploration,save_launch,read_launch
   original=self.build();self.assertNotIn('exploration',original['config'])

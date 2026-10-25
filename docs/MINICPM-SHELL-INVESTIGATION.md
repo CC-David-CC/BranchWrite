@@ -87,3 +87,8 @@ when a change regresses another task. Do not repair this by silently rewriting
 file escapes, weakening checks, granting shell writes or calling every failure a
 model-training problem. MiniCPM learning and native Muon qualification are
 separate next-stage work; these runs used no weight updates.
+
+
+A later [four-probe check-readiness study](MINICPM-CHECK-PROGRESS-EXPERIMENT.md)
+found no accepted behavioral improvement. The default remains unchanged; the
+new accurate check-progress projection is explicit experimental configuration.
