@@ -46,3 +46,7 @@ unresolved fifth shell workflow.
 are public-safe aggregates. Raw commands, model histories and private task
 artifacts remain outside Git. See the [preceding model probes](MINICPM-CHECK-PROGRESS-EXPERIMENT.md)
 for the current behavioral limits and [S³'s reusable check probe](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/CHECK-SENSITIVITY.md).
+
+The [completed temporary-lifetime follow-up](MINICPM-CHECK-PROGRESS-EXPERIMENT.md#explicit-temporary-file-lifetime-a-completed-negative-result)
+keeps this contract explicit in the model tool card. Both conditions still
+completed four of five workflows; the remaining termination failure is open.

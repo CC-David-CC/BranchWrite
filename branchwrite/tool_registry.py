@@ -258,6 +258,7 @@ class ToolRegistry:
                     rule['description']+=(
                         '; Host enforces '+format(self.executor._shell.timeout,'g')+' seconds deadline and retires the invocation before returning.'
                         ' Each call has a new PID namespace; later calls cannot inspect earlier sandbox PIDs.'
+                        ' /tmp is fresh for every call: temporary files from an earlier call are gone. Create and consume temporary files in the same command.'
                         ' Cleanup evidence is details.isolation.worker_exited and namespace_members_after.'
                         ' A timeout disposition is not success. The host already owns the deadline; nested cancellation wrappers are unnecessary unless the task explicitly requires them.')
                 if key=='path' and name in ('inspect_cad','inspect_scene'):

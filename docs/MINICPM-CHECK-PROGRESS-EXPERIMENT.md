@@ -89,3 +89,39 @@ the accepted default's four completed workflows.
 A subsequent [namespace investigation and real check-sensitivity probe](POSIX-SHELL-NAMESPACE.md)
 repairs ordinary POSIX shell paths and demonstrates why the proposed quoting
 check was too weak. It does not qualify the remaining MiniCPM workflow.
+
+
+## Explicit temporary-file lifetime: a completed negative result
+
+Two new probes used the same strict CUDA89 model/runtime after the POSIX path
+fix. The control and a one-sentence tool-card change each produced 5/5 correct
+saved programs and 4/5 independently completed workflows. The new sentence
+states the observed API contract: every call has a fresh `/tmp`; create and
+consume temporary files in one command. It appeared in five recorded model
+inputs in the changed condition and in none in the control.
+
+The remaining status task again saved a correct repair but reached the step
+budget without finishing. The control used 11 exploratory shell calls, a read
+and a repair. The changed condition used ten named checks, two reads and a
+repair, still without a final action. Naming checks is progress in tool choice;
+it did not improve the whole-workflow outcome. This is one discovery objective
+per condition, not a failure-rate estimate or proof that the contract sentence
+caused the changed action sequence.
+
+The accurate lifetime statement is retained as API documentation in the tool
+card, with the same grants and execution behavior. It is not advertised as a
+MiniCPM termination fix. The variant's 42 focused CPU checks passed against the
+same package bytes now in this branch. Original and changed native operations
+all settled; the owned model service was stopped and no GPU compute application
+remained on its host. No model weights changed.
+
+The earlier status traces also show independent weaknesses: an alleged negative
+input can still contain the target substring; printing a status after a command
+can mask failure; and a temporary input cannot be used in a later invocation.
+These should become fresh separately verified practice families, with explicit
+completion and mixed review. Original diagnostic questions stay protected.
+More feedback alone has not established the missing behavioral improvement.
+
+[Two-condition counts, identities and source patch](../validation/minicpm-shell-investigation-20261024/tmp-lifetime-study-ax.json)
+and [the exact tool-card patch](../validation/minicpm-shell-investigation-20261024/tmp-lifetime-tool-card-ax.patch)
+make this negative result reproducible without publishing raw task histories.

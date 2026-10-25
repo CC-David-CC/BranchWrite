@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "status": "COMPLETE",
+  "scope": "Two five-objective MiniCPM discovery probes; no population failure-rate or behavioral improvement claim",
+  "base_bw_commit": "1b3f029b202c1624f2c954d8dc502ae012d382cb",
+  "pcc_commit": "98a46fc37f5d06a0d3e92829c020356089a00671",
+  "model_weights_sha256": "0ffba3682a853295566b98bc38c0ab755d6b2d91b994bc031ed727a08cfcdf25",
+  "native_execution_profile_id": "005a906c94d6278ce11266cb4a4b816b778b2eead515dfa9db36a309aa01a4f8",
+  "conditions": [
+    {
+      "condition": "control",
+      "artifact_passes": 5,
+      "completed_workflows": 4,
+      "cases": 5,
+      "results": [
+        {
+          "case_id": "python.sum_empty",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 6,
+          "pending_model_requests": 0,
+          "output_tokens": 270,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "1656866006845d100132a0f9c27930360dcbf011efa559065ef90752828c8174",
+          "input_preserved": true,
+          "completed_independent_pass": true
+        },
+        {
+          "case_id": "python.binary_search",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 6,
+          "pending_model_requests": 0,
+          "output_tokens": 528,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "f559a77caf30846e199c76ce41b778d007301f592190eb75cb80e69369f8f2e3",
+          "input_preserved": true,
+          "completed_independent_pass": true
+        },
+        {
+          "case_id": "python.stable_unique",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 4,
+          "pending_model_requests": 0,
+          "output_tokens": 276,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "053630facb960e7115109bf077b1d1026d38902155715b1362800883c462740c",
+          "input_preserved": true,
+          "completed_independent_pass": true
+        },
+        {
+          "case_id": "shell.quoted_filename",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 7,
+          "pending_model_requests": 0,
+          "output_tokens": 287,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "e3e8aae19462535c7466826673394f8881b9e84f7f113ea5d85da7173a7c8098",
+          "input_preserved": true,
+          "completed_independent_pass": true
+        },
+        {
+          "case_id": "shell.failure_status",
+          "artifact_passed": true,
+          "host_policy_verified": false,
+          "runtime_status": "step_budget_exhausted",
+          "model_requests": 13,
+          "pending_model_requests": 0,
+          "output_tokens": 463,
+          "within_external_model_request_cap": false,
+          "checker_evidence_sha256": "a5ce8dfe3c3a1c51ab9f567a6fc7bc63d9c9aa29d9f5bfcd7e74cb663285bce0",
+          "input_preserved": true,
+          "completed_independent_pass": false
+        }
+      ],
+      "source_intent_sha256": "06d2f7a335d84e7090134687fefff9dd57d69c73fa95c41712935a7d5d5f421b",
+      "new_contract_in_recorded_inputs": 0,
+      "status_task_tool_counts": {
+        "run_shell": 11,
+        "replace": 1,
+        "read_file": 1
+      },
+      "result_sha256": "94d4986057238d8014f35ebe5f9e0637ef79fd14e2e52ef31901aed9fb251b75"
+    },
+    {
+      "condition": "temporary_contract",
+      "artifact_passes": 5,
+      "completed_workflows": 4,
+      "cases": 5,
+      "results": [
+        {
+          "case_id": "python.sum_empty",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 4,
+          "pending_model_requests": 0,
+          "output_tokens": 246,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "07016025f24897f621f8ff6a27dfa06381e17bb7582fa50241bb12431aa28102",
+          "input_preserved": true,
+          "completed_independent_pass": true
+        },
+        {
+          "case_id": "python.binary_search",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 7,
+          "pending_model_requests": 0,
+          "output_tokens": 521,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "ebb1713b044059f59f6a1f27aad33fe7020356a1b8c452898274428e428fcacf",
+          "input_preserved": true,
+          "completed_independent_pass": true
+        },
+        {
+          "case_id": "python.stable_unique",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 4,
+          "pending_model_requests": 0,
+          "output_tokens": 278,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "600b71677a82d3fe550bae7a7891ab196d97377ae4f2d643069c76ba3c522739",
+          "input_preserved": true,
+          "completed_independent_pass": true
+        },
+        {
+          "case_id": "shell.quoted_filename",
+          "artifact_passed": true,
+          "host_policy_verified": true,
+          "runtime_status": "complete",
+          "model_requests": 12,
+          "pending_model_requests": 0,
+          "output_tokens": 530,
+          "within_external_model_request_cap": true,
+          "checker_evidence_sha256": "7bd50161a1fb685376e3ccdb4656fb109f058d5f455091faf55e6aed7bf96837",
+          "input_preserved": true,
+          "completed_independent_pass": true
+        },
+        {
+          "case_id": "shell.failure_status",
+          "artifact_passed": true,
+          "host_policy_verified": false,
+          "runtime_status": "step_budget_exhausted",
+          "model_requests": 13,
+          "pending_model_requests": 0,
+          "output_tokens": 605,
+          "within_external_model_request_cap": false,
+          "checker_evidence_sha256": "7ab9b2e24786c93d43def8fd43afb35b9df4c64d8b533da4554fed1454fb37d7",
+          "input_preserved": true,
+          "completed_independent_pass": false
+        }
+      ],
+      "source_intent_sha256": "c4608673f57117d615a696c8f6f192b5aa0b14ceaad9b5712ddf7058995dcfa0",
+      "new_contract_in_recorded_inputs": 5,
+      "status_task_tool_counts": {
+        "run_check": 10,
+        "read_file": 2,
+        "replace": 1
+      },
+      "result_sha256": "5fcf19fbff639ddf96aaca492c00b2ca959688746f322fc9d9624f7b3de630ed"
+    }
+  ],
+  "source_patch_sha256": "3bf53c45c539ebb8e764a5750092bd98f3fb1e17b55a73e31d9baf237eafb1ac",
+  "tool_registry_sha256": "33166ac537896dad435cc0dc6ad2241dc128ecb4ffb0b818b74e6ecdced0c1fe",
+  "cpu_checks": {
+    "passed": 42,
+    "exit_code": 0,
+    "evidence_sha256": "1b62a7855fe9c864d6ea3271a1f1cc8d5f01366ee76d3c84163d5897af83c9dd"
+  },
+  "limits": {
+    "context_tokens": 65536,
+    "thinking": "off",
+    "output_tokens_per_request": 512,
+    "task_wall_guard_seconds": 120,
+    "interpreter_steps": 256,
+    "max_requests_per_action": 12,
+    "global_request_cap_enforced": false
+  },
+  "native_model_operations_settled": true,
+  "model_service_released": true,
+  "weights_updated": false,
+  "behavioral_improvement_established": false,
+  "promoted": false
+}
