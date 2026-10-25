@@ -18,7 +18,7 @@ class ControllerBootstrapHTTPTests(unittest.TestCase):
   from branchwrite.kernel import FrameKernel
   tmp=tempfile.TemporaryDirectory();self.addCleanup(tmp.cleanup);base=Path(tmp.name)
   tokenizer=ThinkingTokenizer()
-  profile=dict(model_contract_id='controller-cpu',execution_profile_id='controller-profile',model_weights_sha256='a'*64,
+  profile=dict(model_contract_id='a'*64,execution_profile_id='b'*64,model_weights_sha256='a'*64,
    execution=dict(GPU=[0],resume_contract='identical-native-operators-v1',generated_operator='normal-verifier-decode',
    selected_token_protocol='consumed-selected-receipt-v1',native_request_protocol='consumed-greedy-ack-v1',prefill_chunk=16,capacity=131072,eos_tokens=[256]))
   coordinator=ContextCoordinator(base/'store',PoolConfig(gpus=(0,),ram_bytes=64*1024**2,disk_bytes=256*1024**2,min_available_bytes=0),
@@ -29,7 +29,9 @@ class ControllerBootstrapHTTPTests(unittest.TestCase):
    initial_root_mode=_initial_root_mode,renderer_id='b'*64)
   catalog=DurableGrammarCatalog(base/'grammars',tokenizer,[256]);self.addCleanup(catalog.close)
   workspace=CowWorkspace(coordinator.store,tokenizer,root_mode_resolver=text.root_mode_for_projection)
-  server=make_server(adapter,api_key='owned-key',text_adapter=text,grammar_catalog=catalog,workspace=workspace)
+  server=make_server(adapter,api_key='owned-key',text_adapter=text,grammar_catalog=catalog,workspace=workspace,
+   connection_info=dict(model_contract_id=profile['model_contract_id'],execution_profile_id=profile['execution_profile_id'],
+    eos_tokens=profile['execution']['eos_tokens']))
   thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
   self.addCleanup(lambda:(server.shutdown(),server.server_close(),thread.join(5)))
   endpoint='http://127.0.0.1:'+str(server.server_port)

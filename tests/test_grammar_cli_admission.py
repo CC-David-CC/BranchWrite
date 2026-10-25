@@ -27,7 +27,7 @@ class GrammarCliAdmissionTests(unittest.TestCase):
   from branchwrite.cow_client import CowClient,OperationJournal
   temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup);base=Path(temp.name)
   tokenizer=ThinkingTokenizer()
-  profile=dict(model_contract_id='cli-grammar-cpu',execution_profile_id='cli-grammar-profile',
+  profile=dict(model_contract_id='a'*64,execution_profile_id='b'*64,
    model_weights_sha256='a'*64,execution=dict(GPU=[0],resume_contract='identical-native-operators-v1',
    generated_operator='normal-verifier-decode',selected_token_protocol='consumed-selected-receipt-v1',
    native_request_protocol='consumed-greedy-ack-v1',prefill_chunk=16,capacity=131072,eos_tokens=[256]))
@@ -39,7 +39,9 @@ class GrammarCliAdmissionTests(unittest.TestCase):
    lambda messages,rendered,add_generation_prompt:_encode(tokenizer,messages,rendered,add_generation_prompt),
    initial_root_mode=_initial_root_mode,renderer_id='b'*64)
   catalog=DurableGrammarCatalog(base/'grammars',tokenizer,[256]);self.addCleanup(catalog.close)
-  server=make_server(adapter,api_key='cli-key',text_adapter=text,grammar_catalog=catalog)
+  server=make_server(adapter,api_key='cli-key',text_adapter=text,grammar_catalog=catalog,
+   connection_info=dict(model_contract_id=profile['model_contract_id'],execution_profile_id=profile['execution_profile_id'],
+    eos_tokens=profile['execution']['eos_tokens']))
   thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
   closed=False
   def stop():
