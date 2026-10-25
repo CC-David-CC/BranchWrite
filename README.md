@@ -1,5 +1,9 @@
 # BranchWrite (BW)
 
+S3 can now evaluate through the [same COW request code BW uses](docs/SHARED-EVALUATION.md).
+PCC reports the [4.8x small forward-work probe result](https://github.com/CC-David-CC/Private_Context_COW/tree/feat/native-learning-curves-20261024#48x-faster-on-small-forward-work-probes),
+with shared-A100 timing limits. S3 records the detailed test method and outcomes.
+
 [What we are discovering](https://github.com/CC-David-CC/sss/blob/feat/foundations-20261023/docs/FINDINGS.md): readable findings about context
 cost, tool differences, training, forgetting and practical next steps.
 

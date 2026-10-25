@@ -203,3 +203,6 @@ not BW's registered full-weight optimizer-profile selector.
 [Precision-retention results](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/MINICPM-QUANTIZATION-RESULTS.md)
 measure whether smaller inference artifacts retain learned behavior; exporting a
 GGUF alone does not establish that.
+
+
+See [shared COW evaluation path](SHARED-EVALUATION.md) for the existing engine connection and its measured scope.
