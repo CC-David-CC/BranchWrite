@@ -70,6 +70,8 @@ def _submit_training(client,args,identity,ids,*,single=False,steps=None):
     payload=dict(lesson_ids=ids,mode=args.mode,batch_size=args.batch_size if guarded or not single else 1,
         steps=(args.steps if args.steps is not None else 16) if guarded else (1 if single else steps),
         learning_rate=args.learning_rate,rank=args.rank,parent_job_id=args.parent_job_id)
+    expected=getattr(args,'expected_parent_sha256',None)
+    if expected is not None:payload['expected_parent_sha256']=expected
     if args.optimizer_profile_id is not None:
         payload['optimizer_profile_id']=args.optimizer_profile_id
         if single and args.steps is not None:payload['steps']=args.steps
@@ -112,10 +114,18 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     p.add_argument('--batch-size',type=int,default=4);p.add_argument('--steps',type=int,help='Default: enough mini-batches to cover the selected lessons once.')
     p.add_argument('--learning-rate',type=float,default=.0001);p.add_argument('--rank',type=int,default=4);p.add_argument('--parent-job-id');p.add_argument('--optimizer-profile-id')
     p.add_argument('--skill-guard',action='store_true')
+    for name in ('create','submit','train'):
+        subs.choices[name].add_argument('--expected-parent-sha256',help='Require this exact native full-weight or adapter parent, not only its job label')
     args=parser.parse_args(argv)
     from .cow_client import CowClientError
     try:
         connection,client=_client(args,connection_override)
+        expected=getattr(args,'expected_parent_sha256',None)
+        if expected is not None:
+            if not re.fullmatch(r'[a-f0-9]{64}',expected) or args.parent_job_id is None:
+                raise ValueError('Expected parent SHA256 requires --parent-job-id and a SHA256')
+            if args.action in ('create','submit') and not args.train_now:
+                raise ValueError('Expected parent selection requires --train-now')
         profile=getattr(args,'optimizer_profile_id',None)
         if profile is not None:
             if not re.fullmatch(r'[a-f0-9]{64}',profile):raise ValueError('Choose an owner-registered optimizer profile SHA-256')

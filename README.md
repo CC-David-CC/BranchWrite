@@ -328,3 +328,7 @@ or a MiniCPM training result.
 contracts/feedback improved the five-objective screen to five correct saved
 artifacts and four completed tasks. One regressing prompt variant was rejected;
 verification/termination on the remaining task is unresolved. No weights changed.
+
+[Pin the training parent](docs/PINNED-TRAINING-PARENTS.md) when continuing a
+registered model or hat. PCC refuses a job/hash mismatch before queuing; S³
+keeps its learning and release decisions separate.
