@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "status": "FOCUSED_CPU_PASS",
+  "base_commit": "906d413423c72d726e8a4c289e6977cbe23e656f",
+  "captured_utc": "2026-10-25T21:12:56Z",
+  "scope": "CPU fixture setup only: synthetic SHA-256 profile IDs plus existing connection_info contract advertisement, no product changes",
+  "changed_files": [
+    {
+      "path": "tests/test_controller_bootstrap_http.py",
+      "base_sha256": "c4123b280c0bb0846c7d70654694d84a36924d937c89d0396b7760e286ac8dc3",
+      "changed_sha256": "2715e871fea0b3ca07b36c0401b094469678239773322311515c4e43bf92d80f",
+      "unittest_assertion_calls_unchanged": 8
+    },
+    {
+      "path": "tests/test_grammar_cli_admission.py",
+      "base_sha256": "2c71c0ecd3a7a00cc5890ee766b7c0b58fd4eb0e5eb01e59a26d7b336ade2368",
+      "changed_sha256": "672bcd6d83e3d22263740b228148e2b4c5e03f7f3f57ab8bc56585cac221e477",
+      "unittest_assertion_calls_unchanged": 10
+    }
+  ],
+  "baseline": {
+    "exit": 1,
+    "tests": 3,
+    "failures": 3,
+    "cause": "HTTP503 Connection discovery is not configured before real bootstrap"
+  },
+  "fixed": {
+    "exit": 0,
+    "tests": 3,
+    "failures": 0,
+    "seconds": 3.286
+  },
+  "test_modules": [
+    "test_controller_bootstrap_http",
+    "test_grammar_cli_admission"
+  ],
+  "unchanged_assertions": true,
+  "checks_passed": [
+    "Original unchanged-base failure reproduced",
+    "All three affected CPU CLI/HTTP tests pass",
+    "All unittest assertion ASTs unchanged",
+    "Only two owned test fixture files changed",
+    "git diff --check"
+  ],
+  "checks_unrun": [
+    "Full BW suite",
+    "Native/GPU autonomous behavior",
+    "Finish-probe candidate: separate worktree and source closure untouched"
+  ],
+  "patch_sha256": "8cfa5e1510ac113cece6c7e4ed7a8c7df9eddeeeb8faedf9631b8fd8c95f5a3b",
+  "model_training": false,
+  "gpu_jobs": false,
+  "frozen_finish_probe_worktrees_modified": false
+}
