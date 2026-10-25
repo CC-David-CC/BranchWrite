@@ -75,12 +75,40 @@ def _reference(log,wire):return log.read_artifact(Artifact(*wire))
 def _returned(kernel,frame):
     return decode(_reference(kernel.log,frame['result']))[2]
 
+
+def validate_tool_feedback(spec):
+    """Closed owner-selected presentation profile, not a tool/verification grant."""
+    if (type(spec) is not dict or set(spec)!={'schema','format'}
+            or type(spec['schema']) is not int or spec['schema']!=1
+            or spec['format']!='compact-v1'):
+        raise AdmissionError('closed compact-v1 tool feedback profile required')
+    return dict(spec)
+
+
+def _compact_tool_feedback(feedback):
+    """Project already recorded data; preserve results and permission guidance.
+
+    Opaque plan/output hashes remain in the original ToolOutcome and artifacts.
+    The operation ID still connects this model view to its canonical receipt.
+    No command, status, output text, verification or execution hint is rewritten.
+    """
+    view=dict(feedback)
+    view.pop('plan_sha256')
+    streams={}
+    for name in ('stdout','stderr'):
+        artifact=view.pop(name+'_artifact')
+        display=view.pop(name+'_display')
+        streams[name]=dict(bytes=artifact['bytes'],shown_bytes=display['source_bytes'],lossy=display['lossy'])
+    view.update(feedback_format='compact-v1',decoding='utf-8/replace',streams=streams)
+    return view
+
 class Interpreter:
     def __init__(self,kernel,registry,*,adapter=None,profiles=None,verification=None,progress=None,
-                 worlds=None,parallel_budgets=None,dispatcher=None):
+                 worlds=None,parallel_budgets=None,dispatcher=None,tool_feedback=None):
         if not isinstance(registry,ToolRegistry):raise AdmissionError('actual host ToolRegistry required')
         if progress is not None and not callable(progress):raise AdmissionError('progress observer must be callable')
         self._progress=progress
+        self._tool_feedback_data=encode(None if tool_feedback is None else validate_tool_feedback(tool_feedback))
         self.kernel=kernel;self.registry=registry;self.adapter=adapter
         self.dispatcher=dispatcher
         self._parallel_budget_data=encode({} if parallel_budgets is None else parallel_budgets)
@@ -91,7 +119,7 @@ class Interpreter:
                     or type(spec) is not dict or set(spec)-{'registry','verification'} or 'registry' not in spec):
                 raise AdmissionError('Named host candidate worlds required')
             self.worlds[name]=Interpreter(kernel,spec['registry'],adapter=adapter,profiles=profiles,
-                verification=spec.get('verification'),progress=progress,dispatcher=dispatcher)
+                verification=spec.get('verification'),progress=progress,dispatcher=dispatcher,tool_feedback=self.tool_feedback)
         self.worlds=MappingProxyType(self.worlds)
         try:
             policy=FileReadbackPolicy
@@ -126,6 +154,8 @@ class Interpreter:
         sources=tuple(sha256(Path(module).read_bytes()).hexdigest() for module in [__file__,kernel_module.__file__,language_module.__file__,records_module.__file__,tool_module.__file__,verification_module.__file__,inputs_module.__file__,image_feedback_module.__file__,ladder_module.__file__,retry_module.__file__,breakdown_module.__file__,progress_module.__file__,exploration_module.__file__])
         self.identity=sha256(encode(('bw.interpreter.v1',registry.identity,None if adapter is None else adapter.identity,
             self.profiles,None if self._file_policy is None else self._file_policy.identity,sources))).hexdigest()
+        if self.tool_feedback is not None:
+            self.identity=sha256(encode(('bw.tool-feedback.compact.v1',self.identity,self.tool_feedback))).hexdigest()
         if self.worlds or self.parallel_budgets:
             self.identity=sha256(encode(('bw.parallel-interpreter.v1',self.identity,
                 {name:context.identity for name,context in self.worlds.items()},self.parallel_budgets,
@@ -141,6 +171,9 @@ class Interpreter:
         if self._progress is not None:
             try:self._progress(event)
             except Exception:self._progress=None
+
+    @property
+    def tool_feedback(self):return decode(self._tool_feedback_data)
 
     @property
     def parallel_budgets(self):return decode(self._parallel_budget_data)
@@ -603,7 +636,10 @@ class Interpreter:
                 if 'evidence' in a:
                     feedback['verification'],proof=self._feedback_verification(frame,data,env[a['evidence']].data)
                     provenance=(*provenance,proof)
-                text=json.dumps(feedback,ensure_ascii=True,sort_keys=True)
+                if self.tool_feedback is None:
+                    text=json.dumps(feedback,ensure_ascii=True,sort_keys=True)
+                else:
+                    text=json.dumps(_compact_tool_feedback(feedback),ensure_ascii=True,sort_keys=True,separators=(',',':'))
                 if 'profile' in a:
                     if data['image'] is not None:
                         source_name=self.profiles[a['profile']]['source']

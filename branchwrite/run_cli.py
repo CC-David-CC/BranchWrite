@@ -15,7 +15,7 @@ from .records import RuntimeLog,Artifact,decode
 from .kernel import FrameKernel
 from .execution import Executor,Grant
 from .tool_registry import ToolRegistry
-from .interpreter import Interpreter,Value,AdmissionError,_SUPPORTED
+from .interpreter import Interpreter,Value,AdmissionError,_SUPPORTED,validate_tool_feedback
 from .cow_client import CowClient,OperationJournal,OperationIndeterminate
 from .model_dispatch import ModelAdapter
 from .language import parse
@@ -110,8 +110,9 @@ def _config(text,*,prepared_prefix=False):
     try:config=json.loads(text,object_pairs_hook=_pairs,parse_constant=lambda _: (_ for _ in ()).throw(AdmissionError('nonfinite host configuration value')))
     except (ValueError,TypeError) as exc:raise AdmissionError('invalid host configuration') from exc
     required={'schema','source','run_id','grant','bindings'}
-    if type(config) is not dict or (not required<=set(config) or set(config)-required-{'source_policy','cow','profiles','verification','browser','shell','context_pack','remotes','cad','blender','exploration'}) or type(config['schema']) is not int or config['schema']!=1:
+    if type(config) is not dict or (not required<=set(config) or set(config)-required-{'source_policy','cow','profiles','verification','browser','shell','context_pack','remotes','cad','blender','exploration','tool_feedback'}) or type(config['schema']) is not int or config['schema']!=1:
         raise AdmissionError('unsupported host configuration fields/schema; credentials belong in BW_COW_API_KEY')
+    if 'tool_feedback' in config:validate_tool_feedback(config['tool_feedback'])
     if 'exploration' in config:
         from .exploration import budget
         spec=config['exploration']
@@ -368,7 +369,7 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
                 client.require_capabilities(cow['model_contract_id'],cow['execution_profile_id'],
                     required=('text','inline_grammars') if cow.get('grammar_registration')=='inline' else ('text',))
             adapter=ModelAdapter(client,run_id=config['run_id'],model_contract_id=cow['model_contract_id'],execution_profile_id=cow['execution_profile_id'],eos_tokens=tuple(cow['eos_tokens']),model_pause=model_pause,pause_notice=pause_notice)
-            runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,**parallel)
+            runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,tool_feedback=config.get('tool_feedback'),**parallel)
             runtime.preflight(source,{**{name:value.type for name,value in bindings.items()},'world':'World','current':'COWSource'})
             if cow.get('grammar_registration')=='inline':
                 # Full pure preflight above must succeed before publishing metadata.
@@ -383,7 +384,7 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
                 adapter=ModelAdapter(client,run_id=config['run_id'],model_contract_id=cow['model_contract_id'],
                     execution_profile_id=cow['execution_profile_id'],eos_tokens=tuple(cow['eos_tokens']),model_pause=model_pause,pause_notice=pause_notice,
                     grammar_mapping=registered['states'])
-                runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,**parallel)
+                runtime=Interpreter(kernel,registry,adapter=adapter,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,tool_feedback=config.get('tool_feedback'),**parallel)
                 runtime.preflight(source,{**{name:value.type for name,value in bindings.items()},'world':'World','current':'COWSource'})
             if kernel.frames():
                 root=kernel.frame('program');original=decode(log.read_artifact(Artifact(*root['inputs'])))
@@ -399,7 +400,7 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
                         command_requirements=getattr(runtime._file_policy,"commands",()))
                 else:head=client.head(cow['branch'])
                 bindings['current']=Value('COWSource',dict(head=dict(name=head.name,revision=head.revision,tip=head.tip,root=head.root),mode=cow['mode']))
-        if adapter is None:runtime=Interpreter(kernel,registry,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,**parallel)
+        if adapter is None:runtime=Interpreter(kernel,registry,profiles=config['profiles'],verification=config.get('verification'),progress=progress or _progress_notice,tool_feedback=config.get('tool_feedback'),**parallel)
         runtime.start(source,bindings)
         limit=1 if command=='step' else max_steps
         report=runtime.run(max_steps=limit,control=control)
