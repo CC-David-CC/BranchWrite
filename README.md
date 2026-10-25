@@ -333,4 +333,4 @@ verification/termination on the remaining task is unresolved. No weights changed
 registered model or hat. PCC refuses a job/hash mismatch before queuing; S³
 keeps its learning and release decisions separate.
 
-[Registered LoRA AdamW through BW and COW](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-learning-curves-20261024/docs/REGISTERED-LORA-ADAMW.md) now has real tiny CPU checks for exact continuation, new lesson blocks and retry safety. It is explicit and optional; existing default training recipes are unchanged.
+[Registered LoRA AdamW through BW and COW](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-learning-curves-20261024/docs/REGISTERED-LORA-ADAMW.md) now has real CPU checks and a short MiniCPM A100 qualification through both actual clients. Resumed and uninterrupted GPU updates produced identical adapter and optimizer-state file hashes. It is explicit and optional; existing default training recipes are unchanged.

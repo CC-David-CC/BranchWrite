@@ -208,3 +208,11 @@ GGUF alone does not establish that.
 
 
 See [shared COW evaluation path](SHARED-EVALUATION.md) for the existing engine connection and its measured scope.
+
+
+The registered LoRA path also completed a short real MiniCPM A100 check through
+BW and COW. One update plus a resumed update matched the entire adapter and
+optimizer-state files from two uninterrupted updates. Retries did not train
+again. This qualifies that integration recipe on one short verified practice
+example, not BW shell-task quality, generalization or automatic release.
+[Evidence and repeatable owner procedure](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/REGISTERED-LORA-MODEL-PROBE.md).
