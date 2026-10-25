@@ -100,3 +100,14 @@ separate test-only defect was subsequently fixed in
 [`76986b2`](https://github.com/CC-David-CC/BranchWrite/commit/76986b2c9b5069fd70bcb45288d8713de895be48).
 It was not a failure introduced by this instruction option. No behavior default,
 verification gate or model candidate was promoted from the abandoned probe.
+
+## Integrated CPU checkpoint
+
+The native-learning branch now includes the separate discovery fixture repair,
+compact-feedback option and finish-request option together. On that combined
+source, **166 focused CPU checks passed**, including actual CLI/HTTP bootstrap,
+retained-prefix admission, direct-tool grammar, feedback, checks/finish, restart
+and unknown-effect refusal. [CPU evidence](../validation/combined-coding-protocol-20261025-bl/cpu-checks.json)
+records the modules, source and log hashes. This is not a full-suite or native
+behavior qualification; the abandoned trial above remains the actual behavioral
+evidence. Both options stay opt-in.

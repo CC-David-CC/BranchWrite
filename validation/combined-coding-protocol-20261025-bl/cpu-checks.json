@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "status": "COMBINED_FOCUSED_CPU_PASS",
+  "source_commit": "8393c88ab059d0524ab2ef7b35e5febfb69c704a",
+  "tests": 166,
+  "passed": 166,
+  "failed": 0,
+  "skipped": 0,
+  "runs": [
+    {
+      "tests": 133,
+      "passed": 133,
+      "failed": 0,
+      "skipped": 0,
+      "modules": [
+        "test_compact_tool_feedback",
+        "test_finish_request_contract",
+        "test_controller_bootstrap_http",
+        "test_grammar_cli_admission",
+        "test_coding_defaults",
+        "test_coding_launcher_http",
+        "test_coding_continuation_admission",
+        "test_coding_sampler_choice",
+        "test_coding_pack_launch",
+        "test_coding_contract",
+        "test_tool_verification_feedback",
+        "test_output_feedback",
+        "test_model_problem_feedback",
+        "test_mode_grammar",
+        "test_coding_status",
+        "test_coding_review",
+        "test_coding_reconciliation",
+        "test_unfinished_task",
+        "test_interpreter"
+      ],
+      "stderr_sha256": "4b412715f355d9cdc8b9a7fff282fa3cd2a15b11774072b6b7659da3a3049c50"
+    },
+    {
+      "tests": 33,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0,
+      "modules": [
+        "test_direct_tool_mode",
+        "test_controller_prefix",
+        "test_coding_launcher",
+        "test_registered_grammar_mapping",
+        "test_project_check_progress"
+      ],
+      "stderr_sha256": "e35ee964e04e319b2e4a8e54939e0fde8eea29a38d464e857ed775417cec2de3"
+    }
+  ],
+  "scope": "Integrated compact feedback, opt-in finish wording, actual CPU bootstrap and discovery fixture repair. Mechanics only; no autonomous improvement accepted.",
+  "source_sha256": {
+    "branchwrite/interpreter.py": "9da55aedf3cd5739c0b8a1a76857c0cfc125eced01c07b37884dbf82eb32d7f1",
+    "branchwrite/coding_defaults.py": "d58a1540ad53d086b9e8ba908ac722c5b08f2f76d99346c01d485cef5bc23eb3",
+    "branchwrite/coding_cli.py": "1b8ffbea6c3e95afedd73c40c132cc0dc127b4244d75e6f668a5efddc8cf950d",
+    "branchwrite/run_cli.py": "91bf6669d00aac1389305d522d1f7cd7f02d1037207e6d28a638bff313987ccc",
+    "branchwrite/__main__.py": "e670093953ddaf0bb9c7a0edaf7b6481fbad2e3b4a638070d1d7073bea4bc47b"
+  },
+  "full_suite_run": false,
+  "model_calls_started": 0,
+  "gpu_jobs_started": 0,
+  "defaults_changed": false,
+  "behavior_promotion": false
+}
