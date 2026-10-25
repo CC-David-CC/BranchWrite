@@ -27,9 +27,11 @@ silently substitute another parent or reset moments after a failed resume.
 
 Without `--optimizer-profile-id`, the existing client path uses its legacy SGD
 recipe. Full AdamW/Muon training needs an explicitly selected registered profile.
-Native/offline LoRA AdamW continuation is tested separately; registered optimizer
-profiles currently require full mode. Do not label a default LoRA CLI job as
-AdamW. Extending those registered profiles to LoRA remains integration work.
+Explicit schema-2 LoRA AdamW policies are now available through both clients;
+the policy pins its rank as well as the recipe. Schema-1 policies retain their
+full-only meaning. Do not label a default LoRA CLI job as AdamW. See the
+[registered LoRA guide](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-learning-curves-20261024/docs/REGISTERED-LORA-ADAMW.md)
+for configuration, fresh blocks, exact resume and CPU qualification limits.
 
 The guard is optional; requests that omit it retain their existing fields and
 default behavior. Once accepted, an operation ID binds the entire request,

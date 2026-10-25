@@ -162,9 +162,11 @@ recipe or the end of the learning loop. Use the advertised rate explicitly. Fres
 moments are appropriate for a changed block while retaining learned parent
 weights; resume continues the exact saved dataset order, moments and cursor.
 Clients supply registered IDs, never model/executable/state paths or GPU grants.
-Explicit profiles require full-weight mode and currently cannot be combined
-with the legacy `--skill-guard` multi-round wrapper. Jobs without a profile
-retain the previous path.
+Schema-1 profiles require full-weight mode. Explicit schema-2 profiles also
+support LoRA AdamW with an exact rank; both clients honor explicit update counts
+on registered single-example jobs. [Configuration and continuation guide](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-learning-curves-20261024/docs/REGISTERED-LORA-ADAMW.md).
+Adaptive profiles currently cannot be combined with the legacy `--skill-guard`
+multi-round wrapper. Jobs without a profile retain the previous SGD path.
 
 If a deliberately timed profile is selected, it can finish before visiting every
 selected lesson. Check actual
