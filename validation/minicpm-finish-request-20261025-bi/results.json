@@ -1,0 +1,327 @@
+{
+  "accepted": false,
+  "conclusion": "No candidate promotion. The only complete pair failed before editing or named verification in both conditions. The incomplete probe does not isolate or disprove a finalization/readiness effect.",
+  "conditions": {
+    "baseline": {
+      "instruction_style": "compact",
+      "tool_feedback": "compact-v1"
+    },
+    "check_readiness_feedback": false,
+    "fix": {
+      "instruction_style": "compact-finish-request",
+      "tool_feedback": "compact-v1"
+    },
+    "host_card_grammar_grants_and_explicit_finish_enforcement_unchanged": true,
+    "same_new_bw_source": true
+  },
+  "counts": {
+    "attempted_workflows": 3,
+    "graded_failures": 2,
+    "independently_graded_workflows": 2,
+    "planned_workflows": 16,
+    "timeout_ungraded_workflows": 1,
+    "unrun_workflows": 13
+  },
+  "cpu_checks": {
+    "fresh_oracle_controls_passed": 24,
+    "guard_evidence_sha256": "c01a76d039d491d8c74ae8a623b068b203fbad45b8f4fb0ebfec66e470eb6b48",
+    "guard_scope": "Pre-grade effect settlement, not autonomous model capability. Settled unfinished workflows are allowed; dispatched or native uncertainty, missing retirement evidence, abnormal exits and live owned work stop grading.",
+    "guard_sha256": "40bcffba6b98abdd20178b1af3c2928f12eac5f519c7b31fd8b74f047f1788ad",
+    "guard_test_sha256": "7f7fa5a1f3d5c5d73991efb549387ac81cdfc8705ff2fa1bd0836c1fd57305fa",
+    "historical_fixture_failures": {
+      "cause": "Synthetic CPU servers omitted required connection discovery.",
+      "count": 3,
+      "product_logic_unchanged_by_that_fix": true,
+      "reproduced_on_unmodified_base": true,
+      "separate_fix_commit": "76986b2c9b5069fd70bcb45288d8713de895be48"
+    },
+    "relevant_bw_checks_passed": 58,
+    "settlement_guard_checks_passed": 5
+  },
+  "date_utc": "2026-10-25",
+  "graded_results": [
+    {
+      "artifact_passed": false,
+      "case_id": "fresh.status.marker",
+      "case_index": 0,
+      "checker_evidence_sha256": "205d8c48e1a08b2e33801aa05650922c1fccc8c8915aebdd337b637297a19b21",
+      "completed_independent_pass": false,
+      "condition": "baseline",
+      "counter_deltas": {
+        "checkpoint_export_bytes": 5754849709,
+        "checkpoint_import_bytes": 5147319973,
+        "consumed_tokens": 7062,
+        "forward_calls": 448,
+        "forward_tokens": 7062,
+        "sampling_calls": 414
+      },
+      "explicit_finish_observed": false,
+      "exploratory_shell_calls": 10,
+      "feedback_tokens": 4060,
+      "feedback_utf8_bytes": 14374,
+      "host_policy_verified": false,
+      "input_preserved": true,
+      "model_requests": 13,
+      "named_check_calls": 0,
+      "output_tokens": 414,
+      "pending_model_requests": 0,
+      "repeated_identical_shell_or_check_calls": 9,
+      "runtime_status": "step_budget_exhausted",
+      "tool_calls": {
+        "read_file": 2,
+        "run_shell": 10
+      }
+    },
+    {
+      "artifact_passed": false,
+      "case_id": "fresh.status.marker",
+      "case_index": 0,
+      "checker_evidence_sha256": "f714a76fd5d25df09c66ad0b770f3dbc7a51943e3b7c3e459f937891af37be15",
+      "completed_independent_pass": false,
+      "condition": "fix",
+      "counter_deltas": {
+        "checkpoint_export_bytes": 6098789653,
+        "checkpoint_import_bytes": 5432588821,
+        "consumed_tokens": 7744,
+        "forward_calls": 680,
+        "forward_tokens": 7744,
+        "sampling_calls": 646
+      },
+      "explicit_finish_observed": false,
+      "exploratory_shell_calls": 10,
+      "feedback_tokens": 4510,
+      "feedback_utf8_bytes": 15645,
+      "host_policy_verified": false,
+      "input_preserved": true,
+      "model_requests": 13,
+      "named_check_calls": 0,
+      "output_tokens": 646,
+      "pending_model_requests": 0,
+      "repeated_identical_shell_or_check_calls": 9,
+      "runtime_status": "step_budget_exhausted",
+      "tool_calls": {
+        "read_file": 2,
+        "run_shell": 10
+      }
+    }
+  ],
+  "kind": "abandoned_fixed_weight_finish_request_wording_development_probe",
+  "limitations": [
+    "Two graded failures, one intentionally ungraded timeout and thirteen unrun workflows; not sixteen completed scores.",
+    "No attempted workflow reached a correct saved artifact with current passing named checks, so this probe did not isolate the finalization hypothesis.",
+    "No percentage-based causal, mastery, failure-rate, speedup or harness-ranking claim.",
+    "Same original model weights throughout; no training attribution.",
+    "Raw prompts, solutions, model/tool text, machine-local paths, credentials and process details are excluded."
+  ],
+  "limits": {
+    "context_tokens": 65536,
+    "global_model_request_cap_enforced": false,
+    "interpreter_steps_per_task": 256,
+    "output_tokens_per_model_action": 6144,
+    "output_tokens_per_request": 512,
+    "requests_per_model_action": 12,
+    "shell_deadline_seconds": 20,
+    "thinking": "off",
+    "wall_guard_seconds_per_task": 120
+  },
+  "measurement_definitions": {
+    "artifact_passed": "Independent host oracle accepts captured saved files and protected inputs remain unchanged.",
+    "completed_independent_pass": "Independent artifact pass plus BW verification/explicit completion with no pending native request.",
+    "model_requests": "Whole-workflow native requests, including continuations; not the per-action ceiling.",
+    "posthoc_phase_analysis": "Read-only canonical admitted ToolOutcome observations across all three attempted workflows; not a new grade or a selective subset.",
+    "timeout_recorded_tokens_and_timings": "Only completed request receipts; cancelled partial output and timing are unknown. No total timeout-cost claim."
+  },
+  "model": {
+    "filename": "MiniCPM5-2B-F16.gguf",
+    "repository": "openbmb/MiniCPM5-2B-GGUF",
+    "revision": "2079a22f3beaa4e306449978533478fe0522f4b3",
+    "sha256": "0ffba3682a853295566b98bc38c0ab755d6b2d91b994bc031ed727a08cfcdf25"
+  },
+  "owner_held_evidence_digests": {
+    "abandonment_sha256": "b711851553011e1632a666280e2534e7ff432c0527545cb7e376159ffb377566",
+    "aggregate_sha256": "b720c08422fc674f42c1ad6e42284085406f4dce80000720664f6a13357f61ae",
+    "release_sha256": "05ccf71f0b316bdba38aae86aec1f79aeda04225cc3610373cadcbf096edf66a",
+    "source_audit_sha256": "78a75446761920e528d413327aa279fd513a0b2615878fa288a4dc6c86258944",
+    "timeout_analysis_sha256": "2331d9ceb2ec420d90c30b8fa0f3fe3a945baf694d6962b8da4e18666beb8865"
+  },
+  "posthoc_phase_analysis": [
+    {
+      "admitted_tool_counts": {
+        "read_file": 2,
+        "run_shell": 10
+      },
+      "analysis_kind": "posthoc_read_only_phase_description",
+      "any_edit": false,
+      "any_finish": false,
+      "any_named_check": false,
+      "case_index": 0,
+      "condition": "baseline",
+      "readiness_phase_reached": false
+    },
+    {
+      "admitted_tool_counts": {
+        "read_file": 2,
+        "run_shell": 10
+      },
+      "analysis_kind": "posthoc_read_only_phase_description",
+      "any_edit": false,
+      "any_finish": false,
+      "any_named_check": false,
+      "case_index": 0,
+      "condition": "fix",
+      "readiness_phase_reached": false
+    },
+    {
+      "admitted_tool_counts": {
+        "read_file": 2,
+        "run_shell": 1
+      },
+      "analysis_kind": "posthoc_read_only_phase_description",
+      "any_edit": false,
+      "any_finish": false,
+      "any_named_check": false,
+      "case_index": 1,
+      "condition": "fix",
+      "readiness_phase_reached": false
+    }
+  ],
+  "promoted": false,
+  "provenance": {
+    "bw_base_commit": "906d413423c72d726e8a4c289e6977cbe23e656f",
+    "fresh_case_spec_sha256": "8366b32a61701b5ba64ac65042cf4b64438d706c7dffe814ded92c0efc71180a",
+    "fresh_oracle_sha256": "ac9c9d62a7cdbb5df91734121e348473451a84013961d4258bf1f77a5f4dfd4a",
+    "manifest_sha256": "7d0b9a7feb8e55ebeb67f422fa71550c2a489a45ea548f8b91e532d5161d7dfd",
+    "oracle_qualification_sha256": "ba34c50f39ed31487dd619c4f7ab7ab22ae1a73e143f27c88d0f36ccdea48a4b",
+    "pcc_commit": "98a46fc37f5d06a0d3e92829c020356089a00671",
+    "protocol_sha256": "d68289a1312fddd20396083ad15c76efaf3595fe254499f41e61731145fa7c7f",
+    "qualified_code_sha256": {
+      "branchwrite/__main__.py": "e670093953ddaf0bb9c7a0edaf7b6481fbad2e3b4a638070d1d7073bea4bc47b",
+      "branchwrite/coding_cli.py": "1b8ffbea6c3e95afedd73c40c132cc0dc127b4244d75e6f668a5efddc8cf950d",
+      "branchwrite/coding_defaults.py": "d58a1540ad53d086b9e8ba908ac722c5b08f2f76d99346c01d485cef5bc23eb3",
+      "branchwrite/interpreter.py": "9da55aedf3cd5739c0b8a1a76857c0cfc125eced01c07b37884dbf82eb32d7f1",
+      "branchwrite/run_cli.py": "91bf6669d00aac1389305d522d1f7cd7f02d1037207e6d28a638bff313987ccc",
+      "branchwrite/terminal.py": "9021c9b7d4098916bf6f1e753094aa11b27308d9af007b15aaa77daa67d77ffb",
+      "branchwrite/verification.py": "7549329a3b2def4cf13f4f03279544037feb0c86db7ec715cd24e2175e06dcdd",
+      "tests/test_finish_request_contract.py": "38eeaf319812f637bf4c01c20ce362fd722d3cc65e805332a8bb4e3930b735b7"
+    },
+    "same_new_bw_source_for_both_conditions": true,
+    "source_and_weights_postrun_audit": "PASS",
+    "sss_commit": "0d00714960feb8f14b1fb9b6423e2f62edffb9b3"
+  },
+  "resource_release": {
+    "all_local_journals_complete": false,
+    "gpu_lease_released": true,
+    "original_pending_local_intent_preserved": true,
+    "owned_service_and_child_released": true,
+    "service_port_closed": true,
+    "trial_nonresumable": true
+  },
+  "runtime": {
+    "execution_profile_id": "005a906c94d6278ce11266cb4a4b816b778b2eead515dfa9db36a309aa01a4f8",
+    "hardware_class": "RTX4090",
+    "profile_sha256": "db97ea515a02c0144c3d151a4061872b759a27b9fc4e4866ef009c8555044e4b",
+    "same_qualified_native_binaries_and_weights": true
+  },
+  "schema": 1,
+  "status": "abandoned_nonresumable",
+  "timeout_ungraded": {
+    "artifact_passed": null,
+    "cancellation": {
+      "durable": false,
+      "local_journal_rewritten": false,
+      "observation_preserved_before_service_release": true,
+      "observed_state": "cancelled",
+      "scope": "coordinator-process",
+      "trial_resumable": false
+    },
+    "cancelled_request_partial_output_and_timing": "unknown; no durable answer",
+    "case_id": "fresh.status.absence",
+    "case_index": 1,
+    "completed_independent_pass": null,
+    "completed_native_operations": 9,
+    "completed_unfinished_action_chunks": 6,
+    "condition": "fix",
+    "guard_stopped_before_workspace_capture_and_grading": true,
+    "incomplete_action_admitted_or_executed": false,
+    "incomplete_tool_action": "run_shell",
+    "independent_grade_performed": false,
+    "locally_pending_native_operations_preserved": 1,
+    "original_native_operations_issued": 10,
+    "readiness_phase_reached": false,
+    "recorded_complete_capture_seconds": 5.312555853975937,
+    "recorded_complete_generation_seconds": 69.88759118691087,
+    "recorded_complete_output_tokens": 3144,
+    "recorded_complete_request_seconds": 88.08184229908511,
+    "task_guard_reached": true,
+    "tokens_in_completed_unfinished_action_chunks": 3072,
+    "wall_guard_reached_before_action_request_or_token_cap": true
+  },
+  "unrun": [
+    {
+      "case_id": "fresh.status.absence",
+      "case_index": 1,
+      "condition": "baseline"
+    },
+    {
+      "case_id": "fresh.status.nonempty",
+      "case_index": 2,
+      "condition": "baseline"
+    },
+    {
+      "case_id": "fresh.status.nonempty",
+      "case_index": 2,
+      "condition": "fix"
+    },
+    {
+      "case_id": "fresh.status.wholeline",
+      "case_index": 3,
+      "condition": "fix"
+    },
+    {
+      "case_id": "fresh.status.wholeline",
+      "case_index": 3,
+      "condition": "baseline"
+    },
+    {
+      "case_id": "fresh.copy.paths",
+      "case_index": 4,
+      "condition": "baseline"
+    },
+    {
+      "case_id": "fresh.copy.paths",
+      "case_index": 4,
+      "condition": "fix"
+    },
+    {
+      "case_id": "fresh.copy.reversed_arguments",
+      "case_index": 5,
+      "condition": "fix"
+    },
+    {
+      "case_id": "fresh.copy.reversed_arguments",
+      "case_index": 5,
+      "condition": "baseline"
+    },
+    {
+      "case_id": "fresh.python.product",
+      "case_index": 6,
+      "condition": "baseline"
+    },
+    {
+      "case_id": "fresh.python.product",
+      "case_index": 6,
+      "condition": "fix"
+    },
+    {
+      "case_id": "fresh.python.last_match",
+      "case_index": 7,
+      "condition": "fix"
+    },
+    {
+      "case_id": "fresh.python.last_match",
+      "case_index": 7,
+      "condition": "baseline"
+    }
+  ],
+  "weights_updated": false
+}

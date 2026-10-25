@@ -132,9 +132,9 @@ def controller_prefix(schema,*,context_pack=None,context_pack_id=None,style="wor
     family=dict(oneOf=[dict(type='object',properties=dict(tool=dict(type='string',enum=[name]),
                 arguments=dict(type='object')),required=['tool','arguments'],additionalProperties=False)
                 for name in sorted(names)])
-    if style not in ('worked-examples','compact'):
+    if style not in ('worked-examples','compact','compact-finish-request'):
         raise ValueError('unknown coding instruction style')
-    if style=='compact':
+    if style in ('compact','compact-finish-request'):
         return ('bw.controller-prefix.compact.v2\n'
             'You are BranchWrite, a coding worker in an owned project. '
             'Return exactly one JSON tool action per response, then wait for its actual result. '
@@ -152,8 +152,9 @@ def controller_prefix(schema,*,context_pack=None,context_pack_id=None,style="wor
             'For outputs derived from input files, read the inputs, calculate from the saved program, and preserve identifiers exactly. '
             'Verify the saved output against the actual current input data and every requested condition, not just the function in isolation. '
             'Reopen saved files and verify every requested output exists and has the required contents. '
-            'Request finish only after the current host completion policy is satisfied. '
-            'Report unresolved failures and limits honestly. Never resend an unresolved operation; reconcile its original ID. '
+            +("Once the host's required evidence and checks are ready, request finish so the host can evaluate completion; final verification happens after that request. "
+                if style=='compact-finish-request' else 'Request finish only after the current host completion policy is satisfied. ')
+            +'Report unresolved failures and limits honestly. Never resend an unresolved operation; reconcile its original ID. '
             'Available tool families: '+json.dumps(sorted(names))+'.\n'
             +_reference_prefix(context_pack,context_pack_id))
     header=(CONTROLLER_PREFIX_VERSION+'\n'

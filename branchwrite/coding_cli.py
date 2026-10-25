@@ -63,7 +63,7 @@ def build_launch(project,task,connection,*,branch,project_files=False,read_paths
     if mode not in ('work','plan','chat','aside'):raise ValueError('unsupported coding mode')
     from .coding_defaults import generation_profile
     profile=generation_profile(sampler,thinking_mode=thinking_mode)
-    if instruction_style not in ('worked-examples','compact'):
+    if instruction_style not in ('worked-examples','compact','compact-finish-request'):
         raise ValueError('unknown coding instruction style')
     if from_prefix is not None and from_branch is not None:
         raise ValueError('choose a prepared prefix or a completed branch, not both')
@@ -134,10 +134,10 @@ def build_launch(project,task,connection,*,branch,project_files=False,read_paths
     if from_branch is not None and (type(from_branch) is not str or not from_branch):raise ValueError('source branch required')
     if from_snapshot is not None and (type(from_snapshot) is not str or not re.fullmatch('[0-9a-f]{64}',from_snapshot)):raise ValueError('invalid source snapshot')
     cow=dict(connection,branch=branch,mode='ask',bootstrap='coding',grammar_registration='inline')
-    if instruction_style=='compact':
+    if instruction_style in ('compact','compact-finish-request'):
         if from_branch is not None or from_snapshot is not None:
             raise ValueError('compact instructions require a new root; retained prefixes are immutable')
-        cow['controller_prefix']='compact'
+        cow['controller_prefix']=instruction_style
     fork=None
     if from_branch is not None:
         cow.pop('bootstrap');cow['mode']='ask' if from_prefix is not None else 'append_user'

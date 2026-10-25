@@ -188,7 +188,7 @@ def _config(text,*,prepared_prefix=False):
         if 'bootstrap' in cow and (cow['bootstrap']!='coding' or cow['mode']!='ask'):raise AdmissionError('coding bootstrap requires a new context-only ask boundary')
         if 'grammar_registration' in cow and (cow['grammar_registration']!='inline' or not (cow.get('bootstrap')=='coding' or ('bootstrap' not in cow and (cow['mode']=='append_user' or (prepared_prefix and cow['mode']=='ask'))))):
             raise AdmissionError('inline grammar registration requires coding bootstrap or an explicit retained-context task')
-        if 'controller_prefix' in cow and (cow['controller_prefix']!='compact' or cow.get('bootstrap')!='coding' or cow.get('grammar_registration')!='inline'):
+        if 'controller_prefix' in cow and (cow['controller_prefix'] not in ('compact','compact-finish-request') or cow.get('bootstrap')!='coding' or cow.get('grammar_registration')!='inline'):
             raise AdmissionError('compact controller instructions require a new inline coding root')
         if type(cow['eos_tokens']) is not list or not cow['eos_tokens'] or any(type(t) is not int or t<0 for t in cow['eos_tokens']):raise AdmissionError('actual EOS token IDs required')
     if 'context_pack' in config:
