@@ -56,6 +56,9 @@ def main(argv=None):
         if tail and tail[0]=='legacy':return skills_main(['tree',*tail[1:]])
         commands={'graph','exercise','school-day','report','teaching-example','explore','workflows'}
         return skills_main(tail if tail and tail[0] in commands else ['graph',*tail])
+    if argv and argv[0]=='learning':
+        from .learning_cli import main as learning_main
+        return learning_main(argv[1:])
     if argv and argv[0]=='lesson':
         from .lesson_cli import main as lesson_main
         return lesson_main(argv[1:])
@@ -66,6 +69,7 @@ def main(argv=None):
     parser=argparse.ArgumentParser(prog='branchwrite',description='Inspect .bw syntax or execute a host-authorized workflow.')
     commands=parser.add_subparsers(dest='command',required=True)
     commands.add_parser('lesson',help='Write verified lessons and request single or batched native training.')
+    commands.add_parser('learning',help='Drive PCC-owned learning rounds and reconcile original work.')
     guided=commands.add_parser('start',help='Guide you through one coding task in the current project folder.')
     session=commands.add_parser('session',help='Keep talking while BranchWrite edits this project.')
     session.add_argument('project',type=Path,nargs='?',default=Path.cwd())

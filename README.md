@@ -1,5 +1,8 @@
 # BranchWrite (BW)
 
+[The durable learning loop: ELI5, master's, PhD, and applied guide](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/LEARNING-MACHINERY.md) explains ownership, recovery, paired learning/forgetting, expanding assessments, commands, and current qualification limits. The new machinery checks are separate from the fixed 68-update comparison.
+
+
 [Shell compatibility and check-quality findings](docs/POSIX-SHELL-NAMESPACE.md):
 ordinary `/bin/sh` paths now work inside the restricted namespace. This fixes
 an environment defect; MiniCPM’s remaining workflow failure is still open.

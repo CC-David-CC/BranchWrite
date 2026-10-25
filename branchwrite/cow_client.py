@@ -1541,7 +1541,7 @@ class CowClient:
         return GenerationReceipt(operation_id, branch, snapshot, dict(value))
 
     def training_submit(self,kind,payload,operation_id):
-        if kind not in ('lessons','jobs','exports'):raise ValueError('Unknown training operation')
+        if kind not in ('lessons','jobs','exports','learning-runs','learning-steps'):raise ValueError('Unknown training operation')
         operation_id=self._operation_id(operation_id)
         path='/cow/training/'+kind;body=dict(payload,operation_id=operation_id)
         try:return self._mutate(operation_id,path,body,stream=False).json_value
@@ -1555,18 +1555,35 @@ class CowClient:
             self.journal.complete(self.journal.read(operation_id),receipt)
             return receipt
 
-    def training_read(self,resource,identity=None):
-        if resource not in ('lessons','jobs','operations','skills','optimizer-profiles','exports'):raise ValueError('Unknown training resource')
+    def training_read(self,resource,identity=None,*,round_index=None):
+        if resource not in ('lessons','jobs','operations','skills','optimizer-profiles','exports','learning-policies','learning-runs'):raise ValueError('Unknown training resource')
         if identity is not None and (type(identity) is not str or not re.fullmatch(r'[A-Za-z0-9_-]{1,128}',identity)):
             raise ValueError('Invalid training resource identity')
         path='/cow/training/'+resource+('' if identity is None else '/'+identity)
+        if round_index is not None:
+            if resource!='learning-runs' or identity is None or type(round_index) is not int or not 1<=round_index<=100000:
+                raise ValueError('Learning round read requires run identity and bounded positive index')
+            path+='/rounds/'+str(round_index)
         value=self.transport.request('GET',path).json_value
         if type(value) is not dict or value.get('schema')!=1:raise ReceiptError('Invalid training resource')
+        if resource=='learning-runs' and identity is not None and (value.get('run_id')!=identity or value.get('promoted') is not False):
+            raise ReceiptError('Learning run identity or promotion status is invalid')
+        if round_index is not None and value.get('round')!=round_index:raise ReceiptError('Learning round identity differs')
         if resource=='jobs' and (value.get('job_id')!=identity or value.get('promoted') is not False):
             raise ReceiptError('Training job identity or promotion status is invalid')
         return value
 
     def _validate_nonstream(self, intent: OperationIntent, value: Any) -> Mapping[str, Any]:
+        if intent.path in ('/cow/training/learning-runs','/cow/training/learning-steps'):
+            body=json.loads(intent.body);fields={'schema','operation_id','request_sha256','run_id'}
+            if intent.path.endswith('/learning-steps'):fields.add('step_id')
+            binding=hashlib.sha256(_canonical([intent.path,body])).hexdigest()
+            if (type(value) is not dict or set(value)!=fields or type(value['schema']) is not int or value['schema']!=1
+                    or value['operation_id']!=intent.operation_id or value['request_sha256']!=binding
+                    or value['run_id']!=(body['run_id'] if 'step_id' in fields else intent.operation_id)
+                    or ('step_id' in fields and value['step_id']!=intent.operation_id)):
+                raise ReceiptError('Learning acceptance does not bind the original request')
+            return dict(value)
         if intent.path=='/cow/training/exports':
             body=json.loads(intent.body)
             fields={'schema','operation_id','request_sha256','export_id','name','model_sha256','file','weights_published'}
