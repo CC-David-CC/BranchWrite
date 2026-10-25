@@ -141,10 +141,10 @@ S3 owns checked practice, evaluation and next-block proposals.
 ```sh
 branchwrite lesson optimizers
 branchwrite lesson submit checked-lesson.json --operation-id example-01 \
-  --train-now --mode full --steps 1000 --learning-rate 0.000001 \
+  --train-now --mode full --steps 68 --learning-rate 0.000001 \
   --optimizer-profile-id PROFILE_SHA256
 branchwrite lesson train LESSON_ID_1 LESSON_ID_2 --operation-id block-02 \
-  --parent-job-id example-01-train --mode full --batch-size 2 --steps 1000 \
+  --parent-job-id example-01-train --mode full --batch-size 2 --steps 68 \
   --learning-rate 0.000001 --optimizer-profile-id PROFILE_SHA256
 branchwrite lesson status block-02
 branchwrite lesson preserve block-02 --operation-id preserve-02 \
@@ -155,7 +155,10 @@ branchwrite lesson exports
 
 Use the connection already configured for BW and `BW_COW_API_KEY`. A profile ID
 binds the owner's exact rate, optimizer settings, fresh/resume state policy and
-optional training-phase time budget. Use the advertised rate explicitly. Fresh
+optional training-phase time budget. Current learning curves use a null time
+budget: explicit updates and consumed practice presentations define exposure.
+The 68 steps above illustrate a declared update count, not a universal training
+recipe or the end of the learning loop. Use the advertised rate explicitly. Fresh
 moments are appropriate for a changed block while retaining learned parent
 weights; resume continues the exact saved dataset order, moments and cursor.
 Clients supply registered IDs, never model/executable/state paths or GPU grants.
@@ -163,7 +166,8 @@ Explicit profiles require full-weight mode and currently cannot be combined
 with the legacy `--skill-guard` multi-round wrapper. Jobs without a profile
 retain the previous path.
 
-A timed job can finish before visiting every selected lesson. Check actual
+If a deliberately timed profile is selected, it can finish before visiting every
+selected lesson. Check actual
 completed updates, presentations and `consumed_lesson_ids_this_job` /
 `unconsumed_lesson_ids_this_job`. Queue selection is not proof of consumption.
 The tiny proof deliberately exercises this distinction. A lost response is
@@ -191,3 +195,11 @@ shell-task repair or full-model GPU qualification of BW's client.
 The automatic durable multi-round coordinator and shared inference/training
 forward graph remain unfinished. This client adds supported pieces to the
 existing service rather than introducing another workflow runtime.
+
+The [per-update MiniCPM study](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/MINICPM-NATIVE-LEARNING.md)
+compares four full-update regimens and native AdamW LoRA at matched practice
+exposure. The LoRA curve currently uses PCC's qualified owner/native route,
+not BW's registered full-weight optimizer-profile selector.
+[Precision-retention results](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/MINICPM-QUANTIZATION-RESULTS.md)
+measure whether smaller inference artifacts retain learned behavior; exporting a
+GGUF alone does not establish that.
