@@ -349,4 +349,39 @@ class LessonCaptureTests(unittest.TestCase):
                 read_capture(saved.directory)
 
 
+    def test_action_export_reads_original_context_chain_without_transport(self):
+        from branchwrite.lesson_actions import captured_action_turns
+        state, _ = self.run_case('failed')
+        failure = capture_failure(state, self.root/'failure-action-capture')
+        fixed, _ = self.run_case('fixed', True, chunked=True)
+        correction = capture_correction(fixed, self.root/'correction-action-capture', failure.directory)
+        fixed.rename(self.root/'hidden-fixed'); state.rename(self.root/'hidden-failed')
+        self.project.rename(self.root/'hidden-project')
+        before = {p: p.read_bytes() for p in correction.directory.rglob('*') if p.is_file()}
+        with patch('branchwrite.lesson_actions._NoNetwork.request', side_effect=AssertionError('no dispatch')):
+            exported = captured_action_turns(correction.directory, expected_capture_id=correction.capture_id)
+        self.assertEqual([t['action']['tool'] for t in exported['turns']], ['read_file','replace','run_check','finish'])
+        self.assertEqual([t['input_mode'] for t in exported['turns']], ['ask','append_user','append_user','append_user'])
+        self.assertGreater(exported['turns'][1]['native_requests'], 1)
+        self.assertIn('wrong', exported['turns'][1]['user_content'])
+        self.assertNotIn('"tool":"finish"', exported['turns'][0]['user_content'])
+        self.assertFalse(exported['independently_verified']); self.assertFalse(exported['training_approved'])
+        self.assertTrue(exported['export_only'])
+        self.assertEqual(before, {p: p.read_bytes() for p in correction.directory.rglob('*') if p.is_file()})
+        with self.assertRaises(CaptureRefused):
+            captured_action_turns(correction.directory, expected_capture_id='0'*64)
+
+    def test_action_export_refuses_changed_capture_and_unaccounted_logical_output(self):
+        from branchwrite.lesson_actions import captured_action_turns
+        state, _ = self.run_case('read-only', no_check=True)
+        saved = capture_failure(state, self.root/'action-capture')
+        exported = captured_action_turns(saved.directory, expected_capture_id=saved.capture_id)
+        self.assertEqual(len(exported['turns']), 1)
+        self.assertEqual(exported['turns'][0]['action']['tool'], 'read_file')
+        path = next((saved.directory/'cow-operations').glob('*.json'))
+        path.chmod(0o600); path.write_bytes(b'{}')
+        with self.assertRaises(CaptureRefused):
+            captured_action_turns(saved.directory, expected_capture_id=saved.capture_id)
+
+
 if __name__ == '__main__': unittest.main()
