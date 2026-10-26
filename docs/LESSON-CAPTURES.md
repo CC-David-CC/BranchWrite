@@ -4,6 +4,18 @@ These optional commands archive private workflow evidence. They do not grade the
 task independently, approve a lesson, select training targets or update weights.
 The existing `lesson create` command keeps its host-authored schema1 meaning.
 
+For a standalone assessment, archive a settled attempt without claiming that
+it is a failure or a correction:
+
+    branchwrite lesson capture-assessment /absolute/run --output /absolute/new-assessment
+    branchwrite lesson capture-show /absolute/new-assessment --expected-capture-id SHA256
+
+The Python API is branchwrite.lesson_capture.capture_assessment(state, output).
+Its assessment kind has no failure link. The same receipt, isolation, inventory
+and source checks apply. Read the recorded workflow verification and tool evidence;
+the kind alone is not a pass. S³ independently grades the actual saved artifact.
+This archive cannot be submitted as a correction export or training approval.
+
 Capture the failed state **before** changing its files:
 
 ```sh
