@@ -901,6 +901,62 @@ class CliTransport:
         return self._run(command, args, mutation=True, streamed=is_stream or stream)
 
 
+_COMPLETION_ROUTE = '/cow/training/job-reconciliations'
+_COMPLETION_APPROVAL = 'adopt-completed-original-native-v1'
+_COMPLETION_HASHES = {'job_record_sha256','evidence_sha256','candidate_sha256',
+                      'native_configuration_sha256','source_closure_sha256','runtime_environment_sha256'}
+_COMPLETION_ACTIONS = {'eligible':['adopt_original_completion'],'adoption_pending':['resume_original_adoption'],
+                       'adopted':['reconcile_learning_run'],'unavailable':['hold'],'ineligible':['hold']}
+_COMPLETION_REASONS = {'eligible':{'original_completion_verified'},'adoption_pending':{'original_adoption_pending'},
+    'adopted':{'original_adoption_verified'},'unavailable':{'training_boundary_busy','original_process_live','original_evidence_incomplete'},
+    'ineligible':{'legacy_provenance_missing','original_evidence_invalid','adoption_transaction_conflict','original_job_already_complete'}}
+
+
+def _completion_approval(body):
+    fields={'operation_id','job_id','expected_job_record_sha256','expected_evidence_sha256','expected_candidate_sha256','approval'}
+    if (type(body) is not dict or set(body)!=fields or body.get('approval')!=_COMPLETION_APPROVAL
+            or any(type(body.get(k)) is not str or not _OP_ID.fullmatch(body[k]) for k in ('operation_id','job_id'))
+            or any(type(body.get(k)) is not str or not _HEX64.fullmatch(body[k]) for k in fields if k.startswith('expected_'))):
+        raise ReceiptError('Completion adoption needs exact original CAS identities and explicit owner approval')
+    return dict(body)
+
+
+def validate_completion_inspection(value, *, job_id, model_contract_id):
+    """Validate the owner recovery API; a saved intent is not a completed ack."""
+    common={'schema','kind','job_id','model_contract_id','state','reason_code','next_actions','eligible',
+            'current_evidence_verified','message','model_calls_started','native_jobs_started','promoted'}
+    if (type(value) is not dict or type(value.get('schema')) is not int or value['schema']!=1
+            or value.get('kind')!='pcc.native-completion-recovery.v1' or value.get('job_id')!=job_id
+            or type(job_id) is not str or not _OP_ID.fullmatch(job_id)
+            or type(model_contract_id) is not str or not _HEX64.fullmatch(model_contract_id)
+            or value.get('model_contract_id')!=model_contract_id):
+        raise ReceiptError('Completion inspection belongs to another job/model or unsupported API')
+    state=value.get('state')
+    if type(state) is not str or state not in _COMPLETION_ACTIONS:raise ReceiptError('Unknown completion inspection state')
+    verified=state in ('eligible','adoption_pending','adopted')
+    fields=common | (_COMPLETION_HASHES if verified else set())
+    if state=='adoption_pending':fields|={'pending_operation_id','pending_request'}
+    if state=='adopted':fields.add('adoption_operation_id')
+    actions=(['inspect_original_job','learning_status'] if state=='ineligible' and value.get('reason_code')=='original_job_already_complete' else _COMPLETION_ACTIONS[state])
+    if (set(value)!=fields or value.get('eligible') is not (state=='eligible')
+            or value.get('current_evidence_verified') is not verified or value.get('promoted') is not False
+            or type(value.get('message')) is not str or len(value['message'])>512
+            or type(value.get('reason_code')) is not str or value['reason_code'] not in _COMPLETION_REASONS[state]
+            or value.get('next_actions')!=actions
+            or any(type(value.get(k)) is not int or value[k]!=0 for k in ('model_calls_started','native_jobs_started'))):
+        raise ReceiptError('Completion inspection state/action/evidence contract differs')
+    if verified and any(type(value.get(k)) is not str or not _HEX64.fullmatch(value[k]) for k in _COMPLETION_HASHES):
+        raise ReceiptError('Completion inspection has incomplete original evidence identities')
+    if state=='adoption_pending':
+        original=_completion_approval(value['pending_request'])
+        if (value.get('pending_operation_id')!=original['operation_id'] or original['job_id']!=job_id
+                or any(original['expected_'+k]!=value[k] for k in ('job_record_sha256','evidence_sha256','candidate_sha256'))):
+            raise ReceiptError('Pending adoption is not the exact original job/approval')
+    if state=='adopted' and (type(value.get('adoption_operation_id')) is not str or not _OP_ID.fullmatch(value['adoption_operation_id'])):
+        raise ReceiptError('Completed original adoption identity is invalid')
+    return json.loads(_canonical(value))
+
+
 class CowClient:
     def __init__(self, transport: Transport, *, endpoint_url: str, journal: OperationJournal,
                  endpoint_pin: str | None = None):
@@ -1540,7 +1596,90 @@ class CowClient:
             raise ReceiptError("receipt snapshot differs from requested snapshot")
         return GenerationReceipt(operation_id, branch, snapshot, dict(value))
 
+    def inspect_completion(self,job_id,*,model_contract_id):
+        if type(job_id) is not str or not _OP_ID.fullmatch(job_id):raise ValueError('Invalid original native job ID')
+        value=self.transport.request('GET','/cow/training/jobs/'+job_id+'/completion-recovery').json_value
+        return validate_completion_inspection(value,job_id=job_id,model_contract_id=model_contract_id)
+
+    def _adopt_original_completion(self,payload,operation_id):
+        """Only this metadata transaction may repeat its exact original POST."""
+        if type(payload) is not dict or 'operation_id' in payload:raise ValueError('Completion payload cannot replace the explicit original operation ID')
+        operation_id=self._operation_id(operation_id)
+        body=_completion_approval(dict(payload,operation_id=operation_id))
+        intent=self._intent(operation_id,'POST',_COMPLETION_ROUTE,body,None,None,None)
+        record=self.journal.read(operation_id)
+        if record is not None:
+            if (record.get('endpoint_url')!=self.endpoint_url or record.get('endpoint_pin')!=self.endpoint_pin
+                    or record.get('method')!='POST' or record.get('path')!=_COMPLETION_ROUTE
+                    or self.journal.decode_body(record)!=intent.body or record.get('branch') is not None
+                    or record.get('revision') is not None or record.get('frame_key') is not None
+                    or record.get('source_binding') is not None):
+                raise OperationReuseError('Original completion approval belongs to another request or endpoint')
+            if record.get('state')=='complete':return dict(self._validate_nonstream(intent,record.get('receipt')))
+            if record.get('state')!='pending':raise ReceiptError('Invalid original completion approval journal state')
+        else:
+            record,_=self.journal.begin(intent,self.endpoint_url)
+        try:value=self.transport.request('POST',_COMPLETION_ROUTE,intent.body,stream=False).json_value
+        except OperationIndeterminate:
+            # GET can acknowledge only a fully committed adoption. A pending
+            # approval remains pending; the next explicit invocation may resume
+            # this same metadata POST, never a native job or changed request.
+            try:value=self.transport.request('GET','/cow/training/operations/'+operation_id).json_value
+            except CowClientError:
+                raise OperationIndeterminate('Original completion adoption is unresolved; hold and reuse this exact approval operation') from None
+        receipt=self._validate_nonstream(intent,value)
+        self.journal.complete(record,receipt)
+        return dict(receipt)
+
+    def completion_learning_status(self,run_id,*,model_contract_id):
+        value=self.training_read('learning-runs',run_id)
+        if (type(value.get('schema')) is not int or value['schema']!=1
+                or value.get('model_contract_id')!=model_contract_id
+                or type(value.get('revision')) is not int or value['revision']<0
+                or type(value.get('phase')) is not str or type(value.get('available_actions')) is not list
+                or value.get('promoted') is not False):
+            raise ReceiptError('Completion recovery learning status is not bound to this run/model')
+        return value
+
+    def reconcile_completion(self,run_id,operation_id,expected_revision,*,model_contract_id):
+        """Explicit adopted-completion metadata only; never generic training retry."""
+        operation_id=self._operation_id(operation_id)
+        if type(run_id) is not str or not re.fullmatch(r'[A-Za-z0-9_-]{1,128}',run_id):raise ValueError('Invalid original learning run ID')
+        if type(expected_revision) is not int or expected_revision<0:raise ValueError('Explicit nonnegative original run revision is required')
+        body=dict(operation_id=operation_id,run_id=run_id,expected_revision=expected_revision,action='reconcile')
+        path='/cow/training/learning-steps'
+        intent=self._intent(operation_id,'POST',path,body,None,None,None)
+        record=self.journal.read(operation_id)
+        if record is not None:
+            if (record.get('endpoint_url')!=self.endpoint_url or record.get('endpoint_pin')!=self.endpoint_pin
+                    or record.get('method')!='POST' or record.get('path')!=path
+                    or self.journal.decode_body(record)!=intent.body or record.get('branch') is not None
+                    or record.get('revision') is not None or record.get('frame_key') is not None
+                    or record.get('source_binding') is not None):
+                raise OperationReuseError('Original completion reconciliation binds another request or endpoint')
+            if record.get('state')=='complete':return dict(self._validate_nonstream(intent,record.get('receipt')))
+            if record.get('state')!='pending':raise ReceiptError('Invalid completion reconciliation journal state')
+            # The original acknowledgment may have advanced the phase already.
+            # Validate it before looking at the current phase; never mint a new step.
+            try:value=self.transport.request('GET','/cow/training/operations/'+operation_id).json_value
+            except CowClientError:pass
+            else:
+                receipt=self._validate_nonstream(intent,value);self.journal.complete(record,receipt);return dict(receipt)
+        status=self.completion_learning_status(run_id,model_contract_id=model_contract_id)
+        if (status['phase']!='needs_operator' or status['revision']!=expected_revision
+                or status.get('operator_reason_code')!='native_job_unresolved'
+                or dict(action='reconcile',required_fields=[]) not in status['available_actions']):
+            raise ReceiptError('HOLD: run is not the exact adopted-completion reconciliation boundary')
+        if record is None:record,_=self.journal.begin(intent,self.endpoint_url)
+        try:value=self.transport.request('POST',path,intent.body,stream=False).json_value
+        except OperationIndeterminate:
+            try:value=self.transport.request('GET','/cow/training/operations/'+operation_id).json_value
+            except CowClientError:
+                raise OperationIndeterminate('Original completion reconciliation is unresolved; retain this exact step ID and request') from None
+        receipt=self._validate_nonstream(intent,value);self.journal.complete(record,receipt);return dict(receipt)
+
     def training_submit(self,kind,payload,operation_id):
+        if kind=='job-reconciliations':return self._adopt_original_completion(payload,operation_id)
         if kind not in ('lessons','jobs','exports','learning-runs','learning-steps'):raise ValueError('Unknown training operation')
         operation_id=self._operation_id(operation_id)
         path='/cow/training/'+kind;body=dict(payload,operation_id=operation_id)
@@ -1574,6 +1713,15 @@ class CowClient:
         return value
 
     def _validate_nonstream(self, intent: OperationIntent, value: Any) -> Mapping[str, Any]:
+        if intent.path==_COMPLETION_ROUTE:
+            body=_completion_approval(json.loads(intent.body))
+            binding=hashlib.sha256(_canonical([intent.path,body])).hexdigest()
+            expected=dict(schema=1,operation_id=intent.operation_id,request_sha256=binding,
+                job_id=body['job_id'],candidate_sha256=body['expected_candidate_sha256'],adopted=True,promoted=False)
+            if (type(value) is not dict or value!=expected or type(value.get('schema')) is not int
+                    or value.get('adopted') is not True or value.get('promoted') is not False):
+                raise ReceiptError('Completion adoption acknowledgment does not bind the committed original owner approval')
+            return dict(value)
         if intent.path in ('/cow/training/learning-runs','/cow/training/learning-steps'):
             body=json.loads(intent.body);fields={'schema','operation_id','request_sha256','run_id'}
             if intent.path.endswith('/learning-steps'):fields.add('step_id')

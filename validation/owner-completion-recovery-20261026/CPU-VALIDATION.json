@@ -1,0 +1,63 @@
+{
+  "added_final02_coverage": [
+    "Already-complete ordinary job: no adoption needed, exact inspect-original-job/learning-status next actions, with recovery enabled or disabled",
+    "Malformed original native steps/gradient/timing/checkpoint/top-level shapes: actual authenticated HTTP typed HOLD, no dispatch"
+  ],
+  "added_final03_coverage": [
+    "Inspection-file checks validate the actually opened descriptor as regular/private/owned/bounded; lstat-open-fstat-postread identity and metadata must remain unchanged",
+    "Controlled chmod/private-inode replacement between pathname inspection and open; changed permissions during read; all refused before HTTP or approval intent",
+    "README links BW owner commands and PCC committed recovery guide; README-only edit followed CPU checks"
+  ],
+  "fixture": {
+    "helper_sha256": "be86ec87d6ae0ed69903dcc8cab557ab1437a5d1ffb0daea9c3f7a14a9a2323a",
+    "kind": "NONMODEL controlled saved evidence",
+    "pcc_source_base": "0efae044fc73c719a14e3b792747139cdeef0080",
+    "source_commit": "4a536ab6e26a7d97f200452479a201b414ce55fb",
+    "source_manifest_sha256": "9a1ce54f943403f8cf5de19812ca83f4d9f6d6b552bbcf475a481e66fb27500c",
+    "test_sha256": "d7b0efa90b52f7770941529091d795c5a2454b6523c39497e556379297c391f4"
+  },
+  "guarded_dispatch": {
+    "execute_native_forbidden": true,
+    "model_or_native_calls": 0,
+    "process_dispatch_forbidden": true,
+    "reload_gate_forbidden": true
+  },
+  "kind": "bw.owner-completion-recovery-cpu-validation.v1",
+  "limits": [
+    "CPU filesystem/transport/service saved-evidence qualification only; no real model correctness or numeric reload qualification",
+    "Earlier setup-only failures retained in cpu-01 through cpu-03; final required existing PCC/SSS PYTHONPATH and COW_CLI_SCRIPT environment",
+    "This publication is source and CPU engineering evidence only; no live deployment, native/model/GPU qualification or frozen campaign change."
+  ],
+  "modules": [
+    "tests.test_completion_recovery",
+    "tests.test_completion_recovery_http",
+    "tests.test_lessons",
+    "tests.test_cow_client",
+    "tests.test_cow_client_flow"
+  ],
+  "receipt_sha256": {
+    "cpu-07-final03-combined/command.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cpu-07-final03-combined/stderr.log": "197ea0fc3261daad692250436c3fbcc913f47b0adecdcc59f8df45c89b96bdfc",
+    "pcc-final02-fixture-pins.json": "6472869120c38b4035ef7dbbbd91fc90ea91d28ecdea52a8f489e3ed65f96fd4"
+  },
+  "schema": 1,
+  "source_base": "8919e4d6de7ab7ad85a8f62f91e097460338a4e5",
+  "source_sha256": {
+    "README.md": "d13d3816402d1d488d91f06c49f3b12d55c6ed0f31d71ff298323f4f0155ecf8",
+    "branchwrite/cow_client.py": "6e38a16ee6da04f9306e7fe6013c1fbce7cd7fa0a212c4963730fb67b0d74af2",
+    "branchwrite/lesson_cli.py": "b12606938e2461f83dd4dc874513672c85c944c25debab2e3003e08cb481cf4a",
+    "docs/OWNER-COMPLETION-RECOVERY.md": "6fda2aa25064ebf02ba70f61f05b400898d22f96cde25be003f4a8e0c0c59182",
+    "tests/test_completion_recovery.py": "48d30665398d3a88b43cf04667b5c0cad567cd614b1153ccf56cc434ac57f631",
+    "tests/test_completion_recovery_http.py": "ca13980c03852f943f7815d639ba61122959336241bd1ed3e97668cf41d678db"
+  },
+  "tests": {
+    "existing_regressions": 31,
+    "failed": 0,
+    "new_actual_pcc_http_tests": 7,
+    "new_contract_tests": 31,
+    "passed": 69,
+    "seconds": 17.318,
+    "skipped": 0,
+    "total": 69
+  }
+}

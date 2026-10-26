@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import re
+import stat
 import uuid
 
 def canonical(value):return json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=False,allow_nan=False).encode()
@@ -81,6 +82,107 @@ def _submit_training(client,args,identity,ids,*,single=False,steps=None):
         payload['skill_guard']=prior['skill_guard'] if prior is not None and 'skill_guard' in prior else dict(policy_id=client.training_read('skills')['policy_id'])
     return client.training_submit('jobs',payload,identity)
 
+class _CompletionHold(ValueError):
+    def __init__(self,document):
+        self.document=document
+        super().__init__('Original completion is not actionable; follow the typed inspection next action')
+
+
+def _strict_document(raw):
+    def pairs(items):
+        value={}
+        for key,item in items:
+            if key in value:raise ValueError('Duplicate inspection field')
+            value[key]=item
+        return value
+    def reject(value):raise ValueError('Nonfinite inspection JSON is not supported')
+    return json.loads(raw.decode('utf-8'),object_pairs_hook=pairs,parse_constant=reject)
+
+
+def _inspection_document(client,connection,job_id,inspection):
+    from .cow_client import validate_completion_inspection
+    value=validate_completion_inspection(inspection,job_id=job_id,model_contract_id=connection['model_contract_id'])
+    document=dict(schema=1,kind='bw.completion-inspection.v1',endpoint_url=client.endpoint_url,
+        endpoint_pin=client.endpoint_pin,model_contract_id=connection['model_contract_id'],job_id=job_id,
+        inspection=value,inspection_sha256=digest(value))
+    document['document_id']=digest(document)
+    return document
+
+
+def _read_inspection(path,client,connection,job_id):
+    from .cow_client import validate_completion_inspection
+    before=path.lstat()
+    if not stat.S_ISREG(before.st_mode):raise ValueError('Use an original regular private inspection file')
+    # Path metadata is only an identity observation. Security/size checks apply
+    # to the descriptor actually opened, including a replacement before open.
+    def identity(info):
+        return (info.st_dev,info.st_ino,info.st_mode,info.st_uid,info.st_gid,
+                info.st_size,info.st_mtime_ns,info.st_ctime_ns)
+    fd=os.open(path,os.O_RDONLY|getattr(os,'O_NOFOLLOW',0)|getattr(os,'O_NONBLOCK',0))
+    with os.fdopen(fd,'rb') as stream:
+        opened=os.fstat(stream.fileno())
+        if (not stat.S_ISREG(opened.st_mode) or not 0<=opened.st_size<=1<<20
+                or (os.name!='nt' and (opened.st_uid!=os.getuid() or opened.st_mode&0o077))):
+            raise ValueError('Inspection file must be private, owned and at most1MiB; use inspect-completion --output')
+        if identity(before)!=identity(opened):raise ValueError('Inspection file changed before it was opened')
+        raw=stream.read((1<<20)+1)
+        if (len(raw)!=opened.st_size or identity(opened)!=identity(os.fstat(stream.fileno()))
+                or identity(opened)!=identity(path.lstat())):
+            raise ValueError('Inspection file changed while it was read')
+    value=_strict_document(raw)
+    fields={'schema','kind','endpoint_url','endpoint_pin','model_contract_id','job_id','inspection','inspection_sha256','document_id'}
+    if (type(value) is not dict or set(value)!=fields or type(value.get('schema')) is not int or value['schema']!=1
+            or value.get('kind')!='bw.completion-inspection.v1' or value.get('endpoint_url')!=client.endpoint_url
+            or value.get('endpoint_pin')!=client.endpoint_pin or value.get('model_contract_id')!=connection['model_contract_id']
+            or value.get('job_id')!=job_id or value.get('inspection_sha256')!=digest(value.get('inspection'))
+            or value.get('document_id')!=digest({k:v for k,v in value.items() if k!='document_id'})):
+        raise ValueError('Inspection file does not bind the selected job/model/endpoint and exact original view')
+    validate_completion_inspection(value['inspection'],job_id=job_id,model_contract_id=connection['model_contract_id'])
+    return value
+
+
+def _write_inspection(path,value):
+    fd=os.open(path,os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
+    with os.fdopen(fd,'wb') as stream:
+        stream.write(canonical(value)+b'\n');stream.flush();os.fsync(stream.fileno())
+    if os.name!='nt':
+        directory=os.open(path.parent,os.O_RDONLY)
+        try:os.fsync(directory)
+        finally:os.close(directory)
+
+
+def _completion_command(args,connection,client):
+    from .cow_client import _COMPLETION_APPROVAL
+    if args.action=='inspect-completion':
+        value=client.inspect_completion(args.job_id,model_contract_id=connection['model_contract_id'])
+        document=_inspection_document(client,connection,args.job_id,value)
+        if args.output is not None:_write_inspection(args.output,document)
+        return document
+    if not args.approve_original_completion:raise ValueError('Explicit --approve-original-completion owner approval is required')
+    manual=[args.expected_job_record_sha256,args.expected_evidence_sha256,args.expected_candidate_sha256]
+    if args.inspection_file is not None:
+        if any(v is not None for v in manual):raise ValueError('Choose the inspection file or explicit CAS hashes, not both')
+        document=_read_inspection(args.inspection_file,client,connection,args.job_id)
+    else:
+        if any(v is None for v in manual):raise ValueError('Use --inspection-file from inspect-completion --output, or supply all original CAS hashes')
+        value=client.inspect_completion(args.job_id,model_contract_id=connection['model_contract_id'])
+        document=_inspection_document(client,connection,args.job_id,value)
+    inspection=document['inspection'];state=inspection['state']
+    if state not in ('eligible','adoption_pending'):raise _CompletionHold(document)
+    if state=='adoption_pending':
+        body=dict(inspection['pending_request'])
+        if args.operation_id!=inspection['pending_operation_id']:raise ValueError('Pending adoption must retain its original pending_operation_id; a new ID cannot retry it')
+    else:
+        body=dict(operation_id=args.operation_id,job_id=args.job_id,approval=_COMPLETION_APPROVAL,
+            expected_job_record_sha256=inspection['job_record_sha256'],expected_evidence_sha256=inspection['evidence_sha256'],
+            expected_candidate_sha256=inspection['candidate_sha256'])
+    if args.inspection_file is None and any(body[key]!=value for key,value in zip(
+            ('expected_job_record_sha256','expected_evidence_sha256','expected_candidate_sha256'),manual)):
+        raise ValueError('Explicit hashes differ from the current verified original inspection')
+    operation_id=body.pop('operation_id')
+    return client.training_submit('job-reconciliations',body,operation_id)
+
+
 def main(argv=None,*,output=print,connection_override=None,session_history=None):
     parser=argparse.ArgumentParser(prog='branchwrite lesson',description='Write checked lessons, queue them, and request native training candidates.')
     parser.add_argument('--connection',type=Path);parser.add_argument('--state-dir',type=Path)
@@ -114,6 +216,16 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     p.add_argument('--expected-sha256',required=True);p.add_argument('--notes-file',type=Path);p.add_argument('--report-sha256')
     p=subs.add_parser('show');p.add_argument('lesson_id')
     p=subs.add_parser('status');p.add_argument('job_id')
+    p=subs.add_parser('learning-status',help='Read the original PCC learning run and its available owner actions.')
+    p.add_argument('run_id')
+    p=subs.add_parser('reconcile-completion',help='Return a freshly adopted original completion to its original learning round; never starts training.')
+    p.add_argument('run_id');p.add_argument('--operation-id',required=True);p.add_argument('--expected-revision',type=int,required=True)
+    p=subs.add_parser('inspect-completion',help='Owner read of original native completion; no model or training calls.')
+    p.add_argument('job_id');p.add_argument('--output',type=Path,help='Save a private job/model/endpoint-bound inspection for explicit approval.')
+    p=subs.add_parser('adopt-completion',help='Owner-approved original metadata recovery; never repeats training or promotes weights.')
+    p.add_argument('job_id');p.add_argument('--operation-id',required=True);p.add_argument('--inspection-file',type=Path)
+    p.add_argument('--expected-job-record-sha256');p.add_argument('--expected-evidence-sha256');p.add_argument('--expected-candidate-sha256')
+    p.add_argument('--approve-original-completion',action='store_true')
     p=subs.add_parser('train',help='Train an explicit lesson selection now or a frozen selection of queued lessons.')
     p.add_argument('lesson_ids',nargs='*');selection=p.add_mutually_exclusive_group();selection.add_argument('--all',action='store_true');selection.add_argument('--pending',action='store_true')
     p.add_argument('--operation-id',required=True);p.add_argument('--mode',choices=('lora','full'),default='lora')
@@ -134,6 +246,12 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
                 manifest=value.manifest,independently_verified=False,training_approved=False),sort_keys=True))
             return 0
         connection,client=_client(args,connection_override)
+        if args.action in ('inspect-completion','adopt-completion'):
+            value=_completion_command(args,connection,client);output(json.dumps(value,sort_keys=True));return 0
+        if args.action in ('learning-status','reconcile-completion'):
+            if args.action=='learning-status':value=client.completion_learning_status(args.run_id,model_contract_id=connection['model_contract_id'])
+            else:value=client.reconcile_completion(args.run_id,args.operation_id,args.expected_revision,model_contract_id=connection['model_contract_id'])
+            output(json.dumps(value,sort_keys=True));return 0
         expected=getattr(args,'expected_parent_sha256',None)
         if expected is not None:
             if not re.fullmatch(r'[a-f0-9]{64}',expected) or args.parent_job_id is None:
@@ -206,5 +324,15 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
             steps=args.steps if args.steps is not None else frozen['steps'] if frozen else (len(ids)+args.batch_size-1)//args.batch_size
             value=_submit_training(client,args,args.operation_id,ids,steps=steps)
         output(json.dumps(value,sort_keys=True));return 0
+    except _CompletionHold as error:
+        output(json.dumps(error.document,sort_keys=True));return 2
     except (ValueError,OSError,RuntimeError,CowClientError) as error:
+        if args.action in ('inspect-completion','adopt-completion','learning-status','reconcile-completion'):
+            from .cow_client import OperationIndeterminate
+            value=dict(schema=1,kind='bw.owner-completion-hold.v1',state='hold',
+                reason_code='original_adoption_unresolved' if isinstance(error,OperationIndeterminate) else 'owner_completion_refused',
+                next_actions=['hold'],message=ascii(str(error))[:512],receipt_verified=False)
+            value['job_id' if hasattr(args,'job_id') else 'run_id']=getattr(args,'job_id',getattr(args,'run_id',None))
+            if hasattr(args,'operation_id'):value['operation_id']=args.operation_id
+            output(json.dumps(value,sort_keys=True));return 2
         output('branchwrite lesson: '+ascii(str(error)));return 2
