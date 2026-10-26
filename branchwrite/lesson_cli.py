@@ -85,6 +85,12 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     parser=argparse.ArgumentParser(prog='branchwrite lesson',description='Write checked lessons, queue them, and request native training candidates.')
     parser.add_argument('--connection',type=Path);parser.add_argument('--state-dir',type=Path)
     subs=parser.add_subparsers(dest='action',required=True)
+    p=subs.add_parser('capture-failure',help='Archive a settled current BW boundary; no independent grade or training approval.')
+    p.add_argument('run',type=Path);p.add_argument('--output',type=Path,required=True)
+    p=subs.add_parser('capture-correction',help='Archive a checked/finished correction linked to an existing failure capture.')
+    p.add_argument('run',type=Path);p.add_argument('--failure-capture',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
+    p=subs.add_parser('capture-show',help='Validate and inspect immutable private workflow evidence without model calls.')
+    p.add_argument('capture',type=Path);p.add_argument('--expected-capture-id')
     p=subs.add_parser('create',help='Write a private teaching example bound to failed/passing BW runs.')
     failed=p.add_mutually_exclusive_group();failed.add_argument('--failed-state',type=Path);failed.add_argument('--failed-turn',type=int)
     corrected=p.add_mutually_exclusive_group();corrected.add_argument('--corrected-state',type=Path);corrected.add_argument('--turn',type=int,help='Interactive history number; default is the latest Work result.')
@@ -119,6 +125,14 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     args=parser.parse_args(argv)
     from .cow_client import CowClientError
     try:
+        if args.action in ('capture-failure','capture-correction','capture-show'):
+            from .lesson_capture import capture_failure,capture_correction,read_capture
+            if args.action=='capture-failure':value=capture_failure(args.run,args.output)
+            elif args.action=='capture-correction':value=capture_correction(args.run,args.output,args.failure_capture)
+            else:value=read_capture(args.capture,expected_capture_id=args.expected_capture_id)
+            output(json.dumps(dict(capture_directory=str(value.directory),capture_id=value.capture_id,
+                manifest=value.manifest,independently_verified=False,training_approved=False),sort_keys=True))
+            return 0
         connection,client=_client(args,connection_override)
         expected=getattr(args,'expected_parent_sha256',None)
         if expected is not None:

@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "status": "cpu-archival-capture-qualified-not-independent-lesson-approval",
+  "base_commit": "576268f8da11188a0487fcd0b7f756a7db6fb0b5",
+  "files_sha256": {
+    "branchwrite/lesson_capture.py": "7959e007e2573041596e798083c67df29dd12727147dba7a2eb59305da6d65b3",
+    "branchwrite/lesson_cli.py": "43e44c7eed432f5f1d555f0f51dc087befc16e0abf20ac974e5f5d24399cf170",
+    "tests/test_lesson_capture.py": "254f2071cc10a22e716d573cc81872e8774b55e3c79faf5dac74fab1040b0e09",
+    "docs/LESSON-CAPTURES.md": "1d1102ea8be3a46e12b6f71342bb8b131326ed3dee295c0938f318e7b7cf165d"
+  },
+  "checks": {
+    "tests": 102,
+    "passed": 102,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 37.295
+  },
+  "stderr_sha256": "5beeeeb5a4349a806a0f04b3b25e111d079598f7f9dc5b7df6e1aa06eb555c92",
+  "standalone_reader": {
+    "exit_code": 0,
+    "capture_id": "479455697cf5c69748161b1ae0906b7935974f42659b1aca593f0ea9262c76f0",
+    "original_correction_run_exists": false,
+    "original_project_exists": false,
+    "original_failure_run_exists": false,
+    "stdout_sha256": "407e0f170ef90a06b6e22f5a00f023bd94bf71138b678c8ec347cbb1ba634583",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": "Fresh-process publicCLI archive-only read after original operational paths/server retirement; no model/native/network calls"
+  },
+  "scope": {
+    "scripted_cpu_choices": true,
+    "real_bw_coding_workflow": true,
+    "real_cow_http_coordinator_grammar_store": true,
+    "real_terminal_namespace": true,
+    "native_model_calls": 0,
+    "gpu_jobs": 0,
+    "independently_verified": false,
+    "training_approved": false
+  },
+  "supported_boundaries": [
+    "Continuous BW read lease and current world identity over capture",
+    "Complete immutable ledger/artifact/local COW receipt archive with existing exact no-network readers",
+    "Retired local run_shell/run_check effects plus supported file tools",
+    "Correction embeds preceding failure with same task/baseline/model; same-run ledger prefix",
+    "Settled unchanged-baseline failure without selected checks; no fabricated incorrectness verdict",
+    "Exact file bytes/modes/inventory and strict offline reader with source pins"
+  ],
+  "refusals": [
+    "Dispatched or partial logical/native/effect work",
+    "Stale or unrecorded world changes and unchecked writes without current check state",
+    "Correction missing current passing checks or explicit successful finish",
+    "Unsupported remote/browser/CAD or other world/effect families",
+    "Links, hardlink aliases, oversized/drifting/corrupt/extra archive content, wrong implementation or predecessor"
+  ],
+  "unimplemented": [
+    "Independent correctness grading and exact teaching-target derivation",
+    "Registration/admission of captured lessons into configured SSS/PCC learning policies",
+    "Generic target/workflow/retention evaluation and actual learning qualification"
+  ],
+  "earlier_review_packets_preserved": true,
+  "models_or_optimizer_states_modified": false,
+  "combined_sss_compatibility": {
+    "sss_commit": "1691bf501faaabbf91a0282f04c68e5ece9c7f58",
+    "tests": 42,
+    "passed": 42,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 0.666,
+    "source_closure_files": {
+      "sss": 145,
+      "bw": 602
+    },
+    "source_manifest_sha256": "84653cf7e95b469337b415cdc3e19b466d82c63032a67273621f00c7e2aa6676",
+    "sources_unchanged": true,
+    "summary_sha256": "9e1ef7e8b5520465a0dfb95e63ffd0ba93d1992b8311f5fa720ba458d34789f0",
+    "artifact_reader_passed": true,
+    "artifact_oracle_joint_probe": false,
+    "reason": "Existing archived fixture contains value.txt only; not substituted into task.py checker. Exact target/provider integration remains unfinished.",
+    "counts_overlap_other_suites": true
+  }
+}
