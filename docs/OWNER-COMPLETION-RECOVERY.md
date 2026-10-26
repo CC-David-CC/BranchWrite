@@ -1,8 +1,30 @@
 # Recover an original completed training job through BW
 
-This is an owner administrative workflow for a person or an owner agent. It uses the same PCC service and BW operation journal as the learning loop. It never runs training, inference, or model promotion. The student's tool registry does not gain these commands or approval permissions.
+This is an owner administrative workflow for a person or an owner agent. It uses the same PCC service and BW operation journal as the learning loop. Inspection, adoption, and completion-specific reconciliation change metadata without running training, inference, or model promotion. The optional restart bridge below is safe only under its stated preflight. The student's tool registry does not gain these commands or approval permissions.
 
 Use it when PCC reports `needs_operator` with `operator_reason_code: native_job_unresolved`: the original native process may have finished, but the service did not durably acknowledge its candidate. Do not submit a replacement training job or edit saved run files to escape this state.
+
+## 0. Bridge a restarted round still in `training`
+
+Skip this step if the original run already says `needs_operator` / `native_job_unresolved`. After a service restart, a run may still say `training` while its original native job has become terminal `interrupted` or `failed`. Read the existing public observations first:
+
+```sh
+branchwrite lesson --connection owner-connection.json --state-dir owner-state learning-status ORIGINAL_RUN
+branchwrite learning --connection owner-connection.json --state-dir owner-state round ORIGINAL_RUN ORIGINAL_ROUND
+branchwrite lesson --connection owner-connection.json --state-dir owner-state status ORIGINAL_JOB
+```
+
+Require the run to be in `training`; its `training_job_id` and the stored round's `training_job_id` must be the same original derived job. The round number, parent, and selected lessons must still match the original work, and the job must already exist with state `interrupted` or `failed`. A missing job, mismatched identity/parent/lessons, live `queued`/`running` job, or uncertain observation means **HOLD**. The ordinary command below is not a general metadata-only recovery command: it can enqueue training if there is no original job.
+
+Only after this preflight, choose one new *bridge metadata* operation ID and the exact observed run revision:
+
+```sh
+branchwrite learning --connection owner-connection.json --state-dir owner-state reconcile ORIGINAL_RUN --operation-id BRIDGE_METADATA_ID --revision EXACT_REVISION
+```
+
+PCC takes the original training request from its retained run; you do not reconstruct it or enter a request digest. For the already existing operation, `LessonService.submit` compares the retained request digest before returning its original acceptance, without enqueueing a worker. `LearningRuns._dispatch` then classifies that same terminal original job as `needs_operator` / `native_job_unresolved`. A request-binding conflict or changed revision means HOLD. Keep the same bridge ID and body if its acknowledgment is uncertain; do not invent a replacement training ID or edit saved state.
+
+Read `learning-status` again and require that exact reason before proceeding to inspection/adoption below. This no-dispatch bridge follows the current source path; the separate actual-native crash/restart qualification is still pending. It is not a claim that every use of ordinary `learning reconcile` avoids dispatch.
 
 ## 1. Inspect the original boundary
 

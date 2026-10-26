@@ -1,4 +1,7 @@
 {
+  "added_documentation_after_cpu_tests": [
+    "Guarded public learning-status bridge for terminal interrupted/failed original jobs; missing, live, mismatched or uncertain identity means HOLD. Uses retained request and server-side digest check; actual native bridge qualification remains pending."
+  ],
   "added_final02_coverage": [
     "Already-complete ordinary job: no adoption needed, exact inspect-original-job/learning-status next actions, with recovery enabled or disabled",
     "Malformed original native steps/gradient/timing/checkpoint/top-level shapes: actual authenticated HTTP typed HOLD, no dispatch"
@@ -46,7 +49,7 @@
     "README.md": "d13d3816402d1d488d91f06c49f3b12d55c6ed0f31d71ff298323f4f0155ecf8",
     "branchwrite/cow_client.py": "6e38a16ee6da04f9306e7fe6013c1fbce7cd7fa0a212c4963730fb67b0d74af2",
     "branchwrite/lesson_cli.py": "b12606938e2461f83dd4dc874513672c85c944c25debab2e3003e08cb481cf4a",
-    "docs/OWNER-COMPLETION-RECOVERY.md": "6fda2aa25064ebf02ba70f61f05b400898d22f96cde25be003f4a8e0c0c59182",
+    "docs/OWNER-COMPLETION-RECOVERY.md": "d6264ed7f2357d43759369cbbe1203b74ea0fc96deb5678c5ffb0ff9aa0dd252",
     "tests/test_completion_recovery.py": "48d30665398d3a88b43cf04667b5c0cad567cd614b1153ccf56cc434ac57f631",
     "tests/test_completion_recovery_http.py": "ca13980c03852f943f7815d639ba61122959336241bd1ed3e97668cf41d678db"
   },
