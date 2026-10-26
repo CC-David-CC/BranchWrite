@@ -1,5 +1,7 @@
 # BranchWrite (BW)
 
+[Terminal workflow failures](docs/TERMINAL-WORKFLOW-FAILURES.md) can now be archived locally for assessment without inventing an artifact grade or approving a lesson.
+
 [Owner completion recovery](docs/OWNER-COMPLETION-RECOVERY.md) lets a person or owner agent inspect original evidence, explicitly adopt completed metadata, and return to the same learning round without starting another training job. [PCC's recovery contract](https://github.com/CC-David-CC/Private_Context_COW/blob/4a536ab6e26a7d97f200452479a201b414ce55fb/docs/NATIVE-COMPLETION-RECOVERY.md) explains the engine checks. CPU saved-evidence tests qualify this administrative path; real-model numerical qualification remains separate.
 
 [The durable learning loop: ELI5, master's, PhD, and applied guide](https://github.com/CC-David-CC/sss/blob/feat/minicpm-baseline-20261024/docs/LEARNING-MACHINERY.md) explains ownership, recovery, paired learning/forgetting, expanding assessments, commands, and current qualification limits. The new machinery checks are separate from the fixed 68-update comparison.

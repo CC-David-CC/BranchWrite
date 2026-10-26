@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Terminal false workflow observation and archive; CPU scripted integration and one read-only native trace",
+  "logs": [
+    {
+      "file": "terminal-final-bw-controls-cg.log",
+      "sha256": "14a7f3e27d9d6a8f15b1569c7aed70d39fb35a1fba88ca2fda66005406c47939",
+      "checks": 26,
+      "status": "PASS"
+    },
+    {
+      "file": "terminal-final-sss-controls-cg.log",
+      "sha256": "c2c86f514e17c5ffee28d2d0b0bc9291fcd6cac78e7cd29f6b031973d15e5b19",
+      "checks": 13,
+      "status": "PASS"
+    }
+  ],
+  "sources_sha256": {
+    "branchwrite/coding_terminal_observation.py": "9864acda246998bce00e5f546ae8b734413b8fc42d358618fb010d0a90d81f47",
+    "branchwrite/lesson_cli.py": "a1871a5974e0d3e5706fb8a76299ce35c2b52d4022f9d523a8b39870d15bc9dd",
+    "tests/test_terminal_observation.py": "c380edb65dd963133a44ebe8fea768344d388561ecf62ef59150f11f6059ff55",
+    "sss/workflow_assessment.py": "2cb34fb811d5fdf3cb29e48e090483b76bd145c3b5db4a5ef1ff1f68d8cd3a68",
+    "sss/adapters/workflow_evaluation.py": "cc44fd9ff60d806bc84120dab212ed012d2e122fd11eb73daca13bca6b91895d",
+    "sss_integration/workflow_evaluate.py": "4c7f9fca3b61a934c9474d16a2ba933e21df3f850f659f687c121878d049c551",
+    "sss_integration/workflow_recovery.py": "6f63f7db78be29e9227d584449f42a137ace58543f25ae6e82e89e6f2c3557ca",
+    "sss_integration/test_workflow_terminal.py": "f3edcb94cf9da7df3e9c42cbec75aad966a8e7b1c21041d321c9338951a4a009"
+  },
+  "native": {
+    "schema": 1,
+    "status": "PASS",
+    "scope": "Read-only owner archive of one actual native terminal unverified BW workflow; no model repair",
+    "model_contract_id": "aecca2574d53c54c02db1e80c838d2437f5dad967a0f9958dbaf9928543fe3bb",
+    "execution_profile_id": "84d52b890e4872996d24577679eb805104941386bb48dec8f7bbd94f89d37cbf",
+    "root_result_sha256": "6c420cc037b267957789b70c9522a179c898ae741fcb18a2f7312ae92496fd52",
+    "native_receipts": 32,
+    "tool_outcomes": {
+      "read_file": 16,
+      "replace_text_file": 15
+    },
+    "archive_id": "ad425394731d43a8a36c2e4e6406e3a27bf9a439b75026ae0d3131e67ac29c19",
+    "observer_sha256": "9864acda246998bce00e5f546ae8b734413b8fc42d358618fb010d0a90d81f47",
+    "original_receipt_sha256": "c4b8586179df8c7854b5f89e83cdc0dcef2bf136dada1a9f847e0793d0165402",
+    "workflow_finished": false,
+    "artifact_correctness": "unassessed",
+    "training_eligible": false,
+    "original_ledger_and_journals_unchanged": true,
+    "original_evaluator_failure_preserved": true,
+    "original_model_case_replayed": false,
+    "model_calls": 0,
+    "tool_calls": 0,
+    "training_updates": 0,
+    "promoted": false
+  },
+  "limitations": [
+    "No artifact grade is inferred from a closed false workflow verdict.",
+    "Failed terminal archives cannot be submitted as verified teaching corrections.",
+    "A full joined learning round remains incomplete; the original failed baseline was not rewritten.",
+    "The new observer source is explicitly pinned when inspecting a legacy source snapshot."
+  ]
+}

@@ -187,6 +187,10 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     parser=argparse.ArgumentParser(prog='branchwrite lesson',description='Write checked lessons, queue them, and request native training candidates.')
     parser.add_argument('--connection',type=Path);parser.add_argument('--state-dir',type=Path)
     subs=parser.add_subparsers(dest='action',required=True)
+    p=subs.add_parser('capture-terminal-failure',help='Archive a closed unverified workflow; no artifact grade or training approval.')
+    p.add_argument('run',type=Path);p.add_argument('--output',type=Path,required=True)
+    p=subs.add_parser('terminal-show',help='Reverify a terminal failure archive without a server or original world.')
+    p.add_argument('archive',type=Path)
     p=subs.add_parser('capture-failure',help='Archive a settled current BW boundary; no independent grade or training approval.')
     p.add_argument('run',type=Path);p.add_argument('--output',type=Path,required=True)
     p=subs.add_parser('capture-assessment',help='Archive a settled standalone attempt; no failure/correction assertion or training approval.')
@@ -239,6 +243,11 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     args=parser.parse_args(argv)
     from .cow_client import CowClientError
     try:
+        if args.action in ('capture-terminal-failure','terminal-show'):
+            from .coding_terminal_observation import archive_unverified_workflow,read_unverified_archive
+            value=(archive_unverified_workflow(args.run,args.output) if args.action=='capture-terminal-failure'
+                else read_unverified_archive(args.archive))
+            output(json.dumps(value,sort_keys=True));return 0
         if args.action in ('capture-failure','capture-correction','capture-assessment','capture-show'):
             from .lesson_capture import capture_failure,capture_correction,capture_assessment,read_capture
             if args.action=='capture-assessment':value=capture_assessment(args.run,args.output)
