@@ -425,6 +425,16 @@ def capture_failure(state, output):
     return _capture_checked(state, output, 'failure')
 
 
+def capture_assessment(state, output):
+    """Archive a settled workflow attempt, without asserting failure or correction.
+
+    A consumer must check the recorded tools/verification and independently
+    grade the artifact. This grants no training approval and does not invent a
+    preceding failure. Unsupported or unsettled effects remain unavailable.
+    """
+    return _capture_checked(state, output, 'assessment')
+
+
 def capture_correction(state, output, failure):
     return _capture_checked(state, output, 'correction', failure)
 
@@ -446,11 +456,11 @@ def read_capture(directory, *, expected_capture_id=None):
             'files','directories','inventory','evidence','ledger','journals','failure_capture_id','scope',
             'independently_verified','training_approved','capture_id','implementation_sha256'}
         if (type(value) is not dict or set(value) != fields or value.get('schema') != 1 or value.get('method') != 'bw-lesson-capture-v1'
-                or value.get('kind') not in ('failure', 'correction')
+                or value.get('kind') not in ('failure', 'correction', 'assessment')
                 or value.get('independently_verified') is not False or value.get('training_approved') is not False
                 or value.get('capture_id') != _sha(_canonical({k:v for k,v in value.items() if k != 'capture_id'}))):
             raise CaptureRefused('invalid archival capture identity/scope')
-        if ((value['kind'] == 'failure' and value['failure_capture_id'] is not None)
+        if ((value['kind'] in ('failure', 'assessment') and value['failure_capture_id'] is not None)
                 or (value['kind'] == 'correction' and not _HEX.fullmatch(str(value['failure_capture_id'])))
                 or value['model_contract_id'] != value['launch']['config']['cow']['model_contract_id']
                 or value['execution_profile_id'] != value['launch']['config']['cow']['execution_profile_id']):

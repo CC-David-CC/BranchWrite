@@ -189,6 +189,8 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     subs=parser.add_subparsers(dest='action',required=True)
     p=subs.add_parser('capture-failure',help='Archive a settled current BW boundary; no independent grade or training approval.')
     p.add_argument('run',type=Path);p.add_argument('--output',type=Path,required=True)
+    p=subs.add_parser('capture-assessment',help='Archive a settled standalone attempt; no failure/correction assertion or training approval.')
+    p.add_argument('run',type=Path);p.add_argument('--output',type=Path,required=True)
     p=subs.add_parser('capture-correction',help='Archive a checked/finished correction linked to an existing failure capture.')
     p.add_argument('run',type=Path);p.add_argument('--failure-capture',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     p=subs.add_parser('capture-show',help='Validate and inspect immutable private workflow evidence without model calls.')
@@ -237,9 +239,10 @@ def main(argv=None,*,output=print,connection_override=None,session_history=None)
     args=parser.parse_args(argv)
     from .cow_client import CowClientError
     try:
-        if args.action in ('capture-failure','capture-correction','capture-show'):
-            from .lesson_capture import capture_failure,capture_correction,read_capture
-            if args.action=='capture-failure':value=capture_failure(args.run,args.output)
+        if args.action in ('capture-failure','capture-correction','capture-assessment','capture-show'):
+            from .lesson_capture import capture_failure,capture_correction,capture_assessment,read_capture
+            if args.action=='capture-assessment':value=capture_assessment(args.run,args.output)
+            elif args.action=='capture-failure':value=capture_failure(args.run,args.output)
             elif args.action=='capture-correction':value=capture_correction(args.run,args.output,args.failure_capture)
             else:value=read_capture(args.capture,expected_capture_id=args.expected_capture_id)
             output(json.dumps(dict(capture_directory=str(value.directory),capture_id=value.capture_id,
