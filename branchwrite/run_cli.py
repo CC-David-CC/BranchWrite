@@ -183,11 +183,13 @@ def _config(text,*,prepared_prefix=False):
     cow=config.get('cow')
     if cow is not None:
         keys={'endpoint_url','endpoint_pin','model_contract_id','execution_profile_id','eos_tokens','branch','mode'}
-        if type(cow) is not dict or not keys<=set(cow) or set(cow)-keys-{'bootstrap','grammar_registration','controller_prefix'} or cow['mode'] not in ('ask','append_user') or any(type(cow[k]) is not str or not cow[k] for k in keys-{'eos_tokens'}):
+        if type(cow) is not dict or not keys<=set(cow) or set(cow)-keys-{'bootstrap','grammar_registration','controller_prefix','grammar_syntax'} or cow['mode'] not in ('ask','append_user') or any(type(cow[k]) is not str or not cow[k] for k in keys-{'eos_tokens'}):
             raise AdmissionError('explicit closed COW source/profile configuration required')
         if 'bootstrap' in cow and (cow['bootstrap']!='coding' or cow['mode']!='ask'):raise AdmissionError('coding bootstrap requires a new context-only ask boundary')
         if 'grammar_registration' in cow and (cow['grammar_registration']!='inline' or not (cow.get('bootstrap')=='coding' or ('bootstrap' not in cow and (cow['mode']=='append_user' or (prepared_prefix and cow['mode']=='ask'))))):
             raise AdmissionError('inline grammar registration requires coding bootstrap or an explicit retained-context task')
+        if 'grammar_syntax' in cow and (type(cow['grammar_syntax']) is not str or cow['grammar_syntax'] not in ('gbnf','lark') or cow.get('grammar_registration')!='inline'):
+            raise AdmissionError('grammar syntax requires gbnf or lark with inline registration')
         if 'controller_prefix' in cow and (cow['controller_prefix'] not in ('compact','compact-finish-request') or cow.get('bootstrap')!='coding' or cow.get('grammar_registration')!='inline'):
             raise AdmissionError('compact controller instructions require a new inline coding root')
         if type(cow['eos_tokens']) is not list or not cow['eos_tokens'] or any(type(t) is not int or t<0 for t in cow['eos_tokens']):raise AdmissionError('actual EOS token IDs required')
@@ -379,7 +381,7 @@ def execute(command,source,config_text,state,*,max_steps,prepared_prefix=False,c
                 from .cow_client import OperationIndeterminate
                 registration_id='bw-grammar-'+hashlib.sha256(canonical+source.encode('utf8')).hexdigest()[:40]
                 direct=any(profile.get('grammar_state')=='BW_TOOLS_DIRECT' for profile in config['profiles'].values())
-                try:registered=client.register_grammars(grammar_registry(registry,direct=direct),registration_id)
+                try:registered=client.register_grammars(grammar_registry(registry,direct=direct,syntax=cow.get('grammar_syntax','gbnf')),registration_id)
                 except OperationIndeterminate:registered=client.replay_original(registration_id)
                 adapter=ModelAdapter(client,run_id=config['run_id'],model_contract_id=cow['model_contract_id'],
                     execution_profile_id=cow['execution_profile_id'],eos_tokens=tuple(cow['eos_tokens']),model_pause=model_pause,pause_notice=pause_notice,

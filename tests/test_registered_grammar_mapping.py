@@ -47,3 +47,16 @@ class RegistrationConfigTests(unittest.TestCase):
   from branchwrite.interpreter import AdmissionError
   config=self.config();config['cow']['grammar_registration']='automatic-fallback'
   with self.assertRaises(AdmissionError):_config(json.dumps(config))
+
+ def test_grammar_syntax_is_closed_and_requires_inline_registration(self):
+  import json
+  from branchwrite.run_cli import _config
+  from branchwrite.interpreter import AdmissionError
+  for syntax in ('gbnf','lark'):
+   config=self.config();config['cow']['grammar_syntax']=syntax
+   self.assertEqual(_config(json.dumps(config))['cow']['grammar_syntax'],syntax)
+  for syntax in (True,None,'automatic','json_schema'):
+   config=self.config();config['cow']['grammar_syntax']=syntax
+   with self.assertRaises(AdmissionError):_config(json.dumps(config))
+  config=self.config();config['cow'].pop('grammar_registration');config['cow']['grammar_syntax']='lark'
+  with self.assertRaises(AdmissionError):_config(json.dumps(config))

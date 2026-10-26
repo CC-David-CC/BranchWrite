@@ -14,7 +14,13 @@ class GrammarCliAdmissionTests(unittest.TestCase):
  def test_explicit_continuation_registers_and_reopens_offline(self):
   self._exercise(True)
 
- def _exercise(self,continuation):
+ def test_lark_cli_registers_and_reopens_offline(self):
+  self._exercise(False,syntax='lark')
+
+ def test_lark_retained_context_registers_without_rewriting_parent(self):
+  self._exercise(True,syntax='lark')
+
+ def _exercise(self,continuation,*,syntax='gbnf'):
   from test_thinking_grammar import ThinkingTokenizer
   from serve.test_cow_grammar_canonical_flow import GrammarCPUBackend,_render,_encode,_initial_root_mode
   from context_time_travel.real import BranchingModel
@@ -66,6 +72,7 @@ class GrammarCliAdmissionTests(unittest.TestCase):
    config['cow'].pop('bootstrap')
    config['cow']['mode']='append_user'
    config['bindings']['task']=dict(type='Text',value='Continue the retained coding task.')
+  if syntax!='gbnf':config['cow']['grammar_syntax']=syntax
   cfg=base/'host.json';cfg.write_text(json.dumps(config))
   program=base/'task.bw';program.write_text('FLOW task\nPLAN p from=command against=world -> plan\nACT c plan=plan -> outcome\nPLAN f from=finish against=world -> plan\nACT done plan=plan -> outcome\nVERIFY v input=outcome contract=command-evidence-and-finish -> verified\nEND\n')
   state=base/'run';argv=[sys.executable,'-B','-m','branchwrite','run',str(program),'--config',str(cfg),'--state',str(state)]
@@ -83,3 +90,9 @@ class GrammarCliAdmissionTests(unittest.TestCase):
   second=subprocess.run(argv,capture_output=True,text=True,env=env,timeout=15)
   self.assertEqual(second.returncode,0,second.stderr);self.assertEqual(first.stdout,second.stdout)
   self.assertEqual(before,{str(p.relative_to(ledger)):p.read_bytes() for p in ledger.rglob('*') if p.is_file()})
+
+  if syntax=='lark':
+   config['cow']['grammar_syntax']='gbnf';cfg.write_text(json.dumps(config))
+   refused=subprocess.run(argv,capture_output=True,text=True,env=env,timeout=15)
+   self.assertEqual(refused.returncode,2,refused.stdout)
+   self.assertEqual(before,{str(p.relative_to(ledger)):p.read_bytes() for p in ledger.rglob('*') if p.is_file()})

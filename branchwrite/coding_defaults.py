@@ -166,7 +166,7 @@ def controller_prefix(schema,*,context_pack=None,context_pack_id=None,style="wor
     return header+system_prefix(family,context_pack=context_pack,context_pack_id=context_pack_id)
 
 
-def grammar_registry(registry, *, direct=False):
+def grammar_registry(registry, *, direct=False, syntax="gbnf"):
     """Startup definition for new coding contexts; never a parser-state edit.
 
     Keep action choice before arguments. The canonical JSON Schema compiler
@@ -178,13 +178,15 @@ def grammar_registry(registry, *, direct=False):
     if not isinstance(registry,ToolRegistry):raise ValueError('host ToolRegistry required')
     from .thinking_ladder import ladder
     if type(direct) is not bool:raise ValueError('direct grammar selection must be boolean')
+    if type(syntax) is not str or syntax not in ('gbnf','lark'):raise ValueError('grammar syntax must be gbnf or lark')
+    source=registry.model_gbnf() if syntax=='gbnf' else registry.model_lark()
     states={}
     for rung in ladder('lite'):
         states[rung.grammar_state]=dict(format='thinking',source=dict(
-            schema=1,max_tokens=rung.tokens,final=dict(format='gbnf',source=registry.model_gbnf())))
+            schema=1,max_tokens=rung.tokens,final=dict(format=syntax,source=source)))
     assert states['BW_TOOLS']['source']['max_tokens']==DEFAULT_THINKING_TOKENS
     if direct:
-        states['BW_TOOLS_DIRECT']=dict(format='gbnf',source=registry.model_gbnf())
+        states['BW_TOOLS_DIRECT']=dict(format=syntax,source=source)
     return dict(schema=1,states=states)
 
 def continuation_input(content,schema,*,command_requirements=(),completion_policy=None):

@@ -353,6 +353,11 @@ class ToolRegistry:
                 rules.append('browser-'+action+' ::= '+' '.join(parts))
         return '\n'.join(rules)+'\n'
 
+    def model_lark(self):
+        """Opt-in structured form of the same generated tool grammar."""
+        from .lark_grammar import tool_lark
+        return tool_lark(self.model_gbnf())
+
     def _arguments(self,tool,args):
         if type(tool) is not str or tool not in self._definitions:raise ToolRejected('tool is not granted/registered')
         _,permission,fields=self._definitions[tool]
