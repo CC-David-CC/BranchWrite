@@ -24,7 +24,7 @@ branchwrite learning --connection owner-connection.json --state-dir owner-state 
 
 PCC takes the original training request from its retained run; you do not reconstruct it or enter a request digest. For the already existing operation, `LessonService.submit` compares the retained request digest before returning its original acceptance, without enqueueing a worker. `LearningRuns._dispatch` then classifies that same terminal original job as `needs_operator` / `native_job_unresolved`. A request-binding conflict or changed revision means HOLD. Keep the same bridge ID and body if its acknowledgment is uncertain; do not invent a replacement training ID or edit saved state.
 
-Read `learning-status` again and require that exact reason before proceeding to inspection/adoption below. This no-dispatch bridge follows the current source path; the separate actual-native crash/restart qualification is still pending. It is not a claim that every use of ordinary `learning reconcile` avoids dispatch.
+Read `learning-status` again and require that exact reason before proceeding to inspection/adoption below. This no-dispatch bridge follows the current source path; a bounded actual native CPU update/reload plus deliberate service stop/restart recovery has now passed. See the [PCC qualification receipt](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-completion-recovery-20261026-bo/validation/native-completion-recovery-20261026/README.md). It is not a model-quality result or a claim that every use of ordinary `learning reconcile` avoids dispatch.
 
 ## 1. Inspect the original boundary
 
@@ -81,4 +81,12 @@ Then use the normal `branchwrite learning status`, `round`, and `advance` comman
 
 ## Qualification scope
 
-The focused BW contracts use controlled nonmodel metadata, real private files and operation journals. The cross-project HTTP tests additionally use PCC's saved-evidence fixture; those fake candidate bytes are explicitly not a model. They verify real routes, identities, strict acknowledgments, compare-and-swap refusal, replay boundaries, and no-dispatch behavior. They do not establish numerical correctness or reload equivalence for a real trained model. Legacy jobs lacking original predispatch provenance or required numerical gates remain refused. A bounded real-model qualification is a separate step.
+The focused BW contracts use controlled nonmodel metadata, real private files and operation journals. The cross-project HTTP tests additionally use PCC's saved-evidence fixture; those fake candidate bytes are explicitly not a model. They verify real routes, identities, strict acknowledgments, compare-and-swap refusal, replay boundaries, and no-dispatch behavior. They do not establish numerical correctness or reload equivalence for a real trained model. Legacy jobs lacking original predispatch provenance or required numerical gates remain refused. MiniCPM/Wen and GPU qualification remain separate.
+
+The [actual native CPU recovery receipt](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-completion-recovery-20261026-bo/validation/native-completion-recovery-20261026/README.md)
+now proves one complete tiny-model sequence driven through BW: native update,
+reload, deliberate service exit before completion commit, restart, inspection,
+explicit adoption, and reconciliation of the same learning round to
+`candidate_pending`. No second training update or promotion occurred. This is
+mechanics qualification only; MiniCPM/Wen quality, GPU behavior and retention
+remain unmeasured.
