@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "name": "joined-recovery-regression-cd.log",
+      "sha256": "5d2e2534c321790c2cf2cb43e2b3c6438613b15ebd083ced8f3ecbd815592d04",
+      "status": "PASS",
+      "tests": 33
+    },
+    {
+      "name": "workflow-budget-green03.log",
+      "sha256": "6b002ecbeb8139fdead9e4b1f16f772ad6d6432a59dc5c73da22d7bbfbfd01e2",
+      "status": "PASS",
+      "tests": 2
+    }
+  ],
+  "guarantees": [
+    "unfinished logical turn never captured as lesson",
+    "settled chunks owned by completed logical turn accepted",
+    "budget archive excludes world and native caches",
+    "archive regrades without original mutable state",
+    "changed launch and journal refused",
+    "false budget status with allowance remaining refused"
+  ],
+  "limitations": [
+    "Native observations use explicit preserved source readers; no new generic-panel inference qualification.",
+    "A budget archive is private evidence, never a verified training lesson."
+  ],
+  "native_budget_archive": {
+    "model_calls": 0,
+    "original_ledger_and_requests_unchanged": true,
+    "proof_sha256": "837a59c2e1dc77f938950435fe6d365e66247c66faf645951e5992e1201cd1c8",
+    "tool_calls": 0
+  },
+  "native_completed_capture": {
+    "independent_oracle": "pass",
+    "model_calls": 0,
+    "proof_sha256": "5ad8c28bad6c1cd45e2d1d4077f6479ab24e772e4ccc6c86a5ef4ff1619b0442",
+    "tool_calls": 0
+  },
+  "preserved_diagnostics": [
+    {
+      "name": "capture-chunks-red01.log",
+      "sha256": "6ab5a47101f6b7a58cc8c05725f4ccd19eb6a27ce570b45dbd503ce3060986c5",
+      "status": "preserved diagnostic",
+      "tests": null
+    },
+    {
+      "name": "workflow-budget-red01.log",
+      "sha256": "f894d411b9cf8698aae63764b356ecc5bfe18b3b9e29083333fd40054c7d87e3",
+      "status": "preserved diagnostic",
+      "tests": null
+    },
+    {
+      "name": "workflow-budget-green02.log",
+      "sha256": "9ac31b260ab694ecda96f9e0fb4a3261371b1caa7048e49b3cd1cfb251f83afb",
+      "status": "preserved diagnostic",
+      "tests": null
+    }
+  ],
+  "prior_checks": [
+    {
+      "name": "capture-chunks-green01.log",
+      "sha256": "3f24271f5d6e3309ace2695fdcc1a49acf60bc17065592f17327e93b8e61fcef",
+      "status": "PASS",
+      "tests": 19
+    },
+    {
+      "name": "capture-chunks-negative01.log",
+      "sha256": "2fbac1806b76a4d8bd8132d7274bb54f91073364a879a2ea03d3fe24d6cc778d",
+      "status": "PASS",
+      "tests": 1
+    },
+    {
+      "name": "budget-observation-green01.log",
+      "sha256": "73d684d14eb6fe34b1362ac396dd3fe7792c59e895200c0cadb5fe761817f235",
+      "status": "PASS",
+      "tests": 2
+    }
+  ],
+  "recorded_utc": "2026-10-26T15:23:22.939387+00:00",
+  "schema": 1,
+  "scope": "22 BW capture/observation controls plus cross-project two-case budget archive/assessment controls in a 33-test joined CPU selection",
+  "source": {
+    "base_commit": "182316fc051fe040fcb8822dd48f6ba01d4c7dc1",
+    "changed_python_sha256": {
+      "branchwrite/coding_observation.py": "c972f7b69b96f66b13d72cf8893d78d2ce1b96b58bd5eba4c0f6484a4f7fda5c",
+      "branchwrite/lesson_capture.py": "f2fa7fe39dc33e54d647b7b702a901f464ce0db51e9ac2d6522ff3438b36921d",
+      "tests/test_lesson_capture.py": "e25ba93970d489fbfd54b95274b3574977b50738159ea7028dcb39570784ac41"
+    }
+  },
+  "status": "PASS"
+}

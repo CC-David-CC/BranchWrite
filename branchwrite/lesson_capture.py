@@ -158,7 +158,8 @@ def _native(log, frames, launch, journal):
     client = CowClient(_NoNetwork(), journal=OperationJournal(journal), endpoint_url=cow['endpoint_url'], endpoint_pin=cow['endpoint_pin'])
     adapter = ModelAdapter(client, run_id=launch['config']['run_id'], model_contract_id=cow['model_contract_id'],
         execution_profile_id=cow['execution_profile_id'], eos_tokens=tuple(cow['eos_tokens']))
-    records = {}
+    records = {}; partial_requests=set()
+    frames_by_id={frame['id']:frame for frame in frames}
     for path in sorted(Path(journal).iterdir()):
         if not path.is_file() or not re.fullmatch('[a-f0-9]{64}\\.json', path.name): raise CaptureRefused('unexpected native journal entry')
         initial = _json(_read(path)); op = initial.get('operation_id')
@@ -178,9 +179,9 @@ def _native(log, frames, launch, journal):
         elif route in ('/cow/text/context', '/cow/text/prepare', '/cow/text/answer', '/cow/text/ask', '/cow/text/append-user', '/cow/text/resume'):
             value = client.read_completed_generation(op)
             if (value.receipt.raw.get('model_contract_id') != cow['model_contract_id']
-                    or value.receipt.raw.get('execution_profile_id') != cow['execution_profile_id']
-                    or value.answer.get('stopped') is False):
-                raise CaptureRefused('partial native output or model/profile mismatch')
+                    or value.receipt.raw.get('execution_profile_id') != cow['execution_profile_id']):
+                raise CaptureRefused('native model/profile mismatch')
+            if value.answer.get('stopped') is False:partial_requests.add(op)
         else: raise CaptureRefused('unsupported native journal operation')
         records[op] = record
     summaries = []
@@ -195,6 +196,10 @@ def _native(log, frames, launch, journal):
                 or request['frame_key'].get('run_id') != launch['config']['run_id']
                 or request.get('model_frame') != frame['parent']):
             raise CaptureRefused('missing exact native frame/journal owner')
+        if op in partial_requests:
+            owner=frames_by_id.get(frame['parent'])
+            if owner is None or owner['contract']!=('ModelOutput','record')or owner['state']!='Closed':
+                raise CaptureRefused('partial native request has no completed logical model owner')
         adapter.check_journal(request)
         result = decode(log.read_artifact(Artifact(*frame['result'])))[2]
         if result.get('operation_id') != op or result.get('request_sha256') != frame['inputs'][0]: raise CaptureRefused('native ledger result binding differs')
@@ -205,6 +210,8 @@ def _native(log, frames, launch, journal):
             source_binding=None if local.source_binding is None else local.source_binding.to_json())
         if payload != expected: raise CaptureRefused('native journal and ledger outputs disagree')
         summaries.append(dict(frame=frame['id'], operation_id=op, request_sha256=frame['inputs'][0], response_sha256=result['response'][0]))
+    if partial_requests-{row['operation_id']for row in summaries}:
+        raise CaptureRefused('partial native request has no exact ledger owner')
     return summaries
 
 

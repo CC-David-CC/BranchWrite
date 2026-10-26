@@ -75,7 +75,7 @@ class LessonCaptureTests(unittest.TestCase):
             model_contract_id=profile['model_contract_id'], execution_profile_id=profile['execution_profile_id'], eos_tokens=[256])
         self.environment = patch.dict(os.environ, BW_COW_API_KEY='capture-fixture'); self.environment.start(); self.addCleanup(self.environment.stop)
 
-    def run_case(self, name, corrected=False, steps=1024, partial=False, no_check=False):
+    def run_case(self, name, corrected=False, steps=1024, partial=False, no_check=False, chunked=False, exhausted=False):
         self.actions[:] = [dict(tool='read_file', arguments=dict(path='value.txt'))]
         if corrected: self.actions.append(dict(tool='replace', arguments=dict(path='value.txt', before='wrong', after='right')))
         if not no_check:
@@ -89,6 +89,8 @@ class LessonCaptureTests(unittest.TestCase):
         state = self.root/name
         launch = build_launch(self.project, 'Make value.txt contain right followed by newline.', self.connection,
             branch=name, project_files=True, thinking_mode='off', instruction_style='compact-finish-request', shell_timeout=2)
+        if chunked:launch['config']['profiles']['control'].update(request_tokens=32,max_requests=32,max_output_tokens=1024)
+        if exhausted:launch['config']['profiles']['control'].update(max_requests=1)
         save_launch(state, launch)
         returned = []; native_returned=[]
         def progress(event):
@@ -232,6 +234,52 @@ class LessonCaptureTests(unittest.TestCase):
         row=json.loads(path.read_text());row['answer']['text']='different retained text'
         row['record_sha256']=_record_digest(row);path.write_text(json.dumps(row))
         with self.assertRaises(CaptureRefused):capture_failure(state,self.root/'forged-complete')
+
+    def test_completed_multichunk_turns_capture_without_promoting_partial_turns(self):
+        failed,_=self.run_case('chunk-failure')
+        original=capture_failure(failed,self.root/'chunk-failure-capture')
+        fixed,result=self.run_case('chunk-fixed',True,chunked=True)
+        self.assertTrue(result['verified'])
+        rows=[json.loads(p.read_text())for p in(fixed/'cow-operations').iterdir()]
+        self.assertTrue(any(r.get('state')=='complete'and r.get('answer',{}).get('stopped')is False for r in rows))
+        captured=capture_correction(fixed,self.root/'chunk-correction',original.directory)
+        self.assertEqual(captured.file_bytes('value.txt'),b'right'+bytes([10]))
+        self.assertEqual(read_capture(captured.directory).capture_id,captured.capture_id)
+        self.assertFalse(captured.training_approved)
+
+    def test_partial_chunk_without_its_closed_logical_owner_refuses(self):
+        from branchwrite.lesson_capture import _native
+        from branchwrite.coding_cli import read_launch
+        from branchwrite.kernel import FrameKernel
+        state,result=self.run_case('missing-chunk-owner',True,chunked=True)
+        self.assertTrue(result['verified'])
+        partial={json.loads(p.read_text())['operation_id']for p in(state/'cow-operations').iterdir()
+            if json.loads(p.read_text()).get('answer',{}).get('stopped')is False}
+        with RuntimeLog(state/'ledger',read_only=True)as log:
+            frames=FrameKernel(log).frames()
+            native=next(f for f in frames if f['contract']==('COWNativeReceipt','record')and f['dispatch'][0]in partial)
+            with self.assertRaisesRegex(CaptureRefused,'exact ledger owner'):
+                _native(log,[f for f in frames if f['id']!=native['id']],read_launch(state),state/'cow-operations')
+            with self.assertRaisesRegex(CaptureRefused,'completed logical model owner'):
+                _native(log,[f for f in frames if f['id']!=native['parent']],read_launch(state),state/'cow-operations')
+
+    def test_budget_observation_proves_limits_without_accepting_partial_as_lesson(self):
+        from branchwrite.coding_observation import observe_model_budget
+        state,_=self.run_case('known-exhausted',partial=True,exhausted=True)
+        def files(root):return {str(p.relative_to(root)):p.read_bytes()for p in root.rglob('*')if p.is_file()}
+        before=files(state/'ledger');journals=files(state/'cow-operations')
+        value=observe_model_budget(state)
+        self.assertEqual(value['flows'][0]['native_requests'],1)
+        self.assertEqual(value['flows'][0]['maximum_requests'],1)
+        self.assertFalse(value['training_eligible']);self.assertFalse(value['workflow_finished'])
+        self.assertEqual(files(state/'ledger'),before);self.assertEqual(files(state/'cow-operations'),journals)
+        with self.assertRaisesRegex(CaptureRefused,'partial logical model output'):
+            capture_failure(state,self.root/'still-not-a-lesson')
+
+    def test_budget_observation_refuses_ordinary_partial_output(self):
+        from branchwrite.coding_observation import observe_model_budget
+        state,_=self.run_case('not-exhausted',partial=True)
+        with self.assertRaisesRegex(ValueError,'not exhausted'):observe_model_budget(state)
 
     def test_actual_closed_partial_generation_is_not_a_finished_model_turn(self):
         state,_=self.run_case('partial',partial=True)
