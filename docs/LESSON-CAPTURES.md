@@ -96,3 +96,12 @@ approve a lesson. A passing model-selected BW check is not that oracle.
 CPU tests script choices through BW's normal coding workflow and real COW HTTP,
 grammar, canonical state and isolated terminal boundaries. They establish capture
 machinery only, not native model quality or learning. No GPU is required.
+
+## Created files and explicit mode changes
+
+Assessment/correction capture validates the executor outcome for each actual file
+tool: reads, replacements, creation and mode changes have different dispositions.
+Created helper files and explicitly granted mode changes can be replayed without
+rerunning an effect. Project read/edit/create access does not itself grant the
+mode-changing tool; the host must grant readable mode paths and an allowed mask.
+The independent semantic grade remains a separate responsibility.

@@ -266,8 +266,10 @@ def _evidence(log, launch, kind, inventory, journal, *, live=False):
         elif tool == 'finish':
             if value.get('requested_finish') is not True or value.get('disposition') != 'completion_requested': raise CaptureRefused('invalid explicit finish evidence')
             finish.append(frame['id'])
-        elif value.get('disposition') not in ('read', 'applied') or value.get('exit_code') != 0:
-            raise CaptureRefused('file operation does not have a completed supported outcome')
+        elif (value.get('disposition') != {'read_file':'read', 'replace':'applied', 'replace_text_file':'applied',
+                'create_file':'created', 'create_text_file':'created', 'set_mode':'mode_changed'}[tool]
+                or value.get('exit_code') != 0):
+            raise CaptureRefused('file operation does not have its completed supported outcome')
         tools.append(dict(frame=frame['id'], tool=tool, world=plan[2], plan_sha256=frame['inputs'][0], result_sha256=frame['result'][0]))
     current = [c for c in checks if c['current']]
     if kind == 'failure' and verified is True: raise CaptureRefused('passing workflow is not a failure capture')

@@ -37,4 +37,28 @@ class AssessmentCaptureTests(unittest.TestCase):
             with self.assertRaises(CaptureRefused):read_capture(second.directory)
 
 
+    def test_actual_created_file_and_explicit_mode_change_are_supported(self):
+        fixture=fixture_module.LessonCaptureTests(methodName='runTest')
+        self.addCleanup(fixture.doCleanups);fixture.setUp()
+        from branchwrite.coding_cli import build_launch,save_launch,run_saved
+        fixture.actions[:]=[
+            dict(tool='read_file',arguments=dict(path='value.txt')),
+            dict(tool='replace',arguments=dict(path='value.txt',before='wrong',after='right')),
+            dict(tool='create_text_file',arguments=dict(path='helper.py',line_ending='LF',final_newline=True,lines=['# owned helper'])),
+            dict(tool='set_mode',arguments=dict(path='helper.py',mode='0644')),
+            dict(tool='run_check',arguments=dict(name='content',command='test "$(cat value.txt)" = right')),
+            dict(tool='finish',arguments=dict(answer='Scripted control; no model quality claim'))]
+        state=fixture.root/'created-mode'
+        launch=build_launch(fixture.project,'Make value.txt contain right followed by newline.',fixture.connection,
+            branch='created-mode',project_files=True,thinking_mode='off',instruction_style='compact-finish-request',shell_timeout=2)
+        launch['config']['grant'].update(read_paths=['helper.py'],mode_paths=['helper.py'],mode_mask=0o777)
+        save_launch(state,launch);_,result=run_saved(state,max_steps=1024)
+        self.assertTrue(result['verified'])
+        captured=capture_assessment(state,fixture.root/'created-mode-capture')
+        self.assertEqual(captured.file_bytes('helper.py'),b'# owned helper'+bytes([10]))
+        row=next(r for r in captured.manifest['files']if r['path']=='helper.py')
+        self.assertEqual(row['mode'],0o644)
+        self.assertEqual(read_capture(captured.directory).capture_id,captured.capture_id)
+
+
 if __name__=='__main__':unittest.main()
