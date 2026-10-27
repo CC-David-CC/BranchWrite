@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "kind": "bw.replacement-permission-qualification.v1",
+  "original_counterexample": {
+    "status": "BUG_REPRODUCED",
+    "mode_before": "0o644",
+    "mode_after": "0o600",
+    "umask": "0077",
+    "disposition": "applied",
+    "source_unchanged": true,
+    "updated_bytes_correct": true,
+    "model_calls": 0,
+    "training_updates": 0
+  },
+  "source_sha256": {
+    "branchwrite/execution.py": "395a56d8c97a358cb58425be159d4e389cac676cb7909611dc97d90ae1fc316c",
+    "tests/test_replacement_modes.py": "d787f3cd8b07df129d4082831d6e05a8d1625a0106f00938855ed134a570916d",
+    "tests/test_tool_registry.py": "4fc77d5f26375f7f917cb265ded755951deaaa481cf8617a61cebea885632df6"
+  },
+  "checks": {
+    "before-private.log": {
+      "log_sha256": "ddd3cef18d9204245f6de724a68b44f7b848e541c3f853fce97e713c2d29a0f3",
+      "outcome": "FAILED (failures=13)"
+    },
+    "after-private.log": {
+      "log_sha256": "62fd408f9f4e604c6442019cf3f3f5db739d773eeada431424416c32d2fe7303",
+      "outcome": "OK"
+    },
+    "regression-qualified-fixed-private.log": {
+      "log_sha256": "af7b4c2912d8d76e167cd8a2b2bc0050a06b44700f8a3d60317953f6c453e798",
+      "outcome": "OK (skipped=1)"
+    },
+    "sss-restrictive-umask-private.log": {
+      "log_sha256": "4bfb90401a05589c9c27713ae3039f93c495f41a8337fcc9fadc4c21ec15d08f",
+      "outcome": "OK"
+    },
+    "original-discovery-expectation-private.log": {
+      "log_sha256": "1911559ef6111fa52aae18dc61c45aa2d5d1e81504e895d37540e9eab435abba",
+      "outcome": "FAILED (failures=1)"
+    }
+  },
+  "replacement_mode_combinations": 18,
+  "injected_failure_keeps_original": true,
+  "bw_tests": {
+    "run": 54,
+    "passed": 53,
+    "skipped": 1,
+    "skip_reason": "Optional real browser not configured"
+  },
+  "sss_restrictive_umask_tests": {
+    "passed": 44,
+    "umask": "0077",
+    "scripted": true,
+    "actual_bw_cow_os": true,
+    "gguf_metadata_only": true
+  },
+  "model_calls_in_cpu_qualification": 0,
+  "training_updates": 0,
+  "frozen_68_study_modified": false,
+  "old_results_rewritten": false,
+  "harness_correction_not_learning": true
+}

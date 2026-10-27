@@ -759,6 +759,9 @@ class Executor:
                 with os.fdopen(fd, "wb") as stream:
                     stream.write(updated)
                     stream.flush()
+                    # Creation modes are filtered by umask. Restore the original
+                    # file's exact basic permissions on this owned descriptor.
+                    os.fchmod(stream.fileno(), mode)
                     os.fsync(stream.fileno())
                 os.replace(temporary, target)
                 dir_fd = os.open(target.parent, os.O_RDONLY | os.O_DIRECTORY)

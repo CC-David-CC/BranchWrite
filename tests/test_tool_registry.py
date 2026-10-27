@@ -99,7 +99,13 @@ class ToolRegistryTests(unittest.TestCase):
         (tests/'test_values.py').write_text('import unittest\n')
         registry=ToolRegistry(self.executor,Grant((),True))
         result=registry.execute(registry.freeze(self.proposal('run_tests',suite='unit')),'missing-package')
-        self.assertEqual(result.exit_code,1);self.assertIn(b'Start directory is not importable',result.stderr)
+        self.assertEqual(result.exit_code,1)
+        # Some Python versions discover namespace directories. The host still
+        # rejects an empty suite; require that exact rejection rather than one
+        # interpreter version's discovery wording.
+        self.assertTrue(b'Start directory is not importable' in result.stderr or
+            (b'Ran 0 tests' in result.stderr and
+             b'No test cases found; an empty suite is not a successful verification.' in result.stderr))
     def test_file_mode_is_a_relevant_dependency(self):
         plan=self.registry.freeze(self.proposal('read_file',path='a.py'))
         path=self.executor.workspace/'a.py';path.chmod(path.stat().st_mode ^ 0o100)

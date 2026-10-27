@@ -343,3 +343,6 @@ keeps its learning and release decisions separate.
 [Registered LoRA AdamW through BW and COW](https://github.com/CC-David-CC/Private_Context_COW/blob/feat/native-learning-curves-20261024/docs/REGISTERED-LORA-ADAMW.md) now has real CPU checks and a short MiniCPM A100 qualification through both actual clients. Resumed and uninterrupted GPU updates produced identical adapter and optimizer-state file hashes. It is explicit and optional; existing default training recipes are unchanged.
 
 Owner-side evidence export: [read captured coding actions without replay](docs/CAPTURED-ACTION-TURNS.md). This optional reader does not approve correctness or training.
+
+
+[Replacement permission fix](docs/REPLACEMENT-MODE-PRESERVATION.md): file edits now retain their original mode under restrictive owner umasks, preventing a demonstrated harness-caused workflow failure.
