@@ -11,6 +11,11 @@ def main(argv=None,*,output=print,connection_override=None):
     sub.add_parser('policies');sub.add_parser('list')
     p=sub.add_parser('status');p.add_argument('run_id')
     p=sub.add_parser('round');p.add_argument('run_id');p.add_argument('round_index',type=int)
+    p=sub.add_parser('drive',help='Follow advertised actions until one round settles or owner input is needed')
+    p.add_argument('run_id');p.add_argument('--operation-prefix',required=True)
+    p.add_argument('--lesson-id',action='append',default=[])
+    p.add_argument('--maximum-transitions',type=int,default=16)
+    p.add_argument('--maximum-seconds',type=int,default=300)
     p=sub.add_parser('start');p.add_argument('--operation-id',required=True);p.add_argument('--policy-id',required=True)
     p.add_argument('--parent-job-id');p.add_argument('--expected-parent-sha256')
     for action in ('advance','reconcile','stop','preserve'):
@@ -26,6 +31,10 @@ def main(argv=None,*,output=print,connection_override=None):
         elif args.action=='list':value=client.training_read('learning-runs')
         elif args.action=='status':value=client.training_read('learning-runs',args.run_id)
         elif args.action=='round':value=client.training_read('learning-runs',args.run_id,round_index=args.round_index)
+        elif args.action=='drive':
+            from .learning_drive import drive
+            value=drive(client,args.run_id,connection['model_contract_id'],operation_prefix=args.operation_prefix,
+                lesson_ids=args.lesson_id,maximum_transitions=args.maximum_transitions,maximum_seconds=args.maximum_seconds)
         elif args.action=='start':
             value=client.training_submit('learning-runs',dict(policy_id=args.policy_id,parent_job_id=args.parent_job_id,
                 expected_parent_sha256=args.expected_parent_sha256),args.operation_id)

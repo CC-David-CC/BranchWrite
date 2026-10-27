@@ -1,5 +1,10 @@
 # BranchWrite (BW)
 
+[Drive one learning round from a person or agent](docs/BOUNDED-LEARNING-DRIVER.md):
+the bounded client follows PCC's advertised actions, waits for original jobs,
+and stops for verified lesson selection or operator review. S³'s real tiny-model
+CPU integration qualifies the driver separately from model capability scores.
+
 [Terminal workflow failures](docs/TERMINAL-WORKFLOW-FAILURES.md) can now be archived locally for assessment without inventing an artifact grade or approving a lesson.
 
 [Owner completion recovery](docs/OWNER-COMPLETION-RECOVERY.md) lets a person or owner agent inspect original evidence, explicitly adopt completed metadata, and return to the same learning round without starting another training job. [PCC's recovery contract](https://github.com/CC-David-CC/Private_Context_COW/blob/4a536ab6e26a7d97f200452479a201b414ce55fb/docs/NATIVE-COMPLETION-RECOVERY.md) explains the engine checks. CPU saved-evidence tests qualify this administrative path; real-model numerical qualification remains separate.
