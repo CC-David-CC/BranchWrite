@@ -1046,6 +1046,38 @@ class CowClient:
             raise CowClientError('Invalid or mismatched COW context budget')
         return value
 
+    def text_context_preflight(self, source: BranchHead, mode: str, content: str | None,
+                               max_tokens: int) -> Mapping[str, Any]:
+        """Count an exact text request without dispatching a model operation."""
+        if not isinstance(source,BranchHead) or mode not in ('answer','ask','append_user','continue'):
+            raise ValueError('bound source and supported text mode required')
+        if type(max_tokens) is not int or not 1<=max_tokens<=65536:
+            raise ValueError('bounded positive output token request required')
+        if (mode in ('ask','append_user') and type(content) is not str
+                or mode in ('answer','continue') and content is not None):
+            raise ValueError('content does not match text request mode')
+        body=dict(branch=source.name,revision=source.revision,snapshot=source.tip,
+                  mode=mode,content=content,max_tokens=max_tokens)
+        value=self.transport.request('POST','/cow/text/context-preflight',_canonical(body)).json_value
+        fields={'schema','branch','revision','snapshot','model_contract_id','execution_profile_id',
+                'mode','content_sha256','capacity_tokens','used_tokens','input_tokens',
+                'requested_output_tokens','available_output_tokens','fits'}
+        content_sha=None if content is None else hashlib.sha256(content.encode('utf-8')).hexdigest()
+        if (type(value) is not dict or set(value)!=fields or type(value['schema']) is not int
+                or value['schema']!=1 or value['branch']!=source.name
+                or type(value['revision']) is not int or value['revision']!=source.revision
+                or value['snapshot']!=source.tip or value['mode']!=mode or value['content_sha256']!=content_sha
+                or value['requested_output_tokens']!=max_tokens
+                or any(type(value[k]) is not str or not value[k] for k in ('model_contract_id','execution_profile_id'))
+                or any(type(value[k]) is not int or value[k]<0 for k in
+                       ('capacity_tokens','used_tokens','input_tokens','requested_output_tokens','available_output_tokens'))
+                or value['capacity_tokens']<=0 or value['used_tokens']>value['capacity_tokens']
+                or value['available_output_tokens']!=max(0,value['capacity_tokens']-value['used_tokens']-value['input_tokens'])
+                or type(value['fits']) is not bool
+                or value['fits']!=(value['used_tokens']+value['input_tokens']+max_tokens<=value['capacity_tokens'])):
+            raise CowClientError('Invalid or mismatched COW text context preflight')
+        return value
+
     def operation(self, operation_id: str) -> OperationObservation:
         try:
             response = self.transport.request("GET", "/cow/operation?" + urlencode({"operation": operation_id}))

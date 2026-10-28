@@ -114,6 +114,19 @@ change the run, resize a request, compact context, or certify a context length.
 The branch can still move after the observation, so a caller must bind any later
 action to its original revision and snapshot.
 
+For a text request, use the matching PCC preflight endpoint through BW:
+
+```sh
+branchwrite context-preflight /path/to/run --mode ask --content-file /private/question.txt --max-tokens 2048
+```
+
+The modes `ask` and `append_user` require a content file; `answer` and `continue`
+accept no content file. The result binds the counted content, source snapshot,
+model and profile, and reports `fits` for the requested output bound. A successful
+command means the observation succeeded; check `fits` separately. This is an
+explicit observation, not an automatic generation guard or a compaction policy.
+Image inputs require a separate qualified path.
+
 While the original COW coordinator is still running, `branchwrite status RUN`
 lists the exact pending operation. With a COW server that supports the live
 diagnostic endpoint, `branchwrite diagnose RUN --operation-id ORIGINAL_ID`

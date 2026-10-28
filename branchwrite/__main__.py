@@ -205,6 +205,9 @@ def main(argv=None):
     diagnostic.add_argument('state',type=Path);diagnostic.add_argument('--operation-id',required=True)
     budget=commands.add_parser('context-budget',help='Inspect the current COW snapshot capacity for a saved coding run.')
     budget.add_argument('state',type=Path)
+    preflight=commands.add_parser('context-preflight',help='Count an exact text request against the saved run context without inference.')
+    preflight.add_argument('state',type=Path);preflight.add_argument('--mode',required=True,choices=('answer','ask','append_user','continue'))
+    preflight.add_argument('--content-file',type=Path);preflight.add_argument('--max-tokens',required=True,type=int)
     args=parser.parse_args(argv)
     if args.command=='session':
         from .interactive_cli import run
@@ -259,6 +262,10 @@ def main(argv=None):
         if args.command=='context-budget':
             from .coding_budget import budget_saved
             return _run_result(lambda:budget_saved(args.state))
+        if args.command=='context-preflight':
+            from .coding_budget import preflight_saved
+            return _run_result(lambda:preflight_saved(args.state,args.mode,
+                None if args.content_file is None else _source(args.content_file),args.max_tokens))
         if args.command=='apply':
             from .project_apply import command
             return command(args.archive,args.source,args.destination,args.sha256,args.operation_id)

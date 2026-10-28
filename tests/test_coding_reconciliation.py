@@ -85,6 +85,24 @@ class CodingReconciliationTests(unittest.TestCase):
    execution_profile_id='other-profile',revision=0,snapshot='a'*64),head=unexpected_head)
   with patch('branchwrite.coding_budget._client',return_value=fake):
    with self.assertRaisesRegex(ValueError,'different model or profile'):budget_saved(self.state)
+ def test_text_context_preflight_uses_real_server_without_model_work(self):
+  self.case.models[0].profile['execution']['capacity']=1024
+  before=self.hashes();trace=list(self.case.trace);head=self.client.head('cli-main')
+  r=subprocess.run([sys.executable,'-B','-m','branchwrite','context-preflight',str(self.state),
+   '--mode','answer','--max-tokens','32'],capture_output=True,text=True,
+   env=dict(os.environ,BW_COW_API_KEY='cpu-flow-secret'),timeout=20)
+  self.assertEqual(r.returncode,0,r.stderr);result=json.loads(r.stdout);value=result['preflight']
+  self.assertFalse(result['workflow_advanced']);self.assertEqual(value['snapshot'],head.tip)
+  self.assertEqual(value['input_tokens'],0);self.assertEqual(value['requested_output_tokens'],32)
+  self.assertTrue(value['fits']);self.assertEqual(self.hashes(),before);self.assertEqual(self.case.trace,trace)
+ def test_text_context_preflight_rejects_wrong_content_digest(self):
+  head=self.client.head('cli-main')
+  value=dict(schema=1,branch='cli-main',revision=head.revision,snapshot=head.tip,
+   model_contract_id='flow-model',execution_profile_id='flow-profile',mode='append_user',
+   content_sha256='0'*64,capacity_tokens=1024,used_tokens=10,input_tokens=1,
+   requested_output_tokens=4,available_output_tokens=1013,fits=True)
+  with patch.object(self.client.transport,'request',return_value=_Response(json_value=value)):
+   with self.assertRaises(CowClientError):self.client.text_context_preflight(head,'append_user','hello',4)
  def test_cli_restores_output_then_existing_step_resumes_without_new_work(self):
   op=self.pending();before=self.hashes();trace=list(self.case.trace);r=self.invoke(op)
   self.assertEqual(r.returncode,0,r.stderr);value=json.loads(r.stdout)

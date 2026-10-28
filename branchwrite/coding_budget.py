@@ -15,3 +15,17 @@ def budget_saved(state):
         raise ValueError('COW branch changed during context budget inspection')
     return 0,dict(status='observed',workflow_advanced=False,
                   future_input_included=False,budget=budget)
+
+
+def preflight_saved(state,mode,content,max_tokens):
+    launch=read_launch(state)
+    cow=launch['config']['cow']
+    client=_client(state,launch)
+    source=client.head(cow['branch'])
+    result=client.text_context_preflight(source,mode,content,max_tokens)
+    if (result['model_contract_id']!=cow['model_contract_id']
+            or result['execution_profile_id']!=cow['execution_profile_id']):
+        raise ValueError('context preflight belongs to a different model or profile')
+    if client.head(cow['branch'])!=source:
+        raise ValueError('COW branch changed during context preflight')
+    return 0,dict(status='observed',workflow_advanced=False,preflight=result)
