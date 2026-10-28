@@ -141,8 +141,10 @@ class Interpreter:
                 if (set(profile)!={'kind','source'} or type(profile['source']) is not str
                     or not re.fullmatch(r'[A-Za-z][A-Za-z0-9_.-]*',profile['source'])):
                     raise AdmissionError('image feedback profile requires one named source binding')
-            elif set(profile)-{'settings','grammar_state','output_format','request_tokens','max_requests','max_output_tokens','max_result_bytes','thinking_ladder'}:
+            elif set(profile)-{'settings','grammar_state','output_format','request_tokens','max_requests','max_output_tokens','max_result_bytes','thinking_ladder','context_preflight'}:
                 raise AdmissionError('unknown model profile field')
+            elif 'context_preflight' in profile and type(profile['context_preflight']) is not bool:
+                raise AdmissionError('context preflight must be a boolean')
         for profile in self.profiles.values():
             if 'thinking_ladder' not in profile:continue
             try:rungs=ladder_module.ladder(profile['thinking_ladder'])

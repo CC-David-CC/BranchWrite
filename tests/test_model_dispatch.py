@@ -30,6 +30,52 @@ class ModelFlowTests(unittest.TestCase):
  def admit(self,plan=None):
   return admit_model(self.kernel,self.adapter,'root',expected_epoch=0,child_id='model-flow',attempt_id='model-attempt',slot='proposal',next_pc=1,plan=self.plan() if plan is None else plan)
  def native_frames(self):return [x for x in self.kernel.frames() if x['contract']==('COWNativeReceipt','record')]
+ def test_opt_in_context_guard_stops_before_native_dispatch_when_output_cannot_fit(self):
+  from context_time_travel.input_spans import history_for_snapshot
+  source=self.client.head('model-main');count=len(history_for_snapshot(self.case.coordinator.store,source.tip))
+  self.model.profile['execution']['capacity']=count+1
+  self.admit(self.plan(context_preflight=True));before=list(self.case.trace)
+  with self.assertRaisesRegex(ModelContractError,'cannot fit'):step_model(self.kernel,self.adapter,'model-flow')
+  self.assertEqual(self.native_frames(),[]);self.assertEqual(self.case.trace,before)
+ def test_opt_in_context_guard_allows_a_fitting_request(self):
+  self.model.profile['execution']['capacity']=1024
+  self.admit(self.plan(context_preflight=True));result=step_model(self.kernel,self.adapter,'model-flow')
+  self.assertEqual(result.status,'partial');self.assertEqual(len(self.native_frames()),1)
+ def test_opt_in_context_guard_stops_an_overfull_continuation(self):
+  from context_time_travel.input_spans import history_for_snapshot
+  self.model.profile['execution']['capacity']=1024
+  self.admit(self.plan(context_preflight=True));self.assertEqual(step_model(self.kernel,self.adapter,'model-flow').status,'partial')
+  head=self.client.head('model-main');count=len(history_for_snapshot(self.case.coordinator.store,head.tip))
+  self.model.profile['execution']['capacity']=count+1;before=list(self.case.trace)
+  with self.assertRaisesRegex(ModelContractError,'cannot fit'):step_model(self.kernel,self.adapter,'model-flow')
+  self.assertEqual(len(self.native_frames()),1);self.assertEqual(self.case.trace,before)
+ def test_opt_in_context_guard_refuses_unavailable_preflight_without_dispatch(self):
+  self.admit(self.plan(context_preflight=True));before=list(self.case.trace)
+  with patch.object(self.client,'text_context_preflight',side_effect=RuntimeError('preflight unavailable')):
+   with self.assertRaisesRegex(RuntimeError,'preflight unavailable'):step_model(self.kernel,self.adapter,'model-flow')
+  self.assertEqual(self.native_frames(),[]);self.assertEqual(self.case.trace,before)
+ def test_undispatched_child_rechecks_preflight_after_interruption(self):
+  self.model.profile['execution']['capacity']=1024
+  self.admit(self.plan(context_preflight=True))
+  with patch.object(self.kernel,'dispatch',side_effect=OSError('interrupted before dispatch')):
+   with self.assertRaisesRegex(OSError,'interrupted'):step_model(self.kernel,self.adapter,'model-flow')
+  self.assertEqual(len(self.native_frames()),1);self.assertIsNone(self.native_frames()[0]['dispatch'])
+  self.reopen();before=list(self.case.trace)
+  with patch.object(self.client,'text_context_preflight',side_effect=RuntimeError('preflight checked again')):
+   with self.assertRaisesRegex(RuntimeError,'checked again'):step_model(self.kernel,self.adapter,'model-flow')
+  self.assertIsNone(self.native_frames()[0]['dispatch']);self.assertEqual(self.case.trace,before)
+ def test_pending_request_is_not_preflighted_or_replayed(self):
+  self.model.profile['execution']['capacity']=1024
+  self.admit(self.plan(context_preflight=True));actual=self.client.transport.request
+  def drop(method,path,body=None,**kwargs):
+   result=actual(method,path,body,**kwargs)
+   if method=='POST' and path=='/cow/text/answer':raise OperationIndeterminate('lost committed reply')
+   return result
+  with patch.object(self.client.transport,'request',side_effect=drop):
+   with self.assertRaises(OperationIndeterminate):step_model(self.kernel,self.adapter,'model-flow')
+  self.reopen()
+  with patch.object(self.client,'text_context_preflight',side_effect=AssertionError('do not preflight pending work')):
+   with self.assertRaises(ModelReconciliationRequired):step_model(self.kernel,self.adapter,'model-flow')
  def test_partial_then_restart_continue_returns_once_at_consumed_eos(self):
   self.admit();first=step_model(self.kernel,self.adapter,'model-flow')
   self.assertEqual(first.status,'partial');self.assertIsNone(first.value)

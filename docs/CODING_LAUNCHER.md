@@ -127,6 +127,14 @@ command means the observation succeeded; check `fits` separately. This is an
 explicit observation, not an automatic generation guard or a compaction policy.
 Image inputs require a separate qualified path.
 
+For a new text coding run, `branchwrite code ... --context-preflight` opts into
+checking each exact model request before dispatch. The choice is saved in the run
+profile. If the input and requested output do not fit, BW stops before sending the
+model request; it does not silently reduce the output budget or compact history.
+The matching PCC preflight endpoint is required. The guard currently refuses image
+input and does not apply to previously admitted runs. Keep the compatible runtime for a
+pending operation; a preflight cannot settle or replay it.
+
 While the original COW coordinator is still running, `branchwrite status RUN`
 lists the exact pending operation. With a COW server that supports the live
 diagnostic endpoint, `branchwrite diagnose RUN --operation-id ORIGINAL_ID`

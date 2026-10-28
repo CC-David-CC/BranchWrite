@@ -20,6 +20,13 @@ class CodingLauncherTests(unittest.TestCase):
   self.assertEqual(set(cfg['grant']['read_paths']),{'app.py','new.py','tests/test_app.py'})
   self.assertIn('command-evidence-and-finish',launch['program'])
   self.assertEqual(cfg['verification']['commands'][0]['exit_code'],0)
+ def test_context_preflight_is_an_explicit_saved_launch_choice(self):
+  from branchwrite.coding_cli import save_launch,read_launch
+  self.assertNotIn('context_preflight',self.build()['config']['profiles']['control'])
+  launch=self.build(context_preflight=True)
+  self.assertIs(launch['config']['profiles']['control']['context_preflight'],True)
+  state=self.base/'preflight';save_launch(state,launch);self.assertEqual(read_launch(state),launch)
+  with self.assertRaises(ValueError):self.build(context_preflight='yes')
  def test_experimental_check_progress_is_an_explicit_persisted_host_choice(self):
   from branchwrite.coding_cli import build_launch,save_launch,read_launch
   launch=build_launch(self.project,'Repair app.',self.connection,branch='progress',project_files=True)

@@ -77,7 +77,7 @@ class ModelAdapter:
         self.definition=encode(('bw.model-flow.v1',self.identity))
 
     def freeze(self,source,*,mode,content=None,settings=None,grammar_state=None,output_format='text',
-               request_tokens=1536,max_requests=8,max_output_tokens=12288,max_result_bytes=262144,planning=None):
+               request_tokens=1536,max_requests=8,max_output_tokens=12288,max_result_bytes=262144,planning=None,context_preflight=False):
         if not isinstance(source,BranchHead):raise ModelContractError('observed source head required')
         BranchHead.parse(_head(source))
         if mode not in ('answer','ask','append_user'):raise ModelContractError('initial mode must name the actual COW boundary')
@@ -100,6 +100,8 @@ class ModelAdapter:
         config=dict(mode=mode,content=content,settings=settings,grammar_state=grammar_state,output_format=output_format,
             request_tokens=_positive(request_tokens,65536),max_requests=_positive(max_requests,64),
             max_output_tokens=_positive(max_output_tokens,1048576),max_result_bytes=_positive(max_result_bytes,1048576))
+        if type(context_preflight) is not bool:raise ModelContractError('context preflight must be a boolean')
+        if context_preflight:config['context_preflight']=True
         value=dict(schema=1,kind='bw.model-call',adapter=self.identity,source=_head(source),config=config)
         if planning is not None:
             try:planning=ladder_module.planning_context(planning)
@@ -252,6 +254,16 @@ def _branch_free(kernel,adapter,branch,*,owner,exclude=None):
         if request['endpoint_url']==adapter.client.endpoint_url and request['source']['name']==branch:
             raise ModelBranchBusy('another unresolved model FLOW/request owns this branch')
 
+def _context_guard(adapter,request):
+    body=json.loads(request['body'])
+    check=adapter.client.text_context_preflight(BranchHead.parse(request['source']),request['mode'],
+        body.get('content'),body['max_tokens'])
+    if (check['model_contract_id']!=adapter.model_contract_id
+            or check['execution_profile_id']!=adapter.execution_profile_id):
+        raise ModelContractError('context preflight model or profile differs')
+    if not check['fits']:
+        raise ModelContractError('COW context cannot fit the exact input and requested output; compact or use a qualified larger context')
+
 def step_model(kernel,adapter,identifier,*,dispatcher=None):
     """Owner-thread step. Never poll/resend uncertain work or close a partial FLOW."""
     frame,plan=_flow(kernel,adapter,identifier)
@@ -266,12 +278,15 @@ def step_model(kernel,adapter,identifier,*,dispatcher=None):
         # budget. A saved bad view must not turn into a hidden repair on retry.
         report=_finish_or_partial(kernel,adapter,frame,plan,values)
         if report.status=='complete':return report
+    preflight_checked=False
     if frame['state']=='Ready':
         config=plan['config']
         if done>=config['max_requests'] or used>=config['max_output_tokens']:return ModelStep('budget_exhausted',identifier)
         _branch_free(kernel,adapter,source['name'],owner=identifier)
         if _head(adapter.client.head(source['name']))!=source:raise ModelSourceChanged('source head changed; do not rebase/replay implicitly')
         child_id,operation,request=adapter.native(frame,plan,done,source,used)
+        if config.get('context_preflight') is True:
+            _context_guard(adapter,request);preflight_checked=True
         inputs=kernel.log.put_artifact(encode(request));definition=kernel.log.put_artifact(adapter.native_definition(operation))
         kernel.spawn(identifier,expected_epoch=done,calls=(CallSpec(child_id,'attempt-'+child_id[7:],'native',operation,definition,inputs,ResultContract('COWNativeReceipt','record')),),next_pc=done+1)
         frame=kernel.frame(identifier)
@@ -286,6 +301,8 @@ def step_model(kernel,adapter,identifier,*,dispatcher=None):
             if _head(adapter.client.head(source['name']))!=source:raise ModelSourceChanged('source changed before native send')
             if dispatcher is not None and not dispatcher.available:
                 return ModelStep('waiting',identifier)
+            if plan['config'].get('context_preflight') is True and not preflight_checked:
+                _context_guard(adapter,request)
             kernel.dispatch(child_id,request['frame_key']['operation_id'],_ref(child['inputs']))
             if dispatcher is None:result=adapter.execute(request)
             else:
