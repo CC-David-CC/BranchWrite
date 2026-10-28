@@ -67,6 +67,7 @@ class CodingStatusTests(unittest.TestCase):
   self.native_pending();before=self.snapshot();code,out,err=self.invoke('--json');self.assertEqual(code,0,err)
   rows=json.loads(out)['pending_model_recovery'];self.assertEqual(len(rows),1)
   self.assertEqual(rows[0]['operation_id'],'owned-model-op')
+  self.assertEqual(rows[0]['diagnose_argv'],['branchwrite','diagnose',str(self.state.absolute()),'--operation-id','owned-model-op'])
   self.assertEqual(rows[0]['reconcile_argv'],['branchwrite','reconcile',str(self.state.absolute()),'--operation-id','owned-model-op'])
   self.assertEqual(rows[0]['resume_argv'],['branchwrite','resume',str(self.state.absolute())])
   self.assertEqual(rows[0]['receipt_argv'],['branchwrite','receipt',str(self.state.absolute()),'--operation-id','owned-model-op'])

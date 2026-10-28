@@ -36,7 +36,7 @@ def _reconcile_bootstrap(state, launch, operation_id):
     return 0, dict(status='reconciled', scope='bootstrap', operation_id=operation_id,
                    snapshot=head.tip, workflow_advanced=False, output_tokens=0)
 
-def reconcile_saved(state,operation_id):
+def reconcile_saved(state,operation_id,*,diagnostic=False):
     state=Path(state)
     launch=read_launch(state)
     if not (state/'ledger').is_dir():
@@ -45,6 +45,7 @@ def reconcile_saved(state,operation_id):
         with RuntimeLog(state/'ledger',read_only=True) as log:
             kernel=FrameKernel(log)
             if not kernel.frames():
+                if diagnostic:raise ValueError('diagnostics require an admitted model request')
                 return _reconcile_bootstrap(state,launch,operation_id)
             root=kernel.frame('program')
             if root['contract']!=('ProgramResult','record'):
@@ -78,6 +79,12 @@ def reconcile_saved(state,operation_id):
                 model_contract_id=cow['model_contract_id'],execution_profile_id=cow['execution_profile_id'],
                 eos_tokens=tuple(cow['eos_tokens']))
             adapter.check_journal(request)
+            if diagnostic:
+                observation=client.operation_diagnostic(operation_id)
+                if observation['branch']!=cow['branch']:
+                    raise ValueError('diagnostic belongs to a different COW branch')
+                return 0,dict(status='diagnostic',operation_id=operation_id,
+                    workflow_advanced=False,durable_claim_verified=False,diagnostic=observation)
             try:result=client.reconcile_generation(operation_id)
             except OperationIndeterminate as exc:
                 raise ModelReconciliationRequired(operation_id) from exc

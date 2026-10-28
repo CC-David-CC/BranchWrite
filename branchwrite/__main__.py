@@ -201,6 +201,8 @@ def main(argv=None):
     receipt.add_argument('--json',action='store_true')
     reconcile=commands.add_parser('reconcile',help='Recover proven durable output for one pending model operation; does not advance the workflow.')
     reconcile.add_argument('state',type=Path);reconcile.add_argument('--operation-id',required=True)
+    diagnostic=commands.add_parser('diagnose',help='Inspect private live COW failure details for a pending model operation without replay.')
+    diagnostic.add_argument('state',type=Path);diagnostic.add_argument('--operation-id',required=True)
     args=parser.parse_args(argv)
     if args.command=='session':
         from .interactive_cli import run
@@ -249,6 +251,9 @@ def main(argv=None):
         if args.command=='reconcile':
             from .coding_reconciliation import reconcile_saved
             return _run_result(lambda:reconcile_saved(args.state,args.operation_id))
+        if args.command=='diagnose':
+            from .coding_reconciliation import reconcile_saved
+            return _run_result(lambda:reconcile_saved(args.state,args.operation_id,diagnostic=True))
         if args.command=='apply':
             from .project_apply import command
             return command(args.archive,args.source,args.destination,args.sha256,args.operation_id)

@@ -9,7 +9,7 @@ from branchwrite.records import RuntimeLog,Artifact,encode,decode
 from branchwrite.kernel import FrameKernel,ResultContract,CallSpec
 from branchwrite.language import parse,render
 from branchwrite.model_dispatch import ModelAdapter,admit_model,step_model
-from branchwrite.cow_client import OperationIndeterminate,GenerationIndeterminate
+from branchwrite.cow_client import OperationIndeterminate,GenerationIndeterminate,CowClientError,_Response
 
 class CodingReconciliationTests(unittest.TestCase):
  def setUp(self):
@@ -52,6 +52,8 @@ class CodingReconciliationTests(unittest.TestCase):
   return {str(p.relative_to(self.state/'ledger')):hashlib.sha256(p.read_bytes()).hexdigest() for p in (self.state/'ledger').rglob('*') if p.is_file()}
  def invoke(self,op):
   return subprocess.run([sys.executable,'-B','-m','branchwrite','reconcile',str(self.state),'--operation-id',op],capture_output=True,text=True,env=dict(os.environ,BW_COW_API_KEY='cpu-flow-secret'),timeout=20)
+ def diagnose(self,op):
+  return subprocess.run([sys.executable,'-B','-m','branchwrite','diagnose',str(self.state),'--operation-id',op],capture_output=True,text=True,env=dict(os.environ,BW_COW_API_KEY='cpu-flow-secret'),timeout=20)
  def test_cli_restores_output_then_existing_step_resumes_without_new_work(self):
   op=self.pending();before=self.hashes();trace=list(self.case.trace);r=self.invoke(op)
   self.assertEqual(r.returncode,0,r.stderr);value=json.loads(r.stdout)
@@ -81,6 +83,34 @@ class CodingReconciliationTests(unittest.TestCase):
  def test_failed_uncommitted_model_operation_stays_unresolved(self):
   op=self.pending(failed=True);before=self.hashes();trace=list(self.case.trace);r=self.invoke(op)
   self.assertEqual(r.returncode,4,r.stderr);self.assertEqual(self.hashes(),before);self.assertEqual(self.case.trace,trace)
+ def test_diagnostic_reads_original_failure_without_advancing_or_replay(self):
+  op=self.pending(failed=True);before=self.hashes();trace=list(self.case.trace)
+  journal=self.client.journal.read(op);r=self.diagnose(op)
+  self.assertEqual(r.returncode,0,r.stderr);value=json.loads(r.stdout)
+  self.assertEqual(value['status'],'diagnostic');self.assertFalse(value['workflow_advanced'])
+  self.assertFalse(value['durable_claim_verified'])
+  self.assertEqual(value['operation_id'],op)
+  self.assertEqual(value['diagnostic']['state'],'failed')
+  self.assertEqual(value['diagnostic']['diagnostic_scope'],'coordinator-process-only')
+  self.assertIsNotNone(value['diagnostic']['failure'])
+  self.assertEqual(self.hashes(),before);self.assertEqual(self.case.trace,trace)
+  self.assertEqual(self.client.journal.read(op),journal)
+  self.assertEqual(self.invoke(op).returncode,4)
+  self.assertEqual(self.client.journal.read(op),journal)
+ def test_diagnostic_rejects_unowned_operation_before_network(self):
+  before=self.hashes();trace=list(self.case.trace);r=self.diagnose('unowned-operation')
+  self.assertEqual(r.returncode,2);self.assertEqual(self.hashes(),before);self.assertEqual(self.case.trace,trace)
+ def test_diagnostic_refuses_live_workflow_writer(self):
+  op=self.pending(failed=True);before=self.hashes()
+  with RuntimeLog(self.state/'ledger'):r=self.diagnose(op)
+  self.assertEqual(r.returncode,2);self.assertIn('busy',r.stderr.lower())
+  self.assertEqual(self.hashes(),before)
+ def test_diagnostic_client_rejects_a_different_operation(self):
+  response=_Response(json_value=dict(operation_id='other',scope='coordinator-process',
+   diagnostic_scope='coordinator-process-only',durable=False,branch='cli-main',
+   state='failed',publication_retryable=False,failure=dict(type='Error',message='bad')))
+  with patch.object(self.client.transport,'request',return_value=response):
+   with self.assertRaises(CowClientError):self.client.operation_diagnostic('original')
 
  def restart_fixture_server(self, *, evict_checkpoints=False):
   # Actual HTTP server/coordinator replacement on the same endpoint. This is a
@@ -150,6 +180,13 @@ class CodingReconciliationTests(unittest.TestCase):
   r=self.invoke(op)
   self.assertEqual(r.returncode,4,r.stderr)
   self.assertEqual(self.hashes(),before);self.assertEqual(self.case.trace,trace)
+
+ def test_live_diagnostic_is_unavailable_after_coordinator_reconstruction(self):
+  op=self.pending(failed=True);before=self.hashes();trace=list(self.case.trace)
+  self.restart_fixture_server();journal=self.client.journal.read(op)
+  r=self.diagnose(op)
+  self.assertEqual(r.returncode,2,r.stderr);self.assertEqual(self.hashes(),before)
+  self.assertEqual(self.case.trace,trace);self.assertEqual(self.client.journal.read(op),journal)
 
  def test_uncommitted_bootstrap_stays_pending_without_new_root_work(self):
   from branchwrite.cow_client import CowClient,OperationJournal,OperationIntent

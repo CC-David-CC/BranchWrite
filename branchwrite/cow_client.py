@@ -1049,6 +1049,26 @@ class CowClient:
             raise CowClientError("COW operation status lacks scope or state")
         return OperationObservation(operation_id, state, durable, scope, value, receipt)
 
+    def operation_diagnostic(self, operation_id: str) -> Mapping[str, Any]:
+        """Read private live failure details; this is not a settlement receipt."""
+        op=self._operation_id(operation_id)
+        value=self.transport.request('GET','/cow/operation-diagnostic?'+urlencode({'operation':op})).json_value
+        if (type(value) is not dict or value.get('operation_id')!=op
+                or value.get('scope')!='coordinator-process'
+                or value.get('diagnostic_scope')!='coordinator-process-only'
+                or type(value.get('durable')) is not bool
+                or type(value.get('branch')) is not str
+                or type(value.get('state')) is not str
+                or type(value.get('publication_retryable')) is not bool
+                or 'failure' not in value):
+            raise CowClientError('Invalid or mismatched COW operation diagnostic')
+        failure=value['failure']
+        if failure is not None and (type(failure) is not dict or set(failure)!={'type','message'}
+                or type(failure['type']) is not str or type(failure['message']) is not str
+                or len(failure['message'])>4096 or value['state']!='failed'):
+            raise CowClientError('Invalid COW failure diagnostic')
+        return value
+
     def cancel_generation(self, operation_id: str) -> Mapping[str, Any]:
         """Request transient cancellation; inspect operation() to learn whether it won."""
         op=self._operation_id(operation_id)

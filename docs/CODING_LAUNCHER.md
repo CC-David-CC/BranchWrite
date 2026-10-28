@@ -105,6 +105,15 @@ Retain old installed versions and failed operation records; no silent migration.
 
 ## Recover an original model reply
 
+While the original COW coordinator is still running, `branchwrite status RUN`
+lists the exact pending operation. With a COW server that supports the live
+diagnostic endpoint, `branchwrite diagnose RUN --operation-id ORIGINAL_ID`
+checks the saved run and original journal before reading private error details.
+The query does not advance the workflow or retry inference. Its process-local
+failure is not proof of abort; a result may already have committed. Error messages
+may contain private task details. A restarted coordinator may have no diagnostic.
+The diagnostic does not validate any durable receipt; use `reconcile` for that.
+
 If a connection or process stops after the server saves a model reply, keep the
 same run directory and operation ID. Stop the old client writer first. With the
 same server connection and API credential available, run:

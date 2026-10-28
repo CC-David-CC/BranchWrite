@@ -72,6 +72,7 @@ def inspect_run(state,*,recent_limit=12):
                 continue
             operation=frame['dispatch'][0]
             model_recovery.append(dict(frame=frame['id'],operation_id=operation,
+                diagnose_argv=['branchwrite','diagnose',str(Path(state).absolute()),'--operation-id',operation],
                 reconcile_argv=['branchwrite','reconcile',str(Path(state).absolute()),'--operation-id',operation],
                 receipt_argv=['branchwrite','receipt',str(Path(state).absolute()),'--operation-id',operation],
                 resume_argv=['branchwrite','resume',str(Path(state).absolute())]))
@@ -130,6 +131,7 @@ def command(state,*,as_json=False,tail=12):
             print('Model replies: reconcile retrieves only proven durable output; unknown work stays unresolved.')
             for row in result['pending_model_recovery']:
                 print('  Inspect saved result: branchwrite receipt RUN_DIRECTORY --operation-id '+row['operation_id'])
+                print('  Inspect live failure: branchwrite diagnose RUN_DIRECTORY --operation-id '+row['operation_id'])
                 print('  Reconcile: branchwrite reconcile RUN_DIRECTORY --operation-id '+row['operation_id'])
             print('  Then: branchwrite resume RUN_DIRECTORY')
             print('Tool effects require separate reconciliation; these commands do not authorize repeating them.')
