@@ -19,7 +19,8 @@ class TerminalExampleTests(unittest.TestCase):
   self.assertIn('Refer to the first or second probe when repeating a command is unnecessary.',text)
   self.assertIn('These examples grant no paths, executables or permissions.',text)
  def test_nonterminal_prefix_stays_identical_to_its_frozen_predecessor(self):
-  expected={'read_file,finish': '9bc82636c56503fce28e0a54bea2b27afcca655e0971cd3b8656591eef93c74e', 'read_file,run_tests,finish': 'd3da64db07fcd425835feb9676facdbd62c61b3a6c91fb8e742e443c023435b5'}
+  # These fingerprints were checked against the pre-unification main branch.
+  expected={'read_file,finish': '57933a4a2b3d5e4f6c46acdb51554defce861b02928f75c78ab3490b1457727e', 'read_file,run_tests,finish': '6a436d88638cec685000d1753f0a67b3ba76cf455fad6ee211a2222eef18f4eb'}
   for names,digest in expected.items():
    self.assertEqual(hashlib.sha256(system_prefix(schema(*names.split(','))).encode()).hexdigest(),digest)
  def test_terminal_support_keeps_required_test_instruction_when_tests_granted(self):

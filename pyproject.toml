@@ -11,7 +11,7 @@ readme = "README.md"
 dependencies = ["prompt_toolkit==3.0.52", "Pillow==13.0.0", "reportlab==5.0.1", "pypdfium2==5.14.0", "pypdf==6.21.1"]
 
 [project.optional-dependencies]
-skills = ["skills-cubed @ git+https://github.com/CC-David-CC/sss.git@9d09bbc55298c920a97bc8a233e52a278e9174d6"]
+skills = ["skills-cubed @ git+https://github.com/CC-David-CC/sss.git@6a107f4adb98bcad184109bbf612946355062c51"]
 
 [project.scripts]
 branchwrite = "branchwrite.__main__:main"

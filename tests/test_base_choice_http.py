@@ -40,7 +40,8 @@ class BaseChoiceHttpTests(unittest.TestCase):
     catalog=DurableGrammarCatalog(base/'grammars',tokenizer,[256])
     from serve.cow_workspace import CowWorkspace
     workspace=CowWorkspace(coordinator.store,tokenizer,root_mode_resolver=text.root_mode_for_projection)
-    server=make_server(adapter,api_key='prefix-key',text_adapter=text,grammar_catalog=catalog,workspace=workspace)
+    server=make_server(adapter,api_key='prefix-key',text_adapter=text,grammar_catalog=catalog,workspace=workspace,
+      connection_info=dict(model_contract_id=profile['model_contract_id'],execution_profile_id=profile['execution_profile_id'],eos_tokens=[256]))
     thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
     url='http://127.0.0.1:'+str(server.server_port)
     client=CowClient.http(url,journal=OperationJournal(base/'setup-journal'),api_key='prefix-key',endpoint_pin='owned')
@@ -114,7 +115,8 @@ class BaseChoiceHttpTests(unittest.TestCase):
     catalog=DurableGrammarCatalog(base/'grammars',tokenizer,[256])
     from serve.cow_workspace import CowWorkspace
     workspace=CowWorkspace(coordinator.store,tokenizer,root_mode_resolver=text.root_mode_for_projection)
-    server=make_server(adapter,api_key='prefix-key',text_adapter=text,grammar_catalog=catalog,workspace=workspace)
+    server=make_server(adapter,api_key='prefix-key',text_adapter=text,grammar_catalog=catalog,workspace=workspace,
+      connection_info=dict(model_contract_id=profile['model_contract_id'],execution_profile_id=profile['execution_profile_id'],eos_tokens=[256]))
     thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
     url='http://127.0.0.1:'+str(server.server_port)
     client=CowClient.http(url,journal=OperationJournal(base/'setup-journal'),api_key='prefix-key',endpoint_pin='owned')

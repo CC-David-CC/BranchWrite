@@ -16,7 +16,7 @@ class PrefixHttpTests(unittest.TestCase):
   from branchwrite.coding_cli import read_launch
   with tempfile.TemporaryDirectory() as t:
    base=pathlib.Path(t);tokenizer=ThinkingTokenizer()
-   profile=dict(model_contract_id='prefix-cpu',execution_profile_id='prefix-profile',model_weights_sha256='a'*64,execution=dict(GPU=[0],resume_contract='identical-native-operators-v1',generated_operator='normal-verifier-decode',selected_token_protocol='consumed-selected-receipt-v1',native_request_protocol='consumed-greedy-ack-v1',prefill_chunk=16,capacity=131072,eos_tokens=[256]))
+   profile=dict(model_contract_id='c'*64,execution_profile_id='e'*64,model_weights_sha256='a'*64,execution=dict(GPU=[0],resume_contract='identical-native-operators-v1',generated_operator='normal-verifier-decode',selected_token_protocol='consumed-selected-receipt-v1',native_request_protocol='consumed-greedy-ack-v1',prefill_chunk=16,capacity=131072,eos_tokens=[256]))
    def factory(gpu):return BranchingModel(base/'store',GrammarCPUBackend(profile,tokenizer),profile)
    coordinator=ContextCoordinator(base/'store',PoolConfig(gpus=(0,),ram_bytes=64*1024**2,disk_bytes=256*1024**2,min_available_bytes=0),factory)
    catalog=None;server=None;thread=None
@@ -24,7 +24,8 @@ class PrefixHttpTests(unittest.TestCase):
     coordinator.ready(5);adapter=CowAdapter(coordinator)
     text=CowTextAdapter(adapter,tokenizer,_render,lambda messages,rendered,add_generation_prompt:_encode(tokenizer,messages,rendered,add_generation_prompt),initial_root_mode=initial_root_mode,append_initial_user_suffix=append_initial_user_suffix,renderer_id='b'*64)
     catalog=DurableGrammarCatalog(base/'grammars',tokenizer,[256])
-    server=make_server(adapter,api_key='prefix-key',text_adapter=text,grammar_catalog=catalog)
+    server=make_server(adapter,api_key='prefix-key',text_adapter=text,grammar_catalog=catalog,
+      connection_info=dict(model_contract_id=profile['model_contract_id'],execution_profile_id=profile['execution_profile_id'],eos_tokens=[256]))
     thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
     url='http://127.0.0.1:'+str(server.server_port)
     client=CowClient.http(url,journal=OperationJournal(base/'setup-journal'),api_key='prefix-key',endpoint_pin='owned')
