@@ -1027,6 +1027,25 @@ class CowClient:
             raise CowClientError("COW history tip is invalid")
         return HistoryView(branch, revision, tip, value, tuple(messages))
 
+    def context_budget(self, branch: str) -> Mapping[str, Any]:
+        """Read a snapshot-bound context count without preparing or generating."""
+        if type(branch) is not str or not branch:
+            raise ValueError('branch name required')
+        value=self.transport.request('GET','/cow/context-budget?'+urlencode({'branch':branch})).json_value
+        fields={'schema','branch','revision','snapshot','model_contract_id','execution_profile_id',
+                'capacity_tokens','used_tokens','remaining_tokens'}
+        if (type(value) is not dict or set(value)!=fields or type(value['schema']) is not int
+                or value['schema']!=1 or value['branch']!=branch
+                or type(value['revision']) is not int or value['revision']<0
+                or type(value['snapshot']) is not str or not _HEX64.fullmatch(value['snapshot'])
+                or any(type(value[k]) is not str or not value[k] for k in ('model_contract_id','execution_profile_id'))
+                or any(type(value[k]) is not int for k in ('capacity_tokens','used_tokens','remaining_tokens'))
+                or value['capacity_tokens']<=0 or value['used_tokens']<0
+                or value['remaining_tokens']<0
+                or value['used_tokens']+value['remaining_tokens']!=value['capacity_tokens']):
+            raise CowClientError('Invalid or mismatched COW context budget')
+        return value
+
     def operation(self, operation_id: str) -> OperationObservation:
         try:
             response = self.transport.request("GET", "/cow/operation?" + urlencode({"operation": operation_id}))

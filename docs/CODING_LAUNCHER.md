@@ -105,6 +105,15 @@ Retain old installed versions and failed operation records; no silent migration.
 
 ## Recover an original model reply
 
+With a compatible PCC server, `branchwrite context-budget /path/to/run` reads
+the current branch's snapshot-bound token usage and profile capacity. It checks
+the saved run's model/profile identity and rejects an observation if the branch
+moved during the query. The returned space does not include a future rendered
+input; both that input and the requested output must fit. This command does not
+change the run, resize a request, compact context, or certify a context length.
+The branch can still move after the observation, so a caller must bind any later
+action to its original revision and snapshot.
+
 While the original COW coordinator is still running, `branchwrite status RUN`
 lists the exact pending operation. With a COW server that supports the live
 diagnostic endpoint, `branchwrite diagnose RUN --operation-id ORIGINAL_ID`

@@ -54,6 +54,37 @@ class CodingReconciliationTests(unittest.TestCase):
   return subprocess.run([sys.executable,'-B','-m','branchwrite','reconcile',str(self.state),'--operation-id',op],capture_output=True,text=True,env=dict(os.environ,BW_COW_API_KEY='cpu-flow-secret'),timeout=20)
  def diagnose(self,op):
   return subprocess.run([sys.executable,'-B','-m','branchwrite','diagnose',str(self.state),'--operation-id',op],capture_output=True,text=True,env=dict(os.environ,BW_COW_API_KEY='cpu-flow-secret'),timeout=20)
+ def test_context_budget_reads_bound_snapshot_without_model_work(self):
+  self.case.models[0].profile['execution']['capacity']=1024
+  before=self.hashes();trace=list(self.case.trace);head=self.client.head('cli-main')
+  r=subprocess.run([sys.executable,'-B','-m','branchwrite','context-budget',str(self.state)],capture_output=True,text=True,env=dict(os.environ,BW_COW_API_KEY='cpu-flow-secret'),timeout=20)
+  self.assertEqual(r.returncode,0,r.stderr);result=json.loads(r.stdout);budget=result['budget']
+  self.assertFalse(result['workflow_advanced']);self.assertFalse(result['future_input_included'])
+  self.assertEqual(budget['snapshot'],head.tip);self.assertEqual(budget['revision'],head.revision)
+  self.assertEqual(budget['used_tokens']+budget['remaining_tokens'],1024)
+  self.assertEqual(self.hashes(),before);self.assertEqual(self.case.trace,trace)
+ def test_context_budget_rejects_invalid_arithmetic(self):
+  value=dict(schema=1,branch='cli-main',revision=0,snapshot='a'*64,
+   model_contract_id='flow-model',execution_profile_id='flow-profile',
+   capacity_tokens=1024,used_tokens=100,remaining_tokens=100)
+  with patch.object(self.client.transport,'request',return_value=_Response(json_value=value)):
+   with self.assertRaises(CowClientError):self.client.context_budget('cli-main')
+ def test_context_budget_rejects_branch_moved_after_observation(self):
+  from branchwrite.coding_budget import budget_saved
+  from types import SimpleNamespace
+  fake=SimpleNamespace(context_budget=lambda branch:dict(model_contract_id='flow-model',
+   execution_profile_id='flow-profile',revision=0,snapshot='a'*64),
+   head=lambda branch:SimpleNamespace(revision=1,tip='b'*64))
+  with patch('branchwrite.coding_budget._client',return_value=fake):
+   with self.assertRaisesRegex(ValueError,'branch changed'):budget_saved(self.state)
+ def test_context_budget_rejects_different_execution_profile(self):
+  from branchwrite.coding_budget import budget_saved
+  from types import SimpleNamespace
+  def unexpected_head(branch):raise AssertionError('wrong profile must be rejected first')
+  fake=SimpleNamespace(context_budget=lambda branch:dict(model_contract_id='flow-model',
+   execution_profile_id='other-profile',revision=0,snapshot='a'*64),head=unexpected_head)
+  with patch('branchwrite.coding_budget._client',return_value=fake):
+   with self.assertRaisesRegex(ValueError,'different model or profile'):budget_saved(self.state)
  def test_cli_restores_output_then_existing_step_resumes_without_new_work(self):
   op=self.pending();before=self.hashes();trace=list(self.case.trace);r=self.invoke(op)
   self.assertEqual(r.returncode,0,r.stderr);value=json.loads(r.stdout)

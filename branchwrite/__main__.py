@@ -203,6 +203,8 @@ def main(argv=None):
     reconcile.add_argument('state',type=Path);reconcile.add_argument('--operation-id',required=True)
     diagnostic=commands.add_parser('diagnose',help='Inspect private live COW failure details for a pending model operation without replay.')
     diagnostic.add_argument('state',type=Path);diagnostic.add_argument('--operation-id',required=True)
+    budget=commands.add_parser('context-budget',help='Inspect the current COW snapshot capacity for a saved coding run.')
+    budget.add_argument('state',type=Path)
     args=parser.parse_args(argv)
     if args.command=='session':
         from .interactive_cli import run
@@ -254,6 +256,9 @@ def main(argv=None):
         if args.command=='diagnose':
             from .coding_reconciliation import reconcile_saved
             return _run_result(lambda:reconcile_saved(args.state,args.operation_id,diagnostic=True))
+        if args.command=='context-budget':
+            from .coding_budget import budget_saved
+            return _run_result(lambda:budget_saved(args.state))
         if args.command=='apply':
             from .project_apply import command
             return command(args.archive,args.source,args.destination,args.sha256,args.operation_id)
