@@ -1,8 +1,54 @@
-# Start here: BW with your PCC server
+# Start here: let's make something with BW
 
-**BranchWrite is the app you talk to. Private Context COW (PCC) is the combined
-model engine and context server.** PCC contains a modified Strata core and the
-COW layer; BW manages your task, permitted tools and saved project files.
+**BW is an app you open inside a project folder and talk to.**
+
+Think of the folder as your workbench. It holds the things you are making,
+like a website, a game, or a little program.
+
+## 🏍️ Your first mission: a motorcycle website
+
+You could say:
+
+> “Make me a simple website about motorcycles.”
+
+Then:
+
+> “Make the title bigger. That button doesn’t work—fix it.”
+
+BW lets the AI read files, change them, and run commands to check its work.
+You can keep talking, ask questions, and try another idea together.
+
+## Meet the three teammates
+
+- **BW is the app you talk to.** You tell it what you want to make or change.
+- **PCC runs the AI brain.** It can run on your computer or another computer.
+- **S³ is the practice room and report card.** We use it to test the AI and see
+  whether training helped or made something worse.
+
+**You don’t need to use the practice room to chat with BW.**
+
+## You are the project captain
+
+Opening BW in a folder and chatting is already built. What we haven’t fully
+proved is that our little trained AI will reliably finish everyday jobs inside
+it. It has completed some small tasks, but it still makes mistakes.
+
+The app exists. The little brain inside it still needs supervision. You can
+ask it to work on a practice project; we’re not ready to leave it alone managing
+an important computer.
+
+For your motorcycle website, open the page, read the words, and try the buttons.
+If something is wrong, tell BW what happened. Checking the result is part of
+building something together!
+
+## Ready to set up your workbench?
+
+The setup steps below are for Linux. Once BW is installed and its PCC server is
+running, you open your project folder in a terminal and launch BW. If setup is
+new to you, ask someone comfortable with Linux to help with this part.
+
+PCC's full name is **Private Context COW**. It contains a modified Strata core
+and the COW layer. BW manages your task, permitted tools, and saved project files.
 
 You can use one suitable Linux computer for both programs. A separate laptop or
 a collection of GPUs is optional. If PCC is remote, keep your project on your
