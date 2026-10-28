@@ -4,6 +4,70 @@ import argparse,json
 from .lesson_cli import _client
 
 
+def _response_levels():
+    """Describe S³'s validated response policies without contacting PCC."""
+    from sss.learning_levels import target_policy_for_condition
+
+    cases = {
+        'answer': {
+            'direct': dict(level='answer', answer_mode='direct', supervision='answer_only',
+                           format_policy='none', answer_source='skill_task',
+                           answer_checker='semantic-answer-v1', format_checker=None,
+                           reasoning_checker=None, split='practice'),
+            'reasoning': dict(level='answer', answer_mode='reasoning',
+                              supervision='reasoning_and_answer', format_policy='none',
+                              answer_source='skill_task', answer_checker='semantic-answer-v1',
+                              format_checker=None, reasoning_checker='reasoning-v1',
+                              split='practice'),
+        },
+        'format': {
+            'direct': dict(level='format', answer_mode='direct', supervision='format_only',
+                           format_policy='task_native', answer_source='provided_answer',
+                           answer_checker=None, format_checker='task-format-v1',
+                           reasoning_checker=None, split='practice'),
+        },
+        'composed': {
+            'direct': dict(level='composed', answer_mode='direct',
+                           supervision='format_and_answer', format_policy='task_native',
+                           answer_source='skill_task', answer_checker='semantic-answer-v1',
+                           format_checker='task-format-v1', reasoning_checker=None,
+                           split='practice'),
+            'reasoning': dict(level='composed', answer_mode='reasoning',
+                              supervision='reasoning_format_and_answer',
+                              format_policy='task_native', answer_source='skill_task',
+                              answer_checker='semantic-answer-v1',
+                              format_checker='task-format-v1',
+                              reasoning_checker='reasoning-v1', split='practice'),
+        },
+    }
+    details = {
+        'answer': 'Checks whether the answer is correct; formatting is not scored.',
+        'format': 'The correct answer is supplied; checks format and content preservation.',
+        'composed': 'Solves the task and returns the answer in the declared format.',
+    }
+    modes = {}
+    for level, level_cases in cases.items():
+        modes[level] = {}
+        for mode, condition in level_cases.items():
+            required = (['verified semantic answer'] if level == 'answer' else
+                        ['supplied correct answer', 'task-specific format checker'] if level == 'format' else
+                        ['verified semantic answer', 'task-specific format checker'])
+            if mode == 'reasoning':
+                required.extend(['verified reasoning target', 'independent reasoning checker'])
+            modes[level][mode] = dict(
+                target_policy=target_policy_for_condition(condition),
+                requires=required,
+                reasoning_target=(mode == 'reasoning'),
+            )
+    return dict(schema=1, kind='bw.sss-response-levels.v1', levels=modes,
+                descriptions=details,
+                ownership=dict(
+                    skills_scoring='S³ defines conditions, generators and checkers',
+                    loss_masks='PCC validates and applies lesson loss masks',
+                    round_driver='BW submits admitted lessons and drives registered PCC rounds',
+                    automatic_training=False))
+
+
 def main(argv=None,*,output=print,connection_override=None):
     parser=argparse.ArgumentParser(prog='branchwrite learning',description=__doc__)
     parser.add_argument('--connection',type=Path);parser.add_argument('--state-dir',type=Path)
@@ -16,6 +80,7 @@ def main(argv=None,*,output=print,connection_override=None):
     p.add_argument('--lesson-id',action='append',default=[])
     p.add_argument('--maximum-transitions',type=int,default=16)
     p.add_argument('--maximum-seconds',type=int,default=300)
+    sub.add_parser('levels',help='Show S³ answer, reasoning and format lesson modes; no connection needed')
     p=sub.add_parser('start');p.add_argument('--operation-id',required=True);p.add_argument('--policy-id',required=True)
     p.add_argument('--parent-job-id');p.add_argument('--expected-parent-sha256')
     for action in ('advance','reconcile','stop','preserve'):
@@ -24,6 +89,12 @@ def main(argv=None,*,output=print,connection_override=None):
         if action=='advance':p.add_argument('lesson_ids',nargs='*')
         if action=='preserve':p.add_argument('--name',required=True);p.add_argument('--notes-file',type=Path)
     args=parser.parse_args(argv)
+    if args.action=='levels':
+        try:
+            output(json.dumps(_response_levels(),sort_keys=True))
+            return 0
+        except (ImportError,ValueError) as error:
+            output('branchwrite learning levels: '+str(error));return 2
     from .cow_client import CowClientError
     try:
         connection,client=_client(args,connection_override)

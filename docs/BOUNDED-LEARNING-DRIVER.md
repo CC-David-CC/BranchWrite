@@ -8,11 +8,20 @@ S³ owns skills, verified practice and paired learning/forgetting reports.
 
 The service owner first installs a qualified model, native runner, protected
 assessments, verified practice registry and learning policy. This command does
-not configure those components or approve a model's own lessons. Follow the
-[configured COW guide](https://github.com/CC-David-CC/sss/blob/feat/learning-stack-20261026/docs/CONFIGURED-COW-LEARNING.md)
-and the [verified practice guide](https://github.com/CC-David-CC/sss/blob/feat/learning-stack-20261026/docs/BW-VERIFIED-PRACTICE.md).
+not configure those components or approve a model's own lessons. Review the
+[S³ learning-loop status](https://github.com/CC-David-CC/sss/blob/feat/minicpm-highrank-20261027/docs/LEARNING-LOOP-STATUS.md),
+[learning-program guide](https://github.com/CC-David-CC/sss/blob/feat/minicpm-highrank-20261027/docs/LEARNING-PROGRAM.md),
+and [answer/format/reasoning conditions](https://github.com/CC-David-CC/sss/blob/feat/minicpm-highrank-20261027/docs/ANSWER-FORMAT-LEVELS.md).
 Use the current service's real policy and lesson IDs. Keep connection credentials
 in the existing private connection setup and environment.
+
+To choose whether a lesson targets correctness, formatting, or both, run
+`branchwrite learning levels`. It prints the exact S³ target policies and their
+checker requirements without contacting PCC. See the
+[response-level lesson guide](RESPONSE-LEVEL-LESSONS.md) before submitting a
+schema-2 S³ lesson. BW sends it to PCC; the server validates and stores the
+training mask. This listing is a workflow aid, not a model score or training
+authorization.
 
 ```bash
 python -m branchwrite learning --connection /owned/cow.json policies
