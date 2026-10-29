@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+"""Start/reuse the Surface user's local PCC and launch BranchWrite."""
+import fcntl
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import time
+import urllib.error
+import urllib.request
+
+home = Path.home()
+base = home / 'Applications/pcc-surface-runtime'
+server = base / 'server'
+connection = base / 'connection.json'
+key_file = server / 'api-key.txt'
+pcc = home / 'Applications/PCC-dense-attention'
+python = home / 'Applications/Private_Context_COW/.venv/bin/python'
+bw = home / '.local/bin/bw'
+url = 'http://127.0.0.1:18101'
+
+def fail(message):
+    print('BW: ' + message, file=sys.stderr)
+    raise SystemExit(1)
+
+def info(key):
+    request = urllib.request.Request(url + '/cow/info', headers={'Authorization': 'Bearer ' + key})
+    try:
+        with urllib.request.urlopen(request, timeout=2) as response:
+            data = json.load(response)
+    except urllib.error.HTTPError as error:
+        fail(f'Port 18101 responded with HTTP {error.code}. Refusing to use another service.')
+    except (urllib.error.URLError, TimeoutError, OSError):
+        return None
+    except (ValueError, TypeError):
+        fail('The service on port 18101 returned invalid information.')
+    if data.get('service') != 'context-cow':
+        fail('Port 18101 is occupied by a different service.')
+    return data
+
+def main():
+    if not all(p.exists() for p in (key_file, server / 'server.json', python, bw)):
+        fail('Local PCC or BranchWrite is not configured. Ask maint to finish setup.')
+    key = key_file.read_text().strip()
+    if not key:
+        fail('The local server key is empty.')
+    os.umask(0o077)
+    with (base / 'launcher.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        details = info(key)
+        if details is None:
+            print('BW: Starting the local model server; this can take a little while.', flush=True)
+            config = json.loads((server / 'server.json').read_text())
+            profile = json.loads(Path(config['profile']).read_text())
+            gpu = profile['execution'].get('device_binding') == 'cuda-single-device-v1'
+            source = base / 'pcc-surface-gpu' if gpu else pcc
+            command = ([ '/usr/bin/codiserver-cuda-run' ] if gpu else []) + [str(python), '-m', 'tools.cow_server', str(server)]
+            with (base / 'server.log').open('ab') as log:
+                process = subprocess.Popen(command,
+                    cwd=source, stdin=subprocess.DEVNULL, stdout=log, stderr=log,
+                    start_new_session=True, close_fds=True)
+            deadline = time.monotonic() + 300
+            while time.monotonic() < deadline:
+                if process.poll() is not None:
+                    fail(f'The local server exited (code {process.returncode}). See {base / "server.log"}.')
+                details = info(key)
+                if details is not None:
+                    break
+                time.sleep(1)
+            else:
+                process.terminate()
+                fail(f'The local server did not become ready within 300 seconds. See {base / "server.log"}.')
+        expected = (details.get('model_contract_id'), details.get('execution_profile_id'))
+        try:
+            saved = json.loads(connection.read_text())
+            current = (saved.get('model_contract_id'), saved.get('execution_profile_id')) if saved.get('endpoint_url') == url else None
+        except (OSError, ValueError, AttributeError):
+            current = None
+        env = os.environ.copy()
+        env.update(BW_COW_CONNECTION=str(connection), BW_COW_API_KEY=key)
+        if current != expected:
+            result = subprocess.run([str(bw), 'connect', url], env=env)
+            if result.returncode:
+                fail('Could not configure the BranchWrite connection.')
+    print('BW: Local PCC is ready. Project files stay under your user account.', flush=True)
+    os.execve(str(bw), [str(bw), *sys.argv[1:]], env)
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print('\nBW: Canceled.', file=sys.stderr)
+        raise SystemExit(130)

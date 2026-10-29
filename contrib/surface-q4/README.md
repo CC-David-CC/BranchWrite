@@ -63,3 +63,5 @@ BW
 The first use may take several minutes to load the model. A connection discovery checks the server identity and capabilities; the first time, BranchWrite writes a private connection file. Open a second project terminal and run `BW` again to reuse the server. Use a disposable project for the first file-creation and follow-up test. Requests send the task and relevant project content to the server; only use a trusted server.
 
 If `BW` cannot connect, check the server is reachable, the verified host key, SSH key restrictions, correct private API key, whether another GPU job is running, and the server log. The first controller prefix can be lengthy. Do not treat the example prompt or successful chat as proof of a complete file workflow. Existing saved sessions remain bound to their original model and execution profile: changing server profiles may require a new session, not silent replay.
+
+For the separate, unqualified laptop-only 2B path, see [LOCAL-MODEL.md](LOCAL-MODEL.md).
