@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+"""Run BranchWrite against the Q4 COW server through a private SSH tunnel."""
+import fcntl
+import json
+import os
+from pathlib import Path
+import socket
+import subprocess
+import sys
+import time
+import urllib.error
+import urllib.request
+
+home = Path.home()
+state = home / '.local/state/branchwrite-q4'
+client_config = Path(os.environ.get('BW_Q4_CONFIG', state / 'client.json'))
+try:
+    settings = json.loads(client_config.read_text())
+except (OSError, ValueError) as error:
+    print('BW: Cannot read client configuration: ' + str(error), file=sys.stderr)
+    raise SystemExit(1)
+state = client_config.parent
+target = settings['ssh_target']
+ssh_key = Path(settings['ssh_key']).expanduser()
+known_hosts = Path(settings['known_hosts']).expanduser()
+key_file = Path(settings['api_key_file']).expanduser()
+connection = state / 'connection.json'
+bw = home / '.local/bin/bw'
+url = 'http://127.0.0.1:18099'
+
+def fail(message):
+    print('BW: ' + message, file=sys.stderr)
+    raise SystemExit(1)
+
+def info(key):
+    req = urllib.request.Request(url + '/cow/info', headers={'Authorization': 'Bearer ' + key})
+    try:
+        with urllib.request.urlopen(req, timeout=5) as response:
+            data = json.load(response)
+    except urllib.error.HTTPError as error:
+        fail(f'The local endpoint rejected authentication (HTTP {error.code}); check the tunnel and key.')
+    except (urllib.error.URLError, TimeoutError, OSError):
+        return None
+    except (ValueError, TypeError):
+        fail('The local endpoint returned invalid server information.')
+    if data.get('service') != 'context-cow':
+        fail('The local endpoint is not a PCC server.')
+    return data
+
+def port_in_use():
+    with socket.socket() as sock:
+        sock.settimeout(1)
+        return sock.connect_ex(('127.0.0.1', 18099)) == 0
+
+def main():
+    if not all(p.exists() for p in (key_file, bw, ssh_key, known_hosts)):
+        fail('The your Q4 server connection is not configured. Ask maint to finish setup.')
+    key = key_file.read_text().strip()
+    if not key:
+        fail('The server key is empty.')
+    os.umask(0o077)
+    with (state/'launcher.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        details = info(key)
+        if details is None:
+            print('BW: Starting or checking the Q4 server; this may take several minutes.', flush=True)
+            start = ['ssh', '-i', str(ssh_key), '-o', 'IdentitiesOnly=yes',
+                '-o', 'BatchMode=yes', '-o', 'StrictHostKeyChecking=yes', '-o',
+                'UserKnownHostsFile='+str(known_hosts), '-o',
+                'ConnectTimeout=8', target, 'start']
+            if subprocess.run(start).returncode:
+                fail('Could not start the Q4 server. Check your Q4 server and its server log.')
+        if details is None and not port_in_use():
+            print('BW: Connecting securely to your Q4 server.', flush=True)
+            command=['ssh', '-i', str(ssh_key), '-o', 'IdentitiesOnly=yes',
+                '-o', 'BatchMode=yes', '-o', 'StrictHostKeyChecking=yes', '-o',
+                'UserKnownHostsFile='+str(known_hosts), '-o',
+                'ExitOnForwardFailure=yes', '-o', 'ConnectTimeout=8', '-o',
+                'ServerAliveInterval=15', '-o', 'ServerAliveCountMax=3', '-f', '-N',
+                '-L', '127.0.0.1:18099:127.0.0.1:18099', target]
+            if subprocess.run(command).returncode:
+                fail('Could not establish the SSH tunnel to your Q4 server.')
+            time.sleep(.5)
+        if details is None:
+            details = info(key)
+        if details is None:
+            fail('The SSH tunnel is open, but the Q4 PCC service on your Q4 server is not responding.')
+        expected = (details.get('model_contract_id'), details.get('execution_profile_id'))
+        try:
+            saved = json.loads(connection.read_text())
+            current = (saved.get('model_contract_id'), saved.get('execution_profile_id')) if saved.get('endpoint_url') == url else None
+        except (OSError, ValueError, AttributeError):
+            current = None
+        env = os.environ.copy()
+        env.update(BW_COW_CONNECTION=str(connection), BW_COW_API_KEY=key)
+        if current != expected:
+            if subprocess.run([str(bw), 'connect', url], env=env).returncode:
+                fail('Could not configure the BranchWrite connection.')
+    print('BW: Connected to the Q4 server through SSH.', flush=True)
+    os.execve(str(bw), [str(bw), *sys.argv[1:]], env)
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print('\nBW: Canceled.', file=sys.stderr)
+        raise SystemExit(130)

@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+"""Restricted SSH entry point for starting the Surface's loopback PCC service."""
+import fcntl
+import json
+import os
+from pathlib import Path
+import socket
+import subprocess
+import sys
+import time
+import urllib.error
+import urllib.request
+
+home=Path.home()
+settings_path=home/'.local/state/branchwrite-q4/server-launch.json'
+try:
+    settings=json.loads(settings_path.read_text())
+    base=Path(settings['server_directory']).expanduser().resolve(strict=True)
+    source=Path(settings['source_directory']).expanduser().resolve(strict=True)
+    python=Path(settings['python']).expanduser().resolve(strict=True)
+except (OSError,ValueError,KeyError) as error:
+    print('Q4 server: invalid launch configuration: '+str(error),file=sys.stderr)
+    raise SystemExit(1)
+
+def fail(message):
+    print('Q4 server: '+message,file=sys.stderr)
+    raise SystemExit(1)
+
+def ready(key):
+    request=urllib.request.Request('http://127.0.0.1:18099/cow/info',headers={'Authorization':'Bearer '+key})
+    try:
+        with urllib.request.urlopen(request,timeout=3) as response:data=json.load(response)
+    except urllib.error.HTTPError as error:fail(f'Port 18099 returned HTTP {error.code}; another configuration may be using it.')
+    except (urllib.error.URLError,TimeoutError,OSError):return False
+    except (ValueError,TypeError):fail('Port 18099 returned invalid data.')
+    if data.get('service')!='context-cow':fail('Port 18099 is not PCC.')
+    return True
+
+def port_used():
+    with socket.socket() as s:
+        s.settimeout(1)
+        return s.connect_ex(('127.0.0.1',18099))==0
+
+def main():
+    if os.environ.get('SSH_ORIGINAL_COMMAND')!='start':fail('Only the start operation is permitted.')
+    os.umask(0o077)
+    key=(base/'api-key.txt').read_text().strip()
+    if not key:fail('The server key is empty.')
+    with (base/'startup.lock').open('a') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX)
+        if ready(key):print('Q4 server ready');return
+        if port_used():fail('Port 18099 is occupied but not responding as this PCC server.')
+        gpu=subprocess.run(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader,nounits'],capture_output=True,text=True,timeout=10)
+        if gpu.returncode or gpu.stdout.strip():fail('GPU availability could not be confirmed or another GPU workload is active.')
+        with (base/'server.log').open('ab') as log:
+            process=subprocess.Popen([str(python),'tools/cow_server.py',str(base)],cwd=source,
+                stdin=subprocess.DEVNULL,stdout=log,stderr=log,start_new_session=True,close_fds=True)
+        deadline=time.monotonic()+300
+        while time.monotonic()<deadline:
+            if process.poll() is not None:fail(f'Startup exited with code {process.returncode}; inspect the server log.')
+            if ready(key):print('Q4 server ready');return
+            time.sleep(2)
+        process.terminate()
+        fail('Startup did not complete within five minutes; inspect the server log.')
+
+if __name__=='__main__':main()
